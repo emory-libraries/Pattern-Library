@@ -1,0 +1,11 @@
+{{> atoms-option:(value: "Option 1", label: "Option 1") }}
+{{> atoms-option:(value: "Option 2", label: "Option 2", booleans: "disabled") }}
+{{> atoms-option:(value: "Option 3", label: "Option 3", booleans: "selected") }}
+<optgroup label="Group 1">
+    {{> atoms-option:(value: "Option 4", label: "Option 4") }}
+    {{> atoms-option:(value: "Option 5", label: "Option 5") }}
+</optgroup>
+<optgroup label="Group 2" disabled>
+    {{> atoms-option:(value: "Option 6", label: "Option 6") }}
+    {{> atoms-option:(value: "Option 7", label: "Option 7") }}
+</optgroup>

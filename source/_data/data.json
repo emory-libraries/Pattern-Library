@@ -1,0 +1,79 @@
+{
+  "key": "value",
+  "key2": "use this for variables you want to load globally",
+  "title": "Emory Libraries Pattern... Library",
+  "img": {
+    "avatar": {
+      "src": "http://placehold.it/100x100",
+      "alt": "Avatar"
+    },
+    "square": {
+      "src": "http://placehold.it/300x300",
+      "alt": "Square"
+    },
+    "rectangle": {
+      "src": "http://placehold.it/400x300",
+      "alt": "Rectangle"
+    },
+    "widescreen": {
+      "src": "http://placehold.it/640x360",
+      "alt": "16x9 Image"
+    },
+    "landscape-4x3": {
+      "src": "http://placehold.it/400x300",
+      "alt": "4x3 Image"
+    },
+    "landscape-16x9": {
+      "src": "http://placehold.it/640x360",
+      "alt": "16x9 Image"
+    }
+  },
+  "headline": {
+    "short": "Donec Gravida Turpis Vitae",
+    "medium": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit"
+  },
+  "excerpt": {
+    "short": "Sed lacinia lacus elit. Aenean auctor ornare diam, at fermentum lacus vehicula a. Donec sit amet metus euismod dui interdum tincidunt eu vel velit.",
+    "medium": "Sed lacinia lacus elit. Aenean auctor ornare diam, at fermentum lacus vehicula a. Donec sit amet metus euismod dui interdum tincidunt eu vel velit. Quisque sodales, magna vel placerat condimentum, nibh sapien accumsan velit, nec fringilla turpis lectus at purus. Mauris ut tortor at neque fringilla rhoncus eget vitae risus.",
+    "long": "Sed lacinia lacus elit. Aenean auctor ornare diam, at fermentum lacus vehicula a. Donec sit amet metus euismod dui interdum tincidunt eu vel velit. Quisque sodales, magna vel placerat condimentum, nibh sapien accumsan velit, nec fringilla turpis lectus at purus. Mauris ut tortor at neque fringilla rhoncus eget vitae risus. Nam vitae ante ante. Duis id justo eu lacus condimentum venenatis ut vitae tortor. Morbi dignissim libero non lobortis euismod. Donec gravida turpis vitae tellus posuere maximus. In nec felis nisl. Donec consectetur eget massa tristique aliquet. Aenean maximus magna sem, quis vestibulum magna auctor eu. Vestibulum vitae est sit amet ex molestie rhoncus vel sit amet purus."
+  },
+  "description": "Suspendisse ut orci eu erat vulputate tristique. Phasellus sit amet turpis sit amet nibh facilisis luctus. Suspendisse orci nulla, sollicitudin ut ullamcorper et, vehicula nec purus. Aenean pulvinar semper nibh eu euismod. Sed ut dui sit amet eros tempor pharetra. Donec tristique pretium diam. In nulla nisl, sollicitudin in ultrices vitae, tristique eget augue.",
+  "url": "http://web.library.emory.edu/",
+  "name": {
+    "first": "Robert",
+    "firsti": "R",
+    "middle": "Winship",
+    "middlei": "W",
+    "last": "Woodruff",
+    "lasti": "W"
+  },
+  "year": {
+    "long": "2016",
+    "short": "16"
+  },
+  "month": {
+    "long": "January",
+    "short": "Jan",
+    "digit": "01"
+  },
+  "dayofweek": {
+    "long": "Sunday",
+    "short": "Sun"
+  },
+  "day": {
+    "long": "01",
+    "short": "1",
+    "ordinal": "st"
+  },
+  "hour": {
+    "long": "06",
+    "short": "6",
+    "military": "06",
+    "ampm": "am"
+  },
+  "minute": {
+    "long": "20",
+    "short": "20"
+  },
+  "seconds": "31"
+}

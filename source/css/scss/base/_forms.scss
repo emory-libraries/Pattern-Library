@@ -1,0 +1,124 @@
+fieldset {
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+label, input, button, select, textarea {
+    line-height: 1.5;
+}
+
+legend,
+label {
+    font-family: $label-font-family;
+    font-weight: 400;
+}
+
+legend {
+    margin-bottom: $small-spacing / 2;
+    padding: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: $small-spacing / 2;
+
+    &.required-field:after {
+        content: '*';
+        font-weight: 400;
+    }
+}
+
+input,
+select,
+optgroup,
+textarea {
+    display: block;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    width: 220px;
+}
+
+#{$all-text-inputs},
+select[multiple] {
+    background-color: $base-background-color;
+    border: $input-border;
+    border-radius: $base-border-radius;
+    box-shadow: $form-box-shadow;
+    box-sizing: border-box;
+    margin-bottom: $small-spacing;
+    padding: $base-spacing / 3;
+    transition: border-color $base-duration $base-timing;
+
+/*     &:hover {
+        border-color: shade($base-border-color, 20%);
+    }*/
+
+    &:focus {
+        border-color: darken($input-border-color, 25%);
+        //box-shadow: $form-box-shadow-focus;
+        outline: none;
+    }
+
+    &:disabled {
+        background-color: shade($base-background-color, 5%);
+        cursor: not-allowed;
+
+        &:hover {
+            border: $base-border;
+        }
+    }
+
+    &::placeholder {
+        color: $medium-gray;
+    }
+}
+
+textarea {
+    resize: vertical;
+}
+
+[type="search"] {
+    appearance: none;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    display: inline;
+    margin-right: $small-spacing / 2;
+    width: auto;
+
+    &:disabled + .option-label {
+        color: $light-gray;
+    }
+}
+
+select,
+[type="file"] {
+    height: 34px;
+    //line-height: 2;
+}
+
+[type="file"] {
+    margin-bottom: $small-spacing;
+    //padding: $base-spacing / 3;
+    //width: 100%;
+
+    &>* {
+        display:inline;
+        vertical-align: middle;
+    }
+}
+
+select {
+    margin-bottom: $small-spacing;
+    max-width: 100%;
+    //width: auto;
+
+    &[multiple] {
+        max-height: 220px;
+        height: auto;
+    }
+
+}
