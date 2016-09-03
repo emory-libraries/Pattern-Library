@@ -4,3 +4,6 @@ public/*
 source/styleguide/*
 vendor/*
 .sass-cache/*
+source/css/scss/bourbon/*
+source/css/scss/neat/*
+source/css/scss/font-awesome-*/*
