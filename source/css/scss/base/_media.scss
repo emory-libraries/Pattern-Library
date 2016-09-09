@@ -1,4 +1,6 @@
 figure {
+    $figcaption-color: #333 !default;
+
     margin: 0;
     @include padding(1em);
     border-top: $base-border;
@@ -48,7 +50,7 @@ figure {
 figcaption {
     font-family: $caption-sans-serif-font-family;
     font-size: .7em;
-    color: $muted;
+    color: $figcaption-color;
     margin-top: 1em;
 }
 

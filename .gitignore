@@ -1,9 +1,11 @@
 .DS_Store
+.sass-cache/*
+config/*
+core/*
 export/*
 public/*
 source/styleguide/*
-vendor/*
-.sass-cache/*
 source/css/scss/bourbon/*
 source/css/scss/neat/*
 source/css/scss/font-awesome-*/*
+vendor/*

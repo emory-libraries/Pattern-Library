@@ -4,7 +4,9 @@
  * These styles will not be your production CSS.
  */
 
-@import 'scss/style';
+@import 'scss/bourbon/bourbon';
+@import 'scss/neat/neat';
+@import 'scss/base/base';
 
 // Default styleguide styles
 #sg-patterns {

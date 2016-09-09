@@ -6,7 +6,7 @@ body {
     line-height: $base-line-height;
 
     @include media($m-up) {
-        font-size: $base-font-size + .2em;
+        font-size: $base-font-size + .125em;
     }
 }
 
