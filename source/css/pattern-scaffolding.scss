@@ -6,7 +6,8 @@
 
 @import 'scss/bourbon/bourbon';
 @import 'scss/neat/neat';
-@import 'scss/base/base';
+@import 'scss/base/grid-settings';
+@import 'scss/base/variables';
 
 // Default styleguide styles
 #sg-patterns {
@@ -133,8 +134,13 @@ figure {
 
     &.pull-left,
     &.pull-right {
-      width: 33%;
+      width: 50%;
       max-width: 300px;
+
+      @include media ($m-up) {
+        width: 33%;
+      }
+
     }
 
   }
