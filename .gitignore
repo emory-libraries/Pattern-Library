@@ -3,6 +3,7 @@
 config/*
 core/*
 export/*
+node_modules/*
 public/*
 source/styleguide/*
 source/css/scss/bourbon/*
