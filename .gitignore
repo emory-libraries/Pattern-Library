@@ -6,7 +6,4 @@ export/*
 node_modules/*
 public/*
 source/styleguide/*
-source/css/scss/bourbon/*
-source/css/scss/neat/*
-source/css/scss/font-awesome-*/*
 vendor/*
