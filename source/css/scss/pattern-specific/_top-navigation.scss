@@ -5,6 +5,25 @@ nav[role=navigation] {
     line-height: $base-line-height;
     //border-bottom: $base-border;
 
+    .navigation-mobile-menu {
+        color: $action-color;
+        display: block;
+        float: right;
+        //line-height: $centered-navigation-height;
+        margin: 0;
+        //padding-right: $centered-navigation-submenu-padding;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        @include media ($s-up) {
+          display: none;
+        }
+
+        &:focus,
+        &:hover {
+          color: $action-color;
+        }
+    }
     ul {
         list-style: none;
         padding: 0;

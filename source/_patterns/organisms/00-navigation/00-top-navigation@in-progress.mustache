@@ -1,0 +1,45 @@
+<nav role="navigation">
+    <a href="javascript:void(0)" id="js-navigation-mobile-menu" class="js-navigation-mobile-menu"><i class="fa fa-list"></i> Navigation</a>
+    <ul class="js-navigation-menu">
+        <li><a href="javascript:void(0)">Home</a></li>
+        <li class="active"><a href="javascript:void(0)">Materials</a></li>
+        <li><a href="javascript:void(0)">Services</a></li>
+        <li><a href="javascript:void(0)">Research and Learning</a></li>
+        <li><a href="javascript:void(0)">Exhibitions</a></li>
+        <li><a href="javascript:void(0)">News and Events</a></li>
+        <li><a href="javascript:void(0)">About</a></li>
+    </ul>
+</nav>
+<script>
+    $(window).on("load resize",function(e) {
+        var more = document.getElementById("js-more");
+
+        if ($(more).length > 0) {
+            var windowWidth = $(window).width();
+            var moreLeftSideToPageLeftSide = $(more).offset().left;
+            var moreLeftSideToPageRightSide = windowWidth - moreLeftSideToPageLeftSide;
+
+            if (moreLeftSideToPageRightSide < 330) {
+                $("#js-more .submenu .submenu").removeClass("fly-out-right");
+                $("#js-more .submenu .submenu").addClass("fly-out-left");
+            }
+
+            if (moreLeftSideToPageRightSide > 330) {
+                $("#js-more .submenu .submenu").removeClass("fly-out-left");
+                $("#js-more .submenu .submenu").addClass("fly-out-right");
+            }
+        }
+
+        var menuToggle = $("#js-navigation-mobile-menu").unbind();
+        $("#js-navigation-menu").removeClass("show");
+
+        menuToggle.on("click", function(e) {
+            e.preventDefault();
+            $("#js-navigation-menu").slideToggle(function(){
+                if($("#js-navigation-menu").is(":hidden")) {
+                    $("#js-navigation-menu").removeAttr("style");
+                }
+            });
+        });
+    });
+</script>
