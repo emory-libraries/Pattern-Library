@@ -35,7 +35,7 @@ module.exports = function(grunt) {
                 }
             },
             html: {
-                files: ['source/_patterns/**/*.mustache', 'source/_patterns/**/*.md', 'source/_patterns/**/*.json', 'source/_data/*.json'],
+                files: ['source/_patterns/**/*.mustache', 'source/_patterns/**/*.md', 'source/_patterns/**/*.json', 'source/_data/*.json', 'source/images/*.svg'],
                 tasks: ['shell:patternlab'],
                 options: {
                     spawn: false
