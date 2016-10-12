@@ -1,6 +1,6 @@
 nav[role=navigation] {
     font-family: $label-font-family;
-    font-size: .8rem;
+    font-size: 1em;
     font-weight: 400;
     line-height: $base-line-height;
     //border-bottom: $base-border;
@@ -30,11 +30,17 @@ nav[role=navigation] {
         margin: 0;
         border: 0;
         background-color: $primary-nav-background-color;
+        position: absolute;
+        left: -10000px;
 
         @include display(flex);
         @include flex-wrap(wrap);
         @include align-content(center);
 
+        @include media($s-up) {
+            font-size: .8em;
+            position: initial;
+        }
 
         @include media($m-up) {
             @include justify-content(space-around);
@@ -49,7 +55,7 @@ nav[role=navigation] {
             display: flex;
             @include align-items(center);
             @include margin(0);
-            @include pad(.5em);
+            @include padding(.5em);
             border: $base-border;
             @include border-color($ultra-light-gray null null $ultra-light-gray);
 
@@ -65,11 +71,9 @@ nav[role=navigation] {
 
             @include transition(background-color .2s ease-out, color .2s ease-out);
 
-
             a {
                 text-decoration: none;
             }
-
 
             &.active,
             &:hover {
@@ -81,6 +85,27 @@ nav[role=navigation] {
 
             }
 
+        }
+
+        &.is-visible {
+            position: relative;
+            left: inherit;
+        }
+
+    }
+
+    .mobile-menu {
+        display: block;
+        width: 100%;
+        @include margin(0);
+        @include padding(.5em);
+        background-color: $primary-nav-background-color;
+        text-decoration: none;
+        border: $base-border;
+        @include border-color($ultra-light-gray null null $ultra-light-gray);
+
+        @include media($s-up) {
+            display: none;
         }
 
     }

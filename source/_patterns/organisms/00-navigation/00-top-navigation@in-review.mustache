@@ -1,0 +1,17 @@
+<nav role="navigation">
+    <a href="javascript:void(0)" id="js-navigation-mobile-menu" class="mobile-menu"><i class="fa fa-bars"></i> Menu</a>
+    <ul class="js-navigation-menu">
+        <li><a href="javascript:void(0)">Home</a></li>
+        <li class="active"><a href="javascript:void(0)">Materials</a></li>
+        <li><a href="javascript:void(0)">Services</a></li>
+        <li><a href="javascript:void(0)">Research and Learning</a></li>
+        <li><a href="javascript:void(0)">Exhibitions</a></li>
+        <li><a href="javascript:void(0)">News and Events</a></li>
+        <li><a href="javascript:void(0)">About</a></li>
+    </ul>
+</nav>
+<script>
+    jQuery('.mobile-menu').click(function(){
+        jQuery('.js-navigation-menu').toggleClass('is-visible');
+    });
+</script>
