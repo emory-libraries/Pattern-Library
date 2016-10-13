@@ -17,6 +17,20 @@ module.exports = function(grunt) {
                 }
             }
         },
+        postcss: {
+          options: {
+            map: true, // inline sourcemaps
+
+            // or
+            map: {
+                inline: false, // save all sourcemaps as separate files...
+                annotation: 'source/css/maps/' // ...to the specified directory
+            }
+          },
+          dist: {
+            src: 'source/css/*.css'
+          }
+        },
         shell: {
             patternlab: {
                 //command: "php core/builder.php -gnc"
