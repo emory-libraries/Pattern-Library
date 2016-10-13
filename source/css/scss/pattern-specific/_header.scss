@@ -1,29 +1,11 @@
 header[role=banner] {
     background-color: $emory-blue;
 
-    @include media($xs-up) {
-        //min-height: 150px;
-/*         display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        align-items: flex-end;
-        align-content: flex-end; */
-    }
-
     #logo {
-        stroke-width: 1;
-        stroke: $white;
         fill: $white;
 
         @include media($xs-up) {
             max-height: 150px;
-            stroke-width: 0;
-            //flex-basis: 668px;
-        }
-
-        @include media($m-up) {
-            //max-height: 100%;
         }
 
     }
