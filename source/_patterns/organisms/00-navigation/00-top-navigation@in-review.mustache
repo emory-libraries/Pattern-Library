@@ -11,7 +11,14 @@
     </ul>
 </nav>
 <script>
-    jQuery('.mobile-menu').click(function(){
-        jQuery('.js-navigation-menu').toggleClass('is-visible');
+    jQuery(document).ready(function(){
+
+        //jQuery('.js-navigation-menu').addClass('is-hidden');
+
+        jQuery('.mobile-menu').click(function(){
+            jQuery('.js-navigation-menu').toggleClass('is-hidden');
+        });
+
     });
+
 </script>

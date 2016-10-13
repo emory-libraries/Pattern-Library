@@ -11,8 +11,6 @@ nav[role=navigation] {
         margin: 0;
         border: 0;
         background-color: $primary-nav-background-color;
-        position: absolute;
-        left: -10000px;
 
         @include display(flex);
         @include flex-wrap(wrap);
@@ -68,9 +66,9 @@ nav[role=navigation] {
 
         }
 
-        &.is-visible {
-            position: relative;
-            left: inherit;
+        &.is-hidden {
+            position: absolute;
+            left: -10000px;
         }
 
     }
