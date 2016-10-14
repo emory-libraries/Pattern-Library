@@ -1,5 +1,5 @@
 <nav role="navigation">
-    <a href="javascript:void(0)" id="js-navigation-mobile-menu" class="mobile-menu"><i class="fa fa-bars"></i> Menu</a>
+    <a href="javascript:void(0)" id="js-navigation-mobile-menu" class="mobile-menu-link"><span class="fa fa-bars" aria-hidden="true"></span> Navigation</a>
     <ul class="js-navigation-menu">
         <li><a href="javascript:void(0)">Home</a></li>
         <li class="active"><a href="javascript:void(0)">Materials</a></li>
@@ -15,7 +15,7 @@
 
         jQuery('.js-navigation-menu').addClass('is-hidden');
 
-        jQuery('.mobile-menu').click(function(){
+        jQuery('.mobile-menu-link').click(function(){
             jQuery('.js-navigation-menu').toggleClass('is-hidden');
         });
 
