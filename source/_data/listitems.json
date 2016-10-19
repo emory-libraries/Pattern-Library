@@ -7,11 +7,11 @@
         "alt": "Avatar"
       },
       "square": {
-        "src": "http://placeimg.com/300/300/nature",
+        "src": "http://placehold.it/300x300",
         "alt": "Square"
       },
       "rectangle": {
-        "src": "http://placeimg.com/400/300/tech",
+        "src": "http://placehold.it/350x150",
         "alt": "Rectangle"
       },
       "landscape-4x3": {
@@ -19,7 +19,7 @@
         "alt": "4x3 Image"
       },
       "landscape-16x9": {
-        "src": "http://placeimg.com/640/360/tech",
+        "src": "http://placehold.it/640x360",
         "alt": "16x9 Image"
       }
     },

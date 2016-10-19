@@ -45,14 +45,14 @@ module.exports = function(grunt) {
                 files: ['source/css/scss/**/*.scss', 'source/css/pattern-scaffolding.scss'],
                 tasks: ['sass','shell:patternlab'],
                 options: {
-                    spawn: true,
+                    spawn: true
                 }
             },
             html: {
                 files: ['source/_patterns/**/*.mustache', 'source/_patterns/**/*.md', 'source/_patterns/**/*.json', 'source/_data/*.json', 'source/images/*.svg'],
                 tasks: ['shell:patternlab'],
                 options: {
-                    spawn: false
+                    spawn: true
                 }
             }
         }
