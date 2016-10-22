@@ -1,0 +1,100 @@
+body {
+    @include font-feature-settings("kern", "liga", "pnum");
+    color: $base-font-color;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+
+    @include media($m-up) {
+        font-size: $base-font-size + .125em;
+    }
+}
+
+$modular-scale-ratio: 1.15;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font-family;
+    //font-size: modular-scale(1);
+    line-height: $heading-line-height;
+    margin: $small-spacing 0;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: modular-scale(5);
+}
+
+h2 {
+    font-size: modular-scale(4);
+}
+
+h3 {
+    font-size: modular-scale(3);
+}
+
+h4 {
+    font-size: modular-scale(2);
+}
+
+h5 {
+    font-size: modular-scale(1);
+}
+
+h6 {
+    font-size: modular-scale(0);
+}
+
+p {
+    margin: 0 0 $small-spacing;
+}
+
+pre,
+code,
+samp,
+kbd {
+    font-family: $code-font-family;
+}
+
+kbd {
+    background-color: $lighter-gray;
+    color: $black;
+    font-size: .9em;
+    @include pad(.5em);
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px 0px $black;
+}
+
+samp {
+    color: $light-gray;
+    background-color: $black;
+    font-size: .9em;
+    padding: .25em .5em;
+}
+
+a {
+    color: $action-color;
+    text-decoration: underline;
+    transition: color $base-duration $base-timing;
+    //border-bottom: 1px solid;
+
+    &:active,
+    &:focus,
+    &:hover {
+        color: shade($action-color, 25%);
+    }
+
+}
+
+hr {
+    border-bottom: $base-border;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    margin: $base-spacing 0;
+    clear: both;
+}

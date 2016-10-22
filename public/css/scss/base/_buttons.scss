@@ -1,0 +1,119 @@
+#{$all-buttons},
+.btn {
+    appearance: none;
+    background-color: $ultra-light-gray;
+    @include background-image(linear-gradient(to bottom, rgba(255,255,255,0.25), rgba(255,255,255,0)));
+    border: $base-border;
+    border-radius: $base-border-radius + 1px;
+    color: $black;
+    cursor: pointer;
+    display: inline-block;
+    font-family: $label-font-family;
+    font-size: $base-font-size;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    line-height: $base-line-height;
+    padding: $small-spacing $base-spacing;
+    padding: 4px 12px;
+    text-decoration: none;
+    @include background-image(linear-gradient(to bottom, rgba(255,255,255,0.25), rgba(255,255,255,0)));
+    transition: background-color $base-duration $base-timing;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    &:hover,
+    &:focus {
+        background-color: $blue-gray;
+        background-image: none;
+        //color: $black;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+
+        &:hover {
+            background-color: $action-color;
+        }
+    }
+}
+
+.btn-primary {
+    color: $white;
+    background-color: $action-color;
+    border-color: transparent;
+
+    &:hover {
+        background-color: $action-color;
+    }
+}
+
+.btn-info {
+    color: $white;
+    background-color: #2083aa;
+    border-color: transparent;
+
+    &:hover {
+        background-color: #2083aa;
+    }
+}
+
+.btn-warning {
+    color: $black;
+    background-color: #ebb639;
+    border-color: transparent;
+
+    &:hover {
+        background-color: #ebb639;
+    }
+}
+
+.btn-success {
+    color: $white;
+    background-color: #127457;
+    border-color: transparent;
+
+    &:hover {
+        background-color: #127457;
+    }
+}
+
+.btn-danger {
+    color: $white;
+    background-color: #ea3d3d;
+    border-color: transparent;
+
+    &:hover {
+        background-color: #ea3d3d;
+    }
+}
+
+
+.btn-info {
+    color: $white;
+    background-color: #2083aa;
+    border-color: transparent;
+
+    &:hover {
+        background-color: #2083aa;
+    }
+}
+
+.btn-large {
+    font-size: em(17.5px);
+    border-radius: 6px;
+    @include pad(11px 19px);
+}
+
+.btn-small {
+    font-size: em(11.9px);
+    border-radius: 3px;
+    @include pad(2px 10px);
+}
+
+.btn-mini {
+    font-size: em(10.5px);
+    border-radius: 3px;
+    @include pad(0 6px);
+}

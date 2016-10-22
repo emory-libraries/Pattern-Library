@@ -1,0 +1,14 @@
+header[role=banner] {
+    background-color: $emory-blue;
+
+    #logo {
+        fill: $white;
+
+        @include media($xs-up) {
+            max-height: 150px;
+        }
+
+    }
+
+
+}
