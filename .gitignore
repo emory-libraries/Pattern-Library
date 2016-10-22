@@ -1,9 +1,5 @@
 .DS_Store
 .sass-cache/*
-config/*
-core/*
-export/*
 node_modules/*
 public/*
-source/styleguide/*
-vendor/*
+export/*
