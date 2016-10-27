@@ -6,10 +6,7 @@ nav[role=navigation] {
     //border-bottom: $base-border;
 
     ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        border: 0;
+        @extend %unstyled-list;
         background-color: $primary-nav-background-color;
 
         @include display(flex);

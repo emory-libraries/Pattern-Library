@@ -1,13 +1,16 @@
-ul,
+/* ul,
 ol {
 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 
-    &.unstyled {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
+} */
 
+%unstyled-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 dl {
