@@ -13,6 +13,14 @@ body {
   height: 100%;
 }
 
+header[role=banner],
+nav[role=navigation],
+main[role=main],
+body>footer {
+    @include outer-container();
+    @include margin(0 null);
+}
+
 .pull-left {
   float: left !important;
 }

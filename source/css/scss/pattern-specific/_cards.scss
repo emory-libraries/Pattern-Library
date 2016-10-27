@@ -127,10 +127,6 @@ section.card {
             @include flex-basis(33%);
         }
 
-        @include media($l-up) {
-            @include flex-basis(25%);
-        }
-
     }
 
 }
