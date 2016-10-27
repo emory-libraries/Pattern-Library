@@ -15,8 +15,8 @@
           box-sizing: border-box !important;
   max-width: 100%;
   padding: 0 0.5em;
+  background-color: #fff;
 }
-
 .demo-animate {
   background: #ddd;
   padding: 1em;
@@ -61,6 +61,10 @@
 }
 // End default styleguide styles
 
+//Body background color
+body {
+  //background-color: #fff;
+}
 // Colors Swatches
 $swatch-size: em(100px);
 
@@ -164,4 +168,8 @@ figure {
     flex-basis: 33%;
   }
 
+}
+
+section.card.tile {
+  max-width: 33%;
 }

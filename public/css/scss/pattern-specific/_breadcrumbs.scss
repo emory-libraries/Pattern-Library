@@ -1,8 +1,7 @@
 ul.breadcrumb {
+    @extend %unstyled-list;
     font-family: $label-font-family;
     font-size: em(12px);
-    margin-left: 0;
-    padding-left: 0;
 
     li {
         display: inline;
