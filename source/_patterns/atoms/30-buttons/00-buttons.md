@@ -1,7 +1,7 @@
 ---
 title: Button Styles
 ---
-These styles apply to states and context of the buttons (e.g. - default, primary, success, etc. as well as a disabled).
+These styles apply to states and context of the buttons (e.g. - default, primary, success, etc. as well as a disabled). It's important to note when to use a <code>button</code> element and when to use a <code>a</code> element. Short version: Use buttons when submitting a form and links for everything else.
 
 <code>.btn</code> contains the base button styles. The following classes alter the button colors.
 
