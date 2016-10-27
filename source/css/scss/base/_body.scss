@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $lighter-gray;
+}
+
+main[role=main] {
+    background-color: $base-background-color;
+    @include padding(.5em 1em);
+}
