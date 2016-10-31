@@ -136,6 +136,13 @@ figure {
 
   @include media($s-up) {
 
+    &.center {
+      display: block;
+      margin: 0 auto 1em auto;
+      width: 50%;
+      max-width: 700px;
+    }
+
     &.pull-left,
     &.pull-right {
       width: 50%;
