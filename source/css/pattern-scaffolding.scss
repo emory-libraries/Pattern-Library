@@ -62,8 +62,15 @@
 // End default styleguide styles
 
 //Body background color
-body {
-  //background-color: #fff;
+body.patternlab-styles {
+  background-color: #fff;
+  padding: 0 1em;
+
+  &.template-page-override {
+    background-color: $lighter-gray;
+    padding: 0;
+  }
+
 }
 // Colors Swatches
 $swatch-size: em(100px);
@@ -158,25 +165,14 @@ figure {
 
 }
 
-/* Font Awesome*/
-.fontawesome-icon-list {
-  font-family: 'PT Sans', sans-serif;
-  font-size: 14px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  a {
-    //text-decoration: none;
-  }
-
-  .fa-hover {
-    margin-bottom: 1em;
-    flex-basis: 33%;
-  }
-
-}
-
 section.card.tile {
-  max-width: 33%;
+
+  @include media($s-up) {
+    max-width: 50%;
+  }
+
+  @include media($m-up) {
+    max-width: 33%;
+  }
+
 }
