@@ -1,5 +1,4 @@
 ---
-Table-Plain
+title: Table-Plain
 ---
-
-Base styling
+Table with classname 'table-plain' and caption, column and row headings, thead, tfoot, and tbody.

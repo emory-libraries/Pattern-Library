@@ -22,3 +22,36 @@
 // th {
 //     vertical-align: middle;
 // }
+
+.table-plain,
+table {
+    font-family: $label-font-family;
+    font-size: 0.9em;
+    border-collapse: collapse;
+
+    & td,
+    & th {
+        padding: 0.25em 0.75em;
+        vertical-align: middle;
+    }
+}
+
+.table-bordered {
+    & tr {
+        border-bottom: $base-border;
+    }
+}
+
+.table-striped {
+    thead tr {
+        background: $lighter-gray;
+    }
+
+    tbody tr:nth-of-type(2n) {
+        background-color: $ultra-light-gray;
+    }
+
+    tfoot tr {
+        border-top: $base-border;
+    }
+}

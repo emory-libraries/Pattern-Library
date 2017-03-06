@@ -1,5 +1,5 @@
 ---
-title: Base Table
+title: Table
 ---
 'Unstyled' table with caption, column and row headings, thead, tfoot, and tbody.  
 
