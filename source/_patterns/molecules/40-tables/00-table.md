@@ -1,6 +1,6 @@
 ---
 title: Table
 ---
-'Unstyled' table with caption, column and row headings, thead, tfoot, and tbody.  
+Table with caption, column and row headings, thead, tfoot, and tbody.  
 
-Relies on default user agent and inherited styles. Has no or empty class attribute.
+Has no or empty class attribute.  Same base styles as table with class 'table-plain'.

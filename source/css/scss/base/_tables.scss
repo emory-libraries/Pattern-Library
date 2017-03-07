@@ -26,18 +26,18 @@
 .table-plain,
 table {
     font-family: $label-font-family;
-    font-size: 0.9em;
+    font-size: $base-font-size;
     border-collapse: collapse;
 
-    & td,
-    & th {
+    td,
+    th {
         padding: 0.25em 0.75em;
         vertical-align: middle;
     }
 }
 
 .table-bordered {
-    & tr {
+    tbody tr {
         border-bottom: $base-border;
     }
 }
