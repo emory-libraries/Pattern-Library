@@ -9,9 +9,9 @@ nav[role=navigation] {
         @extend %unstyled-list;
         background-color: $primary-nav-background-color;
 
-        @include display(flex);
-        @include flex-wrap(wrap);
-        @include align-content(center);
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
 
         @include media($s-up) {
             font-size: .8em;
@@ -19,17 +19,17 @@ nav[role=navigation] {
         }
 
         @include media($m-up) {
-            @include justify-content(space-around);
+            justify-content: space-around;
         }
 
         &>li {
             text-align: center;
-            @include flex-direction(column);
-            @include justify-content(center);
-            @include align-self(stretch);
-            @include flex-basis(100%);
+            flex-direction: column;
+            justify-content: center;
+            align-self: stretch;
+            flex-basis: 100%;
             display: flex;
-            @include align-items(center);
+            align-items: center;
             @include margin(0);
             @include padding(.5em);
             border: $base-border;
@@ -37,12 +37,12 @@ nav[role=navigation] {
 
             // Adjust li width at larger screen sizes.
             @include media($s-up) {
-                @include flex-basis(50%);
+                flex-basis: 50%;
             }
 
             @include media($m-up) {
-                @include flex-basis(auto);
-                @include flex-grow(1);
+                flex-basis: auto;
+                flex-grow: 1;
             }
 
             @include transition(background-color .2s ease-out, color .2s ease-out);
