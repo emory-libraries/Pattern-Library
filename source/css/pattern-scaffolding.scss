@@ -89,7 +89,7 @@ $swatch-size: em(100px);
         //display: inline-block;
         //@include padding(1em);
         height: $swatch-size*2;
-        @include pad(.5em);
+        @include padding(.5em);
         margin-top: 1em;
         border: $base-border;
         border-radius: $base-border-radius;
