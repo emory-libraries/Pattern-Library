@@ -1,8 +1,9 @@
 section.card {
-    @include display(flex);
-    @include flex-wrap(wrap);
-    @include flex-basis(100%);
-    @include align-content(flex-start);
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    align-content: flex-start;
+    justify-content: space-between;
 
     h2 {
 
@@ -14,8 +15,9 @@ section.card {
 
     figure {
         border: none;
+        margin-bottom: 1em;
         padding: 0;
-        @include flex-basis(100%);
+        flex-basis: 100%;
     }
 
     p {
@@ -47,12 +49,12 @@ section.card {
     @include media($s-up) {
 
         h2 {
-            @include flex-basis(100%);
-            @include order(1);
+            flex-basis: 100%;
+            order: 1;
         }
 
         figure {
-            @include order(2);
+            order: 2;
             overflow: hidden;
 
             img {
@@ -62,12 +64,12 @@ section.card {
         }
 
         p {
-            @include order(3);
+            order: 3;
         }
 
         ul {
-            @include flex-basis(100%);
-            @include order(4);
+            flex-basis: 100%;
+            order: 4;
         }
 
     }
@@ -77,14 +79,13 @@ section.card {
         @include media($s-up) {
 
             figure {
-                margin: 0 0 1em 1%;
-                @include flex-basis(39%);
-                @include order(3);
+                flex-basis: 39%;
+                order: 3;
             }
 
             p {
-                @include flex-basis(60%);
-                @include order(2);
+                flex-basis: 60%;
+                order: 2;
             }
 
         }
@@ -92,11 +93,11 @@ section.card {
         @include media($m-up) {
 
             figure {
-                @include flex-basis(24%);
+                flex-basis: 24%;
             }
 
             p {
-                @include flex-basis(75%);
+                flex-basis: 75%;
             }
 
         }
@@ -111,20 +112,24 @@ section.card {
             /* border: $base-border;
             border-radius: $base-border-radius;
             box-shadow: 1px 1px 6px $light-gray; */
-            @include flex-basis(50%);
+            flex-basis: 50%;
 
             h2 {
-                @include order(2);
+                order: 2;
                 font-size: em(21px);
             }
 
             figure {
-                @include order(1);
+                order: 1;
             }
         }
 
+        @include media($s-up) {
+            flex-basis: 50%;
+        }
+ 
         @include media($m-up) {
-            @include flex-basis(33%);
+            flex-basis: 33%;
         }
 
     }
