@@ -12,7 +12,6 @@ html {
 }
 
 #sg-patterns {
-  -webkit-box-sizing: border-box !important;
   box-sizing: border-box !important;
   max-width: 100%;
   padding: 0 0.5em;
@@ -73,14 +72,24 @@ body.patternlab-styles.template-page-override {
 }
 
 .color-pallette {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
+  -ms-flex-flow: column wrap;
+      flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media screen and (min-width: 480px) {
   .color-pallette {
-    flex-direction: row;
-    justify-content: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 .color-pallette .color-tile {
@@ -93,17 +102,20 @@ body.patternlab-styles.template-page-override {
 }
 @media screen and (min-width: 480px) {
   .color-pallette .color-tile {
-    flex-basis: 33%;
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
   }
 }
 @media screen and (min-width: 768px) {
   .color-pallette .color-tile {
-    flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
   }
 }
 @media screen and (min-width: 992px) {
   .color-pallette .color-tile {
-    flex-basis: 20%;
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
   }
 }
 .color-pallette .color-tile .color-swatch {

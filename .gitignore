@@ -2,3 +2,10 @@
 .sass-cache/*
 node_modules/*
 export/*
+public/css/*
+public/js/*
+public/images/*
+public/patterns/*
+public/annotations/*
+public/favicon.ico
+public/latest-change.txt
