@@ -9,27 +9,24 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 options: {
-                    style: 'compressed'
+                    style: 'expanded'
                 },
                 files: {
-                    'source/css/style.min.css': 'source/css/scss/style.scss',
-                    'source/css/pattern-scaffolding.min.css': 'source/css/pattern-scaffolding.scss'
+                    'source/css/style.css': 'source/css/scss/style.scss',
+                    'source/css/pattern-scaffolding.css': 'source/css/pattern-scaffolding.scss'
                 }
             }
         },
         postcss: {
-          options: {
-            map: true, // inline sourcemaps
-
-            // or
-            map: {
-                inline: false, // save all sourcemaps as separate files...
-                annotation: 'source/css/maps/' // ...to the specified directory
+            options: {
+                map: true,
+                processors: [
+                    require('autoprefixer')
+                ]
+            },
+            dist: {
+                src: 'source/css/*.css'
             }
-          },
-          dist: {
-            src: 'source/css/*.css'
-          }
         },
         font_awesome_svg: {
             some_target: {
@@ -77,12 +74,13 @@ module.exports = function(grunt) {
     //grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-font-awesome-svg');
     grunt.loadNpmTasks('grunt-svgstore');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['sass', 'shell:patternlab', 'watch']);
+    grunt.registerTask('default', ['sass', 'postcss:dist', 'shell:patternlab', 'watch']);
     grunt.registerTask('fa-svg', ['font_awesome_svg','svgstore']);
 
 };

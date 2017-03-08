@@ -1,4 +1,4 @@
-<section class="{{ styleModifier }}">
+<section {{# hasClass}}class="{{ styleModifier }}"{{/hasClass}}>
     <h2><a href="javascript:void(0)">{{ headline.short }}</a></h2>
     {{> organisms-figureTemplate:(alt:"rectangle image", src: "http://placehold.it/400x300") }}
     <p>{{ description }}</p>
