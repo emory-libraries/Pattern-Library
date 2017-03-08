@@ -14,9 +14,9 @@
     "grunt-svgstore": "^1.0.0"
   },
   "dependencies": {
-
+    "autoprefixer": "^6.7.6"
   },
   "browserslist": [
-      "last 2 versions"
+    "last 2 versions"
   ]
 }
