@@ -28,7 +28,6 @@ html {
 }
 
 .sg-colors {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -39,7 +38,6 @@ html {
 }
 
 .sg-colors li {
-  -webkit-box-flex: 1;
   -ms-flex: auto;
   flex: auto;
   padding: 0.3em;
@@ -72,24 +70,19 @@ body.patternlab-styles.template-page-override {
 }
 
 .color-pallette {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column wrap;
       flex-flow: column wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 @media screen and (min-width: 480px) {
   .color-pallette {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
   }
 }
 .color-pallette .color-tile {
