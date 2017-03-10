@@ -9,3 +9,6 @@ public/patterns/*
 public/annotations/*
 public/favicon.ico
 public/latest-change.txt
+public/styleguide/css/styleguide-specific.css
+public/styleguide/data/*
+public/styleguide/html/*
