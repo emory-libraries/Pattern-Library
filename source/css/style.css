@@ -4164,4 +4164,61 @@ ul.footer-links.footer-links-emory li:hover a, ul.footer-links.footer-links-emor
   color: #fff;
 }
 
+.sidebar-navigation {
+  font-family: "PT Sans", sans-serif;
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 720px) {
+  .sidebar-navigation {
+    max-width: 225px;
+  }
+}
+.sidebar-navigation ul {
+  list-style-type: none;
+}
+.sidebar-navigation ul ul li:last-of-type {
+  border-bottom: none;
+}
+.sidebar-navigation > ul {
+  margin: 0;
+  padding: 0;
+}
+.sidebar-navigation li {
+  position: relative;
+  border-bottom: 1px solid #e6e6e6;
+}
+.sidebar-navigation a {
+  text-decoration: none;
+  color: #002878;
+  line-height: 1.75rem;
+}
+.sidebar-navigation a:focus, .sidebar-navigation a:hover {
+  color: #6384c6;
+}
+.sidebar-navigation a span {
+  position: absolute;
+  right: 0.5em;
+  margin-top: 0.5em;
+}
+
+.section {
+  margin-bottom: 12px;
+  border-bottom: 3px solid #6384c6;
+  font-size: 16px;
+}
+.section a:hover {
+  color: #002878;
+}
+
+.current > a {
+  color: #6384c6;
+  font-weight: bold;
+}
+
+.subpage > a {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #e6e6e6;
+}
+
 /*# sourceMappingURL=style.css.map */
