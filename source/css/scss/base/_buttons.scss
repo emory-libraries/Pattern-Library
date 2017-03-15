@@ -1,5 +1,4 @@
-#{$all-buttons},
-.btn {
+#{$all-buttons}, .btn, a[role=button].btn {
     appearance: none;
     background-color: $ultra-light-gray;
     @include background-image(linear-gradient(to bottom, rgba(255,255,255,0.25), rgba(255,255,255,0)));
@@ -22,97 +21,97 @@
     vertical-align: middle;
     white-space: nowrap;
 
-    &:hover,
-    &:focus {
+    &:hover, &:focus {
         background-color: $blue-gray;
         background-image: none;
         //color: $black;
     }
 
-    &:disabled {
+    &:disabled, &.btn-disabled {
         cursor: not-allowed;
         opacity: 0.5;
 
-        &:hover {
+        &:hover, &:focus {
             background-color: $action-color;
+            cursor: not-allowed;
         }
     }
 }
 
-.btn-primary {
+.btn-primary, a[role=button].btn-primary {
     color: $white;
     background-color: $action-color;
     border-color: transparent;
 
-    &:hover {
+    &:hover, &:focus {
         background-color: $action-color;
     }
 }
 
-.btn-info {
+.btn-info, a[role=button].btn-info {
     color: $white;
     background-color: #2083aa;
     border-color: transparent;
 
-    &:hover {
+    &:hover, &:focus {
         background-color: #2083aa;
     }
 }
 
-.btn-warning {
+.btn-warning, a[role=button].btn-warning {
     color: $black;
     background-color: #ebb639;
     border-color: transparent;
 
-    &:hover {
+    &:hover, &:focus {
         background-color: #ebb639;
     }
 }
 
-.btn-success {
+.btn-success, a[role=button].btn-success {
     color: $white;
     background-color: #127457;
     border-color: transparent;
 
-    &:hover {
+    &:hover, &:focus {
         background-color: #127457;
     }
 }
 
-.btn-danger {
+.btn-danger, a[role=button].btn-danger {
     color: $white;
     background-color: #ea3d3d;
     border-color: transparent;
 
-    &:hover {
+    &:hover, &:focus {
         background-color: #ea3d3d;
     }
 }
 
 
-.btn-info {
+.btn-info, a[role=button].btn-info {
     color: $white;
     background-color: #2083aa;
     border-color: transparent;
 
-    &:hover {
+    &:hover, &:focus {
         background-color: #2083aa;
     }
 }
 
-.btn-large {
+.btn-large, a[role=button].btn-large {
     font-size: em(17.5px);
     border-radius: 6px;
     @include pad(11px 19px);
 }
 
-.btn-small {
+.btn-small, a[role=button].btn-small {
     font-size: em(11.9px);
     border-radius: 3px;
     @include pad(2px 10px);
 }
 
-.btn-mini {
+.btn-mini, a[role=button].btn-mini {
     font-size: em(10.5px);
     border-radius: 3px;
     @include pad(0 6px);
