@@ -12,6 +12,7 @@ These styles apply to states and context of the buttons (e.g. - default, primary
 .btn-success
 .btn-warning
 .btn-danger
+.btn-disabled (or disabled attribute if &lt;button&gt; instead of &lt;a&gt;)
 </pre>
 </code>
 The disabled button style is applied to any button that has the <code>disabled</code> boolean attribute.
