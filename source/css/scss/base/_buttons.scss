@@ -27,14 +27,18 @@
         //color: $black;
     }
 
-    &:disabled, &.btn-disabled {
-        cursor: not-allowed;
-        opacity: 0.5;
+    &:disabled {
+        @extend .btn-disabled;
+    }
+}
 
-        &:hover, &:focus {
-            background-color: $action-color;
-            cursor: not-allowed;
-        }
+.btn-disabled, a[role=button].btn-disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &:hover, &:focus {
+        background-color: $action-color;
+        cursor: not-allowed;
     }
 }
 
