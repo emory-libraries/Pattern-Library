@@ -1,1 +1,4 @@
-<button class="btn{{ styleModifier }}" {{ booleans }}>{{ label }}</button>
+<div>
+    <button class="btn{{ styleModifier }}" {{ booleans }}>{{ label }}</button>
+    <a role="button" class="btn{{ styleModifier }}" {{ booleans }} {{# hasLink}}href="JavaScript:void(0)"{{/hasLink}}>{{ label }}</a>
+</div>
