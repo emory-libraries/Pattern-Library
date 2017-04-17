@@ -7,25 +7,44 @@ module.exports = function(grunt) {
             // 2. Configuration for concatinating files goes here.
         },*/
         sass: {
-            dist: {
+            dev: {
                 options: {
-                    style: 'expanded'
+                    style: 'expanded',
+                    sourcemap: 'auto'
                 },
                 files: {
                     'source/css/style.css': 'source/css/scss/style.scss',
                     'source/css/pattern-scaffolding.css': 'source/css/pattern-scaffolding.scss'
                 }
-            }
+            },
+            dist: {
+                options: {
+                    style: 'compressed',
+                    sourcemap: 'none'
+                },
+                files: {
+                    'source/css/style.css': 'source/css/scss/style.scss',
+                    'source/css/pattern-scaffolding.css': 'source/css/pattern-scaffolding.scss'
+                }
+            },
         },
         postcss: {
             options: {
-                map: true,
                 processors: [
                     require('autoprefixer')
                 ]
             },
+            dev: {
+                options: {
+                    map: true
+                },
+                src: 'source/css/*.css',
+            },
             dist: {
-                src: 'source/css/*.css'
+                options: {
+                    map: false
+                },
+                src: 'source/css/*.css',
             }
         },
         font_awesome_svg: {
@@ -80,7 +99,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-svgstore');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['sass', 'postcss:dist', 'shell:patternlab', 'watch']);
+    grunt.registerTask('default', ['sass:dev', 'postcss:dev', 'shell:patternlab', 'watch']);
     grunt.registerTask('fa-svg', ['font_awesome_svg','svgstore']);
+    grunt.registerTask('dev', ['sass:dev', 'postcss:dev', 'shell:patternlab']);
+    grunt.registerTask('prod', ['sass:dist', 'postcss:dist', 'shell:patternlab']);
 
 };
