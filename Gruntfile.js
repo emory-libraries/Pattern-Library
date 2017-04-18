@@ -6,6 +6,44 @@ module.exports = function(grunt) {
         /*concat: {
             // 2. Configuration for concatinating files goes here.
         },*/
+        'string-replace': {
+            dev: {
+                files: {
+                    'source/_meta/_00-head.mustache': 'source/_meta/_00-head.mustache'
+                },
+                options: {
+                    replacements: [
+                    // place files inline example
+                        {
+                            pattern: '    <link rel="stylesheet" href="../../css/style.min.css?{{ cacheBuster }}" media="all" />',
+                            replacement: '    <link rel="stylesheet" href="../../css/style.css?{{ cacheBuster }}" media="all" />'
+                        },
+                        {
+                            pattern: '    <link rel="stylesheet" href="../../css/pattern-scaffolding.min.css?{{ cacheBuster }}" media="all" />',
+                            replacement: '    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?{{ cacheBuster }}" media="all" />'
+                        }
+                    ]
+                }
+            },
+            dist: {
+                files: {
+                    'source/_meta/_00-head.mustache': 'source/_meta/_00-head.mustache',
+                },
+                options: {
+                    replacements: [
+                    // place files inline example
+                        {
+                            pattern: '    <link rel="stylesheet" href="../../css/style.css?{{ cacheBuster }}" media="all" />',
+                            replacement: '    <link rel="stylesheet" href="../../css/style.min.css?{{ cacheBuster }}" media="all" />'
+                        },
+                        {
+                            pattern: '    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?{{ cacheBuster }}" media="all" />',
+                            replacement: '    <link rel="stylesheet" href="../../css/pattern-scaffolding.min.css?{{ cacheBuster }}" media="all" />'
+                        }
+                    ]
+                }
+            }
+        },
         sass: {
             dev: {
                 options: {
@@ -23,8 +61,8 @@ module.exports = function(grunt) {
                     sourcemap: 'none'
                 },
                 files: {
-                    'source/css/style.css': 'source/css/scss/style.scss',
-                    'source/css/pattern-scaffolding.css': 'source/css/pattern-scaffolding.scss'
+                    'source/css/style.min.css': 'source/css/scss/style.scss',
+                    'source/css/pattern-scaffolding.min.css': 'source/css/pattern-scaffolding.scss'
                 }
             },
         },
@@ -97,11 +135,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-font-awesome-svg');
     grunt.loadNpmTasks('grunt-svgstore');
-
+    grunt.loadNpmTasks('grunt-string-replace');
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['sass:dev', 'postcss:dev', 'shell:patternlab', 'watch']);
+    grunt.registerTask('default', ['sass:dev', 'postcss:dev', 'string-replace:dev','shell:patternlab', 'watch']);
     grunt.registerTask('fa-svg', ['font_awesome_svg','svgstore']);
-    grunt.registerTask('dev', ['sass:dev', 'postcss:dev', 'shell:patternlab']);
-    grunt.registerTask('prod', ['sass:dist', 'postcss:dist', 'shell:patternlab']);
+    grunt.registerTask('dev', ['sass:dev', 'postcss:dev', 'string-replace:dev','shell:patternlab']);
+    grunt.registerTask('prod', ['sass:dist', 'postcss:dist', 'string-replace:dist', 'shell:patternlab']);
 
 };
