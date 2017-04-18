@@ -15,8 +15,8 @@ module.exports = function(grunt) {
                     replacements: [
                     // place files inline example
                         {
-                            pattern: '    <link rel="stylesheet" href="../../css/style.min.css?{{ cacheBuster }}" media="all" />',
-                            replacement: '    <link rel="stylesheet" href="../../css/style.css?{{ cacheBuster }}" media="all" />'
+                            pattern: '    <link rel="stylesheet" href="../../css/styles.min.css?{{ cacheBuster }}" media="all" />',
+                            replacement: '    <link rel="stylesheet" href="../../css/styles.css?{{ cacheBuster }}" media="all" />'
                         },
                         {
                             pattern: '    <link rel="stylesheet" href="../../css/pattern-scaffolding.min.css?{{ cacheBuster }}" media="all" />',
@@ -33,8 +33,8 @@ module.exports = function(grunt) {
                     replacements: [
                     // place files inline example
                         {
-                            pattern: '    <link rel="stylesheet" href="../../css/style.css?{{ cacheBuster }}" media="all" />',
-                            replacement: '    <link rel="stylesheet" href="../../css/style.min.css?{{ cacheBuster }}" media="all" />'
+                            pattern: '    <link rel="stylesheet" href="../../css/styles.css?{{ cacheBuster }}" media="all" />',
+                            replacement: '    <link rel="stylesheet" href="../../css/styles.min.css?{{ cacheBuster }}" media="all" />'
                         },
                         {
                             pattern: '    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?{{ cacheBuster }}" media="all" />',
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
                     sourcemap: 'auto'
                 },
                 files: {
-                    'source/css/style.css': 'source/css/scss/style.scss',
+                    'source/css/styles.css': 'source/css/scss/styles.scss',
                     'source/css/pattern-scaffolding.css': 'source/css/pattern-scaffolding.scss'
                 }
             },
@@ -61,7 +61,7 @@ module.exports = function(grunt) {
                     sourcemap: 'none'
                 },
                 files: {
-                    'source/css/style.min.css': 'source/css/scss/style.scss',
+                    'source/css/styles.min.css': 'source/css/scss/styles.scss',
                     'source/css/pattern-scaffolding.min.css': 'source/css/pattern-scaffolding.scss'
                 }
             },
