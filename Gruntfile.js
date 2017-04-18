@@ -85,21 +85,6 @@ module.exports = function(grunt) {
                 src: 'source/css/*.css',
             }
         },
-        font_awesome_svg: {
-            some_target: {
-              destination: "source/images/font-awesome-svg"
-            }
-        },
-        svgstore: {
-            options: {
-               prefix : 'fa-', // This will prefix each <symbol> ID
-            },
-            default : {
-                files: {
-                    'source/images/fa-icon-sprite.svg': ['source/images/font-awesome-svg/*.svg'],
-                }
-            }
-        },
         shell: {
             patternlab: {
                 //command: "php core/builder.php -gnc"
@@ -133,12 +118,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-shell');
-    grunt.loadNpmTasks('grunt-font-awesome-svg');
-    grunt.loadNpmTasks('grunt-svgstore');
     grunt.loadNpmTasks('grunt-string-replace');
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('default', ['sass:dev', 'postcss:dev', 'string-replace:dev','shell:patternlab', 'watch']);
-    grunt.registerTask('fa-svg', ['font_awesome_svg','svgstore']);
     grunt.registerTask('dev', ['sass:dev', 'postcss:dev', 'string-replace:dev','shell:patternlab']);
     grunt.registerTask('prod', ['sass:dist', 'postcss:dist', 'string-replace:dist', 'shell:patternlab']);
 
