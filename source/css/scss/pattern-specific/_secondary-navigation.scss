@@ -1,0 +1,64 @@
+.secondary-navigation {
+    font-family: $label-font-family;
+    font-size: 0.8rem;
+    @media screen and (min-width: 720px) {
+        max-width: 225px;
+    }
+
+    ul {
+        list-style-type: none;
+
+        & ul li:last-of-type {
+            border-bottom: none;
+        }
+    }
+
+    & > ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        position: relative;
+        border-bottom: 1px solid $lighter-gray;
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+        color: $emory-blue;
+        line-height: 1.75rem;
+
+        &:focus,
+        &:hover {
+            color: $light-blue;
+        }
+
+        span {
+            position: absolute;
+            right: 0.5em;
+            margin-top: 0.5em;
+        }
+    }
+}
+
+.section {
+    margin-bottom: 12px;
+    border-bottom: 3px solid $light-blue;
+    font-size: 16px;
+
+    a:hover {
+        color: $emory-blue;
+    }
+}
+
+.current > a {
+    color: $light-blue;
+    font-weight: bold;
+}
+
+.subpage > a {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid $lighter-gray;
+}
