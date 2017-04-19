@@ -6,41 +6,83 @@ module.exports = function(grunt) {
         /*concat: {
             // 2. Configuration for concatinating files goes here.
         },*/
-        sass: {
-            dist: {
-                options: {
-                    style: 'expanded'
-                },
+        'string-replace': {
+            dev: {
                 files: {
-                    'source/css/style.css': 'source/css/scss/style.scss',
-                    'source/css/pattern-scaffolding.css': 'source/css/pattern-scaffolding.scss'
+                    'source/_meta/_00-head.mustache': 'source/_meta/_00-head.mustache'
+                },
+                options: {
+                    replacements: [
+                    // place files inline example
+                        {
+                            pattern: '    <link rel="stylesheet" href="../../css/styles.min.css?{{ cacheBuster }}" media="all" />',
+                            replacement: '    <link rel="stylesheet" href="../../css/styles.css?{{ cacheBuster }}" media="all" />'
+                        },
+                        {
+                            pattern: '    <link rel="stylesheet" href="../../css/pattern-scaffolding.min.css?{{ cacheBuster }}" media="all" />',
+                            replacement: '    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?{{ cacheBuster }}" media="all" />'
+                        }
+                    ]
+                }
+            },
+            dist: {
+                files: {
+                    'source/_meta/_00-head.mustache': 'source/_meta/_00-head.mustache',
+                },
+                options: {
+                    replacements: [
+                    // place files inline example
+                        {
+                            pattern: '    <link rel="stylesheet" href="../../css/styles.css?{{ cacheBuster }}" media="all" />',
+                            replacement: '    <link rel="stylesheet" href="../../css/styles.min.css?{{ cacheBuster }}" media="all" />'
+                        },
+                        {
+                            pattern: '    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?{{ cacheBuster }}" media="all" />',
+                            replacement: '    <link rel="stylesheet" href="../../css/pattern-scaffolding.min.css?{{ cacheBuster }}" media="all" />'
+                        }
+                    ]
                 }
             }
         },
+        sass: {
+            dev: {
+                options: {
+                    style: 'expanded',
+                    sourcemap: 'auto'
+                },
+                files: {
+                    'source/css/styles.css': 'source/css/scss/styles.scss',
+                    'source/css/pattern-scaffolding.css': 'source/css/pattern-scaffolding.scss'
+                }
+            },
+            dist: {
+                options: {
+                    style: 'compressed',
+                    sourcemap: 'none'
+                },
+                files: {
+                    'source/css/styles.min.css': 'source/css/scss/styles.scss',
+                    'source/css/pattern-scaffolding.min.css': 'source/css/pattern-scaffolding.scss'
+                }
+            },
+        },
         postcss: {
             options: {
-                map: true,
                 processors: [
                     require('autoprefixer')
                 ]
             },
-            dist: {
-                src: 'source/css/*.css'
-            }
-        },
-        font_awesome_svg: {
-            some_target: {
-              destination: "source/images/font-awesome-svg"
-            }
-        },
-        svgstore: {
-            options: {
-               prefix : 'fa-', // This will prefix each <symbol> ID
+            dev: {
+                options: {
+                    map: true
+                },
+                src: 'source/css/*.css',
             },
-            default : {
-                files: {
-                    'source/images/fa-icon-sprite.svg': ['source/images/font-awesome-svg/*.svg'],
-                }
+            dist: {
+                options: {
+                    map: false
+                },
+                src: 'source/css/*.css',
             }
         },
         shell: {
@@ -76,11 +118,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-shell');
-    grunt.loadNpmTasks('grunt-font-awesome-svg');
-    grunt.loadNpmTasks('grunt-svgstore');
-
+    grunt.loadNpmTasks('grunt-string-replace');
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['sass', 'postcss:dist', 'shell:patternlab', 'watch']);
-    grunt.registerTask('fa-svg', ['font_awesome_svg','svgstore']);
+    grunt.registerTask('default', ['sass:dev', 'postcss:dev', 'string-replace:dev','shell:patternlab', 'watch']);
+    grunt.registerTask('dev', ['sass:dev', 'postcss:dev', 'string-replace:dev','shell:patternlab']);
+    grunt.registerTask('prod', ['sass:dist', 'postcss:dist', 'string-replace:dist', 'shell:patternlab']);
 
 };

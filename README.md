@@ -5,4 +5,5 @@ This pattern library is built using [Pattern Lab 2 Standard Edition for Mustache
 ## Installation and Generation
 
 * In the command line, at the project root, enter 'npm install' to install node dependencies.
-* To generate the site and set it to watch, enter 'grunt'.
+* To generate the site and set it to watch, enter 'grunt'. This will output expanded CSS with source maps. (Entering 'grunt dev' will do the same, but without the watch state.)
+* To generate production CSS for distribution, enter 'grunt prod'. This will output compressed (i.e. - minified) CSS without source maps.

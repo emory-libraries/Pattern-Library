@@ -12,3 +12,5 @@ public/latest-change.txt
 public/styleguide/css/styleguide-specific.css
 public/styleguide/data/*
 public/styleguide/html/*
+source/css/pattern-scaffolding.css*
+source/css/styles.css*
