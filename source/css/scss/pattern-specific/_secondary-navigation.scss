@@ -1,6 +1,7 @@
 .secondary-navigation {
     font-family: $label-font-family;
     font-size: 0.8rem;
+
     @media screen and (min-width: 720px) {
         max-width: 225px;
     }
@@ -34,7 +35,7 @@
             color: $light-blue;
         }
 
-        span {
+        .fa {
             position: absolute;
             right: 0.5em;
             margin-top: 0.5em;
