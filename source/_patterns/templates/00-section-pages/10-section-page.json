@@ -1,3 +1,4 @@
 {
-    "bodyClass": "template-page-override"
+    "bodyClass": "template-page-override",
+    "row": true
 }
