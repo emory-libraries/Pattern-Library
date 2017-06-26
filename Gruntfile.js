@@ -15,7 +15,7 @@ module.exports = function(grunt) {
                     replacements: [
                     // place files inline example
                         {
-                            pattern: '    <link rel="stylesheet" href="../../css/styles.min.css?{{ cacheBuster }}" media="all" />',
+                            pattern: '    <link rel="stylesheet" href="../../css/styles-<%= pkg.version %>.min.css?{{ cacheBuster }}" media="all" />',
                             replacement: '    <link rel="stylesheet" href="../../css/styles.css?{{ cacheBuster }}" media="all" />'
                         },
                         {
@@ -34,7 +34,7 @@ module.exports = function(grunt) {
                     // place files inline example
                         {
                             pattern: '    <link rel="stylesheet" href="../../css/styles.css?{{ cacheBuster }}" media="all" />',
-                            replacement: '    <link rel="stylesheet" href="../../css/styles.min.css?{{ cacheBuster }}" media="all" />'
+                            replacement: '    <link rel="stylesheet" href="../../css/styles-<%= pkg.version %>.min.css?{{ cacheBuster }}" media="all" />'
                         },
                         {
                             pattern: '    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?{{ cacheBuster }}" media="all" />',
@@ -61,7 +61,7 @@ module.exports = function(grunt) {
                     sourcemap: 'none'
                 },
                 files: {
-                    'source/css/styles.min.css': 'source/css/scss/styles.scss',
+                    'source/css/styles-<%= pkg.version %>.min.css': 'source/css/scss/styles.scss',
                     'source/css/pattern-scaffolding.min.css': 'source/css/pattern-scaffolding.scss'
                 }
             },
@@ -109,19 +109,26 @@ module.exports = function(grunt) {
                     spawn: true
                 }
             }
+        },
+        gitTag: {
+            // Default: package.json
+            packageFile: 'package.json'
         }
     });
 
     // 3. Where we tell Grunt we plan to use this plug-in.
     //grunt.loadNpmTasks('grunt-contrib-concat');
+
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-string-replace');
+    grunt.loadNpmTasks('grunt-git-tag');
+
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['sass:dev', 'postcss:dev', 'string-replace:dev','shell:patternlab', 'watch']);
-    grunt.registerTask('dev', ['sass:dev', 'postcss:dev', 'string-replace:dev','shell:patternlab']);
-    grunt.registerTask('prod', ['sass:dist', 'postcss:dist', 'string-replace:dist', 'shell:patternlab']);
+    grunt.registerTask('default', ['sass:dev', 'postcss:dev', 'string-replace:dev','shell:patternlab']);
+    grunt.registerTask('watch', ['sass:dev', 'postcss:dev', 'string-replace:dev','shell:patternlab', 'watch']);
+    grunt.registerTask('release', ['sass:dist', 'postcss:dist', 'string-replace:dist', 'shell:patternlab']);
 
 };
