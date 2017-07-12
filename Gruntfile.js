@@ -93,17 +93,17 @@ module.exports = function(grunt) {
         },
         watch: {
             options: {
-                livereload: true,
+                livereload: false
             },
-            css: {
+            scss: {
                 files: ['source/css/scss/**/*.scss', 'source/css/pattern-scaffolding.scss'],
-                tasks: ['sass','shell:patternlab'],
+                tasks: ['sass:dev', 'postcss:dev', 'shell:patternlab'],
                 options: {
                     spawn: true
                 }
             },
             html: {
-                files: ['source/_patterns/**/*.mustache', 'source/_patterns/**/*.md', 'source/_patterns/**/*.json', 'source/_data/*.json', 'source/images/*.svg'],
+                files: ['source/_patterns/**/*.mustache', 'source/_patterns/**/*.md', 'source/_patterns/**/*.json', 'source/_data/*.json'],
                 tasks: ['shell:patternlab'],
                 options: {
                     spawn: true
@@ -127,8 +127,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-git-tag');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['sass:dev', 'postcss:dev', 'string-replace:dev','shell:patternlab']);
-    grunt.registerTask('watch', ['sass:dev', 'postcss:dev', 'string-replace:dev','shell:patternlab', 'watch']);
+
+    // One-time dev generation task
+    grunt.registerTask('default', ['sass:dev', 'postcss:dev', 'string-replace:dev', 'shell:patternlab']);
+
+    // Dev generation task in a watch state
+    grunt.registerTask('watch-dev', ['default', 'watch']);
+
+    // Production generation task
     grunt.registerTask('release', ['sass:dist', 'postcss:dist', 'string-replace:dist', 'shell:patternlab']);
 
 };
