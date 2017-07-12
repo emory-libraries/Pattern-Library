@@ -138,6 +138,16 @@ $swatch-size: em(100px);
 
 // End color swatches
 
+// Begin border styles
+.border-demo {
+  margin-top: 1em;
+  height: 400px;
+  width: 600px;
+  border: $base-border;
+  border-radius: $base-border-radius;
+}
+// End border styles
+
 /* Figures */
 figure {
 
