@@ -4,28 +4,27 @@
     margin-bottom: 20px;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
     background-color: #fcf8e3;
-    border: 1px solid #fbeed5;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
+    border: $base-border-width $base-border-style #fbeed5;
+    border-radius: $base-border-radius;
 
     h1, h2, h3, h4, h5, h6 {
         margin: 0;
         color: currentColor;
         text-align: center;
     }
-
-    .close {
+// styles for alert dismissal button
+/*     .close {
         position: relative;
         top: -2px;
         right: -21px;
         line-height: 20px;
     }
-
+ */
     a {
         color: currentColor;
     }
 }
+
 .alert-success {
     color: #468847;
     background-color: #dff0d8;
