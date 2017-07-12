@@ -16,7 +16,7 @@ It contains the source folder for Pattern Lab. The source folder includes:
 ## Development
 
 *   To generate the site once during developement, simply enter 'grunt'.
-*   To put the pattern library into a watch state while developing, enter 'grunt watch'. This will output expanded CSS with source maps.
+*   To put the pattern library into a watch state while developing, enter 'grunt watch-dev'. This will output expanded CSS with source maps.
 
 ## Generate a Tagged Production Release
 
