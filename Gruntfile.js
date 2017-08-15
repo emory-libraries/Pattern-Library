@@ -135,6 +135,6 @@ module.exports = function(grunt) {
     grunt.registerTask('watch-dev', ['default', 'watch']);
 
     // Production generation task
-    grunt.registerTask('release', ['sass:dist', 'postcss:dist', 'string-replace:dist', 'shell:patternlab']);
+    grunt.registerTask('release', ['sass:dist', 'postcss:dist', 'string-replace:dist', 'shell:patternlab', 'git-tag']);
 
 };
