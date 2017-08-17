@@ -6,7 +6,7 @@ module.exports = function(grunt) {
         /*concat: {
             // 2. Configuration for concatinating files goes here.
         },*/
-        'string-replace': {
+        /*'string-replace': {
             dev: {
                 files: {
                     'source/_meta/_00-head.mustache': 'source/_meta/_00-head.mustache'
@@ -43,16 +43,24 @@ module.exports = function(grunt) {
                     ]
                 }
             }
-        },
+        },*/
         sass: {
-            dev: {
+            devStyles: {
                 options: {
                     style: 'expanded',
                     sourcemap: 'auto'
                 },
                 files: {
-                    'source/css/styles.css': 'source/css/scss/styles.scss',
-                    'source/css/pattern-scaffolding.css': 'source/css/pattern-scaffolding.scss'
+                    'source/css/styles.css': 'source/css/scss/styles.scss'
+                }
+            },
+            devPatternScaffolding: {
+                options: {
+                    style: 'compressed',
+                    sourcemap: 'none'
+                },
+                files: {
+                    'source/css/pattern-scaffolding.min.css': 'source/css/pattern-scaffolding.scss'
                 }
             },
             dist: {
@@ -61,7 +69,8 @@ module.exports = function(grunt) {
                     sourcemap: 'none'
                 },
                 files: {
-                    'source/css/styles-<%= pkg.version %>.min.css': 'source/css/scss/styles.scss',
+                    'source/css/styles.css': 'source/css/scss/styles.scss',
+                    'dist/css/styles-<%= pkg.version %>.min.css': 'source/css/scss/styles.scss',
                     'source/css/pattern-scaffolding.min.css': 'source/css/pattern-scaffolding.scss'
                 }
             },
@@ -90,6 +99,18 @@ module.exports = function(grunt) {
                 //command: "php core/builder.php -gnc"
                 command: "php core/console --generate"
             }
+        },
+        copy: {
+          main: {
+            files: [
+                {
+                    expand: true,
+                    cwd: 'source',
+                    src: ['fonts/**'],
+                    dest: 'dist/'
+                }
+            ],
+          },
         },
         watch: {
             options: {
@@ -123,18 +144,19 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-shell');
-    grunt.loadNpmTasks('grunt-string-replace');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    //grunt.loadNpmTasks('grunt-string-replace');
     grunt.loadNpmTasks('grunt-git-tag');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
 
     // One-time dev generation task
-    grunt.registerTask('default', ['sass:dev', 'postcss:dev', 'string-replace:dev', 'shell:patternlab']);
+    grunt.registerTask('default', ['sass:dev', 'postcss:dev', 'shell:patternlab']);
 
     // Dev generation task in a watch state
     grunt.registerTask('watch-dev', ['default', 'watch']);
 
     // Production generation task
-    grunt.registerTask('release', ['sass:dist', 'postcss:dist', 'string-replace:dist', 'shell:patternlab', 'git-tag']);
+    grunt.registerTask('release', ['sass:dist', 'postcss:dist', 'shell:patternlab', 'copy', 'git-tag']);
 
 };
