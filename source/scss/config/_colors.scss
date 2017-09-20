@@ -1,0 +1,90 @@
+/**
+ * Use this file to define colors.
+ */
+
+$colors: (
+  
+  // Theme Colors
+  'blue': (
+    'base': #00287B,
+    'light': #5E85C9,
+    'powder': #E8EBF4
+  ),
+  'gold': (
+    'base': #D28E00,
+    'light': #D2B000
+  ),
+  'gray': (
+    'dark': #5E5D5B,
+    'medium': #999999,
+    'base': #CCCCCC,
+    'light': #E6E6E6,
+  ),
+  'grey': (
+    'dark': #5E5D5B,
+    'medium': #999999,
+    'base': #CCCCCC,
+    'light': #E6E6E6, 
+  ),
+  'green': (
+    'base': #006A51,
+    'light': #B4CD95
+  ),
+  'white': (
+    'base': #FFFFFF,
+    'off': #F5F5F5
+  ),
+  'black': (
+    'base': #000000,
+    'off': #333333
+  ),
+  
+  // Non-Theme Colors
+  'primary': (
+    'base': #00287B
+  ),
+  'info': (
+    'base': #2083AA
+  ),
+  'success': (
+    'base': #127457
+  ),
+  'warning': (
+    'base': #EBB639
+  ),
+  'danger': (
+    'base': #EA3D3D
+  )
+  
+);
+
+/**
+ * Override default configurations for Brandy, and/or
+ * define new configurations to be used by Brandy.
+ */
+$brandy-colors-map: $colors;
+
+/**
+ * Unclude color variables for backwards
+ * compatability with the older version of
+ * the Pattern Library.
+ */
+$emory-blue:        color('blue');
+$light-blue:        color('blue', 'light');
+$blue-grey:         color('blue', 'powder');
+$blue-gray:         color('blue', 'powder');
+$alt-blue-grey:     #E4E6F0;
+$alt-blue-gray:     #E4E6F0;
+$light-green:       color('green', 'light');
+$dark-grey:         color('grey', 'dark');
+$dark-gray:         color('gray', 'dark');
+$medium-dark-grey:  #666666;
+$medium-dark-gray:  #666666;
+$medium-grey:       color('grey', 'medium');
+$medium-gray:       color('gray', 'medium');
+$light-grey:        color('grey');
+$light-gray:        color('gray');
+$lighter-grey:      color('grey', 'light');
+$lighter-gray:      color('gray', 'light');
+$ultra-light-grey:  color('white', 'off');
+$ultra-light-gray:  color('white', 'off');

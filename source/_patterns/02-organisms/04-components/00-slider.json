@@ -1,0 +1,22 @@
+{
+  "slides": [
+    {
+      "background": {
+        "image": "http://unsplash.it/1920x1080?image=1037",
+        "width": 1920,
+        "height": 1080
+      },
+      "caption": "Slide 1"
+    },
+    
+    {
+      "background": {
+        "image": "http://unsplash.it/1920x1080?image=325",
+        "width": 1920,
+        "height": 1080
+      },
+      "caption": "Slide 2"
+    }
+    
+  ]
+}

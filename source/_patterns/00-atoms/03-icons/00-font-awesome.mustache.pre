@@ -1,0 +1,19 @@
+<div class="sg-icons sg-grid large-cols-3 medium-cols-2 small-cols-1 gutter-10">
+
+  [[#EACH icons]]
+  <div class="sg-icons-icon sg-grid-item">
+  
+    <div class="sg-icons-icon-preview">
+      {{> atoms-icon:fa-[[icons.icon]] }}
+    </div>
+    <div class="sg-icons-icon-class sg-copy-here" data-clipboard-text="fa-[[icons.icon]]">
+      .fa-[[icons.icon]]
+    </div>
+    <div class="sg-icons-icon-unicode sg-copy-here" data-clipboard-text="[[icons.unicode]]">
+      [[icons.unicode]]
+    </div>
+  
+  </div>
+  [[/EACH icons]]
+
+</div>

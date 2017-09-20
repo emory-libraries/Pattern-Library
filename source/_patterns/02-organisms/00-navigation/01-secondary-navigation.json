@@ -1,0 +1,16 @@
+{
+  "id": "nav-secondary-demo",
+  "items": [
+    { "url": "javascript:voide(0);", "label": "Research and Learning", "section": "true", "active": true },
+    { "url": "javascript:void(0);", "label": "Research Tools" },
+    { "url": "javascript:void(0);", "label": "Instructional Services", "active": true, "submenu": true, "items": [
+      { "url": "javascript:void(0);", "label": "Instructional Services for Faculty and TAs", "active": false },
+      { "url": "javascript:void(0);", "label": "Creating Effective Research Assignments", "active": false },
+      { "url": "javascript:void(0);", "label": "Media Booking Services for Instructors", "active": false },
+      { "url": "javascript:void(0);", "label": "Request a Research Instruction Session", "active": false }
+    ] },
+    { "url": "javascript:void(0);", "label": "Scholarly Communications and Data Management Services" },
+    { "url": "javascript:void(0);", "label": "Subject Librarians" },
+    { "url": "javascript:void(0);", "label": "Award and Research Programs" }
+  ]
+}

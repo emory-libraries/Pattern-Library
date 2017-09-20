@@ -1,0 +1,25 @@
+{
+  "links": [
+    {
+      "url": "http://web.library.emory.edu/about/employment/",
+      "label": "Library Employment",
+      "active": true
+    },
+    {
+      "url": "http://web.library.emory.edu/about/privacy-policy/",
+      "label": "Privacy Policy"
+    },
+    {
+      "url": "http://web.library.emory.edu/about/contact.html",
+      "label": "Contact Us"
+    },
+    {
+      "url": "http://web.library.emory.edu/about/giving/",
+      "label": "Support the Libraries"
+    },
+    {
+      "url": "http://status.library.emory.edu/",
+      "label": "Systems Status"
+    }
+  ]
+}

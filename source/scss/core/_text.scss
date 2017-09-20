@@ -1,0 +1,77 @@
+/**
+ * Change the scope of the config() function.
+ */
+$brandy-config-map: $config-text-paragraph-base;
+
+/**
+ * Defines the base text styles.
+ */
+p {
+  @if( config('font' 'size') != config('font' 'size', $config-base) ){
+    font-size: config('font' 'size');
+  }
+  
+  &.lead { 
+    font-family: config('lead' 'font' 'family', $config-text-paragraph-styles);
+  }
+  
+}
+
+/**
+ * Scales the font size of text according to
+ * the texts' given class, and if text is 
+ * configured to also scale responsively, makes
+ * the font size scale proportinately across
+ * breakpoints.
+ */
+@each $class, $ratio in $config-text-paragraph-ratios {
+  
+  $base: config('font' 'size') or config('font' 'size', $config-base);
+  $size: $base * $ratio;
+
+  p.#{$class}{ font-size: $size; }
+  
+}
+
+/**
+ * Change the scope of the config() function.
+ */
+$brandy-config-map: $config-text-inline-styles;
+
+/**
+ * Sets styles for the given inline text elements.
+ */
+abbr[title] {
+  text-decoration: config('abbr' 'decoration');
+}
+
+kbd {
+  background-color: config('kbd' 'background');
+  box-shadow: config('kbd' 'shadow');
+  font-size: config('kbd' 'font' 'size');
+  color: config('kbd' 'font' 'color');
+  padding: .5em;
+  border-radius: config('kbd' 'radius');
+}
+
+samp {
+  font-size: config('samp' 'font' 'size');
+  color: config('samp' 'font' 'color');
+  background-color: config('samp' 'background');
+  padding: .25em .5em;
+}
+
+dt {
+  font-weight: config('dt' 'font' 'weight');
+}
+
+dt,
+dd {
+  margin: 0;
+}
+
+li, 
+dt, 
+dd {
+  line-height: 1.5;
+}

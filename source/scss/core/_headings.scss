@@ -1,0 +1,26 @@
+/**
+ * Change the scope of the config() function.
+ */
+$brandy-config-map: $config-heading-base;
+
+/**
+ * Defines the base heading styles.
+ */
+#{$all-headings} {
+  font-family: config('font' 'family');
+  line-height: config('line-height');
+  font-weight: config('font' 'weight');
+  margin-top: config('margin' 'top'); 
+  margin-bottom: config('margin' 'bottom');
+}
+
+/**
+ * Apply proportional scaling to headings.
+ */
+@include scale-font(
+  $elements: $all-headings,
+  $min: config('font' 'size' 'min'),
+  $max: config('font' 'size' 'max'),
+  $save: $config-heading-ratios,
+  $increasing: $config-heading-increasing
+);

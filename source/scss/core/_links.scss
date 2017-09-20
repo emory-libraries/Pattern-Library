@@ -1,0 +1,20 @@
+/**
+ * Change the scope of the config() function.
+ */
+$brandy-config-map: $config-link-base;
+
+/**
+ * Defines the base link styles.
+ */
+a {
+  cursor: pointer;
+  text-decoration: config('decoration');
+  text-decoration-skip: ink;
+  transition: all .15s ease;
+  color: config('normal' 'color', $config-link-states);
+  
+  &:hover { color: config('hover' 'color', $config-link-states); }
+  &:focus { color: config('focus' 'color', $config-link-states); }
+  &:active { color: config('active' 'color', $config-link-states); }
+  
+}

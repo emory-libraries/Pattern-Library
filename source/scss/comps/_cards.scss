@@ -1,0 +1,207 @@
+@import 'cards/skin';
+
+/**
+ * Defines the base card component.
+ */
+@mixin card( $selector, $custom-skin: () ) {
+  
+  /**
+   * Extend the default skin with the custom skin.
+   */
+  $skin: map-extend($card-default-skin, $custom-skin, true);
+  
+  /**
+   * Defines the structure of the card component.
+   */
+  #{$selector} {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    
+    #{$all-headings} { width: 100%; }
+    
+    a { text-decoration: none; }
+    
+    figure {
+      border: none;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 1em;
+      width: 100%;
+      max-width: none;
+    }
+    
+    ul { 
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+
+      li {
+        display: inline-block;
+        &::after { content: " | "; }
+        &:last-child::after { content: none; }
+      }
+
+    }
+    
+    @include multi-breakpoint( map-deep-get($skin, 'screens' 'medium'), map-deep-get($skin, 'screens' 'large') ) {
+      margin-top: .5em;
+      padding: .5em 1em;
+    }
+    
+    /**
+     * Defines the appearance of the card component.
+     */
+    #{$all-headings} { font-size: map-deep-get($skin, 'font' 'size'); }
+    
+    @include private('MODES') {
+      
+      @each $mode, $map in map-deep-get($skin, 'mode') {
+        
+        @each $screen, $order in map-get($map, 'order') {
+        
+          $heading: map-get($order, 'heading');
+          $text: map-get($order, 'text');
+          $image: map-get($order, 'image');
+          $links: map-get($order, 'links');
+          
+          @if( $mode == map-deep-get($skin, 'default') ) {
+            
+            @if( $screen == map-get($map, 'default') ) {
+          
+              #{$all-headings} { order: $heading; }
+
+              p { order: $text; }
+
+              figure { order: $image; }
+
+              ul { order: $links; }
+              
+            }
+            
+            @else {
+              
+              @include breakpoint( map-deep-get($skin, 'screens' $screen) ) {
+                
+                #{$all-headings} { order: $heading; }
+
+                p { order: $text; }
+
+                figure { order: $image; }
+
+                ul { order: $links; }
+                
+              }
+              
+            }
+
+          }
+          
+          @else {
+            
+             &.#{$mode} {
+            
+              @if( $screen == map-get($map, 'default') ) {
+
+                #{$all-headings} { order: $heading; }
+
+                p { order: $text; }
+
+                figure { order: $image; }
+
+                ul { order: $links; }
+
+              }
+
+              @else {
+
+                @include breakpoint( map-deep-get($skin, 'screens' $screen) ) {
+
+                  #{$all-headings} { order: $heading; }
+
+                  p { order: $text; }
+
+                  figure { order: $image; }
+
+                  ul { order: $links; }
+
+                }
+
+              }
+               
+            }
+            
+          }
+          
+        }
+        
+      }
+      
+    };
+    
+    @include private('RESPONSIVENESS') {
+      
+      /**
+       * Defines the responsive size of each type of
+       * card across various screen sizes.
+       */
+      @each $mode, $map in map-deep-get($skin, 'card') {
+          
+        @each $screen, $size in $map {
+          
+          @include breakpoint( map-deep-get($skin, 'screens' $screen) ) {
+
+            @if( $mode == map-deep-get($skin, 'default') ) { width: $size; }
+
+            &.#{$mode} { width: $size; }
+
+          }
+        }
+          
+      }
+      
+      /**
+       * Defines the responsive size of each figure for
+       * each type of card across various screen sizes.
+       */
+      @each $mode, $map in map-deep-get($skin, 'figure') {
+        
+        @each $screen, $size in $map {
+          
+          @include breakpoint( map-deep-get($skin, 'screens' $screen) ) {
+
+            @if( $mode == map-deep-get($skin, 'default') ) {
+              
+              figure { 
+                @if( $size != 100% ) { width: calc(#{$size} - #{map-deep-get($skin, 'spacing') / 2}); }
+                @else { width: 100%; }
+              }
+              p { 
+                @if( $size != 100% ) { width: calc(100% - #{$size} - #{map-deep-get($skin, 'spacing') / 2}); }
+                @else { width: 100%; }
+              }
+          
+            }
+
+            &.#{$mode} figure { 
+              @if( $size != 100% ) { width: calc(#{$size} - #{map-deep-get($skin, 'spacing') / 2}); }
+              @else { width: 100%; }
+            }
+            &.#{$mode} p { 
+              @if( $size != 100% ) { width: calc(100% - #{$size} - #{map-deep-get($skin, 'spacing') / 2}); }
+              @else { width: 100%; }
+            }
+
+          }
+  
+        }
+
+      }
+      
+    };
+    
+  }
+  
+}

@@ -1,0 +1,106 @@
+/**
+ * Use this file to define navigation variables.
+ */
+
+/**
+ * Sets the base configurations for navigation.
+ */
+$config-nav-base: (
+
+  'decoration': none
+  
+);
+
+/**
+ * Sets the configurations for primary navigations.
+ */
+$config-nav-primary: (
+  
+  'breakpoint': (
+    'medium': min-width 480px,
+    'large': min-width 768px
+  ),
+  
+  'font': (
+    'family': font('label'),
+    'size': 1em,
+    'weight': 400
+  ),
+  
+  'line-height': 1.5,
+  
+  'background': color('blue', 'powder'),
+  
+  'items': (
+    'normal': (
+      'background': transparent,
+      'color': color('blue')
+    ),
+    'hover': (
+      'background': color('blue', 'light'),
+      'color': color('white')
+    ),
+    'active': (
+      'background': color('blue', 'light'),
+      'color': color('white')
+    )
+    
+  )
+  
+);
+
+/**
+ * Sets the configurations for secondary navigations.
+ */
+$config-nav-secondary: (
+  
+  'breakpoint': (
+    'medium': min-width 480px,
+    'large': min-width 768px
+  ),
+  
+  'font': (
+    'family': font('label'),
+    'size': .8rem,
+    'weight': normal
+  ),
+  
+  'line-height': 1.75rem,
+  
+  'items': (
+    
+    'border': 1px solid color('grey'),
+    
+    'active': (
+      'color': color('blue', 'light')
+    ),
+    'normal': (
+      'color': color('blue')
+    ),
+    'hover': (
+      'color': color('blue', 'light'),
+      'section': color('blue')
+    )
+    
+  )
+  
+);
+
+/**
+ * Sets the configurations for breadcrumb navigations.
+ */
+$config-nav-breadcrumb: (
+  
+  'font': (
+    'family': font('label'),
+    'size': .75em,
+    'weight': normal
+  ),
+  
+  'slash': color('grey'),
+  
+  'normal': color('blue'),
+  
+  'active': color('grey')
+  
+);

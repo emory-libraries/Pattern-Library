@@ -1,0 +1,7 @@
+/**
+ * Load the base card component with
+ * the default skin.
+ */
+@include card('.card', (
+  'screens': $screens
+));

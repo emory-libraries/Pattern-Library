@@ -1,0 +1,14 @@
+<div class="sg-stack">
+  
+  [[#EACH paragraphs]]
+  <div class="sg-stack-item">
+    
+    <code class="sg-code-snippet">p[[ '.' && paragraphs.type ? ]]</code>
+    <h5 class="sg-variation-label">[[paragraphs.type || 'Default']]</h5>
+    
+    {{> atoms-paragraph:[[paragraphs.type]](text: [[paragraphs.text]]) }}
+    
+  </div>
+  [[/EACH paragraphs]]
+  
+</div>

@@ -1,0 +1,39 @@
+{
+  "colors": [
+    { 
+      "name": "Light Blue",
+      "class": "color-blue-light",
+      "sass": "color('blue', 'light')",
+      "rgb": "rgb(94,133,201)",
+      "hex": "#5E85C9"
+    },
+    { 
+      "name": "Powder Blue",
+      "class": "color-blue-powder",
+      "sass": "color('blue', 'powder')",
+      "rgb": "rgb(232,235,244)",
+      "hex": "#E8EBF4"
+    },
+    {
+      "name": "Light Gold",
+      "class": "color-gold-light",
+      "sass": "color('gold', 'light')",
+      "rgb": "rgb(210,176,0)",
+      "hex": "#D2B000"
+    },
+    {
+      "name": "Green",
+      "class": "color-green",
+      "sass": "color('green')",
+      "rgb": "rgb(0,106,81)",
+      "hex": "#006A51"
+    },
+    {
+      "name": "Light Green",
+      "class": "color-green-light",
+      "sass": "color('green', 'light')",
+      "rgb": "rgb(180,205,149)",
+      "hex": "#B4CD95"
+    }
+  ]
+}

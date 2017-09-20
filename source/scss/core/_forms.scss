@@ -1,0 +1,149 @@
+/**
+ * Change the scope of the config() function.
+ */
+$brandy-config-map: $config-form-base;
+
+/**
+ * Defines base form and form element styles.
+ */
+input,
+select,
+optgroup,
+textarea {
+  display: block;
+  font-size: 1em;
+  font-family: config('font' 'body', $config-base);
+  line-height: 1.5;
+  min-width: 220px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+select {
+  margin-bottom: 1em;
+  max-width: 100%;
+}
+
+select[multiple] {
+  max-height: 220px;
+}
+
+/**
+ * Defines base label styles.
+ */
+label { 
+  display: block; 
+  font-family: config('label' 'font' 'family');
+  font-weight: config('label' 'font' 'weight');
+  margin-bottom: .5em;
+  line-height: 1.5;
+  
+  &.required::after {
+    content: '*';
+  }
+  
+  &.disabled {
+    color: color('grey');
+  }
+  
+}
+
+/**
+ * Defines base fieldset styles.
+ */
+fieldset {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Defines base legend styles.
+ */
+legend {
+  display: table;
+  margin-bottom: .5em;
+  padding: 0;
+  font-family: config('label' 'font' 'family');
+  font-weight: config('label' 'font' 'weight');
+}
+
+/**
+ * Defines form element styles,
+ */
+#{$all-verbage-inputs} {
+  padding: .5em;
+  margin-bottom: 1em;
+  border-radius: config('radius');
+  background-color: config('background');
+  transition: all .15s ease;
+  border: config('border');
+  box-shadow: config('shadow');
+  
+  @include placeholder(){
+    color: $config-form-placeholder;
+  }
+  
+}
+
+#{$all-toggle-inputs} {
+  display: inline;
+  margin-right: .5em;
+  width: auto;
+}
+
+/**
+ * Change the scope of the config() function.
+ */
+$brandy-config-map: $config-form-dropdown;
+
+/**
+ * Defines styles specific to dropdown menus.
+ * These styles do not include multiple selection
+ * menus.
+ */
+select:not([multiple]){
+  background-color: config('background')
+}
+
+/**
+ * Defines styles specific to file inputs.
+ */
+input[type="file"] {
+  width: 0.01px;
+  height: 0.01px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  left: -99999px;
+  top: -99999px;
+  
+  &:focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+  }
+  
+}
+
+/**
+ * Defines styles specific to search bars.
+ */
+.searchbar {
+  padding: .85em .85em .7em .6em;
+  
+  input[type="search"] { width: 100%; }
+  
+  button[type="submit"] {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: 0;
+    @include border-left-radius(0);
+  }
+  
+}

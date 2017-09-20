@@ -1,0 +1,15 @@
+<div class="slider" 
+     {{#autoplay}}data-autoplay="{{autoplay}}"{{/autoplay}}
+     {{#pause}}data-pause="{{pause}}"{{/pause}}
+     {{#width}}data-width="{{width}}"{{/width}}
+     {{#height}}data-height="{{height}}"{{/height}}
+     {{#aspect}}data-aspect="{{aspect}}"{{/aspect}}
+     {{#caption.style}}data-caption-style="{{caption.style}}"{{/caption.style}}
+     {{#caption.mode}}data-caption-mode="{{caption.mode}}"{{/caption.mode}}
+     {{#transition}}data-transition="{{transition}}"{{/transition}}>
+
+  {{#slides}}
+  {{> organisms-slide }}
+  {{/slides}}
+
+</div>

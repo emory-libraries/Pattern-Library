@@ -1,0 +1,317 @@
+/**
+ * Change the scope of the config() function.
+ */
+$brandy-config-map: $config-nav-base;
+
+/**
+ * Defines the base navigation styles.
+ */
+.nav {
+  max-width: config('page' 'max-width', $config-base);
+  margin: 0 auto;
+  
+  .nav-input { display: none; }
+  
+  .nav-menu,
+  .nav-submenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a { 
+    text-decoration: config('decoration'); 
+    color: inherit;
+    transition: none;
+  }
+  
+  /**
+   * Defines primary navigation styles.
+   */
+  &.primary {
+    font-family: config('font' 'family', $config-nav-primary);
+    font-size: config('font' 'size', $config-nav-primary);
+    font-weight: config('font' 'weight', $config-nav-primary);
+    line-height: config('line-height', $config-nav-primary);
+    background-color: config('background', $config-nav-primary);
+    
+    $border: 1px solid color('grey');
+    $border-alt: 1px solid color('white', 'off');
+    
+    .nav-toggle {
+      width: 100%;
+      margin: 0;
+      padding: .5em;
+      background-color: config('background', $config-nav-primary);
+      border: $border;
+      border-top: $border-alt;
+      border-left: $border-alt;
+      font: inherit;
+      line-height: inherit;
+      cursor: pointer;
+      
+      $background: config('items' 'normal' 'background', $config-nav-primary);
+      $color: config('items' 'normal' 'color', $config-nav-primary);
+      
+      @if( not $color and $background ){ $color: color-contrast($background); }
+      
+      background-color: $background;
+      color: $color;
+      
+      &::before { margin-right: 10px; }
+      
+      &:hover,
+      &:focus {
+        
+        $background: config('items' 'hover' 'background', $config-nav-primary);
+        $color: config('items' 'hover' 'color', $config-nav-primary);
+        
+        @if( not $color and $background ){ $color: color-contrast($background); }
+        
+        background-color: $background;
+        color: $color;
+        
+      }
+      
+    }
+    
+    .nav-menu {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-content: center;
+      transition: all .2s ease-out;
+    }
+    .nav-submenu { display: none; }
+    
+    .nav-input:not(:checked) + .nav-menu { max-height: 0; overflow: hidden; }
+    .nav-input:checked + .nav-menu { max-height: 500px; overflow: auto; }
+
+    .nav-menu-item {
+      
+      $background: config('items' 'normal' 'background', $config-nav-primary);
+      $color: config('items' 'normal' 'color', $config-nav-primary);
+      
+      @if( not $color and $background ){ $color: color-contrast($background); }
+      
+      align-self: stretch;
+      text-align: center;
+      
+      width: 100%;
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      border: $border;
+      border-top: $border-alt;
+      border-left: $border-alt;
+      transition: all 0.2s ease-out;
+      background-color: $background;
+      color: $color;
+      
+      &.active {
+        
+        $background: config('items' 'active' 'background', $config-nav-primary);
+        $color: config('items' 'active' 'color', $config-nav-primary);
+        
+        @if( not $color and $background ){ $color: color-contrast($background); }
+        
+        background-color: $background;
+        color: $color;
+        
+      }
+      
+      &:hover,
+      &:focus {
+        
+        $background: config('items' 'hover' 'background', $config-nav-primary);
+        $color: config('items' 'hover' 'color', $config-nav-primary);
+        
+        @if( not $color and $background ){ $color: color-contrast($background); }
+        
+        background-color: $background;
+        color: $color;
+        
+      }
+      
+      a { 
+        align-self: stretch;
+        padding: .5em; 
+      }
+      
+    }
+    
+    @include breakpoint( config('breakpoint' 'medium', $config-nav-primary) ) {
+      
+      .nav-toggle { display: none; }
+      
+      .nav-input:checked, .nav-input:not(:checked) {
+        + .nav-menu {
+          max-height: none;
+          overflow: auto;
+        }
+      }
+      
+      .nav-menu {
+        font-size: .8em;
+      }
+      
+      .nav-menu-item {
+        width: 50%;
+      }
+      
+    };
+    @include breakpoint( config('breakpoint' 'large', $config-nav-primary) ) {
+      
+      .nav-toggle { display: none; }
+      
+      .nav-input:checked, .nav-input:not(:checked) {
+        + .nav-menu {
+          justify-content: space-around;
+          max-height: none;
+          overflow: auto;
+        }
+      }
+      
+      .nav-menu-item {
+        width: auto;
+        flex-grow: 1;
+      }
+      
+    };
+    
+  }
+  
+  /**
+   * Defines secondary navigation styles.
+   */
+  &.secondary {
+    font-family: config('font' 'family', $config-nav-secondary);
+    font-size: config('font' 'size', $config-nav-secondary);
+    font-weight: config('font' 'weight', $config-nav-secondary);
+    line-height: config('line-height', $config-nav-secondary);
+    margin-top: .5em;
+    
+    .nav-input, .nav-toggle { display: none; }
+    
+    a { 
+      display: block;
+      border-bottom: config('items' 'border', $config-nav-secondary); 
+      color: inherit;
+      line-height: inherit;
+    }
+    
+    li {
+      line-height: inherit;
+    }
+    
+    .nav-menu-item {
+      
+      &.section {
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
+      
+      > a::after {
+        content: "\f105";
+        font-family: FontAwesome;
+        display: block;
+        position: absolute;
+        right: .5em;
+        line-height: inherit;
+        bottom: 0;
+        font-size: 14px;
+      }
+      
+      &.has-submenu > a::after {
+        content: "\f107";
+      }
+      
+    }
+    
+    .nav-submenu {
+      padding-left: 40px;
+    }
+    
+    .nav-menu-item,
+    .nav-submenu-item {
+      color:  config('items' 'normal' 'color', $config-nav-secondary);
+      
+      > a {
+        transition: all .15s ease;
+      }
+      
+      &:hover,
+      &:focus {
+        
+        > a {
+          color:  config('items' 'hover' 'color', $config-nav-secondary);
+        }
+        
+      }
+      
+      &.section:hover,
+      &.section:focus {
+        
+        > a {
+          color: config('items' 'hover' 'section', $config-nav-secondary);
+        }
+        
+      }
+      
+      &.active {
+        
+        > a {
+          font-weight: bold;
+          color:  config('items' 'active' 'color', $config-nav-secondary);
+        }
+        
+      }
+      
+    }
+    
+    @include breakpoint( screen('large') ) { margin-top: 0; }
+    
+  }
+  
+  /**
+   * Defines breadcrumb navigation styles.
+   */
+  &.breadcrumb {
+    max-width: none;
+    margin: 0;
+    
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+    
+    .nav-input, .nav-toggle, .nav-submenu { display: none; }
+    
+    .nav-menu {
+      font-family: config('font' 'family', $config-nav-breadcrumb);
+      font-size: config('font' 'size', $config-nav-breadcrumb);
+      font-weight: config('font' 'weight', $config-nav-breadcrumb);
+    }
+    
+    .nav-menu-item {
+      display: inline-block;
+      color: config('normal', $config-nav-breadcrumb);
+      
+      &::after {
+        content: " / ";
+        color: config('slash', $config-nav-breadcrumb);
+      }
+      
+      &.active {
+        color: config('active', $config-nav-breadcrumb);
+        
+        &::after { content: ""; }
+        
+      }
+      
+    }
+    
+  }
+  
+}

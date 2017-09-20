@@ -1,0 +1,28 @@
+{
+  "links": [
+    {
+      "url": "http://www.emory.edu/",
+      "label": "Emory Home"
+    },
+    {
+      "url": "http://www.emory.edu/home/contact-emory/",
+      "label": "Contacts"
+    },
+    {
+      "url": "http://www.emory.edu/home/emergency/",
+      "label": "Emergency"
+    },
+    {
+      "url": "http://www.hr.emory.edu/eu/careers/",
+      "label": "Careers"
+    },
+    {
+      "url": "http://www.emory.edu/home/giving/",
+      "label": "Make a Gift"
+    },
+    {
+      "url": "http://www.emory.edu/home/about-this-site/",
+      "label": "About Emory's Web"
+    }
+  ]
+}

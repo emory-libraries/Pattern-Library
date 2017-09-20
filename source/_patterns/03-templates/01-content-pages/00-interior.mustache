@@ -1,0 +1,21 @@
+{{> organisms-header }}
+{{#nav.primary}}{{> organisms-primary-navigation }}{{/nav.primary}}
+
+<main role="main" class="subsection">
+
+  {{#nav.breadcrumbs}}{{> organisms-breadcrumbs }}{{/nav.breadcrumbs}}
+  
+  <section class="page-interior">
+  
+    {{> atoms-heading(level: 1, text: "Page Title") }}
+    
+    {{> atoms-paragraph:lead(text: "Ubi eram mentitum, ut quae exercitation. Nam eram summis esse deserunt eu enim possumus exercitation. Sed sed veniam aliquip, nisi ita do sunt eiusmod, elit iudicem ita admodum et ipsum ad fabulas.") }}
+    
+    {{> organisms-sections }}
+  
+  </section>
+  
+  {{#nav.secondary}}{{> organisms-secondary-navigation }}{{/nav.secondary}}
+  
+</main>
+{{#footer}}{{> organisms-footer }}{{/footer}}

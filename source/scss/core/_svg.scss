@@ -1,0 +1,7 @@
+/**
+ * Defines the base svg styles.
+ */
+svg {
+  
+  &:not(:root) { overflow: hidden; }
+}

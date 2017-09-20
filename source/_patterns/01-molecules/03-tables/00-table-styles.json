@@ -1,0 +1,55 @@
+{
+  "caption": "Table with caption, column and row headings, thead, tfoot, and tbody.",
+  
+  "head": [
+    
+    [
+      {},
+      { "data": "Column I", "heading": true },
+      { "data": "Column II", "heading": true },
+      { "data": "Column III", "heading": true }
+    ]
+    
+  ],
+  
+  "body": [
+    
+    [
+      { "data": "Row I", "heading": true },
+      { "data": "Cell I" },
+      { "data": "Cell II" },
+      { "data": "Cell III" }
+    ],
+    [
+      { "data": "Row II", "heading": true },
+      { "data": "Cell IV" },
+      { "data": "Cell V" },
+      { "data": "Cell VI" }
+    ],
+    [
+      { "data": "Row III", "heading": true },
+      { "data": "Cell VII" },
+      { "data": "Cell VIII" },
+      { "data": "Cell IX" }
+    ],
+    [
+      { "data": "Row IV", "heading": true },
+      { "data": "Cell X" },
+      { "data": "Cell XI" },
+      { "data": "Cell XII" }
+    ]
+    
+  ],
+  
+  "foot": [
+    
+    [
+      {},
+      { "data": "Footer I" },
+      { "data": "Footer II" },
+      { "data": "Footer III" }
+    ]
+    
+  ]
+  
+}

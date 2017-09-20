@@ -1,0 +1,15 @@
+<section class="card {{styleModifier}}">
+
+  <h2><a href="{{url}}" title="{{title}}">{{heading}}</a></h2>
+  
+  {{#figure}}{{> organisms-figure }}{{/figure}}
+  
+  <p>{{text}}</p>
+  
+  <ul>
+  {{#links}}
+  <li><a href="{{url}}" title="{{title}}">{{text}}</a></li>
+  {{/links}}
+  </ul>
+  
+</section>

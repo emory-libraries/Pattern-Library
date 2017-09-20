@@ -1,0 +1,29 @@
+{
+  "wells": [
+    
+    {
+      "text": "Default"
+    },
+    
+    {
+      "styleModifier": "mini",
+      "text": "Mini"
+    },
+    
+    {
+      "styleModifier": "small",
+      "text": "Small"
+    },
+    
+    {
+      "styleModifier": "medium",
+      "text": "Medium (Default)"
+    },
+    
+    {
+      "styleModifier": "large",
+      "text": "Large"
+    }
+    
+  ]
+}
