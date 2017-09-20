@@ -423,7 +423,13 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['dev']);
   grunt.registerTask('init', [
     'copy:init',
-    'build'
+    'sass:build',
+    'postcss',
+    'run:mustache',
+    'includes:ui',
+    'patternlab',
+    'copy:patternlab',
+    'copy:ui'
   ]);
   grunt.registerTask('dev', [
     'browserSync',
