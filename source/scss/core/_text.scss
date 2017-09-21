@@ -4,15 +4,23 @@
 $brandy-config-map: $config-text-paragraph-base;
 
 /**
- * Defines the base text styles.
+ * Defines paragraph styles based on paragraph type.
  */
-p {
-  @if( config('font' 'size') != config('font' 'size', $config-base) ){
-    font-size: config('font' 'size');
-  }
+@each $class, $map in $config-text-paragraph-styles {
+
   
-  &.lead { 
-    font-family: config('lead' 'font' 'family', $config-text-paragraph-styles);
+  .#{$class} { 
+    @if( map-has-key($map, 'font') ) {
+      
+      $font: map-get($map, 'font');
+    
+      font-family: map-get($font, 'family');
+      font-size: map-get($font, 'size');
+      font-weight: map-get($font, 'weight'); 
+      font-style: map-get($font, 'style');
+      
+    }
+    line-height: map-get($map, 'line-height');
   }
   
 }
@@ -26,10 +34,14 @@ p {
  */
 @each $class, $ratio in $config-text-paragraph-ratios {
   
-  $base: config('font' 'size') or config('font' 'size', $config-base);
+  $base: config('font' 'size', $config-base);
   $size: $base * $ratio;
+  
+  @if( map-has-key($config-text-paragraph-base, 'font') ) {
+    $base: config('font' 'size');
+  }
 
-  p.#{$class}{ font-size: $size; }
+  .#{$class}{ font-size: $size; }
   
 }
 
