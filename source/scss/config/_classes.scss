@@ -1,0 +1,105 @@
+/**
+ * COLOR CLASSES
+ *
+ * Produces color classes from the colors map.
+ */
+@include private('COLOR CLASSES') {
+  
+  // Flags
+  $include-base: $config-classes-color-include-base;
+  
+  // Prefixes
+  $prefix: $config-classes-color-prefix;
+  
+  // Suffixes
+  $suffix-foreground: $config-classes-color-suffix-foreground;
+  $suffix-background: $config-classes-color-suffix-background;
+  $suffix-contrast: $config-classes-color-suffix-contrast;
+  
+  // Convert prefixes and suffixes to a usable format.
+  $prefix: unquote( if(is-set($prefix), $prefix + '-', '') );
+  $suffix-foreground: unquote( if(is-set($suffix-foreground), '-' + $suffix-foreground, '') );
+  $suffix-background: unquote( if(is-set($suffix-background), '-' + $suffix-background, '') );
+  $suffix-contrast: unquote( if(is-set($suffix-contrast), '-' + $suffix-contrast, '') );
+  
+  @each $name, $map in $colors {
+    @each $tone, $color in $map {
+      @if( type-of($color) != 'map' ){
+ 
+        @if( $tone == 'base' and $config-classes-color-include-base == false ){
+
+          // Create classes to recolor foregrounds.
+          .#{$prefix}#{$name}#{$suffix-foreground} {
+            color: $color !important;
+            background-color: color-contrast($color);
+          }
+
+          // Create classes to contrast backgrounds against foregrounds.
+          .#{$prefix}#{$name}#{$suffix-foreground}#{$suffix-contrast} {
+            background-color: color-contrast($color);
+          }
+
+          // Create classes to recolor backgrounds.
+          .#{$prefix}#{$name}#{$suffix-background} {
+            background-color: $color !important;
+            color: color-contrast($color);
+          }
+
+          // Create classes to contrast foregrounds against backgrounds.
+          .#{$prefix}#{$name}#{$suffix-background}#{$suffix-contrast} {
+            color: color-contrast($color);
+          }
+
+        }
+        @else {
+
+          // Create classes to recolor foregrounds.
+          .#{$prefix}#{$name}-#{$tone}#{$suffix-foreground} {
+            color: $color !important;
+            background-color: color-contrast($color);
+          }
+
+          // Create classes to contrast backgrounds against foregrounds.
+          .#{$prefix}#{$name}-#{$tone}#{$suffix-foreground}#{$suffix-contrast} {
+            background-color: color-contrast($color);
+          }
+
+          // Create classes to recolor backgrounds.
+          .#{$prefix}#{$name}-#{$tone}#{$suffix-background} {
+            background-color: $color !important;
+            color: color-contrast($color);
+          }
+
+          // Create classes to contrast foregrounds against backgrounds.
+          .#{$prefix}#{$name}-#{$tone}#{$suffix-background}#{$suffix-contrast} {
+            color: color-contrast($color);
+          }
+
+        }
+
+      }
+    }
+  }
+  
+}
+
+/**
+ * FONT CLASSES
+ *
+ * Produces font classes from the fonts map.
+ */
+@include private('FONT CLASSES') {
+  
+  // Prefix
+  $prefix: $config-classes-font-prefix;
+  
+  // Convert prefix to a usable format.
+  $prefix: unquote( if(is-set($prefix), $prefix + '-', '') );
+  
+  @each $name, $family in map-flatten($fonts) {
+    
+    .#{$prefix}#{$name} { font-family: $family !important; }
+    
+  }
+  
+}

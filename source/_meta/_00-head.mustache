@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-<html class="{{ htmlClass }}">
+<html class="{{htmlClas}}">
   <head>
-    <title>{{ title }}</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" />
+    <title>{{title}}</title>
 
-    <link href="https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans+Caption:400,700|PT+Sans+Narrow|PT+Sans:400,400i,700,700i|PT+Serif+Caption:400,400i|PT+Serif:400,400i,700,700i" rel="stylesheet" />
-    <link rel="stylesheet" href="../../css/styles.css?{{ cacheBuster }}" media="all" />
-    <link rel="stylesheet" href="../../css/pattern-scaffolding.min.css?{{ cacheBuster }}" media="all" />
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
-    {{{ patternLabHead }}}
-    <!-- End Pattern Lab -->
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" http-equiv="">
+
+    <link rel="stylesheet" href="../../css/style.css?{{cacheBuster}}" media="all">
+<link rel="stylesheet" href="../../css/patternlab.css?{{cacheBuster}}" media="all">
+    
+    
+
+    <!-- DO NOT REMOVE -->
+    {{{patternLabHead}}}
 
   </head>
-  <body class="patternlab-styles {{ bodyClass }}">
-
+  <body class="{{bodyClass}}">
+  
+    {{> meta-alert-section }}
+    {{> meta-top-section }}
+  
+  

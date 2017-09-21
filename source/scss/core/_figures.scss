@@ -1,0 +1,88 @@
+/**
+ * Change the scope of the config() function.
+ */
+$brandy-config-map: $config-figure-base;
+
+/**
+ * Defines the base figure styles.
+ */
+figure {
+  width: 100%;
+  color: config('color');
+  font-family: config('font' 'family');
+  font-size: config('font' 'size');
+  margin: 0 auto 1em;
+  padding: 1em;
+  text-align: center;
+  border-top: config('border');
+  border-bottom: config('border');
+  
+  img { 
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  figcaption { margin-top: 1em; }
+  
+  &::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  
+  &.left { 
+    float: left !important; 
+    margin: 0 1em 1em 0;
+    padding: 0 1em 1em 0;
+    border-right: config('border');
+    border-bottom-right-radius: config('radius');
+  }
+  
+  &.right { 
+    float: right !important; 
+    margin: 0 0 1em 1em;
+    padding: 0 0 1em 1em;
+    border-left: config('border');
+    border-bottom-right-left: config('radius');
+  }
+  
+  &.left,
+  &.right {
+    border-top: none;
+  }
+  
+  &.left, 
+  &.right, 
+  &.center { 
+    text-align: left; 
+  }
+  
+  /**
+   * Defines the responsive size of each type of
+   * figure across various screen sizes.
+   */
+  @each $class, $map in $config-figure-size {
+    @each $screen, $size in $map {
+      @include breakpoint( screen($screen) ) {
+        
+        @if( $class == 'default' ) {
+          & { 
+            width: map-get($size, 'width'); 
+            max-width: map-get($size, 'max');
+          }
+        }
+
+        @else {
+          &.#{$class} { 
+            width: map-get($size, 'width'); 
+            max-width: map-get($size, 'max');
+          }
+        }
+        
+      }
+    }
+  }
+  
+}

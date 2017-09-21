@@ -1,0 +1,35 @@
+/**
+ * Use this file to define link variables.
+ */
+
+/**
+ * Sets the base configurations for links.
+ */
+$config-link-base: (
+  
+  'decoration': underline,
+  
+);
+
+/**
+ * Sets the styles for different link states.
+ */
+$config-link-states: (
+  
+  'normal': (
+      'color': color('blue')
+    ),
+  
+    'hover': (
+      'color': shade(color('blue'), 25%)
+    ),
+  
+    'focus': (
+      'color': shade(color('blue'), 25%)
+    ),
+  
+    'active': (
+      'color': shade(color('blue'), 25%)
+    )
+  
+);

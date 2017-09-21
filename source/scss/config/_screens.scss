@@ -1,0 +1,25 @@
+/**
+ * Use this file to load and/or define 
+ * screen sizes and their breakpoints.
+ */
+
+/**
+ * Sets default configurations for screen sizes.
+ * If using [Breakpoint](breakpoint-sass.com), these
+ * screen sizes can reflect Breakpoint values. If
+ * not using Breakpoint, only max-width and
+ * min-width will be recognized, where the first
+ * value is set of values is always assumed to
+ * be max-width followed by min-width.
+ */
+$screens: (
+  'small': max-width 500px,
+  'medium': 800px 501px,
+  'large': min-width 801px
+);
+
+/**
+ * BOverride default configurations for Brandy, and/or
+ * define new configurations to be used by Brandy.
+ */
+$brandy-screens-map: $screens;

@@ -1,0 +1,89 @@
+/**
+ * Change the scope of the config() function.
+ */
+$brandy-config-map: $config-text-paragraph-base;
+
+/**
+ * Defines paragraph styles based on paragraph type.
+ */
+@each $class, $map in $config-text-paragraph-styles {
+
+  
+  .#{$class} { 
+    @if( map-has-key($map, 'font') ) {
+      
+      $font: map-get($map, 'font');
+    
+      font-family: map-get($font, 'family');
+      font-size: map-get($font, 'size');
+      font-weight: map-get($font, 'weight'); 
+      font-style: map-get($font, 'style');
+      
+    }
+    line-height: map-get($map, 'line-height');
+  }
+  
+}
+
+/**
+ * Scales the font size of text according to
+ * the texts' given class, and if text is 
+ * configured to also scale responsively, makes
+ * the font size scale proportinately across
+ * breakpoints.
+ */
+@each $class, $ratio in $config-text-paragraph-ratios {
+  
+  $base: config('font' 'size', $config-base);
+  $size: $base * $ratio;
+  
+  @if( map-has-key($config-text-paragraph-base, 'font') ) {
+    $base: config('font' 'size');
+  }
+
+  .#{$class}{ font-size: $size; }
+  
+}
+
+/**
+ * Change the scope of the config() function.
+ */
+$brandy-config-map: $config-text-inline-styles;
+
+/**
+ * Sets styles for the given inline text elements.
+ */
+abbr[title] {
+  text-decoration: config('abbr' 'decoration');
+}
+
+kbd {
+  background-color: config('kbd' 'background');
+  box-shadow: config('kbd' 'shadow');
+  font-size: config('kbd' 'font' 'size');
+  color: config('kbd' 'font' 'color');
+  padding: .5em;
+  border-radius: config('kbd' 'radius');
+}
+
+samp {
+  font-size: config('samp' 'font' 'size');
+  color: config('samp' 'font' 'color');
+  background-color: config('samp' 'background');
+  padding: .25em .5em;
+}
+
+dt {
+  font-weight: config('dt' 'font' 'weight');
+}
+
+dt,
+dd {
+  margin: 0;
+}
+
+li, 
+dt, 
+dd {
+  line-height: 1.5;
+}

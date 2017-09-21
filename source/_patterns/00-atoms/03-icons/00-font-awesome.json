@@ -1,0 +1,3148 @@
+{
+  "icons": [
+    {
+      "icon": "500px",
+      "unicode": "&amp;#xf26e;"
+    },
+    {
+      "icon": "address-book",
+      "unicode": "&amp;#xf2b9;"
+    },
+    {
+      "icon": "address-book-o",
+      "unicode": "&amp;#xf2ba;"
+    },
+    {
+      "icon": "address-card",
+      "unicode": "&amp;#xf2bb;"
+    },
+    {
+      "icon": "address-card-o",
+      "unicode": "&amp;#xf2bc;"
+    },
+    {
+      "icon": "adjust",
+      "unicode": "&amp;#xf042;"
+    },
+    {
+      "icon": "adn",
+      "unicode": "&amp;#xf170;"
+    },
+    {
+      "icon": "align-center",
+      "unicode": "&amp;#xf037;"
+    },
+    {
+      "icon": "align-justify",
+      "unicode": "&amp;#xf039;"
+    },
+    {
+      "icon": "align-left",
+      "unicode": "&amp;#xf036;"
+    },
+    {
+      "icon": "align-right",
+      "unicode": "&amp;#xf038;"
+    },
+    {
+      "icon": "amazon",
+      "unicode": "&amp;#xf270;"
+    },
+    {
+      "icon": "ambulance",
+      "unicode": "&amp;#xf0f9;"
+    },
+    {
+      "icon": "american-sign-language-interpreting",
+      "unicode": "&amp;#xf2a3;"
+    },
+    {
+      "icon": "anchor",
+      "unicode": "&amp;#xf13d;"
+    },
+    {
+      "icon": "android",
+      "unicode": "&amp;#xf17b;"
+    },
+    {
+      "icon": "angellist",
+      "unicode": "&amp;#xf209;"
+    },
+    {
+      "icon": "angle-double-down",
+      "unicode": "&amp;#xf103;"
+    },
+    {
+      "icon": "angle-double-left",
+      "unicode": "&amp;#xf100;"
+    },
+    {
+      "icon": "angle-double-right",
+      "unicode": "&amp;#xf101;"
+    },
+    {
+      "icon": "angle-double-up",
+      "unicode": "&amp;#xf102;"
+    },
+    {
+      "icon": "angle-down",
+      "unicode": "&amp;#xf107;"
+    },
+    {
+      "icon": "angle-left",
+      "unicode": "&amp;#xf104;"
+    },
+    {
+      "icon": "angle-right",
+      "unicode": "&amp;#xf105;"
+    },
+    {
+      "icon": "angle-up",
+      "unicode": "&amp;#xf106;"
+    },
+    {
+      "icon": "apple",
+      "unicode": "&amp;#xf179;"
+    },
+    {
+      "icon": "archive",
+      "unicode": "&amp;#xf187;"
+    },
+    {
+      "icon": "area-chart",
+      "unicode": "&amp;#xf1fe;"
+    },
+    {
+      "icon": "arrow-circle-down",
+      "unicode": "&amp;#xf0ab;"
+    },
+    {
+      "icon": "arrow-circle-left",
+      "unicode": "&amp;#xf0a8;"
+    },
+    {
+      "icon": "arrow-circle-o-down",
+      "unicode": "&amp;#xf01a;"
+    },
+    {
+      "icon": "arrow-circle-o-left",
+      "unicode": "&amp;#xf190;"
+    },
+    {
+      "icon": "arrow-circle-o-right",
+      "unicode": "&amp;#xf18e;"
+    },
+    {
+      "icon": "arrow-circle-o-up",
+      "unicode": "&amp;#xf01b;"
+    },
+    {
+      "icon": "arrow-circle-right",
+      "unicode": "&amp;#xf0a9;"
+    },
+    {
+      "icon": "arrow-circle-up",
+      "unicode": "&amp;#xf0aa;"
+    },
+    {
+      "icon": "arrow-down",
+      "unicode": "&amp;#xf063;"
+    },
+    {
+      "icon": "arrow-left",
+      "unicode": "&amp;#xf060;"
+    },
+    {
+      "icon": "arrow-right",
+      "unicode": "&amp;#xf061;"
+    },
+    {
+      "icon": "arrow-up",
+      "unicode": "&amp;#xf062;"
+    },
+    {
+      "icon": "arrows",
+      "unicode": "&amp;#xf047;"
+    },
+    {
+      "icon": "arrows-alt",
+      "unicode": "&amp;#xf0b2;"
+    },
+    {
+      "icon": "arrows-h",
+      "unicode": "&amp;#xf07e;"
+    },
+    {
+      "icon": "arrows-v",
+      "unicode": "&amp;#xf07d;"
+    },
+    {
+      "icon": "asl-interpreting",
+      "unicode": "&amp;#xf2a3;"
+    },
+    {
+      "icon": "assistive-listening-systems",
+      "unicode": "&amp;#xf2a2;"
+    },
+    {
+      "icon": "asterisk",
+      "unicode": "&amp;#xf069;"
+    },
+    {
+      "icon": "at",
+      "unicode": "&amp;#xf1fa;"
+    },
+    {
+      "icon": "audio-description",
+      "unicode": "&amp;#xf29e;"
+    },
+    {
+      "icon": "automobile",
+      "unicode": "&amp;#xf1b9;"
+    },
+    {
+      "icon": "backward",
+      "unicode": "&amp;#xf04a;"
+    },
+    {
+      "icon": "balance-scale",
+      "unicode": "&amp;#xf24e;"
+    },
+    {
+      "icon": "ban",
+      "unicode": "&amp;#xf05e;"
+    },
+    {
+      "icon": "bandcamp",
+      "unicode": "&amp;#xf2d5;"
+    },
+    {
+      "icon": "bank",
+      "unicode": "&amp;#xf19c;"
+    },
+    {
+      "icon": "bar-chart",
+      "unicode": "&amp;#xf080;"
+    },
+    {
+      "icon": "bar-chart-o",
+      "unicode": "&amp;#xf080;"
+    },
+    {
+      "icon": "barcode",
+      "unicode": "&amp;#xf02a;"
+    },
+    {
+      "icon": "bars",
+      "unicode": "&amp;#xf0c9;"
+    },
+    {
+      "icon": "bath",
+      "unicode": "&amp;#xf2cd;"
+    },
+    {
+      "icon": "bathtub",
+      "unicode": "&amp;#xf2cd;"
+    },
+    {
+      "icon": "battery",
+      "unicode": "&amp;#xf240;"
+    },
+    {
+      "icon": "battery-0",
+      "unicode": "&amp;#xf244;"
+    },
+    {
+      "icon": "battery-1",
+      "unicode": "&amp;#xf243;"
+    },
+    {
+      "icon": "battery-2",
+      "unicode": "&amp;#xf242;"
+    },
+    {
+      "icon": "battery-3",
+      "unicode": "&amp;#xf241;"
+    },
+    {
+      "icon": "battery-4",
+      "unicode": "&amp;#xf240;"
+    },
+    {
+      "icon": "battery-empty",
+      "unicode": "&amp;#xf244;"
+    },
+    {
+      "icon": "battery-full",
+      "unicode": "&amp;#xf240;"
+    },
+    {
+      "icon": "battery-half",
+      "unicode": "&amp;#xf242;"
+    },
+    {
+      "icon": "battery-quarter",
+      "unicode": "&amp;#xf243;"
+    },
+    {
+      "icon": "battery-three-quarters",
+      "unicode": "&amp;#xf241;"
+    },
+    {
+      "icon": "bed",
+      "unicode": "&amp;#xf236;"
+    },
+    {
+      "icon": "beer",
+      "unicode": "&amp;#xf0fc;"
+    },
+    {
+      "icon": "behance",
+      "unicode": "&amp;#xf1b4;"
+    },
+    {
+      "icon": "behance-square",
+      "unicode": "&amp;#xf1b5;"
+    },
+    {
+      "icon": "bell",
+      "unicode": "&amp;#xf0f3;"
+    },
+    {
+      "icon": "bell-o",
+      "unicode": "&amp;#xf0a2;"
+    },
+    {
+      "icon": "bell-slash",
+      "unicode": "&amp;#xf1f6;"
+    },
+    {
+      "icon": "bell-slash-o",
+      "unicode": "&amp;#xf1f7;"
+    },
+    {
+      "icon": "bicycle",
+      "unicode": "&amp;#xf206;"
+    },
+    {
+      "icon": "binoculars",
+      "unicode": "&amp;#xf1e5;"
+    },
+    {
+      "icon": "birthday-cake",
+      "unicode": "&amp;#xf1fd;"
+    },
+    {
+      "icon": "bitbucket",
+      "unicode": "&amp;#xf171;"
+    },
+    {
+      "icon": "bitbucket-square",
+      "unicode": "&amp;#xf172;"
+    },
+    {
+      "icon": "bitcoin",
+      "unicode": "&amp;#xf15a;"
+    },
+    {
+      "icon": "black-tie",
+      "unicode": "&amp;#xf27e;"
+    },
+    {
+      "icon": "blind",
+      "unicode": "&amp;#xf29d;"
+    },
+    {
+      "icon": "bluetooth",
+      "unicode": "&amp;#xf293;"
+    },
+    {
+      "icon": "bluetooth-b",
+      "unicode": "&amp;#xf294;"
+    },
+    {
+      "icon": "bold",
+      "unicode": "&amp;#xf032;"
+    },
+    {
+      "icon": "bolt",
+      "unicode": "&amp;#xf0e7;"
+    },
+    {
+      "icon": "bomb",
+      "unicode": "&amp;#xf1e2;"
+    },
+    {
+      "icon": "book",
+      "unicode": "&amp;#xf02d;"
+    },
+    {
+      "icon": "bookmark",
+      "unicode": "&amp;#xf02e;"
+    },
+    {
+      "icon": "bookmark-o",
+      "unicode": "&amp;#xf097;"
+    },
+    {
+      "icon": "braille",
+      "unicode": "&amp;#xf2a1;"
+    },
+    {
+      "icon": "briefcase",
+      "unicode": "&amp;#xf0b1;"
+    },
+    {
+      "icon": "btc",
+      "unicode": "&amp;#xf15a;"
+    },
+    {
+      "icon": "bug",
+      "unicode": "&amp;#xf188;"
+    },
+    {
+      "icon": "building",
+      "unicode": "&amp;#xf1ad;"
+    },
+    {
+      "icon": "building-o",
+      "unicode": "&amp;#xf0f7;"
+    },
+    {
+      "icon": "bullhorn",
+      "unicode": "&amp;#xf0a1;"
+    },
+    {
+      "icon": "bullseye",
+      "unicode": "&amp;#xf140;"
+    },
+    {
+      "icon": "bus",
+      "unicode": "&amp;#xf207;"
+    },
+    {
+      "icon": "buysellads",
+      "unicode": "&amp;#xf20d;"
+    },
+    {
+      "icon": "cab",
+      "unicode": "&amp;#xf1ba;"
+    },
+    {
+      "icon": "calculator",
+      "unicode": "&amp;#xf1ec;"
+    },
+    {
+      "icon": "calendar",
+      "unicode": "&amp;#xf073;"
+    },
+    {
+      "icon": "calendar-check-o",
+      "unicode": "&amp;#xf274;"
+    },
+    {
+      "icon": "calendar-minus-o",
+      "unicode": "&amp;#xf272;"
+    },
+    {
+      "icon": "calendar-o",
+      "unicode": "&amp;#xf133;"
+    },
+    {
+      "icon": "calendar-plus-o",
+      "unicode": "&amp;#xf271;"
+    },
+    {
+      "icon": "calendar-times-o",
+      "unicode": "&amp;#xf273;"
+    },
+    {
+      "icon": "camera",
+      "unicode": "&amp;#xf030;"
+    },
+    {
+      "icon": "camera-retro",
+      "unicode": "&amp;#xf083;"
+    },
+    {
+      "icon": "car",
+      "unicode": "&amp;#xf1b9;"
+    },
+    {
+      "icon": "caret-down",
+      "unicode": "&amp;#xf0d7;"
+    },
+    {
+      "icon": "caret-left",
+      "unicode": "&amp;#xf0d9;"
+    },
+    {
+      "icon": "caret-right",
+      "unicode": "&amp;#xf0da;"
+    },
+    {
+      "icon": "caret-square-o-down",
+      "unicode": "&amp;#xf150;"
+    },
+    {
+      "icon": "caret-square-o-left",
+      "unicode": "&amp;#xf191;"
+    },
+    {
+      "icon": "caret-square-o-right",
+      "unicode": "&amp;#xf152;"
+    },
+    {
+      "icon": "caret-square-o-up",
+      "unicode": "&amp;#xf151;"
+    },
+    {
+      "icon": "caret-up",
+      "unicode": "&amp;#xf0d8;"
+    },
+    {
+      "icon": "cart-arrow-down",
+      "unicode": "&amp;#xf218;"
+    },
+    {
+      "icon": "cart-plus",
+      "unicode": "&amp;#xf217;"
+    },
+    {
+      "icon": "cc",
+      "unicode": "&amp;#xf20a;"
+    },
+    {
+      "icon": "cc-amex",
+      "unicode": "&amp;#xf1f3;"
+    },
+    {
+      "icon": "cc-diners-club",
+      "unicode": "&amp;#xf24c;"
+    },
+    {
+      "icon": "cc-discover",
+      "unicode": "&amp;#xf1f2;"
+    },
+    {
+      "icon": "cc-jcb",
+      "unicode": "&amp;#xf24b;"
+    },
+    {
+      "icon": "cc-mastercard",
+      "unicode": "&amp;#xf1f1;"
+    },
+    {
+      "icon": "cc-paypal",
+      "unicode": "&amp;#xf1f4;"
+    },
+    {
+      "icon": "cc-stripe",
+      "unicode": "&amp;#xf1f5;"
+    },
+    {
+      "icon": "cc-visa",
+      "unicode": "&amp;#xf1f0;"
+    },
+    {
+      "icon": "certificate",
+      "unicode": "&amp;#xf0a3;"
+    },
+    {
+      "icon": "chain",
+      "unicode": "&amp;#xf0c1;"
+    },
+    {
+      "icon": "chain-broken",
+      "unicode": "&amp;#xf127;"
+    },
+    {
+      "icon": "check",
+      "unicode": "&amp;#xf00c;"
+    },
+    {
+      "icon": "check-circle",
+      "unicode": "&amp;#xf058;"
+    },
+    {
+      "icon": "check-circle-o",
+      "unicode": "&amp;#xf05d;"
+    },
+    {
+      "icon": "check-square",
+      "unicode": "&amp;#xf14a;"
+    },
+    {
+      "icon": "check-square-o",
+      "unicode": "&amp;#xf046;"
+    },
+    {
+      "icon": "chevron-circle-down",
+      "unicode": "&amp;#xf13a;"
+    },
+    {
+      "icon": "chevron-circle-left",
+      "unicode": "&amp;#xf137;"
+    },
+    {
+      "icon": "chevron-circle-right",
+      "unicode": "&amp;#xf138;"
+    },
+    {
+      "icon": "chevron-circle-up",
+      "unicode": "&amp;#xf139;"
+    },
+    {
+      "icon": "chevron-down",
+      "unicode": "&amp;#xf078;"
+    },
+    {
+      "icon": "chevron-left",
+      "unicode": "&amp;#xf053;"
+    },
+    {
+      "icon": "chevron-right",
+      "unicode": "&amp;#xf054;"
+    },
+    {
+      "icon": "chevron-up",
+      "unicode": "&amp;#xf077;"
+    },
+    {
+      "icon": "child",
+      "unicode": "&amp;#xf1ae;"
+    },
+    {
+      "icon": "chrome",
+      "unicode": "&amp;#xf268;"
+    },
+    {
+      "icon": "circle",
+      "unicode": "&amp;#xf111;"
+    },
+    {
+      "icon": "circle-o",
+      "unicode": "&amp;#xf10c;"
+    },
+    {
+      "icon": "circle-o-notch",
+      "unicode": "&amp;#xf1ce;"
+    },
+    {
+      "icon": "circle-thin",
+      "unicode": "&amp;#xf1db;"
+    },
+    {
+      "icon": "clipboard",
+      "unicode": "&amp;#xf0ea;"
+    },
+    {
+      "icon": "clock-o",
+      "unicode": "&amp;#xf017;"
+    },
+    {
+      "icon": "clone",
+      "unicode": "&amp;#xf24d;"
+    },
+    {
+      "icon": "close",
+      "unicode": "&amp;#xf00d;"
+    },
+    {
+      "icon": "cloud",
+      "unicode": "&amp;#xf0c2;"
+    },
+    {
+      "icon": "cloud-download",
+      "unicode": "&amp;#xf0ed;"
+    },
+    {
+      "icon": "cloud-upload",
+      "unicode": "&amp;#xf0ee;"
+    },
+    {
+      "icon": "cny",
+      "unicode": "&amp;#xf157;"
+    },
+    {
+      "icon": "code",
+      "unicode": "&amp;#xf121;"
+    },
+    {
+      "icon": "code-fork",
+      "unicode": "&amp;#xf126;"
+    },
+    {
+      "icon": "codepen",
+      "unicode": "&amp;#xf1cb;"
+    },
+    {
+      "icon": "codiepie",
+      "unicode": "&amp;#xf284;"
+    },
+    {
+      "icon": "coffee",
+      "unicode": "&amp;#xf0f4;"
+    },
+    {
+      "icon": "cog",
+      "unicode": "&amp;#xf013;"
+    },
+    {
+      "icon": "cogs",
+      "unicode": "&amp;#xf085;"
+    },
+    {
+      "icon": "columns",
+      "unicode": "&amp;#xf0db;"
+    },
+    {
+      "icon": "comment",
+      "unicode": "&amp;#xf075;"
+    },
+    {
+      "icon": "comment-o",
+      "unicode": "&amp;#xf0e5;"
+    },
+    {
+      "icon": "commenting",
+      "unicode": "&amp;#xf27a;"
+    },
+    {
+      "icon": "commenting-o",
+      "unicode": "&amp;#xf27b;"
+    },
+    {
+      "icon": "comments",
+      "unicode": "&amp;#xf086;"
+    },
+    {
+      "icon": "comments-o",
+      "unicode": "&amp;#xf0e6;"
+    },
+    {
+      "icon": "compass",
+      "unicode": "&amp;#xf14e;"
+    },
+    {
+      "icon": "compress",
+      "unicode": "&amp;#xf066;"
+    },
+    {
+      "icon": "connectdevelop",
+      "unicode": "&amp;#xf20e;"
+    },
+    {
+      "icon": "contao",
+      "unicode": "&amp;#xf26d;"
+    },
+    {
+      "icon": "copy",
+      "unicode": "&amp;#xf0c5;"
+    },
+    {
+      "icon": "copyright",
+      "unicode": "&amp;#xf1f9;"
+    },
+    {
+      "icon": "creative-commons",
+      "unicode": "&amp;#xf25e;"
+    },
+    {
+      "icon": "credit-card",
+      "unicode": "&amp;#xf09d;"
+    },
+    {
+      "icon": "credit-card-alt",
+      "unicode": "&amp;#xf283;"
+    },
+    {
+      "icon": "crop",
+      "unicode": "&amp;#xf125;"
+    },
+    {
+      "icon": "crosshairs",
+      "unicode": "&amp;#xf05b;"
+    },
+    {
+      "icon": "css3",
+      "unicode": "&amp;#xf13c;"
+    },
+    {
+      "icon": "cube",
+      "unicode": "&amp;#xf1b2;"
+    },
+    {
+      "icon": "cubes",
+      "unicode": "&amp;#xf1b3;"
+    },
+    {
+      "icon": "cut",
+      "unicode": "&amp;#xf0c4;"
+    },
+    {
+      "icon": "cutlery",
+      "unicode": "&amp;#xf0f5;"
+    },
+    {
+      "icon": "dashboard",
+      "unicode": "&amp;#xf0e4;"
+    },
+    {
+      "icon": "dashcube",
+      "unicode": "&amp;#xf210;"
+    },
+    {
+      "icon": "database",
+      "unicode": "&amp;#xf1c0;"
+    },
+    {
+      "icon": "deaf",
+      "unicode": "&amp;#xf2a4;"
+    },
+    {
+      "icon": "deafness",
+      "unicode": "&amp;#xf2a4;"
+    },
+    {
+      "icon": "dedent",
+      "unicode": "&amp;#xf03b;"
+    },
+    {
+      "icon": "delicious",
+      "unicode": "&amp;#xf1a5;"
+    },
+    {
+      "icon": "desktop",
+      "unicode": "&amp;#xf108;"
+    },
+    {
+      "icon": "deviantart",
+      "unicode": "&amp;#xf1bd;"
+    },
+    {
+      "icon": "diamond",
+      "unicode": "&amp;#xf219;"
+    },
+    {
+      "icon": "digg",
+      "unicode": "&amp;#xf1a6;"
+    },
+    {
+      "icon": "dollar",
+      "unicode": "&amp;#xf155;"
+    },
+    {
+      "icon": "dot-circle-o",
+      "unicode": "&amp;#xf192;"
+    },
+    {
+      "icon": "download",
+      "unicode": "&amp;#xf019;"
+    },
+    {
+      "icon": "dribbble",
+      "unicode": "&amp;#xf17d;"
+    },
+    {
+      "icon": "drivers-license",
+      "unicode": "&amp;#xf2c2;"
+    },
+    {
+      "icon": "drivers-license-o",
+      "unicode": "&amp;#xf2c3;"
+    },
+    {
+      "icon": "dropbox",
+      "unicode": "&amp;#xf16b;"
+    },
+    {
+      "icon": "drupal",
+      "unicode": "&amp;#xf1a9;"
+    },
+    {
+      "icon": "edge",
+      "unicode": "&amp;#xf282;"
+    },
+    {
+      "icon": "edit",
+      "unicode": "&amp;#xf044;"
+    },
+    {
+      "icon": "eercast",
+      "unicode": "&amp;#xf2da;"
+    },
+    {
+      "icon": "eject",
+      "unicode": "&amp;#xf052;"
+    },
+    {
+      "icon": "ellipsis-h",
+      "unicode": "&amp;#xf141;"
+    },
+    {
+      "icon": "ellipsis-v",
+      "unicode": "&amp;#xf142;"
+    },
+    {
+      "icon": "empire",
+      "unicode": "&amp;#xf1d1;"
+    },
+    {
+      "icon": "envelope",
+      "unicode": "&amp;#xf0e0;"
+    },
+    {
+      "icon": "envelope-o",
+      "unicode": "&amp;#xf003;"
+    },
+    {
+      "icon": "envelope-open",
+      "unicode": "&amp;#xf2b6;"
+    },
+    {
+      "icon": "envelope-open-o",
+      "unicode": "&amp;#xf2b7;"
+    },
+    {
+      "icon": "envelope-square",
+      "unicode": "&amp;#xf199;"
+    },
+    {
+      "icon": "envira",
+      "unicode": "&amp;#xf299;"
+    },
+    {
+      "icon": "eraser",
+      "unicode": "&amp;#xf12d;"
+    },
+    {
+      "icon": "etsy",
+      "unicode": "&amp;#xf2d7;"
+    },
+    {
+      "icon": "eur",
+      "unicode": "&amp;#xf153;"
+    },
+    {
+      "icon": "euro",
+      "unicode": "&amp;#xf153;"
+    },
+    {
+      "icon": "exchange",
+      "unicode": "&amp;#xf0ec;"
+    },
+    {
+      "icon": "exclamation",
+      "unicode": "&amp;#xf12a;"
+    },
+    {
+      "icon": "exclamation-circle",
+      "unicode": "&amp;#xf06a;"
+    },
+    {
+      "icon": "exclamation-triangle",
+      "unicode": "&amp;#xf071;"
+    },
+    {
+      "icon": "expand",
+      "unicode": "&amp;#xf065;"
+    },
+    {
+      "icon": "expeditedssl",
+      "unicode": "&amp;#xf23e;"
+    },
+    {
+      "icon": "external-link",
+      "unicode": "&amp;#xf08e;"
+    },
+    {
+      "icon": "external-link-square",
+      "unicode": "&amp;#xf14c;"
+    },
+    {
+      "icon": "eye",
+      "unicode": "&amp;#xf06e;"
+    },
+    {
+      "icon": "eye-slash",
+      "unicode": "&amp;#xf070;"
+    },
+    {
+      "icon": "eyedropper",
+      "unicode": "&amp;#xf1fb;"
+    },
+    {
+      "icon": "fa",
+      "unicode": "&amp;#xf2b4;"
+    },
+    {
+      "icon": "facebook",
+      "unicode": "&amp;#xf09a;"
+    },
+    {
+      "icon": "facebook-f",
+      "unicode": "&amp;#xf09a;"
+    },
+    {
+      "icon": "facebook-official",
+      "unicode": "&amp;#xf230;"
+    },
+    {
+      "icon": "facebook-square",
+      "unicode": "&amp;#xf082;"
+    },
+    {
+      "icon": "fast-backward",
+      "unicode": "&amp;#xf049;"
+    },
+    {
+      "icon": "fast-forward",
+      "unicode": "&amp;#xf050;"
+    },
+    {
+      "icon": "fax",
+      "unicode": "&amp;#xf1ac;"
+    },
+    {
+      "icon": "feed",
+      "unicode": "&amp;#xf09e;"
+    },
+    {
+      "icon": "female",
+      "unicode": "&amp;#xf182;"
+    },
+    {
+      "icon": "fighter-jet",
+      "unicode": "&amp;#xf0fb;"
+    },
+    {
+      "icon": "file",
+      "unicode": "&amp;#xf15b;"
+    },
+    {
+      "icon": "file-archive-o",
+      "unicode": "&amp;#xf1c6;"
+    },
+    {
+      "icon": "file-audio-o",
+      "unicode": "&amp;#xf1c7;"
+    },
+    {
+      "icon": "file-code-o",
+      "unicode": "&amp;#xf1c9;"
+    },
+    {
+      "icon": "file-excel-o",
+      "unicode": "&amp;#xf1c3;"
+    },
+    {
+      "icon": "file-image-o",
+      "unicode": "&amp;#xf1c5;"
+    },
+    {
+      "icon": "file-movie-o",
+      "unicode": "&amp;#xf1c8;"
+    },
+    {
+      "icon": "file-o",
+      "unicode": "&amp;#xf016;"
+    },
+    {
+      "icon": "file-pdf-o",
+      "unicode": "&amp;#xf1c1;"
+    },
+    {
+      "icon": "file-photo-o",
+      "unicode": "&amp;#xf1c5;"
+    },
+    {
+      "icon": "file-picture-o",
+      "unicode": "&amp;#xf1c5;"
+    },
+    {
+      "icon": "file-powerpoint-o",
+      "unicode": "&amp;#xf1c4;"
+    },
+    {
+      "icon": "file-sound-o",
+      "unicode": "&amp;#xf1c7;"
+    },
+    {
+      "icon": "file-text",
+      "unicode": "&amp;#xf15c;"
+    },
+    {
+      "icon": "file-text-o",
+      "unicode": "&amp;#xf0f6;"
+    },
+    {
+      "icon": "file-video-o",
+      "unicode": "&amp;#xf1c8;"
+    },
+    {
+      "icon": "file-word-o",
+      "unicode": "&amp;#xf1c2;"
+    },
+    {
+      "icon": "file-zip-o",
+      "unicode": "&amp;#xf1c6;"
+    },
+    {
+      "icon": "files-o",
+      "unicode": "&amp;#xf0c5;"
+    },
+    {
+      "icon": "film",
+      "unicode": "&amp;#xf008;"
+    },
+    {
+      "icon": "filter",
+      "unicode": "&amp;#xf0b0;"
+    },
+    {
+      "icon": "fire",
+      "unicode": "&amp;#xf06d;"
+    },
+    {
+      "icon": "fire-extinguisher",
+      "unicode": "&amp;#xf134;"
+    },
+    {
+      "icon": "firefox",
+      "unicode": "&amp;#xf269;"
+    },
+    {
+      "icon": "first-order",
+      "unicode": "&amp;#xf2b0;"
+    },
+    {
+      "icon": "flag",
+      "unicode": "&amp;#xf024;"
+    },
+    {
+      "icon": "flag-checkered",
+      "unicode": "&amp;#xf11e;"
+    },
+    {
+      "icon": "flag-o",
+      "unicode": "&amp;#xf11d;"
+    },
+    {
+      "icon": "flash",
+      "unicode": "&amp;#xf0e7;"
+    },
+    {
+      "icon": "flask",
+      "unicode": "&amp;#xf0c3;"
+    },
+    {
+      "icon": "flickr",
+      "unicode": "&amp;#xf16e;"
+    },
+    {
+      "icon": "floppy-o",
+      "unicode": "&amp;#xf0c7;"
+    },
+    {
+      "icon": "folder",
+      "unicode": "&amp;#xf07b;"
+    },
+    {
+      "icon": "folder-o",
+      "unicode": "&amp;#xf114;"
+    },
+    {
+      "icon": "folder-open",
+      "unicode": "&amp;#xf07c;"
+    },
+    {
+      "icon": "folder-open-o",
+      "unicode": "&amp;#xf115;"
+    },
+    {
+      "icon": "font",
+      "unicode": "&amp;#xf031;"
+    },
+    {
+      "icon": "font-awesome",
+      "unicode": "&amp;#xf2b4;"
+    },
+    {
+      "icon": "fonticons",
+      "unicode": "&amp;#xf280;"
+    },
+    {
+      "icon": "fort-awesome",
+      "unicode": "&amp;#xf286;"
+    },
+    {
+      "icon": "forumbee",
+      "unicode": "&amp;#xf211;"
+    },
+    {
+      "icon": "forward",
+      "unicode": "&amp;#xf04e;"
+    },
+    {
+      "icon": "foursquare",
+      "unicode": "&amp;#xf180;"
+    },
+    {
+      "icon": "free-code-camp",
+      "unicode": "&amp;#xf2c5;"
+    },
+    {
+      "icon": "frown-o",
+      "unicode": "&amp;#xf119;"
+    },
+    {
+      "icon": "futbol-o",
+      "unicode": "&amp;#xf1e3;"
+    },
+    {
+      "icon": "gamepad",
+      "unicode": "&amp;#xf11b;"
+    },
+    {
+      "icon": "gavel",
+      "unicode": "&amp;#xf0e3;"
+    },
+    {
+      "icon": "gbp",
+      "unicode": "&amp;#xf154;"
+    },
+    {
+      "icon": "ge",
+      "unicode": "&amp;#xf1d1;"
+    },
+    {
+      "icon": "gear",
+      "unicode": "&amp;#xf013;"
+    },
+    {
+      "icon": "gears",
+      "unicode": "&amp;#xf085;"
+    },
+    {
+      "icon": "genderless",
+      "unicode": "&amp;#xf22d;"
+    },
+    {
+      "icon": "get-pocket",
+      "unicode": "&amp;#xf265;"
+    },
+    {
+      "icon": "gg",
+      "unicode": "&amp;#xf260;"
+    },
+    {
+      "icon": "gg-circle",
+      "unicode": "&amp;#xf261;"
+    },
+    {
+      "icon": "gift",
+      "unicode": "&amp;#xf06b;"
+    },
+    {
+      "icon": "git",
+      "unicode": "&amp;#xf1d3;"
+    },
+    {
+      "icon": "git-square",
+      "unicode": "&amp;#xf1d2;"
+    },
+    {
+      "icon": "github",
+      "unicode": "&amp;#xf09b;"
+    },
+    {
+      "icon": "github-alt",
+      "unicode": "&amp;#xf113;"
+    },
+    {
+      "icon": "github-square",
+      "unicode": "&amp;#xf092;"
+    },
+    {
+      "icon": "gitlab",
+      "unicode": "&amp;#xf296;"
+    },
+    {
+      "icon": "gittip",
+      "unicode": "&amp;#xf184;"
+    },
+    {
+      "icon": "glass",
+      "unicode": "&amp;#xf000;"
+    },
+    {
+      "icon": "glide",
+      "unicode": "&amp;#xf2a5;"
+    },
+    {
+      "icon": "glide-g",
+      "unicode": "&amp;#xf2a6;"
+    },
+    {
+      "icon": "globe",
+      "unicode": "&amp;#xf0ac;"
+    },
+    {
+      "icon": "google",
+      "unicode": "&amp;#xf1a0;"
+    },
+    {
+      "icon": "google-plus",
+      "unicode": "&amp;#xf0d5;"
+    },
+    {
+      "icon": "google-plus-circle",
+      "unicode": "&amp;#xf2b3;"
+    },
+    {
+      "icon": "google-plus-official",
+      "unicode": "&amp;#xf2b3;"
+    },
+    {
+      "icon": "google-plus-square",
+      "unicode": "&amp;#xf0d4;"
+    },
+    {
+      "icon": "google-wallet",
+      "unicode": "&amp;#xf1ee;"
+    },
+    {
+      "icon": "graduation-cap",
+      "unicode": "&amp;#xf19d;"
+    },
+    {
+      "icon": "gratipay",
+      "unicode": "&amp;#xf184;"
+    },
+    {
+      "icon": "grav",
+      "unicode": "&amp;#xf2d6;"
+    },
+    {
+      "icon": "group",
+      "unicode": "&amp;#xf0c0;"
+    },
+    {
+      "icon": "h-square",
+      "unicode": "&amp;#xf0fd;"
+    },
+    {
+      "icon": "hacker-news",
+      "unicode": "&amp;#xf1d4;"
+    },
+    {
+      "icon": "hand-grab-o",
+      "unicode": "&amp;#xf255;"
+    },
+    {
+      "icon": "hand-lizard-o",
+      "unicode": "&amp;#xf258;"
+    },
+    {
+      "icon": "hand-o-down",
+      "unicode": "&amp;#xf0a7;"
+    },
+    {
+      "icon": "hand-o-left",
+      "unicode": "&amp;#xf0a5;"
+    },
+    {
+      "icon": "hand-o-right",
+      "unicode": "&amp;#xf0a4;"
+    },
+    {
+      "icon": "hand-o-up",
+      "unicode": "&amp;#xf0a6;"
+    },
+    {
+      "icon": "hand-paper-o",
+      "unicode": "&amp;#xf256;"
+    },
+    {
+      "icon": "hand-peace-o",
+      "unicode": "&amp;#xf25b;"
+    },
+    {
+      "icon": "hand-pointer-o",
+      "unicode": "&amp;#xf25a;"
+    },
+    {
+      "icon": "hand-rock-o",
+      "unicode": "&amp;#xf255;"
+    },
+    {
+      "icon": "hand-scissors-o",
+      "unicode": "&amp;#xf257;"
+    },
+    {
+      "icon": "hand-spock-o",
+      "unicode": "&amp;#xf259;"
+    },
+    {
+      "icon": "hand-stop-o",
+      "unicode": "&amp;#xf256;"
+    },
+    {
+      "icon": "handshake-o",
+      "unicode": "&amp;#xf2b5;"
+    },
+    {
+      "icon": "hard-of-hearing",
+      "unicode": "&amp;#xf2a4;"
+    },
+    {
+      "icon": "hashtag",
+      "unicode": "&amp;#xf292;"
+    },
+    {
+      "icon": "hdd-o",
+      "unicode": "&amp;#xf0a0;"
+    },
+    {
+      "icon": "header",
+      "unicode": "&amp;#xf1dc;"
+    },
+    {
+      "icon": "headphones",
+      "unicode": "&amp;#xf025;"
+    },
+    {
+      "icon": "heart",
+      "unicode": "&amp;#xf004;"
+    },
+    {
+      "icon": "heart-o",
+      "unicode": "&amp;#xf08a;"
+    },
+    {
+      "icon": "heartbeat",
+      "unicode": "&amp;#xf21e;"
+    },
+    {
+      "icon": "history",
+      "unicode": "&amp;#xf1da;"
+    },
+    {
+      "icon": "home",
+      "unicode": "&amp;#xf015;"
+    },
+    {
+      "icon": "hospital-o",
+      "unicode": "&amp;#xf0f8;"
+    },
+    {
+      "icon": "hotel",
+      "unicode": "&amp;#xf236;"
+    },
+    {
+      "icon": "hourglass",
+      "unicode": "&amp;#xf254;"
+    },
+    {
+      "icon": "hourglass-1",
+      "unicode": "&amp;#xf251;"
+    },
+    {
+      "icon": "hourglass-2",
+      "unicode": "&amp;#xf252;"
+    },
+    {
+      "icon": "hourglass-3",
+      "unicode": "&amp;#xf253;"
+    },
+    {
+      "icon": "hourglass-end",
+      "unicode": "&amp;#xf253;"
+    },
+    {
+      "icon": "hourglass-half",
+      "unicode": "&amp;#xf252;"
+    },
+    {
+      "icon": "hourglass-o",
+      "unicode": "&amp;#xf250;"
+    },
+    {
+      "icon": "hourglass-start",
+      "unicode": "&amp;#xf251;"
+    },
+    {
+      "icon": "houzz",
+      "unicode": "&amp;#xf27c;"
+    },
+    {
+      "icon": "html5",
+      "unicode": "&amp;#xf13b;"
+    },
+    {
+      "icon": "i-cursor",
+      "unicode": "&amp;#xf246;"
+    },
+    {
+      "icon": "id-badge",
+      "unicode": "&amp;#xf2c1;"
+    },
+    {
+      "icon": "id-card",
+      "unicode": "&amp;#xf2c2;"
+    },
+    {
+      "icon": "id-card-o",
+      "unicode": "&amp;#xf2c3;"
+    },
+    {
+      "icon": "ils",
+      "unicode": "&amp;#xf20b;"
+    },
+    {
+      "icon": "image",
+      "unicode": "&amp;#xf03e;"
+    },
+    {
+      "icon": "imdb",
+      "unicode": "&amp;#xf2d8;"
+    },
+    {
+      "icon": "inbox",
+      "unicode": "&amp;#xf01c;"
+    },
+    {
+      "icon": "indent",
+      "unicode": "&amp;#xf03c;"
+    },
+    {
+      "icon": "industry",
+      "unicode": "&amp;#xf275;"
+    },
+    {
+      "icon": "info",
+      "unicode": "&amp;#xf129;"
+    },
+    {
+      "icon": "info-circle",
+      "unicode": "&amp;#xf05a;"
+    },
+    {
+      "icon": "inr",
+      "unicode": "&amp;#xf156;"
+    },
+    {
+      "icon": "instagram",
+      "unicode": "&amp;#xf16d;"
+    },
+    {
+      "icon": "institution",
+      "unicode": "&amp;#xf19c;"
+    },
+    {
+      "icon": "internet-explorer",
+      "unicode": "&amp;#xf26b;"
+    },
+    {
+      "icon": "intersex",
+      "unicode": "&amp;#xf224;"
+    },
+    {
+      "icon": "ioxhost",
+      "unicode": "&amp;#xf208;"
+    },
+    {
+      "icon": "italic",
+      "unicode": "&amp;#xf033;"
+    },
+    {
+      "icon": "joomla",
+      "unicode": "&amp;#xf1aa;"
+    },
+    {
+      "icon": "jpy",
+      "unicode": "&amp;#xf157;"
+    },
+    {
+      "icon": "jsfiddle",
+      "unicode": "&amp;#xf1cc;"
+    },
+    {
+      "icon": "key",
+      "unicode": "&amp;#xf084;"
+    },
+    {
+      "icon": "keyboard-o",
+      "unicode": "&amp;#xf11c;"
+    },
+    {
+      "icon": "krw",
+      "unicode": "&amp;#xf159;"
+    },
+    {
+      "icon": "language",
+      "unicode": "&amp;#xf1ab;"
+    },
+    {
+      "icon": "laptop",
+      "unicode": "&amp;#xf109;"
+    },
+    {
+      "icon": "lastfm",
+      "unicode": "&amp;#xf202;"
+    },
+    {
+      "icon": "lastfm-square",
+      "unicode": "&amp;#xf203;"
+    },
+    {
+      "icon": "leaf",
+      "unicode": "&amp;#xf06c;"
+    },
+    {
+      "icon": "leanpub",
+      "unicode": "&amp;#xf212;"
+    },
+    {
+      "icon": "legal",
+      "unicode": "&amp;#xf0e3;"
+    },
+    {
+      "icon": "lemon-o",
+      "unicode": "&amp;#xf094;"
+    },
+    {
+      "icon": "level-down",
+      "unicode": "&amp;#xf149;"
+    },
+    {
+      "icon": "level-up",
+      "unicode": "&amp;#xf148;"
+    },
+    {
+      "icon": "life-bouy",
+      "unicode": "&amp;#xf1cd;"
+    },
+    {
+      "icon": "life-buoy",
+      "unicode": "&amp;#xf1cd;"
+    },
+    {
+      "icon": "life-ring",
+      "unicode": "&amp;#xf1cd;"
+    },
+    {
+      "icon": "life-saver",
+      "unicode": "&amp;#xf1cd;"
+    },
+    {
+      "icon": "lightbulb-o",
+      "unicode": "&amp;#xf0eb;"
+    },
+    {
+      "icon": "line-chart",
+      "unicode": "&amp;#xf201;"
+    },
+    {
+      "icon": "link",
+      "unicode": "&amp;#xf0c1;"
+    },
+    {
+      "icon": "linkedin",
+      "unicode": "&amp;#xf0e1;"
+    },
+    {
+      "icon": "linkedin-square",
+      "unicode": "&amp;#xf08c;"
+    },
+    {
+      "icon": "linode",
+      "unicode": "&amp;#xf2b8;"
+    },
+    {
+      "icon": "linux",
+      "unicode": "&amp;#xf17c;"
+    },
+    {
+      "icon": "list",
+      "unicode": "&amp;#xf03a;"
+    },
+    {
+      "icon": "list-alt",
+      "unicode": "&amp;#xf022;"
+    },
+    {
+      "icon": "list-ol",
+      "unicode": "&amp;#xf0cb;"
+    },
+    {
+      "icon": "list-ul",
+      "unicode": "&amp;#xf0ca;"
+    },
+    {
+      "icon": "location-arrow",
+      "unicode": "&amp;#xf124;"
+    },
+    {
+      "icon": "lock",
+      "unicode": "&amp;#xf023;"
+    },
+    {
+      "icon": "long-arrow-down",
+      "unicode": "&amp;#xf175;"
+    },
+    {
+      "icon": "long-arrow-left",
+      "unicode": "&amp;#xf177;"
+    },
+    {
+      "icon": "long-arrow-right",
+      "unicode": "&amp;#xf178;"
+    },
+    {
+      "icon": "long-arrow-up",
+      "unicode": "&amp;#xf176;"
+    },
+    {
+      "icon": "low-vision",
+      "unicode": "&amp;#xf2a8;"
+    },
+    {
+      "icon": "magic",
+      "unicode": "&amp;#xf0d0;"
+    },
+    {
+      "icon": "magnet",
+      "unicode": "&amp;#xf076;"
+    },
+    {
+      "icon": "mail-forward",
+      "unicode": "&amp;#xf064;"
+    },
+    {
+      "icon": "mail-reply",
+      "unicode": "&amp;#xf112;"
+    },
+    {
+      "icon": "mail-reply-all",
+      "unicode": "&amp;#xf122;"
+    },
+    {
+      "icon": "male",
+      "unicode": "&amp;#xf183;"
+    },
+    {
+      "icon": "map",
+      "unicode": "&amp;#xf279;"
+    },
+    {
+      "icon": "map-marker",
+      "unicode": "&amp;#xf041;"
+    },
+    {
+      "icon": "map-o",
+      "unicode": "&amp;#xf278;"
+    },
+    {
+      "icon": "map-pin",
+      "unicode": "&amp;#xf276;"
+    },
+    {
+      "icon": "map-signs",
+      "unicode": "&amp;#xf277;"
+    },
+    {
+      "icon": "mars",
+      "unicode": "&amp;#xf222;"
+    },
+    {
+      "icon": "mars-double",
+      "unicode": "&amp;#xf227;"
+    },
+    {
+      "icon": "mars-stroke",
+      "unicode": "&amp;#xf229;"
+    },
+    {
+      "icon": "mars-stroke-h",
+      "unicode": "&amp;#xf22b;"
+    },
+    {
+      "icon": "mars-stroke-v",
+      "unicode": "&amp;#xf22a;"
+    },
+    {
+      "icon": "maxcdn",
+      "unicode": "&amp;#xf136;"
+    },
+    {
+      "icon": "meanpath",
+      "unicode": "&amp;#xf20c;"
+    },
+    {
+      "icon": "medium",
+      "unicode": "&amp;#xf23a;"
+    },
+    {
+      "icon": "medkit",
+      "unicode": "&amp;#xf0fa;"
+    },
+    {
+      "icon": "meetup",
+      "unicode": "&amp;#xf2e0;"
+    },
+    {
+      "icon": "meh-o",
+      "unicode": "&amp;#xf11a;"
+    },
+    {
+      "icon": "mercury",
+      "unicode": "&amp;#xf223;"
+    },
+    {
+      "icon": "microchip",
+      "unicode": "&amp;#xf2db;"
+    },
+    {
+      "icon": "microphone",
+      "unicode": "&amp;#xf130;"
+    },
+    {
+      "icon": "microphone-slash",
+      "unicode": "&amp;#xf131;"
+    },
+    {
+      "icon": "minus",
+      "unicode": "&amp;#xf068;"
+    },
+    {
+      "icon": "minus-circle",
+      "unicode": "&amp;#xf056;"
+    },
+    {
+      "icon": "minus-square",
+      "unicode": "&amp;#xf146;"
+    },
+    {
+      "icon": "minus-square-o",
+      "unicode": "&amp;#xf147;"
+    },
+    {
+      "icon": "mixcloud",
+      "unicode": "&amp;#xf289;"
+    },
+    {
+      "icon": "mobile",
+      "unicode": "&amp;#xf10b;"
+    },
+    {
+      "icon": "mobile-phone",
+      "unicode": "&amp;#xf10b;"
+    },
+    {
+      "icon": "modx",
+      "unicode": "&amp;#xf285;"
+    },
+    {
+      "icon": "money",
+      "unicode": "&amp;#xf0d6;"
+    },
+    {
+      "icon": "moon-o",
+      "unicode": "&amp;#xf186;"
+    },
+    {
+      "icon": "mortar-board",
+      "unicode": "&amp;#xf19d;"
+    },
+    {
+      "icon": "motorcycle",
+      "unicode": "&amp;#xf21c;"
+    },
+    {
+      "icon": "mouse-pointer",
+      "unicode": "&amp;#xf245;"
+    },
+    {
+      "icon": "music",
+      "unicode": "&amp;#xf001;"
+    },
+    {
+      "icon": "navicon",
+      "unicode": "&amp;#xf0c9;"
+    },
+    {
+      "icon": "neuter",
+      "unicode": "&amp;#xf22c;"
+    },
+    {
+      "icon": "newspaper-o",
+      "unicode": "&amp;#xf1ea;"
+    },
+    {
+      "icon": "object-group",
+      "unicode": "&amp;#xf247;"
+    },
+    {
+      "icon": "object-ungroup",
+      "unicode": "&amp;#xf248;"
+    },
+    {
+      "icon": "odnoklassniki",
+      "unicode": "&amp;#xf263;"
+    },
+    {
+      "icon": "odnoklassniki-square",
+      "unicode": "&amp;#xf264;"
+    },
+    {
+      "icon": "opencart",
+      "unicode": "&amp;#xf23d;"
+    },
+    {
+      "icon": "openid",
+      "unicode": "&amp;#xf19b;"
+    },
+    {
+      "icon": "opera",
+      "unicode": "&amp;#xf26a;"
+    },
+    {
+      "icon": "optin-monster",
+      "unicode": "&amp;#xf23c;"
+    },
+    {
+      "icon": "outdent",
+      "unicode": "&amp;#xf03b;"
+    },
+    {
+      "icon": "pagelines",
+      "unicode": "&amp;#xf18c;"
+    },
+    {
+      "icon": "paint-brush",
+      "unicode": "&amp;#xf1fc;"
+    },
+    {
+      "icon": "paper-plane",
+      "unicode": "&amp;#xf1d8;"
+    },
+    {
+      "icon": "paper-plane-o",
+      "unicode": "&amp;#xf1d9;"
+    },
+    {
+      "icon": "paperclip",
+      "unicode": "&amp;#xf0c6;"
+    },
+    {
+      "icon": "paragraph",
+      "unicode": "&amp;#xf1dd;"
+    },
+    {
+      "icon": "paste",
+      "unicode": "&amp;#xf0ea;"
+    },
+    {
+      "icon": "pause",
+      "unicode": "&amp;#xf04c;"
+    },
+    {
+      "icon": "pause-circle",
+      "unicode": "&amp;#xf28b;"
+    },
+    {
+      "icon": "pause-circle-o",
+      "unicode": "&amp;#xf28c;"
+    },
+    {
+      "icon": "paw",
+      "unicode": "&amp;#xf1b0;"
+    },
+    {
+      "icon": "paypal",
+      "unicode": "&amp;#xf1ed;"
+    },
+    {
+      "icon": "pencil",
+      "unicode": "&amp;#xf040;"
+    },
+    {
+      "icon": "pencil-square",
+      "unicode": "&amp;#xf14b;"
+    },
+    {
+      "icon": "pencil-square-o",
+      "unicode": "&amp;#xf044;"
+    },
+    {
+      "icon": "percent",
+      "unicode": "&amp;#xf295;"
+    },
+    {
+      "icon": "phone",
+      "unicode": "&amp;#xf095;"
+    },
+    {
+      "icon": "phone-square",
+      "unicode": "&amp;#xf098;"
+    },
+    {
+      "icon": "photo",
+      "unicode": "&amp;#xf03e;"
+    },
+    {
+      "icon": "picture-o",
+      "unicode": "&amp;#xf03e;"
+    },
+    {
+      "icon": "pie-chart",
+      "unicode": "&amp;#xf200;"
+    },
+    {
+      "icon": "pied-piper",
+      "unicode": "&amp;#xf2ae;"
+    },
+    {
+      "icon": "pied-piper-alt",
+      "unicode": "&amp;#xf1a8;"
+    },
+    {
+      "icon": "pied-piper-pp",
+      "unicode": "&amp;#xf1a7;"
+    },
+    {
+      "icon": "pinterest",
+      "unicode": "&amp;#xf0d2;"
+    },
+    {
+      "icon": "pinterest-p",
+      "unicode": "&amp;#xf231;"
+    },
+    {
+      "icon": "pinterest-square",
+      "unicode": "&amp;#xf0d3;"
+    },
+    {
+      "icon": "plane",
+      "unicode": "&amp;#xf072;"
+    },
+    {
+      "icon": "play",
+      "unicode": "&amp;#xf04b;"
+    },
+    {
+      "icon": "play-circle",
+      "unicode": "&amp;#xf144;"
+    },
+    {
+      "icon": "play-circle-o",
+      "unicode": "&amp;#xf01d;"
+    },
+    {
+      "icon": "plug",
+      "unicode": "&amp;#xf1e6;"
+    },
+    {
+      "icon": "plus",
+      "unicode": "&amp;#xf067;"
+    },
+    {
+      "icon": "plus-circle",
+      "unicode": "&amp;#xf055;"
+    },
+    {
+      "icon": "plus-square",
+      "unicode": "&amp;#xf0fe;"
+    },
+    {
+      "icon": "plus-square-o",
+      "unicode": "&amp;#xf196;"
+    },
+    {
+      "icon": "podcast",
+      "unicode": "&amp;#xf2ce;"
+    },
+    {
+      "icon": "power-off",
+      "unicode": "&amp;#xf011;"
+    },
+    {
+      "icon": "print",
+      "unicode": "&amp;#xf02f;"
+    },
+    {
+      "icon": "product-hunt",
+      "unicode": "&amp;#xf288;"
+    },
+    {
+      "icon": "puzzle-piece",
+      "unicode": "&amp;#xf12e;"
+    },
+    {
+      "icon": "qq",
+      "unicode": "&amp;#xf1d6;"
+    },
+    {
+      "icon": "qrcode",
+      "unicode": "&amp;#xf029;"
+    },
+    {
+      "icon": "question",
+      "unicode": "&amp;#xf128;"
+    },
+    {
+      "icon": "question-circle",
+      "unicode": "&amp;#xf059;"
+    },
+    {
+      "icon": "question-circle-o",
+      "unicode": "&amp;#xf29c;"
+    },
+    {
+      "icon": "quora",
+      "unicode": "&amp;#xf2c4;"
+    },
+    {
+      "icon": "quote-left",
+      "unicode": "&amp;#xf10d;"
+    },
+    {
+      "icon": "quote-right",
+      "unicode": "&amp;#xf10e;"
+    },
+    {
+      "icon": "ra",
+      "unicode": "&amp;#xf1d0;"
+    },
+    {
+      "icon": "random",
+      "unicode": "&amp;#xf074;"
+    },
+    {
+      "icon": "ravelry",
+      "unicode": "&amp;#xf2d9;"
+    },
+    {
+      "icon": "rebel",
+      "unicode": "&amp;#xf1d0;"
+    },
+    {
+      "icon": "recycle",
+      "unicode": "&amp;#xf1b8;"
+    },
+    {
+      "icon": "reddit",
+      "unicode": "&amp;#xf1a1;"
+    },
+    {
+      "icon": "reddit-alien",
+      "unicode": "&amp;#xf281;"
+    },
+    {
+      "icon": "reddit-square",
+      "unicode": "&amp;#xf1a2;"
+    },
+    {
+      "icon": "refresh",
+      "unicode": "&amp;#xf021;"
+    },
+    {
+      "icon": "registered",
+      "unicode": "&amp;#xf25d;"
+    },
+    {
+      "icon": "remove",
+      "unicode": "&amp;#xf00d;"
+    },
+    {
+      "icon": "renren",
+      "unicode": "&amp;#xf18b;"
+    },
+    {
+      "icon": "reorder",
+      "unicode": "&amp;#xf0c9;"
+    },
+    {
+      "icon": "repeat",
+      "unicode": "&amp;#xf01e;"
+    },
+    {
+      "icon": "reply",
+      "unicode": "&amp;#xf112;"
+    },
+    {
+      "icon": "reply-all",
+      "unicode": "&amp;#xf122;"
+    },
+    {
+      "icon": "resistance",
+      "unicode": "&amp;#xf1d0;"
+    },
+    {
+      "icon": "retweet",
+      "unicode": "&amp;#xf079;"
+    },
+    {
+      "icon": "rmb",
+      "unicode": "&amp;#xf157;"
+    },
+    {
+      "icon": "road",
+      "unicode": "&amp;#xf018;"
+    },
+    {
+      "icon": "rocket",
+      "unicode": "&amp;#xf135;"
+    },
+    {
+      "icon": "rotate-left",
+      "unicode": "&amp;#xf0e2;"
+    },
+    {
+      "icon": "rotate-right",
+      "unicode": "&amp;#xf01e;"
+    },
+    {
+      "icon": "rouble",
+      "unicode": "&amp;#xf158;"
+    },
+    {
+      "icon": "rss",
+      "unicode": "&amp;#xf09e;"
+    },
+    {
+      "icon": "rss-square",
+      "unicode": "&amp;#xf143;"
+    },
+    {
+      "icon": "rub",
+      "unicode": "&amp;#xf158;"
+    },
+    {
+      "icon": "ruble",
+      "unicode": "&amp;#xf158;"
+    },
+    {
+      "icon": "rupee",
+      "unicode": "&amp;#xf156;"
+    },
+    {
+      "icon": "s15",
+      "unicode": "&amp;#xf2cd;"
+    },
+    {
+      "icon": "safari",
+      "unicode": "&amp;#xf267;"
+    },
+    {
+      "icon": "save",
+      "unicode": "&amp;#xf0c7;"
+    },
+    {
+      "icon": "scissors",
+      "unicode": "&amp;#xf0c4;"
+    },
+    {
+      "icon": "scribd",
+      "unicode": "&amp;#xf28a;"
+    },
+    {
+      "icon": "search",
+      "unicode": "&amp;#xf002;"
+    },
+    {
+      "icon": "search-minus",
+      "unicode": "&amp;#xf010;"
+    },
+    {
+      "icon": "search-plus",
+      "unicode": "&amp;#xf00e;"
+    },
+    {
+      "icon": "sellsy",
+      "unicode": "&amp;#xf213;"
+    },
+    {
+      "icon": "send",
+      "unicode": "&amp;#xf1d8;"
+    },
+    {
+      "icon": "send-o",
+      "unicode": "&amp;#xf1d9;"
+    },
+    {
+      "icon": "server",
+      "unicode": "&amp;#xf233;"
+    },
+    {
+      "icon": "share",
+      "unicode": "&amp;#xf064;"
+    },
+    {
+      "icon": "share-alt",
+      "unicode": "&amp;#xf1e0;"
+    },
+    {
+      "icon": "share-alt-square",
+      "unicode": "&amp;#xf1e1;"
+    },
+    {
+      "icon": "share-square",
+      "unicode": "&amp;#xf14d;"
+    },
+    {
+      "icon": "share-square-o",
+      "unicode": "&amp;#xf045;"
+    },
+    {
+      "icon": "shekel",
+      "unicode": "&amp;#xf20b;"
+    },
+    {
+      "icon": "sheqel",
+      "unicode": "&amp;#xf20b;"
+    },
+    {
+      "icon": "shield",
+      "unicode": "&amp;#xf132;"
+    },
+    {
+      "icon": "ship",
+      "unicode": "&amp;#xf21a;"
+    },
+    {
+      "icon": "shirtsinbulk",
+      "unicode": "&amp;#xf214;"
+    },
+    {
+      "icon": "shopping-bag",
+      "unicode": "&amp;#xf290;"
+    },
+    {
+      "icon": "shopping-basket",
+      "unicode": "&amp;#xf291;"
+    },
+    {
+      "icon": "shopping-cart",
+      "unicode": "&amp;#xf07a;"
+    },
+    {
+      "icon": "shower",
+      "unicode": "&amp;#xf2cc;"
+    },
+    {
+      "icon": "sign-in",
+      "unicode": "&amp;#xf090;"
+    },
+    {
+      "icon": "sign-language",
+      "unicode": "&amp;#xf2a7;"
+    },
+    {
+      "icon": "sign-out",
+      "unicode": "&amp;#xf08b;"
+    },
+    {
+      "icon": "signal",
+      "unicode": "&amp;#xf012;"
+    },
+    {
+      "icon": "signing",
+      "unicode": "&amp;#xf2a7;"
+    },
+    {
+      "icon": "simplybuilt",
+      "unicode": "&amp;#xf215;"
+    },
+    {
+      "icon": "sitemap",
+      "unicode": "&amp;#xf0e8;"
+    },
+    {
+      "icon": "skyatlas",
+      "unicode": "&amp;#xf216;"
+    },
+    {
+      "icon": "skype",
+      "unicode": "&amp;#xf17e;"
+    },
+    {
+      "icon": "slack",
+      "unicode": "&amp;#xf198;"
+    },
+    {
+      "icon": "sliders",
+      "unicode": "&amp;#xf1de;"
+    },
+    {
+      "icon": "slideshare",
+      "unicode": "&amp;#xf1e7;"
+    },
+    {
+      "icon": "smile-o",
+      "unicode": "&amp;#xf118;"
+    },
+    {
+      "icon": "snapchat",
+      "unicode": "&amp;#xf2ab;"
+    },
+    {
+      "icon": "snapchat-ghost",
+      "unicode": "&amp;#xf2ac;"
+    },
+    {
+      "icon": "snapchat-square",
+      "unicode": "&amp;#xf2ad;"
+    },
+    {
+      "icon": "snowflake-o",
+      "unicode": "&amp;#xf2dc;"
+    },
+    {
+      "icon": "soccer-ball-o",
+      "unicode": "&amp;#xf1e3;"
+    },
+    {
+      "icon": "sort",
+      "unicode": "&amp;#xf0dc;"
+    },
+    {
+      "icon": "sort-alpha-asc",
+      "unicode": "&amp;#xf15d;"
+    },
+    {
+      "icon": "sort-alpha-desc",
+      "unicode": "&amp;#xf15e;"
+    },
+    {
+      "icon": "sort-amount-asc",
+      "unicode": "&amp;#xf160;"
+    },
+    {
+      "icon": "sort-amount-desc",
+      "unicode": "&amp;#xf161;"
+    },
+    {
+      "icon": "sort-asc",
+      "unicode": "&amp;#xf0de;"
+    },
+    {
+      "icon": "sort-desc",
+      "unicode": "&amp;#xf0dd;"
+    },
+    {
+      "icon": "sort-down",
+      "unicode": "&amp;#xf0dd;"
+    },
+    {
+      "icon": "sort-numeric-asc",
+      "unicode": "&amp;#xf162;"
+    },
+    {
+      "icon": "sort-numeric-desc",
+      "unicode": "&amp;#xf163;"
+    },
+    {
+      "icon": "sort-up",
+      "unicode": "&amp;#xf0de;"
+    },
+    {
+      "icon": "soundcloud",
+      "unicode": "&amp;#xf1be;"
+    },
+    {
+      "icon": "space-shuttle",
+      "unicode": "&amp;#xf197;"
+    },
+    {
+      "icon": "spinner",
+      "unicode": "&amp;#xf110;"
+    },
+    {
+      "icon": "spoon",
+      "unicode": "&amp;#xf1b1;"
+    },
+    {
+      "icon": "spotify",
+      "unicode": "&amp;#xf1bc;"
+    },
+    {
+      "icon": "square",
+      "unicode": "&amp;#xf0c8;"
+    },
+    {
+      "icon": "square-o",
+      "unicode": "&amp;#xf096;"
+    },
+    {
+      "icon": "stack-exchange",
+      "unicode": "&amp;#xf18d;"
+    },
+    {
+      "icon": "stack-overflow",
+      "unicode": "&amp;#xf16c;"
+    },
+    {
+      "icon": "star",
+      "unicode": "&amp;#xf005;"
+    },
+    {
+      "icon": "star-half",
+      "unicode": "&amp;#xf089;"
+    },
+    {
+      "icon": "star-half-empty",
+      "unicode": "&amp;#xf123;"
+    },
+    {
+      "icon": "star-half-full",
+      "unicode": "&amp;#xf123;"
+    },
+    {
+      "icon": "star-half-o",
+      "unicode": "&amp;#xf123;"
+    },
+    {
+      "icon": "star-o",
+      "unicode": "&amp;#xf006;"
+    },
+    {
+      "icon": "steam",
+      "unicode": "&amp;#xf1b6;"
+    },
+    {
+      "icon": "steam-square",
+      "unicode": "&amp;#xf1b7;"
+    },
+    {
+      "icon": "step-backward",
+      "unicode": "&amp;#xf048;"
+    },
+    {
+      "icon": "step-forward",
+      "unicode": "&amp;#xf051;"
+    },
+    {
+      "icon": "stethoscope",
+      "unicode": "&amp;#xf0f1;"
+    },
+    {
+      "icon": "sticky-note",
+      "unicode": "&amp;#xf249;"
+    },
+    {
+      "icon": "sticky-note-o",
+      "unicode": "&amp;#xf24a;"
+    },
+    {
+      "icon": "stop",
+      "unicode": "&amp;#xf04d;"
+    },
+    {
+      "icon": "stop-circle",
+      "unicode": "&amp;#xf28d;"
+    },
+    {
+      "icon": "stop-circle-o",
+      "unicode": "&amp;#xf28e;"
+    },
+    {
+      "icon": "street-view",
+      "unicode": "&amp;#xf21d;"
+    },
+    {
+      "icon": "strikethrough",
+      "unicode": "&amp;#xf0cc;"
+    },
+    {
+      "icon": "stumbleupon",
+      "unicode": "&amp;#xf1a4;"
+    },
+    {
+      "icon": "stumbleupon-circle",
+      "unicode": "&amp;#xf1a3;"
+    },
+    {
+      "icon": "subscript",
+      "unicode": "&amp;#xf12c;"
+    },
+    {
+      "icon": "subway",
+      "unicode": "&amp;#xf239;"
+    },
+    {
+      "icon": "suitcase",
+      "unicode": "&amp;#xf0f2;"
+    },
+    {
+      "icon": "sun-o",
+      "unicode": "&amp;#xf185;"
+    },
+    {
+      "icon": "superpowers",
+      "unicode": "&amp;#xf2dd;"
+    },
+    {
+      "icon": "superscript",
+      "unicode": "&amp;#xf12b;"
+    },
+    {
+      "icon": "support",
+      "unicode": "&amp;#xf1cd;"
+    },
+    {
+      "icon": "table",
+      "unicode": "&amp;#xf0ce;"
+    },
+    {
+      "icon": "tablet",
+      "unicode": "&amp;#xf10a;"
+    },
+    {
+      "icon": "tachometer",
+      "unicode": "&amp;#xf0e4;"
+    },
+    {
+      "icon": "tag",
+      "unicode": "&amp;#xf02b;"
+    },
+    {
+      "icon": "tags",
+      "unicode": "&amp;#xf02c;"
+    },
+    {
+      "icon": "tasks",
+      "unicode": "&amp;#xf0ae;"
+    },
+    {
+      "icon": "taxi",
+      "unicode": "&amp;#xf1ba;"
+    },
+    {
+      "icon": "telegram",
+      "unicode": "&amp;#xf2c6;"
+    },
+    {
+      "icon": "television",
+      "unicode": "&amp;#xf26c;"
+    },
+    {
+      "icon": "tencent-weibo",
+      "unicode": "&amp;#xf1d5;"
+    },
+    {
+      "icon": "terminal",
+      "unicode": "&amp;#xf120;"
+    },
+    {
+      "icon": "text-height",
+      "unicode": "&amp;#xf034;"
+    },
+    {
+      "icon": "text-width",
+      "unicode": "&amp;#xf035;"
+    },
+    {
+      "icon": "th",
+      "unicode": "&amp;#xf00a;"
+    },
+    {
+      "icon": "th-large",
+      "unicode": "&amp;#xf009;"
+    },
+    {
+      "icon": "th-list",
+      "unicode": "&amp;#xf00b;"
+    },
+    {
+      "icon": "themeisle",
+      "unicode": "&amp;#xf2b2;"
+    },
+    {
+      "icon": "thermometer",
+      "unicode": "&amp;#xf2c7;"
+    },
+    {
+      "icon": "thermometer-0",
+      "unicode": "&amp;#xf2cb;"
+    },
+    {
+      "icon": "thermometer-1",
+      "unicode": "&amp;#xf2ca;"
+    },
+    {
+      "icon": "thermometer-2",
+      "unicode": "&amp;#xf2c9;"
+    },
+    {
+      "icon": "thermometer-3",
+      "unicode": "&amp;#xf2c8;"
+    },
+    {
+      "icon": "thermometer-4",
+      "unicode": "&amp;#xf2c7;"
+    },
+    {
+      "icon": "thermometer-empty",
+      "unicode": "&amp;#xf2cb;"
+    },
+    {
+      "icon": "thermometer-full",
+      "unicode": "&amp;#xf2c7;"
+    },
+    {
+      "icon": "thermometer-half",
+      "unicode": "&amp;#xf2c9;"
+    },
+    {
+      "icon": "thermometer-quarter",
+      "unicode": "&amp;#xf2ca;"
+    },
+    {
+      "icon": "thermometer-three-quarters",
+      "unicode": "&amp;#xf2c8;"
+    },
+    {
+      "icon": "thumb-tack",
+      "unicode": "&amp;#xf08d;"
+    },
+    {
+      "icon": "thumbs-down",
+      "unicode": "&amp;#xf165;"
+    },
+    {
+      "icon": "thumbs-o-down",
+      "unicode": "&amp;#xf088;"
+    },
+    {
+      "icon": "thumbs-o-up",
+      "unicode": "&amp;#xf087;"
+    },
+    {
+      "icon": "thumbs-up",
+      "unicode": "&amp;#xf164;"
+    },
+    {
+      "icon": "ticket",
+      "unicode": "&amp;#xf145;"
+    },
+    {
+      "icon": "times",
+      "unicode": "&amp;#xf00d;"
+    },
+    {
+      "icon": "times-circle",
+      "unicode": "&amp;#xf057;"
+    },
+    {
+      "icon": "times-circle-o",
+      "unicode": "&amp;#xf05c;"
+    },
+    {
+      "icon": "times-rectangle",
+      "unicode": "&amp;#xf2d3;"
+    },
+    {
+      "icon": "times-rectangle-o",
+      "unicode": "&amp;#xf2d4;"
+    },
+    {
+      "icon": "tint",
+      "unicode": "&amp;#xf043;"
+    },
+    {
+      "icon": "toggle-down",
+      "unicode": "&amp;#xf150;"
+    },
+    {
+      "icon": "toggle-left",
+      "unicode": "&amp;#xf191;"
+    },
+    {
+      "icon": "toggle-off",
+      "unicode": "&amp;#xf204;"
+    },
+    {
+      "icon": "toggle-on",
+      "unicode": "&amp;#xf205;"
+    },
+    {
+      "icon": "toggle-right",
+      "unicode": "&amp;#xf152;"
+    },
+    {
+      "icon": "toggle-up",
+      "unicode": "&amp;#xf151;"
+    },
+    {
+      "icon": "trademark",
+      "unicode": "&amp;#xf25c;"
+    },
+    {
+      "icon": "train",
+      "unicode": "&amp;#xf238;"
+    },
+    {
+      "icon": "transgender",
+      "unicode": "&amp;#xf224;"
+    },
+    {
+      "icon": "transgender-alt",
+      "unicode": "&amp;#xf225;"
+    },
+    {
+      "icon": "trash",
+      "unicode": "&amp;#xf1f8;"
+    },
+    {
+      "icon": "trash-o",
+      "unicode": "&amp;#xf014;"
+    },
+    {
+      "icon": "tree",
+      "unicode": "&amp;#xf1bb;"
+    },
+    {
+      "icon": "trello",
+      "unicode": "&amp;#xf181;"
+    },
+    {
+      "icon": "tripadvisor",
+      "unicode": "&amp;#xf262;"
+    },
+    {
+      "icon": "trophy",
+      "unicode": "&amp;#xf091;"
+    },
+    {
+      "icon": "truck",
+      "unicode": "&amp;#xf0d1;"
+    },
+    {
+      "icon": "try",
+      "unicode": "&amp;#xf195;"
+    },
+    {
+      "icon": "tty",
+      "unicode": "&amp;#xf1e4;"
+    },
+    {
+      "icon": "tumblr",
+      "unicode": "&amp;#xf173;"
+    },
+    {
+      "icon": "tumblr-square",
+      "unicode": "&amp;#xf174;"
+    },
+    {
+      "icon": "turkish-lira",
+      "unicode": "&amp;#xf195;"
+    },
+    {
+      "icon": "tv",
+      "unicode": "&amp;#xf26c;"
+    },
+    {
+      "icon": "twitch",
+      "unicode": "&amp;#xf1e8;"
+    },
+    {
+      "icon": "twitter",
+      "unicode": "&amp;#xf099;"
+    },
+    {
+      "icon": "twitter-square",
+      "unicode": "&amp;#xf081;"
+    },
+    {
+      "icon": "umbrella",
+      "unicode": "&amp;#xf0e9;"
+    },
+    {
+      "icon": "underline",
+      "unicode": "&amp;#xf0cd;"
+    },
+    {
+      "icon": "undo",
+      "unicode": "&amp;#xf0e2;"
+    },
+    {
+      "icon": "universal-access",
+      "unicode": "&amp;#xf29a;"
+    },
+    {
+      "icon": "university",
+      "unicode": "&amp;#xf19c;"
+    },
+    {
+      "icon": "unlink",
+      "unicode": "&amp;#xf127;"
+    },
+    {
+      "icon": "unlock",
+      "unicode": "&amp;#xf09c;"
+    },
+    {
+      "icon": "unlock-alt",
+      "unicode": "&amp;#xf13e;"
+    },
+    {
+      "icon": "unsorted",
+      "unicode": "&amp;#xf0dc;"
+    },
+    {
+      "icon": "upload",
+      "unicode": "&amp;#xf093;"
+    },
+    {
+      "icon": "usb",
+      "unicode": "&amp;#xf287;"
+    },
+    {
+      "icon": "usd",
+      "unicode": "&amp;#xf155;"
+    },
+    {
+      "icon": "user",
+      "unicode": "&amp;#xf007;"
+    },
+    {
+      "icon": "user-circle",
+      "unicode": "&amp;#xf2bd;"
+    },
+    {
+      "icon": "user-circle-o",
+      "unicode": "&amp;#xf2be;"
+    },
+    {
+      "icon": "user-md",
+      "unicode": "&amp;#xf0f0;"
+    },
+    {
+      "icon": "user-o",
+      "unicode": "&amp;#xf2c0;"
+    },
+    {
+      "icon": "user-plus",
+      "unicode": "&amp;#xf234;"
+    },
+    {
+      "icon": "user-secret",
+      "unicode": "&amp;#xf21b;"
+    },
+    {
+      "icon": "user-times",
+      "unicode": "&amp;#xf235;"
+    },
+    {
+      "icon": "users",
+      "unicode": "&amp;#xf0c0;"
+    },
+    {
+      "icon": "vcard",
+      "unicode": "&amp;#xf2bb;"
+    },
+    {
+      "icon": "vcard-o",
+      "unicode": "&amp;#xf2bc;"
+    },
+    {
+      "icon": "venus",
+      "unicode": "&amp;#xf221;"
+    },
+    {
+      "icon": "venus-double",
+      "unicode": "&amp;#xf226;"
+    },
+    {
+      "icon": "venus-mars",
+      "unicode": "&amp;#xf228;"
+    },
+    {
+      "icon": "viacoin",
+      "unicode": "&amp;#xf237;"
+    },
+    {
+      "icon": "viadeo",
+      "unicode": "&amp;#xf2a9;"
+    },
+    {
+      "icon": "viadeo-square",
+      "unicode": "&amp;#xf2aa;"
+    },
+    {
+      "icon": "video-camera",
+      "unicode": "&amp;#xf03d;"
+    },
+    {
+      "icon": "vimeo",
+      "unicode": "&amp;#xf27d;"
+    },
+    {
+      "icon": "vimeo-square",
+      "unicode": "&amp;#xf194;"
+    },
+    {
+      "icon": "vine",
+      "unicode": "&amp;#xf1ca;"
+    },
+    {
+      "icon": "vk",
+      "unicode": "&amp;#xf189;"
+    },
+    {
+      "icon": "volume-control-phone",
+      "unicode": "&amp;#xf2a0;"
+    },
+    {
+      "icon": "volume-down",
+      "unicode": "&amp;#xf027;"
+    },
+    {
+      "icon": "volume-off",
+      "unicode": "&amp;#xf026;"
+    },
+    {
+      "icon": "volume-up",
+      "unicode": "&amp;#xf028;"
+    },
+    {
+      "icon": "warning",
+      "unicode": "&amp;#xf071;"
+    },
+    {
+      "icon": "wechat",
+      "unicode": "&amp;#xf1d7;"
+    },
+    {
+      "icon": "weibo",
+      "unicode": "&amp;#xf18a;"
+    },
+    {
+      "icon": "weixin",
+      "unicode": "&amp;#xf1d7;"
+    },
+    {
+      "icon": "whatsapp",
+      "unicode": "&amp;#xf232;"
+    },
+    {
+      "icon": "wheelchair",
+      "unicode": "&amp;#xf193;"
+    },
+    {
+      "icon": "wheelchair-alt",
+      "unicode": "&amp;#xf29b;"
+    },
+    {
+      "icon": "wifi",
+      "unicode": "&amp;#xf1eb;"
+    },
+    {
+      "icon": "wikipedia-w",
+      "unicode": "&amp;#xf266;"
+    },
+    {
+      "icon": "window-close",
+      "unicode": "&amp;#xf2d3;"
+    },
+    {
+      "icon": "window-close-o",
+      "unicode": "&amp;#xf2d4;"
+    },
+    {
+      "icon": "window-maximize",
+      "unicode": "&amp;#xf2d0;"
+    },
+    {
+      "icon": "window-minimize",
+      "unicode": "&amp;#xf2d1;"
+    },
+    {
+      "icon": "window-restore",
+      "unicode": "&amp;#xf2d2;"
+    },
+    {
+      "icon": "windows",
+      "unicode": "&amp;#xf17a;"
+    },
+    {
+      "icon": "won",
+      "unicode": "&amp;#xf159;"
+    },
+    {
+      "icon": "wordpress",
+      "unicode": "&amp;#xf19a;"
+    },
+    {
+      "icon": "wpbeginner",
+      "unicode": "&amp;#xf297;"
+    },
+    {
+      "icon": "wpexplorer",
+      "unicode": "&amp;#xf2de;"
+    },
+    {
+      "icon": "wpforms",
+      "unicode": "&amp;#xf298;"
+    },
+    {
+      "icon": "wrench",
+      "unicode": "&amp;#xf0ad;"
+    },
+    {
+      "icon": "xing",
+      "unicode": "&amp;#xf168;"
+    },
+    {
+      "icon": "xing-square",
+      "unicode": "&amp;#xf169;"
+    },
+    {
+      "icon": "y-combinator",
+      "unicode": "&amp;#xf23b;"
+    },
+    {
+      "icon": "y-combinator-square",
+      "unicode": "&amp;#xf1d4;"
+    },
+    {
+      "icon": "yahoo",
+      "unicode": "&amp;#xf19e;"
+    },
+    {
+      "icon": "yc",
+      "unicode": "&amp;#xf23b;"
+    },
+    {
+      "icon": "yc-square",
+      "unicode": "&amp;#xf1d4;"
+    },
+    {
+      "icon": "yelp",
+      "unicode": "&amp;#xf1e9;"
+    },
+    {
+      "icon": "yen",
+      "unicode": "&amp;#xf157;"
+    },
+    {
+      "icon": "yoast",
+      "unicode": "&amp;#xf2b1;"
+    },
+    {
+      "icon": "youtube",
+      "unicode": "&amp;#xf167;"
+    },
+    {
+      "icon": "youtube-play",
+      "unicode": "&amp;#xf16a;"
+    },
+    {
+      "icon": "youtube-square",
+      "unicode": "&amp;#xf166;"
+    }
+  ]
+}

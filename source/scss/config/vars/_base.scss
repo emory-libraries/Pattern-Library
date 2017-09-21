@@ -1,0 +1,58 @@
+/**
+ * Use this file to set base configuration variables.
+ */
+
+/**
+ * Sets the base configurations for the project.
+ * These configurations typically include font families,
+ * sizes, and colors.
+ */
+$config-base: (
+  
+  'font': (
+    'body': font('body'),
+    'heading': font('heading'),
+    'code': font('code'),
+    'size': 16px,
+    'color': (
+      'dark': color('black', 'off'),
+      'light': color('white')
+    )
+  ),
+  
+  'page': (
+    'max-width': 960px
+  )
+  
+);
+
+/**
+ * Override default configurations for Brandy, and/or
+ * define new configurations to be used by Brandy.
+ */
+$brandy-config-map: $config-base;
+
+/**
+ * Sets the scale for responsive text (see below).
+ * The key(s) within this map should match any key(s)
+ * contained within your breakpoint map. A syntax example 
+ * is shown below:
+ *
+ * $config-base-scale: (
+ *  <breakpoint>: <scale>,
+ *  ...
+ * );
+ *
+ */
+$config-base-scale: (
+  'large': 1.125 
+);
+
+/**
+ * Determines whether or not text should
+ * be responsive. If set to TRUE, text will be
+ * scaled according to the map values above across
+ * breakpoints. If set to FALSE, text will remain
+ * the same size always.
+ */
+$config-base-responsive: true;

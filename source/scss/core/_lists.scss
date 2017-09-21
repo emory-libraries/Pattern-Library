@@ -1,0 +1,126 @@
+/**
+ * Change the scope of the config() function.
+ */
+$brandy-config-map: $config-footer-link-base;
+
+/**
+ * Defines the base footer link styles.
+ */
+ul.footer-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  
+  li { 
+    display: flex;
+    align-self: stretch; 
+    align-items: center;
+  }
+  
+  a {
+    text-decoration: config('decoration');
+    color: inherit;
+    transition: all 0.15s ease;
+  }
+  
+  /**
+   * Defines styles for sites list.
+   */
+  &.sites {
+    
+    $background: config('normal' 'background', $config-footer-link-sites);
+    $border: config('normal' 'border', $config-footer-link-sites);
+    $color: config('normal' 'color', $config-footer-link-sites);
+    
+    @if( not $color and $background ) { $color: color-contrast($background); }
+    
+    background-color: $background;
+    border-top: $border;
+    color: $color;
+    
+    a:hover,
+    a:focus {
+      
+      $background: config('hover' 'background', $config-footer-link-sites);
+      $color: config('hover' 'color', $config-footer-link-sites);
+      
+      @if( not $color and $background ) { $color: color-contrast($background); }
+      
+      background-color: $background;
+      color: $color;
+      
+    }
+    
+    li:first-child, a { padding: .25em 1em; }
+    
+  }
+  
+  /**
+   * Defines styles for Library list.
+   */
+  &.library {
+    
+    $background: config('normal' 'background', $config-footer-link-library);
+    $border: config('normal' 'border', $config-footer-link-library);
+    $color: config('normal' 'color', $config-footer-link-library);
+    
+    @if( not $color and $background ) { $color: color-contrast($background); }
+    
+    background-color: $background;
+    border-top: $border;
+    color: $color;
+    
+    a:hover,
+    a:focus {
+      
+      $background: config('hover' 'background', $config-footer-link-library);
+      $color: config('hover' 'color', $config-footer-link-library);
+      
+      @if( not $color and $background ) { $color: color-contrast($background); }
+      
+      background-color: $background;
+      color: $color;
+      
+    }
+    
+    a { padding: 1em; }
+    
+  }
+  
+  /**
+   * Defines styles for Emory list.
+   */
+  &.emory {
+    
+    $background: config('normal' 'background', $config-footer-link-emory);
+    $border: config('normal' 'border', $config-footer-link-emory);
+    $color: config('normal' 'color', $config-footer-link-emory);
+    
+    @if( not $color and $background ) { $color: color-contrast($background); }
+    
+    background-color: $background;
+    border-top: $border;
+    color: $color;
+    
+    a:hover,
+    a:focus {
+      
+      $background: config('hover' 'background', $config-footer-link-emory);
+      $color: config('hover' 'color', $config-footer-link-emory);
+      
+      @if( not $color and $background ) { $color: color-contrast($background); }
+      
+      background-color: $background;
+      color: $color;
+      
+    }
+    
+    a { padding: 1em; }
+    
+  }
+  
+}

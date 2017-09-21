@@ -1,0 +1,49 @@
+<table class="{{styleModifier}}">
+  <caption>{{caption}}</caption>
+  
+  <thead>
+    {{#head}}
+    <tr>
+      {{#.}}
+      <{{#heading}}th{{/heading}}{{^heading}}td{{/heading}} 
+        {{#heading}}scope="{{scope}}{{^scope}}col{{/scope}}"{{/heading}}
+        {{#colspan}}colspan="{{colspan}}"{{/colspan}}
+        {{#rowspan}}rowspan="{{rowspan}}"{{/rowspan}}>
+        {{data}}
+      </{{#heading}}th{{/heading}}{{^heading}}td{{/heading}}>
+      {{/.}}
+    </tr>
+    {{/head}}
+  </thead>
+  
+  <tbody>
+    {{#body}}
+    <tr>
+      {{#.}}
+      <{{#heading}}th{{/heading}}{{^heading}}td{{/heading}} 
+        {{#heading}}scope="{{scope}}{{^scope}}row{{/scope}}"{{/heading}}
+        {{#colspan}}colspan="{{colspan}}"{{/colspan}}
+        {{#rowspan}}rowspan="{{rowspan}}"{{/rowspan}}>
+        {{data}}
+      </{{#heading}}th{{/heading}}{{^heading}}td{{/heading}}>
+      {{/.}}
+    </tr>
+    {{/body}}
+  </tbody>
+
+  <tfoot>
+    {{#foot}}
+    <tr>
+      {{#.}}
+      <{{#heading}}th{{/heading}}{{^heading}}td{{/heading}} 
+        {{#heading}}scope="{{scope}}{{^scope}}row{{/scope}}"{{/heading}}
+        {{#colspan}}colspan="{{colspan}}"{{/colspan}}
+        {{#rowspan}}rowspan="{{rowspan}}"{{/rowspan}}>
+        {{data}}
+      </{{#heading}}th{{/heading}}{{^heading}}td{{/heading}}>
+      {{/.}}
+    </tr>
+    {{/foot}}
+  </tfoot>
+  
+</table>

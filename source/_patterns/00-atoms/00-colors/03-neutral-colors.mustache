@@ -1,0 +1,37 @@
+<div class="sg-colors sg-grid gutter-10 small-cols-1 medium-cols-2 large-cols-3">
+
+  {{#colors}}
+  <div class="sg-colors-color sg-grid-item">
+    
+    <div class="sg-colors-color-swatch {{class}}-bg"></div>
+    
+    <div class="sg-colors-color-label">
+      
+      <div class="sg-colors-color-label-name">
+        <strong>{{name}}{{#name-alt}} ({{name-alt}}){{/name-alt}}</strong>
+      </div>
+      
+      <div class="sg-colors-color-label-sass sg-copy-here" data-clipboard-text="{{sass}}">
+        {{sass}}
+      </div>
+      
+      {{#sass-alt}}
+      <div class="sg-colors-color-label-sass sg-copy-here" data-clipboard-text="{{sass-alt}}">
+        {{sass-alt}}
+      </div>
+      {{/sass-alt}}
+      
+      <div class="sg-colors-color-label-rgb sg-copy-here" data-clipboard-text="{{rgb}}">
+        {{rgb}}
+      </div>
+      
+      <div class="sg-colors-color-label-hex sg-copy-here" data-clipboard-text="{{hex}}">
+        {{hex}}
+      </div>
+      
+    </div>
+    
+  </div>
+  {{/colors}}
+
+</div>

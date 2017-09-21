@@ -1,0 +1,14 @@
+<div class="sg-stack">
+
+  {{#cards}}
+  <div class="sg-stack-item">
+  
+    <h5 class="sg-variation-label">{{styleModifier}}{{^styleModifier}}Default{{/styleModifier}}</h5>
+    <code class="sg-code-snippet">card{{#styleModifier}}.{{styleModifier}}{{/styleModifier}}</code>
+    
+    {{> organisms-card }}
+  
+  </div>
+  {{/cards}}
+
+</div>

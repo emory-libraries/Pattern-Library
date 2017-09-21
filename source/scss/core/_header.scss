@@ -1,0 +1,21 @@
+/**
+ * Change the scope of the config() function.
+ */
+$brandy-config-map: $config-header-base;
+
+/**
+ * Defines the base header styles.
+ */
+header {
+  background-color: config('background');
+  max-width: config('page' 'max-width', $config-base);
+  margin: 0 auto;
+  
+  #logo {
+    fill: config('color', $config-header-logo);
+    
+    @include breakpoint( screen('large') ) { max-height: 150px; }
+    
+  }
+  
+}

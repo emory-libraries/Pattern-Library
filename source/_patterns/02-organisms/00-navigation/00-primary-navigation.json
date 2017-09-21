@@ -1,0 +1,12 @@
+{
+  "id": "nav-primary-demo",
+  "items": [
+    { "url": "javascript:void(0);", "label": "Home" },
+    { "url": "javascript:void(0);", "label": "Materials", "active": true },
+    { "url": "javascript:void(0);", "label": "Services" },
+    { "url": "javascript:void(0);", "label": "Research and Learning" },
+    { "url": "javascript:void(0);", "label": "Exhibitions" },
+    { "url": "javascript:void(0);", "label": "News and Events" },
+    { "url": "javascript:void(0);", "label": "About" }
+  ]
+}

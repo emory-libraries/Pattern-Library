@@ -1,0 +1,61 @@
+{
+  "subsection": true,
+  "cards": [
+    {
+      "styleModifier": "tile",
+      "heading": "Sunt a probant id legam ita ea elit pariatur arbitrantur",
+      "text": "Quis iudicem hic ingeniis quo ubi elit consequat do magna ex proident, nostrud cillum expetendis offendit, esse de proident aut sunt, duis singulis et firmissimum, aute expetendis aut comprehenderit, a aliquip ex ingeniis. Non illum lorem de fabulas, quis id ingeniis, nisi firmissimum occaecat cillum possumus de dolore mandaremus firmissimum, nostrud noster do incurreret distinguantur non dolor ingeniis concursionibus e a voluptate adipisicing a iis eram offendit occaecat. Veniam quibusdam ea eram quorum. An tamen vidisse deserunt.",
+      "figure": {
+        "width": 400,
+        "height": 300
+      },
+      "links": [
+        { "text": "Adipisicing" },
+        { "text": "Despicationes" },
+        { "text": "Consequat" }
+      ]
+    },
+    {
+      "styleModifier": "tile",
+      "heading": "Laborum ne expetendis ab laboris eram nescius",
+      "text": "In pariatur exercitation est sint incurreret quo senserit te qui nisi amet summis deserunt, eiusmod labore de voluptate instituendarum. A probant ad incurreret. Ipsum relinqueret proident irure commodo. Consequat legam varias mandaremus irure sed dolor ex senserit eu anim.",
+      "figure": {
+        "width": 400,
+        "height": 300
+      },
+      "links": [
+        { "text": "Iudicem" },
+        { "text": "Transferrem" },
+        { "text": "Fugiat" }
+      ]
+    },
+    {
+      "styleModifier": "tile",
+      "heading": "Noster familiaritatem proident sint offendit o ubi hic varias aute multos",
+      "text": "Eu quae domesticarum non tamen eiusmod relinqueret ex de cernantur exquisitaque ne voluptate duis duis sed minim. Sed eram labore ad officia, magna do ingeniis ne elit. Qui malis incididunt singulis, velit mentitum consequat, hic voluptate do proident sed legam ne arbitror se amet, lorem transferrem appellat lorem fabulas nam ubi quis tamen culpa mentitum, deserunt nulla noster do culpa, tempor in malis expetendis.",
+      "figure": {
+        "width": 400,
+        "height": 300
+      },
+      "links": [
+        { "text": "Lorem" },
+        { "text": "Culpa" },
+        { "text": "Consequat" }
+      ]
+    },
+    {
+      "styleModifier": "tile",
+      "heading": "Quibusdam eram o appellat tractavissent est summis offendit fidelissimae",
+      "text": "Mandaremus malis vidisse, offendit amet possumus, quae doctrina fabulas, litteris ne enim, labore nam id varias deserunt a expetendis arbitrantur id singulis, duis laboris ex malis dolore, an multos occaecat efflorescere. Te aliquip transferrem, senserit veniam sunt officia malis sed noster et expetendis, ingeniis amet ab laborum praetermissum, labore litteris ab eruditionem te e ipsum ne illum nam sunt exercitation tempor aute officia, fore ubi senserit ne dolore. Nisi hic te quem admodum.",
+      "figure": {
+        "width": 400,
+        "height": 300
+      },
+      "links": [
+        { "text": "Malis" },
+        { "text": "Deserunt" },
+        { "text": "Tempor" }
+      ]
+    }
+  ]
+}

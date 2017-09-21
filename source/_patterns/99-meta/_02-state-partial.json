@@ -1,0 +1,28 @@
+{
+  "states": [
+    {
+      "name": "specification",
+      "description": "This pattern is newly requested and is under specification."
+    },
+    {
+      "name": "construction",
+      "description": "The pattern is under construction."
+    },
+    {
+      "name": "review",
+      "description": "This pattern is under review and should be released soon. Please check back at a later time."
+    },
+    {
+      "name": "complete",
+      "description": "This pattern is complete and ready to use."
+    },
+    {
+      "name": "reconsideration",
+      "description": "This pattern was previously released but is under reconsideration. Please hold off on using it."
+    },
+    {
+      "name": "deprecated",
+      "description": "This pattern is no longer in use in the latest version(s) of our stylesheet."
+    }
+  ]
+}

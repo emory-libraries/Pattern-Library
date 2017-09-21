@@ -1,0 +1,169 @@
+/**
+ * Change the scope of the config() function.
+ */
+$brandy-config-map: $config-button-base;
+/**
+ * Defines the base button styles.
+ */
+#{$all-buttons} {
+  -webkit-appearance: none;
+}
+
+/** 
+ * Defines the preferred button styles.
+ */
+.button {
+  
+  $padding-y: 4px;
+  $padding-x: 12px;
+  $font-size: config('font' 'size');
+  
+  font-size: $font-size;
+  font-weight: config('font' 'weight');
+  font-family: config('font' 'family');
+  @include padding-y($padding-y);
+  @include padding-x($padding-x);
+  white-space: nowrap;
+  line-height: 1.5;
+  user-select: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: config('radius');
+  transition: all .15s ease;
+
+  /**
+   * Configures different button types. 
+   */
+  @each $class, $states in $config-button-styles {
+    @each $state, $map in $states {
+      
+      @if( $class == 'default' ){
+        @if( $state == 'normal' ){ @include expand-properties($map); }
+        @else { &:#{$state} { @include expand-properties($map); } }
+      }
+      @else {
+        @if( $state == 'normal' ){ &.#{$class} { @include expand-properties($map); } }
+        @else { &.#{$class}:#{$state} { @include expand-properties($map); } }
+      }
+      
+    }
+  }
+  
+  /**
+   * Configures different button sizes.
+   */
+  @each $size, $ratio in $config-button-ratios {
+    &.size-#{$size} {
+      @include padding-y($padding-y * $ratio);
+      @include padding-x($padding-x * $ratio);
+      font-size: ($font-size * $ratio);
+    }
+  }
+  
+  /** 
+   * Configures icon buttons.
+   */
+  &.icon {
+    
+    $spacing: config('spacing', $config-button-icon-base);
+    $size: config('size', $config-button-icon-base);
+    
+    .icon {
+      margin-left: 0;
+      margin-right: 0;
+      vertical-align: baseline;
+    }
+    
+    /**
+     * Configure different icon positions.
+     */
+    &.icon-left {
+      
+      .icon {
+        margin-left: 0;
+        margin-right: $spacing;
+      }
+      
+      /**
+       * Configures different icon spacing.
+       */
+      @each $size, $ratio in $config-button-ratios {
+        &.size-#{$size} {
+          .icon { margin-right: ($spacing * $ratio); }
+        }
+      }
+      
+    }
+    &.icon-right {
+
+      .icon {
+        margin-right: 0;
+        margin-left: $spacing; 
+      }
+      
+      /**
+       * Configures different icon spacing.
+       */
+      @each $size, $ratio in $config-button-ratios {
+        &.size-#{$size} {
+          .icon { margin-left: ($spacing * $ratio); }
+        }
+      }
+      
+    }
+    &.icon-block-left,
+    &.icon-block-right {
+      overflow: hidden;
+      
+      .icon {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: $size;
+        text-align: center;
+        line-height: 2;
+        background-color: config('background', $config-button-icon-base);
+      }
+      
+    }
+    &.icon-block-left {
+      padding-left: calc(#{$size} + #{$padding-x});
+      
+      /**
+       * Configures different icon block sizes.
+       */
+      @each $size, $ratio in $config-button-ratios {
+        &.size-#{$size} {
+          padding-left: calc((#{$size} * #{$ratio}) + (#{$padding-x} * #{$ratio}));
+        }
+      }
+      
+      .icon { left: 0; }
+      
+    }
+    &.icon-block-right {
+      padding-right: calc(#{$size} + #{$padding-x});
+      
+      /**
+       * Configures different icon button sizes.
+       */
+      @each $size, $ratio in $config-button-ratios {
+        &.size-#{$size} {
+          padding-right: calc((#{$size} * #{$ratio}) + (#{$padding-x} * #{$ratio}));
+        }
+      }
+      
+      .icon { right: 0; }
+      
+    }
+    
+  }
+  
+  &.disabled,
+  &[disabled] {
+    opacity: $config-button-disabled;
+    cursor: not-allowed;
+  }
+  
+}

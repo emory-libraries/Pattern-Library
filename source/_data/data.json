@@ -1,79 +1,127 @@
 {
-  "key": "value",
-  "key2": "use this for variables you want to load globally",
-  "title": "Emory Libraries Pattern... Library",
-  "img": {
-    "avatar": {
-      "src": "http://placehold.it/100x100",
-      "alt": "Avatar"
+  "footer": {
+    "sites": {
+      "links": [
+        {
+          "url": "http://web.library.emory.edu/",
+          "label": "Woodruff"
+        },
+        {
+          "url": "http://rose.library.emory.edu/",
+          "label": "Rose"
+        },
+        {
+          "url": "http://oxford.library.emory.edu/",
+          "label": "Oxford"
+        },
+        {
+          "url": "http://health.library.emory.edu/",
+          "label": "Health Science"
+        },
+        {
+          "url": "http://business.library.emory.edu/",
+          "label": "Business"
+        },
+        {
+          "url": "http://library.law.emory.edu/",
+          "label": "Law"
+        },
+        {
+          "url": "http://pitts.emory.edu/",
+          "label": "Theology"
+        }
+      ]
     },
-    "square": {
-      "src": "http://placehold.it/300x300",
-      "alt": "Square"
+    "library": {
+      "links": [
+        {
+          "url": "http://web.library.emory.edu/about/employment/",
+          "label": "Library Employment",
+          "active": true
+        },
+        {
+          "url": "http://web.library.emory.edu/about/privacy-policy/",
+          "label": "Privacy Policy"
+        },
+        {
+          "url": "http://web.library.emory.edu/about/contact.html",
+          "label": "Contact Us"
+        },
+        {
+          "url": "http://web.library.emory.edu/about/giving/",
+          "label": "Support the Libraries"
+        },
+        {
+          "url": "http://status.library.emory.edu/",
+          "label": "Systems Status"
+        }
+      ]
     },
-    "rectangle": {
-      "src": "http://placehold.it/400x300",
-      "alt": "Rectangle"
-    },
-    "widescreen": {
-      "src": "http://placehold.it/640x360",
-      "alt": "16x9 Image"
-    },
-    "landscape-4x3": {
-      "src": "http://placehold.it/400x300",
-      "alt": "4x3 Image"
-    },
-    "landscape-16x9": {
-      "src": "http://placehold.it/640x360",
-      "alt": "16x9 Image"
+    "emory": {
+      "links": [
+        {
+          "url": "http://www.emory.edu/",
+          "label": "Emory Home"
+        },
+        {
+          "url": "http://www.emory.edu/home/contact-emory/",
+          "label": "Contacts"
+        },
+        {
+          "url": "http://www.emory.edu/home/emergency/",
+          "label": "Emergency"
+        },
+        {
+          "url": "http://www.hr.emory.edu/eu/careers/",
+          "label": "Careers"
+        },
+        {
+          "url": "http://www.emory.edu/home/giving/",
+          "label": "Make a Gift"
+        },
+        {
+          "url": "http://www.emory.edu/home/about-this-site/",
+          "label": "About Emory's Web"
+        }
+      ]
     }
   },
-  "headline": {
-    "short": "Donec Gravida Turpis Vitae",
-    "medium": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit"
-  },
-  "excerpt": {
-    "short": "Suspendisse leo velit, tristique mattis sapien quis, mollis varius tellus. Duis tincidunt metus massa, in pharetra enim interdum a. Sed dui lectus, vestibulum nec risus at, pretium maximus est. Quisque vel leo volutpat, ullamcorper lorem in, tincidunt mi.",
-    "medium": "Nulla placerat interdum turpis, eu hendrerit ante cursus a. Proin ut dictum ante, nec molestie erat. Aenean in dictum dui, eu vehicula tortor. Nam posuere non leo at rhoncus. Pellentesque et diam est. Integer mollis sapien vel est faucibus, ut lacinia urna hendrerit. Etiam sapien ante, dignissim at justo at, imperdiet fringilla felis.",
-    "long": "Nullam ex lectus, tempor et quam sed, euismod placerat lacus. Integer in erat nulla. Suspendisse potenti. Duis eget consectetur augue, quis imperdiet magna. Ut gravida id sem ut finibus. Suspendisse in augue ac eros ornare pharetra eget eget nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam vulputate sapien sed ante consectetur, eu vulputate ex congue. Suspendisse lobortis elit ut condimentum rhoncus. Suspendisse sed ex sodales, aliquet justo quis, pellentesque nulla. Vestibulum blandit, velit ut pretium pharetra, est augue placerat metus, et tincidunt odio mauris quis velit. Ut dapibus turpis vel est congue tincidunt. Donec sit amet ante eget lacus bibendum varius."
-  },
-  "description": "Suspendisse ut orci eu erat vulputate tristique. Phasellus sit amet turpis sit amet nibh facilisis luctus. Suspendisse orci nulla, sollicitudin ut ullamcorper et, vehicula nec purus. Aenean pulvinar semper nibh eu euismod. Sed ut dui sit amet eros tempor pharetra.",
-  "url": "http://web.library.emory.edu/",
-  "name": {
-    "first": "Robert",
-    "firsti": "R",
-    "middle": "Winship",
-    "middlei": "W",
-    "last": "Woodruff",
-    "lasti": "W"
-  },
-  "year": {
-    "long": "2016",
-    "short": "16"
-  },
-  "month": {
-    "long": "January",
-    "short": "Jan",
-    "digit": "01"
-  },
-  "dayofweek": {
-    "long": "Sunday",
-    "short": "Sun"
-  },
-  "day": {
-    "long": "01",
-    "short": "1",
-    "ordinal": "st"
-  },
-  "hour": {
-    "long": "06",
-    "short": "6",
-    "military": "06",
-    "ampm": "am"
-  },
-  "minute": {
-    "long": "20",
-    "short": "20"
-  },
-  "seconds": "31"
+  "nav": {
+    "primary": {
+      "id": "nav-primary",
+      "items": [
+        { "url": "javascript:void(0);", "label": "Home" },
+        { "url": "javascript:void(0);", "label": "Materials", "active": true },
+        { "url": "javascript:void(0);", "label": "Services" },
+        { "url": "javascript:void(0);", "label": "Research and Learning" },
+        { "url": "javascript:void(0);", "label": "Exhibitions" },
+        { "url": "javascript:void(0);", "label": "News and Events" },
+        { "url": "javascript:void(0);", "label": "About" }
+      ]
+    },
+    "secondary": {
+      "id": "nav-secondary",
+      "items": [
+        { "url": "javascript:voide(0);", "label": "Research and Learning", "section": "true", "active": true },
+        { "url": "javascript:void(0);", "label": "Research Tools" },
+        { "url": "javascript:void(0);", "label": "Instructional Services", "active": true, "submenu": true, "items": [
+          { "url": "javascript:void(0);", "label": "Instructional Services for Faculty and TAs", "active": false },
+          { "url": "javascript:void(0);", "label": "Creating Effective Research Assignments", "active": false },
+          { "url": "javascript:void(0);", "label": "Media Booking Services for Instructors", "active": false },
+          { "url": "javascript:void(0);", "label": "Request a Research Instruction Session", "active": false }
+        ] },
+        { "url": "javascript:void(0);", "label": "Scholarly Communications and Data Management Services" },
+        { "url": "javascript:void(0);", "label": "Subject Librarians" },
+        { "url": "javascript:void(0);", "label": "Award and Research Programs" }
+      ]
+    },
+    "breadcrumbs": {
+      "id": "nav-breadcrumb",
+      "items": [
+        { "url": "javascript:voide(0);", "label": "Organisms" },
+        { "url": "javascript:void(0);", "label": "Navigation" },
+        { "url": "javascript:void(0);", "label": "Breadcrumbs", "active": true }
+      ]
+    }
+  }
 }

@@ -1,0 +1,36 @@
+/**
+ * Defines base styles for the project core.
+ */
+
+body {
+  margin: 0;
+  font-size: config('font' 'size');
+  font-family: config('font' 'family');
+  color: config('font' 'color' 'dark');
+  
+  /**
+   * Makes font size responsive across screen
+   * breakpoints according to a preferred scale.
+   */
+  @if( $config-base-responsive == true ){
+    @each $screen, $setting in $screens {
+      @if( map-has-key($config-base-scale, $screen) ){
+
+        $scale: config($screen, $config-base-scale);
+        $size: config('font' 'size') * $scale;
+
+        @include breakpoint($setting){ font-size: $size }; 
+      
+      }
+    }
+  }
+  
+}
+
+* {
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+}

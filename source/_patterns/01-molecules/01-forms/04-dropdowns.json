@@ -1,0 +1,53 @@
+{
+  "options": [
+    
+    { 
+      "value": 1,
+      "label": "Option 1"
+    },
+    { 
+      "value": 2,
+      "label": "Option 2",
+      "disabled": true
+    },
+    { 
+      "value": 3,
+      "label": "Option 3",
+      "selected": true
+    },
+    { 
+      "group": true,
+      "label": "Group 1",
+      "options": [
+        
+        { 
+          "value": 4,
+          "label": "Option 4"
+        },
+        { 
+          "value": 5,
+          "label": "Option 5"
+        }
+        
+      ]
+    },
+    { 
+      "group": true,
+      "label": "Group 2",
+      "disabled": true,
+      "options": [
+        
+        { 
+          "value": 6,
+          "label": "Option 6"
+        },
+        { 
+          "value": 7,
+          "label": "Option 7"
+        }
+        
+      ]
+    }
+    
+  ]
+}

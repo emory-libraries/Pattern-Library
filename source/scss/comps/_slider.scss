@@ -1,0 +1,422 @@
+/**
+ * Load component configurations.
+ */
+@import 'slider/skin';
+
+/**
+ * Defines the slider component.
+ */
+@mixin slider( $selector, $custom-skin: () ) {
+  
+  /**
+   * Generate the skin for the component's appearance.
+   */
+  $skin: map-extend($slider-default-skin, $custom-skin, true);
+  
+  /**
+   * Extract the aspect ratio. 
+   */
+  $aspect-ratio: map-deep-get($skin, 'aspect' 'default');
+  
+  /**
+   * Defines the structure of the slider component.
+   */
+  #{$selector} {
+    overflow: hidden;
+    
+    img,
+    video,
+    iframe, 
+    object { 
+      display: block;
+      width: 100%; 
+      height: 100%; 
+      top: 0;
+      bottom: 0;
+    }
+    
+    .slide {
+      display: none;
+      position: absolute;
+      top: 0;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      float: none !important;
+      font-size: 1rem;
+      border-radius: 0;
+      
+      &.active, &.next, &.prev { display: block; }
+      
+      .caption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      
+      &::after, &::before { content: none; display: none; }
+      
+    }
+    
+    .toggle {
+      padding: 0;
+      margin: 0;
+      display: block;
+      position: absolute;
+      height: 100%;
+      z-index: 1;
+      cursor: pointer;
+      background: none;
+      border: none;
+      
+      &.prev { left: 0; }
+      &.next { right: 0; }
+      
+    }
+    
+    .indicator {
+      list-style-type: none;
+      padding: 0;
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      transform: translatex(-50%);
+      z-index: 1;
+      font-size: 0;
+      line-height: 0;
+      
+      li { display: inline-block; }
+      
+      button { 
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+      }
+      
+    }
+    
+    @include private('TRANSITIONS') {
+      
+      @each $transition, $map in map-deep-get($skin, 'transition' 'transitions') {
+        
+        $speed: map-deep-get($map, 'speed');
+        $timing: map-deep-get($map, 'timing');
+        
+        $active: map-deep-get($map, 'effect' 'active');
+        $active-left: map-deep-get($map, 'effect' 'left' 'active');
+        $active-right: map-deep-get($map, 'effect' 'right' 'active');
+        
+        $next: map-deep-get($map, 'effect' 'next');
+        $next-left: map-deep-get($map, 'effect' 'left' 'next');
+        $next-right: map-deep-get($map, 'effect' 'right' 'next');
+        
+        $prev: map-deep-get($map, 'effect' 'prev');
+        $prev-left: map-deep-get($map, 'effect' 'left' 'prev');
+        $prev-right: map-deep-get($map, 'effect' 'right' 'prev');
+        
+        @if( $transition == map-deep-get($skin, 'transition' 'default') ) {
+          
+          .slide {
+            transition: all $speed $timing;
+            
+            &.active {
+              @each $property, $value in $active { #{$property}: $value; }
+              &.left { @each $property, $value in $active-left { #{$property}: $value; } }
+              &.right { @each $property, $value in $active-right { #{$property}: $value; } }
+            }
+            
+            &.next {
+              @each $property, $value in $next { #{$property}: $value; }
+              &.left { @each $property, $value in $next-left { #{$property}: $value; } }
+              &.right { @each $property, $value in $next-right { #{$property}: $value; } }
+            }
+            
+            &.prev {
+              @each $property, $value in $prev { #{$property}: $value; }
+              &.left { @each $property, $value in $prev-left { #{$property}: $value; } }
+              &.right { @each $property, $value in $prev-right { #{$property}: $value; } }
+            }
+            
+          }
+          
+        }
+        
+        &[data-transition="#{$transition}"] {
+          
+          .slide {
+            transition: all $speed $timing;
+            
+            &.active {
+              @each $property, $value in $active { #{$property}: $value; }
+              &.left { @each $property, $value in $active-left { #{$property}: $value; } }
+              &.right { @each $property, $value in $active-right { #{$property}: $value; } }
+            }
+            
+            &.next {
+              @each $property, $value in $next { #{$property}: $value; }
+              &.left { @each $property, $value in $next-left { #{$property}: $value; } }
+              &.right { @each $property, $value in $next-right { #{$property}: $value; } }
+            }
+            
+            &.prev {
+              @each $property, $value in $prev { #{$property}: $value; }
+              &.left { @each $property, $value in $prev-left { #{$property}: $value; } }
+              &.right { @each $property, $value in $prev-right { #{$property}: $value; } }
+            }
+            
+          }
+          
+        }
+        
+      }
+
+    };
+    
+    /**
+     * Defines the appearance of the slider component.
+     */
+    width: map-deep-get($skin, 'size' 'default');
+    padding-bottom: map-deep-get($skin, 'size' 'default') / $aspect-ratio;
+    
+    @include private('SIZE') {
+  
+      $min: map-deep-get($skin, 'size' 'min');
+      $max: map-deep-get($skin, 'size' 'max');
+      $increment: map-deep-get($skin, 'size' 'increment');
+      $steps: ($max - $min) / $increment;
+
+      @for $step from 0 through $steps {
+
+        $size: $min + ($increment * $step);
+        $percent: $size * 1%;
+
+        &[data-width="#{$size}"],
+        &[data-width="#{$percent}"] { 
+          width: $percent; 
+          padding-bottom: $percent / $aspect-ratio; 
+        }
+
+        &[data-height="#{$size}"],
+        &[data-height="#{$percent}"] { 
+          padding-bottom: $percent !important; 
+        }
+
+      }
+
+    };
+    
+    @include private('ASPECT RATIO') {
+    
+    $min: map-deep-get($skin, 'aspect' 'min');
+    $max: map-deep-get($skin, 'aspect' 'max');
+    $increment: map-deep-get($skin, 'aspect' 'increment');
+    $steps: ($max - $min) / $increment;
+    
+    @for $w from 0 through $steps {
+      
+      $width: $min + ($increment * $w);
+      
+      @for $h from 0 through $steps {
+      
+        $height: $min + ($increment * $h);
+      
+        &[data-aspect="#{$width}:#{$height}"] { 
+          width: map-deep-get($skin, 'size' 'default'); 
+          padding-bottom: map-deep-get($skin, 'size' 'default') / ($width / $height); 
+        }
+      
+        $size-min: map-deep-get($skin, 'size' 'min');
+        $size-max: map-deep-get($skin, 'size' 'max');
+        $size-increment: map-deep-get($skin, 'size' 'increment');
+        $size-steps: ($size-max - $size-min) / $size-increment;
+
+        @for $size-step from 0 through $size-steps {
+
+          $size: $size-min + ($size-increment * $size-step);
+          $percent: $size * 1%;
+
+          &[data-width="#{$size}"][data-aspect="#{$width}:#{$height}"],
+          &[data-width="#{$percent}"][data-aspect="#{$width}:#{$height}"]{ 
+            width: $percent; 
+            padding-bottom: $percent / ($width / $height); 
+          }
+
+        }
+        
+      }
+      
+    }
+    
+  };
+    
+    .slide {
+      
+      .caption {
+        font-family: map-deep-get($skin, 'caption' 'font' 'family');
+        font-size: map-deep-get($skin, 'caption' 'font' 'size');
+        text-align: map-deep-get($skin, 'caption' 'align');
+        text-shadow: map-deep-get($skin, 'caption' 'shadow');
+        padding: map-deep-get($skin, 'caption' 'padding');
+      }
+      
+    }
+    
+    @include private('CAPTION STYLES') {
+      
+      @each $style, $map in map-deep-get($skin, 'caption' 'styles') {
+
+        @if( $style == map-deep-get($skin, 'caption' 'style') ) {
+          .slide .caption {
+            @if( map-get($map, 'background') ) {
+              background-color: map-get($map, 'background');
+              color: color-contrast( map-get($map, 'background') );
+            }
+            color: map-get($map, 'color');
+          }
+        }
+
+        &[data-caption-style="#{$style}"] {
+          .slide .caption {
+            @if( map-get($map, 'background') ) {
+              background-color: map-get($map, 'background');
+              color: color-contrast( map-get($map, 'background') );
+            }
+            color: map-get($map, 'color');
+          }
+        }
+
+      }
+
+    };
+    
+    @include private('CAPTION MODES') {
+      
+      @each $mode, $map in map-deep-get($skin, 'caption' 'modes') {
+
+        $speed: map-get($map, 'speed');
+        $timing: map-get($map, 'timing');
+
+        $normal: map-get($map, 'normal');
+        $hover: map-get($map, 'hover');
+
+        @if( $mode == map-deep-get($skin, 'caption' 'mode') ) {
+          .slide .caption {
+            transition: all $speed $timing;
+            @each $property, $value in $normal { #{$property}: $value; }
+          }
+          .slide:hover, 
+          .slide:focus {
+            .caption { @each $property, $value in $hover { #{$property}: $value; } }
+          }
+        }
+
+        &[data-caption-mode="#{$mode}"] {
+          .slide .caption {
+            transition: all $speed $timing;
+            @each $property, $value in $normal { #{$property}: $value; }
+          }
+          .slide:hover, 
+          .slide:focus {
+            .caption { @each $property, $value in $hover { #{$property}: $value; } }
+          }
+        }
+
+      }
+
+    };
+    
+    .toggle {
+      width: map-deep-get($skin, 'toggle' 'coverage');
+      font-size: map-deep-get($skin, 'toggle' 'normal' 'size');
+      text-shadow: map-deep-get($skin, 'toggle' 'normal' 'shadow');
+      @if( map-deep-get($skin, 'toggle' 'normal' 'background') ) {
+        background-color: map-deep-get($skin, 'toggle' 'normal' 'background');
+        color: color-contrast( map-deep-get($skin, 'toggle' 'normal' 'background') );
+      }
+      color: map-deep-get($skin, 'toggle' 'normal' 'color');
+      opacity: map-deep-get($skin, 'toggle' 'normal' 'opacity');
+      transition: all map-deep-get($skin, 'toggle' 'transition' 'speed')
+                      map-deep-get($skin, 'toggle' 'transition' 'timing');
+      
+      &.prev {
+        @if( map-deep-get($skin, 'toggle' 'normal' 'gradient') ) {
+          @include linear-gradient( 'to right', map-deep-get($skin, 'toggle' 'normal' 'gradient') );
+        }
+      }
+      &.next {
+        @if( map-deep-get($skin, 'toggle' 'normal' 'gradient') ) {
+          @include linear-gradient( 'to left', map-deep-get($skin, 'toggle' 'normal' 'gradient') );
+        }
+      }
+      
+      &:hover,
+      &:focus {
+        font-size: map-deep-get($skin, 'toggle' 'hover' 'size');
+        text-shadow: map-deep-get($skin, 'toggle' 'hover' 'shadow');
+        @if( map-deep-get($skin, 'toggle' 'hover' 'background') ) {
+          background-color: map-deep-get($skin, 'toggle' 'hover' 'background');
+          color: color-contrast( map-deep-get($skin, 'toggle' 'hover' 'background') );
+        }
+        color: map-deep-get($skin, 'toggle' 'hover' 'color');
+        opacity: map-deep-get($skin, 'toggle' 'hover' 'opacity');
+
+        &.prev {
+          @if( map-deep-get($skin, 'toggle' 'hover' 'gradient') ) {
+            @include linear-gradient( 'to right', map-deep-get($skin, 'toggle' 'hover' 'gradient') );
+          }
+        }
+        &.next {
+          @if( map-deep-get($skin, 'toggle' 'hover' 'gradient') ) {
+            @include linear-gradient( 'to left', map-deep-get($skin, 'toggle' 'hover' 'gradient') );
+          }
+        }
+        
+      }
+      
+    }
+    
+    .indicator {
+      top: map-deep-get($skin, 'indicator' 'offset');
+      width: calc(100% - #{map-deep-get($skin, 'toggle' 'coverage') * 2});
+      text-align: map-deep-get($skin, 'indicator' 'align');
+      
+      li {
+        @include size( map-deep-get($skin, 'indicator' 'size') );
+        @include margin-y( 0 );
+        @include margin-x( map-deep-get($skin, 'indicator' 'spacing') );
+        border-radius: map-deep-get($skin, 'indicator' 'radius');
+        border: map-deep-get($skin, 'indicator' 'normal' 'border');
+        background-color: map-deep-get($skin, 'indicator' 'normal' 'background');
+        box-shadow: map-deep-get($skin, 'indicator' 'shadow');
+        opacity: map-deep-get($skin, 'indicator' 'normal' 'opacity');
+        transition: all map-deep-get($skin, 'indicator' 'transition' 'speed')
+                        map-deep-get($skin, 'indicator' 'transition' 'timing');
+        
+        &.active {
+          border: map-deep-get($skin, 'indicator' 'active' 'border');
+          background-color: map-deep-get($skin, 'indicator' 'active' 'background');
+          opacity: map-deep-get($skin, 'indicator' 'active' 'opacity');
+        }
+        
+      }
+      
+      &:hover,
+      &:focus {
+        border: map-deep-get($skin, 'indicator' 'hover' 'border');
+        background-color: map-deep-get($skin, 'indicator' 'hover' 'background');
+        opacity: map-deep-get($skin, 'indicator' 'hover' 'opacity');
+      }
+      
+      button { 
+        border: none; 
+        background: none; 
+      }
+      
+    }
+    
+  }
+  
+};

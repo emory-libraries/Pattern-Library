@@ -1,0 +1,336 @@
+/**
+ * Use this file to set the default appearance 
+ * for the slider component.
+ */
+$slider-default-skin: (
+
+  /**
+   * Sets the default aspect ratio for the slider
+   * component and configures the aspect ratio 
+   * settings that user's can toggle via the
+   * [data-aspect] attribute. The [data-aspect]
+   * attribute expects a colon-delimited value
+   * in the format of w:h, such as 16:9 or 4:3, 
+   * where the w is width and h is height. The
+   * minimum value below will be incremented up
+   * to the maximum value, where all incremental
+   * values are accepted for both width (w) and
+   * height (h).
+   */
+  'aspect': (
+    'default': 16 /9,
+    'min': 1,
+    'max': 16,
+    'increment': 1
+  ),
+  
+  /**
+   * Sets the default size of the slider
+   * component and configures the size settings
+   * user's can toggle via the [data-width] and/or
+   * [data-height] attributes. Both attributes 
+   * expect a percentage value, with or without
+   * the percent sign (%). In the absence of a 
+   * [data-height] attribute, the [data-aspect]
+   * or default aspect ratio is used instead.
+   * In the presence of a [data-height] attribute,
+   * however, [data-aspect] or default aspect ratio
+   * will be overridden. The minimum value below 
+   * will be incremented up to the maximum value, 
+   * where all incremental values can be used for
+   * both [data-width] and [data-height].
+   */
+  'size': (
+    'default': 100%,
+    'min': 1,
+    'max': 100,
+    'increment': 1
+  ),
+  
+  /**
+   * Sets the default styles for slide captions.
+   */
+  'caption': (
+    'mode': 'overlay',
+    
+    /**
+     * Configures all caption modes and assigns
+     * each mode a unique name. Each caption mode
+     * in the list should use the following syntax:
+     *
+     * '<mode-name>': (
+     *  'speed': <transition-speed>,
+     *  'timing': <transition-timing>,
+     *  'normal': (...),
+     *  'hover': (...)
+     * );
+     *
+     * The 'speed' and 'timing' settings are used
+     * to configure the caption mode's transition 
+     * duration and timing function while the 'normal'
+     * 'hover' states are used to set the property-value
+     * pairs that affected during the caption mode's 
+     * actual transition. The contents of the 'normal'
+     * and 'hover' maps are used as property-value pairs
+     * to create a transition from the caption's
+     * normal state to its hovered (or focused) state.
+     */
+    'modes': (
+      'overlay': (),
+      'show': (
+        'speed': .25s,
+        'timing': ease,
+        'normal': ( 'transform': translatey(100%) ),
+        'hover': ( 'transform': translatey(0%) )
+      ),
+      'hide': (
+        'speed': .25s,
+        'timing': ease,
+        'normal': ( 'transform': translatey(0%) ),
+        'hover': ( 'transform': translatey(100%) )
+      )
+    ),
+    
+    'style': 'transparent',
+    
+    /**
+     * Configures all caption styles and assigns
+     * each style a unique name. Each caption style
+     * in the list should use the following syntax:
+     *
+     * '<style-name>': (
+     *  'background': <optional-background-color>,
+     *  'color': <optional-color>,
+     *  'opacity': <optional-opacity>
+     * );
+     *
+     * By default, if a background is set, the
+     * foreground color will be color contrasted. The
+     * foreground color can be overriden, however, by
+     * supplying a color value. Any values that you do
+     * not wish to set can be omitted or set to a
+     * value that will be ignored, such as null or false.
+     */
+    'styles': (
+      'transparent': ( 'color': white ),
+      'dark': ( 'background': rgba(black, .5) ),
+      'light': ( 'background': rgba(white, .5) )
+    ),
+    
+    'font': (
+      'family': inherit,
+      'size': 1em
+    ),
+    'align': center,
+    'shadow': 0 1px 2px rgba(black, .6),
+    'padding': 25px
+  ),
+  
+  /**
+   * Sets the default styles for slide toggles.
+   * Toggles are the previous and next buttons that
+   * allow the user to transition between slides.
+   */
+  'toggle': (
+    'coverage': 15%,
+    
+    /**
+     * Sets the styles for the normal toggle state.
+     */
+    'normal': (
+      'size': 1.75em,
+      'shadow': 0 1px 2px rgba(black, .6),
+      'color': white,
+      'background': false,
+      'opacity': .5,
+      'gradient': false
+    ),
+    
+    /**
+     * Sets the styles for the hover (and focus) 
+     * toggle state(s).
+     */
+    'hover': (
+      'size': false,
+      'shadow': false,
+      'color': false,
+      'background': false,
+      'opacity': .9,
+      'gradient': (rgba(black, .5), transparent)
+    ),
+    
+    /**
+     * Sets the toggle's transition options 
+     * used to transition between various states.
+     */
+    'transition': (
+      'speed': .25s,
+      'timing': ease
+    )
+    
+  ),
+  
+  /**
+   * Sets the default styles for the slide 
+   * indicators. Indicators are used to help the 
+   * user identify which slide they are currently 
+   * viewing within the slider and how many total 
+   * slides the slider contains.
+   */
+  'indicator': (
+    'size': 10px,
+    'spacing': 5px,
+    'offset': 25px,
+    'align': center,
+    'radius': 100%,
+    'shadow': 0 1px 2px rgba(black, .6),
+    
+    /**
+     * Sets the styles for the normal indicator state.
+     */
+    'normal': (
+      'border': 1px solid white,
+      'background': false,
+      'opacity': .6
+    ),
+    
+    /**
+     * Sets the styles for the hover (and focus)
+     * indicator state(s).
+     */
+    'hover': (
+      'border': false,
+      'background': false,
+      'opacity': .7
+    ),
+    
+    /**
+     * Sets the styles for the active indicator state.
+     */
+    'active': (
+      'border': false,
+      'background': white,
+      'opacity': .9
+    ),
+    
+    /**
+     * Sets the indicator's transition options
+     * used to transition between various states.
+     */
+    'transition': (
+      'speed': .25s,
+      'timing': ease
+    )
+    
+  ),
+  
+  /**
+   * Sets the default transition settings
+   * for the slider. These settings affect the
+   * transition from slide to slide.
+   */
+  'transition': (
+    'default': 'slideshow',
+    
+    /**
+     * Configures all slider transition options and
+     * assigns each option a name. Each transition
+     * in the list should use the following syntax:
+     *
+     * '<transition-name>': (
+     *  'speed': <transition-speed>,
+     *  'timing': <transition-timing>,
+     *  'effect': (
+     *    'active': (...),
+     *    'next': (...),
+     *    'prev': (...),
+     *    'left': (
+     *      'active': (...),
+     *      'next': (...),
+     *      'prev': (...)
+     *    ),
+     *    'right': (
+     *      'active': (...),
+     *      'next': (...),
+     *      'prev': (...)
+     *    )
+     *  )
+     * )
+     *
+     * The 'speed' and 'timing' settings are used
+     * to configure the transition's duration and
+     * timing function while the 'effect' map is
+     * used to configure the transition's actual
+     * effect, where 'active', 'next', 'prev', 'left',
+     * and 'right' all correspond to their respective
+     * slide states during the transition. The contents
+     * of each map for these states is applied during
+     * the transition while the slides have the given
+     * state.
+     *
+     * For example, when the active slide is transitioned
+     * to the next slide, each slide involved in the 
+     * transition will go through the following state
+     * changes in the order shown:
+     *
+     * (1) The slides have these initial states.
+     *      SLIDE1: slide.active
+     *      SLIDE2: slide
+
+     * (2) The next slide is identified.
+     *      SLIDE1: slide.active
+     *      SLIDE2: slide.next
+     *
+     * (3) Both slides are moved in the appropriate 
+     *     direction: LEFT for next, and RIGHT for prev.
+     *      SLIDE1: slide.active.left
+     *      SLIDE2: slide.next.left
+     *
+     * (4) The final states are toggled.
+     *      SLIDE1: slide
+     *      SLIDE2: slide.active
+     */
+    'transitions': (
+      'slideshow': (
+        'speed': .5s,
+        'timing': ease,
+        'effect': (
+          'active': ( 'left': 0 ),
+          'next': ( 'left': 100% ),
+          'prev': ( 'left': -100% ),
+          'left': (
+            'active': ( 'left': -100% ),
+            'next': ( 'left': 0 ),
+            'prev': ( 'left': 0 )
+          ),
+          'right': (
+            'active': ( 'left': 100% ),
+            'next': ( 'left': 0 ),
+            'prev': ( 'left': 0 )
+          )
+        )
+      ),
+      'crossfade': (
+        'speed': .5s,
+        'timing': ease,
+        'effect': (
+          'active': ( 'opacity': 1, 'left': 0 ),
+          'next': ( 'left': 0, 'opacity': 0 ),
+          'prev': ( 'left': 0, 'opacity': 0 ),
+          'left': (
+            'active': ('opacity': 0 ),
+            'next': ('opacity': 1 ),
+            'prev': ('opacity': 1 )
+          ),
+          'right': (
+            'active': ('opacity': 0 ),
+            'next': ('opacity': 1 ),
+            'prev': ('opacity': 1 )
+          )
+        )
+      )
+    )
+  
+  )
+  
+);

@@ -1,0 +1,54 @@
+/**
+ * Use this file to define heading variables.
+ */
+
+/**
+ * Sets the base configurations for headings.
+ */
+$config-heading-base: (
+  
+  'font': (
+    'family': font('heading'),
+    'weight': normal,
+    'size': (
+      'max': 2em,
+      'min': 1em
+    )
+  ),
+  
+  'line-height': 1.25,
+  
+  'margin': (
+    'top': 1em,
+    'bottom': .5em
+  )
+  
+);
+
+/**
+ * Determines whether or not font size should be 
+ * scaled up (increasing) or down (decreasing) from
+ * the first element through the last element in a
+ * matched set of given elements.
+ */
+$config-heading-increasing: false;
+
+/**
+ * Creates a map to save heading ratios. These ratios
+ * indicate the font size in relation to the minimum
+ * or maximum font size, dependent upon whether the
+ * above variable is set to TRUE or FALSE, respectively.
+ * Note, saving to a map is optional. The syntax of expected
+ * map output is shown below:
+ *
+ * $config-heading-ratios: (
+ *  'h1': ...,
+ *  'h2': ...,
+ *  'h3': ...,
+ *  'h4': ...,
+ *  'h5': ...,
+ *  'h6': ...
+ * );
+ *
+ */
+$config-heading-ratios: ();
