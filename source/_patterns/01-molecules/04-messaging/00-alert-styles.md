@@ -1,6 +1,5 @@
 ---
-title: Alerts
-state: review
+state: complete
 ---
 
  Alert messages belong to a specific context. More about the various alert styles and their context is given below:

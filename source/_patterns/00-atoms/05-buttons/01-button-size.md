@@ -1,5 +1,5 @@
 ---
-state: review
+state: complete
 ---
 
 Buttons can be easily resized by adding any of the following size classes to the button element. These button classes will proportionately scale the button up or down in size. As a point of reference, the default button size is considered medium. A complete list of size options is given below:

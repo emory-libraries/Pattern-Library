@@ -1,5 +1,5 @@
 ---
-state: review
+state: complete
 ---
 
 These colors make up the secondary color palette. A visual of each color is given for clarity along with additional information about each color, including but not limited to:

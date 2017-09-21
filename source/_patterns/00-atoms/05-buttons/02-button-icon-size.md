@@ -1,5 +1,5 @@
 ---
-state: review
+state: complete
 ---
 
 These are samples of how icon buttons will look in different button sizes. Like standard buttons, icon buttons are also proportionately scaled across various size points. For more information on button sizes, refer to [Button Size][Button Size], or for more details on button icons, see [Button Icon][Button Icon].

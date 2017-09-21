@@ -1,5 +1,5 @@
 ---
-state: review
+state: complete
 ---
 
 These fonts are for web use only and should not be used in print. The preview of the font is given for clarity along with some additional information, including but not limited to:

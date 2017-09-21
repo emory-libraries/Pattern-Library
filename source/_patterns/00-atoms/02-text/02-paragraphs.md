@@ -1,5 +1,5 @@
 ---
-state: review
+state: complete
 ---
 
 Paragraphs are typically identified by their `<p>` tags and can optionally be modified using any of the following classes:
