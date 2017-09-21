@@ -447,8 +447,6 @@ $sg-pattern-border: 1px solid $sg-pattern-border-color;
   
   &-inline {
     
-    code { color: color('black') !important; }
-    
     &-name { 
       text-transform: capitalize;
       font-family: font('heading');
@@ -459,6 +457,10 @@ $sg-pattern-border: 1px solid $sg-pattern-border-color;
     &-name,
     &-use {
       @include margin-y(10px);
+    }
+    
+    &-use {
+      code { color: color('black', 'off') !important; }
     }
     
   }
