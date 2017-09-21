@@ -1,6 +1,5 @@
 {
   "cards": [
-    
     {
       "styleModifier": "tile",
       "heading": "Sunt a probant id legam ita ea elit pariatur arbitrantur",
@@ -29,7 +28,6 @@
         { "text": "Fugiat" }
       ]
     },
-    
     {
       "styleModifier": "tile",
       "heading": "Noster familiaritatem proident sint offendit o ubi hic varias aute multos",
@@ -44,7 +42,6 @@
         { "text": "Consequat" }
       ]
     },
-    
     {
       "styleModifier": "tile",
       "heading": "Quibusdam eram o appellat tractavissent est summis offendit fidelissimae",
@@ -59,6 +56,5 @@
         { "text": "Tempor" }
       ]
     }
-    
   ]
 }
