@@ -7,13 +7,7 @@
 /**
  * Sets the base configurations for paragraph text.
  */
-$config-text-paragraph-base: (
-  
-  'font': (
-    'size': config('font' 'size')
-  )
-  
-);
+$config-text-paragraph-base: ();
 
 /**
  * Set this variable equal to the default paragraph style's

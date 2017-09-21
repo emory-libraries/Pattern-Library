@@ -1,5 +1,5 @@
 ---
-state: review
+state: complete
 ---
 
 By default, all text, links, and icons sitewide are displayed as a dark foreground on top of a light background. Use any of these foreground classes to change the foreground color. The standard syntax for a foreground class is `.color-<name>`.

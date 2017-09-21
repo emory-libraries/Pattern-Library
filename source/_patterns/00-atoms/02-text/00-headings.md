@@ -1,5 +1,5 @@
 ---
-state: review
+state: complete
 ---
 
 Headings are ranked by the number given in their element name. In practice, headings should be used in rank order to outline the major and minor sections within a web document.

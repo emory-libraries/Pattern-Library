@@ -160,7 +160,8 @@ $brandy-config-map: $config-button-base;
     
   }
   
-  &.disabled {
+  &.disabled,
+  &[disabled] {
     opacity: $config-button-disabled;
     cursor: not-allowed;
   }

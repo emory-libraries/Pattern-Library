@@ -1,5 +1,5 @@
 ---
-state: review
+state: complete
 ---
 
 Tables can come in a variety of flavors. By default, plain tables are used, which can contain the optional `.plain` class. A complete list of available table styles include:

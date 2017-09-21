@@ -1,5 +1,5 @@
 ---
-state: review
+state: complete
 ---
 
 Button icons can be positioned in a variety of ways using icon style modifiers applied to the button element. By default, icons are positioned to the left of any button text (`.icon-left`). A complete list of positioning options is given below:

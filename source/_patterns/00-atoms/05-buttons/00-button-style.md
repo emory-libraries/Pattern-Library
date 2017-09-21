@@ -1,5 +1,5 @@
 ---
-state: review
+state: complete
 ---
 
 Buttons come in various styles, which refer to the buttons' context. These styles are applied through the following classes:

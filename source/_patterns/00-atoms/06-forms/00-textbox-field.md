@@ -1,5 +1,5 @@
 ---
-state: review
+state: complete
 ---
 
 This sample textbox uses `input[type="text"]`, but textboxes can come in a variety of flavors. Some other common textbox types include:
