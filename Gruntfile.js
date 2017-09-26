@@ -383,6 +383,9 @@ module.exports = function(grunt) {
           path.resolve(paths().source.meta)
         ]
       }
+    },
+    gitTag: {
+        packageFile: 'package.json'
     }
   });
 
@@ -395,6 +398,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-includes');
   grunt.loadNpmTasks('grunt-run');
+  grunt.loadNpmTasks('grunt-git-tag');
 
   // Register tasks
   grunt.registerTask('patternlab', 'Create design systems with atomic design', function(arg) {
@@ -456,5 +460,8 @@ module.exports = function(grunt) {
     'copy:ui',
     'copy:build'
   ]);
-
+  grunt.registerTask('release', [
+    'build',
+    'git-tag'
+  ]);
 };
