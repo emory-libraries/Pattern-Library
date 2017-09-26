@@ -48,10 +48,11 @@ For developers using this Pattern Library, all changes should take place in the 
   This command will initiate development mode for the Pattern Library. This includes instantiating the `public/` directory, then broadcasting it to a local server available at `localhost:3000`, where any changes made to the Pattern Library should be reflected in real-time. Note, this live browser synchronization relies on a `watch` script, which is also executed and activated when the `grunt dev` command is invoked. The `watch` script will continue to run in the console window until exited with `CTRL+C` or closing the console window.
   
   > It's worth noting that, while the `watch` script will attempt to account for all changes that take place within the `source/` directory, newly created and/or deleted files are not synced automatically. If adding/deleting patterns, stylesheets, or anything else while running `grunt dev`, the `grunt dev` command will need to be canceled then restarted in order to account for any changes to the file structure.
+
 - `grunt release`
 
   This command will run the `build` command and push a tagged release to GitHub.
-  
+
 [Node.js]: nodejs.org
 [npm]: npmjs.com
 [Grunt]: gruntjs.com
