@@ -27,6 +27,12 @@
       "fonts": "./public/fonts/",
       "css": "./public/css/",
       "scss": "./public/scss/"
+    },
+    "dist": {
+      "js": "./dist/<%= pkg.version %>/js/",
+      "images": "./dist/<%= pkg.version %>/images/",
+      "fonts": "./dist/<%= pkg.version %>/fonts/",
+      "css": "./dist/<%= pkg.version %>/css/"
     }
   },
   "styleGuideExcludes": [
