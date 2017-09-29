@@ -1,0 +1,10 @@
+{
+  "sections": [
+    {
+      "background": "white-off",
+      "heading": "Pattern States",
+      "level": "h2",
+      "text": "{{> meta-state-partial}}"
+    }
+  ]
+}
