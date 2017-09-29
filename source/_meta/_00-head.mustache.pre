@@ -25,7 +25,7 @@
   </head>
   <body class="{{bodyClass}}">
 
-<!--     {{> meta-alert-section }}
-    {{> meta-top-section }} -->
+    {{! {{> meta-alert-section }} }}
+    {{! {{> meta-top-section }} }}
   
   
