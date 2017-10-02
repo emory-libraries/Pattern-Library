@@ -26,6 +26,6 @@
   <body class="{{bodyClass}}">
 
     {{> meta-alert-section }}
-    {{! {{> meta-top-section }} }}
+    {{! > meta-top-section }}
   
   
