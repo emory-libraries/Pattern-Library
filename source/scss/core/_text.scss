@@ -62,7 +62,7 @@ kbd {
   box-shadow: config('kbd' 'shadow');
   font-size: config('kbd' 'font' 'size');
   color: config('kbd' 'font' 'color');
-  padding: .5em;
+  padding: .25em;
   border-radius: config('kbd' 'radius');
 }
 

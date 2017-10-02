@@ -17,19 +17,19 @@ $config-link-base: (
 $config-link-states: (
   
   'normal': (
-      'color': color('blue')
-    ),
-  
-    'hover': (
-      'color': shade(color('blue'), 25%)
-    ),
-  
-    'focus': (
-      'color': shade(color('blue'), 25%)
-    ),
-  
-    'active': (
-      'color': shade(color('blue'), 25%)
-    )
+    'color': color('blue')
+  ),
+
+  'hover': (
+    'color': shade(color('blue'), 25%)
+  ),
+
+  'focus': (
+    'color': shade(color('blue'), 25%)
+  ),
+
+  'active': (
+    'color': shade(color('blue'), 25%)
+  )
   
 );
