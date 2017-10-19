@@ -1,89 +1,73 @@
 /**
- * Change the scope of the config() function.
+ * Uses private() @mixin to create a
+ * private variable scope.
  */
-$brandy-config-map: $config-text-paragraph-base;
-
-/**
- * Defines paragraph styles based on paragraph type.
- */
-@each $class, $map in $config-text-paragraph-styles {
-
+@include private('TEXT') {
   
-  .#{$class} { 
-    @if( map-has-key($map, 'font') ) {
-      
-      $font: map-get($map, 'font');
-    
-      font-family: map-get($font, 'family');
-      font-size: map-get($font, 'size');
-      font-weight: map-get($font, 'weight'); 
-      font-style: map-get($font, 'style');
-      
-    }
-    line-height: map-get($map, 'line-height');
-  }
-  
-}
+  /**
+   * Defines different paragraph styles.
+   */
+  .lead { font-family: font('caption' 'serif'); }
 
-/**
- * Scales the font size of text according to
- * the texts' given class, and if text is 
- * configured to also scale responsively, makes
- * the font size scale proportinately across
- * breakpoints.
- */
-@each $class, $ratio in $config-text-paragraph-ratios {
-  
+  /**
+   * Scales the font size of text according to
+   * the texts' given class, and if text is 
+   * configured to also scale responsively, makes
+   * the font size scale proportinately across
+   * breakpoints.
+   */
+  $default: 'copy';
   $base: config('font' 'size', $config-base);
-  $size: $base * $ratio;
+  $scale: (
+    'copy': 1,
+    'lead': 1.2,
+    'meta': .8,
+    'caption': .9,
+    'disclaimer': .7
+  );
   
-  @if( map-has-key($config-text-paragraph-base, 'font') ) {
-    $base: config('font' 'size');
+  @each $class, $ratio in $scale {
+
+    .#{$class}{ font-size: $base * $ratio; }
+
   }
 
-  .#{$class}{ font-size: $size; }
-  
-}
+  /**
+   * Sets styles for the given inline text elements.
+   */
+  abbr[title] {
+    text-decoration: underline dotted;
+  }
 
-/**
- * Change the scope of the config() function.
- */
-$brandy-config-map: $config-text-inline-styles;
+  kbd {
+    background-color: color('grey', 'light');
+    box-shadow: 1px 1px 1px 0 color('black', 'off');
+    font-size: .9em;
+    color: color('black', 'off');
+    padding: .25em;
+    border-radius: 3px;
+  }
 
-/**
- * Sets styles for the given inline text elements.
- */
-abbr[title] {
-  text-decoration: config('abbr' 'decoration');
-}
+  samp {
+    font-size: .9em;
+    color: color('grey');
+    background-color: color('black', 'off');
+    padding: .25em .5em;
+  }
 
-kbd {
-  background-color: config('kbd' 'background');
-  box-shadow: config('kbd' 'shadow');
-  font-size: config('kbd' 'font' 'size');
-  color: config('kbd' 'font' 'color');
-  padding: .25em;
-  border-radius: config('kbd' 'radius');
-}
+  dt {
+    font-weight: 600;
+  }
 
-samp {
-  font-size: config('samp' 'font' 'size');
-  color: config('samp' 'font' 'color');
-  background-color: config('samp' 'background');
-  padding: .25em .5em;
-}
+  dt,
+  dd {
+    margin: 0;
+  }
 
-dt {
-  font-weight: config('dt' 'font' 'weight');
-}
+  li, 
+  dt, 
+  dd {
+    line-height: 1.5;
+  }
 
-dt,
-dd {
-  margin: 0;
-}
-
-li, 
-dt, 
-dd {
-  line-height: 1.5;
-}
+};
