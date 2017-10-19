@@ -126,7 +126,7 @@
       /**
        * Configures different icon spacing.
        */
-      @each $size, $ratio in $config-button-ratios {
+      @each $size, $ratio in $sizes {
         &.size-#{$size} {
           .icon { margin-left: ($spacing * $ratio); }
         }
@@ -155,7 +155,7 @@
       /**
        * Configures different icon block sizes.
        */
-      @each $size, $ratio in $config-button-ratios {
+      @each $size, $ratio in $sizes {
         &.size-#{$size} {
           padding-left: calc((#{$size} * #{$ratio}) + (#{$padding-x} * #{$ratio}));
         }
@@ -170,7 +170,7 @@
       /**
        * Configures different icon button sizes.
        */
-      @each $size, $ratio in $config-button-ratios {
+      @each $size, $ratio in $sizes {
         &.size-#{$size} {
           padding-right: calc((#{$size} * #{$ratio}) + (#{$padding-x} * #{$ratio}));
         }
