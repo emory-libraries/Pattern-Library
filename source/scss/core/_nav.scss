@@ -2,7 +2,7 @@
  * Defines the base navigation styles.
  */
 .nav {
-  max-width: config('page' 'max-width', $config-base);
+  max-width: config('page-max-width');
   margin: 0 auto;
   
   .nav-input { display: none; }

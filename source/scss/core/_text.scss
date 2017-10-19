@@ -17,7 +17,7 @@
    * breakpoints.
    */
   $default: 'copy';
-  $base: config('font' 'size', $config-base);
+  $base: config('base-font' 'size');
   $scale: (
     'copy': 1,
     'lead': 1.2,

@@ -3,7 +3,7 @@
  */
 main {
   margin: 0 auto;
-  max-width: config('page' 'max-width', $config-base);
+  max-width: config('page-max-width');
   padding: .5em 1em;
   background-color: color('white');
   

@@ -3,7 +3,7 @@
  */
 header {
   background-color: color('blue');
-  max-width: config('page' 'max-width', $config-base);
+  max-width: config('page-max-width');
   margin: 0 auto;
   
   #logo {

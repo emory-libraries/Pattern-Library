@@ -5,7 +5,7 @@ footer {
   
   font-family: font('caption' 'sans');
   font-size: .6875em;
-  max-width: config('page' 'max-width', $config-base);
+  max-width: config('page-max-width');
   margin: 0 auto;
   
   p {
