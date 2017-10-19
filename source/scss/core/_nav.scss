@@ -1,9 +1,4 @@
 /**
- * Change the scope of the config() function.
- */
-$brandy-config-map: $config-nav-base;
-
-/**
  * Defines the base navigation styles.
  */
 .nav {
@@ -20,7 +15,7 @@ $brandy-config-map: $config-nav-base;
   }
   
   a { 
-    text-decoration: config('decoration'); 
+    text-decoration: none; 
     color: inherit;
     transition: none;
   }
@@ -29,48 +24,47 @@ $brandy-config-map: $config-nav-base;
    * Defines primary navigation styles.
    */
   &.primary {
-    font-family: config('font' 'family', $config-nav-primary);
-    font-size: config('font' 'size', $config-nav-primary);
-    font-weight: config('font' 'weight', $config-nav-primary);
-    line-height: config('line-height', $config-nav-primary);
-    background-color: config('background', $config-nav-primary);
     
-    $border: 1px solid color('grey');
-    $border-alt: 1px solid color('white', 'off');
+    $background: color('blue', 'powder');
+    
+    font-family: font('label');
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: $background;
+    
+    $border-primary: 1px solid color('grey');
+    $border-secondary: 1px solid color('white', 'off');
+    
+    $button-background-normal: transparent;
+    $button-background-hover: color('blue', 'light');
+    $button-background-active: $button-background-hover;
+    
+    $button-color-normal: color('blue');
+    $button-color-hover: color('white');
+    $button-color-active: $button-color-hover;
     
     .nav-toggle {
       width: 100%;
       margin: 0;
       padding: .5em;
-      background-color: config('background', $config-nav-primary);
-      border: $border;
-      border-top: $border-alt;
-      border-left: $border-alt;
+      background-color: $background;
+      border: $border-primary;
+      border-top: $border-secondary;
+      border-left: $border-secondary;
       font: inherit;
       line-height: inherit;
       cursor: pointer;
       
-      $background: config('items' 'normal' 'background', $config-nav-primary);
-      $color: config('items' 'normal' 'color', $config-nav-primary);
-      
-      @if( not $color and $background ){ $color: color-contrast($background); }
-      
-      background-color: $background;
-      color: $color;
+      background-color: $button-background-normal;
+      color: $button-color-normal;
       
       &::before { margin-right: 10px; }
       
       &:hover,
       &:focus {
-        
-        $background: config('items' 'hover' 'background', $config-nav-primary);
-        $color: config('items' 'hover' 'color', $config-nav-primary);
-        
-        @if( not $color and $background ){ $color: color-contrast($background); }
-        
-        background-color: $background;
-        color: $color;
-        
+        background-color: $button-background-hover;
+        color: $button-color-hover;
       }
       
     }
@@ -88,12 +82,6 @@ $brandy-config-map: $config-nav-base;
     .nav-input:checked + .nav-menu { max-height: 500px; overflow: auto; }
 
     .nav-menu-item {
-      
-      $background: config('items' 'normal' 'background', $config-nav-primary);
-      $color: config('items' 'normal' 'color', $config-nav-primary);
-      
-      @if( not $color and $background ){ $color: color-contrast($background); }
-      
       align-self: stretch;
       text-align: center;
       
@@ -102,36 +90,22 @@ $brandy-config-map: $config-nav-base;
       display: flex;
       align-items: center;
       margin: 0;
-      border: $border;
-      border-top: $border-alt;
-      border-left: $border-alt;
+      border: $border-primary;
+      border-top: $border-secondary;
+      border-left: $border-secondary;
       transition: all 0.2s ease-out;
-      background-color: $background;
-      color: $color;
+      background-color: $button-background-normal;
+      color: $button-color-normal;
       
       &.active {
-        
-        $background: config('items' 'active' 'background', $config-nav-primary);
-        $color: config('items' 'active' 'color', $config-nav-primary);
-        
-        @if( not $color and $background ){ $color: color-contrast($background); }
-        
-        background-color: $background;
-        color: $color;
-        
+        background-color: $button-background-active;
+        color: $button-color-active;
       }
       
       &:hover,
       &:focus {
-        
-        $background: config('items' 'hover' 'background', $config-nav-primary);
-        $color: config('items' 'hover' 'color', $config-nav-primary);
-        
-        @if( not $color and $background ){ $color: color-contrast($background); }
-        
-        background-color: $background;
-        color: $color;
-        
+        background-color: $button-background-hover;
+        color: $button-color-hover;
       }
       
       a { 
@@ -141,7 +115,12 @@ $brandy-config-map: $config-nav-base;
       
     }
     
-    @include breakpoint( config('breakpoint' 'medium', $config-nav-primary) ) {
+    $breaks: (
+      'medium': min-width 480px,
+      'large': min-width 768px
+    );
+    
+    @include breakpoint( map-get($breaks, 'medium') ) {
       
       .nav-toggle { display: none; }
       
@@ -161,7 +140,7 @@ $brandy-config-map: $config-nav-base;
       }
       
     };
-    @include breakpoint( config('breakpoint' 'large', $config-nav-primary) ) {
+    @include breakpoint( map-get($breaks, 'large') ) {
       
       .nav-toggle { display: none; }
       
@@ -186,17 +165,19 @@ $brandy-config-map: $config-nav-base;
    * Defines secondary navigation styles.
    */
   &.secondary {
-    font-family: config('font' 'family', $config-nav-secondary);
-    font-size: config('font' 'size', $config-nav-secondary);
-    font-weight: config('font' 'weight', $config-nav-secondary);
-    line-height: config('line-height', $config-nav-secondary);
+    font-family: font('label');
+    font-size: .8rem;
+    font-weight: normal;
+    line-height: 1.75rem;
     margin-top: .5em;
     
     .nav-input, .nav-toggle { display: none; }
     
+    $border: 1px solid color('grey');
+    
     a { 
       display: block;
-      border-bottom: config('items' 'border', $config-nav-secondary); 
+      border-bottom: $border; 
       color: inherit;
       line-height: inherit;
     }
@@ -233,39 +214,32 @@ $brandy-config-map: $config-nav-base;
       padding-left: 40px;
     }
     
+    $button-color-normal: color('blue');
+    $button-color-hover-primary: color('blue');
+    $button-color-hover-secondary: color('blue', 'light');
+    $button-color-active: $button-color-hover-secondary;
+    
     .nav-menu-item,
     .nav-submenu-item {
-      color:  config('items' 'normal' 'color', $config-nav-secondary);
+      color:  $button-color-normal;
       
       > a {
         transition: all .15s ease;
       }
       
-      &:hover,
-      &:focus {
-        
-        > a {
-          color:  config('items' 'hover' 'color', $config-nav-secondary);
-        }
-        
+      &:hover > a,
+      &:focus > a {
+        color:  $button-color-hover-secondary;
       }
       
-      &.section:hover,
-      &.section:focus {
-        
-        > a {
-          color: config('items' 'hover' 'section', $config-nav-secondary);
-        }
-        
+      &.section:hover > a,
+      &.section:focus > a {
+        color: $button-color-hover-primary;
       }
       
-      &.active {
-        
-        > a {
-          font-weight: bold;
-          color:  config('items' 'active' 'color', $config-nav-secondary);
-        }
-        
+      &.active > a {
+        font-weight: bold;
+        color:  $button-color-active;
       }
       
     }
@@ -289,22 +263,26 @@ $brandy-config-map: $config-nav-base;
     .nav-input, .nav-toggle, .nav-submenu { display: none; }
     
     .nav-menu {
-      font-family: config('font' 'family', $config-nav-breadcrumb);
-      font-size: config('font' 'size', $config-nav-breadcrumb);
-      font-weight: config('font' 'weight', $config-nav-breadcrumb);
+      font-family: font('label');
+      font-size: .75em;
+      font-weight: normal;
     }
+    
+    $crumb-color-item: color('blue');
+    $crumb-color-slash: color('grey');
+    $crumb-color-active: color('grey');
     
     .nav-menu-item {
       display: inline-block;
-      color: config('normal', $config-nav-breadcrumb);
+      color: $crumb-color-item;
       
       &::after {
         content: " / ";
-        color: config('slash', $config-nav-breadcrumb);
+        color: $crumb-color-slash;
       }
       
       &.active {
-        color: config('active', $config-nav-breadcrumb);
+        color: $crumb-color-active;
         
         &::after { content: ""; }
         
