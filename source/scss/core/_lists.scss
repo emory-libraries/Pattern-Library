@@ -1,9 +1,4 @@
 /**
- * Change the scope of the config() function.
- */
-$brandy-config-map: $config-footer-link-base;
-
-/**
  * Defines the base footer link styles.
  */
 ul.footer-links {
@@ -22,7 +17,7 @@ ul.footer-links {
   }
   
   a {
-    text-decoration: config('decoration');
+    text-decoration: none;
     color: inherit;
     transition: all 0.15s ease;
   }
@@ -32,11 +27,9 @@ ul.footer-links {
    */
   &.sites {
     
-    $background: config('normal' 'background', $config-footer-link-sites);
-    $border: config('normal' 'border', $config-footer-link-sites);
-    $color: config('normal' 'color', $config-footer-link-sites);
-    
-    @if( not $color and $background ) { $color: color-contrast($background); }
+    $background: color('grey', 'dark');
+    $border: 2px solid color('white');
+    $color: color-contrast($background);
     
     background-color: $background;
     border-top: $border;
@@ -45,10 +38,8 @@ ul.footer-links {
     a:hover,
     a:focus {
       
-      $background: config('hover' 'background', $config-footer-link-sites);
-      $color: config('hover' 'color', $config-footer-link-sites);
-      
-      @if( not $color and $background ) { $color: color-contrast($background); }
+      $background: color('grey');
+      $color: color('grey', 'dark');
       
       background-color: $background;
       color: $color;
@@ -64,11 +55,9 @@ ul.footer-links {
    */
   &.library {
     
-    $background: config('normal' 'background', $config-footer-link-library);
-    $border: config('normal' 'border', $config-footer-link-library);
-    $color: config('normal' 'color', $config-footer-link-library);
-    
-    @if( not $color and $background ) { $color: color-contrast($background); }
+    $background: color('grey');
+    $border: 2px solid color('white');
+    $color: color('white');
     
     background-color: $background;
     border-top: $border;
@@ -77,10 +66,8 @@ ul.footer-links {
     a:hover,
     a:focus {
       
-      $background: config('hover' 'background', $config-footer-link-library);
-      $color: config('hover' 'color', $config-footer-link-library);
-      
-      @if( not $color and $background ) { $color: color-contrast($background); }
+      $background: color('grey', 'medium');
+      $color: color('grey', 'dark');
       
       background-color: $background;
       color: $color;
@@ -96,11 +83,9 @@ ul.footer-links {
    */
   &.emory {
     
-    $background: config('normal' 'background', $config-footer-link-emory);
-    $border: config('normal' 'border', $config-footer-link-emory);
-    $color: config('normal' 'color', $config-footer-link-emory);
-    
-    @if( not $color and $background ) { $color: color-contrast($background); }
+    $background: color('grey');
+    $border: none;
+    $color: color('blue');
     
     background-color: $background;
     border-top: $border;
@@ -109,10 +94,8 @@ ul.footer-links {
     a:hover,
     a:focus {
       
-      $background: config('hover' 'background', $config-footer-link-emory);
-      $color: config('hover' 'color', $config-footer-link-emory);
-      
-      @if( not $color and $background ) { $color: color-contrast($background); }
+      $background: color('grey', 'medium');
+      $color: color('white');
       
       background-color: $background;
       color: $color;
