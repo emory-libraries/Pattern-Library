@@ -1,20 +1,17 @@
 /**
- * Change the scope of the config() function.
- */
-$brandy-config-map: $config-header-base;
-
-/**
  * Defines the base header styles.
  */
 header {
-  background-color: config('background');
-  max-width: config('page' 'max-width', $config-base);
+  background-color: color('blue');
+  max-width: config('page-max-width');
   margin: 0 auto;
   
   #logo {
-    fill: config('color', $config-header-logo);
+    fill: color('white');
     
-    @include breakpoint( screen('large') ) { max-height: 150px; }
+    @include breakpoint( screen('large') ) { 
+      max-height: 150px; 
+    }
     
   }
   

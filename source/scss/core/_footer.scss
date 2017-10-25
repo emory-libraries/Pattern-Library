@@ -1,16 +1,11 @@
 /**
- * Change the scope of the config() function.
- */
-$brandy-config-map: $config-footer-base;
-
-/**
  * Defines the base footer styles.
  */
 footer {
   
-  font-family: config('font' 'family');
-  font-size: config('font' 'size');
-  max-width: config('page' 'max-width', $config-base);
+  font-family: font('caption' 'sans');
+  font-size: .6875em;
+  max-width: config('page-max-width');
   margin: 0 auto;
   
   p {

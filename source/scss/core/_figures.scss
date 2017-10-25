@@ -1,21 +1,20 @@
 /**
- * Change the scope of the config() function.
- */
-$brandy-config-map: $config-figure-base;
-
-/**
  * Defines the base figure styles.
  */
 figure {
+  
+  $border: 1px solid color('grey');
+  $radius: 3px;
+  
   width: 100%;
-  color: config('color');
-  font-family: config('font' 'family');
-  font-size: config('font' 'size');
+  color: color('black', 'off');
+  font-family: font('caption' 'sans');
+  font-size: .7em;
   margin: 0 auto 1em;
   padding: 1em;
   text-align: center;
-  border-top: config('border');
-  border-bottom: config('border');
+  border-top: $border;
+  border-bottom: $border;
   
   img { 
     display: block;
@@ -27,7 +26,7 @@ figure {
   figcaption { margin-top: 1em; }
   
   &::after {
-    content: "";
+    content: '';
     clear: both;
     display: block;
   }
@@ -36,16 +35,16 @@ figure {
     float: left !important; 
     margin: 0 1em 1em 0;
     padding: 0 1em 1em 0;
-    border-right: config('border');
-    border-bottom-right-radius: config('radius');
+    border-right: $border;
+    border-bottom-right-radius: $radius;
   }
   
   &.right { 
     float: right !important; 
     margin: 0 0 1em 1em;
     padding: 0 0 1em 1em;
-    border-left: config('border');
-    border-bottom-right-left: config('radius');
+    border-left: $border;
+    border-bottom-right-left: $radius;
   }
   
   &.left,
@@ -60,27 +59,69 @@ figure {
   }
   
   /**
+   * Defines the default size of figures across
+   * various screen sizes.
+   */
+  @include multi-breakpoint( screen('small'), screen('medium'), screen('large') ) {
+    width: 100%;
+    max-width: 100%;
+  };
+  
+  /**
    * Defines the responsive size of each type of
    * figure across various screen sizes.
    */
-  @each $class, $map in $config-figure-size {
+  $sizes: (
+    'fluid': (
+      'small': (
+        'width': 100%,
+        'max-width': 100%
+      ),
+      'medium': (
+        'width': 100%,
+        'max-width': 100%
+      ),
+      'large': (
+        'width': 100%,
+        'max-width': 100%
+      )
+    ),
+    'center': (
+      'medium': (
+        'width': 100%,
+        'max-width': 100%
+      ),
+      'large': (
+        'width': 50%,
+        'max-width': 700px
+      )
+    ),
+    'left': (
+      'medium': (
+        'width': 50%,
+        'max-width': 300px
+      ),
+      'large': (
+        'width': 33%,
+        'max-width': 300px
+      )
+    ),
+    'right': (
+      'medium': (
+        'width': 50%,
+        'max-width': 300px
+      ),
+      'large': (
+        'width': 33%,
+        'max-width': 300px
+      )
+    )
+  );
+  
+  @each $class, $map in $sizes {
     @each $screen, $size in $map {
       @include breakpoint( screen($screen) ) {
-        
-        @if( $class == 'default' ) {
-          & { 
-            width: map-get($size, 'width'); 
-            max-width: map-get($size, 'max');
-          }
-        }
-
-        @else {
-          &.#{$class} { 
-            width: map-get($size, 'width'); 
-            max-width: map-get($size, 'max');
-          }
-        }
-        
+        &.#{$class} { @include expand-properties($size); }
       }
     }
   }

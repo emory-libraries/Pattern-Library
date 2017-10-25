@@ -61,8 +61,17 @@ $colors: (
 /**
  * Override default configurations for Brandy, and/or
  * define new configurations to be used by Brandy.
+ * The $brandy-colors-map variable defines the map
+ * to be used with the color() @function, and the
+ * $brandy-dark-text and $brandy-light-text variables
+ * set the dark and light colors, respectively, to be
+ * used in the color-contrast() @function. These
+ * colors should be equal to the project's preferred
+ * dark and light foreground colors.
  */
 $brandy-colors-map: $colors;
+$brandy-dark-text: color('black', 'off');
+$brandy-light-text: color('white');
 
 /**
  * Include color variables for backwards

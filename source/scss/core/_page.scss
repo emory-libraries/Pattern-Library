@@ -1,16 +1,11 @@
 /**
- * Change the scope of the config() function.
- */
-$brandy-config-map: $config-page-base;
-
-/**
  * Defines page styles for base page layouts.
  */
 main {
   margin: 0 auto;
-  max-width: config('page' 'max-width', $config-base);
+  max-width: config('page-max-width');
   padding: .5em 1em;
-  background-color: config('background');
+  background-color: color('white');
   
   &.subsection {
     

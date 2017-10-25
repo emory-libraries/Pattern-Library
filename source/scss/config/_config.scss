@@ -1,0 +1,49 @@
+/**
+ * Use this file to set configuration variables.
+ */
+
+/**
+ * Sets the base configurations for the project.
+ * These configurations typically include universal
+ * settings, such as maximum container widths, 
+ * universal container padding, font styles/scales, etc.
+ */
+$config: (
+  
+  /**
+   * Determines whether or not text should
+   * be responsive. If enabled, text will be
+   * scaled according to the map given across its
+   * respective breakpoints. If disabled, text will 
+   * remain the same size always. The keys within
+   * the scale map should match any key(s) contained
+   * within your breakpoint map (see _screens.scss).
+   * A syntax example is shown below:
+   *
+   * (
+   *  <breakpoint>: <scale>,
+   *  ...
+   * );
+   *
+   */
+  'responsive-text': (
+    'enabled': true,
+    'scale': (
+      'large': 1.125
+    )
+  ),
+  
+  'page-max-width': 960px,
+  
+  'base-font': (
+    'size': 16px,
+    'family': font('body')
+  )
+  
+);
+
+/**
+ * Override default configurations for Brandy, and/or
+ * define new configurations to be used by Brandy.
+ */
+$brandy-config-map: $config;

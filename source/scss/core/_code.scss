@@ -1,12 +1,7 @@
 /**
- * Change the scope of the config() function.
- */
-$brandy-config-map: $config-code-base;
-
-/**
  * Defines the base code styles.
  */
 pre,
 code {
-  font-family: config('font' 'family');
+  font-family: font('code');
 }

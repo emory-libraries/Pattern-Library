@@ -58,3 +58,17 @@
   @return true;
   
 }
+
+/**
+ * prefix()
+ *
+ * Properly formats a string as a prefixable value.
+ */
+@function prefix( $prefix ) { @return unquote( if(is-set($prefix), $prefix + '-', '') ); }
+
+/**
+ * suffix()
+ *
+ * Properly formats a string as a suffixable value.
+ */
+@function suffix( $suffix ) { @return unquote( if(is-set($suffix), '-' + $suffix, '') ); }
