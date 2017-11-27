@@ -2,11 +2,6 @@
  * Pattern Lab specific JS functionality.
  */
 
-// Helper functions.
-function isset( value ) {
-  return value !== undefined && value !== null && value != '';
-};
-
 // Extend objects.
 String.prototype.repeat = function( n ){
   
@@ -214,14 +209,15 @@ patternLab = (function( $ ){
         // Capture the current alert.
         var $alert = $(this);
         
-        // Capture inactive and expired alerts immediately.
-        var active = true, expired = false;
-        
         // Look for a start date, duration, and/or end date.
         var start = $alert.attr('data-start'),
             duration = $alert.attr('data-duration'),
             end = $alert.attr('data-end');
         
+        // Reformat dates.
+        start = start ? new Date(start) : false;
+        end = end ? new Date(end) : duration ? new Date(start).adjust(duration) : false;
+  
         // Initialize a date comparison function.
         var compareNow = function( date, comp ){
         
@@ -239,137 +235,88 @@ patternLab = (function( $ ){
 
         };
         
-        // Handle start dates.
-        if( active && !expired && isset(start) ) {
+        // Capture inactive and expired alerts immediately.
+        var active = function(){
+              return start ? compareNow( start, '<=' ) : true;
+            }, 
+            upcoming = function(){
+              return start ? compareNow( start, '>' ) : false;
+            },
+            expired = function(){
+              return end ? compareNow( end, '<=' ) : false;
+            };
+        
+        $alert
+          .on('alert:active', function(){
           
-          // Capture the start date.
-          start = new Date( start );
+            var $self = $(this);
           
-          // Show alerts with a start date <= the current date. 
-          if( compareNow( start, '<=' ) ) { 
-            
-            $alert.fadeIn( config.alerts.speed );
-            
-          }
-          
-          // Show future alerts as they become available.
-          else {
-            
-            active = false;
-            
-            $alert.data('start', setInterval(function(){
+            $self.fadeIn( config.alerts.speed );
               
-              if( compareNow( start, '<=') ) {
+            if( end ) $self.trigger('alert:expiring');
+          
+          })
+          .on('alert:upcoming', function(){
+          
+            var $self = $(this);
+          
+            $self.data('upcoming', setInterval(function(){
+              
+              if( active() ) {
+              
+                clearInterval( $self.data('upcoming') );
                 
-                active = true;
-                
-                clearInterval( $alert.data('start') );
-                
-                $alert.show( config.alerts.speed );
-                
+                $self.off('alert:upcoming').trigger('alert:active');
+
               }
               
             }, 1000));
-            
-          }
           
-          // Handle durations.
-          if( isset(duration) ) {
-            
-            // Get the future end date.
-            var stop = start.adjust( duration );
-            
-            // Hide alerts that have reached their stop date.
-            if( active && compareNow( stop, '<=') ) {
-              
-              $alert.fadeOut( config.alerts.speed, function(){
-                    
-                $alert.remove();
-
-              });
-              
-            }
-            
-            // Stop alerts in the future.
-            else {
-              
-              $alert.data('stop', setInterval(function(){
-              
-                if( compareNow( stop, '<=') ) {
-                  
-                  active = false;
-                  expired = true;
-                  
-                  clearInterval( $alert.data('stop') );
-
-                  $alert.fadeOut( config.alerts.speed, function(){
-                    
-                    $alert.remove();
-                    
-                  });
-
-                }
-
-              }, 1000));
-              
-            }
-            
-          }
+          })
+          .on('alert:expiring', function(){
           
-        }
-        
-        // Handle end dates.
-        if( active && !expired && isset(end) ) {
- 
-          // Capture the end date.
-          end = new Date( end );
+            var $self = $(this);
           
-          // Remove alerts when they have expired.
-          if( compareNow( end, '<=') ) {
-            
-            active = false;
-            expired = true;
-            
-            $alert.remove();
-            
-          }
-          
-          // Force alerts to expire on their end date.
-          else {
-            
-            $alert.data('end', setInterval(function(){
+            $self.data('expiring', setInterval(function(){
               
-              if( compareNow( end, '<=') ) {
+              if( expired() ) {
+              
+                clearInterval( $self.data('expiring') );
                 
-                active = false;
-                expired = true;
-                
-                clearInterval( $alert.data('end') );
-                
-                $alert.remove();
-                
+                $self.off('alert:expiring').trigger('alert:expired');
+
               }
               
             }, 1000));
-            
-          }
           
-        }
+          })
+          .on('alert:expired', function(){
+          
+            var $self = $(this);
+          
+            $self.fadeOut( config.alerts.speed, function(){
+              
+              $self.trigger('alert:inactive');
+              
+            });
+          
+          })
+          .on('alert:inactive', function(){
+          
+            var $self = $(this);
+          
+            $self.remove();
+          
+          });
         
-        // Delete expired alerts.
-        if( !active && expired ) {
-          
-          $alert.remove();
-          
-        }
+        // Currently active and not expired.
+        if( active() && !expired() ) $alert.trigger('alert:active');
         
-        // Show active alerts.
-        else if( active ) {
-          
-          $alert.show( config.alerts.speed );
-          
-        }
+        // Upcoming and not expired.
+        else if( upcoming() && !expired() ) $alert.trigger('alert:upcoming');
         
+        // Inactive and/or already expired.
+        else if( (!active() && !upcoming()) || expired() ) $alert.trigger('alert:inactive');
         
       });
       
