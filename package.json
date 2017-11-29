@@ -1,7 +1,7 @@
 {
   "name": "pattern-library-node",
   "description": "A Node version of Emory Libraries' Pattern Library",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "main": "./core/lib/patternlab.js",
   "dependencies": {
     "bs-html-injector": "^3.0.0",
