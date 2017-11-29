@@ -43,6 +43,7 @@
     "grunt-postcss": "^0.8.0",
     "grunt-run": "^0.7.0",
     "grunt-sass": "^2.0.0",
+    "grunt-ssh-deploy": "^0.4.1",
     "plugin-node-tab": "^2.0.2"
   }
 }
