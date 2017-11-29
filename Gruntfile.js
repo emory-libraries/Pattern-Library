@@ -393,17 +393,19 @@ module.exports = function(grunt) {
           local_path: path.resolve(paths().public.root),
           current_symlink: 'current',
           deploy_path: '/home/sftpcascade/incoming/template.library.emory.edu/styleguide/patternlibrary/',
-          releases_to_keep: '99',
-          release_subdir: 'current',
-          release_root: 'releases'
           tag: '<%= pkg.version %>'
         },
         production: {
-          host: '<%= secret.production.host %>',
-          username: '<%= secret.production.username %>',
-          password: '<%= secret.production.password %>',
-          port: '<%= secret.production.port %>'        }
-      }
+          options: {
+            host: '<%= secret.production.host %>',
+            username: '<%= secret.production.username %>',
+            password: '<%= secret.production.password %>',
+            port: '<%= secret.production.port %>',
+            releases_to_keep: '99',
+            release_root: 'releases'
+          }
+        }
+    }
   });
 
   // Load tasks
@@ -480,6 +482,6 @@ module.exports = function(grunt) {
   grunt.registerTask('release', [
     'build',
     'git-tag',
-    'deploy'
+    'ssh_deploy:production'
   ]);
 };
