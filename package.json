@@ -1,7 +1,7 @@
 {
   "name": "pattern-library-node",
   "description": "A Node version of Emory Libraries' Pattern Library",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "main": "./core/lib/patternlab.js",
   "dependencies": {
     "bs-html-injector": "^3.0.0",
@@ -43,6 +43,7 @@
     "grunt-postcss": "^0.8.0",
     "grunt-run": "^0.7.0",
     "grunt-sass": "^2.0.0",
+    "grunt-ssh-deploy": "^0.4.1",
     "plugin-node-tab": "^2.0.2"
   }
 }

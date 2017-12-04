@@ -20,6 +20,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     pkg: grunt.file.readJSON('package.json'),
+    secret: grunt.file.readJSON('secret.json'),
     copy: {
       init: {
         files: [{
@@ -386,6 +387,24 @@ module.exports = function(grunt) {
     },
     gitTag: {
         packageFile: 'package.json'
+    },
+    environments: {
+        options: {
+          local_path: path.resolve(paths().public.root),
+          current_symlink: 'current',
+          deploy_path: '/home/sftpcascade/incoming/template.library.emory.edu/styleguide/patternlibrary/',
+          tag: '<%= pkg.version %>'
+        },
+        production: {
+          options: {
+            host: '<%= secret.production.host %>',
+            username: '<%= secret.production.username %>',
+            password: '<%= secret.production.password %>',
+            port: '<%= secret.production.port %>',
+            releases_to_keep: '99',
+            release_root: 'releases'
+          }
+        }
     }
   });
 
@@ -399,7 +418,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-includes');
   grunt.loadNpmTasks('grunt-run');
   grunt.loadNpmTasks('grunt-git-tag');
-
+  grunt.loadNpmTasks('grunt-ssh-deploy');
   // Register tasks
   grunt.registerTask('patternlab', 'Create design systems with atomic design', function(arg) {
 
@@ -462,6 +481,7 @@ module.exports = function(grunt) {
   ]);
   grunt.registerTask('release', [
     'build',
-    'git-tag'
+    'git-tag',
+    'ssh_deploy:production'
   ]);
 };
