@@ -51,7 +51,7 @@ For developers using this Pattern Library, all changes should take place in the 
 
 - `grunt release`
 
-  This command will run the `build` command and push a tagged release to GitHub. It will also deploy a copy to the live pattern library located at https://template.library.emory.edu/styleguide/releases/[tag] while also generating a symlink to the latest release at https://template.library.emory.edu/styleguide/current.
+  This command will run the `build` command and push a tagged release to GitHub. It will also deploy a copy to the live pattern library located at https://template.library.emory.edu/styleguide/patternlibrary/releases/[tag] while also generating a symlink to the latest release at https://template.library.emory.edu/styleguide/patternlibrary/current.
 
 [Node.js]: nodejs.org
 [npm]: npmjs.com
