@@ -32,7 +32,7 @@ table.plain {
   &:not(.plain).bordered {
     
     tbody tr {
-      border-bottom: 1ox solid color('grey'); 
+      border-bottom: 1px solid color('grey'); 
     }
     
   }
