@@ -1,20 +1,30 @@
-# Pattern Lab Node - Grunt Edition - Starter Kit
+# Pattern Library
 
-This is a Pattern Lab project using the Node edition with a Grunt wrapper.
+> This is the official Pattern Library for Emory Libraries.
+
+This Pattern Library uses Pattern Lab 2, Node Version, Grunt Edition.
 
 
 ## Prerequisites
 
-The Pattern Lab Node - Grunt Edition uses [Node](https://nodejs.org) for core processing, [npm](https://www.npmjs.com/) to manage project dependencies, and [grunt.js](http://gruntjs.com/) to run tasks and interface with the core library. Node version 4 or higher suffices. You can follow the directions for [installing Node](https://nodejs.org/en/download/) on the Node website if you haven't done so already. Installation of Node will include npm. It's also highly recommended that you [install grunt](http://gruntjs.com/getting-started) globally.
+Pattern Lab uses [Node](https://nodejs.org) for core processing, [npm](https://www.npmjs.com/) to manage project dependencies, and [grunt.js](http://gruntjs.com/) to run tasks and interface with the core library. Node version 4 or higher suffices. You can follow the directions for [installing Node](https://nodejs.org/en/download/) on the Node website if you haven't done so already. Installation of Node will include npm. It's also highly recommended that you [install grunt](http://gruntjs.com/getting-started) globally.
 
 
 ## Installation
 
 Prior to installation, ensure that all prerequisites have been met. Then, to install this project on your system:
 
-1. Download and unzip the compressed package, or clone the repo using `git clone`.
+1. Download and unzip the compressed package, or clone the repo using:
 
-2. Then install all package dependencies with `npm install`.
+```
+git clone https://github.com/emory-libraries/Pattern-Library
+```
+
+2. Then `cd` to your project's folder in a terminal and install all package dependencies with:
+
+```
+npm install
+```
 
 
 ## Using Pattern Lab
