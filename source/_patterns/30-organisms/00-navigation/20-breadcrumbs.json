@@ -1,8 +1,0 @@
-{
-  "id": "nav-breadcrumb-demo",
-  "items": [
-    { "url": "javascript:voide(0);", "label": "Organisms" },
-    { "url": "javascript:void(0);", "label": "Navigation" },
-    { "url": "javascript:void(0);", "label": "Breadcrumbs", "active": true }
-  ]
-}

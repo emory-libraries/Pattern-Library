@@ -1,170 +1,95 @@
 module.exports = function(grunt) {
 
-  var path = require('path'),
-    argv = require('minimist')(process.argv.slice(2));
+  const path = require('path');
+  const argv = require('minimist')(process.argv.slice(2));
 
-  //Pattern Lab configurations
-  var config = require('./patternlab-config.json'),
-    pl = require('patternlab-node')(config);
+  // Pattern Lab configuration(s)
+  const config = require('./patternlab-config.json');
+  const patternlab = require('patternlab-node')(config);
+  const pkg = grunt.config.init({pkg: grunt.file.readJSON('package.json')});
+  const paths = grunt.config.process(config.paths);
 
-  // Helper functions
-  function paths() {
-    return config.paths;
-  }
-
-  function getConfiguredCleanOption() {
-    return config.cleanPublic;
-  }
+  // Define a list of files to ignore during `uglify`.
+  // Paths are relative to the `dist/js/` folder.
+  const noUglify = [
+    // 'dependencies/foo/foo.js'
+  ];
 
   // Initialize configurations
-  grunt.initConfig({
-
-    pkg: grunt.file.readJSON('package.json'),
-    secret: grunt.file.readJSON('secret.json'),
+  grunt.config.merge({
     copy: {
-      init: {
-        files: [{
-          expand: true,
-          cwd: path.resolve(paths().styleguideDefault),
-          src: ['*', '**'],
-          dest: path.resolve(paths().public.root)
-        }, ]
-      },
-      patternlab: {
-        files: [{
-            expand: true,
-            cwd: path.resolve(paths().source.js),
-            src: '**/*.js',
-            dest: path.resolve(paths().public.js)
-          },
+      dev: {
+        files: [
           {
             expand: true,
-            cwd: path.resolve(paths().source.js),
-            src: '**/*.js.map',
-            dest: path.resolve(paths().public.js)
-          },
-          {
-            expand: true,
-            cwd: path.resolve(paths().source.css),
-            src: '*.css',
-            dest: path.resolve(paths().public.css)
-          },
-          {
-            expand: true,
-            cwd: path.resolve(paths().source.css),
-            src: '**/*.css.map',
-            dest: path.resolve(paths().public.css)
-          },
-          {
-            expand: true,
-            cwd: path.resolve(paths().source.images),
+            cwd: path.resolve(paths.source.images),
             src: '**/*',
-            dest: path.resolve(paths().public.images)
+            dest: path.resolve(paths.public.images)
           },
           {
             expand: true,
-            cwd: path.resolve(paths().source.fonts),
+            cwd: path.resolve(paths.source.fonts),
             src: '**/*',
-            dest: path.resolve(paths().public.fonts)
+            dest: path.resolve(paths.public.fonts)
           },
           {
             expand: true,
-            cwd: path.resolve(paths().source.root),
+            cwd: path.resolve(paths.source.root),
             src: 'favicon.ico',
-            dest: path.resolve(paths().public.root)
+            dest: path.resolve(paths.public.root)
+          },
+          {
+            expand: true,
+            cwd: path.resolve(paths.source.styleguide),
+            src: '**/*',
+            dest: path.resolve(paths.public.root)
           }
         ]
       },
-      build: {
-        files: [{
-            expand: true,
-            cwd: path.resolve(paths().source.js),
-            src: '**/*.js',
-            dest: path.resolve(paths().dist.js)
-          },
+      dist: {
+        files: [
           {
             expand: true,
-            cwd: path.resolve(paths().source.css),
-            src: '**/*.min.css',
-            dest: path.resolve(paths().dist.css)
-          },
-          {
-            expand: true,
-            cwd: path.resolve(paths().source.images),
+            cwd: path.resolve(paths.source.images),
             src: '**/*',
-            dest: path.resolve(paths().dist.images)
+            dest: path.resolve(paths.dist.images)
           },
           {
             expand: true,
-            cwd: path.resolve(paths().source.fonts),
+            cwd: path.resolve(paths.source.fonts),
             src: '**/*',
-            dest: path.resolve(paths().dist.fonts)
-          }
-        ]
-      },
-      ui: {
-        files: [{
-            expand: true,
-            cwd: path.resolve(paths().source.styleguide, 'css/'),
-            src: ['*', '**'],
-            dest: path.resolve(paths().public.styleguide, 'css/')
+            dest: path.resolve(paths.dist.fonts)
           },
           {
             expand: true,
-            cwd: path.resolve(paths().source.styleguide, 'js/'),
-            src: ['*', '**'],
-            dest: path.resolve(paths().public.styleguide, 'js/')
-          },
-          {
-            expand: true,
-            cwd: path.resolve(paths().source.styleguide, 'images/'),
-            src: ['*', '**'],
-            dest: path.resolve(paths().public.styleguide, 'images/')
-          },
-          {
-            expand: true,
-            cwd: path.resolve(paths().source.styleguide, 'fonts/'),
-            src: ['*', '**'],
-            dest: path.resolve(paths().public.styleguide, 'fonts/')
+            cwd: path.resolve(paths.source.root),
+            src: 'favicon.ico',
+            dest: path.resolve(paths.dist.root)
           }
         ]
       }
     },
     watch: {
-      ui: {
-        files: [
-          path.resolve(paths().source.styleguide + '/**')
-        ],
-        tasks: [
-          'sass:dev',
-          'cssmin:ui',
-          'includes:ui',
-          'patternlab',
-          'copy:ui',
-          'bsReload'
-        ]
-      },
       assets: {
         files: [
-          path.resolve(paths().source.fonts + '/**'),
-          path.resolve(paths().source.images + '/**'),
+          path.resolve(paths.source.fonts + '/**'),
+          path.resolve(paths.source.images + '/**'),
         ],
         tasks: [
           'patternlab',
-          'copy:patternlab',
+          'copy:dev',
           'bsReload'
         ]
       },
       patterns: {
         files: [
-          path.resolve(paths().source.patterns + '/**'),
-          path.resolve(paths().source.data + '/**'),
-          path.resolve(paths().source.meta + '/**'),
+          path.resolve(paths.source.patterns + '/**'),
+          path.resolve(paths.source.data + '/**'),
+          path.resolve(paths.source.meta + '/**'),
         ],
         tasks: [
-          'run:mustache',
           'patternlab',
-          'copy:patternlab',
+          'copy:dev',
           'bsReload'
         ]
       },
@@ -173,32 +98,34 @@ module.exports = function(grunt) {
           reload: true
         },
         files: [
-          path.resolve(paths().source.root + '/*.ico'),
-          path.resolve(paths().root + '/Gruntfile.js'),
-          path.resolve(paths().root + '/patternlab-config.json')
-        ]
+          path.resolve(paths.source.root + '/*.ico'),
+          path.resolve(paths.root + '/Gruntfile.js'),
+          path.resolve(paths.root + '/patternlab-config.json'),
+          path.resolve(paths.root + '.eslintrc'),
+          path.resolve(paths.root + '.babelrc'),
+          path.resolve(paths.root + '.jshintrc')
+        ],
+        tasks: ['prewatch']
       },
-      styles: {
+      scss: {
         files: [
-          path.resolve(paths().source.css + '/**'),
-          path.resolve(paths().source.scss + '/**'),
+          path.resolve(paths.source.scss + '/**'),
         ],
         tasks: [
-          'sass:dev',
-          'postcss',
-          'run:mustache',
+          'dart-sass:dev',
+          'postcss:dev',
           'patternlab',
-          'copy:patternlab',
           'bsReload'
         ]
       },
-      scripts: {
+      js: {
         files: [
-          path.resolve(paths().source.js + '/**'),
+          path.resolve(paths.source.js + '/**'),
         ],
         tasks: [
+          'jshint:dev',
+          'babel:dev',
           'patternlab',
-          'copy:patternlab',
           'bsReload'
         ]
       },
@@ -207,23 +134,14 @@ module.exports = function(grunt) {
           atBegin: true
         },
         files: [],
-        tasks: [
-          'sass:dev',
-          'postcss',
-          'cssmin:ui',
-          'includes:ui',
-          'patternlab',
-          'copy:patternlab',
-          'copy:ui',
-          'bsReload'
-        ]
+        tasks: ['prewatch']
       }
     },
     browserSync: {
       dev: {
         options: {
-          open: false,
-          server: path.resolve(paths().public.root),
+          open: 'local',
+          server: path.resolve(paths.public.root),
           watchTask: true,
           watchOptions: {
             ignoreInitial: true,
@@ -236,7 +154,7 @@ module.exports = function(grunt) {
           plugins: [{
             module: 'bs-html-injector',
             options: {
-              files: [path.resolve(paths().public.root + '/index.html'), path.resolve(paths().public.styleguide + '/styleguide.html')]
+              files: [path.resolve(paths.public.root + '/index.html'), path.resolve(paths.public.styleguide + '/styleguide.html')]
             }
           }],
           notify: {
@@ -261,77 +179,74 @@ module.exports = function(grunt) {
       }
     },
     bsReload: {
-      css: path.resolve(paths().public.root + '**/*.css'),
-      js: path.resolve(paths().public.root + '**/*.js')
+      css: path.resolve(paths.public.root + '**/*.css'),
+      js: path.resolve(paths.public.root + '**/*.js')
     },
-    includes: {
-      ui: {
-        html: {
-          options: {
-            includePath: path.resolve(paths().source.styleguide, 'html/partials/')
-          },
-          files: [{
-            cwd: path.resolve(paths().source.styleguide, 'html/'),
-            src: 'index.html',
-            dest: path.resolve(paths().source.styleguide)
-          }]
-        },
-        js: {
-          options: {
-            includePath: path.resolve(paths().source.styleguide, 'js/partials/')
-          },
-          files: [{
-            cwd: path.resolve(paths().source.styleguide, 'js/'),
-            src: 'index.js',
-            dest: path.resolve(paths().source.styleguide)
-          }]
-        }
-      }
-    },
-    sass: {
+    'dart-sass': {
       dev: {
         options: {
-          noCache: true,
-          update: true,
           style: 'expanded',
-          sourcemap: 'none'
+          sourceMap: false
         },
         files: [{
-            expand: true,
-            cwd: path.resolve(paths().source.scss),
-            src: ['style.scss', 'patternlab.scss'],
-            dest: path.resolve(paths().source.css),
-            ext: '.css'
-          },
-          {
-            expand: true,
-            cwd: path.resolve(paths().source.styleguide, 'scss/'),
-            src: ['styleguide.scss'],
-            dest: path.resolve(paths().source.styleguide, 'css/'),
-            ext: '.css'
-          }
-        ]
+          expand: true,
+          cwd: path.resolve(paths.source.scss),
+          src: ['*.scss'],
+          dest: path.resolve(paths.public.css),
+          ext: '.css'
+        }]
       },
-      build: {
+      dist: {
         options: {
-          noCache: true,
           style: 'compressed'
         },
         files: [{
-            expand: true,
-            cwd: path.resolve(paths().source.scss),
-            src: ['style.scss', 'patternlab.scss'],
-            dest: path.resolve(paths().source.css),
-            ext: '.css'
-          },
-          {
-            expand: true,
-            cwd: path.resolve(paths().source.styleguide, 'scss/'),
-            src: ['styleguide.scss'],
-            dest: path.resolve(paths().source.styleguide, 'css/'),
-            ext: '.css'
-          }
-        ]
+          expand: true,
+          cwd: path.resolve(paths.source.scss),
+          src: ['*.scss'],
+          dest: path.resolve(paths.dist.css),
+          ext: '.css'
+        }]
+      }
+    },
+    jshint: {
+      options: {
+        jshintrc: true
+      },
+      dev: [
+        path.resolve(paths.source.js, '*.js')
+      ]
+    },
+    babel: {
+      options: {
+        babelrc: true
+      },
+      dev: {
+        files: [{
+          expand: true,
+          cwd: path.resolve(paths.source.js),
+          src: ['**/*.js'],
+          dest: path.resolve(paths.public.js)
+        }]
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: path.resolve(paths.source.js),
+          src: ['**/*.js'],
+          dest: path.resolve(paths.dist.js)
+        }]
+      }
+    },
+    uglify: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: path.resolve(paths.dist.js),
+          src: ['**/*.js', '!**/*.min.js', ...noUglify.map((val) => `!${val}`)],
+          dest: path.resolve(paths.dist.js),
+          ext: '.min.js'
+        }]
       }
     },
     postcss: {
@@ -342,146 +257,99 @@ module.exports = function(grunt) {
           })
         ]
       },
-      css: {
-        src: path.resolve(paths().source.css, '**/*.css')
+      dev: {
+        src: path.resolve(paths.public.css, '**/*.css')
       },
-      styleguide: {
-        src: path.resolve(paths().source.styleguide, 'css/**/*.css')
+      dist: {
+        src: path.resolve(paths.dist.css, '**/*.css')
       }
     },
     cssmin: {
-      ui: {
+      dist: {
         options: {
           sourceMap: false
         },
         files: [{
           expand: true,
-          cwd: path.resolve(paths().source.styleguide, 'css/'),
+          cwd: path.resolve(paths.source.css),
           src: ['*.css', '!*.min.css'],
-          dest: path.resolve(paths().source.styleguide, 'css/'),
+          dest: path.resolve(paths.dist.css),
           ext: '.min.css'
         }]
-      },
-      build: {
-        options: {
-          sourceMap: false
-        },
-        files: [{
-          expand: true,
-          cwd: path.resolve(paths().source.css),
-          src: ['*.css', '!*.min.css'],
-          dest: path.resolve(paths().dist.css),
-          ext: '.min.css'
-        }]
-      }
-    },
-    run: {
-      mustache: {
-        cmd: 'node',
-        args: [
-          path.resolve(paths().source.js + '/utils/mustache-preprocessor.js'),
-          path.resolve(paths().source.patterns),
-          path.resolve(paths().source.meta)
-        ]
       }
     },
     gitTag: {
-        packageFile: 'package.json'
+      packageFile: 'package.json'
     },
-    environments: {
-        options: {
-          local_path: path.resolve(paths().public.root),
-          current_symlink: 'current',
-          deploy_path: '/home/sftpcascade/incoming/template.library.emory.edu/styleguide/patternlibrary/',
-          tag: '<%= pkg.version %>'
-        },
-        production: {
-          options: {
-            host: '<%= secret.production.host %>',
-            username: '<%= secret.production.username %>',
-            password: '<%= secret.production.password %>',
-            port: '<%= secret.production.port %>',
-            releases_to_keep: '99',
-            release_root: 'releases'
-          }
-        }
+    copydeps: {
+      options: {
+        unminified: true,
+        minified: true
+      },
+      dev: {
+        pkg: 'package.json',
+        dest: path.resolve(paths.public.js, 'dependencies/')
+      },
+      dist: {
+        pkg: 'package.json',
+        dest: path.resolve(paths.dist.js, 'dependencies/')
+      }
     }
   });
 
   // Load tasks
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-browser-sync');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-postcss');
-  grunt.loadNpmTasks('grunt-includes');
-  grunt.loadNpmTasks('grunt-run');
-  grunt.loadNpmTasks('grunt-git-tag');
-  grunt.loadNpmTasks('grunt-ssh-deploy');
+  require('load-grunt-tasks')(grunt);
+
   // Register tasks
   grunt.registerTask('patternlab', 'Create design systems with atomic design', function(arg) {
 
-    if (arguments.length === 0) {
-      pl.build(function() {}, getConfiguredCleanOption());
-    }
+    const done = this.async();
 
-    if (arg && arg === 'version') {
-      pl.version();
-    }
+    switch(arg) {
 
-    if (arg && arg === "patternsonly") {
-      pl.patternsonly(function() {}, getConfiguredCleanOption());
-    }
+      case 'build': patternlab.build(() => {}, config.cleanPublic); return done();
 
-    if (arg && arg === "help") {
-      pl.help();
-    }
+      case 'version': patternlab.version(); return done();
 
-    if (arg && arg === "liststarterkits") {
-      pl.liststarterkits();
-    }
+      case 'patternsonly': patternlab.patternsonly(() => {}, config.cleanPublic); return done();
 
-    if (arg && arg === "loadstarterkit") {
-      pl.loadstarterkit(argv.kit, argv.clean);
-    }
+      case 'liststarterkits': patternlab.liststarterkits(); return done();
 
-    if (arg && (arg !== "version" && arg !== "patternsonly" && arg !== "help" && arg !== "starterkit-list" && arg !== "starterkit-load")) {
-      pl.help();
+      case 'loadstarterkit': patternlab.loadstarterkit(argv.kit, argv.clean); return done();
+
+      default: patternlab.help(); return done();
+
     }
 
   });
-
   grunt.registerTask('default', ['dev']);
-  grunt.registerTask('init', [
-    'copy:init',
-    'sass:build',
-    'postcss',
-    'run:mustache',
-    'includes:ui',
-    'patternlab',
-    'copy:patternlab',
-    'copy:ui'
+  grunt.registerTask('prewatch', [
+    'dart-sass:dev',
+    'postcss:dev',
+    'jshint:dev',
+    'babel:dev',
+    'patternlab:build',
+    'copydeps:dev',
+    'copy:dev',
+    'bsReload'
   ]);
   grunt.registerTask('dev', [
     'browserSync',
     'watch'
   ]);
-  grunt.registerTask('build', [
-    'sass:build',
+  grunt.registerTask('dist', [
+    'dart-sass:dist',
     'postcss',
-    'cssmin:ui',
-    'cssmin:build',
-    'run:mustache',
-    'includes:ui',
-    'patternlab',
-    'copy:patternlab',
-    'copy:ui',
-    'copy:build'
+    'cssmin',
+    'babel:dist',
+    'patternlab:build',
+    'copydeps:dist',
+    'uglify:dist',
+    'copy:dist'
   ]);
   grunt.registerTask('release', [
-    'build',
-    'git-tag',
-    'ssh_deploy:production'
+    'dist',
+    'git-tag'
   ]);
+
 };
