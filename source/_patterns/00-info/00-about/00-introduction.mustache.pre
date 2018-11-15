@@ -1,9 +1,0 @@
-[[#EACH sections]]
-<section class="sg-section color-[[sections.background ??]]-bg">
-
-  <[[sections.level || 'h1']]>[[sections.heading]]</[[sections.level || 'h1']]>
-  
-  [[sections.text]]
-  
-</section>
-[[/EACH sections]]

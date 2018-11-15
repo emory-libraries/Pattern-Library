@@ -1,7 +1,0 @@
-{
-  "scripts": [
-    { "src": "../../js/index.js?{{cacheBuster}}" },
-    { "src": "../../js/plugins/clipboard/clipboard.min.js?{{cacheBuster}}" },
-    { "src": "../../js/patternlab.js?{{cacheBuster}}" }
-  ]
-}

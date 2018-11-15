@@ -1,7 +1,0 @@
-/**
- * Load the base alert component.
- */ 
-@include well('.well', (
-  'background': color('white', 'off'),
-  'border': 1px solid color('grey', 'light')
-));
