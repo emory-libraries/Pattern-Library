@@ -83,9 +83,9 @@ module.exports = function(grunt) {
       },
       patterns: {
         files: [
-          path.resolve(paths.source.patterns + '/**'),
-          path.resolve(paths.source.data + '/**'),
-          path.resolve(paths.source.meta + '/**'),
+          path.resolve(paths.source.patterns, '/**/*.{handlebars,json,md}'),
+          path.resolve(paths.source.data, '/**/*.{handlebars,json,md}'),
+          path.resolve(paths.source.meta, '/**/*.{handlebars,json,md}'),
         ],
         tasks: [
           'patternlab',
@@ -98,20 +98,24 @@ module.exports = function(grunt) {
           reload: true
         },
         files: [
-          path.resolve(paths.source.root + '/*.ico'),
-          path.resolve(paths.root + '/Gruntfile.js'),
-          path.resolve(paths.root + '/patternlab-config.json'),
-          path.resolve(paths.root + '.eslintrc'),
-          path.resolve(paths.root + '.babelrc'),
-          path.resolve(paths.root + '.jshintrc')
+          path.resolve(paths.source.root, '*.ico'),
+          path.resolve(paths.root, 'Gruntfile.js'),
+          path.resolve(paths.root, 'Plopfile.js'),
+          path.resolve(paths.root, 'patternlab-config.json'),
+          path.resolve(paths.root, '.eslintrc'),
+          path.resolve(paths.root, '.babelrc'),
+          path.resolve(paths.root, '.jshintrc')
         ],
         tasks: ['prewatch']
       },
       scss: {
         files: [
-          path.resolve(paths.source.scss + '/**'),
+          path.resolve(paths.source.scss, '**/*.scss'),
+          '!' + path.resolve(paths.source.scss, 'patterns/__master.scss'),
+          path.resolve(paths.source.patterns, '**/*.scss')
         ],
         tasks: [
+          'sass_import',
           'dart-sass:dev',
           'postcss:dev',
           'patternlab',
@@ -120,10 +124,13 @@ module.exports = function(grunt) {
       },
       js: {
         files: [
-          path.resolve(paths.source.js + '/**'),
+          path.resolve(paths.source.js, '**/*.js'),
+          '!' + path.resolve(paths.source.js, 'bundle.js'),
+          path.resolve(paths.source.patterns, '**/*.js')
         ],
         tasks: [
           'jshint:dev',
+          'concat:js',
           'babel:dev',
           'patternlab',
           'bsReload'
@@ -182,6 +189,21 @@ module.exports = function(grunt) {
       css: path.resolve(paths.public.root + '**/*.css'),
       js: path.resolve(paths.public.root + '**/*.js')
     },
+    sass_import: {
+      scss: {
+        files: {
+          src: [
+            path.resolve(paths.source.patterns, '*-meta/**/*.scss'),
+            path.resolve(paths.source.patterns, '*-tokens/**/*.scss'),
+            path.resolve(paths.source.patterns, '*-atoms/**/*.scss'),
+            path.resolve(paths.source.patterns, '*-molecules/**/*.scss'),
+            path.resolve(paths.source.patterns, '*-compounds/**/*.scss'),
+            path.resolve(paths.source.patterns, '*-organisms/**/*.scss')
+          ],
+          dest: path.resolve(paths.source.scss, 'patterns/__master.scss')
+        }
+      }
+    },
     'dart-sass': {
       dev: {
         options: {
@@ -214,8 +236,16 @@ module.exports = function(grunt) {
         jshintrc: true
       },
       dev: [
-        path.resolve(paths.source.js, '*.js')
+        path.resolve(paths.source.js, '*.js'),
+        '!' + path.resolve(paths.source.js, 'bundle.js'),
+        path.resolve(paths.source.patterns, '**/*.js')
       ]
+    },
+    concat: {
+      js: {
+        src: [path.resolve(paths.source.patterns, '**/*.js')],
+        dest: path.resolve(paths.source.js, 'bundle.js')
+      }
     },
     babel: {
       options: {
@@ -324,9 +354,10 @@ module.exports = function(grunt) {
   });
   grunt.registerTask('default', ['dev']);
   grunt.registerTask('prewatch', [
+    'sass_import',
     'dart-sass:dev',
     'postcss:dev',
-    'jshint:dev',
+    'concat:js',
     'babel:dev',
     'patternlab:build',
     'copydeps:dev',
