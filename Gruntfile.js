@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
 
+  const _ = require('lodash');
   const path = require('path');
   const argv = require('minimist')(process.argv.slice(2));
 
@@ -382,5 +383,28 @@ module.exports = function(grunt) {
     'dist',
     'git-tag'
   ]);
+  grunt.registerTask('export', 'Exports a pattern and its assets', function(pattern) {
+
+    // Do nothing if no pattern was given.
+    if( _.isNil(pattern) ) return;
+
+    // Get the pattern's directory and basename.
+    const dirname = path.dirname(pattern);
+    const basename = path.basename(pattern);
+
+    // Generate a pattern ID.
+    const id = pattern.replace(/\//g, '-');
+
+    // Get the source files and destination folder.
+    const src = grunt.file.expand([
+      path.resolve(paths.source.patterns, dirname, `${basename}.{${config.patternExtension},scss,js}`),
+      path.resolve(paths.source.patterns, pattern, `**/*.{${config.patternExtension},scss,js}`)
+    ]);
+    const dest = path.resolve(config.patternExportDirectory, id);
+
+    // Copy the pattern and its assets to the export directory.
+    src.forEach((src) => grunt.file.copy(src, `${dest}/${_.trimEnd(id.replace(path.basename(src, path.extname(src)), ''), '-')}-${path.basename(src)}`));
+
+  });
 
 };

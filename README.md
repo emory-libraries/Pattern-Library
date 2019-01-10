@@ -27,6 +27,11 @@ npm install
 ```
 
 
+## Exporting Patterns
+
+Pattern source files can be exported using the custom `grunt export` task by passing in the path of a pattern you would like to export, like `grunt export:10-atoms/01-buttons`. If the given pattern path matches a folder, all patterns within the folder will be exported. Otherwise, if the given pattern matches a set of pattern files, the pattern and its asset file will be exported. Note, all patterns will be exported to the `patternExportDirectory` location set in your `pattern-config.json` and will include any `.scss` and `.js` files.
+
+
 ## Using Pattern Lab
 
 Pattern Lab allows you to create atomic design systems and website styleguides from the ground up. For more information on the Node version and/or Grunt edition of Pattern Lab, read the [Pattern Lab Docs](http://patternlab.io/docs), check out the [Grunt Edition](https://github.com/pattern-lab/edition-node-grunt) project on Github, and/or get more details on the [Pattern Lab Node Core](https://github.com/pattern-lab/patternlab-node). For demos and other resoures, visit to the [Pattern Lab Resource Center](http://patternlab.io/resources.html).
