@@ -2,12 +2,10 @@
 
 > This is the official Pattern Library for Emory Libraries.
 
-This Pattern Library uses Pattern Lab 2, Node Version, Grunt Edition.
-
 
 ## Prerequisites
 
-Pattern Lab uses [Node](https://nodejs.org) for core processing, [npm](https://www.npmjs.com/) to manage project dependencies, and [grunt.js](http://gruntjs.com/) to run tasks and interface with the core library. Node version 4 or higher suffices. You can follow the directions for [installing Node](https://nodejs.org/en/download/) on the Node website if you haven't done so already. Installation of Node will include npm. It's also highly recommended that you [install grunt](http://gruntjs.com/getting-started) globally.
+This Pattern Library uses [Pattern Lab 2, Node Version, Grunt Edition](https://github.com/pattern-lab/edition-node-grunt), which requires [Node](https://nodejs.org) `>=5.0.0` for core processing, [npm](https://www.npmjs.com/) to manage project dependencies, and [Grunt](https://gruntjs.com/) `>=1.0.3` to run automated tasks and build the Pattern Lab instance. Additionally, this Pattern Library utilizes tools like [Plop](https://plopjs.com/) to help generatate files and [Browserify](http://browserify.org/) to help write modular JS that can be bundled for use in the browser. A basic understanding of these tools is recommended.
 
 
 ## Installation
@@ -27,16 +25,130 @@ npm install
 ```
 
 
-## Exporting Patterns
 
-Pattern source files can be exported using the custom `grunt export` task by passing in the path of a pattern you would like to export, like `grunt export:10-atoms/01-buttons`. If the given pattern path matches a folder, all patterns within the folder will be exported. Otherwise, if the given pattern matches a set of pattern files, the pattern and its asset files will be exported. These patterns will be exported to the `patternExportDirectory` location set in your `pattern-config.json`. An exported pattern will include its pattern-specific template file (ending in the designated `patternExtesion` in your `pattern-config.json`) along with its `.scss` and `.js` files, if any.
+## Contributing
 
-
-## Using Pattern Lab
-
-Pattern Lab allows you to create atomic design systems and website styleguides from the ground up. For more information on the Node version and/or Grunt edition of Pattern Lab, read the [Pattern Lab Docs](http://patternlab.io/docs), check out the [Grunt Edition](https://github.com/pattern-lab/edition-node-grunt) project on Github, and/or get more details on the [Pattern Lab Node Core](https://github.com/pattern-lab/patternlab-node). For demos and other resoures, visit to the [Pattern Lab Resource Center](http://patternlab.io/resources.html).
+Before contributing to the Pattern Library, make sure all [prerequisites](#prerequisites) have been meet and that followed the [installation steps](#installation) to setup the project on your system. Here's everything else you'll need to know before getting started.
 
 
-## Using Handlebars
+### Committing Changes
+
+Comitting changes to the `master` branch is not permitted. You'll need to make changes in a seperate branch, then open a pull request to have those changes reviewed, approved, and merged back into the `master` branch.
+
+
+### Scaffolding Patterns
+
+To quickly scaffold new patterns and/or pattern groups, simply use the `grunt plop` command. This command uses our [Plop](#about-plop) templates to quickly generate the files you need. You can also use this command to call a specific generator directly by passing the desired generator's name into the Grunt task as an argument, like `grunt plop:pattern` or `grunt plop:group`.
+
+
+### Automating Tasks
+
+Grunt has been preconfigured with a number of useful tasks. The most commonly used Grunt tasks are `grunt dev` for developing the Pattern Library and `grunt dist` for generating production-ready files for distribution. The default Grunt task is set to `grunt dev`.
+
+#### `grunt dev`
+
+Builds the Pattern Library, listens for changes during development, and enables live previewing in the browser.
+
+**Subtasks**
+
+| Subtask                   | Description                                                             |
+|---------------------------|-------------------------------------------------------------------------|
+| `dev:startup`             | Runs an initial build and forces any active browser windows to reload.  |
+
+#### `grunt dist`
+
+Compiles assets and creates production-ready files for distribution.
+
+#### `grunt release`
+
+Generates production-ready files for distribution (like `grunt dist`) and additionally adds a new release to Github.
+
+#### `grunt patternlab`
+
+Runs the Pattern Lab core processor to generate an instance of our Pattern Library.
+
+**Subtasks**
+
+| Subtask                       | Description                                                     |
+|-------------------------------|-----------------------------------------------------------------|
+| `patternlab:build`            | Compiles the patterns and front-end UI.                         |
+| `patternlab:version`          | Returns the Pattern Lab version being used.                     |
+| `patternlab:patternsonly`     | Compiles only the patterns.                                     |
+| `patternlab:liststarterkits`  | Returns a URL with a list of available Pattern Lab starterkits. |
+| `patternlab:loadstarterkit`   | Loads a starterkit into the project.                            |
+| `patternlab:help`             | Provides more information about Pattern Lab.                    |
+
+#### `grunt export`
+
+Exports a pattern definition, or group of pattern definitions, and any respective assets.
+
+**Example**
+
+```
+grunt export:10-atoms/01-button
+```
+
+#### `grunt build:dev`
+
+Compiles all assets files and builds an instance of our the Pattern Library for development.
+
+**Subtasks**
+
+| Subtask                       | Description                                              |
+|-------------------------------|----------------------------------------------------------|
+| `build:dev:patternlab`        | Builds our Pattern Library only.                         |
+| `buils:dev:scss`              | Compiles SCSS asset files only.                          |
+| `build:dev:js`                | Compiles JS asset files only.                            |
+
+#### `grunt build:dist`
+
+Compiles all assets files and builds an instance of our the Pattern Library for distribution.
+
+**Subtasks**
+
+| Subtask                       | Description                                              |
+|-------------------------------|----------------------------------------------------------|
+| `build:dist:patternlab`       | Builds our Pattern Library only.                         |
+| `buils:dist:scss`             | Compiles SCSS asset files only.                          |
+| `build:dist:js`               | Compiles JS asset files only.                            |
+
+### Exporting Patterns
+
+Individual pattern definitions can be exported using the custom `grunt export` task by passing in the path of the pattern you would like to export, like `grunt export:10-atoms/01-buttons`. If the given pattern path matches a folder, all patterns within the folder will be exported. Otherwise, if the given pattern matches a set of pattern files, the pattern and its asset files will be exported. These patterns will be exported to the `patternExportDirectory` location set in your `pattern-config.json`. An exported pattern will include its pattern-specific template file (ending in the designated `patternExtesion` in your `pattern-config.json`) along with its `.scss` and `.js` files, if any.
+
+
+### Additional Resources
+
+To learn more about the various tools that we use to build and maintain our Pattern Library, check out the resources below.
+
+#### About Pattern Lab
+
+[Pattern Lab](https://patternlab.io/) allows you to create atomic design systems and website styleguides from the ground up. For more information on the Node version and/or Grunt edition of Pattern Lab, read the [Pattern Lab Docs](http://patternlab.io/docs), check out the [Grunt Edition](https://github.com/pattern-lab/edition-node-grunt) project on Github, and/or get more details on the [Pattern Lab Node Core](https://github.com/pattern-lab/patternlab-node). For demos and other resoures, visit to the [Pattern Lab Resource Center](http://patternlab.io/resources.html).
+
+#### About Handlebars
 
 [Handlebars](https://handlebarsjs.com/) is a semantic templating language that Pattern Lab uses to bind JSON data with template files in order to generate static HTML. For a complete guide on how to use Handlebars, read the [Handlebars documentation](https://handlebarsjs.com), refer to the [Handlebars API](https://handlebarsjs.com/reference.html), and/or check out the [Handlebars project on GitHub](https://github.com/wycats/handlebars.js#differences-between-handlebarsjs-and-mustache).
+
+#### About Plop
+
+[Plop](https://plopjs.com/) is a micro-generator that we use to help quickly scaffold new pieces of our Pattern Library. For more information on what Plop is and how to use it, read through the [Plop documentation](https://plopjs.com/documentation/) or refer to [Plop repo on Github](https://github.com/amwmedia/plop). To learn more about genorating files with Plop, customizing it to meet your needs, and/or extending its functionality, you can also check out the the [Plopfile API](https://plopjs.com/documentation/#plopfile-api) and see what an [example Plopfile](https://github.com/amwmedia/plop/tree/master/example) looks like.
+
+
+## Usage
+
+There are three main ways to deploy this Pattern Library across Emory Libraries' websites and/or applications. Refer to the guidelines below that pertain to your specific use case.
+
+
+### Using Distributed Files
+
+For projects where you have full control over the project's structure and wish to deploy the Pattern Library, you can deploy this Pattern Library through the use of our distributed files. These files consist of the CSS and JS files that make up our design system, and they can be imported, included, and/or otherwise loaded directly into your website or application for immediate use. *More information on using our distributed files, and other helpful information about our design system, coming soon...*
+
+
+### Using Source Files
+
+For projects where you have full control over your project's structure but may not need our entire library of patterns, you can deploy this Pattern Library by using the source files for our pattern definitions directly. These files consist of the raw pattern files (`.handlebars`) and their respective assets (`.scss` and/or `.js`). To integrate our source files into your website or application, you can easily [export any of our patterns](#exporting-patterns).
+
+
+### Referring to the Patterns
+
+For all projects where you have limited to no control over the project's structure (i.e., when working with vendor products), you can deploy our Pattern Library by simply referring to our patterns and incorporating them into your website and/or application as closely as possible. *More information on best practices for using this approach, and other helpful information about our design system, coming soon...*
