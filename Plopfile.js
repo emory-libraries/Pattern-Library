@@ -78,6 +78,7 @@ module.exports = (plop) => {
     return `${title}${variations}`;
 
   };
+  _.isset = (value) => !_.isNil(value) && value !== '';
 
   // Define new helpers.
   plop.setHelper('unslugify', (slug) => _.unslugify(slug));
@@ -120,7 +121,7 @@ module.exports = (plop) => {
         validate( input, answers ) {
 
           // Allow non-answers.
-          if( _.isNil(input) ) return true;
+          if( !_.isset(input) ) return true;
 
           // Otherwise, throw an error for values that fall outside the min and max order numbers.
           if( +input < config.order.min || +input > config.order.max ) {
@@ -138,7 +139,7 @@ module.exports = (plop) => {
     actions(data) {
 
       // Get the order prefix.
-      data.prefix = _.isNil(data.order) ? '' : _.padStart(data.order, config.padding, '0') + '-';
+      data.prefix = _.isset(data.order) ? _.padStart(data.order, config.padding, '0') + '-' : '';
 
       // Extract atomic number.
       data.atomic = _.padStart(config.pattern.groups[data.group], config.padding, '0');
@@ -209,7 +210,7 @@ module.exports = (plop) => {
           return choices.concat(groups);
 
         },
-        default: 'No',
+        default: 'none',
         filter: ( input ) => input == 'none' ? false : input
       },
       {
@@ -219,7 +220,7 @@ module.exports = (plop) => {
         validate( input, answers ) {
 
           // Allow non-answers.
-          if( _.isNil(input) ) return true;
+          if( !_.isset(input) ) return true;
 
           // Otherwise, throw an error for values that fall outside the min and max order numbers.
           if( +input < config.order.min || +input > config.order.max ) {
@@ -243,7 +244,7 @@ module.exports = (plop) => {
     actions(data) {
 
       // Get the order prefix.
-      data.prefix = _.isNil(data.order) ? '' : _.padStart(data.order, config.padding, '0') + '-';
+      data.prefix = _.isset(data.order) ? _.padStart(data.order, config.padding, '0') + '-' : '';
 
       // Extract atomic number.
       data.atomic = _.padStart(config.pattern.groups[data.group], config.padding, '0');
