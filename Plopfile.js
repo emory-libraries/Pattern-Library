@@ -3,6 +3,7 @@ module.exports = (plop) => {
   // Load dependencies.
   const fs = require('fs');
   const _ = require('lodash');
+  const plconfig = require('./patternlab-config.json');
 
   // Configures generators.
   const config = {
@@ -261,8 +262,8 @@ module.exports = (plop) => {
       // 1. Create the new pattern's HBS file.
       actions.push({
         type: 'add',
-        path: '{{path}}/{{name}}.handlebars',
-        templateFile: 'templates/pattern/pattern.handlebars',
+        path: `{{path}}/{{name}}.${plconfig.patternExtension}`,
+        templateFile: `templates/pattern/pattern.${plconfig.patternExtension}`,
         data
       });
 

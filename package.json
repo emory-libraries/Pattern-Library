@@ -58,7 +58,7 @@
     "patternengine-node-handlebars": "^1.0.3",
     "patternlab-node": "^2.12.0",
     "plugin-node-engine-extender": "^1.0.5",
-    "plugin-node-tab": "^2.0.2",
+    "plugin-node-tab": "github:simonpioli/plugin-node-tab#dev",
     "styleguidekit-assets-default": "^3.5.2",
     "styleguidekit-mustache-default": "^3.1.0"
   },
