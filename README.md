@@ -114,7 +114,9 @@ Compiles all assets files and builds an instance of our the Pattern Library for 
 
 ### Exporting Patterns
 
-Individual pattern definitions can be exported using the custom `grunt export` task by passing in the path of the pattern you would like to export, like `grunt export:10-atoms/01-buttons`. If the given pattern path matches a folder, all patterns within the folder will be exported. Otherwise, if the given pattern matches a set of pattern files, the pattern and its asset files will be exported. These patterns will be exported to the `patternExportDirectory` location set in your `pattern-config.json`. An exported pattern will include its pattern-specific template file (ending in the designated `patternExtesion` in your `pattern-config.json`) along with its `.scss` and `.js` files, if any.
+Individual pattern definitions can be exported using the custom `grunt export` task by passing in the pattern ID of the pattern you would like to export, like `grunt export:atoms-button`. If no pattern ID is given, then all patterns will be dumped. The pattern and its asset files (SCSS, JS, etc.) will be exported, including rendered and markup-only HTML versions of the pattern. These patterns will be exported to the `patternExportDirectory` location set in your `pattern-config.json`.
+
+> Note, using the `grunt export` task for exporting patterns bypasses Pattern Lab's built-in method for exporting patterns via its CLI. Therefore, you can ignore the `patternExportPatternPartials` option in the `pattern-config.json` altogether as it's no longer needed using this approach.
 
 
 ### Additional Resources

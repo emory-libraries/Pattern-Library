@@ -1,4 +1,3 @@
-
 node_modules/
 .DS_Store
 patternlab.json
@@ -10,3 +9,4 @@ secret.json
 src/**/css/*.css
 src/css/*.css
 src/**/css/*.css.map
+pattern_exports/

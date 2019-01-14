@@ -423,28 +423,6 @@ module.exports = function(grunt) {
   ]);
 
   /* export */
-  grunt.registerTask('export', 'Exports a pattern and its assets', function(pattern) {
-
-    // Do nothing if no pattern was given.
-    if( _.isNil(pattern) ) return;
-
-    // Get the pattern's directory and basename.
-    const dirname = path.dirname(pattern);
-    const basename = path.basename(pattern);
-
-    // Generate a pattern ID.
-    const id = pattern.replace(/\//g, '-');
-
-    // Get the source files and destination folder.
-    const src = grunt.file.expand([
-      path.resolve(paths.source.patterns, dirname, `${basename}.{${config.patternExtension},scss,js}`),
-      path.resolve(paths.source.patterns, pattern, `**/*.{${config.patternExtension},scss,js}`)
-    ]);
-    const dest = path.resolve(config.patternExportDirectory, id);
-
-    // Copy the pattern and its assets to the export directory.
-    src.forEach((src) => grunt.file.copy(src, `${dest}/${_.trimEnd(id.replace(path.basename(src, path.extname(src)), ''), '-')}-${path.basename(src)}`));
-
-  });
-
+  grunt.registerTask('export', 'Exports a pattern and its assets', require('./scripts/export.js'));
+  
 };

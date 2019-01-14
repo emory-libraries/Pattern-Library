@@ -1,8 +1,10 @@
 module.exports = (plop) => {
 
   // Load dependencies.
-  const fs = require('fs');
+  const path = require('path');
+  const fs = require('fs-extra');
   const _ = require('lodash');
+  const utils = require('./scripts/utils.js');
   const plconfig = require('./patternlab-config.json');
 
   // Configures generators.
@@ -24,15 +26,7 @@ module.exports = (plop) => {
 
     // Define configurations for the pattern generator.
     pattern: {
-      groups: {
-        meta: 00,
-        tokens: 10,
-        atoms: 20,
-        molecules: 30,
-        compounds: 40,
-        organisms: 50,
-        templates: 60
-      }
+      groups: utils.atomic()
     }
 
   };
