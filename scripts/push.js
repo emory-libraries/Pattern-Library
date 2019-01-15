@@ -29,9 +29,20 @@ module.exports = function( id = null ) {
     
   });
   const glob = require('glob').sync;
+  const utils = require('./utils.js');
+  const handlebars = require('handlebars');
+  
+  // Register Handlebars helpers.
+  handlebars.registerHelper(require('handlebars-helpers')());
   
   // Load configurations.
   const config = require('../patternlab-config.json');
+  
+  // Get data about all patterns.
+  const patterns = utils.patterns();
+  
+  // Get atomic structure of patterns.
+  const atomic = utils.atomic();
   
   // Build list of things to push out.
   const push = [
@@ -52,6 +63,73 @@ module.exports = function( id = null ) {
         // Export all patterns.
         require(path.resolve(__dirname, 'export.js'))();
         
+        // Make sure  directories exist for all atomic groups.
+        Object.keys(atomic).forEach((group) => {
+          
+          // Get the directory name.
+          const dir = atomic[group] ? `${atomic[group]}-${group}` : group;
+          
+          // Build the folder structure.
+          fs.ensureDirSync(path.resolve(this.dir, '07-user-interface', dir));
+          
+          // Get the index file path for the directory.
+          const index = path.resolve(this.dir, '07-user-interface', dir, '01-index.md');
+          
+          // Initialize a markdown file in each folder if one doesn't already exists.
+          if( !fs.existsSync(index) ) {
+            
+            // Get the markdown template.
+            const md = fs.readFileSync(path.resolve(__dirname, 'templates/atomic.md'), 'utf8');
+            
+            // Compile the markdown template with handlebars.
+            const template = handlebars.compile(md);
+            
+            // Merge data into the template file.
+            const output = template({group});
+            
+            // Save the index file.
+            fs.outputFileSync(index, output);
+            
+          }
+          
+        });
+        
+      },
+      during( src ) {
+
+        // Look up pattern IDs.
+        let patternIDs = Object.keys(patterns).filter((id) => path.basename(src).indexOf(id) === 0);
+        
+        // Ignore paths without without matching pattern IDs because they're likely invalid.
+        if( patternIDs.length === 0 ) return;
+        
+        // Get the pattern ID of the source file.
+        const ID = patternIDs[0];
+        
+        // Get the pattern data based on ID.
+        const pattern = patterns[ID]; 
+        
+        // Get information about the pattern.
+        const {group, name} = pattern;
+          
+        // Get the markdown templates.
+        const md = fs.readFileSync(path.resolve(__dirname, 'templates/pattern.md'), 'utf8');
+          
+        // Compile the markdown templates with handlebars.
+        const template = handlebars.compile(md);
+          
+        // Merge data into the the template file.
+        const output = template(pattern);
+        
+        // Determine the output directory.
+        const dir = atomic[group] ? `${atomic[group]}-${group}` : group;
+        
+        // Determine the output file name.
+        const file = `${name}.md`;
+        
+        // Save the generated file.
+        fs.outputFileSync(path.resolve(this.dir, '07-user-interface', dir, file), output);
+        
       },
       after() {
         
@@ -65,7 +143,7 @@ module.exports = function( id = null ) {
         if( fs.symlinkExistsSync(dest) ) fs.removeSync(dest);
         
         // Add a new symlink for the patterns folder in the includes folder.
-        fs.symlinkSync(path.relative(this.dir, src), dest);
+        fs.symlinkSync(path.relative(path.resolve(this.dir, '_includes'), src), dest);
         
       }
     }
@@ -107,6 +185,9 @@ module.exports = function( id = null ) {
           
           // Otherwise, report that the source could not be found.
           else errors.push(`Could not find '${src}' to push to '${item.id}'.`);
+          
+          // Also do stuff that needs to happen during items being pushed.
+          if( item.during && _.isFunction(item.during) ) item.during(src);
           
         });
 
