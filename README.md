@@ -31,6 +31,19 @@ npm install
 Before contributing to the Pattern Library, make sure all [prerequisites](#prerequisites) have been meet and that followed the [installation steps](#installation) to setup the project on your system. Here's everything else you'll need to know before getting started.
 
 
+### Pulling Dependencies
+
+Our Pattern Library depends on files from other [Emory Libraries](https://github.com/emory-libraries) projects, such as the [Emory Libraries Sass Framework](https://github.com/emory-libraries/stemplate-sass). These files can be pulled into the Pattern Library from other local repos on your system as needed using the [`grunt pull`](#grunt-pull) command. 
+
+> Note, the `grunt pull` command has been preconfigured to pull in any files from other (local) repos that the Pattern Library integrates with. You must downlod or `git clone` these repos to your system in a location adjacent to your Pattern Library repo in order for this to work. 
+
+### Pushing Dependencies
+
+Some files within our Pattern Library are utilized by other [Emory Libraries](https://github.com/emory-libraries) projects, such as the [Emory Libraries Style Guide](https://github.com/emory-libraries/style-guide-guide). These files can be pushed to other local repos on your system as needed using the [`grunt push`](#grunt-push) command. 
+
+> Note, the `grunt push` command has been preconfigured to push out any files to other (local) repos that require some integration with the Pattern Library. You must downlod or `git clone` these repos to your system in a location adjacent to your Pattern Library repo in order for this to work. 
+
+
 ### Committing Changes
 
 Comitting changes to the `master` branch is not permitted. You'll need to make changes in a seperate branch, then open a pull request to have those changes reviewed, approved, and merged back into the `master` branch.
@@ -38,12 +51,12 @@ Comitting changes to the `master` branch is not permitted. You'll need to make c
 
 ### Scaffolding Patterns
 
-To quickly scaffold new patterns and/or pattern groups, simply use the `grunt plop` command. This command uses our [Plop](#about-plop) templates to quickly generate the files you need. You can also use this command to call a specific generator directly by passing the desired generator's name into the Grunt task as an argument, like `grunt plop:pattern` or `grunt plop:group`.
+To quickly scaffold new patterns and/or pattern groups, simply use the [`grunt plop`](#grunt-plop) command. This command uses our [Plop](#about-plop) templates to quickly generate the files you need. You can also use this command to call a specific generator directly by passing the desired generator's name into the Grunt task as an argument, like `grunt plop:pattern` or `grunt plop:group`.
 
 
 ### Automating Tasks
 
-Grunt has been preconfigured with a number of useful tasks. The most commonly used Grunt tasks are `grunt dev` for developing the Pattern Library and `grunt dist` for generating production-ready files for distribution. The default Grunt task is set to `grunt dev`.
+Grunt has been preconfigured with a number of useful tasks. The most commonly used Grunt tasks are [`grunt dev`](#grunt-dev) for developing the Pattern Library and [`grunt dist`](#grunt-dist) for generating production-ready files for distribution. The default Grunt task is set to `grunt dev`.
 
 #### `grunt dev`
 
@@ -100,6 +113,7 @@ Compiles all assets files and builds an instance of our the Pattern Library for 
 | `buils:dev:scss`              | Compiles SCSS asset files only.                          |
 | `build:dev:js`                | Compiles JS asset files only.                            |
 
+
 #### `grunt build:dist`
 
 Compiles all assets files and builds an instance of our the Pattern Library for distribution.
@@ -111,6 +125,15 @@ Compiles all assets files and builds an instance of our the Pattern Library for 
 | `build:dist:patternlab`       | Builds our Pattern Library only.                         |
 | `buils:dist:scss`             | Compiles SCSS asset files only.                          |
 | `build:dist:js`               | Compiles JS asset files only.                            |
+
+#### `grunt pull`
+
+Pulls in files from other repos that feed into the Pattern Library. Current dependencies for our Pattern Library include our [Emory Libraries Sass Framework](https://github.com/emory-libraries/template-sass). Note that in order for this task to work, you will need to download or `git clone` the Emory Libraries Sass Framework to your system, and afterwards, you will want to `git commit` these pulled files to the Pattern Library repo.
+
+#### `grunt push`
+
+Pushes out selected files from our Pattern Library to other repos that utilize those files. Current projects that depend of our Pattern Library include our [Emory Libraries Style Guide](https://github.com/emory-libraries/style-guide-guide). Note that in order for this task to work, you will need to download or `git clone` the Emory Libraries Style Guide to your system, and afterwards, you will want to `git commit` these pushed files to the other repo(s).
+
 
 ### Exporting Patterns
 
