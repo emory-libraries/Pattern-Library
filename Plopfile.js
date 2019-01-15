@@ -191,15 +191,14 @@ module.exports = (plop) => {
         name: 'subgroup',
         message: "Does the pattern belong to a pattern group?",
         choices( answers ) {
-
+          
           // Initialize choices.
           const choices = ['none'];
 
-          // Extract atomic number.
-          const atomic = _.padStart(config.pattern.groups[answers.group], config.padding, '0');
-
-          // Get the list of pattern groups, if any.
-          const groups = fs.readdirSync(`src/_patterns/${atomic}-${answers.group}`).filter((file) => fs.statSync(`src/_patterns/${atomic}-${answers.group}/${file}`).isDirectory());
+          // Extract pattern groups.
+          const groups = _.map(utils.groups(answers.group), (number, name) => { 
+            return number ? `${number}-${name}` : name;
+          });
 
           // Return choices.
           return choices.concat(groups);
