@@ -1,0 +1,5 @@
+---
+
+title: {{unslugify name}}
+
+---

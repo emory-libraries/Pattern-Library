@@ -42,7 +42,7 @@
   ],
   "defaultPattern": "all",
   "cleanPublic": true,
-  "patternExtension": "handlebars",
+  "patternExtension": "hbs",
   "ignored-extensions": [
     "DS_Store"
   ],

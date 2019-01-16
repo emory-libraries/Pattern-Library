@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
 
+  const _ = require('lodash');
   const path = require('path');
   const argv = require('minimist')(process.argv.slice(2));
 
@@ -17,6 +18,9 @@ module.exports = function(grunt) {
 
   // Initialize configurations
   grunt.config.merge({
+    clean: {
+      public: [path.resolve(paths.public.root)]
+    },
     copy: {
       dev: {
         files: [
@@ -72,69 +76,49 @@ module.exports = function(grunt) {
     watch: {
       assets: {
         files: [
-          path.resolve(paths.source.fonts + '/**'),
-          path.resolve(paths.source.images + '/**'),
+          path.resolve(paths.source.fonts, '**'),
+          path.resolve(paths.source.images, '**'),
         ],
-        tasks: [
-          'patternlab',
-          'copy:dev',
-          'bsReload'
-        ]
+        tasks: ['build:dev:patternlab', 'bsReload']
       },
-      patterns: {
+      patternlab: {
         files: [
-          path.resolve(paths.source.patterns + '/**'),
-          path.resolve(paths.source.data + '/**'),
-          path.resolve(paths.source.meta + '/**'),
+          path.resolve(paths.source.patterns, '**'),
+          path.resolve(paths.source.data, '**'),
+          path.resolve(paths.source.meta, '**')
         ],
-        tasks: [
-          'patternlab',
-          'copy:dev',
-          'bsReload'
-        ]
+        tasks: ['build:dev:patternlab', 'bsReload']
       },
       config: {
         options: {
           reload: true
         },
         files: [
-          path.resolve(paths.source.root + '/*.ico'),
-          path.resolve(paths.root + '/Gruntfile.js'),
-          path.resolve(paths.root + '/patternlab-config.json'),
-          path.resolve(paths.root + '.eslintrc'),
-          path.resolve(paths.root + '.babelrc'),
-          path.resolve(paths.root + '.jshintrc')
+          path.resolve(paths.source.root, '*.ico'),
+          path.resolve(paths.root, 'Gruntfile.js'),
+          path.resolve(paths.root, 'Plopfile.js'),
+          path.resolve(paths.root, 'patternlab-config.json'),
+          path.resolve(paths.root, '.eslintrc'),
+          path.resolve(paths.root, '.babelrc'),
+          path.resolve(paths.root, '.jshintrc')
         ],
-        tasks: ['prewatch']
+        tasks: ['dev:startup']
       },
       scss: {
         files: [
-          path.resolve(paths.source.scss + '/**'),
+          path.resolve(paths.source.scss, '**/*.scss'),
+          '!' + path.resolve(paths.source.scss, 'patterns/__master.scss'),
+          path.resolve(paths.source.patterns, '**/*.scss')
         ],
-        tasks: [
-          'dart-sass:dev',
-          'postcss:dev',
-          'patternlab',
-          'bsReload'
-        ]
+        tasks: ['build:dev:scss', 'build:dev:patternlab', 'bsReload']
       },
       js: {
         files: [
-          path.resolve(paths.source.js + '/**'),
+          path.resolve(paths.source.js, '**/*.js'),
+          '!' + path.resolve(paths.source.js, 'bundle.js'),
+          path.resolve(paths.source.patterns, '**/*.js')
         ],
-        tasks: [
-          'jshint:dev',
-          'babel:dev',
-          'patternlab',
-          'bsReload'
-        ]
-      },
-      startup: {
-        options: {
-          atBegin: true
-        },
-        files: [],
-        tasks: ['prewatch']
+        tasks: ['jshint:dev', 'build:dev:js', 'build:dev:patternlab', 'bsReload']
       }
     },
     browserSync: {
@@ -154,7 +138,7 @@ module.exports = function(grunt) {
           plugins: [{
             module: 'bs-html-injector',
             options: {
-              files: [path.resolve(paths.public.root + '/index.html'), path.resolve(paths.public.styleguide + '/styleguide.html')]
+              files: [path.resolve(paths.public.root, 'index.html'), path.resolve(paths.public.styleguide, 'styleguide.html')]
             }
           }],
           notify: {
@@ -179,8 +163,21 @@ module.exports = function(grunt) {
       }
     },
     bsReload: {
-      css: path.resolve(paths.public.root + '**/*.css'),
-      js: path.resolve(paths.public.root + '**/*.js')
+      css: path.resolve(paths.public.root, '**/*.css'),
+      js: path.resolve(paths.public.root, '**/*.js')
+    },
+    sass_import: {
+      scss: {
+        src: [
+          path.resolve(paths.source.patterns, '*-meta/**/*.scss'),
+          path.resolve(paths.source.patterns, '*-tokens/**/*.scss'),
+          path.resolve(paths.source.patterns, '*-atoms/**/*.scss'),
+          path.resolve(paths.source.patterns, '*-molecules/**/*.scss'),
+          path.resolve(paths.source.patterns, '*-compounds/**/*.scss'),
+          path.resolve(paths.source.patterns, '*-organisms/**/*.scss'),
+        ],
+        dest: path.resolve(paths.source.scss, 'patterns/__master.scss')
+      }
     },
     'dart-sass': {
       dev: {
@@ -214,8 +211,51 @@ module.exports = function(grunt) {
         jshintrc: true
       },
       dev: [
-        path.resolve(paths.source.js, '*.js')
+        path.resolve(paths.source.js, '*.js'),
+        '!' + path.resolve(paths.source.js, 'bundle.js'),
+        path.resolve(paths.source.patterns, '**/*.js')
       ]
+    },
+    concat: {
+      dev: {
+        src: [
+          path.resolve(paths.source.js, 'index.js'),
+          path.resolve(paths.source.patterns, '**/*.js')
+        ],
+        dest: path.resolve(paths.public.js, 'bundle.js')
+      },
+      dist: {
+        src: [
+          path.resolve(paths.source.js, 'index.js'),
+          path.resolve(paths.source.patterns, '**/*.js')
+        ],
+        dest: path.resolve(paths.dist.js, 'bundle.js')
+      }
+    },
+    browserify: {
+      options: {
+        transform: ['babelify']
+      },
+      dev: {
+        files: [
+          {
+            expand: true,
+            cwd: path.resolve(paths.source.js),
+            src: ['*.js', '!index.js'],
+            dest: path.resolve(paths.public.js)
+          },
+          {
+            src: [path.resolve(paths.public.js, 'bundle.js')],
+            dest: path.resolve(paths.public.js, 'bundle.js')
+          }
+        ]
+      },
+      dist: {
+        files: [{
+          src: [path.resolve(paths.dist.js, 'bundle.js')],
+          dest: path.resolve(paths.dist.js, 'bundle.js')
+        }]
+      }
     },
     babel: {
       options: {
@@ -280,20 +320,6 @@ module.exports = function(grunt) {
     },
     gitTag: {
       packageFile: 'package.json'
-    },
-    copydeps: {
-      options: {
-        unminified: true,
-        minified: true
-      },
-      dev: {
-        pkg: 'package.json',
-        dest: path.resolve(paths.public.js, 'dependencies/')
-      },
-      dist: {
-        pkg: 'package.json',
-        dest: path.resolve(paths.dist.js, 'dependencies/')
-      }
     }
   });
 
@@ -301,55 +327,108 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
   // Register tasks
+  grunt.registerTask('default', ['dev']);
+
+  /* patternlab */
   grunt.registerTask('patternlab', 'Create design systems with atomic design', function(arg) {
 
     const done = this.async();
 
     switch(arg) {
 
-      case 'build': patternlab.build(() => {}, config.cleanPublic); return done();
+      case 'build': patternlab.build(() => {}, config.cleanPublic); break;
 
-      case 'version': patternlab.version(); return done();
+      case 'version': patternlab.version(); break;
 
-      case 'patternsonly': patternlab.patternsonly(() => {}, config.cleanPublic); return done();
+      case 'patternsonly': patternlab.patternsonly(() => {}, config.cleanPublic); break;
 
-      case 'liststarterkits': patternlab.liststarterkits(); return done();
+      case 'liststarterkits': patternlab.liststarterkits(); break;
 
-      case 'loadstarterkit': patternlab.loadstarterkit(argv.kit, argv.clean); return done();
+      case 'loadstarterkit': patternlab.loadstarterkit(argv.kit, argv.clean); break;
 
-      default: patternlab.help(); return done();
+      default: patternlab.help();
 
     }
 
+    done();
+
   });
-  grunt.registerTask('default', ['dev']);
-  grunt.registerTask('prewatch', [
-    'dart-sass:dev',
-    'postcss:dev',
-    'jshint:dev',
-    'babel:dev',
+
+  /* build:dev */
+  grunt.registerTask('build:dev', [
+    'clean:public',
+    'build:dev:scss',
+    'build:dev:js',
+    'build:dev:patternlab'
+  ]);
+  grunt.registerTask('build:dev:patternlab', [
     'patternlab:build',
-    'copydeps:dev',
-    'copy:dev',
+    'copy:dev'
+  ]);
+  grunt.registerTask('build:dev:scss', [
+    'sass_import',
+    'dart-sass:dev',
+    'postcss:dev'
+  ]);
+  grunt.registerTask('build:dev:js', [
+    'concat:dev',
+    'browserify:dev'
+  ]);
+
+  /* build:dist */
+  grunt.registerTask('build:dist', [
+    'clean:public',
+    'build:dist:scss',
+    'build:dist:js',
+    'build:dist:patternlab'
+  ]);
+  grunt.registerTask('build:dist:patternlab', [
+    'patternlab:build',
+    'copy:dist',
+    'bsReload'
+  ]);
+  grunt.registerTask('build:dist:scss', [
+    'sass_import',
+    'dart-sass:dist',
+    'postcss:dist',
+    'cssmin'
+  ]);
+  grunt.registerTask('build:dist:js', [
+    'concat:dist',
+    'browserify:dist',
+    'uglify'
+  ]);
+
+  /* dev */
+  grunt.registerTask('dev:startup', [
+    'build:dev',
     'bsReload'
   ]);
   grunt.registerTask('dev', [
+    'dev:startup',
     'browserSync',
     'watch'
   ]);
+
+  /* dist */
   grunt.registerTask('dist', [
-    'dart-sass:dist',
-    'postcss',
-    'cssmin',
-    'babel:dist',
-    'patternlab:build',
-    'copydeps:dist',
-    'uglify:dist',
-    'copy:dist'
+    'clean:public',
+    'build:dist'
   ]);
+
+  /* release */
   grunt.registerTask('release', [
     'dist',
     'git-tag'
   ]);
 
+  /* export */
+  grunt.registerTask('export', 'Exports a pattern and its assets', require('./scripts/export.js'));
+  
+    /* pull */
+  grunt.registerTask('pull', 'Pull the our Sass Framework and other dependencies into our Pattern Library', require('./scripts/pull.js'));
+
+  /* push */
+  grunt.registerTask('push', 'Push Pattern Library patterns and assets to our Style Guide Guide', require('./scripts/push.js'));
+  
 };
