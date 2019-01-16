@@ -44,6 +44,17 @@ module.exports = function( id = null ) {
   // Get atomic structure of patterns.
   const atomic = utils.atomic();
   
+  // Get directory names of atomic group.
+  const atomicGroup = Object.keys(atomic).reduce((result, group) => {
+    
+    // Determine the atomic group's folder name.
+    result[group] = atomic[group] ? `${atomic[group]}-${group}` : group;
+    
+    // Continue.
+    return result;
+    
+  }, {});
+  
   // Build list of things to push out.
   const push = [
     
@@ -63,17 +74,14 @@ module.exports = function( id = null ) {
         // Export all patterns.
         require(path.resolve(__dirname, 'export.js'))();
         
-        // Make sure  directories exist for all atomic groups.
-        Object.keys(atomic).forEach((group) => {
-          
-          // Get the directory name.
-          const dir = atomic[group] ? `${atomic[group]}-${group}` : group;
+        // Ensure a pattern directory exist for each atomic group.
+        Object.keys(atomicGroup).forEach((group) => {
           
           // Build the folder structure.
-          fs.ensureDirSync(path.resolve(this.dir, '07-user-interface', dir));
+          fs.ensureDirSync(path.resolve(this.dir, '07-user-interface', atomicGroup[group]));
           
           // Get the index file path for the directory.
-          const index = path.resolve(this.dir, '07-user-interface', dir, '01-index.md');
+          const index = path.resolve(this.dir, '07-user-interface', atomicGroup[group], '01-index.md');
           
           // Initialize a markdown file in each folder if one doesn't already exists.
           if( !fs.existsSync(index) ) {
@@ -121,14 +129,8 @@ module.exports = function( id = null ) {
         // Merge data into the the template file.
         const output = template(pattern);
         
-        // Determine the output directory.
-        const dir = atomic[group] ? `${atomic[group]}-${group}` : group;
-        
-        // Determine the output file name.
-        const file = `${name}.md`;
-        
         // Save the generated file.
-        fs.outputFileSync(path.resolve(this.dir, '07-user-interface', dir, file), output);
+        fs.outputFileSync(path.resolve(this.dir, '07-user-interface', atomicGroup[group], `${name}.md`), output);
         
       },
       after() {
@@ -144,6 +146,54 @@ module.exports = function( id = null ) {
         
         // Add a new symlink for the patterns folder in the includes folder.
         fs.symlinkSync(path.relative(path.resolve(this.dir, '_includes'), src), dest);
+        
+      }
+    },
+    
+    // [Templating Engine](https://github.com/emory-libraries/templating-engine)
+    {
+      id: 'templating-engine',
+      repo: 'https://github.com/emory-libraries/templating-engine',
+      dir: path.resolve('../templating-engine'),
+      files: [
+        {
+          src: path.resolve(config.paths.source.patterns, `${atomicGroup.tokens}/**/*.${config.patternExtension}`),
+          dest: 'src/patterns/tokens'
+        },
+        {
+          src: path.resolve(config.paths.source.patterns, `${atomicGroup.atoms}/**/*.${config.patternExtension}`),
+          dest: 'src/patterns/atoms'
+        },
+        {
+          src: path.resolve(config.paths.source.patterns, `${atomicGroup.molecules}/**/*.${config.patternExtension}`),
+          dest: 'src/patterns/molecules'
+        },
+        {
+          src: path.resolve(config.paths.source.patterns, `${atomicGroup.compounds}/**/*.${config.patternExtension}`),
+          dest: 'src/patterns/compounds'
+        },
+        {
+          src: path.resolve(config.paths.source.patterns, `${atomicGroup.organisms}/**/*.${config.patternExtension}`),
+          dest: 'src/patterns/organisms'
+        },
+        {
+          src: path.resolve(config.paths.source.patterns, `${atomicGroup.templates}/**/*.${config.patternExtension}`),
+          dest: 'src/patterns/templates'
+        }
+      ],
+      before() {
+        
+        // Ensure the pattern directory exists.
+        fs.ensureDirSync(path.resolve(this.dir, 'src/patterns'));
+        
+        // Ensure a pattern directory exists for each atomic group.
+        Object.keys(atomicGroup).forEach((group) => {
+          
+          // Build the folder structure.
+          fs.ensureDirSync(path.resolve(this.dir, `src/patterns/${group}`));
+          
+        });
+        
         
       }
     }
