@@ -20,7 +20,7 @@
   "main": "./core/lib/patternlab.js",
   "dependencies": {
     "clipboard": "^2.0.4",
-    "vue": "^2.5.21"
+    "vue": "^2.5.22"
   },
   "engines": {
     "node": ">=5.0"
@@ -28,6 +28,7 @@
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
+    "@lodder/grunt-postcss": "^1.0.6",
     "autoprefixer": "^7.1.2",
     "babelify": "^10.0.0",
     "bs-html-injector": "^3.0.3",
@@ -46,7 +47,7 @@
     "grunt-contrib-jshint": "^1.1.0",
     "grunt-contrib-uglify": "^3.3.0",
     "grunt-contrib-watch": "^1.1.0",
-    "grunt-dart-sass": "^1.0.0",
+    "grunt-dart-sass": "^1.1.1",
     "grunt-git-tag": "0.0.5",
     "grunt-includes": "^1.0.0",
     "grunt-plop": "^1.0.0",
