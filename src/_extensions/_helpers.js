@@ -37,7 +37,7 @@ const logos = glob('./src/logos/*.svg').reduce((result, logo) => {
 }, {});
 
 // Export helpers.
-module.exports = _.extend(require('handlebars-helpers'), {
+module.exports = _.extend(require('handlebars-helpers')(), {
 
   // Dynamically loads our icons by ID.
   icon( id ) {
