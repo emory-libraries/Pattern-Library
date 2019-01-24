@@ -13,6 +13,8 @@
       "js": "./src/js",
       "images": "./src/images",
       "fonts": "./src/fonts",
+      "icons": "./src/icons",
+      "logos": "./src/logos",
       "css": "./src/css/",
       "scss": "./src/scss/"
     },
@@ -25,6 +27,8 @@
       "js": "./public/js/",
       "images": "./public/images/",
       "fonts": "./public/fonts/",
+      "icons": "./public/icons/",
+      "logos": "./public/logos/",
       "css": "./public/css/",
       "scss": "./public/scss/"
     },
@@ -33,6 +37,8 @@
       "js": "./dist/<%= pkg.version %>/js/",
       "images": "./dist/<%= pkg.version %>/images/",
       "fonts": "./dist/<%= pkg.version %>/fonts/",
+      "icons": "./dist/<%= pkg.version %>/icons/",
+      "logos": "./dist/<%= pkg.version %>/logos/",
       "css": "./dist/<%= pkg.version %>/css/"
     }
   },

@@ -38,6 +38,18 @@ module.exports = function(grunt) {
           },
           {
             expand: true,
+            cwd: path.resolve(paths.source.icons),
+            src: '**/*',
+            dest: path.resolve(paths.public.icons)
+          },
+          {
+            expand: true,
+            cwd: path.resolve(paths.source.logos),
+            src: '**/*',
+            dest: path.resolve(paths.public.logos)
+          },
+          {
+            expand: true,
             cwd: path.resolve(paths.source.root),
             src: 'favicon.ico',
             dest: path.resolve(paths.public.root)
@@ -66,6 +78,18 @@ module.exports = function(grunt) {
           },
           {
             expand: true,
+            cwd: path.resolve(paths.source.icons),
+            src: '**/*',
+            dest: path.resolve(paths.dist.icons)
+          },
+          {
+            expand: true,
+            cwd: path.resolve(paths.source.logos),
+            src: '**/*',
+            dest: path.resolve(paths.dist.logos)
+          },
+          {
+            expand: true,
             cwd: path.resolve(paths.source.root),
             src: 'favicon.ico',
             dest: path.resolve(paths.dist.root)
@@ -78,6 +102,8 @@ module.exports = function(grunt) {
         files: [
           path.resolve(paths.source.fonts, '**'),
           path.resolve(paths.source.images, '**'),
+          path.resolve(paths.source.icons, '**'),
+          path.resolve(paths.source.logos, '**'),
         ],
         tasks: ['build:dev:patternlab', 'bsReload']
       },
@@ -424,11 +450,11 @@ module.exports = function(grunt) {
 
   /* export */
   grunt.registerTask('export', 'Exports a pattern and its assets', require('./scripts/export.js'));
-  
+
     /* pull */
   grunt.registerTask('pull', 'Pull the our Sass Framework and other dependencies into our Pattern Library', require('./scripts/pull.js'));
 
   /* push */
   grunt.registerTask('push', 'Push Pattern Library patterns and assets to our Style Guide Guide', require('./scripts/push.js'));
-  
+
 };
