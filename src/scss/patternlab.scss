@@ -2,7 +2,7 @@
 @import 'vends/emory-libraries';
 
 // Set variables.
-$heading-h1-size: map-deep-get($fonts-scale, 'heading.h1') * $font-size;
+// ...
 
 // Set core styles.
 .body {
@@ -36,7 +36,7 @@ h6 { @include tokens-heading('h6'); }
   // Title
   & &-title {
     @include tokens-heading('h1');
-    font-size: $heading-h1-size !important;
+    font-size: map-deep-get($fonts-scale, 'heading.h1') * $font-size !important;
   }
 
   // Description
@@ -68,6 +68,39 @@ h6 { @include tokens-heading('h6'); }
 
 }
 
+// Set pattern state styles.
+.sg-pattern-state {
+
+   $states: (
+    'specification': #708090,
+    'construction': #F2C900,
+    'review': #FFAB4A,
+    'complete': #61BD4F,
+    'reconsideration': #0079BF,
+    'deprecated': #EB5A46
+  );
+
+  @include absolute-center-contents(true);
+  padding: 1.5px 5px;
+  margin-left: $rhythm-x;
+  @include tokens-text('badge', white !important);
+  border-radius: 3px;
+  text-shadow: 0px 0px 3px rgba($color-text-dark, .4);
+
+  // States
+  @each $state, $color in $states {
+    &.#{$state} {
+      background-color: $color;
+      text-transform: uppercase !important;
+      font-size: .75em !important;
+    }
+  }
+
+  // Remove bullets.
+  &::before { content: none !important; }
+
+}
+
 // Set core styles for meta patterns.
 [id^="meta-"] {
 
@@ -88,7 +121,10 @@ h6 { @include tokens-heading('h6'); }
   // Icons
   &-icon {
     display: inline-block;
-    svg { width: 100%; }
+    svg {
+      width: 100%;
+      fill: $color-text-dark;
+    }
 
     &.-material { @include size(25px); }
     &.-socicon { @include size(22px); padding: 1.5px; }
