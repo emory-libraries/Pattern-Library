@@ -47,7 +47,7 @@
     "grunt-contrib-jshint": "^1.1.0",
     "grunt-contrib-uglify": "^3.3.0",
     "grunt-contrib-watch": "^1.1.0",
-    "grunt-dart-sass": "^1.1.1",
+    "grunt-dart-sass": "^1.1.2",
     "grunt-git-tag": "0.0.5",
     "grunt-includes": "^1.0.0",
     "grunt-plop": "^1.0.0",
