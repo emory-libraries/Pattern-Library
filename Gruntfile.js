@@ -2,11 +2,11 @@ module.exports = function(grunt) {
 
   const _ = require('lodash');
   const path = require('path');
+  const fs = require('fs-extra');
   const argv = require('minimist')(process.argv.slice(2));
 
   // Pattern Lab configuration(s)
   const config = require('./patternlab-config.json');
-  const patternlab = require('patternlab-node')(config);
   const pkg = grunt.config.init({pkg: grunt.file.readJSON('package.json')});
   const paths = grunt.config.process(config.paths);
 
@@ -360,23 +360,23 @@ module.exports = function(grunt) {
 
     const done = this.async();
 
+    const patternlab = require('patternlab-node')(config);
+
     switch(arg) {
 
-      case 'build': patternlab.build(() => {}, config.cleanPublic); break;
+      case 'build': patternlab.build(() => done(), config.cleanPublic); break;
 
-      case 'version': patternlab.version(); break;
+      case 'version': patternlab.version(); done(); break;
 
-      case 'patternsonly': patternlab.patternsonly(() => {}, config.cleanPublic); break;
+      case 'patternsonly': patternlab.patternsonly(() => done(), config.cleanPublic); break;
 
-      case 'liststarterkits': patternlab.liststarterkits(); break;
+      case 'liststarterkits': patternlab.liststarterkits(); done(); break;
 
-      case 'loadstarterkit': patternlab.loadstarterkit(argv.kit, argv.clean); break;
+      case 'loadstarterkit': patternlab.loadstarterkit(argv.kit, argv.clean); done(); break;
 
-      default: patternlab.help();
+      default: patternlab.help(); done();
 
     }
-
-    done();
 
   });
 
@@ -438,7 +438,6 @@ module.exports = function(grunt) {
 
   /* dist */
   grunt.registerTask('dist', [
-    'clean:public',
     'build:dist'
   ]);
 
