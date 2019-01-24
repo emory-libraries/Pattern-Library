@@ -1,0 +1,98 @@
+// Load our framework to make scaffolding quicker.
+@import 'vends/emory-libraries';
+
+// Set variables.
+$heading-h1-size: map-deep-get($fonts-scale, 'heading.h1') * $font-size;
+
+// Set core styles.
+.body {
+  @include tokens-text;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+h1 { @include tokens-heading('h1'); }
+h2 { @include tokens-heading('h2'); }
+h3 { @include tokens-heading('h3'); }
+h4 { @include tokens-heading('h4'); }
+h5 { @include tokens-heading('h5'); }
+h6 { @include tokens-heading('h6'); }
+
+// Set pattern styles.
+#sg-patterns {
+  @include padding-x($rhythm-x);
+}
+
+// Set pattern category styles.
+.sg-pattern-category {
+
+  // Title
+  & &-title {
+    @include tokens-heading('h1');
+    font-size: $heading-h1-size !important;
+  }
+
+  // Description
+  & &-body {
+
+  }
+
+  // Links
+  & .patternLink { color: inherit; }
+
+
+}
+
+// Set pattern extra styles.
+.sg-pattern-extra {
+  overflow: auto !important;
+
+  // Container
+  & &-inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Info & Code
+  & &-info,
+  & &-code {
+    width: 100%;
+  }
+
+}
+
+// Set core styles for meta patterns.
+[id^="meta-"] {
+
+  // Always hide code snippets...
+  .sg-pattern-extra-code { display: none !important; }
+
+}
+
+// Set styles for meta patterns.
+.pl-iconset {
+
+  // Name
+  &-name {}
+
+  // Icon Groups
+  &-icons {}
+
+  // Icons
+  &-icon {
+    display: inline-block;
+    svg { width: 100%; }
+
+    &.-material { @include size(25px); }
+    &.-socicon { @include size(22px); padding: 1.5px; }
+
+  }
+
+}
