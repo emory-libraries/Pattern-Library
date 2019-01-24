@@ -1,0 +1,45 @@
+////
+/// Use this section to build user interface components.
+/// A component typically has a consistent structure but
+/// may have one or more variations in terms of its appearance.
+/// In theory, a truce component could be written as a mixin. 
+///
+/// @group emory-libraries.patterns
+////
+
+
+// Load tokens.
+///
+/// @since 1.0.0
+@import '10-tokens/heading';
+@import '10-tokens/text';
+@import '10-tokens/icon';
+/*** INSERT NEW TOKENS HERE ***/
+
+/// Load atoms.
+///
+/// @since 1.0.0
+@import '20-atoms/button';
+@import '20-atoms/badge';
+@import '20-atoms/input';
+@import '20-atoms/table';
+@import '20-atoms/tab';
+/*** INSERT NEW ATOMS HERE ***/
+
+
+/// Loads molecules.
+///
+/// @since 1.0.0
+/*** INSERT NEW MOLECULES HERE ***/
+
+
+/// Load compounds.
+///
+/// @since 1.0.0
+/*** INSERT NEW COMPOUNDS HERE ***/
+
+
+// Loads organisms.
+///
+/// @since 1.0.0
+/*** INSERT NEW ORGANISMS HERE ***/

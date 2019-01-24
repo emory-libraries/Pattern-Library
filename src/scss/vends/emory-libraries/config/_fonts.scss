@@ -1,0 +1,157 @@
+////
+/// @group emory-libraries.config
+////
+
+
+/// Loads font families from Google Fonts.
+///
+/// @since 1.0.0 - Fonts loaded include `Cardo` and `Open Sans`
+///
+/// @requires {mixin} Brandy::google-font <https://laurenhamel.github.io/brandy/docs/#brandy-fonts-mixin-google-font>
+@include google-font(
+  'Cardo' 400 400i 700,
+  'Open Sans' 400 400i 700 700i
+);
+
+
+/// Indentifies the brand's font set. 
+/// This map uses a naming scheme compatible
+/// with Brandy's `font()` function.
+///
+/// @since 1.0.0
+///
+/// @prop {map} heading - A collection of fonts used for headings
+/// @prop {font} heading.h1 ['Cardo', serif] - The default font for H1 headings
+/// @prop {font} heading.h2 ['Cardo', serif] - The default font for H2 headings
+/// @prop {font} heading.h3 ['Open Sans', sans-serif] - The default font for H3 headings
+/// @prop {font} heading.h4 ['Cardo', serif] - The default font for H4 headings
+/// @prop {font} heading.h5 ['Cardo', serif] - The default font for H5 headings
+/// @prop {font} heading.h6 ['Open Sans', sans-serif] - The default font for H6 headings
+/// @prop {font} heading.topic ['Open Sans', sans-serif] - The default font for headings that represent topic shifts within body content
+///
+/// @prop {font} body ['Open Sans', sans-serif] - The default font for body text
+///
+/// @prop {font} blockquote ['Cardo', serif] - The default font for blockquotes
+///
+/// @prop {font} button ['Open Sans', sans-serif] - The default font for button text
+///
+/// @prop {font} headline ['Cardo', serif] - The default font for headlines
+///
+/// @prop {font} listing ['Cardo', serif] - The default font for listing items
+///
+/// @prop {font} accent ['Cardo', serif] - The default font used for accent text
+///
+/// @link https://laurenhamel.github.io/brandy/docs/#brandy-getters-function-font Brandy::font
+///
+/// @type map
+$fonts: (
+
+  'heading': (
+    'h1': ('Cardo', serif),
+    'h1-alt': ('Cardo', serif),
+    'h2': ('Cardo', serif),
+    'h3': ('Open Sans', sans-serif),
+    'h4': ('Cardo', serif),
+    'h5': ('Cardo', serif),
+    'h5-alt': ('Open Sans', sans-serif),
+    'h6': ('Open Sans', sans-serif)
+  ),
+  
+  'body': ('Open Sans', sans-serif),
+  
+  'body-alt': ('Open Sans', sans-serif),
+  
+  'blockquote': ('Cardo', serif),
+  
+  'button': ('Open Sans', sans-serif),
+  
+  'badge': ('Open Sans', sans-serif),
+  
+  'listing': ('Cardo', serif),
+  
+  'accent': ('Cardo', serif),
+  
+  'label': ('Open Sans', sans-serif),
+  
+  'data': ('Open Sans', sans-serif) 
+
+) !default;
+
+
+/// Sets the default font map used by Brandy
+/// to the chosen font set, making it available
+/// through the `font()` function.
+///
+/// @since 1.0.0
+///
+/// @requires {variable} Brandy::brandy-fonts-map <https://laurenhamel.github.io/brandy/docs/#brandy-config-variable-brandy-fonts-map>
+///
+/// @link https://laurenhamel.github.io/brandy/docs/#brandy-getters-function-font Brandy::font
+///
+/// @type map
+$brandy-fonts-map: $fonts;
+
+
+/// Sets the default font size for all text
+/// within the project. This is the font size
+/// that will used as our base for 1(r)em.
+///
+/// @since 1.0.0
+///
+/// @type number
+$font-size: 16px !default;
+
+
+/// Sets the default font size used by Brandy
+/// to the chosen font size for use with 
+/// resizing functions.
+///
+/// @since 1.0.0
+///
+/// @requires {variable} Brandy::brandy-font-size <https://laurenhamel.github.io/brandy/docs/#brandy-config-variable-brandy-font-size>
+///
+/// @type map
+$brandy-font-size: $font-size;
+
+
+/// Determines the scale for various fonts
+/// based on the default font size. This map
+/// should be identical to the `fonts` map but
+/// use ratios to represent the font's size as
+/// a percentage of our default font size.
+///
+/// @since 1.0.0
+///
+/// @type map
+$fonts-scale: (
+  
+  'heading': (
+    'h1': 4.5,        // 72px
+    'h1-alt': 3,      // 48px
+    'h2': 3,          // 48px
+    'h3': 1.5,        // 24px
+    'h4': 1.75,       // 28px
+    'h5': 1.625,      // 26px
+    'h5-alt': 1.375,  // 22px
+    'h6': .75,        // 12px
+  ),
+  
+  'body': 1,          // 16px
+  
+  'body-alt': .875,   // 14px
+  
+  'blockquote': 3,    // 48px
+  
+  'button': .6875,    // 11px
+  
+  'badge': .75,       // 12px
+  
+  'listing': 1.375,   // 22px
+  
+  'accent': 1.125,    // 18px
+  
+  'label': .625,      // 10px
+  
+  'data': .75,        // 12px
+  
+) !default;
