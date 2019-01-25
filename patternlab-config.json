@@ -16,7 +16,8 @@
       "icons": "./src/icons",
       "logos": "./src/logos",
       "css": "./src/css/",
-      "scss": "./src/scss/"
+      "scss": "./src/scss/",
+      "extensions": "./src/_extensions"
     },
     "public": {
       "root": "./public/",

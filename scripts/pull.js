@@ -51,7 +51,11 @@ module.exports = function( id = null ) {
           dest: path.resolve(config.paths.source.scss, 'vends/')
         },
         {
-          src: 'icons/svg/*.svg',
+          src: 'icons/svg/',
+          dest: path.resolve(config.paths.source.icons)
+        },
+        {
+          src: 'icons/php/',
           dest: path.resolve(config.paths.source.icons)
         }
       ],

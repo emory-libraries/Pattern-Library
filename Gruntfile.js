@@ -145,6 +145,12 @@ module.exports = function(grunt) {
           path.resolve(paths.source.patterns, '**/*.js')
         ],
         tasks: ['jshint:dev', 'build:dev:js', 'build:dev:patternlab', 'bsReload']
+      },
+      extensions: {
+        files: [
+          path.resolve(paths.source.extensions, '**/*')
+        ],
+        tasks: ['build:dev:patternlab', 'bsReload']
       }
     },
     browserSync: {

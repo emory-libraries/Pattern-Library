@@ -4,8 +4,11 @@ const glob = require('glob').sync;
 const fs = require('fs-extra');
 const path = require('path');
 
+// Load configurations.
+const config = require(path.resolve('./patternlab-config.json'));
+
 // Load all icons and logos.
-const icons = glob('./src/icons/*.svg').reduce((result, icon) => {
+const icons = glob(path.join(config.paths.source.icons, '**/*.svg')).reduce((result, icon) => {
 
   // Get the icon's filename.
   const name = path.basename(icon, path.extname(icon));
@@ -20,7 +23,7 @@ const icons = glob('./src/icons/*.svg').reduce((result, icon) => {
   return result;
 
 }, {});
-const logos = glob('./src/logos/*.svg').reduce((result, logo) => {
+const logos = glob(path.join(config.paths.source.logos, '**/*.svg')).reduce((result, logo) => {
 
   // Get the icon's filename.
   const name = path.basename(logo, path.extname(logo));
