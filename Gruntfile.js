@@ -330,7 +330,7 @@ module.exports = function(grunt) {
         ]
       },
       dev: {
-        src: path.resolve(paths.public.css, '**/*.css')
+        src: [path.resolve(paths.public.css, '**/*.css')]
       },
       dist: {
         src: path.resolve(paths.dist.css, '**/*.css')
@@ -398,6 +398,7 @@ module.exports = function(grunt) {
     'copy:dev'
   ]);
   grunt.registerTask('build:dev:scss', [
+    'css',
     'sass_import',
     'dart-sass:dev',
     'postcss:dev'
@@ -420,6 +421,7 @@ module.exports = function(grunt) {
     'bsReload'
   ]);
   grunt.registerTask('build:dist:scss', [
+    'css',
     'sass_import',
     'dart-sass:dist',
     'postcss:dist',
@@ -461,5 +463,8 @@ module.exports = function(grunt) {
 
   /* push */
   grunt.registerTask('push', 'Push Pattern Library patterns and assets to our Style Guide Guide', require('./scripts/push.js'));
+
+  /* css */
+  grunt.registerTask('css', 'Generate pattern-specific CSS for all patterns', require('./scripts/css.js'));
 
 };

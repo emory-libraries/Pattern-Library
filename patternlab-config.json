@@ -99,6 +99,7 @@
       "options": {
         "tabsToAdd": [
           "scss",
+          "css",
           "js"
         ]
       }
