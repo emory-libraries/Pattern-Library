@@ -121,10 +121,7 @@ h6 { @include tokens-heading('h6'); }
   // Icons
   &-icon {
     display: inline-block;
-    svg {
-      width: 100%;
-      fill: $color-text-dark;
-    }
+    svg { fill: $color-text-dark; }
 
     &.-material { @include size(25px); }
     &.-socicon { @include size(22px); padding: 1.5px; }
