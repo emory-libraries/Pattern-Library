@@ -100,7 +100,8 @@
         "tabsToAdd": [
           "scss",
           "css",
-          "js"
+          "js",
+          "json"
         ]
       }
     },
