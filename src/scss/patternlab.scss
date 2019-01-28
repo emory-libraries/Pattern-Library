@@ -90,6 +90,7 @@ pre {
 
   // Info
   & &-info {
+    @include tokens-text;
 
     // Descriptions
     .sg-pattern-desc {
