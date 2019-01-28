@@ -1,0 +1,23 @@
+{{#each iconsets}}
+
+  <div class="pl-iconset">
+
+    <h3 class="pl-iconset-name">{{name}}</h3>
+
+    <div class="pl-iconset-icons">
+
+      {{#each icons as |id|}}
+
+        <span class="pl-iconset-icon -{{lowercase ../name}}" title="{{id}}">
+
+          {{> tokens-icon id=id }}
+
+        </span>
+
+      {{/each}}
+
+    </div>
+
+  </div>
+
+{{/each}}
