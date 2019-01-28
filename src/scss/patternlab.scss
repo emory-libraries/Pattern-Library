@@ -2,7 +2,69 @@
 @import 'vends/emory-libraries';
 
 // Set variables.
-// ...
+$code: (
+  'background': #f5f2f0,
+  'foreground': slategray,
+  'tokens': (
+    'comment': slategray,
+    'prolog': slategray,
+    'doctype': slategray,
+    'cdata': slategray,
+    'punctuation': #999999,
+    'property': #990055,
+    'tag': #990055,
+    'boolean': #990055,
+    'number': #990055,
+    'constant': #990055,
+    'symbol': #990055,
+    'deleted': #990055,
+    'selector': #669900,
+    'attr-name': #669900,
+    'string': #669900,
+    'char': #669900,
+    'builtin': #669900,
+    'inserted': #669900,
+    'operator': #9a6e3a,
+    'entity': #9a6e3a,
+    'url': #9a6e3a,
+    'atrule': #0077aa,
+    'attr-value': #0077aa,
+    'keyword': #0077aa,
+    'function': #dd4a68,
+    'class-name': #dd4a68,
+    'regex': #ee9900,
+    'important': #ee9900,
+    'variable': #ee9900
+  ),
+  'styles': (
+    'important': (
+      'font-weight': bold
+    ),
+    'bold': (
+      'font-weight': bold
+    ),
+    'italic': (
+      'font-style': italic
+    ),
+    'operator': (
+      'background': hsla(0, 0%, 100%, .5)
+    ),
+    'entity': (
+      'background': hsla(0, 0%, 100%, .5),
+      'cursor': help
+    )
+  ),
+  'mods': (
+    '.language-css .token-string': (
+      'color': #9a6e3a,
+      'background': hsla(0, 0%, 100%, .5)
+    ),
+    '.style .token-string': (
+      'color': #9a6e3a,
+      'background': hsla(0, 0%, 100%, .5)
+    )
+  )
+);
 
 // Set core styles.
 .body {
@@ -28,8 +90,55 @@ h5 { @include tokens-heading('h5'); }
 h6 { @include tokens-heading('h6'); }
 
 pre {
-  background-color: #f5f2f0;
+  background-color: map-deep-get($code, 'background');
+  color: map-deep-get($code, 'foreground');
   padding: 10px $rhythm-x;
+}
+
+pre,
+code {
+  font-family: monospace;
+}
+
+:not(pre) code {
+  background-color: map-get($code, 'background');
+  color: map-get($code, 'foreground');
+  padding: 2.5px 5px;
+  border-radius: 3px;
+}
+
+// Set styles for code snippets.
+pre[class*="language-"],
+code[class*="language-"] {
+
+  .token {
+
+    @each $token, $color in map-get($code, 'tokens') {
+
+      &.#{$token} {
+        color: $color;
+      }
+
+    }
+
+    @each $token, $properties in map-get($code, 'styles') {
+
+      &.#{$token} {
+        @include expand-properties($properties);
+      }
+
+    }
+
+  }
+
+  @each $selector, $properties in map-get($code, 'mods') {
+
+    #{selector($selector)} {
+      @include expand-properties($properties);
+    }
+
+  }
+
 }
 
 // Set pattern styles.
@@ -90,6 +199,7 @@ pre {
 
   // Info
   & &-info {
+    @include tokens-text;
 
     // Descriptions
     .sg-pattern-desc {
@@ -161,6 +271,7 @@ pre {
 }
 
 // Set styles for meta patterns.
+
 .pl-iconset {
 
   // Name
@@ -177,6 +288,40 @@ pre {
     &.-material { @include size(25px); }
     &.-socicon { @include size(22px); padding: 1.5px; }
 
+  }
+
+}
+
+.pl-block {
+
+  $block-border: $border-width-s solid color('slate', 'light');
+
+  margin-top: $rhythm-y;
+  border: $block-border;
+  padding: 1em;
+
+  // Name and Class
+  &-name,
+  &-class {
+    display: inline-flex;
+  }
+
+  // Name
+  &-name { }
+
+  // Class
+  &-class {
+    margin-left: $rhythm-x;
+    font-size: .85rem;
+  }
+
+  // Info
+  &-info {
+    border-top: ($block-border);
+  }
+
+  @include first-child {
+    margin-top: auto;
   }
 
 }
