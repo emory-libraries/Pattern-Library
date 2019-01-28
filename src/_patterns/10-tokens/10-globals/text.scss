@@ -1,0 +1,14 @@
+.text {
+  @include tokens-text;
+
+  $types: 'body' 'body-alt' 'lead' 'blockquote' 'listing' 'accent' 'button' 'badge' 'label' 'data';
+
+  @each $type in $types {
+
+    &.-#{$type} {
+      @include tokens-text($type);
+    }
+
+  }
+
+}
