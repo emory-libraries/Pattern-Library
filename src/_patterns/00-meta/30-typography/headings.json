@@ -1,0 +1,40 @@
+{
+  "headings": [
+    {
+      "level": 1,
+      "heading": "Heading 1",
+      "alternate": false
+    },
+    {
+      "level": 1,
+      "heading": "Heading 1 Alternate",
+      "alternate": true
+    },
+    {
+      "level": 2,
+      "heading": "Heading 2"
+    },
+    {
+      "level": 3,
+      "heading": "Heading 3"
+    },
+    {
+      "level": 4,
+      "heading": "Heading 4"
+    },
+    {
+      "level": 5,
+      "heading": "Heading 5",
+      "alternate": false
+    },
+    {
+      "level": 5,
+      "heading": "Heading 5 Alternate",
+      "alternate": true
+    },
+    {
+      "level": 6,
+      "heading": "Heading 6"
+    }
+  ]
+}
