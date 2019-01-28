@@ -4,7 +4,7 @@ state: construction
 
 ---
 
-# Getting Started
+## Getting Started
 
 Insert a sentence or two identifying what the **{{lowerCase (unslugify pattern)}}** pattern is and what purpose it serves.
 
@@ -15,17 +15,17 @@ grunt export:{{atomic}}-{{name}}
 ```
 
 
-## Description
+### Description
 
 Provide a detailed description about the **{{lowerCase (unslugify pattern)}}** pattern. This should include a short summary of how the pattern works; what options or configurations are available to further customize the pattern based on context, if any; and/or what state changes the pattern possesses, if any. This description may include use-case scenarios for different contexts and other information that's deemed helpful for other developers.
 
 
-## Best Practices
+### Best Practices
 
 Optionally, create a bulleted list of best practices for how to properly use this pattern in production and/or integrate this pattern within other user interface components.
 
 
-### Schema
+## Schema
 
 Optionally, build a table to identify any pattern schematics that are pertinent for developers to be aware of. A sample schema table is given below.
 
