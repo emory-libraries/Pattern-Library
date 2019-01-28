@@ -18,6 +18,8 @@ a {
   box-sizing: border-box;
 }
 
+svg { fill: $color-text-dark; }
+
 h1 { @include tokens-heading('h1'); }
 h2 { @include tokens-heading('h2'); }
 h3 { @include tokens-heading('h3'); }
@@ -25,9 +27,30 @@ h4 { @include tokens-heading('h4'); }
 h5 { @include tokens-heading('h5'); }
 h6 { @include tokens-heading('h6'); }
 
+pre {
+  background-color: #f5f2f0;
+  padding: 10px $rhythm-x;
+}
+
 // Set pattern styles.
 #sg-patterns {
   @include padding-x($rhythm-x);
+}
+
+// Set pattern styles.
+.sg-pattern {
+
+  // Head
+  & &-head {}
+
+  // Title
+  & &-title {
+    @include tokens-heading('h2', $important: true);
+  }
+
+  // Links
+  & .patternLink { color: inherit; }
+
 }
 
 // Set pattern category styles.
@@ -35,8 +58,7 @@ h6 { @include tokens-heading('h6'); }
 
   // Title
   & &-title {
-    @include tokens-heading('h1');
-    font-size: map-deep-get($fonts-scale, 'heading.h1') * $font-size !important;
+    @include tokens-heading('h1', $important: true);
   }
 
   // Description
@@ -66,6 +88,34 @@ h6 { @include tokens-heading('h6'); }
     width: 100%;
   }
 
+  // Info
+  & &-info {
+
+    // Descriptions
+    .sg-pattern-desc {
+
+      // Tables within Descriptions
+      table {
+
+        $table-border: $border-width-s solid color('slate');
+
+        @include atoms-table;
+        border-collapse: collapse;
+        border: $table-border;
+        width: 100%;
+
+        th, td { padding: 10px $rhythm-x; }
+
+        tr { border-bottom: $table-border; }
+
+        thead { background-color: color('slate', 'light'); }
+
+      }
+
+    }
+
+  }
+
 }
 
 // Set pattern state styles.
@@ -86,13 +136,14 @@ h6 { @include tokens-heading('h6'); }
   @include tokens-text('badge', white !important);
   border-radius: 3px;
   text-shadow: 0px 0px 3px rgba($color-text-dark, .4);
+  font-weight: 500 !important;
 
   // States
   @each $state, $color in $states {
     &.#{$state} {
       background-color: $color;
       text-transform: uppercase !important;
-      font-size: .75em !important;
+      font-size: .75rem !important;
     }
   }
 
