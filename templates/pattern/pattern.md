@@ -11,7 +11,7 @@ Insert a sentence or two identifying what the **{{lowerCase (unslugify pattern)}
 ###### EXPORT VIA GRUNT
 
 ```
-grunt export:{{atomic}}-{{name}}
+grunt export:{{group}}-{{name}}
 ```
 
 
