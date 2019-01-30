@@ -82,13 +82,16 @@ module.exports = (plop) => {
   plop.setActionType('mkdir', (answers, config, plop) => {
 
     // Get the path.
-    const path = plop.renderString(config.path, answers);
+    const target = plop.renderString(config.path, answers);
 
     // Make the directory.
-    fs.mkdirSync(path);
+    fs.mkdirSync(target);
+
+    // Add a .gitkeep file to the directory.
+    fs.writeFileSync(path.join(target, '.gitkeep'), '');
 
     // Return the new path.
-    return path;
+    return target;
 
   });
 
@@ -191,12 +194,12 @@ module.exports = (plop) => {
         name: 'subgroup',
         message: "Does the pattern belong to a pattern group?",
         choices( answers ) {
-          
+
           // Initialize choices.
           const choices = ['none'];
 
           // Extract pattern groups.
-          const groups = _.map(utils.groups(answers.group), (number, name) => { 
+          const groups = _.map(utils.groups(answers.group), (number, name) => {
             return number ? `${number}-${name}` : name;
           });
 
@@ -248,6 +251,9 @@ module.exports = (plop) => {
 
       // Determine the pattern's name.
       data.name = plop.renderString('{{prefix}}{{pattern}}', data);
+
+      // Determine the pattern's ID.
+      data.id = plop.renderString('{{group}}-{{pattern}}', data).replace('~', '-');
 
       // Initialize actions.
       const actions = [];
