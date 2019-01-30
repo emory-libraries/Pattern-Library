@@ -4,15 +4,34 @@
 
     <h3 class="pl-iconset-name">{{name}}</h3>
 
-    <div class="pl-iconset-icons">
+    <div class="pl-iconset-icons pl-grid" style="--columns-s: 2; --columns-m: 3; --columns-l: 4;">
 
-      {{#each icons as |id|}}
+      {{#each icons}}
 
-        <span class="pl-iconset-icon -{{lowercase ../name}}" title="{{id}}">
+        <div class="pl-grid-item ">
 
-          {{> tokens-icon id=id }}
+          {{#if name}}<strong class="pl-grid-item-id">{{name}}</strong>{{/if}}
 
-        </span>
+          <div class="pl-iconset-icon -{{downcase ../name}} pl-grid-item-info" title="{{id}}">
+
+            {{> tokens-icon }}
+
+          </div>
+
+
+          {{#if meta}}{{#each meta}}
+
+            <div class="pl-grid-item-meta">
+
+                <strong class="pl-grid-item-meta-label">{{@key}}</strong>
+
+                <span class="pl-grid-item-meta-data copy" data-clipboard-text="{{.}}">{{.}}</span>
+
+            </div>
+
+          {{/each}}{{/if}}
+
+        </div>
 
       {{/each}}
 
