@@ -113,6 +113,49 @@ code {
   border-radius: 3px;
 }
 
+// Set clipboard styles.
+.copy {
+  cursor: copy;
+}
+
+// Set tooltip styles.
+.tippy-popper {
+
+  $tippy-background: #333333;
+  $tippy-foreground: color('white');
+
+  @include tokens-text( $color: $tippy-foreground );
+
+  // Tooltip
+  .tippy-tooltip {
+    background-color: $tippy-background;
+  }
+
+  // Arrow
+  .tippy-arrow {
+    border-botton-color: $tippy-background;
+  }
+
+  // Content
+  .tippy-content {
+    font-size: .8rem !important;
+  }
+
+  // UI Colors
+  @each $state in ('success', 'caution', 'error') {
+
+    &.-#{$state} .tippy-tooltip {
+      background-color: color('ui', $state);
+    }
+
+    &.-#{$state} .tippy-arrow {
+      border-bottom-color: color('ui', $state);
+    }
+
+  }
+
+}
+
 // Set styles for code snippets.
 pre[class*="language-"],
 code[class*="language-"] {
@@ -354,6 +397,7 @@ code[class*="language-"] {
     flex-direction: column;
     padding: 10px;
     border: $pl-border;
+    align-items: center;
 
     // ID
     &-id {
@@ -366,6 +410,7 @@ code[class*="language-"] {
     // Info
     &-info {
       @include margin-y(10px);
+      width: 100%;
 
       &:first-child {
         margin-top: 0;
@@ -377,7 +422,7 @@ code[class*="language-"] {
     &-meta {
       display: grid;
       grid-template-areas: "label data";
-      grid-template-columns: max-content minmax(min-content, auto);
+      grid-template-columns: max-content minmax(0, auto);
       grid-gap: 10px;
       @include tokens-text;
       font-size: .8rem !important;
