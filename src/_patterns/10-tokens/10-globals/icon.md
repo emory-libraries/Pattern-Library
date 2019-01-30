@@ -31,4 +31,4 @@ The icon token allows you to directly include any icon from our icon library wit
 
 | Name    | Type      | Description                              | Value(s)  | Default   |
 |---------|-----------|------------------------------------------|-----------|-----------|
-| `id`    | `String`  | The ID of a icon within our icon library |           |           |
+| id      | `String`  | The ID of a icon within our icon library |           |           |
