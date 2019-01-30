@@ -33,3 +33,24 @@ Optionally, build a table to identify any pattern schematics that are pertinent 
 |-------|-----------|-------------|-----------|-----------|
 | label | `String`  | Some text.  |           |           |
 | href  | `String`  | A path.     |           |           |
+
+## Classes
+
+Optionally, build a table to identify any pattern classes that are pertinent for developers to be aware of. For clarity, it could be useful to group classes into different tables based on their purpose, such as *Style Variations* or *State Changes*. Some sample class tables are given below.
+
+### Variations
+
+Classes used to indicate style variations are always prefixed with `-`. These classes tend to change the way the pattern appears.
+
+| Class     | Description                                     |
+|-----------|-------------------------------------------------|
+| `-light`  | Uses a light theme.                             |
+| `-dark`   | Uses a dark theme.                              |
+
+### State
+
+Classes used for state changes are always prefixed with `is-` or `has-`. Classes that use the `is-` prefix are typically used to temporarily alter the pattern's appearance while classes that use the `has-` prefix tend to indicate some structural difference from the pattern's usual state.
+
+| Class       |                                                 |
+|-------------|-------------------------------------------------|
+| `is-active` | Indicates that it's **active**.                 |
