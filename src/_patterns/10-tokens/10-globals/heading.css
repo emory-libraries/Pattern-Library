@@ -43,8 +43,8 @@
   font-size: 28px;
   font-weight: normal;
   font-style: normal;
-  line-height: normal;
-  letter-spacing: 1.5;
+  line-height: 1.5;
+  letter-spacing: normal;
   text-transform: none;
   color: #605858;
 }
@@ -63,8 +63,8 @@
   font-size: 22px;
   font-weight: normal;
   font-style: normal;
-  line-height: normal;
-  letter-spacing: 1.6364;
+  line-height: 1.6364;
+  letter-spacing: normal;
   text-transform: none;
   color: #605858;
 }
@@ -73,8 +73,8 @@
   font-size: 12px;
   font-weight: bold;
   font-style: normal;
-  line-height: normal;
-  letter-spacing: 1.6667;
-  text-transform: none;
+  line-height: 1.6667;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   color: #605858;
 }
