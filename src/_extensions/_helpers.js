@@ -11,7 +11,7 @@ const config = require(path.resolve('./patternlab-config.json'));
 const icons = glob(path.join(config.paths.source.icons, '**/*.svg')).reduce((result, icon) => {
 
   // Get the icon's filename.
-  const name = path.basename(icon, path.extname(icon));
+  const name = path.basename(icon, path.extname(icon)).toLowerCase();
 
   // Get the icon's contents.
   const svg = fs.readFileSync(icon, 'utf8');
@@ -26,7 +26,7 @@ const icons = glob(path.join(config.paths.source.icons, '**/*.svg')).reduce((res
 const logos = glob(path.join(config.paths.source.logos, '**/*.svg')).reduce((result, logo) => {
 
   // Get the icon's filename.
-  const name = path.basename(logo, path.extname(logo));
+  const name = path.basename(logo, path.extname(logo)).toLowerCase();
 
   // Get the icon's contents.
   const svg = fs.readFileSync(logo, 'utf8');
@@ -46,7 +46,7 @@ module.exports = _.extend(require('handlebars-helpers')(), {
   icon( id ) {
 
     // Find our target icon file.
-    const icon = Object.keys(icons).filter((icon) => icon.indexOf(id) === 0)[0];
+    const icon = Object.keys(icons).filter((icon) => icon.indexOf(id.toLowerCase()) === 0)[0];
 
     // Return the icon.
     return icons[icon];
@@ -57,7 +57,7 @@ module.exports = _.extend(require('handlebars-helpers')(), {
   logo( id ) {
 
     // Find our target logo file.
-    const logo = Object.keys(logos).filter((logo) => logo.indexOf(id) === 0)[0];
+    const logo = Object.keys(logos).filter((logo) => logo.indexOf(id.toLowerCase()) === 0)[0];
 
     // Return the icon.
     return logos[logo];
