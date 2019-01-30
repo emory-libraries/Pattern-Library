@@ -252,6 +252,9 @@ module.exports = (plop) => {
       // Determine the pattern's name.
       data.name = plop.renderString('{{prefix}}{{pattern}}', data);
 
+      // Determine the pattern's ID.
+      data.id = plop.renderString('{{group}}-{{pattern}}', data).replace('~', '-');
+
       // Initialize actions.
       const actions = [];
 
