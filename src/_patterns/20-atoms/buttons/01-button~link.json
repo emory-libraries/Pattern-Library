@@ -1,0 +1,8 @@
+{
+  "href": "http://example.com",
+  "label": "Let's Go",
+  "icon": {
+    "id": "material-arrow_right",
+    "position": "right"
+  }
+}

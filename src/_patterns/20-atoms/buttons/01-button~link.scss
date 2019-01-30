@@ -1,0 +1,20 @@
+.button {
+  @include atoms-button;
+
+  $states: 'success' 'caution' 'error';
+
+  @each $state in $states {
+
+    &.-#{$state} {
+      @include atoms-button((
+        'color': (
+          'normal': color('ui', $state),
+          'hover': shade(color('ui', $state), 25%),
+          'hollow': color('ui', $state, 'light')
+        )
+      ));
+    }
+
+  }
+
+}
