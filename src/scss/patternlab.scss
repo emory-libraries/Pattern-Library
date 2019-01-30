@@ -65,6 +65,12 @@ $code: (
     )
   )
 );
+$breakpoints: (
+  's': max-width 599px,
+  'm': 900px 600px,
+  'l': min-width 901px
+);
+$pl-border: $border-width-s solid color('slate', 'light');
 
 // Set core styles.
 .body {
@@ -293,11 +299,8 @@ code[class*="language-"] {
 }
 
 .pl-block {
-
-  $block-border: $border-width-s solid color('slate', 'light');
-
   margin-top: $rhythm-y;
-  border: $block-border;
+  border: $pl-border;
   padding: 1em;
 
   // Name and Class
@@ -317,11 +320,84 @@ code[class*="language-"] {
 
   // Info
   &-info {
-    border-top: ($block-border);
+    border-top: ($pl-border);
   }
 
   @include first-child {
     margin-top: auto;
+  }
+
+}
+
+.pl-grid {
+
+  --columns-s: 1;
+  --columns-m: 2;
+  --columns-l: 3;
+  --gap: 1rem;
+
+  display: grid;
+  grid-gap: var(--gap);
+  grid-auto-rows: min-content;
+  grid-template-columns: repeat(var(--columns-s), 1fr);
+
+  @include breakpoint( map-get($breakpoints, 'm') ) {
+    grid-template-columns: repeat(var(--columns-m), 1fr);
+  };
+  @include breakpoint( map-get($breakpoints, 'l') ) {
+    grid-template-columns: repeat(var(--columns-l), 1fr);
+  };
+
+  // Item
+  &-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: $pl-border;
+
+    // ID
+    &-id {
+      @include tokens-heading('h5-alt');
+      text-align: center;
+      text-transform: uppercase !important;
+      font-size: 1rem !important;
+    }
+
+    // Info
+    &-info {
+      @include margin-y(10px);
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+    }
+
+    // Meta
+    &-meta {
+      display: grid;
+      grid-template-areas: "label data";
+      grid-template-columns: max-content minmax(min-content, auto);
+      grid-gap: 10px;
+      @include tokens-text;
+      font-size: .8rem !important;
+      justify-content: center;
+      margin-top: auto;
+
+      // Label
+      &-label {
+        grid-area: label;
+        text-transform: uppercase;
+        font-weight: bold !important;
+      }
+
+      // Data
+      &-data {
+        grid-area: data;
+      }
+
+    }
+
   }
 
 }
