@@ -8,7 +8,7 @@
 
       <div class="pl-grid-item-info" title="{{id}}">
 
-        {{> tokens-logo }}
+        {{> tokens-logo hyperlink=false }}
 
       </div>
 
@@ -19,7 +19,7 @@
 
             <strong class="pl-grid-item-meta-label">{{@key}}</strong>
 
-            <span class="pl-grid-item-meta-data copy">{{.}}</span>
+            <span class="pl-grid-item-meta-data copy" data-clipboard-text="{{.}}">{{.}}</span>
 
         </div>
 
