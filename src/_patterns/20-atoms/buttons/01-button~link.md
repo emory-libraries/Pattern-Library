@@ -17,7 +17,7 @@ grunt export:atoms-button-link
 
 ### Description
 
-The button link atom allows you to include a hyperlinked button within another pattern. Use this button to redirect users to another page. Optionally, buttons can include an icon.
+The button link atom allows you to include a hyperlinked button within another pattern. Use this button to redirect users to another page. Optionally, link buttons can include an icon.
 
 
 ### Best Practices
@@ -29,13 +29,18 @@ The button link atom allows you to include a hyperlinked button within another p
 
 ## Schema
 
-| Name            | Type      | Description                                               | Value(s)          | Default   |
-|-----------------|-----------|-----------------------------------------------------------|-------------------|-----------|
-| label           | `String`  | The text to be displayed on the button.                   |                   |           |
-| href            | `String`  | A path or URL that the button links to.                   |                   |           |
-| icon            | `Object`  | Optional data to about an icon to be used.                |                   |           |
-| icon.id         | `String`  | The ID of the icon to be displayed.                       |                   |           |
-| icon.position   | `String`  | Where to display the icon relative to the button's text.  | `left` or `right` | `left`    |
+| Name            | Type      | Description                                               | Value(s)                                | Default   |
+|-----------------|-----------|-----------------------------------------------------------|-----------------------------------------|-----------|
+| label           | `String`  | The text to be displayed on the button.                   |                                         |           |
+| href            | `String`  | A path or URL that the button links to.                   |                                         |           |
+| target          | `String`  | Indicates where the hyperlink should be opened.           | `_self`, `_blank`, `_parent`, or `_top` | `_self`   |
+| icon            | `Object`  | Optional data to about an icon to be used.                |                                         |           |
+| icon.id         | `String`  | The ID of the icon to be displayed.                       |                                         |           |
+| hollow          | `Boolean` | Whether the button should use its hollow style.           | `true` or `false`                       | `false`   |
+| active          | `Boolean` | Whether the button state is **active**.                   | `true` or `false`                       | `false`   |
+| hover           | `Boolean` | Whether the button state is **hovered** or **focused**.   | `true` or `false`                       | `false`   |
+| focus           | `Boolean` | Whether the button state is **hovered** or **focused**.   | `true` or `false`                       | `false`   |
+| disabled        | `Boolean` | Whether the button state is **disabled**.                 | `true` or `false`                       | `false`   |
 
 
 ## Classes
