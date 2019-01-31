@@ -1,7 +1,15 @@
 // Load dependencies.
 const Clipboard = require('clipboard');
 const Tippy = require('tippy.js');
-const $ = require('jquery');
+const jQuery = require('jquery');
+const $ = jQuery;
+
+// Export globals.
+global.jQuery = jQuery;
+global.$ = $;
+
+// Load libraries.
+require('velocity-animate');
 
 // Initialize Clipboard.
 new Clipboard('.copy');
@@ -42,4 +50,9 @@ $('.copy').each((i, copier) => {
 
   });
 
+});
+
+// Initialize a Vue instance.
+const PatternLibrary = new Vue({
+  el: $('.sg-main')[0]
 });
