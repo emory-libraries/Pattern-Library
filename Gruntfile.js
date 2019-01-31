@@ -283,6 +283,11 @@ module.exports = function(grunt) {
         ]
       },
       dist: {
+        options: {
+          transform: [['envify', {
+            NODE_ENV: 'production'
+          }]]
+        },
         files: [{
           src: [path.resolve(paths.dist.js, 'bundle.js')],
           dest: path.resolve(paths.dist.js, 'bundle.js')
