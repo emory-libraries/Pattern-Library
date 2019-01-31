@@ -52,6 +52,29 @@ $('.copy').each((i, copier) => {
 
 });
 
+// Create sample method for Button component.
+Components.extend('button', {
+
+  methods: {
+
+    click() {
+
+      // Shake the button.
+      $(this.$el)
+        .velocity({rotateZ: -5}, {duration: 100})
+        .velocity({rotateZ: 5}, {duration: 100})
+        .velocity({rotateZ: -5}, {duration: 100})
+        .velocity({rotateZ: 5}, {duration: 100})
+        .velocity({rotateZ: -5}, {duration: 100})
+        .velocity({rotateZ: 5}, {duration: 100})
+        .velocity({rotateZ: 0}, {duration: 100});
+
+    }
+
+  }
+
+});
+
 // Initialize a Vue instance.
 const PatternLibrary = new Vue({
   el: $('.sg-main')[0]
