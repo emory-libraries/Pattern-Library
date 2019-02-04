@@ -27,16 +27,18 @@ The librarian navigation button atom can be used to include an *Ask the Libraria
 
 ## Schema
 
-| Name            | Type      | Description                                               | Value(s)                                | Default   |
-|-----------------|-----------|-----------------------------------------------------------|-----------------------------------------|-----------|
-| label           | `String`  | The text to be displayed on the button.                   |                                         |           |
-| href            | `String`  | A path or URL that the button links to.                   |                                         |           |
-| target          | `String`  | Indicates where the hyperlink should be opened.           | `_self`, `_blank`, `_parent`, or `_top` | `_self`   |
-| icon            | `String`  | The optional ID of an icon to be displayed.               |                                         |           |
-| active          | `Boolean` | Whether the button state is **active**.                   | `true` or `false`                       | `false`   |
-| hover           | `Boolean` | Whether the button state is **hovered** or **focused**.   | `true` or `false`                       | `false`   |
-| focus           | `Boolean` | Whether the button state is **hovered** or **focused**.   | `true` or `false`                       | `false`   |
-| disabled        | `Boolean` | Whether the button state is **disabled**.                 | `true` or `false`                       | `false`   |
+| Name            | Type      | Description                                               | Value(s)                                | Default                 |
+|-----------------|-----------|-----------------------------------------------------------|-----------------------------------------|-------------------------|
+| label           | `String`  | The text to be displayed on the button.                   |                                         |                         |
+| id              | `String`  | The ID of the button.                                     |                                         | `nav-button--{{label}}` |
+| for             | `String`  | The ID of the target toggle that the button controls.     |                                         | `nav-menu--{{label}}`   |
+| href            | `String`  | A path or URL that the button links to.                   |                                         |                         |
+| target          | `String`  | Indicates where the hyperlink should be opened.           | `_self`, `_blank`, `_parent`, or `_top` | `_self`                 |
+| icon            | `String`  | The optional ID of an icon to be displayed.               |                                         |                         |
+| active          | `Boolean` | Whether the button state is **active**.                   | `true` or `false`                       | `false`                 |
+| hover           | `Boolean` | Whether the button state is **hovered** or **focused**.   | `true` or `false`                       | `false`                 |
+| focus           | `Boolean` | Whether the button state is **hovered** or **focused**.   | `true` or `false`                       | `false`                 |
+| disabled        | `Boolean` | Whether the button state is **disabled**.                 | `true` or `false`                       | `false`                 |
 
 
 ## Classes

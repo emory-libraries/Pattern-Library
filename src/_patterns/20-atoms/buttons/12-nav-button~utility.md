@@ -30,13 +30,15 @@ The utility navigation button atom can be used to include a button within our si
 
 ## Schema
 
-| Name            | Type      | Description                                               | Value(s)                                | Default   |
-|-----------------|-----------|-----------------------------------------------------------|-----------------------------------------|-----------|
-| label           | `String`  | The text to be displayed on the button.                   |                                         |           |
-| active          | `Boolean` | Whether the button state is **active**.                   | `true` or `false`                       | `false`   |
-| hover           | `Boolean` | Whether the button state is **hovered** or **focused**.   | `true` or `false`                       | `false`   |
-| focus           | `Boolean` | Whether the button state is **hovered** or **focused**.   | `true` or `false`                       | `false`   |
-| disabled        | `Boolean` | Whether the button state is **disabled**.                 | `true` or `false`                       | `false`   |
+| Name            | Type      | Description                                               | Value(s)                                | Default                 |
+|-----------------|-----------|-----------------------------------------------------------|-----------------------------------------|-------------------------|
+| label           | `String`  | The text to be displayed on the button.                   |                                         |                         |
+| id              | `String`  | The ID of the button.                                     |                                         | `nav-button--{{label}}` |
+| for             | `String`  | The ID of the target toggle that the button controls.     |                                         | `nav-menu--{{label}}`   |
+| active          | `Boolean` | Whether the button state is **active**.                   | `true` or `false`                       | `false`                 |
+| hover           | `Boolean` | Whether the button state is **hovered** or **focused**.   | `true` or `false`                       | `false`                 |
+| focus           | `Boolean` | Whether the button state is **hovered** or **focused**.   | `true` or `false`                       | `false`                 |
+| disabled        | `Boolean` | Whether the button state is **disabled**.                 | `true` or `false`                       | `false`                 |
 
 
 ## Classes
