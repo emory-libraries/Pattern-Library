@@ -153,11 +153,22 @@ module.exports = function(grunt) {
         tasks: ['build:dev:patternlab', 'bsReload']
       }
     },
+    php: {
+      server: {
+        options: {
+          hostname: '127.0.0.1',
+          port: 9000,
+          base: path.resolve(paths.public.root),
+          keepalive: false,
+          open: false
+        }
+      }
+    },
     browserSync: {
-      dev: {
+      server: {
         options: {
           open: 'local',
-          server: path.resolve(paths.public.root),
+          proxy: '<%= php.server.options.hostname %>:<%= php.server.options.port %>',
           watchTask: true,
           watchOptions: {
             ignoreInitial: true,
@@ -283,6 +294,11 @@ module.exports = function(grunt) {
         ]
       },
       dist: {
+        options: {
+          transform: [['envify', {
+            NODE_ENV: 'production'
+          }]]
+        },
         files: [{
           src: [path.resolve(paths.dist.js, 'bundle.js')],
           dest: path.resolve(paths.dist.js, 'bundle.js')
@@ -433,6 +449,12 @@ module.exports = function(grunt) {
     'uglify'
   ]);
 
+  /* serve */
+  grunt.registerTask('serve', [
+    'php:server',
+    'browserSync:server'
+  ]);
+
   /* dev */
   grunt.registerTask('dev:startup', [
     'build:dev',
@@ -440,7 +462,7 @@ module.exports = function(grunt) {
   ]);
   grunt.registerTask('dev', [
     'dev:startup',
-    'browserSync',
+    'serve',
     'watch'
   ]);
 
