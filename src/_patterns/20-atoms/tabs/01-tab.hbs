@@ -1,0 +1,23 @@
+<eul-tab inline-template>
+
+  <button @click="click"
+          @focus.native="isFocus = true"
+          @blur.native="isFocus = false"
+          @mouseover.native="isHover = true"
+          @mouseleave.native="isHover = false"
+          class="tab"
+          :is-disabled="{{default disabled false}}"
+          :is-active="{{default active false}}"
+          :is-hover="{{default hover false}}"
+          :is-focus="{{default focus false}}"
+          :class="{
+            'is-disabled': isDisabled,
+            'is-active': isActive,
+            'is-hover': isHover,
+            'is-focus': isFocus
+          }"
+          :disabled="isDisabled"class="tab">
+    {{label}}
+  </button>
+
+</eul-tab>

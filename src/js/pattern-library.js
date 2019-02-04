@@ -75,6 +75,61 @@ Components.extend('button', {
 
 });
 
+// Create sample method for Tab component.
+Components.extend('tab', {
+
+  data() {
+    return {
+      showing: false,
+      tooltip: null,
+      timeout: 2000
+    };
+  },
+
+  methods: {
+
+    click() {
+
+      // See if the tooltip is showing.
+      if( this.showing === false ) {
+
+        // Show the tooltip.
+        this.tooltip.show();
+
+        // Set the flag.
+        this.showing = true;
+
+        // Automatically hide the tooltip.
+        setTimeout(() => {
+
+          // Hide the tooltip.
+          this.tooltip.hide();
+
+          // Reset the flag.
+          this.showing = false;
+
+        }, this.timeout);
+
+      }
+
+    }
+
+  },
+
+  mounted() {
+
+    // Create a tooltip.
+    this.tooltip = Tippy.one(this.$el, {
+      content: 'This would do something when clicked...',
+      placement: 'right',
+      arrow: true,
+      trigger: 'manual'
+    });
+
+  }
+
+});
+
 // Initialize a Vue instance.
 const PatternLibrary = new Vue({
   el: $('.sg-main')[0]
