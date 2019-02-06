@@ -1,7 +1,7 @@
 // Register a Button component.
 Components.register('button', {
 
-  props: [],
+  props: {},
 
   data() {
     return {
