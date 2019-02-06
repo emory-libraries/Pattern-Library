@@ -64,14 +64,115 @@ const Components = {
   // Capture registered components.
   _components: {},
 
+  // Initializes utility methods.
+  _utils: {
+
+    // Extend a function by merging old and new functionality.
+    extendFunc( oldFunc, newFunc ) {
+
+      return function() {
+
+        oldFunc.apply(this);
+        newFunc.apply(this);
+
+      };
+
+    },
+
+    // Extend component properties.
+    extendProps( oldProps, newProps ) {
+
+      // Handle properties when new properties are in the form of an array.
+      if( _.isArray(newProps) && _.isObject(oldProps) ) {
+
+        // Just add the old properties onto our new properties.
+        _.forIn(oldProps, (conf, prop) => newProps[prop] = conf);
+
+      }
+
+      // Otherwise, simply merge the properties.
+      return _.merge({}, oldProps, newProps);
+
+    }
+
+  },
+
+  // Define a base definition for all components to build off of.
+  _base: {
+
+    props: {
+      defaults: {
+        type: Object,
+        default() {
+          return {};
+        }
+      }
+    },
+
+    methods: {},
+
+    filters: {},
+
+    created() {
+
+      // Initialize data using any defaults given.
+      if( this.defaults ) _.forIn(this.defaults, (value, key) => {
+
+        this.$set(this, key, value);
+
+      });
+
+    }
+
+  },
+
+  // Merge our base definition with other definitions.
+  _merge( source, ...defs ) {
+
+    // Use the base definition as our template.
+    let result = _.merge({}, source);
+
+    // Merge all other objects into the template.
+    _.each(defs, (def) => {
+
+      // Always extend functions to maintain their previous functionality.
+      _.forIn(def, (value, key) => {
+
+        // Extend functions.
+        if( _.isFunction(value) && _.isFunction(result[key]) ) {
+
+          // Rewrite the function.
+          def[key] = this._utils.extendFunc(result[key], value);
+
+        }
+
+      });
+
+      // Extend properties.
+      if( def.props && result.props ) {
+
+        def.props = this._utils.extendProps(result.props, def.props);
+
+      }
+
+      // Merge the object into the template.
+      result = _.merge({}, result, def);
+
+    });
+
+    // Return the merged object.
+    return result;
+
+  },
+
   // Register a component.
-  register( componentName, componentDef = {} ) {
+  register( componentName, componentDef = {}, extend = false ) {
 
     // Save the definition.
     this._definitions[this._id(componentName)] = componentDef;
 
     // Register the component.
-    this._components[this._id(componentName)] = Vue.component(this._name(componentName), componentDef);
+    this._components[this._id(componentName)] = Vue.component(this._name(componentName), extend ? componentDef : this._merge(this._base, componentDef));
 
     // Make methods chainable.
     return this;
@@ -102,7 +203,7 @@ const Components = {
     if( !this._components[this._id(componentName)] ) this.register(componentName, componentDef);
 
     // Otherwise, extend the previously registered component.
-    else this.register(componentName, Vue.options.components[this._name(componentName)].extend(componentDef));
+    else this.register(componentName, Vue.options.components[this._name(componentName)].extend(componentDef), true);
 
     // Make methods chainable.
     return this;
