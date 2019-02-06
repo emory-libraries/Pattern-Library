@@ -130,6 +130,9 @@ Components.extend('tab', {
 
 });
 
+// Prevent errors by forcing Vue to ignore Pattern Lab data.
+$('.sg-pattern-data').attr('v-pre', true);
+
 // Initialize a Vue instance.
 const PatternLibrary = new Vue({
   el: $('.sg-main')[0]
