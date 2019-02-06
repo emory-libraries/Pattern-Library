@@ -1,7 +1,7 @@
 // Register a Tab component.
 Components.register('tab', {
 
-  props: [],
+  props: {},
 
   data() {
     return {
