@@ -446,3 +446,10 @@ code[class*="language-"] {
   }
 
 }
+
+.pl-callout {
+  @include tokens-text;
+  padding: $rhythm-x;
+  margin-bottom: 1em;
+  border: $pl-border;
+}
