@@ -32,7 +32,7 @@ The button action atom allows you to include an interactive button within anothe
 | Name            | Type      | Description                                               | Value(s)                                | Default   |
 |-----------------|-----------|-----------------------------------------------------------|-----------------------------------------|-----------|
 | label           | `String`  | The text to be displayed on the button.                   |                                         |           |
-| icon            | `Object`  | Optional data to about an icon to be used.                |                                         |           |
+| icon            | `Object`  | Optional data about an icon to be used.                   |                                         |           |
 | icon.id         | `String`  | The ID of the icon to be displayed.                       |                                         |           |
 | icon.position   | `String`  | Where to display the icon relative to the button's text.  | `left` or `right`                       | `left`    |
 | hollow          | `Boolean` | Whether the button should use its hollow style.           | `true` or `false`                       | `false`   |
