@@ -130,6 +130,28 @@ Components.extend('tab', {
 
 });
 
+// Create sample method for Subnav-Viewall component.
+Components.extend('subnav-viewall', {
+
+  mounted() {
+
+    // Insert a sample overflow to help demonstrate how the component works.
+    [
+      $('<input>', {
+        type: 'checkbox',
+        id: 'pl-overflow-example',
+        class: 'subnav-button-overflow-toggle'
+      }),
+      $('<div>', {
+        class: 'subnav-button-overflow pl-callout',
+        html: 'This would toggle some overflown content...'
+      })
+    ].forEach((el) => el.insertBefore(this.$el));
+
+  }
+
+});
+
 // Prevent errors by forcing Vue to ignore Pattern Lab data.
 $('.sg-pattern-data').attr('v-pre', true);
 
