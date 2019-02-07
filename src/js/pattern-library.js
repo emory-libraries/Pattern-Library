@@ -155,7 +155,8 @@ Components.extend('subnav-viewall', {
 // Prevent errors by forcing Vue to ignore Pattern Lab data.
 $('.sg-pattern-data').attr('v-pre', true);
 
-// Initialize a Vue instance.
-const PatternLibrary = new Vue({
-  el: $('.sg-main')[0]
-});
+// Capture Vue instances.
+const PatternLibrary = [];
+
+// Initialize a Vue instance for each pattern.
+$('.sg-pattern').each((pattern) => PatternLibrary.push(new Vue({el: pattern[0]})));
