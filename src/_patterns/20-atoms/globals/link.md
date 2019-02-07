@@ -23,6 +23,8 @@ The link atom allows you to include a hyperlink within another pattern. Use link
 ### Best Practices
 
 - Always label links with a clear call-to-action or description
+  - Never use labels like *Click Here*
+  - Avoid using URLs as labels
 - Use page context to make sure you're linking to related, relevant content
 
 
