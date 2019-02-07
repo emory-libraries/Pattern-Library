@@ -8,7 +8,14 @@
 %atoms-link {
   
   // Builds the link structure.
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
+  cursor: pointer;
+  
+  // Builds structure for link icons.
+  .icon {
+    @include absolute-center-contents(true);
+  }
   
 }
