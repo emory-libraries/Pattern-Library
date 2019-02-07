@@ -48,6 +48,17 @@
     width: auto;
   }
 }
+.nav-button .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 .nav-button:not(.-utility):not(.-flyout):not(.-search):not(.-toggle):not(.-librarian), .-main.nav-button {
   height: 60px;
 }
@@ -208,17 +219,6 @@
     padding-left: 25px;
     padding-right: 25px;
   }
-}
-.nav-button .icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 .nav-button:not(.-utility):not(.-flyout):not(.-search):not(.-toggle):not(.-librarian), .nav-button.-main {
   font-family: "Open Sans", sans-serif;
@@ -435,11 +435,31 @@
 .nav-button:not(.-utility):not(.-flyout):not(.-search):not(.-toggle):not(.-librarian)::after, .nav-button.-main::after {
   content: url("../icons/php/icon.php?id=material-chevron_right&color=B6BDCC&size[width]=24&size[height]=24");
 }
+.nav-button:not(.-utility):not(.-flyout):not(.-search):not(.-toggle):not(.-librarian)::before, .nav-button.-main::before {
+  content: "";
+  display: block;
+  top: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  height: 1px;
+  background-color: #E7EAF1;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.15;
+  width: calc(100% - 20px);
+}
+.nav-button:not(.-utility):not(.-flyout):not(.-search):not(.-toggle):not(.-librarian):first-of-type::before, .nav-button.-main:first-of-type::before {
+  content: none;
+}
 @media (min-width: 601px) and (max-width: 900px) {
   .nav-button:not(.-utility):not(.-flyout):not(.-search):not(.-toggle):not(.-librarian), .nav-button.-main {
     padding-right: 10px;
   }
   .nav-button:not(.-utility):not(.-flyout):not(.-search):not(.-toggle):not(.-librarian)::after, .nav-button.-main::after {
+    content: none;
+  }
+  .nav-button:not(.-utility):not(.-flyout):not(.-search):not(.-toggle):not(.-librarian)::before, .nav-button.-main::before {
     content: none;
   }
 }
@@ -448,6 +468,9 @@
     padding-right: 10px;
   }
   .nav-button:not(.-utility):not(.-flyout):not(.-search):not(.-toggle):not(.-librarian)::after, .nav-button.-main::after {
+    content: none;
+  }
+  .nav-button:not(.-utility):not(.-flyout):not(.-search):not(.-toggle):not(.-librarian)::before, .nav-button.-main::before {
     content: none;
   }
 }
