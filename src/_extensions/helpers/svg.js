@@ -45,8 +45,11 @@ module.exports = {
   // Dynamically loads our icons by ID.
   icon( id ) {
 
-    // Find our target icon file.
-    const icon = Object.keys(icons).filter((icon) => icon.indexOf(id.toLowerCase()) === 0)[0];
+    // Find our target icon file by exact ID.
+    let icon = Object.keys(icons).filter((icon) => icon == id)[0];
+
+    // Otherwise, find our target icon file by near ID.
+    if( !icon ) icon = Object.keys(icons).filter((icon) => icon.indexOf(id.toLowerCase()) === 0)[0];
 
     // Return the icon.
     return icons[icon];
@@ -57,7 +60,10 @@ module.exports = {
   logo( id ) {
 
     // Find our target logo file.
-    const logo = Object.keys(logos).filter((logo) => logo.indexOf(id.toLowerCase()) === 0)[0];
+    let logo = Object.keys(logos).filter((logo) => logo == id)[0];
+
+    // Otherwise, find our target logo file by near ID.
+    if( !logo )  logo = Object.keys(logos).filter((logo) => logo.indexOf(id.toLowerCase()) === 0)[0];
 
     // Return the icon.
     return logos[logo];
