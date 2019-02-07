@@ -18,7 +18,7 @@
             'is-focus': isFocus
           }"
           :disabled="isDisabled">
-    {{#if (and icon icon.id (eq icon.position 'left'))}}{{> tokens-icon id=icon.id classes='-left' }}{{/if}}
+    {{#if (or (and icon icon.id (eq icon.position 'left')) (and icon icon.id (not icon.position)))}}{{> tokens-icon id=icon.id classes='-left' }}{{/if}}
     {{label}}
     {{#if (and icon icon.id (eq icon.position 'right'))}}{{> tokens-icon id=icon.id classes='-right' }}{{/if}}
   </button>
