@@ -33,15 +33,15 @@ Before contributing to the Pattern Library, make sure all [prerequisites](#prere
 
 ### Pulling Dependencies
 
-Our Pattern Library depends on files from other [Emory Libraries](https://github.com/emory-libraries) projects, such as the [Emory Libraries Sass Framework](https://github.com/emory-libraries/stemplate-sass). These files can be pulled into the Pattern Library from other local repos on your system as needed using the [`grunt pull`](#grunt-pull) command. 
+Our Pattern Library depends on files from other [Emory Libraries](https://github.com/emory-libraries) projects, such as the [Emory Libraries Sass Framework](https://github.com/emory-libraries/stemplate-sass). These files can be pulled into the Pattern Library from other local repos on your system as needed using the [`grunt pull`](#grunt-pull) command.
 
-> Note, the `grunt pull` command has been preconfigured to pull in any files from other (local) repos that the Pattern Library integrates with. You must downlod or `git clone` these repos to your system in a location adjacent to your Pattern Library repo in order for this to work. 
+> Note, the `grunt pull` command has been preconfigured to pull in any files from other (local) repos that the Pattern Library integrates with. You must downlod or `git clone` these repos to your system in a location adjacent to your Pattern Library repo in order for this to work.
 
 ### Pushing Dependencies
 
-Some files within our Pattern Library are utilized by other [Emory Libraries](https://github.com/emory-libraries) projects, such as the [Emory Libraries Style Guide](https://github.com/emory-libraries/style-guide-guide) and [Templating Engine](https://github.com/emory-libraries/templating-engine). These files can be pushed to other local repos on your system as needed using the [`grunt push`](#grunt-push) command. 
+Some files within our Pattern Library are utilized by other [Emory Libraries](https://github.com/emory-libraries) projects, such as the [Emory Libraries Style Guide](https://github.com/emory-libraries/style-guide-guide) and [Templating Engine](https://github.com/emory-libraries/templating-engine). These files can be pushed to other local repos on your system as needed using the [`grunt push`](#grunt-push) command.
 
-> Note, the `grunt push` command has been preconfigured to push out any files to other (local) repos that require some integration with the Pattern Library. You must downlod or `git clone` these repos to your system in a location adjacent to your Pattern Library repo in order for this to work. 
+> Note, the `grunt push` command has been preconfigured to push out any files to other (local) repos that require some integration with the Pattern Library. You must downlod or `git clone` these repos to your system in a location adjacent to your Pattern Library repo in order for this to work.
 
 
 ### Committing Changes
@@ -71,6 +71,10 @@ Builds the Pattern Library, listens for changes during development, and enables 
 #### `grunt dist`
 
 Compiles assets and creates production-ready files for distribution.
+
+#### `grunt serve`
+
+Spins up a PHP-enabled server that allows previewing of the Pattern Library in real-time during development.
 
 #### `grunt release`
 
