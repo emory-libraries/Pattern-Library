@@ -187,6 +187,46 @@
   background-size: auto 20px;
   background-position: calc(100% - 20px) center;
 }
+.input.-search.-big::-webkit-input-placeholder {
+  font-family: "Cardo", serif;
+  font-size: 1.56em;
+  line-height: 1.5;
+}
+.input.-search.-big:-ms-input-placeholder {
+  font-family: "Cardo", serif;
+  font-size: 1.56em;
+  line-height: 1.5;
+}
+.input.-search.-big::-ms-input-placeholder {
+  font-family: "Cardo", serif;
+  font-size: 1.56em;
+  line-height: 1.5;
+}
+.input.-search.-big::placeholder {
+  font-family: "Cardo", serif;
+  font-size: 1.56em;
+  line-height: 1.5;
+}
+.input.-search.-small::-webkit-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.78em;
+  line-height: 1.7857;
+}
+.input.-search.-small:-ms-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.78em;
+  line-height: 1.7857;
+}
+.input.-search.-small::-ms-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.78em;
+  line-height: 1.7857;
+}
+.input.-search.-small::placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.78em;
+  line-height: 1.7857;
+}
 .input.-date {
   background-image: url(../icons/php/icon.php?id=material-calendar_today&color=5387F7&size[width]=20&size[height]=20);
 }
