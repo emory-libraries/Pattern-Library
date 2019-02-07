@@ -1,0 +1,14 @@
+body {
+  @include tokens-text;
+}
+
+*,
+*::before,
+*::after {
+  position: relative;
+  box-sizing: border-box;
+}
+
+a {
+  @include atoms-link;
+}
