@@ -6,7 +6,7 @@
 
     <div class="pl-iconset-icons pl-grid" style="--columns-s: 2; --columns-m: 3; --columns-l: 4;">
 
-      {{#each icons}}
+      {{#each (sortBy icons 'id')}}
 
         <div class="pl-grid-item ">
 
