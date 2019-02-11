@@ -24,6 +24,8 @@
   font-weight: bold;
   font-style: normal;
   color: #5387F7;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 .link .icon {
   width: 24px;
@@ -44,4 +46,18 @@
 }
 .link:active .icon svg, .link.is-active .icon svg {
   fill: #004990;
+}
+.link.-popular {
+  font-family: "Cardo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 2.05;
+  color: #FFFFFF;
+}
+.link.-popular:hover, .link.-popular.is-hover, .link.-popular:focus, .link.-popular.is-focus {
+  color: #336BE6;
+}
+.link.-popular:active, .link.-popular.is-active {
+  color: #336BE6;
 }
