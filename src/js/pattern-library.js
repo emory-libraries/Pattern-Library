@@ -5,8 +5,7 @@ const jQuery = require('jquery');
 const $ = jQuery;
 
 // Export globals.
-global.jQuery = jQuery;
-global.$ = $;
+global.jQuery = global.$ = jQuery;
 
 // Load libraries.
 require('velocity-animate');
@@ -159,4 +158,4 @@ $('.sg-pattern-data').attr('v-pre', true);
 const PatternLibrary = [];
 
 // Initialize a Vue instance for each pattern.
-$('.sg-pattern').each((pattern) => PatternLibrary.push(new Vue({el: pattern[0]})));
+$('.sg-pattern').each((i, el) => PatternLibrary.push(new Vue({el})));
