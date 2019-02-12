@@ -14,6 +14,12 @@
   display: block;
   top: 0;
 }
+.list:not(.-numbered):not(.-links):not(.-topics):not(.-files) .list-item :first-child, .-bulleted.list .list-item :first-child {
+  margin-top: 0;
+}
+.list:not(.-numbered):not(.-links):not(.-topics):not(.-files) .list-item :last-child, .-bulleted.list .list-item :last-child {
+  margin-bottom: 0;
+}
 .-numbered.list .list-item {
   display: block;
 }
@@ -21,6 +27,12 @@
   position: absolute;
   display: block;
   top: 0;
+}
+.-numbered.list .list-item :first-child {
+  margin-top: 0;
+}
+.-numbered.list .list-item :last-child {
+  margin-bottom: 0;
 }
 .-links.list .list-item {
   display: block;

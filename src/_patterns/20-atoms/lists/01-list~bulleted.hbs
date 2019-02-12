@@ -4,7 +4,7 @@
     {{#if href}}
       {{#if data}}{{> atoms-link label=data }}{{else}}{{> atoms-link }}{{/if}}
     {{else if data}}
-      {{#if markdown}}{{{trimSubstringEnd (trimSubstringStart (markdown data) '<p>') '</p>'}}}{{else}}{{data}}{{/if}}
+      {{#if markdown}}{{{markdown data}}}{{else}}{{data}}{{/if}}
     {{else}}
       {{this}}
     {{/if}}
