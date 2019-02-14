@@ -1,0 +1,50 @@
+[
+  {
+    "id": "woodruff",
+    "name": "Robert W. Woodruff Library",
+    "alias": "Woodruff Library",
+    "placeID": "ChIJoa9vdPAG9YgRftip3eIDvd0"
+  },
+  {
+    "id": "rose",
+    "name": "Manuscript, Archives, and Rare Book Library",
+    "alias": "Rose Library",
+    "placeID": "ChIJwQJNdPAG9YgRWMXTLEq7CQY"
+  }, 
+  {
+    "id": "business",
+    "name": "Goizueta Business Library",
+    "alias": "Business Library",
+    "placeID": "ChIJwT1ZdPAG9YgRPINQzrgbst0"
+  },
+  {
+    "id": "health",
+    "name": "Woodruff Health Sciences Center Library",
+    "alias": "Health Sciences Library",
+    "placeID": "ChIJSSVc2fkG9YgR7PCZbN2ZK3o"
+  },
+  {
+    "id": "law",
+    "name": "Hugh F. MacMillan Law Library",
+    "alias": "Law Library",
+    "placeID": "ChIJNy79vvoG9YgR6L0rtQQ8d88"
+  },
+  {
+    "id": "music",
+    "name": "Marian K. Heilbrun Music & Media Library",
+    "alias": "Music & Media Library",
+    "placeID": "ChIJDxpNdPAG9YgRm9r6VBQstd0"
+  },
+  {
+    "id": "oxford",
+    "name": "Oxford College Library at Emory University",
+    "alias": "Oxford College Library",
+    "placeID": "ChIJU7gbS-o09IgRePAaRk61PyY"
+  },
+  {
+    "id": "theology",
+    "name": "Pitts Theology Library",
+    "alias": "Theology Library",
+    "placeID": "ChIJMaHvTPAG9YgRu3LJds99wnc"
+  }
+]
