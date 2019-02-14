@@ -138,6 +138,12 @@ Pulls in files from other repos that feed into the Pattern Library. Current depe
 
 Pushes out selected files from our Pattern Library to other repos that utilize those files. Current projects that depend of our Pattern Library include our [Emory Libraries Style Guide](https://github.com/emory-libraries/style-guide-guide) and [Templating Engine](https://github.com/emory-libraries/templating-engine). Note that in order for this task to work, you will need to download or `git clone` these repos to your system, and afterwards, you will want to `git commit` these pushed files to the other repos.
 
+#### `grunt map`
+
+Retrieves place data from the [Google Places API](https://developers.google.com/places/web-service/intro) for use when rendering maps. Use of this command requires that you setup an `env.json` file at the project's root and include a Google Places API key (`GOOGLE_PLACES_API.key`). The retrieved data is saved to `map.json` found in the `src/_data` folder. Any existing data within `map.json` will be overwritten with the newly retrieved, up-to-date information. **It is not likely that you will need to use this task unless additional data for new places is needed.**
+
+> Refer to the `map.default.json` file for minimum field requirements when adding new places to the `map.json` file. Place IDs for newly added places can be found by using the [Place ID Finder](https://developers.google.com/places/place-id) tool provided by Google.
+
 
 ### Exporting Patterns
 
