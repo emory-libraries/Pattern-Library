@@ -59,6 +59,12 @@ module.exports = function(grunt) {
             cwd: path.resolve(paths.source.styleguide),
             src: '**/*',
             dest: path.resolve(paths.public.root)
+          },
+          {
+            expand: true,
+            cwd: path.resolve(paths.source.js),
+            src: '**/*.json',
+            dest: path.resolve(paths.public.js)
           }
         ]
       },
@@ -93,6 +99,12 @@ module.exports = function(grunt) {
             cwd: path.resolve(paths.source.root),
             src: 'favicon.ico',
             dest: path.resolve(paths.dist.root)
+          },
+          {
+            expand: true,
+            cwd: path.resolve(paths.source.js),
+            src: '**/*.json',
+            dest: path.resolve(paths.dist.js)
           }
         ]
       }
@@ -284,7 +296,7 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: path.resolve(paths.source.js),
-            src: ['*.js', '!index.js'],
+            src: ['**/*.js', '!index.js'],
             dest: path.resolve(paths.public.js)
           },
           {
@@ -299,31 +311,18 @@ module.exports = function(grunt) {
             NODE_ENV: 'production'
           }]]
         },
-        files: [{
-          src: [path.resolve(paths.dist.js, 'bundle.js')],
-          dest: path.resolve(paths.dist.js, 'bundle.js')
-        }]
-      }
-    },
-    babel: {
-      options: {
-        babelrc: true
-      },
-      dev: {
-        files: [{
-          expand: true,
-          cwd: path.resolve(paths.source.js),
-          src: ['**/*.js'],
-          dest: path.resolve(paths.public.js)
-        }]
-      },
-      dist: {
-        files: [{
-          expand: true,
-          cwd: path.resolve(paths.source.js),
-          src: ['**/*.js'],
-          dest: path.resolve(paths.dist.js)
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: path.resolve(paths.source.js),
+            src: ['**/*.js', '!index.js', '!pattern-library.js'],
+            dest: path.resolve(paths.dist.js)
+          },
+          {
+            src: [path.resolve(paths.dist.js, 'bundle.js')],
+            dest: path.resolve(paths.dist.js, 'bundle.js')
+          }
+        ]
       }
     },
     uglify: {
@@ -488,5 +487,8 @@ module.exports = function(grunt) {
 
   /* css */
   grunt.registerTask('css', 'Generate pattern-specific CSS for all patterns', require('./scripts/css.js'));
+  
+  /* map */
+  grunt.registerTask('map', 'Retrieve some data from Google Maps and save it to a JSON file', require('./scripts/map.js'));
 
 };
