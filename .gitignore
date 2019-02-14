@@ -10,3 +10,5 @@ src/**/css/*.css
 src/css/*.css
 src/**/css/*.css.map
 pattern_exports/
+env.json
+secret.json
