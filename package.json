@@ -66,6 +66,7 @@
     "handlebars": "^4.0.12",
     "handlebars-helper-md": "^0.2.0",
     "handlebars-helpers": "^0.10.0",
+    "hex2dec": "^1.1.2",
     "inquirer": "^6.2.2",
     "intercept-stdout": "^0.1.2",
     "load-grunt-tasks": "^4.0.0",
