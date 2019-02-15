@@ -31,7 +31,12 @@ The map image atom can be used to insert a still map image into another pattern.
 | Name        | Type          | Description                                                                                           | Value(s)            | Default   |
 |-------------|---------------|-------------------------------------------------------------------------------------------------------|---------------------|-----------|
 | id          | `String`      | The ID of the map image to display.                                                                   | `business`, `health`, `law`, `music`, `oxford`, `rose`, `theology`, or `woodruff` |           |
-| scale        | `Percentage` | The map image's zoom level, where `100%` is the default.                                              | >=`100%`             | `100%`      |
+| scale        | `Percentage` | The map image's zoom level, where `100%` is the default.                                              | >=`100%`            | `100%`    |
+
+| size        | `Object`      | Some optional data about the map's size.                                                              |                     |           |
+| size.fixed  | `Boolean`     | Whether the map's height should be fixed instead of using a percentage of its width.                  | `true` or `false`   | `false`   |
+| size.width  | `Number`      | The desired width of the map as a number with units.                                                  |                     | `100%`    |
+| size.height | `Number`      | The desired height of the map, either as a percentage if not `size.fixed` or as a number with units.  |                     | `25%`     |
 
 
 ## Classes
