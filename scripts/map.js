@@ -14,6 +14,7 @@ module.exports = function() {
   const inquirer = require('inquirer');
   const chalk = require('chalk');
   const link = require('terminal-link');
+  const converter = require('hex2dec');
   
   // Extend lodash.
   _.camelify = function( object ) {
@@ -171,7 +172,7 @@ module.exports = function() {
         const placeData = response.data.result;
 
         // Extract Google CID.
-        placeData.cid = +placeData.url.replace('https://maps.google.com/?cid=', '');
+        placeData.cid = placeData.url.replace('https://maps.google.com/?cid=', '');
 
         // Save place data.
         data.map[i] = _.merge({}, place, _.camelify(placeData));

@@ -86,7 +86,7 @@
       "url": "https://maps.google.com/?cid=15977931325896775806",
       "utcOffset": -300,
       "vicinity": "540 Asbury Circle, Atlanta",
-      "cid": 15977931325896776000
+      "cid": "15977931325896775806"
     },
     {
       "id": "rose",
@@ -174,7 +174,7 @@
       "url": "https://maps.google.com/?cid=435084766272013656",
       "utcOffset": -300,
       "vicinity": "540 Asbury Circle, Atlanta",
-      "cid": 435084766272013630
+      "cid": "435084766272013656"
     },
     {
       "id": "business",
@@ -262,7 +262,7 @@
       "url": "https://maps.google.com/?cid=15974861308785886012",
       "utcOffset": -300,
       "vicinity": "540 Asbury Circle, Atlanta",
-      "cid": 15974861308785885000
+      "cid": "15974861308785886012"
     },
     {
       "id": "health",
@@ -357,7 +357,7 @@
       "url": "https://maps.google.com/?cid=8803299072914616556",
       "utcOffset": -300,
       "vicinity": "1462 Clifton Road, Atlanta",
-      "cid": 8803299072914616000
+      "cid": "8803299072914616556"
     },
     {
       "id": "law",
@@ -452,7 +452,7 @@
       "url": "https://maps.google.com/?cid=14949483478996729320",
       "utcOffset": -300,
       "vicinity": "1301 Clifton Road, Atlanta",
-      "cid": 14949483478996730000
+      "cid": "14949483478996729320"
     },
     {
       "id": "music",
@@ -540,7 +540,7 @@
       "url": "https://maps.google.com/?cid=15975723719003396763",
       "utcOffset": -300,
       "vicinity": "540 Asbury Circle, Atlanta",
-      "cid": 15975723719003396000
+      "cid": "15975723719003396763"
     },
     {
       "id": "oxford",
@@ -628,7 +628,7 @@
       "url": "https://maps.google.com/?cid=2756120844762280056",
       "utcOffset": -300,
       "vicinity": "134 Few Circle, Oxford",
-      "cid": 2756120844762280000
+      "cid": "2756120844762280056"
     },
     {
       "id": "theology",
@@ -723,7 +723,7 @@
       "url": "https://maps.google.com/?cid=8629598165999907515",
       "utcOffset": -300,
       "vicinity": "1531 Dickey Drive #560, Atlanta",
-      "cid": 8629598165999908000
+      "cid": "8629598165999907515"
     }
   ]
 }
