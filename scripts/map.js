@@ -152,7 +152,7 @@ module.exports = function() {
     const API = new GooglePlacesAPI();
 
     // Initialize our output data.
-    const data = [];
+    const data = _.extend({}, places);
 
     // Initialize requests and errors.
     const requests = [];
@@ -162,7 +162,7 @@ module.exports = function() {
     grunt.log.write('Retrieving place data from Google Places... ');
 
     // Retrieve data for our places.
-    places.forEach((place, i) => {
+    places.map.forEach((place, i) => {
 
       // Get and save the data.
       requests.push(API.getData(place.placeID).then((response) => {
@@ -174,7 +174,7 @@ module.exports = function() {
         placeData.cid = +placeData.url.replace('https://maps.google.com/?cid=', '');
 
         // Save place data.
-        data[i] = _.merge({}, place, _.camelify(placeData));
+        data.map[i] = _.merge({}, place, _.camelify(placeData));
 
       }).catch(() => errors.push(`Could not retrieve place data for ${place.name}.`)));
 
