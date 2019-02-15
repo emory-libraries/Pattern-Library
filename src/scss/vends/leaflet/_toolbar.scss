@@ -1,0 +1,77 @@
+.leaflet-bar {
+  box-shadow: 0 1px 5px $color--toolbar--shadow;
+  border-radius: 4px;
+
+  a,
+  a:hover {
+    background-color: $color--toolbar--link--background--normal;
+    border-bottom: 1px solid $color--toolbar--link--border;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: $color--toolbar--link--foreground--normal;
+  }
+
+  a {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    display: block;
+
+    &:hover {
+      background-color: $color--toolbar--link--background--hover;
+    }
+
+    &:first-child {
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      border-bottom: none;
+    }
+
+    &.leaflet-disabled {
+      cursor: default;
+      background-color: $color--toolbar--link--background--disabled;
+      color: $color--toolbar--link--foreground--disabled;
+    }
+
+  }
+
+}
+
+.leaflet-control-layers-toggle {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.leaflet-touch {
+
+  .leaflet-bar {
+
+    a {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+
+      &:first-child {
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+      }
+
+      &:last-child {
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+      }
+
+    }
+
+  }
+
+}

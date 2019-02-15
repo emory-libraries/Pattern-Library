@@ -1,0 +1,7 @@
+@function leaflet-icon-url( $icon ) {
+  
+  $url: unquote($path--images + '/' + $icon + '.png');
+  
+  @return url($url);
+  
+}

@@ -1,0 +1,10 @@
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+  font: $font--zoom;
+  text-indent: 1px;
+}
+
+.leaflet-touch .leaflet-control-zoom-in,
+.leaflet-touch .leaflet-control-zoom-out {
+  font-size: 22px;
+}
