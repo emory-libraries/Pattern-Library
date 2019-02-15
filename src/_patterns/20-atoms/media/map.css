@@ -23,3 +23,9 @@
   padding-top: 0;
   height: var(--height);
 }
+.map.-image {
+  --scale: 100%;
+  background-size: var(--scale);
+  background-repeat: no-repeat;
+  background-position: center center;
+}

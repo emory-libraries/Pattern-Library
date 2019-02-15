@@ -45,6 +45,7 @@ The map atom can be used to insert a map into another pattern. Maps can be rende
 
 ### Variations
 
-| Class       | Description                                                                       |
-|-------------|-----------------------------------------------------------------------------------|
-| `-h-fixed`  | Inidicates that map's the height is fixed rather than a percentage of its width.  |
+| Class       | Description                                                                                                   |
+|-------------|---------------------------------------------------------------------------------------------------------------|
+| `-h-fixed`  | Inidicates that map's the height is fixed rather than a percentage of its width, applied to the `.map-frame`. |
+| `-image`    | Inidicates that map is an image.                                                                              |
