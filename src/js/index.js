@@ -4,6 +4,35 @@
 // Instead, you will need to manually load these dependencies in the browser using `<script>` tags.
 const _ = require('lodash');
 const Vue = require('vue');
+const L = require('leaflet');
+const $ = require('jQuery');
+
+// Build utility methods.
+const EUL = {
+  
+  // Load scripts using URLs.
+  loadScripts( scripts ) {
+    
+    // Initialize script elements.
+    const elements = [];
+    
+    // Load scripts by insterting them as elements into our HTML.
+    scripts.forEach((script) => {
+      
+      // Create script element.
+      elements.push($('<script>', _.isString(script) ? {src: script} : script));
+      
+    });
+    
+    // Load all scripts.
+    $(document.body).append(...elements);
+    
+  }
+  
+};
+
+// Extend Leaflet.
+require('leaflet-providers');
 
 // Extend lodash.
 _.capitalizeChar = ( str, i ) => {
@@ -217,3 +246,6 @@ global._ = _;
 global.Vue = Vue;
 global.Events = Events;
 global.Components = Components;
+global.Leaflet = global.L = L;
+global.jQuery = global.$ = $;
+global.EUL = EUL;
