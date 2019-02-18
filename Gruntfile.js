@@ -490,5 +490,8 @@ module.exports = function(grunt) {
   
   /* map */
   grunt.registerTask('map', 'Retrieve some data from Google Maps and save it to a JSON file', require('./scripts/map.js'));
+  
+  /* status */
+  grunt.registerTask('status', 'Update the status of a pattern', require('./scripts/status.js'));
 
 };
