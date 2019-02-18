@@ -39,6 +39,7 @@
     "babelify": "^10.0.0",
     "bs-html-injector": "^3.0.3",
     "chalk": "^2.4.2",
+    "child_process": "^1.0.2",
     "envify": "^4.1.0",
     "escape-string-regexp": "^1.0.5",
     "front-matter": "^3.0.1",
