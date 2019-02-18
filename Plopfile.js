@@ -6,6 +6,7 @@ module.exports = (plop) => {
   const _ = require('lodash');
   const utils = require('./scripts/utils.js');
   const plconfig = require('./patternlab-config.json');
+  const spawn = require('child_process').spawn;
 
   // Configures generators.
   const config = {
@@ -93,6 +94,22 @@ module.exports = (plop) => {
     // Return the new path.
     return target;
 
+  });
+  
+  // Defines an action for triggering a grunt task.
+  plop.setActionType('grunt', (answers, config) => {
+
+    // Make it asynchronous.
+    return new Promise((resolve, reject) => {
+    
+      // Run grunt.
+      const grunt = spawn('grunt', [...config.tasks], {stdio: 'inherit'});
+
+      // Resolve when done.
+      grunt.on('close', () => resolve());
+      
+    });
+    
   });
 
   // Build generator for pattern groups.
@@ -296,6 +313,12 @@ module.exports = (plop) => {
         path: '{{path}}/{{name}}.js',
         templateFile: 'templates/pattern/pattern.js',
         data
+      });
+      
+      // 6. Re-export all pattern statuses.
+      actions.push({
+        type: 'grunt',
+        tasks: ['status:export']
       });
 
       // Generate.
