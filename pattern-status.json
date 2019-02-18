@@ -11,7 +11,7 @@
   "20-atoms-buttons-01-button-link": "review",
   "20-atoms-buttons-02-button-action": "review",
   "20-atoms-buttons-03-button-form": "review",
-  "20-atoms-buttons-04-button-toggle": "construction",
+  "20-atoms-buttons-04-button-toggle": "review",
   "20-atoms-buttons-11-nav-button-main": "review",
   "20-atoms-buttons-12-nav-button-utility": "review",
   "20-atoms-buttons-13-nav-button-flyout": "review",
@@ -48,6 +48,5 @@
   "20-atoms-messaging-callout": "review",
   "20-atoms-messaging-note": "review",
   "20-atoms-tables-01-table": "review",
-  "20-atoms-tabs-01-tab": "review",
-  "60-templates-foo": "construction"
+  "20-atoms-tabs-01-tab": "review"
 }
