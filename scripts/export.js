@@ -1,44 +1,38 @@
 // Initialize the export method.
-module.exports = function ( ...patterns ) {
+module.exports = function ( pattern = '*' ) {
 
   // Load dependencies.
   const path = require('path');
   const patternlab = require('patternlab-node');
-  const _ = require('lodash');
-  const fs = _.extend(require('fs-extra'), {
-    readdirSyncRecursive: require('fs-readdir-recursive')
-  });
+  const fs = require('fs-extra');
   const glob = require('glob').sync;
   const intercept = require('intercept-stdout');
+  const grunt = require('grunt');
   const utils = require('./utils.js');
-  
-  // Start interceptor to prevent Pattern Lab from writing to the console.
-  const unhook = intercept();
+  const _ = require('lodash');
 
   // Load configurations.
   const config = require('../patternlab-config.json');
   
-  // Get the atomic group names and numbers of our folders.
-  const groups = utils.atomic(); 
+  // Get pattern data.
+  const patterns = utils.patterns();
  
-  // By default, if no pattern is given, export all patterns.
-  if( patterns.length === 0 ) patterns.push('*');
+  // Get patterns to export.
+  const exports = pattern == '*' ? Object.values(patterns) : Object.values(patterns).filter((data) => data.pattern.plid == pattern);
   
-  // Get pattern arguments.
-  patterns = _.castArray(patterns).map((pattern) => {
+  // Ignore invalid patterns.
+  if( exports.length === 0 ) {
     
-    // Handle asterisks.
-    if( pattern === '*' ) return path.resolve(config.paths.public.patterns, pattern);
+    // Report unknown pattern.
+    grunt.log.warn(`Unknown pattern '${pattern}'. Verify the pattern exists then try again.`);
     
-    // Otherwise, get the pattern's meta data.
-    const atomic = /^\d*?-/.test(pattern) ? '' : groups[pattern.split('-')[0]] + '-';
-    const group = /^\d*?-/.test(pattern) ? pattern.split('-')[1] : pattern.split('-')[0];
-    const name = _.trim(pattern.replace(atomic, '').replace(group, ''), '-');
-
-    // Get the pattern's path.
-    return path.resolve(config.paths.public.patterns, atomic + group + '*' + '-' + name);
+    // Exit.
+    return;
     
-  });
+  }
+  
+  // Start interceptor to prevent Pattern Lab from writing to the console.
+  const unhook = intercept();
 
   // Build the patterns.
   patternlab(config).patternsonly(() => {
@@ -46,61 +40,24 @@ module.exports = function ( ...patterns ) {
     // Stop intercepting console output.
     unhook();
     
-    // Initialize a list of exported patterns.
-    const exported = [];
-    
     // Export all patterns.
-    patterns.forEach((pattern) => { 
-
-      // Find all compiled patterns.
-      glob(pattern).forEach((pattern) => { 
+    exports.forEach((data) => { 
+      
+      // Set the pattern folder source files.
+      const srcs = glob(path.resolve(config.paths.public.patterns, data.pattern.id, '*'));
+      
+      // Copy all pattern files to the export folder.
+      srcs.forEach((src) => {
         
-        // Ensure that the pattern exists.
-        if( fs.existsSync(pattern) ) {
-          
-          // Copy all patterns to the export folder.
-          fs.copySync(pattern, path.resolve(config.patternExportDirectory, path.basename(pattern)));
-          
-          // Save the exported pattern name.
-          exported.push(path.basename(pattern));
-          
-        }
-
+        // Set the destination file path.
+        const dest = path.resolve(config.patternExportDirectory, data.pattern.id, path.basename(src));
+        
+        // Copy the pattern file to the export folder.
+        fs.copySync(src, dest);
+        
       });
       
     });
-    
-    // Find all asset files.
-    const assets = fs.readdirSyncRecursive(path.resolve(config.paths.source.patterns)).map((asset) => {
-      
-      // Get data about the asset.
-      const ext = path.extname(asset);
-      const id = asset.replace(/\//g, '-').replace(ext, '');
-      
-      // Save the asset data.
-      return {
-        asset,
-        ext,
-        id,
-        src: path.resolve(config.paths.source.patterns, asset),
-        dest: path.resolve(config.patternExportDirectory, id, `${id}${ext}`)
-      };
-      
-    }).filter((asset) => {
-      
-      // Ignore template, data, and markdown files.
-      if( [`.${config.patternExtension}`, '.json', '.md'].includes(asset.ext) ) return false;
-
-      // Also, ignore any patterns that were not exported.
-      if( !exported.includes(asset.id) ) return false;
-      
-      // Otherwise, assume it's an asset file.
-      return true;
-      
-    });
-
-    // Export pattern assets.
-    assets.forEach((asset) => fs.copySync(asset.src, asset.dest));
     
     // Report done.
     console.log('Patterns exported successfully.');
