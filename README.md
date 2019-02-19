@@ -144,6 +144,23 @@ Retrieves place data from the [Google Places API](https://developers.google.com/
 
 > Refer to the `map.default.json` file for minimum field requirements when adding new places to the `map.json` file. Place IDs for newly added places can be found by using the [Place ID Finder](https://developers.google.com/places/place-id) tool provided by Google.
 
+#### `grunt status`
+
+Updates a given pattern's status or enables batch dumping and/or updating of all pattern statuses using `export` and `import`, respectively. A `pattern-status.json` file is used when exporting and/or importing pattern statuses. To update the status of a pattern, use the pattern's Pattern Lab ID (i.e., `atoms-button`).
+
+**Example**
+
+```
+grunt status:atoms-button
+```
+
+**Subtasks**
+
+| Subtask         | Description                                                                 |
+|-----------------|-----------------------------------------------------------------------------|
+| `export`        | Performs a bulk dump of all pattern statuses to `pattern-status.json`.      |
+| `import`        | Performs a bulk update of all pattern statuses from `pattern-status.json`.  |
+
 
 ### Exporting Patterns
 
