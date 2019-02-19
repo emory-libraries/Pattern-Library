@@ -97,12 +97,12 @@ Runs the Pattern Lab core processor to generate an instance of our Pattern Libra
 
 #### `grunt export`
 
-Exports a pattern definition, or group of pattern definitions, and any respective assets.
+Exports a single pattern withs its assets or all patterns with their respective assets. To export a single pattern, pass the pattern's Pattern Lab ID (i.e., `atoms-button`) into the grunt task as an argument.
 
 **Example**
 
 ```
-grunt export:10-atoms/01-button
+grunt export:atoms-button
 ```
 
 #### `grunt build:dev`
@@ -146,7 +146,7 @@ Retrieves place data from the [Google Places API](https://developers.google.com/
 
 #### `grunt status`
 
-Updates a given pattern's status or enables batch dumping and/or updating of all pattern statuses using `export` and `import`, respectively. A `pattern-status.json` file is used when exporting and/or importing pattern statuses. To update the status of a pattern, use the pattern's Pattern Lab ID (i.e., `atoms-button`).
+Updates a given pattern's status or enables batch dumping and/or updating of all pattern statuses using `export` and `import`, respectively. A `pattern-status.json` file is used when exporting and/or importing pattern statuses. To update the status of a single pattern, pass the pattern's Pattern Lab ID (i.e., `atoms-button`) into the grunt task as an argument.
 
 **Example**
 
