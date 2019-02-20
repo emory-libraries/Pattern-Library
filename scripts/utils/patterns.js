@@ -83,8 +83,7 @@ module.exports = function() {
     const yml = fm(md);
 
     // Save the front matter data only.
-    result[id].data = yml.attributes;
-
+    result[id].data = yml.data;
 
     // Continue reducing.
     return result;
