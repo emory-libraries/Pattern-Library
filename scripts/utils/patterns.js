@@ -6,7 +6,7 @@ module.exports = function() {
   const _ = require('lodash');
   const glob = require('glob').sync;
   const fs = require('fs-extra');
-  const fm = require('front-matter');
+  const fm = require('gray-matter');
 
   // Load configurations.
   const config = require('../../patternlab-config.json');
