@@ -108,7 +108,7 @@ module.exports = function( id = null ) {
         });
         
         // Generate CSS and JS files.
-        const assets = spawn('grunt', ['build:dev:css', 'build:dev:js']);
+        const assets = spawn('grunt', ['build:dev:scss', 'build:dev:js']);
 
         // Copy CSS and JS files.
         assets.on('close', () => {
