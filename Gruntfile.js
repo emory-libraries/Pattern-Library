@@ -416,7 +416,8 @@ module.exports = function(grunt) {
     'css',
     'sass_import',
     'dart-sass:dev',
-    'postcss:dev'
+    'postcss:dev',
+    'status:export'
   ]);
   grunt.registerTask('build:dev:js', [
     'concat:dev',
@@ -440,7 +441,8 @@ module.exports = function(grunt) {
     'sass_import',
     'dart-sass:dist',
     'postcss:dist',
-    'cssmin'
+    'cssmin',
+    'status:export'
   ]);
   grunt.registerTask('build:dist:js', [
     'concat:dist',
