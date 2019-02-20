@@ -54,7 +54,7 @@ module.exports = function( pattern ) {
     });
     
     // Save the data to a JSON file.
-    fs.writeFileSync(json, JSON.stringify(data, null, 2));
+    fs.writeJsonSync(json, data, {spaces: 2});
     
     // Report done.
     grunt.log.success(`Exported pattern statuses to \'${path.basename(json)}\' successfully.`);
