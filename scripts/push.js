@@ -31,6 +31,11 @@ module.exports = function( id = null ) {
   const glob = require('glob').sync;
   const utils = require('./utils.js');
   const handlebars = require('handlebars');
+  const fm = require('gray-matter');
+  const spawn = require('child_process').spawn;
+  
+  // Make asynchronous.
+  const done = this.async();
   
   // Register Handlebars helpers.
   handlebars.registerHelper(require('handlebars-helpers')());
@@ -69,7 +74,7 @@ module.exports = function( id = null ) {
           dest: 'patterns'
         }
       ],
-      before() {
+      before( done ) {
         
         // Export all patterns.
         require(path.resolve(__dirname, 'export.js'))();
@@ -102,35 +107,72 @@ module.exports = function( id = null ) {
           
         });
         
+        // Generate CSS and JS files.
+        const assets = spawn('grunt', ['build:dev:css', 'build:dev:js']);
+
+        // Copy CSS and JS files.
+        assets.on('close', () => {
+          
+          // Get asset paths.
+          const css = glob(path.resolve(config.paths.public.css, '**/*.css')).map((file) => ({
+            src: file,
+            dest: path.join(this.dir, 'css', path.basename(file))
+          }));
+          const js = glob(path.resolve(config.paths.public.js, '**/*.js')).map((file) => ({
+            src: file,
+            dest: path.join(this.dir, 'js', path.basename(file))
+          }));
+        
+          // Copy all assets.
+          css.forEach((css) => fs.copySync(css.src, css.dest));
+          js.forEach((js) => fs.copySync(js.src, js.dest));
+          
+          // Done.
+          done();
+          
+        });
+        
       },
       during( src ) {
-
-        // Look up pattern IDs.
-        let patternIDs = Object.keys(patterns).filter((id) => path.basename(src).indexOf(id) === 0);
         
-        // Ignore paths without without matching pattern IDs because they're likely invalid.
-        if( patternIDs.length === 0 ) return;
+        // Get the pattern ID.
+        const id = path.basename(src);
         
-        // Get the pattern ID of the source file.
-        const ID = patternIDs[0];
-        
-        // Get the pattern data based on ID.
-        const pattern = patterns[ID]; 
-        
-        // Get information about the pattern.
-        const {group, name} = pattern;
+        // Get the pattern's meta data.
+        const data = patterns[id];
           
         // Get the markdown templates.
         const md = fs.readFileSync(path.resolve(__dirname, 'templates/pattern.md'), 'utf8');
           
         // Compile the markdown templates with handlebars.
-        const template = handlebars.compile(md);
+        const hbs = handlebars.compile(md);
+        
+        // Get pattern contents.
+        const content = fs.readFileSync(data.pattern.src, 'utf8');
           
         // Merge data into the the template file.
-        const output = template(pattern);
+        const output = hbs(_.extend({}, data.pattern, {
+          docs: fm(content)
+        }));
+        
+        // Get pattern file name.
+        const name = data.pattern.plid.replace(data.pattern.group + '-', '');
+        
+        // Get destination path.
+        const dest = path.join(this.dir, '07-user-interface', atomicGroup[data.pattern.group], `${name}.md`);
         
         // Save the generated file.
-        fs.outputFileSync(path.resolve(this.dir, '07-user-interface', atomicGroup[group], `${name}.md`), output);
+        fs.outputFileSync(dest, output);
+                   
+        // Get template.
+        const template = fs.readFileSync(data.template, 'utf8');
+                     
+        // Get the pattern destination.
+        const pattern = path.join(this.dir, 'patterns', data.pattern.id, `${data.pattern.id}.liquid`);
+                  
+        // Save a Jekyll-compatible version of the template.
+        fs.outputFileSync(pattern, `{% raw %}${template}{% endraw %}`);
+
         
       },
       after() {
@@ -179,9 +221,13 @@ module.exports = function( id = null ) {
         {
           src: path.resolve(config.paths.source.patterns, `${atomicGroup.templates}/**/*.${config.patternExtension}`),
           dest: 'src/patterns/templates'
+        },
+        {
+          src: path.resolve(config.paths.source.data, `*!(.default).json`),
+          dest: 'src/data/_global'
         }
       ],
-      before() {
+      before( done ) {
         
         // Ensure the pattern directory exists.
         fs.ensureDirSync(path.resolve(this.dir, 'src/patterns'));
@@ -194,11 +240,16 @@ module.exports = function( id = null ) {
           
         });
         
+        // Done.
+        done();
         
       }
     }
     
   ];
+  
+  // Initialize tasks.
+  const tasks = [];
   
   // Capture errors.
   const errors = [];
@@ -213,41 +264,54 @@ module.exports = function( id = null ) {
     if ( fs.existsSync(item.dir) ) {
       
       // Do stuff that needs to happen before the item is pushed.
-      if( item.before && _.isFunction(item.before) ) item.before();
-      
-      // Report that the item is being pushed.
-      process.stdout.write(`Started pushing items to '${item.id}'... `);
-    
-      // Push files from our Pattern Library.
-      item.files.forEach((file) => {
-     
-        // Copy all sources to the destination.
-        glob(file.src).forEach((src) => { 
-          
-          // Get the destination.
-          const dest = path.join(item.dir, file.dest, path.basename(src));
-          
-          // Ensure that the destination does not exist, or delete it.
-          if( fs.existsSync(dest) ) fs.removeSync(dest);
-          
-          // Ensure that the source exists, and copy it.
-          if( fs.existsSync(src) ) fs.copySync(src, dest);
-          
-          // Otherwise, report that the source could not be found.
-          else errors.push(`Could not find '${src}' to push to '${item.id}'.`);
-          
-          // Also do stuff that needs to happen during items being pushed.
-          if( item.during && _.isFunction(item.during) ) item.during(src);
-          
-        });
-
+      const before = new Promise((resolve, reject) => {
+        
+        // Do some stuff.
+        if( item.before && _.isFunction(item.before) ) item.before(resolve, reject);
+        
+        // Otherwise, be done.
+        else resolve();
+        
       });
       
-      // Report that the item was pushed.
-      process.stdout.write(`Done.\n`);
+      // Push some stuff.
+      tasks.push(Promise.all([before]).then(() => {
       
-      // Do stuff that needs to happen after the item is pushed.
-      if( item.after && _.isFunction(item.after) ) item.after();
+        // Report that the item is being pushed.
+        process.stdout.write(`Started pushing items to '${item.id}'... `);
+
+        // Push files from our Pattern Library.
+        item.files.forEach((file) => {
+
+          // Copy all sources to the destination.
+          glob(file.src).forEach((src) => { 
+
+            // Get the destination.
+            const dest = path.join(item.dir, file.dest, path.basename(src));
+
+            // Ensure that the destination does not exist, or delete it.
+            if( fs.existsSync(dest) ) fs.removeSync(dest);
+
+            // Ensure that the source exists, and copy it.
+            if( fs.existsSync(src) ) fs.copySync(src, dest);
+
+            // Otherwise, report that the source could not be found.
+            else errors.push(`Could not find '${src}' to push to '${item.id}'.`);
+
+            // Also do stuff that needs to happen during items being pushed.
+            if( item.during && _.isFunction(item.during) ) item.during(src);
+
+          });
+
+        });
+      
+        // Report that the item was pushed.
+        process.stdout.write(`Done.\n`);
+        
+        // Do stuff that needs to happen after the item is pushed.
+        if( item.after && _.isFunction(item.after) ) item.after();
+        
+      }));
       
     }
     
@@ -263,18 +327,26 @@ module.exports = function( id = null ) {
     
   });
   
-  // Report errors.
-  if( errors.length > 0 ) {
-    
-    // Report that the push completed with errors.
-    console.log('Push completed with errors.');
-    
-    // Report errors.
-    errors.forEach((error) => console.log(error));
-    
-  }
+  // Wait for pushes to finish.
+  Promise.all(tasks).then(() => {
   
-  // Otherwise, report done.
-  else console.log('Push completed successfully.');
+    // Report errors.
+    if( errors.length > 0 ) {
+
+      // Report that the push completed with errors.
+      console.log('Push completed with errors.');
+
+      // Report errors.
+      errors.forEach((error) => console.log(error));
+
+    }
+
+    // Otherwise, report done.
+    else console.log('Push completed successfully.');
+    
+    // Done.
+    done();
+    
+  });
   
 };
