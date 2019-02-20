@@ -29,6 +29,9 @@ module.exports = function( id = null ) {
 
   });
   const glob = require('glob').sync;
+  
+  // Make asynchronous.
+  const done = this.async();
 
   // Load configurations.
   const config = require('../patternlab-config.json');
@@ -88,6 +91,9 @@ module.exports = function( id = null ) {
     }
 
   ];
+  
+  // Initialize tasks.
+  const tasks = [];
 
   // Capture errors.
   const errors = [];
@@ -102,44 +108,57 @@ module.exports = function( id = null ) {
     if ( fs.existsSync(item.dir) ) {
 
       // Do stuff that needs to happen before the item is pulled.
-      if( item.before && _.isFunction(item.before) ) item.before();
+      const before = new Promise((resolve, reject) => {
+     
+        // Do some stuff.
+        if( item.before && _.isFunction(item.before) ) item.before(resolve, reject);
+        
+        // Otherwise, be done.
+        else resolve();
+        
+      });
+      
+      // Pull some stuff.
+      tasks.push(Promise.all([before]).then(() => {
 
-      // Report that the item is being pulled.
-      process.stdout.write(`Started pulling items from '${item.id}'... `);
+        // Report that the item is being pulled.
+        process.stdout.write(`Started pulling items from '${item.id}'... `);
 
-      // Pull files from the other project.
-      item.files.forEach((file) => {
+        // Pull files from the other project.
+        item.files.forEach((file) => {
 
-        // Get all sources relative to the project.
-        const src = path.join(item.dir, file.src);
+          // Get all sources relative to the project.
+          const src = path.join(item.dir, file.src);
 
-        // Copy all sources to the destination.
-        glob(src).forEach((src) => {
+          // Copy all sources to the destination.
+          glob(src).forEach((src) => {
 
-          // Get the source and destination.
-          const dest = path.join(file.dest, path.basename(src));
+            // Get the source and destination.
+            const dest = path.join(file.dest, path.basename(src));
 
-          // Ensure that the destination does not exist, or delete it.
-          if( fs.existsSync(dest) ) fs.removeSync(dest);
+            // Ensure that the destination does not exist, or delete it.
+            if( fs.existsSync(dest) ) fs.removeSync(dest);
 
-          // Ensure that the source exists, and copy it.
-          if( fs.existsSync(src) ) fs.copySync(src, dest);
+            // Ensure that the source exists, and copy it.
+            if( fs.existsSync(src) ) fs.copySync(src, dest);
 
-          // Otherwise, report that the source could not be found.
-          else errors.push(`Could not find '${src}' to pull from '${item.id}'.`);
+            // Otherwise, report that the source could not be found.
+            else errors.push(`Could not find '${src}' to pull from '${item.id}'.`);
 
-          // Also do stuff that needs to happen during items being pulled.
-          if( item.during && _.isFunction(item.during) ) item.during(src);
+            // Also do stuff that needs to happen during items being pulled.
+            if( item.during && _.isFunction(item.during) ) item.during(src);
+
+          });
 
         });
 
-      });
+        // Report that the item was pulled.
+        process.stdout.write(`Done.\n`);
 
-      // Report that the item was pulled.
-      process.stdout.write(`Done.\n`);
-
-      // Do stuff that needs to happen after the item is pulled.
-      if( item.after && _.isFunction(item.after) ) item.after();
+        // Do stuff that needs to happen after the item is pulled.
+        if( item.after && _.isFunction(item.after) ) item.after();
+        
+      }));
 
     }
 
@@ -154,19 +173,27 @@ module.exports = function( id = null ) {
     }
 
   });
-
-  // Report errors.
-  if( errors.length > 0 ) {
-
-    // Report that the pull completed with errors.
-    console.log('Pull completed with errors.');
+  
+  // Wait for pulls to finish.
+  Promise.all(tasks).then(() => {
 
     // Report errors.
-    errors.forEach((error) => console.log(error));
+    if( errors.length > 0 ) {
 
-  }
+      // Report that the pull completed with errors.
+      console.log('Pull completed with errors.');
 
-  // Otherwise, report done.
-  else console.log('Pull completed successfully.');
+      // Report errors.
+      errors.forEach((error) => console.log(error));
+
+    }
+
+    // Otherwise, report done.
+    else console.log('Pull completed successfully.');
+    
+    // Done.
+    done();
+    
+  });
 
 };
