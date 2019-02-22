@@ -11,6 +11,7 @@
       "styleguide": "./node_modules/styleguidekit-assets-default/dist/",
       "patternlabFiles": "./node_modules/styleguidekit-mustache-default/views/",
       "js": "./src/js",
+      "php": "./src/php",
       "images": "./src/images",
       "fonts": "./src/fonts",
       "icons": "./src/icons",
@@ -26,6 +27,7 @@
       "annotations": "./public/annotations/",
       "styleguide": "./public/styleguide/",
       "js": "./public/js/",
+      "php": "./public/php/",
       "images": "./public/images/",
       "fonts": "./public/fonts/",
       "icons": "./public/icons/",
@@ -40,7 +42,8 @@
       "fonts": "./dist/<%= pkg.version %>/fonts/",
       "icons": "./dist/<%= pkg.version %>/icons/",
       "logos": "./dist/<%= pkg.version %>/logos/",
-      "css": "./dist/<%= pkg.version %>/css/"
+      "css": "./dist/<%= pkg.version %>/css/",
+      "php": "./dist/<%= pkg.version %>/php/"
     }
   },
   "styleGuideExcludes": [
@@ -101,7 +104,8 @@
           "scss",
           "css",
           "js",
-          "json"
+          "json",
+          "php"
         ]
       }
     },

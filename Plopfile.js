@@ -95,21 +95,21 @@ module.exports = (plop) => {
     return target;
 
   });
-  
+
   // Defines an action for triggering a grunt task.
   plop.setActionType('grunt', (answers, config) => {
 
     // Make it asynchronous.
     return new Promise((resolve, reject) => {
-    
+
       // Run grunt.
       const grunt = spawn('grunt', [...config.tasks], {stdio: 'inherit'});
 
       // Resolve when done.
       grunt.on('close', () => resolve());
-      
+
     });
-    
+
   });
 
   // Build generator for pattern groups.
@@ -253,6 +253,12 @@ module.exports = (plop) => {
         name: 'js',
         message: "Will this pattern use JS?",
         default: false
+      },
+      {
+        type: 'confirm',
+        name: 'php',
+        message: "Will this pattern use PHP?",
+        default: false
       }
     ],
     actions(data) {
@@ -314,8 +320,16 @@ module.exports = (plop) => {
         templateFile: 'templates/pattern/pattern.js',
         data
       });
-      
-      // 6. Re-export all pattern statuses.
+
+      // 6. Create the new pattern's PHP file.
+      if( data.php ) actions.push({
+        type: 'add',
+        path: '{{path}}/{{name}}.php',
+        templateFile: 'templates/pattern/pattern.php',
+        data
+      });
+
+      // 7. Re-export all pattern statuses.
       actions.push({
         type: 'grunt',
         tasks: ['status:export']

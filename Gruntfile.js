@@ -65,6 +65,12 @@ module.exports = function(grunt) {
             cwd: path.resolve(paths.source.js),
             src: '**/*.json',
             dest: path.resolve(paths.public.js)
+          },
+          {
+            expand: true,
+            cwd: path.resolve(paths.source.php),
+            src: '**/example-*.php',
+            dest: path.resolve(paths.public.php)
           }
         ]
       },
@@ -105,6 +111,12 @@ module.exports = function(grunt) {
             cwd: path.resolve(paths.source.js),
             src: '**/*.json',
             dest: path.resolve(paths.dist.js)
+          },
+          {
+            expand: true,
+            cwd: path.resolve(paths.source.php),
+            src: '**/!(example-)*.php',
+            dest: path.resolve(paths.dist.php)
           }
         ]
       }
@@ -157,6 +169,12 @@ module.exports = function(grunt) {
           path.resolve(paths.source.patterns, '**/*.js')
         ],
         tasks: ['jshint:dev', 'build:dev:js', 'build:dev:patternlab', 'bsReload']
+      },
+      php: {
+        files: [
+          path.resolve(paths.source.php, '**')
+        ],
+        tasks: ['build:dev:patternlab', 'bsReload']
       },
       extensions: {
         files: [
@@ -489,10 +507,10 @@ module.exports = function(grunt) {
 
   /* css */
   grunt.registerTask('css', 'Generate pattern-specific CSS for all patterns', require('./scripts/css.js'));
-  
+
   /* map */
   grunt.registerTask('map', 'Retrieve some data from Google Maps and save it to a JSON file', require('./scripts/map.js'));
-  
+
   /* status */
   grunt.registerTask('status', 'Update the status of a pattern', require('./scripts/status.js'));
 
