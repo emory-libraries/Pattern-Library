@@ -5,6 +5,9 @@
   display: block;
   /* COMPONENT ACCESSORIES */
 }
+[disabled].input, .is-disabled.input {
+  cursor: not-allowed;
+}
 .-date.input::-webkit-inner-spin-button, .-time.input::-webkit-inner-spin-button {
   appearance: none;
   -webkit-appearance: none;
@@ -166,6 +169,9 @@
 }
 .input.is-invalid, .input.-text.is-invalid {
   border-color: #B82216;
+}
+.input[disabled], .input.is-disabled, .input.-text[disabled], .input.-text.is-disabled {
+  opacity: 0.5;
 }
 .input.-date::-webkit-datetime-edit, .input.-time::-webkit-datetime-edit {
   opacity: 0.5;
