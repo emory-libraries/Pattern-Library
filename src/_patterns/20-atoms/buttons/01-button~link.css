@@ -20,8 +20,8 @@
 .button {
   border: 1px solid #336BE6;
   background-color: #336BE6;
-  -webkit-transition: border 0.25s ease, background-color 0.25s ease, color 0.25s ease;
-  transition: border 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 .button {
   font-family: "Open Sans", sans-serif;
@@ -132,8 +132,8 @@
 .button.-success {
   border: 1px solid #257611;
   background-color: #257611;
-  -webkit-transition: border 0.25s ease, background-color 0.25s ease, color 0.25s ease;
-  transition: border 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 .button.-success {
   font-family: "Open Sans", sans-serif;
@@ -244,8 +244,8 @@
 .button.-caution {
   border: 1px solid #AB750C;
   background-color: #AB750C;
-  -webkit-transition: border 0.25s ease, background-color 0.25s ease, color 0.25s ease;
-  transition: border 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 .button.-caution {
   font-family: "Open Sans", sans-serif;
@@ -356,8 +356,8 @@
 .button.-error {
   border: 1px solid #B82216;
   background-color: #B82216;
-  -webkit-transition: border 0.25s ease, background-color 0.25s ease, color 0.25s ease;
-  transition: border 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 .button.-error {
   font-family: "Open Sans", sans-serif;
