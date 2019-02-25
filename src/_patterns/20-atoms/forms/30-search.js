@@ -18,7 +18,7 @@ Components.register('search', {
         isActive: false,
         isHover: false,
         isFocus: false,
-        isDisabled: false
+        isDisabled: true
       },
       input: {
         isHover: false,
@@ -30,10 +30,9 @@ Components.register('search', {
 
   methods: {
 
-    validate() {
+    validate( $event ) {
 
-      // Make sure a query string was entered before allowing a search.
-      return !_.isNil(this.query) && this.query !== '';
+      if( !this.valid ) $event.preventDefault();
 
     }
 
@@ -59,6 +58,13 @@ Components.register('search', {
     href() {
 
       return _.find(this.services, {id: this.source}).src.replace(this.param, this.query);
+
+    },
+
+    // Make sure a query was entered before searching.
+    valid() {
+
+      return !_.isNil(this.query) && this.query !== '';
 
     }
 
