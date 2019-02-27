@@ -26,6 +26,8 @@
   color: #5387F7;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
+  background: none;
+  border: none;
 }
 .link .icon {
   width: 24px;
