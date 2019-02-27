@@ -129,7 +129,7 @@ Components.extend('tab', {
 
 });
 
-// Create sample method for Subnav-Viewall component.
+// Create sample element(s) for Subnav-Viewall component.
 Components.extend('subnav-viewall', {
 
   mounted() {
@@ -146,6 +146,24 @@ Components.extend('subnav-viewall', {
         html: 'This would toggle some overflown content...'
       })
     ].forEach((el) => el.insertBefore(this.$el));
+
+  }
+
+});
+
+// Creates sample element(s) for Filter-Search component.
+Components.extend('filter-search', {
+
+  mounted() {
+
+    // Insert a sample list to help demonstrate how the component works.
+    const $list = $('<ul>').insertAfter(this.$el);
+
+    // Populate the list using our index items.
+    this.fuzzy.populate($list, {
+      template: '<li>:service</li>'
+    });
+
 
   }
 
