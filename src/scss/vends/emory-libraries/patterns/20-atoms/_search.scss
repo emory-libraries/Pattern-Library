@@ -19,7 +19,7 @@
 ///
 /// @output The native structure and skin of our search component
 ///
-/// @status construction
+/// @status review
 @mixin atoms-search ( $custom: () ) {
   
   // Extend the default skin.
@@ -37,6 +37,9 @@
     }
     &-button {
       @extend %atoms-search-button;
+    }
+    &-cancel {
+      @extend %atoms-search-cancel;
     }
     &-form {
       @extend %atoms-search-form;
