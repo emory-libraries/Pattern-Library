@@ -287,6 +287,7 @@ class Fuzzy {
       },
       tokenize: true,
       debug: true,
+      order: 'desc',
       callbacks: {
         sort( sorted ) {
 
@@ -608,26 +609,69 @@ class Fuzzy {
 
       },
 
+      // Convert keys for sorting into an array of keys.
+      keys( keys ) {
+
+        // Use keys given as an array.
+        if( _.isArray(keys) ) return keys;
+
+        // Extract keys from objects.
+        if( _.isPlainObject(keys) ) return Object.keys(keys);
+
+        // Otherwise, wrap primitive keys in an array.
+        return [keys];
+
+      },
+
+      // Extract sort orders for sorting.
+      orders( keys, orders = null ) {
+
+        // Make sure sort orders are the same length as keys.
+        if( _.isArray(keys) && _.isArray(orders) ) return keys.map((key, i) => orders[i]);
+
+        // Use default sort order for all keys.
+        if( _.isArray(keys) && _.isNil(orders) ) return keys.map(() => self.config.order);
+
+        // Extract sort orders from object keys.
+        if( _.isPlainObject(keys) ) return Object.keys(keys);
+
+        // Use the given sort order.
+        if( !_.isNil(orders) ) return [orders];
+
+        // Otherwise, use default sort order.
+        return [self.config.order];
+
+      },
+
       // Sort data on a key.
-      sort( data, key, order = 'DESC' ) {
+      sort( data, keys, orders = null ) {
+
+        // Get keys and sort orders.
+        keys = this.keys( keys );
+        orders = this.orders( keys, orders );
 
         // Sort the data.
-        let sorted = _.sortBy(data, key);
-
-        // Apply sort order.
-        if( order == 'DESC' ) sorted = _.reverse(sorted);
-
-        // Return sorted data.
-        return sorted;
+        return _.orderBy(data, keys, orders);
 
       }
 
     };
 
-    // Initialize state.
-    this.searched = false;
-    this.filtered = false;
-    this.sorted = false;
+    // Initialize method-specific data.
+    this.sorting = {
+      sorted: false,
+      keys: [],
+      orders: [],
+      unsorted: null
+    };
+    this.filtering = {
+      filtered: false,
+      unfiltered: null
+    };
+    this.searching = {
+      searched: false,
+      unsearched: null
+    };
 
     // Initialize event listeners.
     this.listeners = {
@@ -652,9 +696,6 @@ class Fuzzy {
       // Fired when any errors are thrown.
       error: []
     };
-
-    // Initialize errors.
-    this.errors = [];
 
     // Initialize index.
     this.index = _.isArray(index) ? this.utils.reference(index) : this.utils.index(index);
@@ -729,49 +770,27 @@ class Fuzzy {
 
   }
 
-  // Throw an error.
-  error( error ) {
-
-    // Trigger the error event.
-    this.trigger('error', error);
-
-    // Call the error callback.
-    if( this.config.callbacks.error ) this.config.callbacks.error.call(this, error);
-
-    // Make the method chainable.
-    return this;
-
-  }
-
   // Sort the data.
-  sort( key, order = 'DESC' ) {
+  sort( keys, orders = null ) {
+
+    // Get keys and orders.
+    keys = this.utils.keys(keys);
+    orders = this.utils.orders(keys, orders);
+
+    // Set sorting data.
+    this.sorting.sorted = true;
+    this.sorting.unsorted = this.sorting.unsorted || _.cloneDeepOwn(this.data);
+    this.sorting.keys = keys;
+    this.sorting.orders = orders;
 
     // Trigger the sort event.
-    this.trigger('sorting', {key, order});
-
-    // Set the sort flag.
-    this.sorted = true;
-
-    // Capture the unsorted data.
-    const unsorted = _.cloneDeepOwn(this.data);
+    this.trigger('sorting', _.zipObject(keys, orders));
 
     // Sort the data.
-    this.data = this.utils.sort(this.data, key, order);
-
-    // Initialize unsorted data.
-    this.data.__unsorted = unsorted.__unsorted || [];
-
-    // Get the index for the unsorted data.
-    let index = _.findIndex(this.data.__unsorted, (item) => item.key == key);
-
-    // Handle unsorted data without an index.
-    if( index === -1 ) index = this.data.__unsorted.length > 0 ? this.data.__unsorted.length : 0;
-
-    // Save the unsorted data.
-    this.data.__unsorted[index] = {key, order, data: unsorted};
+    this.data = this.utils.sort(this.data, keys, orders);
 
     // Trigger the sorted event.
-    this.trigger('sorted', this.data, {key, order});
+    this.trigger('sorted', this.data, _.zipObject(keys, orders));
 
     // Call the sort callback.
     if( this.config.callbacks.sort ) this.config.callbacks.sort.call(this, this.data);
@@ -782,41 +801,16 @@ class Fuzzy {
   }
 
   // Unsort the data.
-  unsort( key ) {
+  unsort( ) {
 
-    // Reset the sort flag.
-    this.sorted = false;
+    // Unsort the data.
+    this.data = this.sorting.unsorted || this.data;
 
-    // Unsort by key.
-    if( key && _.get(this.data, '__unsorted') ) {
-
-      // Get the unsorted data.
-      const unsorted = _.get(this.data, '__unsorted');
-
-      // Get the unsorted data by key.
-      const data = _.filter(unsorted, {key});
-
-      // Unsort the data.
-      this.data = data.data;
-
-      // Remove all the unsorted data after it.
-      this.data.__unsorted = _.slice(unsorted, 0, _.findIndex(unsorted, data));
-
-      // Delete any unsorted data if none left.
-      if( this.data.__unsorted.length === 0 ) delete this.data.__unsorted;
-
-    }
-
-    // Otherwise, unsort all data.
-    else {
-
-      // Unsort the data.
-      this.data = _.get(this.data, '__unsorted[0].data', this.data);
-
-      // Delete any unsorted data.
-      delete this.data.__unsorted;
-
-    }
+    // Reset sorting data.
+    this.sorting.sorted = false;
+    this.sorting.unsorted = null;
+    this.sorting.keys = [];
+    this.sorting.orders = [];
 
     // Trigger the unsorted event.
     this.trigger('unsorted', this.data);
@@ -835,20 +829,12 @@ class Fuzzy {
     // Extract only valid filters.
     filters = _.filter(filters, (filter) => _.isFunction(filter));
 
-    // Make sure at least one filter was given.
-    if( filters.length === 0 ) return this.error({
-      process: 'filter',
-      message: 'No filter methods were given.'
-    });
-
     // Trigger filter event.
     this.trigger('filter', {filters});
 
-    // Set the filter flag.
-    this.filtered = true;
-
-    // Capture unfiltered data.
-    const unfiltered = _.cloneDeep(this.data);
+    // Set filtering data..
+    this.filtering.filtered = true;
+    this.filtering.unfiltered = this.filtering.unfiltered || _.cloneDeepOwn(this.data);
 
     // Apply filters to the data.
     const filtered = _.filter(this.data, (item) => {
@@ -867,14 +853,11 @@ class Fuzzy {
     // Save filtered data.
     this.data = filtered;
 
-    // Save unfiltered.
-    this.data.__unfiltered = unfiltered;
-
     // Trigger filtered event.
     this.trigger('filtered', filtered, filteredout, {filters});
 
     // Call the filter callback.
-    if( this.config.callbacks.filter ) this.config.callbacks.filter.call(this, this.data);
+    if( this.config.callbacks.filter ) this.config.callbacks.filter.call(this, filtered, filteredout);
 
     // Make the method chainable.
     return this;
@@ -884,20 +867,18 @@ class Fuzzy {
   // Unfilter the data.
   unfilter( ) {
 
-    // Reset the filter flag.
-    this.filtered = false;
-
     // Unfilter the data.
-    this.data = _.get(this.data, '__unfiltered'. this.data);
+    this.data = this.filtering.unfiltered || this.data;
 
-    // Delete any unfiltered data.
-    delete this.data.__unfiltered;
+    // Reset filter data.
+    this.filtering.filtered = false;
+    this.filtering.unfiltered = null;
 
     // Trigger the unfiltered event.
     this.trigger('unfiltered', this.data);
 
     // Call the filter callback.
-    if( this.config.callbacks.filter ) this.config.callbacks.filter.call(this, this.data);
+    if( this.config.callbacks.filter ) this.config.callbacks.filter.call(this, this.data, []);
 
     // Make the method chainable.
     return this;
@@ -913,11 +894,9 @@ class Fuzzy {
     // Ignore searches that don't match the minimum character length.
     if( query.length < this.config.chars ) return this.unsearch();
 
-    // Set searched flag.
-    this.searched = true;
-
-    // Capture unsearched data.
-    const unsearched = _.cloneDeepOwn(this.data);
+    // Set searching data.
+    this.searching.searched = true;
+    this.searching.unsearched = this.searching.unsearched || _.cloneDeepOwn(this.data);
 
     // Score all index items across given keys or all keys if none are given.
     const scored = this.index.map((item) => {
@@ -989,7 +968,7 @@ class Fuzzy {
     let results = _.filter(scored, (result) => result.__score > 0);
 
     // Sort the results in descending order based on score.
-    if( this.config.sort ) results = this.utils.sort(results, '__score', 'DESC');
+    if( this.config.sort ) results = this.utils.sort(results, {'__score': 'desc'});
 
     // Remove scoring if not enabled and not in debug mode.
     if( !this.config.scoring && !this.config.debug ) {
@@ -1016,15 +995,6 @@ class Fuzzy {
     // Save results data.
     this.data = results;
 
-    // Initialize unsearched data.
-    this.data.__unsearched = unsearched.__unsearched || [];
-
-    // Delete any unsearched data.
-    delete unsearched.__unsearched;
-
-    // Save unsearched data.
-    if( this.data.__unsearched.length === 0 ) this.data.__unsearched = unsearched;
-
     // Make the method chainable.
     return this;
 
@@ -1033,14 +1003,12 @@ class Fuzzy {
   // Unsearch the data.
   unsearch( ) {
 
-    // Reset the search flag.
-    this.searched = false;
-
     // Unsearch the data.
-    this.data = _.get(this.data, '__unsearched', this.data);
+    this.data = this.searching.unsearched ||this.data;
 
-    // Delete any unsearched data.
-    delete this.data.__unsearched;
+    // Reset searching data.
+    this.searching.searched = false;
+    this.searching.unsearched = null;
 
     // Delete any score data.
     delete this.data.__score;
@@ -1060,7 +1028,8 @@ class Fuzzy {
   // Populate a list element with the index items.
   populate( list, options = {
     template: '<li>:data</li>',
-    props: {}
+    props: {},
+    css: {}
   } ) {
 
     // Find template parameters.
@@ -1077,6 +1046,9 @@ class Fuzzy {
 
       // Create the element.
       const $el = this.index[i].__el = item.__el = $(template, options.props);
+
+      // Add CSS to the element.
+      if( !_.isEmpty(options.css) ) $el.css(options.css);
 
       // Return the element.
       return $el;
