@@ -1,3 +1,7 @@
+{{#if passthroughs}}
+  {{assign 'index' (passthrough index passthroughs)}}
+{{/if}}
+
 <eul-filter-search inline-template
                    :index="{{JSONstringify index}}"
                    :keys="{{default (JSONstringify keys) '[]'}}"
@@ -27,6 +31,7 @@
            @blur.native="input.isFocus = false"
            @mouseover.native="input.isHover = true"
            @mouseleave.native="input.isHover = false"
+           @keypress.enter="search"
            class="input -search{{#if mode}} -{{mode}}{{/if}} search-box"
            :class="{
             'is-disabled': input.isDisabled,
@@ -35,7 +40,7 @@
            }"
            :disabled="input.isDisabled">
 
-    <button @click="filter"
+    <button @click="search"
             @mousedown.native="button.isActive = true"
             @mouseup.native="button.isActive = false"
             @keydown.native.enter="button.isActive = true"
@@ -60,7 +65,7 @@
 
     <a @click="cancel"
        class="link search-cancel"
-       v-show="fuzzy.searched">
+       v-show="fuzzy.searching.searched">
       Cancel
     </a>
 

@@ -38,7 +38,10 @@ Components.register('filter-search', {
 
   methods: {
 
-    filter() {
+    search() {
+
+      // Reset search results.
+      this.fuzzy.unsearch();
 
       // Make sure a query was entered before filtering.
       if( this.valid ) {
