@@ -338,10 +338,23 @@ class Fuzzy {
           });
 
         },
-        error( error ) {
+        page( active, inactive, data ) {
 
-          // Log an error when debugging.
-          if( this.config.debug ) console.log(error);
+          // Show active.
+          _.each(active.map((item) => item.__el), ($el) => {
+
+            // Show.
+            if( $el ) $el.show();
+
+          });
+
+          // Hide inactive.
+          _.each(inactive.map((item) => item.__el), ($el) => {
+
+            // Hide.
+            if( $el ) $el.hide();
+
+          });
 
         }
       }
@@ -653,6 +666,80 @@ class Fuzzy {
         // Sort the data.
         return _.orderBy(data, keys, orders);
 
+      },
+
+      // Impose a limit on the number of items in the data set.
+      limit( data, limit ) {
+
+        return _.chunk(data, limit);
+
+      },
+
+      // Get data on a given page from a paginated data set.
+      onPage( pages, page = 1 ) {
+
+        return pages[page - 1];
+
+      },
+
+      // Get data not on a given page from a paginated data set.
+      offPage( pages, page = 1 ) {
+
+        return _.concat([], ..._.slice(pages, page));
+
+      },
+
+      // Gets the next page in a paginated data set.
+      nextPage( pages, current ) {
+
+        return current == pages.length ? false : current + 1;
+
+      },
+
+      // Gets the previous page in a paginated data set.
+      previousPage( pages, current ) {
+
+        return current === 0 ? false : current - 1;
+
+      },
+
+      // Paginate a set of data.
+      paginate( data, limit, page = 1 ) {
+
+        // Impose the limit on the data set.
+        const pages = this.limit(data, limit);
+
+        // Return data.
+        return {
+          limit,
+          unpaginated: data,
+          pages,
+          current: page,
+          next: this.nextPage(page),
+          previous: this.previousPage(page),
+          count: pages.length,
+          onPage: this.onPage(pages, page),
+          offPage: this.offPage(pages, page)
+        };
+
+      },
+
+      // Unpaginate a set of data.
+      unpaginate( data ) {
+
+        // Return data.
+        return {
+          limit: null,
+          unpaginated: null,
+          pages: null,
+          current: null,
+          next: null,
+          previous: null,
+          count: null,
+          onPage: data,
+          offPage: []
+        };
+
       }
 
     };
@@ -671,6 +758,28 @@ class Fuzzy {
     this.searching = {
       searched: false,
       unsearched: null
+    };
+    this.paging = {
+      paginated: false,
+      unpaginated: null,
+      pages: null,
+      limit: null,
+      current: null,
+      next: null,
+      previous: null,
+      count: null,
+      update( data ) {
+
+        // Set paging data.
+        this.unpaged = this.unpaged || data.unpaged;
+        this.pages = data.pages;
+        this.limit = data.limit;
+        this.current = data.current;
+        this.next = data.next;
+        this.previous = data.previous;
+        this.count = data.count;
+
+      }
     };
 
     // Initialize event listeners.
@@ -693,8 +802,12 @@ class Fuzzy {
       sorted: [],
       // Fired when all sorted is removed.
       unsorted: [],
-      // Fired when any errors are thrown.
-      error: []
+      // Fired when paging is first initiated.
+      paging: [],
+      // Fired when a new page is becomes active.
+      paged: [],
+      // Fired when paging is removed.
+      unpaged: []
     };
 
     // Initialize index.
@@ -777,6 +890,9 @@ class Fuzzy {
     keys = this.utils.keys(keys);
     orders = this.utils.orders(keys, orders);
 
+     // Temporarily unpaginate data if paginated.
+    if( this.paging.paginated ) this.data = this.paging.unpaginated;
+
     // Set sorting data.
     this.sorting.sorted = true;
     this.sorting.unsorted = this.sorting.unsorted || _.cloneDeepOwn(this.data);
@@ -787,13 +903,30 @@ class Fuzzy {
     this.trigger('sorting', _.zipObject(keys, orders));
 
     // Sort the data.
-    this.data = this.utils.sort(this.data, keys, orders);
+    let sorted = this.utils.sort(this.data, keys, orders);
+
+    // Reapply pagination if it was temporarily removed.
+    if( this.paging.paginated ) {
+
+      // Get pagination data.
+      const pagination = this.utils.paginate(sorted, this.paging.limit);
+
+      // Update pagination data.
+      this.paging.update(pagination);
+
+      // Updates sorted  with pagination data.
+      sorted = pagination.onPage;
+
+    }
+
+    // Save the data.
+    this.data = sorted;
 
     // Trigger the sorted event.
-    this.trigger('sorted', this.data, _.zipObject(keys, orders));
+    this.trigger('sorted', sorted, _.zipObject(keys, orders));
 
     // Call the sort callback.
-    if( this.config.callbacks.sort ) this.config.callbacks.sort.call(this, this.data);
+    if( this.config.callbacks.sort ) this.config.callbacks.sort.call(this, sorted);
 
     // Make the method chainable.
     return this;
@@ -812,6 +945,20 @@ class Fuzzy {
     this.sorting.keys = [];
     this.sorting.orders = [];
 
+    // Reapply pagination if it was previously applied.
+    if( this.paging.paginated ) {
+
+      // Get pagination data.
+      const pagination = this.utils.paginate(this.data, this.paging.limit);
+
+      // Update pagination data.
+      this.paging.update(pagination);
+
+      // Updates data according to pagination data.
+      this.data = pagination.onPage;
+
+    }
+
     // Trigger the unsorted event.
     this.trigger('unsorted', this.data);
 
@@ -826,6 +973,9 @@ class Fuzzy {
   // Filter the data.
   filter( ...filters ) {
 
+    // Temporarily unpaginate data if paginated.
+    if( this.paging.paginated ) this.data = this.paging.unpaginated;
+
     // Extract only valid filters.
     filters = _.filter(filters, (filter) => _.isFunction(filter));
 
@@ -837,18 +987,33 @@ class Fuzzy {
     this.filtering.unfiltered = this.filtering.unfiltered || _.cloneDeepOwn(this.data);
 
     // Apply filters to the data.
-    const filtered = _.filter(this.data, (item) => {
+    let filtered = _.filter(this.data, (item) => {
 
       // Return all items that passes all filters.
       return _.every(filters.map((filter) => filter(item)), (result) => result === true);
 
     });
-    const filteredout = _.filter(this.data, (item) => {
+    let filteredout = _.filter(this.data, (item) => {
 
       // Return all items that failed one or more filters.
       return _.every(filters.map((filter) => filter(item)), (result) => result !== true);
 
     });
+
+    // Reapply pagination if it was temporarily removed.
+    if( this.paging.paginated ) {
+
+      // Get pagination data.
+      const pagination = this.utils.paginate(filtered, this.paging.limit);
+
+      // Update pagination data.
+      this.paging.update(pagination);
+
+      // Updates filtered and filtered out with pagination data.
+      filtered = pagination.onPage;
+      filteredout = filteredout.concat(pagination.offPage);
+
+    }
 
     // Save filtered data.
     this.data = filtered;
@@ -874,6 +1039,20 @@ class Fuzzy {
     this.filtering.filtered = false;
     this.filtering.unfiltered = null;
 
+    // Reapply pagination if it was previously applied.
+    if( this.paging.paginated ) {
+
+      // Get pagination data.
+      const pagination = this.utils.paginate(this.data, this.paging.limit);
+
+      // Update pagination data.
+      this.paging.update(pagination);
+
+      // Updates data according to pagination data.
+      this.data = pagination.onPage;
+
+    }
+
     // Trigger the unfiltered event.
     this.trigger('unfiltered', this.data);
 
@@ -887,6 +1066,9 @@ class Fuzzy {
 
   // Search data for a given query, optionally limiting the keys that are searched.
   search( query, keys = [] ) {
+
+    // Temporarily unpaginate data if paginated.
+    if( this.paging.paginated ) this.data = this.paging.unpaginated;
 
     // Trigger searching event.
     this.trigger('searching', {query, keys});
@@ -983,6 +1165,21 @@ class Fuzzy {
 
     }
 
+    // Reapply pagination if it was temporarily removed.
+    if( this.paging.paginated ) {
+
+      // Get pagination data.
+      const pagination = this.utils.paginate(results, this.paging.limit);
+
+      // Update pagination data.
+      this.paging.update(pagination);
+
+      // Updates results and nonresults with pagination data.
+      results = pagination.onPage;
+      nonresults = nonresults.concat(pagination.offPage);
+
+    }
+
     // Trigger searched event.
     this.trigger('searched', results, nonresults, {query, keys});
 
@@ -1004,7 +1201,7 @@ class Fuzzy {
   unsearch( ) {
 
     // Unsearch the data.
-    this.data = this.searching.unsearched ||this.data;
+    this.data = this.searching.unsearched || this.data;
 
     // Reset searching data.
     this.searching.searched = false;
@@ -1014,11 +1211,123 @@ class Fuzzy {
     delete this.data.__score;
     delete this.data.__results;
 
+    // Reapply pagination if it was previously applied.
+    if( this.paging.paginated ) {
+
+      // Get pagination data.
+      const pagination = this.utils.paginate(this.data, this.paging.limit);
+
+      // Update pagination data.
+      this.paging.update(pagination);
+
+      // Updates data according to pagination data.
+      this.data = pagination.onPage;
+
+    }
+
     // Trigger the unsearched event.
     this.trigger('unsearched', this.data);
 
     // Call the search callback.
     if( this.config.callbacks.search ) this.config.callbacks.search.call(this, this.data, []);
+
+    // Make the method chainable.
+    return this;
+
+  }
+
+  // Paginates the data set.
+  paginate( limit ) {
+
+    // Trigger paging event.
+    this.trigger('paging', {limit});
+
+    // Remove any paging if it already exists.
+    if( this.paging.paginated ) this.data = this.paging.unpaginated;
+
+    // Get pagination data.
+    const pagination = this.utils.paginate(this.data, limit);
+
+    // Set paging data.
+    this.paging.paginated = true;
+    this.paging.update(pagination);
+
+    // Get on page and off page data.
+    const {onPage, offPage} = pagination;
+
+    // Save the on page data.
+    this.data = onPage;
+
+    // Trigger paged event.
+    this.trigger('paged', onPage, offPage, pagination);
+
+    // Call the paginated callback.
+    if( this.config.callbacks.paginated ) this.config.callbacks.paginated.call(this, onPage, offPage, pagination);
+
+    // Make the method chainable.
+    return this;
+
+  }
+
+  // Unpaginate the data.
+  unpaginate() {
+
+    // Unpaginate the data.
+    this.data = this.paging.unpaginated || this.data;
+
+    // Get unpagination data.
+    const unpagination = this.utils.unpaginate(this.data);
+
+    // Reset paging data.
+    this.paging.paginated = false;
+    this.paging.unpaginated = null;
+    this.paging.update(unpagination);
+
+    // Get on page and off page data.
+    const {onPage, offPage} = unpagination;
+
+    // Trigger unpaged event.
+    this.trigger('unpaged', onPage, offPage, unpagination);
+
+    // Call the page callback.
+    if( this.config.callbacks.page ) this.config.callbacks.page.call(this, onPage, offPage, unpagination);
+
+    // Make the method chainable.
+    return this;
+
+  }
+
+  // Jumps to a page in a paginated data set.
+  page( page ) {
+
+    // Do nothing if pagination was not previously applied.
+    if( !this.paging.paginated ) return this;
+
+    // Enable page keywords.
+    switch( page ) {
+      case 'next': page = this.utils.nextPage(this.paging.current); break;
+      case 'previous': page = this.utils.previousPage(this.paging.current); break;
+      case 'last': page = this.paging.count; break;
+      case 'first': page = 1; break;
+    }
+
+    // Get pagination data.
+    const pagination = this.utils.paginate(this.data, this.paging.limit, page);
+
+    // Update paging data.
+    this.paging.update(pagination);
+
+    // Get on page and off page data.
+    const {onPage, offPage} = pagination;
+
+    // Save the on page data.
+    this.data = onPage;
+
+    // Trigger paged event.
+    this.trigger('paged', onPage, offPage, pagination);
+
+    // Call the page callback.
+    if( this.config.callbacks.page ) this.config.callbacks.page.call(this, onPage, offPage, pagination);
 
     // Make the method chainable.
     return this;
