@@ -45,6 +45,9 @@ The filter search atom allows you to include a search filter within another patt
 | button.active             | `Boolean` | Sets the search button's state to **active**.                                                                                       | `true` or `false`       | `false`     |
 | button.hover              | `Boolean` | Sets the search button's state to **hovered**.                                                                                      | `true` or `false`       | `false`     |
 | button.focus              | `Boolean` | Sets the search button's state to **focused**.                                                                                      | `true` or `false`       | `false`     |
+| passthroughs                | `Object`  | An optional set of data transformations to be applied to each `index` item, where *keys* indicate the key that the transformed value will be assigned to within the `index` item and *values* consists of a set of tranformations to be applied.      |                         |             |
+| passthroughs.`key`          | `Object`  | Some transformations that should be applied to some target data within each `index` item, where *keys* indicate the Handlebars helper method to be used during transformation and *values* consists of a set of arguments to be passed to the helper. |                         |             |
+| passthroughs.`key`.`helper` | `Array`   | Some arguments to be passed to the Handlebars helper method, where keys from each `index` item can be bound as an argument using the syntax `:key`, i.e. arguments for a `date` transformation may look like `[':date', 'YYYY']`.                     |                         |             |
 
 
 ## Classes
