@@ -63,3 +63,6 @@
 .link.-popular:active, .link.-popular.is-active {
   color: #336BE6;
 }
+.link.-underline {
+  text-decoration: underline;
+}
