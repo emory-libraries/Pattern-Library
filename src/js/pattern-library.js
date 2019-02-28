@@ -3,9 +3,7 @@ const Clipboard = require('clipboard');
 const Tippy = require('tippy.js');
 const jQuery = require('jquery');
 const $ = jQuery;
-
-// Export globals.
-global.jQuery = global.$ = jQuery;
+const moment = require('moment');
 
 // Load libraries.
 require('velocity-animate');
@@ -151,7 +149,7 @@ Components.extend('subnav-viewall', {
 
 });
 
-// Creates sample element(s) for Filter-Search component.
+// Create sample element(s) for Filter-Search component.
 Components.extend('filter-search', {
 
   mounted() {
@@ -164,6 +162,35 @@ Components.extend('filter-search', {
       template: '<li>:service</li>'
     });
 
+
+  }
+
+});
+
+// Create sample element(s) for Filter-Dropdown component.
+Components.extend('filter-dropdown', {
+
+  mounted() {
+
+    // Insert a sample list to help demonstrate how the component works.
+    const $list = $('<div>', {
+      class: 'pl-grid'
+    }).css({
+      '--columns-l': '2',
+      '--columns-m': '1',
+      '--columns-s': '1',
+    }).insertAfter(this.$el);
+
+    // Populate the list using our index items.
+    this.fuzzy.populate($list, {
+      template: `
+      <div class="pl-block">
+        <h5 class="pl-title">:title</h6>
+        <p class="pl-date">:date</p>
+        <p class="pl-description">:description</p>
+      </div>`,
+      css: {margin: 0}
+    });
 
   }
 
