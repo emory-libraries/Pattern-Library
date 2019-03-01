@@ -24,4 +24,12 @@ const helpers = glob(path.resolve(__dirname, 'helpers/*.js')).map((helper) => {
 }, {});
 
 // Export helpers.
-module.exports = _.extend(require('handlebars-helpers')(), helpers, {});
+module.exports = (engine) => {
+
+  return _.extend(
+    require('handlebars-helpers')(),
+    require('handlebars-layouts')(engine),
+    helpers
+  );
+
+};

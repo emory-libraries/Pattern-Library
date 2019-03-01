@@ -69,6 +69,7 @@
     "handlebars": "^4.0.12",
     "handlebars-helper-md": "^0.2.0",
     "handlebars-helpers": "^0.10.0",
+    "handlebars-layouts": "^3.1.4",
     "handlebars-utils": "^1.0.6",
     "hex2dec": "^1.1.2",
     "inquirer": "^6.2.2",

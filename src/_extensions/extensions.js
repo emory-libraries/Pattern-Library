@@ -1,12 +1,12 @@
 // Load dependencies.
 const _  = require('lodash');
 
-// Load extensions.
-const helpers = require('./_helpers.js');
-const partials = require('./_partials.js');
-
 // Initialize extensions.
 module.exports = (engine) => {
+
+  // Load extensions.
+  const helpers = require('./_helpers.js')(engine);
+  const partials = require('./_partials.js');
 
   // Load helpers.
   _.forIn(helpers, (helper, name) => {
