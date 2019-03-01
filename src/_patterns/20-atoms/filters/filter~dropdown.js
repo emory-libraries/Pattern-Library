@@ -46,7 +46,7 @@ Components.register('filter-dropdown', {
       // Clear the search results.
       this.fuzzy.unfilter();
 
-      // Clear the query.
+      // Clear the selection.
       this.selected = this.defaults.selected || '';
 
     }
