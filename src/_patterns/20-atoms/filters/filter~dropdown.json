@@ -127,9 +127,5 @@
       "pubDate": "Thu, 27 Sep 2018 16:04:00 -0400",
       "guid": "https://web.library.emory.edu/news-events/news/archives/2018/bound-with-history-common-thread-emory.html"
                 }
-  ],
-  "button": {
-    "label": "Search",
-    "icon": "material-search"
-  }
+  ]
 }
