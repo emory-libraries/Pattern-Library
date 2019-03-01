@@ -35,6 +35,8 @@ The button form atom allows you to include an input button within another patter
 | label           | `String`  | The text to be displayed on the button.                   |                                         |           |
 | type            | `String`  | Inidicates the type of input button.                      | `submit`, `reset`, or `button`          | `button`  |
 | hollow          | `Boolean` | Whether the button should use its hollow style.           | `true` or `false`                       | `false`   |
+| pill            | `Boolean` | Whether the button should use its pill style.             | `true` or `false`                       | `false`   |
+| uncapitalize    | `Boolean` | Whether the button `label` should use its default casing. | `true` or `false`                       | `false`                 |
 | active          | `Boolean` | Whether the button state is **active**.                   | `true` or `false`                       | `false`   |
 | hover           | `Boolean` | Whether the button state is **hovered** or **focused**.   | `true` or `false`                       | `false`   |
 | focus           | `Boolean` | Whether the button state is **hovered** or **focused**.   | `true` or `false`                       | `false`   |
@@ -48,6 +50,7 @@ The button form atom allows you to include an input button within another patter
 | Class           | Description                                 |
 |-----------------|---------------------------------------------|
 | `-hollow`       | Uses a hollow version of the button.        |
+| `-pill`         | Uses a pill version of the button.          |
 
 ### States
 

@@ -8,9 +8,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-left: 25px;
-  padding-right: 25px;
-  height: 50px;
   cursor: pointer;
 }
 [disabled].nav-button, .is-disabled.nav-button {

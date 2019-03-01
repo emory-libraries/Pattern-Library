@@ -8,10 +8,19 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-left: 25px;
-  padding-right: 25px;
-  height: 50px;
   cursor: pointer;
+}
+.button.-error-group, .button.-caution-group, .button.-success-group, .button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.-inline.button.-error-group, .-inline.button.-caution-group, .-inline.button.-success-group, .-inline.button-group {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 [disabled].button, .is-disabled.button {
   cursor: not-allowed;
@@ -22,6 +31,9 @@
   background-color: #336BE6;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 50px;
 }
 .button {
   font-family: "Open Sans", sans-serif;
@@ -59,6 +71,12 @@
 }
 .button.-hollow .icon svg {
   fill: #336BE6;
+}
+.button.-pill {
+  border-radius: 25px;
+}
+.button.-uncapitalize {
+  text-transform: none;
 }
 .button:hover, .button:focus, .button.is-hover, .button.is-focus {
   border-color: #004990;
@@ -129,11 +147,21 @@
 .button[disabled], .button.is-disabled {
   opacity: 0.5;
 }
+.button-group {
+  padding-top: 15px;
+}
+.button-group > * {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
 .button.-success {
   border: 1px solid #257611;
   background-color: #257611;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 50px;
 }
 .button.-success {
   font-family: "Open Sans", sans-serif;
@@ -171,6 +199,12 @@
 }
 .button.-success.-hollow .icon svg {
   fill: #257611;
+}
+.button.-success.-pill {
+  border-radius: 25px;
+}
+.button.-success.-uncapitalize {
+  text-transform: none;
 }
 .button.-success:hover, .button.-success:focus, .button.-success.is-hover, .button.-success.is-focus {
   border-color: #1c590d;
@@ -241,11 +275,21 @@
 .button.-success[disabled], .button.-success.is-disabled {
   opacity: 0.5;
 }
+.button.-success-group {
+  padding-top: 15px;
+}
+.button.-success-group > * {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
 .button.-caution {
   border: 1px solid #AB750C;
   background-color: #AB750C;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 50px;
 }
 .button.-caution {
   font-family: "Open Sans", sans-serif;
@@ -283,6 +327,12 @@
 }
 .button.-caution.-hollow .icon svg {
   fill: #AB750C;
+}
+.button.-caution.-pill {
+  border-radius: 25px;
+}
+.button.-caution.-uncapitalize {
+  text-transform: none;
 }
 .button.-caution:hover, .button.-caution:focus, .button.-caution.is-hover, .button.-caution.is-focus {
   border-color: #805809;
@@ -353,11 +403,21 @@
 .button.-caution[disabled], .button.-caution.is-disabled {
   opacity: 0.5;
 }
+.button.-caution-group {
+  padding-top: 15px;
+}
+.button.-caution-group > * {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
 .button.-error {
   border: 1px solid #B82216;
   background-color: #B82216;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 50px;
 }
 .button.-error {
   font-family: "Open Sans", sans-serif;
@@ -395,6 +455,12 @@
 }
 .button.-error.-hollow .icon svg {
   fill: #B82216;
+}
+.button.-error.-pill {
+  border-radius: 25px;
+}
+.button.-error.-uncapitalize {
+  text-transform: none;
 }
 .button.-error:hover, .button.-error:focus, .button.-error.is-hover, .button.-error.is-focus {
   border-color: #8a1a11;
@@ -464,4 +530,11 @@
 }
 .button.-error[disabled], .button.-error.is-disabled {
   opacity: 0.5;
+}
+.button.-error-group {
+  padding-top: 15px;
+}
+.button.-error-group > * {
+  margin-right: 15px;
+  margin-bottom: 15px;
 }

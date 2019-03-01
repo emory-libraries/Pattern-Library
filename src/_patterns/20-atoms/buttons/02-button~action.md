@@ -36,6 +36,8 @@ The button action atom allows you to include an interactive button within anothe
 | icon.id         | `String`  | The ID of the icon to be displayed.                       |                                         |           |
 | icon.position   | `String`  | Where to display the icon relative to the button's text.  | `left` or `right`                       | `left`    |
 | hollow          | `Boolean` | Whether the button should use its hollow style.           | `true` or `false`                       | `false`   |
+| pill            | `Boolean` | Whether the button should use its pill style.             | `true` or `false`                       | `false`   |
+| uncapitalize    | `Boolean` | Whether the button `label` should use its default casing. | `true` or `false`                       | `false`                 |
 | active          | `Boolean` | Whether the button state is **active**.                   | `true` or `false`                       | `false`   |
 | hover           | `Boolean` | Whether the button state is **hovered** or **focused**.   | `true` or `false`                       | `false`   |
 | focus           | `Boolean` | Whether the button state is **hovered** or **focused**.   | `true` or `false`                       | `false`   |
@@ -49,6 +51,7 @@ The button action atom allows you to include an interactive button within anothe
 | Class           | Description                                 |
 |-----------------|---------------------------------------------|
 | `-hollow`       | Uses a hollow version of the button.        |
+| `-pill`         | Uses a pill version of the button.          |
 
 ### States
 
