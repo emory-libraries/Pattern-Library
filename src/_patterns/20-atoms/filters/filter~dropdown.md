@@ -50,7 +50,7 @@ The filter dropdown atom allows you to include a dropdown filter within another 
 
 | Class         | Description                                                                                                       |
 |---------------|-------------------------------------------------------------------------------------------------------------------|
-| `-inline`     | Indicates that the dropwodnw should use its inline style.                                                         |
+| `-inline`     | Indicates that the dropdown should use its inline style.                                                          |
 
 ### State
 
