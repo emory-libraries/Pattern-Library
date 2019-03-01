@@ -76,7 +76,7 @@
   border-radius: 25px;
 }
 .button.-uncapitalize {
-  text-transform: none;
+  text-transform: none !important;
 }
 .button:hover, .button:focus, .button.is-hover, .button.is-focus {
   border-color: #004990;
@@ -147,12 +147,10 @@
 .button[disabled], .button.is-disabled {
   opacity: 0.5;
 }
-.button-group {
-  padding-top: 15px;
-}
 .button-group > * {
   margin-right: 15px;
-  margin-bottom: 15px;
+  margin-top: 7.5px;
+  margin-bottom: 7.5px;
 }
 .button.-success {
   border: 1px solid #257611;
@@ -204,7 +202,7 @@
   border-radius: 25px;
 }
 .button.-success.-uncapitalize {
-  text-transform: none;
+  text-transform: none !important;
 }
 .button.-success:hover, .button.-success:focus, .button.-success.is-hover, .button.-success.is-focus {
   border-color: #1c590d;
@@ -275,12 +273,10 @@
 .button.-success[disabled], .button.-success.is-disabled {
   opacity: 0.5;
 }
-.button.-success-group {
-  padding-top: 15px;
-}
 .button.-success-group > * {
   margin-right: 15px;
-  margin-bottom: 15px;
+  margin-top: 7.5px;
+  margin-bottom: 7.5px;
 }
 .button.-caution {
   border: 1px solid #AB750C;
@@ -332,7 +328,7 @@
   border-radius: 25px;
 }
 .button.-caution.-uncapitalize {
-  text-transform: none;
+  text-transform: none !important;
 }
 .button.-caution:hover, .button.-caution:focus, .button.-caution.is-hover, .button.-caution.is-focus {
   border-color: #805809;
@@ -403,12 +399,10 @@
 .button.-caution[disabled], .button.-caution.is-disabled {
   opacity: 0.5;
 }
-.button.-caution-group {
-  padding-top: 15px;
-}
 .button.-caution-group > * {
   margin-right: 15px;
-  margin-bottom: 15px;
+  margin-top: 7.5px;
+  margin-bottom: 7.5px;
 }
 .button.-error {
   border: 1px solid #B82216;
@@ -460,7 +454,7 @@
   border-radius: 25px;
 }
 .button.-error.-uncapitalize {
-  text-transform: none;
+  text-transform: none !important;
 }
 .button.-error:hover, .button.-error:focus, .button.-error.is-hover, .button.-error.is-focus {
   border-color: #8a1a11;
@@ -531,10 +525,8 @@
 .button.-error[disabled], .button.-error.is-disabled {
   opacity: 0.5;
 }
-.button.-error-group {
-  padding-top: 15px;
-}
 .button.-error-group > * {
   margin-right: 15px;
-  margin-bottom: 15px;
+  margin-top: 7.5px;
+  margin-bottom: 7.5px;
 }
