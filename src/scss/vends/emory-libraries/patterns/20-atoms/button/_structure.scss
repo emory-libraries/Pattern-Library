@@ -12,9 +12,18 @@
   
   // Defines base structure.
   @include absolute-center-contents(true);
-  @include padding-x( 25px );
-  height: 50px;
   cursor: pointer;
+  
+  // Defines structure for button group.
+  &-group {
+    display: flex;
+    flex-wrap: wrap;
+    
+    &.-inline {
+      display: inline-flex;
+    }
+    
+  }
   
   &[disabled],
   &.is-disabled { 
