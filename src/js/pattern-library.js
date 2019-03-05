@@ -5,6 +5,9 @@ const jQuery = require('jquery');
 const $ = jQuery;
 const moment = require('moment');
 
+// Export globals.
+global.$ = global.jQuery = $;
+
 // Load libraries.
 require('velocity-animate');
 
