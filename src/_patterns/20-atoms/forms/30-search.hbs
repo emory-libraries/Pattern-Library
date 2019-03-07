@@ -92,7 +92,7 @@
              {{#if ../disabled}}disabled{{/if}}>
 
       <input type="submit"
-             label="{{#unless (and ../layout (eq ../layout 'contained'))}}{{../button.label}}{{/unless}}"
+             value="{{#unless (and ../layout (eq ../layout 'contained'))}}{{../button.label}}{{/unless}}"
              class="button search-button{{#if ../button.disabled}} is-disabled{{/if}}{{#if ../button.active}} is-active{{/if}}{{#if ../button.hover}} is-hover{{/if}}{{#if ../button.focus}} is-focus{{/if}}"
              {{#if ../button.disabled}}disabled{{/if}}>
 
