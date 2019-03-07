@@ -27,6 +27,30 @@ module.exports = {
 
   },
 
-  trimSubstring( str, substr ) { return this.trimSubstringEnd(this.trimSubstringStart(str, substr), substr); }
+  trimSubstring( str, substr ) { return this.trimSubstringEnd(this.trimSubstringStart(str, substr), substr); },
+
+  truncateWords( str, count, suffix ) {
+
+    if (_.isString(str) && _.isNumber(count)) {
+
+      if (typeof suffix !== 'string') {
+        suffix = '…';
+      }
+
+      var num = Number(count);
+
+      var arr = str.split(/[ \t]/); console.log(num, arr.length);
+
+      if (num < arr.length) {
+        arr = arr.slice(0, num);
+      }
+
+      var val = arr.join(' ').trim();
+
+      return val + suffix;
+
+    }
+
+  }
 
 };
