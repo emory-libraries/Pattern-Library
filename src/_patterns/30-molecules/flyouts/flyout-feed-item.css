@@ -102,6 +102,7 @@
 }
 .flyout-feed-item-link {
   grid-area: link;
+  padding: 0;
   display: none;
 }
 @media (min-width: 601px) and (max-width: 900px) {
