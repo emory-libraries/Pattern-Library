@@ -56,5 +56,6 @@
   "20-atoms-filters-filter-search": "review",
   "20-atoms-filters-filter-dropdown": "review",
   "20-atoms-filters-filter-button": "review",
-  "30-molecules-blocks-block": "review"
+  "30-molecules-blocks-block": "review",
+  "30-molecules-flyouts-flyout-feed-item": "review"
 }

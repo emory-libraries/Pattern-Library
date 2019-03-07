@@ -1,0 +1,15 @@
+<a href="{{this.href}}" class="flyout-feed-item{{#if this.image}} has-thumbnail{{/if}}">
+  {{#if this.image}}
+  <div class="flyout-feed-item-thumbnail">
+    {{> atoms-image src=this.image decorative=true}}
+  </div>
+  {{/if}}
+  <span class="flyout-feed-item-date">{{this.date}}</span>
+  <span class="flyout-feed-item-heading">{{this.heading}}</span>
+  {{#if this.description}}<span class="flyout-feed-item-description">{{{ellipsis (sanitize this.description) 150}}}</span>{{/if}}
+  {{#if this.label}}
+  <div class="flyout-feed-item-link">
+    <button class="link flyout-feed-item-link">{{this.label}}</button>
+  </div>
+  {{/if}}
+</a>
