@@ -1,0 +1,18 @@
+{
+  "image": "//source.unsplash.com/iFgRcqHznqg/500x700",
+  "href": "//example.com/subject-librarians/john-doe",
+  "name": "John Doe",
+  "title": "South Asian Studies and Religion Librarian",
+  "library": "Robert W. Woodruff Library",
+  "subjects": [
+    "Religion",
+    "South Asian Religion",
+    "South Asian History",
+    "South Asian Studies",
+    "South Asian Literature"
+  ],
+  "phone": 4047271277,
+  "email": "john.doe@emory.edu",
+  "guides": "//example.com/research-guides",
+  "cv": "//example.com/cv"
+}
