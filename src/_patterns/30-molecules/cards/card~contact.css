@@ -128,6 +128,12 @@
 .card-contact-name:hover .icon svg, .card-contact-name.is-hover .icon svg, .card-contact-name:focus .icon svg, .card-contact-name.is-focus .icon svg {
   fill: #5387F7;
 }
+.card-contact-name:active, .card-contact-name.is-active {
+  color: #5387F7;
+}
+.card-contact-name:active .icon svg, .card-contact-name.is-active .icon svg {
+  fill: #5387F7;
+}
 .card-contact-name.-popular {
   font-family: "Cardo", serif;
   font-size: 20px;
