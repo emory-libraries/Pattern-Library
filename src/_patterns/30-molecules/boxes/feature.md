@@ -62,3 +62,6 @@ The feature molecule allows you to include a feature box within another pattern.
 | Class             |                                                         |
 |-------------------|---------------------------------------------------------|
 | `has-description` | Indicates that the feature box includes a description.  |
+
+
+[atoms-button-link]: /patterns/20-atoms-buttons-01-button-link/20-atoms-buttons-01-button-link.html
