@@ -1,7 +1,5 @@
 <div class="wayfinder">
-  <div class="wayfinder-image{{#if align.x}} -align-x-{{align.x}}{{/if}}{{#if align.y}} -align-y-{{align.y}}{{/if}}">
-    <img class="image" src="{{image}}">
-  </div>
+  <div class="wayfinder-image{{#if align.x}} -align-x-{{align.x}}{{/if}}{{#if align.y}} -align-y-{{align.y}}{{/if}}">{{> atoms-image src=image}} </div>
   <span class="wayfinder-heading">{{heading}}</span>
   <h4 class="wayfinder-text">{{ellipsis (sanitize text) 150}}</h4>
   <div class="wayfinder-action button-group">
