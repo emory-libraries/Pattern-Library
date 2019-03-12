@@ -1,6 +1,6 @@
 <div class="card-librarian">
   <div class="card-librarian-about">
-    <div class="card-librarian-image">{{> atoms-image src=(default image (combine '/images/avatars/placeholder.' (default gender 'male') '.jpg'))}}</div>
+    <div class="card-librarian-image">{{> atoms-image src=(default image (combine '/images/avatars/placeholder.' (default gender 'male') '.jpg')) alt=name}}</div>
     {{> atoms-link href=href label=name target=(default target '_self') classes="card-librarian-name"}}
     <span class="card-librarian-title">{{title}}</span>
     <span class="card-librarian-library">{{library}}</span>
