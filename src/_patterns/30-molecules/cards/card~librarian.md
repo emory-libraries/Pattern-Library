@@ -42,4 +42,5 @@ The card librarian molecule can be used to include a subject librarian card with
 | cv        | `String` or `Object` | An optional path or URL to the librarian's CV, or some link data for the librarian's CV, adhering to the [`atoms-link`][atoms-link] schema. |                |           |
 | guides    | `String` or `Object` | An optional path or URL to the librarian's research guides, or some link data for the librarian's research guides, adhering to the [`atoms-link`][atoms-link] schema. |  |  |
 
+
 [atoms-link]: /patterns/20-atoms-globals-link/20-atoms-globals-link.html
