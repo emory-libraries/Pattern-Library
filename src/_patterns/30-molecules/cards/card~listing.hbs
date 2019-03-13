@@ -1,0 +1,10 @@
+<div class="card-listing{{#if badge}} -has-badge{{/if}}{{#if description}} -has-description{{/if}}{{#if theme}} -{{theme}}{{/if}}{{#if vertical}} -vertical{{/if}}">
+  {{#if badge}}{{> atoms-badge label=badge}}{{/if}}
+  <div class="card-listing-image{{#if image.orientation}} -{{image.orientation}}{{/if}}">{{> atoms-image src=(default image.src image) decorative=true}}</div>
+  <div class="card-listing-date">{{this.date}}</div>
+  <div class="card-listing-title">{{title}}</div>
+  {{#if description}}<div class="card-listing-description">{{ellipsis (sanitize description) 150}}</div>{{/if}}
+  <div class="card-listing-action button-group">
+    {{#each buttons}}{{> atoms-button-link}}{{/each}}
+  </div>
+</div>
