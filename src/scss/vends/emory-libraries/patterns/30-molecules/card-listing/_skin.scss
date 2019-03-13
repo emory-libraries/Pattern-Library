@@ -14,12 +14,14 @@ $molecules-card-listing: (
     'light': (
       'background': tint(color('slate', 'light'), 50%),
       'date': color('blue'),
-      'title': color('blue', 'dark')
+      'title': color('blue', 'dark'),
+      'description': $color-text-dark
     ),
     'dark': (
       'background': color('white'),
       'context': color('blue'),
-      'title': color('blue', 'dark')
+      'title': color('blue', 'dark'),
+      'description': $color-text-dark
     )
   ),
   
@@ -28,7 +30,7 @@ $molecules-card-listing: (
     'x': 25px,
     'y': 5px
   ),
-  'size': 375,
+  'size': 375px,
   
   'border': (
     'offset': 15px,
@@ -73,6 +75,7 @@ $molecules-card-listing: (
   $theme-background: map-deep-get($skin, 'themes.' + $theme + '.background');
   $theme-date: map-deep-get($skin, 'themes.' + $theme + '.date');
   $theme-title: map-deep-get($skin, 'themes.' + $theme + '.title');
+  $theme-description: map-deep-get($skin, 'themes.' + $theme + '.description');
   
   // Get border-specific variables.
   $border-offset: map-deep-get($skin, 'border.offset');
@@ -138,6 +141,11 @@ $molecules-card-listing: (
   // Defines card listing title styles.
   &-title {
     @include tokens-heading('h4', $theme-title);
+  }
+
+  // Defines card listing description styles.
+  &-description {
+    @include tokens-text('body-alt', $theme-description);
   }
   
   // Defines card listing action styles.
@@ -293,6 +301,7 @@ $molecules-card-listing: (
     $theme-background: map-deep-get($theme, 'background');
     $theme-date: map-deep-get($theme, 'date');
     $theme-title: map-deep-get($theme, 'title');
+    $theme-description: map-deep-get($theme, 'description');
     
     // Modify styles based on theme.
     &.-#{$name} {
@@ -305,6 +314,10 @@ $molecules-card-listing: (
       
       &-title {
         color: $theme-title;
+      }
+      
+      &-description {
+        color: $theme-description;
       }
       
     }

@@ -19,7 +19,7 @@
 ///
 /// @output The native structure and skin of our card-listing component
 ///
-/// @status construction
+/// @status review
 @mixin molecules-card-listing ( $custom: () ) {
   
   // Extend the default skin.
@@ -37,6 +37,9 @@
     }
     &-title {
       @extend %molecules-card-listing-title;
+    }
+    &-description {
+      @extend %molecules-card-listing-description;
     }
     &-action {
       @extend %molecules-card-listing-action;

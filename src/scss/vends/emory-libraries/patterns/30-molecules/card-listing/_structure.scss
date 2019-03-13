@@ -7,26 +7,79 @@
 /// @since 1.0.0
 %molecules-card-listing {
   
-  // Builds the card-listing structure.
-  &,
-  &.-vertical {
-    display: grid;
-    grid-template-areas: "image"
-                         "date"
-                         "title"
-                         "action";
-    grid-template-columns: 1fr;
-  }
-                       
+  // Capture selector.
+  $selector: &;
   
-  // Modifies structure for larger screens.
+  // Builds the card-listing structure.
+  display: grid;
+  
+  // Sets structure when not explicitly vertical.
   &:not(.-vertical) {
-    @include breakpoint-m-l {
-      grid-template-areas: "date image"
-                           "title image"
-                           "action image";
-      grid-template-rows: repeat(2, min-content) 1fr;
+    
+  }
+  
+  // Builds card listing structure without descriptions.
+  &:not(.-has-description) {
+    
+    // Sets default structure.
+    &,
+    &.-vertical {
+      grid-template-areas: "image"
+                           "date"
+                           "title"
+                           "action";
+      grid-template-columns: 1fr;
+    }
+    
+    // Sets structure when not explicity vertical.
+    &:not(.-vertical) {
+      
+      @include breakpoint-m-l {
+        grid-template-areas: "date image"
+                             "title image"
+                             "action image";
+        grid-template-rows: repeat(2, min-content) 1fr;
+      };
+      
     };
+    
+    #{$selector}-description {
+      display: none;
+    }
+    
+  }
+
+  // Builds card listing strucutre with descriptions.
+  &.-has-description {
+    
+     // Sets default structure.
+    &,
+    &.-vertical {
+      grid-template-areas: "image"
+                           "date"
+                           "title"
+                           "description"
+                           "action";
+      grid-template-columns: 1fr;
+    }
+    
+    // Sets structure when not explicity vertical.
+    &:not(.-vertical) {
+      
+      @include breakpoint-m-l {
+        grid-template-areas: "date image"
+                             "title image"
+                             "description image"
+                             "action image";
+        grid-template-rows: repeat(2, min-content) 1fr;
+      };
+      
+    };
+    
+    #{$selector}-description {
+      display: block;
+    }
+    
   }
   
   // Builds card listing structure without badges.
@@ -60,6 +113,11 @@
   &-title { 
     margin: 0;
     grid-area: title;
+  }
+  
+  // Builds card listing description structure.
+  &-description {
+    grid-area: description;
   }
   
   // Builds card listing action structure.
