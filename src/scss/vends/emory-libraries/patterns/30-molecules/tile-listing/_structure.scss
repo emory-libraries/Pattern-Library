@@ -1,0 +1,118 @@
+////
+/// @group emory-libraries.patterns.molecules.tile-listing
+////
+
+/// Defines the base structure of the tile-listing component.
+///
+/// @since 1.0.0
+%molecules-tile-listing {
+  
+  // Capture selector.
+  $selector: &;
+  
+  // Builds the tile-listing structure.
+  display: grid;
+  grid-template-columns: 1fr;
+  
+  // Builds the tile listing structure without descriptions.
+  &:not(.has-description) {
+    grid-template-areas: "image"
+                         "date"
+                         "title"
+                         "action";
+    
+    #{$selector}-description {
+      display: none;
+    }
+    
+  }
+  
+  // Builds the tile listing structure with descriptions.
+  &.has-description {
+    grid-template-areas: "image"
+                         "date"
+                         "title"
+                         "description"
+                         "action";
+    
+    #{$selector}-description {
+      display: block;
+    }
+    
+  }
+  
+  // Builds the tile listing structure without badges.
+  &:not(.has-badge) {
+    
+    .badge {
+      display: none;
+    }
+    
+  }
+  
+  // Builds the tile listing structure with badges.
+  &.has-badge {
+    
+    .badge {
+      display: block;
+      margin: 0;
+      @include absolute( 0 null null 0 );
+      z-index: z('above');
+    }
+    
+  }
+  
+  // Builds tile listing image structure.
+  &-image { 
+    @include absolute-center-contents;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      min-height: 100%;
+    }
+    
+    // Modifies structure in terms of image alignment.
+    &.-align-x-left {
+      justify-content: flex-start;
+    }
+    &.-align-x-center {
+      justify-content: center;
+    }
+    &.-align-x-right {
+      justify-content: flex-end;
+    }
+    &.-align-y-top {
+      align-items: top;
+    }
+    &.-align-y-bottom {
+      align-items: bottom;
+    }
+    &.-align-y-center {
+      align-items: center;
+    }
+    
+  }
+  
+  // Builds tile listing date structure.
+  &-date {
+    margin: 0;
+  }
+  
+  // Builds tile listing title structure.
+  &-title {
+    margin: 0;
+  }
+  
+  // Builds tile listing description structure.
+  &-description {
+    margin: 0;
+  }
+  
+  // Builds tile listing action structure.
+  &-action {
+    display: flex;
+    align-items: flex-end;
+  }
+  
+}
