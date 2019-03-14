@@ -43,7 +43,6 @@ The card listing molecule can be used to include a listing card within another p
 | align           | `Object`  | Optionally configures how the image should be aligned.                            |                                   |           |
 | align.x         | `String`  | Configures the image's horizontal (`x`-axis) alignment.                           | `left`, `right`, or `center`      | `center`  |
 | align.y         | `String`  | Configures the image's vertical (`y`-axis) alignment.                             | `top`, `bottom`, or `center`      | `center`  |
-| theme           | `String`  | Optionally indicates which feature theme to use.                                  | `light` or `dark`                 | `light  ` |
 
 
 ## Classes
@@ -58,11 +57,11 @@ The card listing molecule can be used to include a listing card within another p
 | `-portrait`         | Indicates the listing's image is in **portrait** orientation, must be applied to `card-listing-image`.  |
 | `-landscape`        | Indicates the listing's image is in **landscape** orientation, must be applied to `card-listing-image`. |
 | `-align-x-left`     | Left-aligns the feature image within its container.                                                     |
-| `-align-x-right`    | Right-aligns the feature image within its container.                                                    |
-| `-align-x-center`   | Horizontally centers the feature image within its container.                                            |
-| `-align-y-top`      | Top-aligns the feature image within its container.                                                      |
+| `-align-x-right`    | Right-aligns the listing image within its container.                                                    |
+| `-align-x-center`   | Horizontally centers the listing image within its container.                                            |
+| `-align-y-top`      | Top-aligns the listing image within its container.                                                      |
 | `-align-y-bottom`   | Bottom-aligns the feature image within its container.                                                   |
-| `-align-y-center`   | Vertically centers the feature image within its container.                                              |
+| `-align-y-center`   | Vertically centers the listing image within its container.                                              |
 
 ### State
 
@@ -70,5 +69,6 @@ The card listing molecule can be used to include a listing card within another p
 |-------------------|-----------------------------------------------------------------|
 | `has-description` | Indicates that the listing includes a description.              |
 | `has-badge`       | Indicates that the listing includes a badge.                    |
+
 
 [atoms-button-link]: /patterns/20-atoms-buttons-01-button-link/20-atoms-buttons-01-button-link.html
