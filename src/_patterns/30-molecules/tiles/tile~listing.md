@@ -40,20 +40,23 @@ The tile listing molecule can be used to include a listing tile within another p
 | align           | `Object`  | Optionally configures how the image should be aligned.                            |                                         |           |
 | align.x         | `String`  | Configures the image's horizontal (`x`-axis) alignment.                           | `left`, `right`, or `center`            | `center`  |
 | align.y         | `String`  | Configures the image's vertical (`y`-axis) alignment.                             | `top`, `bottom`, or `center`            | `center`  |
+| fit             | `String`  | Configures the image's fit within its container, where `contain` fixes the image's width to the width of its container, scaling it up or down accordingly, and `cover` allows the image to be scaled upward when necessary but otherwise attempts to keep the image's native width by scaling the container's viewport instead of the image. | `contain` or `cover`            | `contain`  |
 
 
 ## Classes
 
 ### Variations
 
-| Class               | Description                                                                                             |
-|---------------------|---------------------------------------------------------------------------------------------------------|
-| `-align-x-left`     | Left-aligns the listing image within its container.                                                     |
-| `-align-x-right`    | Right-aligns the listing image within its container.                                                    |
-| `-align-x-center`   | Horizontally centers the listing image within its container.                                            |
-| `-align-y-top`      | Top-aligns the listing image within its container.                                                      |
-| `-align-y-bottom`   | Bottom-aligns the listing image within its container.                                                   |
-| `-align-y-center`   | Vertically centers the listing image within its container.                                              |
+| Class               | Description                                                                                                                                                           |
+|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `-align-x-left`     | Left-aligns the listing image within its container.                                                                                                                   |
+| `-align-x-right`    | Right-aligns the listing image within its container.                                                                                                                  |
+| `-align-x-center`   | Horizontally centers the listing image within its container.                                                                                                          |
+| `-align-y-top`      | Top-aligns the listing image within its container.                                                                                                                    |
+| `-align-y-bottom`   | Bottom-aligns the listing image within its container.                                                                                                                 |
+| `-align-y-center`   | Vertically centers the listing image within its container.                                                                                                            |
+| `-contain`          | Indicates the listing's image should be **contained** and, thus, fixed to its container's width.                                                                      |
+| `-cover`            | Indicates the listing's image should **cover** its container's area, thus, prevents downscaling below the image's native width but allows upscaling as needed.        |
 
 ### State
 

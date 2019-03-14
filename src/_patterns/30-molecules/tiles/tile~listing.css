@@ -90,8 +90,14 @@
   top: 50%;
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
-  min-width: 100%;
   min-height: 100%;
+}
+.tile-listing-image img {
+  width: 100%;
+}
+.-cover.tile-listing-image img {
+  width: auto;
+  min-width: 100%;
 }
 .-align-x-left.tile-listing-image:not(.-align-y-top):not(.-align-y-bottom) img {
   left: 0;

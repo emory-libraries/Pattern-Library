@@ -1,6 +1,6 @@
 <div class="tile-listing{{#if badge}} has-badge{{/if}}{{#if description}} has-description{{/if}}{{#if label}} has-action{{/if}}">
   {{#if badge}}{{> atoms-badge label=badge}}{{/if}}
-  <div class="tile-listing-image{{#if align.x}} -align-x-{{align.x}}{{/if}}{{#if align.y}} -align-y-{{align.y}}{{/if}}">
+  <div class="tile-listing-image{{#if align.x}} -align-x-{{align.x}}{{/if}}{{#if align.y}} -align-y-{{align.y}}{{/if}}{{#if fit}} -{{fit}}{{/if}}">
     {{> atoms-image src=image decorative=true}}
   </div>
   <span class="tile-listing-date">{{this.date}}</span>
