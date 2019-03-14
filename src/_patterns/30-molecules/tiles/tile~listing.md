@@ -27,18 +27,19 @@ The tile listing molecule can be used to include a listing tile within another p
 
 ## Schema
 
-| Name            | Type      | Description                                                                       | Value(s)                          | Default   |
-|-----------------|-----------|-----------------------------------------------------------------------------------|-----------------------------------|-----------|
-| title           | `String`  | The title of the listing content to be displayed.                                 |                                   |           |
-| badge           | `String`  | An optional badge to be displayed.                                                |                                   |           |
-| description     | `String`  | An optional description to be displayed, limited to a maximum of `150` characters.|                                   |           |
-| date            | `String`  | A formatted date or datetime string to be displayed.                              |                                   |           |
-| image           | `String`  | A path or URL to an image, or some image data.                                    |                                   |           |
-| label           | `String`  | An optional link label to be displayed as a call-to-action.                       |                                   |           |
-| href            | `String`  | A path or URL that the listing content should link to.                            |                                   |           |
-| align           | `Object`  | Optionally configures how the image should be aligned.                            |                                   |           |
-| align.x         | `String`  | Configures the image's horizontal (`x`-axis) alignment.                           | `left`, `right`, or `center`      | `center`  |
-| align.y         | `String`  | Configures the image's vertical (`y`-axis) alignment.                             | `top`, `bottom`, or `center`      | `center`  |
+| Name            | Type      | Description                                                                       | Value(s)                                | Default   |
+|-----------------|-----------|-----------------------------------------------------------------------------------|-----------------------------------------|-----------|
+| title           | `String`  | The title of the listing content to be displayed.                                 |                                         |           |
+| badge           | `String`  | An optional badge to be displayed.                                                |                                         |           |
+| description     | `String`  | An optional description to be displayed, limited to a maximum of `150` characters.|                                         |           |
+| date            | `String`  | A formatted date or datetime string to be displayed.                              |                                         |           |
+| image           | `String`  | A path or URL to an image, or some image data.                                    |                                         |           |
+| label           | `String`  | An optional link label to be displayed as a call-to-action.                       |                                         |           |
+| href            | `String`  | A path or URL that the listing content should link to.                            |                                         |           |
+| target          | `String`  | Optionally indicates where the `href` hyperlink should be opened.                 | `_self`, `_blank`, `_parent`, or `_top` | `_self`   |
+| align           | `Object`  | Optionally configures how the image should be aligned.                            |                                         |           |
+| align.x         | `String`  | Configures the image's horizontal (`x`-axis) alignment.                           | `left`, `right`, or `center`            | `center`  |
+| align.y         | `String`  | Configures the image's vertical (`y`-axis) alignment.                             | `top`, `bottom`, or `center`            | `center`  |
 
 
 ## Classes

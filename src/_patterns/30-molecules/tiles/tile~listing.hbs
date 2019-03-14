@@ -4,7 +4,7 @@
     {{> atoms-image src=image decorative=true}}
   </div>
   <span class="tile-listing-date">{{this.date}}</span>
-  {{> atoms-link href=href label=title classes='tile-listing-title'}}
+  {{> atoms-link href=href label=title classes='tile-listing-title' target=(default target '_self')}}
   {{#if description}}<p class="tile-listing-description">{{ellipsis (sanitize description) 150}}</p>{{/if}}
-  {{#if label}}{{> atoms-link href=href label=label classes='tile-listing-action'}}{{/if}}
+  {{#if label}}{{> atoms-link href=href label=label classes='tile-listing-action' target=(default target '_self')}}{{/if}}
 </div>
