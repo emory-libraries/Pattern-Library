@@ -48,13 +48,17 @@ The card listing molecule can be used to include a listing card within another p
 
 | Class               | Description                                                                                             |
 |---------------------|---------------------------------------------------------------------------------------------------------|
-| `-has-badge`        | Indicates that the listing has a badge.                                                                 |
-| `-has-description`  | Indicates that the listing has a description.                                                           |
 | `-light`            | Uses the **light** theme.                                                                               |
 | `-dark`             | Uses the **dark** theme.                                                                                |
 | `-vertical`         | Indicates the listing uses a **vertical** layout.                                                       |
 | `-portrait`         | Indicates the listing's image is in **portrait** orientation, must be applied to `card-listing-image`.  |
 | `-landscape`        | Indicates the listing's image is in **landscape** orientation, must be applied to `card-listing-image`. |
 
+### State
+
+| Class             |                                                                 |
+|-------------------|-----------------------------------------------------------------|
+| `has-description` | Indicates that the listing includes a description.              |
+| `has-badge`       | Indicates that the listing includes a badge.                    |
 
 [atoms-button-link]: /patterns/20-atoms-buttons-01-button-link/20-atoms-buttons-01-button-link.html
