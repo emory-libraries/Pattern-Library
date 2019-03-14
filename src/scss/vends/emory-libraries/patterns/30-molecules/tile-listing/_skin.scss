@@ -11,12 +11,15 @@ $molecules-tile-listing: (
   
   'padding': 40px 25px,
   'gap': 10px,
-  'image': 280px,
-  'size': 515px,
+  'image': 55%,
   
   'date': color('blue'),
-  'title': color('blue'),
   'description': $color-text-dark,
+  'title': (
+    'normal': color('blue'),
+    'hover': $color-actionable,
+    'active': $color-actionable
+  ),
   
   'border': (
     'thickness': $border-width-s,
@@ -43,7 +46,6 @@ $molecules-tile-listing: (
   // Capture themeable variables from skin.
   $padding: map-deep-get($skin, 'padding');
   $gap: map-deep-get($skin, 'gap');
-  $size: map-deep-get($skin, 'size');
   $image: map-deep-get($skin, 'image');
   $date: map-deep-get($skin, 'date');
   $title: map-deep-get($skin, 'title');
@@ -62,34 +64,48 @@ $molecules-tile-listing: (
   
   // Defines the tile-listing component's base styles.
   padding: $padding;
+  padding-top: calc(#{$image} + #{$padding-top});
   grid-gap: $gap;
-  min-height: $size;
   border-radius: $radius;
   border: $border-thickness solid $border-color;
   
-  // Defines tile listing styles without descriptions.
-  &:not(.has-description) {
-    grid-template-rows: $image repeat(2, min-content) 1fr;
+  // Defines tile listing styles without descriptions and actions.
+  &:not(.has-description):not(.has-action) {
+    grid-template-rows: repeat(2, min-content);
   }
   
-  // Defines tile listing styles with descriptions.
-  &.has-description {
-    grid-template-rows: $image repeat(2, min-content) 1fr min-content;
+  // Defines tile listing styles with descriptions and actions.
+  &.has-description.has-action {
+    grid-template-rows: repeat(3, min-content) 1fr;
+  }
+  
+  // Defines tile listing styles without descriptions but with actions.
+  &:not(.has-description).has-action {
+    grid-template-rows: repeat(2, min-content) 1fr;
+  }
+  
+  // Defines tile listing styles without actions but with descriptions.
+  &:not(.has-action).has-description {
+    grid-template-rows: repeat(2, min-content) 1fr;
   }
   
   // Defines tile listing styles without badge.
   &:not(.has-badge) { }
   
   // Defines tile listing styles with badge.
-  &.has-badge { }
+  &.has-badge {
+    border-top-left-radius: 0;
+  }
+  
+  // Defines tile listing styles without actions.
+  &:not(.has-action) { }
+  
+  // Defines tile listing styles with actions.
+  &.has-action { }
   
   // Defines tile listing image styles.
   &-image {
-    width: calc(100% + #{$padding-left} + #{$padding-right});
-    height: $image;
-    top: -$padding-top;
-    left: -$padding-left;
-    right: -$padding-right;
+    padding-bottom: $image;
   }
   
   // Defines tile listing date styles.
@@ -102,10 +118,18 @@ $molecules-tile-listing: (
     
     // Modifies styles based on presence of a description.
     @include when-descendant-of( '#{$selector}:not(.has-description)' ) {
-      @include tokens-heading('h5', $title);
+      @include tokens-heading('h5');
+      @include atoms-link((
+        color: $title,
+        weight: normal
+      ));
     };
     @include when-descendant-of( '#{$selector}.has-description' ) {
-      @include tokens-text('listing', $title);
+      @include tokens-text('listing');
+      @include atoms-link((
+        color: $title,
+        weight: normal
+      ));
     };
     
   }
