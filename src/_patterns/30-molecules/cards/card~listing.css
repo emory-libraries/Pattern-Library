@@ -1,52 +1,52 @@
 .card-listing {
   display: grid;
 }
-.card-listing:not(.-has-description) {
+.card-listing:not(.has-description) {
   grid-template-areas: "image" "date" "title" "action";
   grid-template-columns: 1fr;
 }
 @media (min-width: 601px) and (max-width: 900px) {
-  .card-listing:not(.-has-description):not(.-vertical) {
+  .card-listing:not(.has-description):not(.-vertical) {
     grid-template-areas: "date image" "title image" "action image";
     grid-template-rows: repeat(2, -webkit-min-content) 1fr;
     grid-template-rows: repeat(2, min-content) 1fr;
   }
 }
 @media (min-width: 901px) {
-  .card-listing:not(.-has-description):not(.-vertical) {
+  .card-listing:not(.has-description):not(.-vertical) {
     grid-template-areas: "date image" "title image" "action image";
     grid-template-rows: repeat(2, -webkit-min-content) 1fr;
     grid-template-rows: repeat(2, min-content) 1fr;
   }
 }
-.card-listing:not(.-has-description) .card-listing-description {
+.card-listing:not(.has-description) .card-listing-description {
   display: none;
 }
-.-has-description.card-listing {
+.has-description.card-listing {
   grid-template-areas: "image" "date" "title" "description" "action";
   grid-template-columns: 1fr;
 }
 @media (min-width: 601px) and (max-width: 900px) {
-  .-has-description.card-listing:not(.-vertical) {
+  .has-description.card-listing:not(.-vertical) {
     grid-template-areas: "date image" "title image" "description image" "action image";
     grid-template-rows: repeat(2, -webkit-min-content) 1fr;
     grid-template-rows: repeat(2, min-content) 1fr;
   }
 }
 @media (min-width: 901px) {
-  .-has-description.card-listing:not(.-vertical) {
+  .has-description.card-listing:not(.-vertical) {
     grid-template-areas: "date image" "title image" "description image" "action image";
     grid-template-rows: repeat(2, -webkit-min-content) 1fr;
     grid-template-rows: repeat(2, min-content) 1fr;
   }
 }
-.-has-description.card-listing .card-listing-description {
+.has-description.card-listing .card-listing-description {
   display: block;
 }
-.card-listing:not(.-has-badge) .badge {
+.card-listing:not(.has-badge) .badge {
   display: none;
 }
-.-has-badge.card-listing .badge {
+.has-badge.card-listing .badge {
   top: 0;
   left: 0;
   position: absolute;
@@ -234,7 +234,7 @@
     margin-top: 0;
   }
 }
-.card-listing.-has-badge .badge {
+.card-listing.has-badge .badge {
   left: -15px;
   top: -15px;
 }
