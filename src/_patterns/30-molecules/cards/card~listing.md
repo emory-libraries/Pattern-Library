@@ -31,7 +31,7 @@ The card listing molecule can be used to include a listing card within another p
 |-----------------|-----------|-----------------------------------------------------------------------------------|-----------------------------------|---------|
 | title           | `String`  | The title of the listing content to be displayed.                                 |                                   |         |
 | badge           | `String`  | An optional badge to be displayed.                                                |                                   |         |
-| description     | `String`  | An optional description to be displayed.                                          |                                   |         |
+| description     | `String`  | An optional description to be displayed, limited to a maximum of `150` characters.|                                   |         |
 | date            | `String`  | A formatted date or datetime string to be displayed.                              |                                   |         |
 | theme           | `String`  | Optionally indicates the theme to use.                                            | `light` or `dark`                 | `light` |
 | vertical        | `Boolean` | Optionally indicates whether the listing should be confined to its vertical layout.  | `true` or `false`              | `false` |
