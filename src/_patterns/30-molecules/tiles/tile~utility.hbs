@@ -1,0 +1,5 @@
+<div class="tile-utility{{#if description}} has-description{{/if}}">
+  <div class="tile-utility-image{{#if align.x}} -align-x-{{align.x}}{{/if}}{{#if align.y}} -align-x-{{align.y}}{{/if}}{{#if fit}} -{{fit}}{{/if}}">{{> atoms-image src=image decorative=true}}</div>
+  {{> atoms-link href=href label=title target=(default target '_self') classes='tile-utility-title'}}
+  {{#if description}}<p class="tile-utility-description">{{ellipsis (sanitize description) 300}}</p>{{/if}}
+</div>
