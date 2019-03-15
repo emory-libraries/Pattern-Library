@@ -35,7 +35,7 @@ Use the related link list atom to include an list of related links within anothe
 | items                   | `Array`               | A set of items to be included in the list.                                              |                           |             |
 | items.[`n`]             | `Object`              | Some data about the item.                                                               |                           |             |
 | items.[`n`].data        | `String`              | Some text to be displayed for the list item.                                            |                           |             |
-| items.[`n`].href        | `String`              | An path or URL that the item links to. Refer to [`atoms-link`](/patterns/20-atoms-globals-link/20-atoms-globals-link.html) for additional schema. |  | |
+| items.[`n`].href        | `String`              | An path or URL that the item links to. Refer to [`atoms-link`][atoms-link] for additional schema. |  | |
 
 
 ## Classes
@@ -49,3 +49,6 @@ Use the related link list atom to include an list of related links within anothe
 | `-links`      | Uses a version of a list made up of lists.                          |
 | `-topics`     | Uses a version of a list made up of topic, tags, or keywords.       |
 | `-files`      | Uses a version of a list made up of file links.                     |
+
+
+[atoms-link]: /patterns/20-atoms-globals-link/20-atoms-globals-link.html

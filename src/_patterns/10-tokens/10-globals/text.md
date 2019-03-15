@@ -17,7 +17,7 @@ grunt export:tokens-text
 
 ### Description
 
-The text token allows you to include a block of text within another pattern. This text content can either be written in a plain text format or using [Markdown](https://daringfireball.net/projects/markdown/). All text blocks are rendered using the `.text` class. Refer to our typography guide to preview our [Text Styles](/patterns/00-meta-30-typography-text/00-meta-30-typography-text.html).
+The text token allows you to include a block of text within another pattern. This text content can either be written in a plain text format or using [Markdown][Markdown]. All text blocks are rendered using the `.text` class. Refer to our typography guide to preview our [Text Styles][tokens-text].
 
 
 ### Best Practices
@@ -36,3 +36,7 @@ The text token allows you to include a block of text within another pattern. Thi
 | text  | `String`  | The text content to be displayed, either as plain text or Markdown. |           |           |
 | alternate | `Boolean` | Whather to use the alternate text style, for text of type `body`. | `true` or `false` | `false` |
 | markdown | `Boolean` | Whether to render the text as Markdown | `true` or `false` | `false` |
+
+
+[Markdown]: https://daringfireball.net/projects/markdown/
+[tokens-text]: /patterns/00-meta-30-typography-text/00-meta-30-typography-text.html

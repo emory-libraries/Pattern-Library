@@ -17,7 +17,7 @@ grunt export:atoms-input-toggle
 
 ### Description
 
-The input toggle atom can be used to include a toggle within aother pattern. Use toggle inputs in combination with `[atoms-button-toggle`](/patterns/20-atoms-buttons-04-button-toggle/20-atoms-buttons-04-button-toggle.html), or any navigation buttons, to build toggleable menus, flyouts, modals, and more.
+The input toggle atom can be used to include a toggle within aother pattern. Use toggle inputs in combination with [`atoms-button-toggle`][atoms-button-toggle], or any navigation buttons, to build toggleable menus, flyouts, modals, and more.
 
 
 ### Best Practices
@@ -32,3 +32,6 @@ The input toggle atom can be used to include a toggle within aother pattern. Use
 |-------------|-----------|-------------------------------------------------------|---------------------|-----------|
 | id          | `String`  | A unique ID for the field.                            |                     |           |
 | checked     | `Boolean` | Whether the field state is **checked**.               | `true` or `false`   | `false`   |
+
+
+[atoms-button-toggle]: /patterns/20-atoms-buttons-04-button-toggle/20-atoms-buttons-04-button-toggle.html

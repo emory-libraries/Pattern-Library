@@ -31,5 +31,7 @@ The input checkbox group atom can be used to insert a group of checkboxes into a
 | Name        | Type      | Description                                           | Value(s)            | Default   |
 |-------------|-----------|-------------------------------------------------------|---------------------|-----------|
 | group       | `String`  | A unique group ID to idenitify the set of fields.     |                     |           |
-| options     | `Array`   | A list of checkboxes to be grouped together. Refer to [`atoms-input-checkbox`](/patterns/20-atoms-forms-04-input-checkbox/20-atoms-forms-04-input-checkbox.html) for the appropriate schema. |        |       |
+| options     | `Array`   | A list of checkboxes to be grouped together. Refer to [`atoms-input-checkbox`][atoms-input-checkbox] for the appropriate schema. |        |       |
 
+
+[atoms-input-checkbox]: /patterns/20-atoms-forms-04-input-checkbox/20-atoms-forms-04-input-checkbox.html

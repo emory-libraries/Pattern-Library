@@ -17,7 +17,7 @@ grunt export:atoms-subnav-button-viewall
 
 ### Description
 
-The viewall subnavigation button atom can be used to include a *View All* button within any of our site's subnavigation menus. Our viewall subnavigation buttons can either serve as a direct link to another page, which would likely contain an expanded list of all subnavigation items that wouldn't readily fit within the context of the subnavigation menu, or it can be used to reveal a full list of subnavigation items that was initially truncated due to limited space within the subnavigation menu and/or in an attempt to make the subnavigation menu easier for end users to consume. When used in the latter manner to toggle some hidden content, the button is constructed using a `<label>` tag, which can be combined with a checkbox toggle, and is rendered as a [Vue](https://vuejs.org) component.
+The viewall subnavigation button atom can be used to include a *View All* button within any of our site's subnavigation menus. Our viewall subnavigation buttons can either serve as a direct link to another page, which would likely contain an expanded list of all subnavigation items that wouldn't readily fit within the context of the subnavigation menu, or it can be used to reveal a full list of subnavigation items that was initially truncated due to limited space within the subnavigation menu and/or in an attempt to make the subnavigation menu easier for end users to consume. When used in the latter manner to toggle some hidden content, the button is constructed using a `<label>` tag, which can be combined with a checkbox toggle, and is rendered as a [Vue.js][Vue.js] component.
 
 
 ### Best Practices
@@ -63,3 +63,6 @@ The viewall subnavigation button atom can be used to include a *View All* button
 | `is-focus`        | Indicates that the button is being **hovered** or **focused**.        |
 | `is-disabled`     | Indicates that the button is **disabled**.                            |
 | `has-overflow`    | Indicates that the button is associated with an overflow container.   |
+
+
+[Vue.js]: https://vuejs.org

@@ -25,7 +25,7 @@ The button form atom allows you to include an input button within another patter
 - Always label buttons with a clear call-to-action
 - Avoid lengthy button labels by using short, concise ones instead
 - Only ever use this button for forms that use server-side processing
-  - Use [`atoms-button-action`](/patterns/20-atoms-buttons-02-button-action/20-atoms-buttons-02-button-action.html) instead for forms using client-side processing
+  - Use [`atoms-button-action`][atoms-button-action] instead for forms using client-side processing
 
 
 ## Schema
@@ -60,3 +60,6 @@ The button form atom allows you to include an input button within another patter
 | `is-hover`        | Indicates that the button is being **hovered** or **focused**.        |
 | `is-focus`        | Indicates that the button is being **hovered** or **focused**.        |
 | `is-disabled`     | Indicates that the button is **disabled**.                            |
+
+
+[atoms-button-action]: /patterns/20-atoms-buttons-02-button-action/20-atoms-buttons-02-button-action.html

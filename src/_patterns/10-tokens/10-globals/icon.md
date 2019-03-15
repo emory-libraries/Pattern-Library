@@ -17,7 +17,7 @@ grunt export:tokens-icon
 
 ### Description
 
-The icon token allows you to directly include any icon from our icon library within another pattern. All icons are included as an inline SVG and is placed inside an `.icon` block. For a complete list of all icons available, refer to our [Icon Library](/patterns/00-meta-20-assets-icons/00-meta-20-assets-icons.html).
+The icon token allows you to directly include any icon from our icon library within another pattern. All icons are included as an inline SVG and is placed inside an `.icon` block. For a complete list of all icons available, refer to our [Icon Library][tokens-icon].
 
 
 ### Best Practices
@@ -32,3 +32,6 @@ The icon token allows you to directly include any icon from our icon library wit
 | Name    | Type      | Description                              | Value(s)  | Default   |
 |---------|-----------|------------------------------------------|-----------|-----------|
 | id      | `String`  | The ID of a icon within our icon library |           |           |
+
+
+[tokens-icon]: /patterns/00-meta-20-assets-icons/00-meta-20-assets-icons.html

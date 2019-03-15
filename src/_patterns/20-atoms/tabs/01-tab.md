@@ -17,7 +17,7 @@ grunt export:atoms-tab
 
 ### Description
 
-The tab atom allows you to include a single tab within a tab menu. This tab is a [Vue](https://vuejs.org) component, so it requires JavaScript to be enabled in the browser. Use this tab trigger some on-page action(s).
+The tab atom allows you to include a single tab within a tab menu. This tab is a [Vue.js][Vue.js] component, so it requires JavaScript to be enabled in the browser. Use this tab trigger some on-page action(s).
 
 
 ### Best Practices
@@ -52,3 +52,6 @@ Optionally, build a table to identify any pattern classes that are pertinent for
 | `is-hover`        | Indicates that the tab is being **hovered** or **focused**.           |
 | `is-focus`        | Indicates that the tab is being **hovered** or **focused**.           |
 | `is-disabled`     | Indicates that the tab is **disabled**.                               |
+
+
+[Vue.js]: https://vuejs.org

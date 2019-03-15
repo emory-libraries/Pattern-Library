@@ -31,4 +31,7 @@ The input radio group atom can be used to insert a group of radios into a form. 
 | Name        | Type      | Description                                           | Value(s)            | Default   |
 |-------------|-----------|-------------------------------------------------------|---------------------|-----------|
 | group       | `String`  | A unique group ID to idenitify the set of fields.     |                     |           |
-| options     | `Array`   | A list of radios to be grouped together. Refer to [`atoms-input-radio`](/patterns/20-atoms-forms-05-input-radio/20-atoms-forms-05-input-radio.html) for the appropriate schema. |        |       |
+| options     | `Array`   | A list of radios to be grouped together. Refer to [`atoms-input-radio`][atoms-input-radio] for the appropriate schema. |        |       |
+
+
+[atoms-input-radio]: /patterns/20-atoms-forms-05-input-radio/20-atoms-forms-05-input-radio.html

@@ -17,7 +17,7 @@ grunt export:atoms-map
 
 ### Description
 
-The map atom can be used to insert a map into another pattern. Maps can be rendered by either dynamically loading a map using [OpenStreetMap](https://www.openstreetmap.org/) (OSM) data or embedded using [Google Maps](https://www.google.com/maps). By default, OSM rendering is used and will fallback to an embedded Google Map if JavaScript is not available. However, Google Maps can be used as the preferred renderer by changing the `source` parameter as described below.
+The map atom can be used to insert a map into another pattern. Maps can be rendered by either dynamically loading a map using [OpenStreetMap][OSM] (OSM) data or embedded using [Google Maps][Google Maps]. By default, OSM rendering is used and will fallback to an embedded Google Map if JavaScript is not available. However, Google Maps can be used as the preferred renderer by changing the `source` parameter as described below.
 
 
 ### Best Practices
@@ -49,3 +49,7 @@ The map atom can be used to insert a map into another pattern. Maps can be rende
 |-------------|---------------------------------------------------------------------------------------------------------------|
 | `-h-fixed`  | Inidicates that map's the height is fixed rather than a percentage of its width, applied to the `.map-frame`. |
 | `-image`    | Inidicates that map is an image.                                                                              |
+
+
+[OSM]: https://www.openstreetmap.org/
+[Google Maps]: https://www.google.com/maps

@@ -17,7 +17,7 @@ grunt export:atoms-button-action
 
 ### Description
 
-The button action atom allows you to include an interactive button within another pattern. This button is a [Vue](https://vuejs.org) component, so it requires JavaScript to be enabled in the browser. Use this button to trigger some on-page action(s). Optionally, action buttons can include an icon.
+The button action atom allows you to include an interactive button within another pattern. This button is a [Vue.js][Vue.js] component, so it requires JavaScript to be enabled in the browser. Use this button to trigger some on-page action(s). Optionally, action buttons can include an icon.
 
 
 ### Best Practices
@@ -61,3 +61,6 @@ The button action atom allows you to include an interactive button within anothe
 | `is-hover`        | Indicates that the button is being **hovered** or **focused**.        |
 | `is-focus`        | Indicates that the button is being **hovered** or **focused**.        |
 | `is-disabled`     | Indicates that the button is **disabled**.                            |
+
+
+[Vue.js]: https://vuejs.org

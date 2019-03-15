@@ -64,6 +64,5 @@ The block molecule can be used to include a block within another pattern. Blocks
 | `-shadow-right`     | Indicates that the block should have an inner shadow along the **right** edge of the block, overriding any other `shadow` if set.     |
 
 
-[atoms-button-link]: /patterns/20-atoms-buttons-01-button-link/20-atoms-buttons-01-button-link.html
-
 [Markdown]: https://daringfireball.net/projects/markdown/
+[atoms-button-link]: /patterns/20-atoms-buttons-01-button-link/20-atoms-buttons-01-button-link.html

@@ -33,7 +33,7 @@ Use the bulleted list atom to include an unordered list within another pattern.
 | items.[`n`]             | `String` or `Object`  | The item's text to be displayed (`String`), or some data about the item (`Object`).     |                           |             |
 | items.[`n`].data        | `String`              | Some text to be displayed for the list item, requires `Object` form.                    |                           |             |
 | items.[`n`].markdown    | `String`              | Whether the list `data` should be parsed as Markdown, requires `Object` form.           | `true` or `false`         | `false`     |
-| items.[`n`].href        | `String`              | An optional path or URL that the item links to, requires `Object` form. Refer to [`atoms-link`](/patterns/20-atoms-globals-link/20-atoms-globals-link.html) for additional schema.     |           |           |
+| items.[`n`].href        | `String`              | An optional path or URL that the item links to, requires `Object` form. Refer to [`atoms-link`][atoms-link] for additional schema.     |           |           |
 | items.[`n`].items       | `Array`               | A set of items to be included within a sublist, requires `Object` form.                 |                           |             |
 | items.[`n`].sublist     | `String`              | Indicates the type of sublist to be included, requires `Object` form.                   | `bulleted` or `numbered`  | `bulleted`  |
 
@@ -49,3 +49,6 @@ Use the bulleted list atom to include an unordered list within another pattern.
 | `-links`      | Uses a version of a list made up of lists.                          |
 | `-topics`     | Uses a version of a list made up of topic, tags, or keywords.       |
 | `-files`      | Uses a version of a list made up of file links.                     |
+
+
+[atoms-link]: /patterns/20-atoms-globals-link/20-atoms-globals-link.html
