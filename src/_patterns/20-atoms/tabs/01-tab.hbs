@@ -6,6 +6,7 @@
                           }">
 
   <button @click="click"
+          @keypress.enter="click"
           @focus.native="isFocus = true"
           @blur.native="isFocus = false"
           @mouseover.native="isHover = true"

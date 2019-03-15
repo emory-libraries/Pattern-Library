@@ -35,8 +35,10 @@
     </select>
 
     <a @click="cancel"
+       @keypress.enter="cancel"
        class="link -underline"
-       v-show="fuzzy.filtering.filtered">
+       v-show="fuzzy.filtering.filtered"
+       tabindex="0">
       Cancel
     </a>
 

@@ -64,8 +64,10 @@
     </button>
 
     <a @click="cancel"
+       @keypress.enter="cancel"
        class="link -underline search-cancel"
-       v-show="fuzzy.searching.searched">
+       v-show="fuzzy.searching.searched"
+       tabindex="0">
       Cancel
     </a>
 

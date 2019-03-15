@@ -10,6 +10,7 @@
                                     }">
 
   <label @click="click"
+         @keypress.enter="simclick"
          @focus.native="isFocus = true"
          @blur.native="isFocus = false"
          @mouseover.native="isHover = true"
@@ -23,7 +24,8 @@
           'is-dismissed': isDismissable && !isShowing
          }"
          :disabled="isDisabled"
-         for="{{overflow}}">
+         for="{{overflow}}"
+         tabindex="0">
     {{label}}
   </label>
 

@@ -23,6 +23,13 @@ Components.register('subnav-viewall', {
 
       // Use `Components.extend` to register a different handler for your specific use case.
 
+    },
+
+    simclick( ) {
+
+      // Simulate a native click.
+      this.$el.click();
+
     }
 
   },

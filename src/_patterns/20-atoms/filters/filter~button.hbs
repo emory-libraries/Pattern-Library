@@ -37,6 +37,7 @@
 
       <button class="button -pill -uncapitalize"
               @click="selected = {{@index}}; filter()"
+              @keypress.enter="selected = {{@index}}; filter()"
               @focus.native="buttons[{{@index}}].isFocus = true"
               @blur.native="buttons[{{@index}}].isFocus = false"
               @mouseenter.native="buttons[{{@index}}].isHover = true"
