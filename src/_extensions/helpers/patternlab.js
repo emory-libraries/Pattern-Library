@@ -43,8 +43,8 @@ module.exports = {
         src: `/patterns/${pattern.pattern.id}/${pattern.pattern.id}.html`,
         js: pattern.data.js || false,
         php: pattern.data.php || false,
-        created: pattern.data.created ? moment(pattern.data.created, 'MM/DD/YYYY').format('MM D, YYYY') : null,
-        updated: pattern.data.updated ? moment(pattern.data.updated, moment.ISO_8601).format('MM D, YYYY') : null
+        created: pattern.data.created ? moment(pattern.data.created, 'MM/DD/YYYY') : null,
+        updated: pattern.data.updated ? moment(pattern.data.updated, 'MM/DD/YYYY') : null
       };
 
     });
