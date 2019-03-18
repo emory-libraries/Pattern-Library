@@ -1,6 +1,10 @@
 ---
 
 state: construction
+created: {{date}}
+updated: {{date}}
+js: {{#if js}}true{{else}}false{{/if}}
+php: {{#if php}}true{{else}}false{{/if}}
 
 ---
 

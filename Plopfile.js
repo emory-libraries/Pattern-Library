@@ -7,6 +7,7 @@ module.exports = (plop) => {
   const utils = require('./scripts/utils.js');
   const plconfig = require('./patternlab-config.json');
   const spawn = require('child_process').spawn;
+  const moment = require('moment');
 
   // Configures generators.
   const config = {
@@ -277,6 +278,9 @@ module.exports = (plop) => {
 
       // Determine the pattern's ID.
       data.id = plop.renderString('{{group}}-{{pattern}}', data).replace('~', '-');
+
+      // Get the date.
+      data.date = moment().format('MM/DD/YYYY');
 
       // Initialize actions.
       const actions = [];
