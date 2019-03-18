@@ -239,3 +239,16 @@ const PatternLibrary = [];
 
 // Initialize a Vue instance for each pattern.
 $('.sg-pattern').each((i, el) => PatternLibrary.push(new Vue({el})));
+
+// Otherwise, dynamically add a Vue instance for individual patterns.
+if( $('.sg-pattern').length === 0 ) {
+
+  // Add a wraper to the body that can be used to create a Vue instance.
+  $('body').children().not('script').not('style').wrap($('<div>', {
+    id: 'vue'
+  }));
+
+  // Create the Vue instance.
+  PatternLibrary.push(new Vue({el: '#vue'}));
+
+}
