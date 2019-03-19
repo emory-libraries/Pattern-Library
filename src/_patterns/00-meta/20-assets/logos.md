@@ -28,9 +28,12 @@ Our logo library consists of the official university and unit brand marks used a
 
 ### Best Practices
 
-To use our logos, refer to our [`token-logo`](/patterns/10-tokens-10-globals-logo/10-tokens-10-globals-logo.html) pattern.
+To use our logos, refer to our [`tokens-logo`][tokens-logo] pattern.
 
 
 ## Schema
 
-To use our logos, refer to our [`token-logo`](/patterns/10-tokens-10-globals-logo/10-tokens-10-globals-logo.html) pattern.
+To use our logos, refer to our [`tokens-logo`][tokens-logo] pattern.
+
+
+[tokens-logo]: /patterns/10-tokens-10-globals-logo/10-tokens-10-globals-logo.html

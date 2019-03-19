@@ -23,14 +23,18 @@ grunt export:meta-text
 
 ### Description
 
-Our text styles were strategically selected with the help of [Viget](https://www.viget.com/) to ensure maximum readability and aesthetic. Use these text styles as a guide when building patterns that incorporate text.
+Our text styles were strategically selected with the help of [Viget][Viget] to ensure maximum readability and aesthetic. Use these text styles as a guide when building patterns that incorporate text.
 
 
 ### Best Practices
 
-To use our text styles, refer to our [`tokens-text`](/patterns/10-tokens-10-globals-text/10-tokens-10-globals-text.html) pattern.
+To use our text styles, refer to our [`tokens-text`][tokens-text] pattern.
 
 
 ## Schema
 
-To use our text styles, refer to our [`tokens-text`](/patterns/10-tokens-10-globals-text/10-tokens-10-globals-text.html) pattern.
+To use our text styles, refer to our [`tokens-text`][tokens-text] pattern.
+
+
+[Viget]: https://www.viget.com/
+[tokens-text]: /patterns/10-tokens-10-globals-text/10-tokens-10-globals-text.html
