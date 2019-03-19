@@ -6,12 +6,23 @@ const _ = require('lodash');
 
 // Load configurations.
 const config = require(path.resolve('patternlab-config.json'));
+const pkg = require(path.resolve('package.json'));
 
 // Get pattern data.
 const patterns = utils.patterns();
 
-// Export helpers.
-module.exports = {
+// Initialize helpers.
+const helpers = {
+
+  pkg( key = null ) {
+
+    // Get all package data by default.
+    if( !_.isString(key) ) return pkg;
+
+    // Otherwise, extract the key given.
+    else return _.get(pkg, key);
+
+  },
 
   patternData( id = null ) {
 
@@ -26,13 +37,14 @@ module.exports = {
   patternStatus( id = null ) {
 
     // Get the pattern data.
-    let data = this.patternData( id );
+    let data = helpers.patternData( id );
 
     // Get pattern status data.
     return _.map(data, (pattern) => {
 
       // Extract pattern status data.
       return {
+        title: _.startCase(pattern.name) + (pattern.variation ? ' - ' + _.startCase(pattern.variation) : ''),
         status: pattern.data.state,
         id: pattern.pattern.id,
         plid: pattern.pattern.plid,
@@ -49,6 +61,19 @@ module.exports = {
 
     });
 
+  },
+
+  patternConfig( key = null ) {
+
+    // Get all config data by default.
+    if( !_.isString(key) ) return config;
+
+    // Otherwise, extract the key given.
+    else return _.get(config, key);
+
   }
 
 };
+
+// Export helpers.
+module.exports = helpers;

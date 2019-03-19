@@ -73,8 +73,9 @@ $breakpoints: (
 $pl-border: $border-width-s solid color('slate', 'light');
 
 // Set core styles.
-.body {
+body {
   @include tokens-text;
+  overflow-x: hidden;
 }
 
 a {
@@ -452,4 +453,203 @@ code[class*="language-"] {
   padding: $rhythm-x;
   margin-bottom: 1em;
   border: $pl-border;
+}
+
+@mixin pl-table( $columns: 6, $fixed: 200px, $cells: 45px ) {
+
+  $selector: &;
+  $border: 1px solid color('slate', 'light');
+  $count: if(is-list($fixed), count($fixed), 1);
+
+  display: grid;
+  grid-template-areas: "fixed scrollable";
+  grid-template-columns: $fixed 1fr;
+  font-size: 12px;
+
+  // Header
+  &-header {
+    text-align: center;
+    display: contents;
+  }
+
+  // Body
+  &-body {
+    text-align: left;
+    display: contents;
+  }
+
+  // Fixed
+  &-fixed {
+    grid-area: fixed;
+    border-left: $border;
+  }
+
+  // Scrollable
+  &-scrollable {
+    grid-area: scrollable;
+    display: block;
+    overflow-x: auto;
+    text-align: left;
+    border-right: $border;
+
+    &-area {
+      display: grid;
+      grid-template-columns: repeat(#{$columns - $count}, minmax(max-content, 1fr));
+    }
+
+  }
+
+  // Headings
+  &-heading {
+    font-weight: bold;
+
+    @include when-descendant-of( '#{$selector}-header' ) {
+      background-color: color('blue', 'dark');
+      color: color('gold');
+      text-transform: uppercase;
+    };
+
+    @include when-descendant-of( '#{$selector}-body' ) {
+      @include border-x( $border );
+    };
+
+  }
+
+  // Cells
+  &-cell {
+    display: block;
+    padding: 10px;
+    border-bottom: $border;
+    height: $cells;
+
+    @include when-descendant-of( '#{$selector}-fixed' ) {
+
+      &:nth-child(#{$count}n) {
+        border-right: $border;
+      }
+
+    };
+
+    @include when-descendant-of( '#{$selector}-scrollable' ) {
+
+      &:nth-child(#{$columns - $count}n - #{$columns - $count - 1}) {
+        border-left: $border;
+      }
+
+    };
+
+    @include when-descendant-of( '#{$selector}-header' ) {
+      @include border-x( none !important );
+    };
+
+    &.pl-table-align-left { text-align: left; }
+    &.pl-table-align-center { text-align: center; }
+    &.pl-table-align-right { text-align: right; }
+    &.pl-table-align-justify { text-align: justify; }
+
+  }
+
+  // Fixed and Scrollable
+  &-fixed + &-scrollable &-cell {
+
+    &:nth-child(#{$columns - $count}n - #{$columns - $count - 1}) {
+      border-left: none;
+    }
+
+  }
+
+  // Modifies statuses.
+  .sg-pattern-state {
+    margin: 0;
+  }
+
+}
+
+.pl-table {
+  @include pl-table;
+}
+
+.pl-ui {
+
+  @each $name, $map in $colors-ui {
+    @each $variant, $color in $map {
+
+      @if ( $variant == 'base' ) {
+
+        &-#{$name} { color: $color; }
+        &-#{$name}-bg { background-color: $color; }
+        &-#{$name}-fill, &-#{$name}-fill svg { fill: $color; }
+
+      }
+
+      @else {
+
+        &-#{$name}-#{$variant} { color: $color; }
+        &-#{$name}-#{$variant}-bg { background-color: $color; }
+         &-#{$name}-#{$variant}-fill, &-#{$name}-#{$variant}-fill svg { fill: $color; }
+
+      }
+
+    }
+  }
+
+  &-true {
+    color: #6ab04c;
+  }
+  &-true-bg {
+    background-color: #6ab04c
+  }
+  &-true-fill, &-true-fill svg {
+    fill: #6ab04c
+  }
+
+  &-false {
+    color: #eb4d4b;
+  }
+  &-false-bg {
+    background-color: #eb4d4b
+  }
+  &-false-fill, &-false-fill svg {
+    fill: #eb4d4b
+  }
+
+  &-null {
+    color: color('slate');
+  }
+  &-null-bg {
+    background-color: color('slate');
+  }
+  &-null-fill, &-null-fill svg {
+    fill: color('slate');
+  }
+
+}
+
+.pl-size {
+
+  @each $name, $size in (
+    'xxxs': 0em,
+    'xxs': .25em,
+    'xs': .5em,
+    's': .75em,
+    'm': 1em,
+    'l': 1.25em,
+    'xl': 1.5em,
+    'xxl': 1.75em,
+    'xxxl': 2em
+  ) {
+
+    &-#{$name} {
+      font-size: $size;
+    }
+
+  }
+
+}
+
+.pl-symbol {
+  @include size( 25px );
+  border-radius: 100%;
+  @include absolute-center-contents( true );
+  color: white;
 }
