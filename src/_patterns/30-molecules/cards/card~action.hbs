@@ -1,6 +1,6 @@
 <div class="card-action">
   <div class="card-action-image">
-    {{> atoms-image src=image decorative=true}}
+    {{#with image}}{{> atoms-image decorative=true}}{{/with}}
   </div>
   <span class="card-action-text">{{text}}</span>
   {{#with button}}

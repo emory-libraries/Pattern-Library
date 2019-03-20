@@ -2,7 +2,7 @@
 
 state: review
 created: 03/13/2019
-updated: 03/18/2019
+updated: 03/20/2019
 js: false
 php: false
 
@@ -31,14 +31,15 @@ The card action molecule can be used to include a library aid card within anothe
 
 ## Schema
 
-| Name      | Type      | Description                                                                   | Value(s)                                | Default         |
-|-----------|-----------|-------------------------------------------------------------------------------|-----------------------------------------|-----------------|
-| text      | `String`  | Some text to be displayed on the action card to help prompt the user to act.  |                                         |                 |
-| image     | `String`  | A path or URL to an image to display.                                         |                                         |                 |
+| Name      | Type      | Description                                                                   | Value(s)                            | Default     |
+|-----------|-----------|-------------------------------------------------------------------------------|-------------------------------------|-------------|
+| text      | `String`  | Some text to be displayed on the action card to help prompt the user to act.  |                                     |             |
+| image     | `Object`  | Some image data using the [`atoms-image`][atoms-image] schema.                |                                     |             |
 | button    | `Object`  | Some button data, using the schema for [`atoms-button-link`][atoms-button-link] with a `button.type` of `link`, [`atoms-button-action`][atoms-button-action] with a `button.type` of `action`, or [`atoms-button-toggle`][atoms-button-toggle] with a `button.type` of `toggle`.  |  |  |
 | button.type | `String`  | Indicates the type of action button to use.  | `link`, `action`, or `toggle`  | `link`  |
 
 
+[atoms-image]: /patterns/20-atoms-mediam-imagek/20-atoms-media-image.html
 [atoms-button-link]: /patterns/20-atoms-buttons-01-button-link/20-atoms-buttons-01-button-link.html
 [atoms-button-action]: /patterns/20-atoms-buttons-02-button-action/20-atoms-buttons-02-button-action.html
 [atoms-button-toggle]: /patterns/20-atoms-buttons-04-button-toggle/20-atoms-buttons-04-button-toggle.html
