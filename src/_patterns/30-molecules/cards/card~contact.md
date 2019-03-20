@@ -2,7 +2,7 @@
 
 state: review
 created: 03/11/2019
-updated: 03/18/2019
+updated: 03/20/2019
 js: false
 php: false
 
@@ -31,12 +31,14 @@ The card contact molecule can be used to include a contact card within another p
 
 ## Schema
 
-| Name    | Type      | Description | Value(s)  | Default   |
-|---------|-----------|-------------|-----------|-----------|
+| Name    | Type      | Description                                                                                 | Value(s)  | Default   |
+|---------|-----------|---------------------------------------------------------------------------------------------|-----------|-----------|
 | name    | `String`  | The name of the contact, optionally formatted with postnominals included.                   |           |           |
 | title   | `String`  | The contact's title or position, optionally including their division separated by a comma.  |           |           |
 | email   | `String`  | The contact's email address.                                                                |           |           |
-| href    | `String`  | A path or URL to the contact's biography or profile page.                                   |           |           |
-| target  | `String`  | Optionally indicates where the `href` hyperlink should be opened.                           | `_self`, `_blank`, `_parent`, or `_top` | `_self`   |
-| image   | `String`  | An optional path or URL to the contact's headshot, preferably in a square format.           |           |           |
-| gender  | `String`  | Optionally indicates the contact's gender, used to identify the placeholder avatar to be used when no `image` is given.  | `male` or `female`  | `male`  |
+| link    | `Object`  | Some link data usin the [`atoms-link`][atoms-link] schema, where the link's label will equal `name`.  | |           |
+| image   | `Object`  | Some image data for the contact's headshot using the [`atoms-image`][atoms-image] schema, preferably where the image is in a square format. |            |            |
+| gender  | `String`  | Optionally indicates the contact's gender for identifying the appropriate placeholder avatar when `image` is not given.  | `male` or `female` | `male`    |
+
+[atoms-link]: /patterns/20-atoms-globals-link/20-atoms-globals-link.html
+[atoms-image]: /patterns/20-atoms-media-image/20-atoms-media-image.html
