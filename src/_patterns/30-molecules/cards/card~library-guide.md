@@ -2,7 +2,7 @@
 
 state: review
 created: 03/13/2019
-updated: 03/18/2019
+updated: 03/20/2019
 js: false
 php: false
 
@@ -33,6 +33,9 @@ The card library guide molecule can be used to include a library guide card with
 
 | Name      | Type      | Description                                                 | Value(s)                                | Default     |
 |-----------|-----------|-------------------------------------------------------------|-----------------------------------------|-------------|
-| href      | `String`  | A path or URL to the library guide.                         |                                         |             |
+| link      | `Object`  | Some link data using the [`atoms-link`][atoms-link] schema, where the link's label will equal `title`.          | | |
 | title     | `String`  | The title of the library guide.                             |                                         |             |
 | target    | `String`  | Optionally indicates where the hyperlink should be opened.  | `_self`, `_blank`, `_parent`, or `_top` | `_self`     |
+
+
+[atoms-link]: /patterns/20-atoms-globals-link/20-atoms-globals-link.html
