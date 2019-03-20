@@ -1,6 +1,10 @@
 {
-  "image": "//source.unsplash.com/iFgRcqHznqg/500x700",
-  "href": "//example.com/subject-librarians/john-doe",
+  "image": {
+    "src": "//source.unsplash.com/iFgRcqHznqg/500x700"
+  },
+  "link": {
+    "href": "//example.com/subject-librarians/john-doe"
+  },
   "name": "John Doe",
   "title": "South Asian Studies and Religion Librarian",
   "library": "Robert W. Woodruff Library",
@@ -13,6 +17,10 @@
   ],
   "phone": 4047271277,
   "email": "john.doe@emory.edu",
-  "guides": "//example.com/research-guides",
-  "cv": "//example.com/cv"
+  "guides": {
+    "href": "//example.com/research-guides"
+  },
+  "cv": {
+    "href": "//example.com/cv"
+  }
 }

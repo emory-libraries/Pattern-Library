@@ -1,7 +1,7 @@
 <div class="card-librarian">
   <div class="card-librarian-about">
-    <div class="card-librarian-image">{{> atoms-image src=(default image (combine '/images/avatars/placeholder.' (default gender 'male') '.jpg')) alt=name}}</div>
-    {{> atoms-link href=href label=name target=(default target '_self') classes="card-librarian-name"}}
+    <div class="card-librarian-image">{{#with image}}{{> atoms-image src=(default src (combine '/images/avatars/placeholder.' (default ../gender 'male') '.jpg')) alt=../name}}{{/with}}</div>
+    {{#with link}}{{> atoms-link label=../name classes="card-librarian-name"}}{{/with}}
     <span class="card-librarian-title">{{title}}</span>
     <span class="card-librarian-library">{{library}}</span>
   </div>
@@ -28,12 +28,12 @@
     <ul class="card-librarian-contact-links">
       {{#if cv}}
       <li class="card-librarian-contact-links-item">
-        {{> atoms-link href=(default cv.href cv) label='Download CV' target=(default cv.target '_blank')}}
+        {{#with cv}}{{> atoms-link label='Download CV'}}{{/with}}
       </li>
       {{/if}}
       {{#if guides}}
       <li class="card-librarian-contact-links-item">
-        {{> atoms-link href=(default guide.href guides) label='View Research Guides' target=(default guides.target '_self')}}
+        {{#with guides}}{{> atoms-link label='View Research Guides'}}{{/with}}
       </li>
       {{/if}}
     </ul>

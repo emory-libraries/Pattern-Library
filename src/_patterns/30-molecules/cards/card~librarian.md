@@ -2,7 +2,7 @@
 
 state: review
 created: 03/11/2019
-updated: 03/18/2019
+updated: 03/20/2019
 js: false
 php: false
 
@@ -31,20 +31,20 @@ The card librarian molecule can be used to include a subject librarian card with
 
 ## Schema
 
-| Name      | Type      | Description                                                                                                                   | Value(s)                                | Default   |
-|-----------|-----------|-------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|-----------|
-| name      | `String`  | The name of the librarian, optionally formatted with postnominals included.                                                   |                                         |           |
-| title     | `String`  | The librarian's title or position.                                                                                            |                                         |           |
-| library   | `String`  | The librarian's home library.                                                                                                 |                                         |           |
-| href      | `String`  | A path or URL to the librarian's biography or profile page.                                                                   |                                         |           |
-| target    | `String`  | Optionally indicates where the `href` hyperlink should be opened.                                                             | `_self`, `_blank`, `_parent`, or `_top` | `_self`   |
-| image     | `String`  | An optional path or URL to the librarian's headshot, preferably in a square format.                                           |                                         |           |
-| gender    | `String`  | Optionally indicates the librarian's gender, used to identify the placeholder avatar to be used when no `image` is given.     | `male` or `female`                      | `male`    |
-| subjects  | `Array`   | A list of subject areas that the librarian specializes in.                                                                    |                                         |           |
-| phone     | `Number` or `String` | The librarian's phone number to be displayed.                                                                      |                                         |           |
-| email     | `String`  | The librarian's email address to be displayed.                                                                                |                                         |           |
-| cv        | `String` or `Object` | An optional path or URL to the librarian's CV, or some link data for the librarian's CV, adhering to the [`atoms-link`][atoms-link] schema. |                |           |
-| guides    | `String` or `Object` | An optional path or URL to the librarian's research guides, or some link data for the librarian's research guides, adhering to the [`atoms-link`][atoms-link] schema. |  |  |
+| Name      | Type      | Description                                                                                               | Value(s)          |Default|
+|-----------|-----------|-----------------------------------------------------------------------------------------------------------|-------------------|-------|
+| name      | `String`  | The name of the librarian, optionally formatted with postnominals included.                               |                   |       |
+| title     | `String`  | The librarian's title or position.                                                                        |                   |       |
+| library   | `String`  | The librarian's home library.                                                                             |                   |       |
+| link      | `Object`  | Some link data usin the [`atoms-link`][atoms-link] schema.                                                |                   |       |
+| image     | `Object`  | Some image data for the librarian's headshot using the [`atoms-image`][atoms-image] schema, preferably where the image is in a square format.           |                   |       |
+| gender    | `String`  | Optionally indicates the librarian's gender for identifying the appropriate placeholder avatar when `image` is not given.  | `male` or `female` | `male` |
+| subjects  | `Array`   | A list of subject areas that the librarian specializes in.                                                |                   |       |
+| phone     | `Number` or `String` | The librarian's phone number to be displayed.                                                  |                   |       |
+| email     | `String` | The librarian's email address to be displayed.                                                             |                   |       |
+| cv        | `Object` | Some link data using the [`atoms-link`][atoms-link] schema, where the link's label always uses a default.  |                   |       |
+| guides    | `Object` | Some link data using the [`atoms-link`][atoms-link] schema, where the link's label always uses a default.  |                   |       |
 
 
 [atoms-link]: /patterns/20-atoms-globals-link/20-atoms-globals-link.html
+[atoms-image]: /patterns/20-atoms-media-image/20-atoms-media-image.html
