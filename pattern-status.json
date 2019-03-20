@@ -1,4 +1,5 @@
 {
+  "00-meta-10-about-pattern-statuses": "construction",
   "00-meta-20-assets-icons": "review",
   "00-meta-20-assets-logos": "review",
   "00-meta-30-typography-headings": "review",
@@ -72,5 +73,5 @@
   "30-molecules-cards-card-action": "review",
   "30-molecules-tiles-tile-listing": "review",
   "30-molecules-tiles-tile-utility": "review",
-  "00-meta-10-about-pattern-statuses": "construction"
+  "30-molecules-modules-slide": "review"
 }
