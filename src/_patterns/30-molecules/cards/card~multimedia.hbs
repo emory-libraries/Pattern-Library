@@ -17,7 +17,7 @@
     {{/if}}
   </div>
   <span class="card-multimedia-context">{{context}}</span>
-  {{> atoms-link href=href label=title target=(default target '_self') classes='card-multimedia-title'}}
+  {{#with link}}{{> atoms-link label=../title classes='card-multimedia-title'}}{{/with}}
   {{#if (or (eq type 'video') (eq type 'audio') (eq type 'presentation') (eq type 'slideshow'))}}
   <span class="card-multimedia-duration">{{duration}}</span>
   {{/if}}

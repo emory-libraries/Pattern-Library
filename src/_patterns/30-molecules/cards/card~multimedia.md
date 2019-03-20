@@ -2,7 +2,7 @@
 
 state: review
 created: 03/12/2019
-updated: 03/18/2019
+updated: 03/20/2019
 js: false
 php: false
 
@@ -21,7 +21,14 @@ grunt export:molecules-card-multimedia
 
 ### Description
 
-The card multimedia molecule can be used to include a multimedia card within another pattern. Multimedia cards accept a multimedia `type` to indicate the appropriate icon to be used.
+The card multimedia molecule can be used to include a multimedia card within another pattern. Multimedia cards accept a multimedia `type` to indicate the appropriate icon to be used. At present, the following types can be used:
+
+- `video`
+- `audio`
+- `photo` (or `image`)
+- `chart` (or `diagram`)
+- `presentation` (or `slideshow`)
+- `activity`
 
 
 ### Best Practices
@@ -32,11 +39,13 @@ The card multimedia molecule can be used to include a multimedia card within ano
 
 ## Schema
 
-| Name      | Type      | Description                                                       | Value(s)                                                                                          | Default   |
-|-----------|-----------|-------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|-----------|
-| type      | `String`  | Indicates the type of multimedia content.                         | `video`, `audio`, `photo`/`image`, `chart`/`diagram`, `presentation`/`slideshow`, or `activity`   |           |
-| href      | `String`  | A path or URL to the multimedia conent.                           |                                                                                                   |           |
-| title     | `String`  | The title of the multimedia content.                              |                                                                                                   |           |
-| context   | `String`  | A short word or phrase providing some context for the multimedia content.                                                                               |             |           |
-| target    | `String`  | Optionally indicates where the hyperlink should be opened.        | `_self`, `_blank`, `_parent`, or `_top`                                                           | `_self`   |
-| duration  | `String`  | The multimedia content's streaming duration, requires content with `type` of `video`, `audio`, or `presentation`/`slideshow`.                           |             |           |
+| Name      | Type      | Description                                                                 | Value(s)                                    | Default   |
+|-----------|-----------|-----------------------------------------------------------------------------|---------------------------------------------|-----------|
+| type      | `String`  | Indicates the type of multimedia content.                                   | *See **Description** above.*                |           |
+| link      | `Object`  | Some link data using the [`atoms-link`][atoms-link] schema, where the link's label will equal `title`.       |            |           |
+| title     | `String`  | The title of the multimedia content.                                        |                                             |           |
+| context   | `String`  | A short word or phrase providing some context for the multimedia content.   |                                             |           |
+| duration  | `String`  | The multimedia content's streaming duration, requires content with `type` of `video`, `audio`, or `presentation`/`slideshow`.     | | |
+
+
+[atoms-link]: /patterns/20-atoms-globals-link/20-atoms-globals-link.html

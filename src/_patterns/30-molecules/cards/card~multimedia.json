@@ -1,6 +1,8 @@
 {
   "type": "video",
-  "href": "",
+  "link": {
+    "href": ""
+  },
   "context": "Video Tutorial",
   "title": "Use discoverE to Refine Your Search Results",
   "duration": "1 min 16 sec"
