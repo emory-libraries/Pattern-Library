@@ -2,7 +2,7 @@
 
 state: review
 created: 03/08/2019
-updated: 03/18/2019
+updated: 03/20/2019
 js: false
 php: false
 
@@ -36,12 +36,12 @@ The wayfinder molecule allows you to include a wayfinder box within another patt
 |-------------|-----------|-----------------------------------------------------------------------------------------------------------|-----------|-----------|
 | heading     | `String`  | A heading to be displayed.                                                                                |           |           |
 | text        | `String`  | A text blurb to be displayed, limited to `150` characters.                                                |           |           |
-| image       | `String`  | A path or URL of an image to be displayed, where the image preferably uses a *landscape* orientation.     |           |           |
+| image             | `Object`  | Some image data using the [`atoms-image`][atoms-image] schema.                  |                               |           |
+| image.align       | `Object`  | Optionally configures how the image should be aligned.                          |                               |           |
+| image.align.x     | `String`  | Configures the image's horizontal (`x`-axis) alignment.                         | `left`, `right`, or `center`  | `center`  |
+| image.align.y     | `String`  | Configures the image's vertical (`y`-axis) alignment.                           | `top`, `bottom`, or `center`  | `center`  |
 | buttons     | `Array`   | A set of button links to be displayed.                                                                    |           |           |
 | buttons.`n` | `Object`  | Some data for a button link. Refer to [`atoms-button-link`][atoms-button-link] for more proper schema.    |           |           |
-| align       | `Object`  | Optionally configures how the image should be aligned.                                                    |           |           |
-| align.x     | `String`  | Configures the image's horizontal (`x`-axis) alignment.                               | `left`, `right`, or `center`  | `center`  |
-| align.y     | `String`  | Configures the image's vertical (`y`-axis) alignment.                                 | `top`, `bottom`, or `center`  | `center`  |
 
 
 ## Classes
@@ -58,4 +58,5 @@ The wayfinder molecule allows you to include a wayfinder box within another patt
 | `-align-y-center`   | Vertically centers the feature image within its container.    |
 
 
+[atoms-image]: /patterns/20-atoms-media-image/20-atoms-media-image.html
 [atoms-button-link]: /patterns/20-atoms-buttons-01-button-link/20-atoms-buttons-01-button-link.html
