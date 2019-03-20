@@ -2,7 +2,7 @@
 
 state: review
 created: 03/12/2019
-updated: 03/18/2019
+updated: 03/20/2019
 js: false
 php: false
 
@@ -31,9 +31,12 @@ The card library aid molecule can be used to include a library aid card within a
 
 ## Schema
 
-| Name      | Type      | Description                                                                   | Value(s)                                | Default         |
-|-----------|-----------|-------------------------------------------------------------------------------|-----------------------------------------|-----------------|
-| href      | `String`  | A path or URL to the library aid.                                             |                                         |                 |
-| title     | `String`  | The title of the library aid.                                                 |                                         |                 |
-| context   | `String`  | An optional short word or phrase providing some context for the library aid.  |                                         | `Library Aid`   |
-| target    | `String`  | Optionally indicates where the hyperlink should be opened.                    | `_self`, `_blank`, `_parent`, or `_top` | `_self`         |
+| Name      | Type      | Description                                                                   | Value(s)                             | Default         |
+|-----------|-----------|-------------------------------------------------------------------------------|--------------------------------------|-----------------|
+| link      | `Object`  | Some link data using the [`atoms-link`][atoms-link] schema, where the link's label will equal `title`.  |            |                 |
+| title     | `String`  | The title of the library aid.                                                 |                                      |                 |
+| context   | `String`  | An optional short word or phrase providing some context for the library aid.  |                                      | `Library Aid`   |
+| target    | `String`  | Optionally indicates where the hyperlink should be opened.                 | `_self`, `_blank`, `_parent`, or `_top` | `_self`         |
+
+
+[atoms-link]: /patterns/20-atoms-globals-link/20-atoms-globals-link.html
