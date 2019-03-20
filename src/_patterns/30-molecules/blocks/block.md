@@ -2,7 +2,7 @@
 
 state: review
 created: 03/05/2019
-updated: 03/18/2019
+updated: 03/20/2019
 js: false
 php: false
 
@@ -32,19 +32,19 @@ The block molecule can be used to include a block within another pattern. Blocks
 
 ## Schema
 
-| Name        | Type      | Description                                                                                              | Value(s)  | Default   |
-|-------------|-----------|----------------------------------------------------------------------------------------------------------|-----------|-----------|
-| heading     | `String`  | A heading to be displayed.                                                                               |           |           |
-| text        | `String`  | A short text excerpt to be displayed.                                                                    |           |           |
-| image       | `String`  | A path or URL of an image to be displayed.                                                               |           |           |
-| buttons     | `Array`   | A set of button links to be displayed.                                                                   |           |           |
-| buttons.`n` | `Object`  | Some data for a button link. Refer to [`atoms-button-link`][atoms-button-link] for more proper schema.   |           |           |
-| overhang    | `String`  | Optionally indicates where the photo should hang over the block.                        | `top`, `bottom`, or `both` |           |
-| stretch     | `String`  | Optionally indicates where the photo should stretch to touch the end of the block.      | `top`, `bottom`, or `both` |           |
-| shadow      | `String`  | Optionally indicates where an inner shadow should be applied.                  | `top`, `bottom`, `left`, or `right` |           |
-| flipped     | `Boolean` | Optionally indicates that the block's content and image should be flipped.                         | `true` or `false` | `false` |
-| markdown    | `Boolean` | Optionally indicates that the `text` should be rendered as [Markdown][Markdown].                   | `true` or `false` | `false` |
-| theme       | `String`  | Optionally indicates which block theme to use.                                                     | `light` or `dark` | `dark`  |
+| Name        | Type      | Description                                                                                              | Value(s)     | Default   |
+|-------------|-----------|----------------------------------------------------------------------------------------------------------|--------------|-----------|
+| heading     | `String`  | A heading to be displayed.                                                                               |              |           |
+| text        | `String`  | A short text excerpt to be displayed.                                                                    |              |           |
+| buttons     | `Array`   | A set of button links to be displayed.                                                                   |              |           |
+| buttons.`n` | `Object`  | Some data for a button link using [`atoms-button-link`][atoms-button-link] schema.                       |              |           |
+| image       | `Object`  | Some data for an image using [`atoms-image`][atoms-image] schema.                                        |              |           |
+| image.overhang    | `String`  | Optionally indicates where the image should hang over the block.                    | `top`, `bottom`, or `both`  |           |
+| image.stretch     | `String`  | Optionally indicates where the image should stretch to touch the end of the block.  | `top`, `bottom`, or `both`  |           |
+| shadow      | `String`  | Optionally indicates where an inner shadow should be applied.                  | `top`, `bottom`, `left`, or `right`    |           |
+| flipped     | `Boolean` | Optionally indicates that the block's content and image should be flipped.                         | `true` or `false`  | `false`   |
+| markdown    | `Boolean` | Optionally indicates that the `text` should be rendered as [Markdown][Markdown].                   | `true` or `false`  | `false`   |
+| theme       | `String`  | Optionally indicates which block theme to use.                                                     | `light` or `dark`  | `dark`    |
 
 
 ## Classes
@@ -69,4 +69,5 @@ The block molecule can be used to include a block within another pattern. Blocks
 
 
 [Markdown]: https://daringfireball.net/projects/markdown/
+[atoms-image]: /patterns/20-atoms-media-image/20-atoms-media-image.html
 [atoms-button-link]: /patterns/20-atoms-buttons-01-button-link/20-atoms-buttons-01-button-link.html

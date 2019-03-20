@@ -12,9 +12,11 @@
       "hollow": true
     }
   ],
-  "image": "https://source.unsplash.com/P3sLerH3UmM/900",
+  "image": {
+    "src": "https://source.unsplash.com/P3sLerH3UmM/900",
+    "overhang": "top",
+    "stretch": "bottom"
+  },
   "theme": "dark",
-  "overhang": "top",
-  "stretch": "bottom",
   "shadow": "bottom"
 }
