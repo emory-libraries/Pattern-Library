@@ -38,7 +38,7 @@ The explorer molecule allows you to include an explorer box within another patte
 | context   | `String`  | An optional, contextual word or phrase displayed at the top of the box.   |           | `Explore` |
 | heading   | `String`  | A heading to be displayed.                                                |           |           |
 | links     | `Array`   | A set of links to be displayed.                                           |           |           |
-| links.`n` | `Object`  | Some link data. Refer to [`atoms-link`][atoms-link] for proper schema.    |           |           |
+| links.`n` | `Object`  | Some link data using [`atoms-link`][atoms-link] schema.                   |           |           |
 
 
 [atoms-link]: /patterns/20-atoms-globals-link/20-atoms-globals-link.html

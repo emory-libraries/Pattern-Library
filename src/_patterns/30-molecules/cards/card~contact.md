@@ -36,7 +36,7 @@ The card contact molecule can be used to include a contact card within another p
 | name    | `String`  | The name of the contact, optionally formatted with postnominals included.                   |           |           |
 | title   | `String`  | The contact's title or position, optionally including their division separated by a comma.  |           |           |
 | email   | `String`  | The contact's email address.                                                                |           |           |
-| link    | `Object`  | Some link data usin the [`atoms-link`][atoms-link] schema, where the link's label will equal `name`.  | |           |
+| link    | `Object`  | Some link data using the [`atoms-link`][atoms-link] schema, where the link's label will equal `name`. | |           |
 | image   | `Object`  | Some image data for the contact's headshot using the [`atoms-image`][atoms-image] schema, preferably where the image is in a square format. |            |            |
 | gender  | `String`  | Optionally indicates the contact's gender for identifying the appropriate placeholder avatar when `image` is not given.  | `male` or `female` | `male`    |
 

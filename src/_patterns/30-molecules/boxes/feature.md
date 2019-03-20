@@ -37,12 +37,12 @@ The feature molecule allows you to include a feature box within another pattern.
 | context     | `String`  | A short text excerpt providing some context or, alternatively, a formatted date wherever applicable.      |           |           |
 | heading     | `String`  | A heading to be displayed, limited to `150` characters.                                                   |           |           |
 | description | `String`  | An short, optional description to be displayed, limited to `200` characters.                              |           |           |
-| image             | `Object`  | Some image data using the [`atoms-image`][atoms-image] schema.                  |                               |           |
-| image.align       | `Object`  | Optionally configures how the image should be aligned.                          |                               |           |
-| image.align.x     | `String`  | Configures the image's horizontal (`x`-axis) alignment.                         | `left`, `right`, or `center`  | `center`  |
-| image.align.y     | `String`  | Configures the image's vertical (`y`-axis) alignment.                           | `top`, `bottom`, or `center`  | `center`  |
+| image         | `Object`  | Some image data using the [`atoms-image`][atoms-image] schema.                      |                               |           |
+| image.align   | `Object`  | Optionally configures how the image should be aligned.                              |                               |           |
+| image.align.x | `String`  | Configures the image's horizontal (`x`-axis) alignment.                             | `left`, `right`, or `center`  | `center`  |
+| image.align.y | `String`  | Configures the image's vertical (`y`-axis) alignment.                               | `top`, `bottom`, or `center`  | `center`  |
 | buttons     | `Array`   | A set of button links to be displayed.                                                                    |           |           |
-| buttons.`n` | `Object`  | Some data for a button link. Refer to [`atoms-button-link`][atoms-button-link] for more proper schema.    |           |           |
+| buttons.`n` | `Object`  | Some data for a button link using [`atoms-button-link`][atoms-button-link] schema.                        |           |           |
 | theme       | `String`  | Optionally indicates which feature theme to use.                                                  | `light` or `dark` | `light  ` |
 
 

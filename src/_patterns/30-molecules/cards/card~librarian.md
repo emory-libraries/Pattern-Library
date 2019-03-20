@@ -36,7 +36,7 @@ The card librarian molecule can be used to include a subject librarian card with
 | name      | `String`  | The name of the librarian, optionally formatted with postnominals included.                               |                   |       |
 | title     | `String`  | The librarian's title or position.                                                                        |                   |       |
 | library   | `String`  | The librarian's home library.                                                                             |                   |       |
-| link      | `Object`  | Some link data usin the [`atoms-link`][atoms-link] schema.                                                |                   |       |
+| link      | `Object`  | Some link data using the [`atoms-link`][atoms-link] schema.                                               |                   |       |
 | image     | `Object`  | Some image data for the librarian's headshot using the [`atoms-image`][atoms-image] schema, preferably where the image is in a square format.           |                   |       |
 | gender    | `String`  | Optionally indicates the librarian's gender for identifying the appropriate placeholder avatar when `image` is not given.  | `male` or `female` | `male` |
 | subjects  | `Array`   | A list of subject areas that the librarian specializes in.                                                |                   |       |
