@@ -61,58 +61,23 @@ $molecules-accordion: (
   // Defines the accordion component's base styles.
   grid-template-rows: $size 1fr;
   @include border-y( $border-thickness solid $border-color );
+  transition: all $duration $timing;
   
   // Defines the accordion switch styles.
   &-switch { 
     
     // Shows content when open (checked).
     &:checked ~ #{$selector}-content {
-      animation-name: open;
-      animation-duration: $duration;
-      animation-timing-function: $timing;
-      animation-direction: forwards;
-      animation-iteration-count: 1;
       @include visually-hidden( false );
+      @include padding-y( $padding );
+      opacity: 1;
     }
   
     // Hides content when closed (not checked).
     &:not(:checked) ~ #{$selector}-content {
-      animation-name: close;
-      animation-duration: $duration;
-      animation-timing-function: $timing;
-      animation-direction: forwards;
-      animation-iteration-count: 1;
       @include visually-hidden( true );
-    }
-
-    // Defines open and close animations.
-    @keyframes open {
-      0% {
-        @include visually-hidden( true );
-        transform: scaley( 0 );
-        opacity: 0;
-      }
-      1% {
-        @include visually-hidden( false );
-      }
-      100% {
-        transform: scaley( 1 );
-        opacity: 1;
-      }
-    }
-    @keyframes close {
-      0% {
-        @include visually-hidden( false );
-        transform: scaley( 1 );
-        opacity: 1;
-      }
-      99% {
-        transform: scaley( 0 );
-        opacity: 0;
-      }
-      100% {
-        @include visually-hidden( true );
-      }
+      @include padding-y( 0 );
+      opacity: 0;
     }
 
     // Rotates the indicator down when open (checked).
@@ -143,6 +108,7 @@ $molecules-accordion: (
   &-toggle {
     grid-template-columns: 1fr minmax(($size / 2), auto);
     grid-template-rows: $size;
+    transition: all $duration $timing;
 
     // Defines the accordion title styles.
     #{$selector}-title {
@@ -173,6 +139,10 @@ $molecules-accordion: (
     @include tokens-text;
     padding: $padding;
     transform-origin: top center;
+    transform-style: preserve-3d;
+    position: relative !important;
+    width: 100% !important;
+    transition: all $duration $timing;
   }
   
 }
