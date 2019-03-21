@@ -1,7 +1,7 @@
 .text {
   @include tokens-text;
 
-  $types: 'body' 'body-alt' 'lead' 'blockquote' 'listing' 'accent' 'button' 'badge' 'label' 'data';
+  $types: remove(map-keys($fonts), 'heading');
 
   @each $type in $types {
 
