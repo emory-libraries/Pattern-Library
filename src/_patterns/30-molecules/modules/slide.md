@@ -33,7 +33,7 @@ The slide molecule can be used to include a single slide within a [`compounds-sl
 
 | Name              | Type      | Description                                                                   | Value(s)                      | Default   |
 |-------------------|-----------|-------------------------------------------------------------------------------|-------------------------------|-----------|
-| title             | `String`  | The title of the listing content to be displayed.                             |                               |           |
+| title             | `String`  | The title of the slide content to be displayed.                               |                               |           |
 | image             | `Object`  | Some image data using the [`atoms-image`][atoms-image] schema.                |                               |           |
 | image.orientation | `String`  | Optionally indicates the image's orientation to better optimize scaling.      | `portrait` or `landscape`     |           |
 | image.align       | `Object`  | Optionally configures how the image should be aligned.                        |                               |           |
