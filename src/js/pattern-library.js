@@ -52,6 +52,9 @@ $('.copy').each((i, copier) => {
 
 });
 
+// Always reset session data.
+Store.wipe();
+
 // Create sample method for Button component.
 Components.extend('button', {
 
@@ -226,6 +229,36 @@ Components.extend('filter-button', {
         'text-align': 'center'
       }
     });
+
+  }
+
+});
+
+// Create sample handler for Alert component.
+Components.extend('alert', {
+
+  methods: {
+
+    dismiss() {
+
+      // Dismiss the alert.
+      this.state.dismissed = true;
+
+      // Save the alert's state.
+      Store.set(`alerts.${this.uid}`, this.state);
+
+      // Make the alert reappear after a few seconds.
+      setTimeout(() => {
+
+        // Reset the alert state.
+        this.state.dismissed = false;
+
+        // Save the state.
+        Store.set(`alerts.${this.uid}`, this.state);
+
+      }, 5000);
+
+    }
 
   }
 
