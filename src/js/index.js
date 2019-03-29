@@ -70,6 +70,88 @@ _.cloneDeepOwn = ( thing ) => {
 // Initialize an event bus for handling events.
 const Events = new Vue();
 
+// Initialize a data store using session storage.
+const Store = new Vue({
+
+  data: {
+    name: 'EUL',
+    storage: sessionStorage,
+    data: {}
+  },
+
+  methods: {
+
+    get( key = null ) {
+
+      return key ? _.get(this.data, key) : this.data;
+
+    },
+
+    set( key, value ) {
+
+      _.set(this.data, key, value);
+
+      this.save();
+
+    },
+
+    unset( key ) {
+
+      _.unset(this.data, key);
+
+      this.save();
+
+    },
+
+    save() {
+
+      _.set(this.storage, this.name, JSON.stringify(this.data));
+
+    },
+
+    fetch() {
+
+      const data = _.get(this.storage, this.name);
+
+      return data ? JSON.parse(data) : null;
+
+    },
+
+    wipe() {
+
+      delete this.storage[this.name];
+
+    },
+
+    reset() {
+
+      this.data = {};
+
+      this.save();
+
+    },
+
+    init() {
+
+      const data = this.fetch();
+
+      if( data ) this.data = data;
+
+      else this.save();
+
+    }
+
+  },
+
+  created() {
+
+    // Initialize the data store.
+    this.init();
+
+  }
+
+});
+
 // Initalize a registry for creating and storing components.
 const Components = {
 
@@ -1376,6 +1458,7 @@ global._ = _;
 global.Vue = Vue;
 global.Events = Events;
 global.Components = Components;
+global.Store = Store;
 global.Leaflet = global.L = L;
 global.jQuery = global.$ = $;
 global.EUL = EUL;
