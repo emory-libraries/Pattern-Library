@@ -264,6 +264,36 @@ Components.extend('alert', {
 
 });
 
+// Create sample handler for Notification component.
+Components.extend('notification', {
+
+  methods: {
+
+    dismiss() {
+
+      // Dismiss the notification.
+      this.state.dismissed = true;
+
+      // Save the notification's state.
+      Store.set(`notifications.${this.uid}`, this.state);
+
+      // Make the notification reappear after a few seconds.
+      setTimeout(() => {
+
+        // Reset the notification state.
+        this.state.dismissed = false;
+
+        // Save the state.
+        Store.set(`notifications.${this.uid}`, this.state);
+
+      }, 5000);
+
+    }
+
+  }
+
+});
+
 // Prevent errors by forcing Vue to ignore Pattern Lab data.
 $('.sg-pattern-data').attr('v-pre', true);
 
