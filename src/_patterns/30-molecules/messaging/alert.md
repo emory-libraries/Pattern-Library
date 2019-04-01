@@ -21,7 +21,7 @@ grunt export:molecules-alert
 
 ### Description
 
-The alert molecule can be used to include an alert within another pattern. Alerts are builds as [Vue.js][Vue.js] components and utilize in-browser session storage to remember when users dismiss alerts.
+The alert molecule can be used to include an alert within another pattern. Alerts are built as [Vue.js][Vue.js] components and utilize in-browser session storage to remember when users dismiss them.
 
 
 ### Best Practices
@@ -36,7 +36,7 @@ The alert molecule can be used to include an alert within another pattern. Alert
 
 | Name        | Type        | Description                                         | Value(s)                                                              | Default   |
 |-------------|-------------|-----------------------------------------------------|-----------------------------------------------------------------------|-----------|
-| dismissible | `Boolean`   | Indicates whether the alert should be dismissible.  | `true` or `false`                                                     | `false`   |
+| dismissible | `Boolean`   | Indicates whether the alert should be dismissible.  | `true` or `false`                                                     | `true`    |
 | type        | `String`    | Indicates the type of alert box to use.             | `default`, `success`, `caution`, `error`, `info`, `light`, or `dark`  | `default` |
 | uid         | `String`    | A site-wide unique ID for the alert.                |                                                                       |           |
 | title       | `String`    | The title of the alert to be displayed.             |                                                                       |           |
