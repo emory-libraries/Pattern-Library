@@ -44,6 +44,10 @@
       "logos": "./dist/<%= pkg.version %>/logos/",
       "css": "./dist/<%= pkg.version %>/css/",
       "php": "./dist/<%= pkg.version %>/php/"
+    },
+    "live": {
+      "hostname": "template.library.emory.edu",
+      "pathname": "/styleguide/patternlibrary/current"
     }
   },
   "styleGuideExcludes": [

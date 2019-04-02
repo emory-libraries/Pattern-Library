@@ -67,6 +67,7 @@ Builds the Pattern Library, listens for changes during development, and enables 
 | Subtask                   | Description                                                             |
 |---------------------------|-------------------------------------------------------------------------|
 | `dev:startup`             | Runs an initial build and forces any active browser windows to reload.  |
+| `dev:buildonly`           | Runs an initial build only without running a subsequent watch task.     |
 
 #### `grunt dist`
 
@@ -76,9 +77,13 @@ Compiles assets and creates production-ready files for distribution.
 
 Spins up a PHP-enabled server that allows previewing of the Pattern Library in real-time during development.
 
+#### `grunt deploy`
+
+Generates production-ready files for distribution (like `grunt dist`) and additionally deploys them to our host server
+
 #### `grunt release`
 
-Generates production-ready files for distribution (like `grunt dist`) and additionally adds a new release to Github.
+Generates production-ready files for distribution and deploys them to our host server (like `grunt deploy`) and additionally adds a new release to Github.
 
 #### `grunt patternlab`
 
