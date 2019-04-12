@@ -1,0 +1,10 @@
+{{>organisms-intro-alternative-text}}
+{{#each blocks}}
+    {{#if (eq type 'rich-text') }}
+        {{{rich-text}}}
+    {{else if (eq type 'image') }}
+        {{>atoms-image}}
+    {{else if (eq type 'video') }}
+            {{>atoms-video-youtube}}
+    {{/if}}
+{{/each}}

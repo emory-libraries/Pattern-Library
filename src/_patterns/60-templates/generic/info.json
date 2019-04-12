@@ -1,0 +1,26 @@
+{
+  "markdown": false,
+  "category": "Service Name",
+  "heading": "Title of Page",
+  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  "blocks": [
+    {
+      "type": "rich-text",
+      "rich-text": "<p>Lacus sed turpis tincidunt id aliquet risus. Sed elementum tempus egestas sed sed risus pretium quam. <a href=\"#\">Ullamcorper malesuada proin</a> libero nunc consequat interdum varius sit. <strong>Urna et pharetra pharetra massa massa ultricies mi quis hendrerit.</strong> Velit scelerisque in dictum non consectetur. Viverra orci sagittis eu volutpat odio facilisis mauris sit amet. Pellentesque sit amet porttitor eget. Mauris augue neque gravida in fermentum et sollicitudin. <em>Quis blandit turpis cursus in hac.</em></p>"
+    },
+    {
+      "type": "image",
+      "src": "https://via.placeholder.com/600x100.png?text=Placeholder+Image",
+      "alt": "Placeholder image 600 pixels wide",
+      "align": "center"
+    },
+    {
+      "type": "rich-text",
+      "rich-text": "<p>Nibh tortor id aliquet lectus proin nibh nisl condimentum id. Pellentesque elit <strong>eget gravida cum sociis</strong> natoque penatibus et. Libero justo laoreet sit amet cursus. Libero volutpat sed cras ornare arcu dui vivamus arcu. Imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor. Posuere urna nec tincidunt praesent semper feugiat nibh sed pulvinar. Tempor orci dapibus ultrices in.</p>"
+    },
+    {
+      "type": "video",
+      "id": "W-h1FtNYim4"
+    }
+  ]
+}
