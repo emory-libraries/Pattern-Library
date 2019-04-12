@@ -1,8 +1,5 @@
 {
-  "markdown": false,
-  "category": "Service Name",
-  "heading": "Title of Page",
-  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  "markdown": true,
   "blocks": [
     {
       "type": "rich-text",
