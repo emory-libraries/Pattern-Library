@@ -1,0 +1,5 @@
+<div class="cards">
+  {{#each cards}}
+    {{> (combine 'molecules-card-' (default ../type type))}}
+  {{/each}}
+</div>
