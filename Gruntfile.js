@@ -297,6 +297,7 @@ module.exports = function(grunt) {
           path.resolve(paths.source.patterns, '*-molecules/**/*.scss'),
           path.resolve(paths.source.patterns, '*-compounds/**/*.scss'),
           path.resolve(paths.source.patterns, '*-organisms/**/*.scss'),
+          path.resolve(paths.source.patterns, '*-templates/**/*.scss')
         ],
         dest: path.resolve(paths.source.scss, 'patterns/__master.scss')
       }

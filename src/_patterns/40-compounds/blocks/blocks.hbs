@@ -1,0 +1,13 @@
+{{#each blocks}}
+  {{#if (eq type 'rich-text')}}
+    {{> tokens-text rich=true}}
+  {{else if (eq type 'text')}}
+    {{> tokens-text}}
+  {{else if (eq type 'image')}}
+    {{> atoms-image}}
+  {{else if (eq type 'heading')}}
+    {{> tokens-heading}}
+  {{else if (eq type 'video')}}
+    {{> atoms-video-youtube}}
+  {{/if}}
+{{/each}}

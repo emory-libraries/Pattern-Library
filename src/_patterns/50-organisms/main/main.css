@@ -1,0 +1,69 @@
+.main {
+  margin: 0 auto;
+  max-width: 1236px;
+  display: grid;
+  grid-area: main;
+}
+.main {
+  grid-template-areas: "title" "subtitle" "body" "guides" "aside";
+}
+@media (min-width: 901px) {
+  .main {
+    grid-template-areas: "title title" "subtitle subtitle" "body  aside" "guides guides";
+    grid-template-columns: minmax(auto, 840px) minmax(auto, 340px);
+  }
+}
+@media (min-width: 901px) {
+  .-material-page.main {
+    grid-template-areas: "title title" "subtitle aside" "body aside" "guides guides";
+  }
+}
+@media (min-width: 901px) {
+  .-tool-page.main {
+    grid-template-areas: "title title" "subtitle aside" "body aside" "guides guides";
+  }
+}
+.main-title {
+  grid-area: title;
+}
+.main-subtitle {
+  grid-area: subtitle;
+}
+.main-body {
+  grid-area: body;
+}
+.main-body .image {
+  max-width: 100%;
+}
+.main-sidebar {
+  grid-area: aside;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.main-sidebar::after {
+  content: "Sidebar";
+}
+.main-guides {
+  grid-area: guides;
+}
+
+.main {
+  grid-column-gap: 40px;
+}
+.main-body .heading.-h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 22px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6364;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #082B73;
+}
+.main-sidebar {
+  border: 1px solid #B6BDCC;
+}
