@@ -1,7 +1,6 @@
 .tool-page {
   margin: 0 auto;
   display: grid;
-  grid-gap: 20px;
   grid-template-areas: "header" "main" "footer";
   grid-template-rows: 150px 1fr 420px;
   grid-template-columns: 1fr;
@@ -11,12 +10,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .tool-page-header::after {
   content: "Header";
@@ -29,19 +28,19 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .tool-page-footer::after {
   content: "Footer";
 }
 
-.tool-page-sidebar {
-  border: 1px solid #B6BDCC;
+.tool-page {
+  grid-gap: 20px;
 }
 .tool-page-header, .tool-page-footer {
   border: 1px solid #B6BDCC;
