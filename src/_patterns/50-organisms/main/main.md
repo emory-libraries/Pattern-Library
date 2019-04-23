@@ -2,7 +2,7 @@
 
 state: construction
 created: 04/19/2019
-updated: 04/19/2019
+updated: 04/23/2019
 js: false
 php: false
 
@@ -10,7 +10,7 @@ php: false
 
 ## Getting Started
 
-Insert a sentence or two identifying what the **main** pattern is and what purpose it serves.
+The main section makes up the main body content of a page.
 
 ###### EXPORT VIA GRUNT
 
@@ -21,40 +21,28 @@ grunt export:organisms-main
 
 ### Description
 
-Provide a detailed description about the **main** pattern. This should include a short summary of how the pattern works; what options or configurations are available to further customize the pattern based on context, if any; and/or what state changes the pattern possesses, if any. This description may include use-case scenarios for different contexts and other information that's deemed helpful for other developers.
+The main organism can be used to include a main content section within a template pattern.
 
 
 ### Best Practices
 
-Optionally, create a bulleted list of best practices for how to properly use this pattern in production and/or integrate this pattern within other user interface components.
+- Only ever include a single main section within a template
 
 
 ## Schema
 
-Optionally, build a table to identify any pattern schematics that are pertinent for developers to be aware of. A sample schema table is given below.
+This pattern combines the schemas for [`compounds-blocks`][compounds-blocks] and [`organisms-intros-alt-text`][organisms-intros-alt-text].
 
-| Name  | Type      | Description | Value(s)  | Default   |
-|-------|-----------|-------------|-----------|-----------|
-| label | `String`  | Some text.  |           |           |
-| href  | `String`  | A path.     |           |           |
 
 ## Classes
 
-Optionally, build a table to identify any pattern classes that are pertinent for developers to be aware of. For clarity, it could be useful to group classes into different tables based on their purpose, such as *Style Variations* or *State Changes*. Some sample class tables are given below.
-
 ### Variations
 
-Classes used to indicate style variations are always prefixed with `-`. These classes tend to change the way the pattern appears.
+| Class             | Description                                                 |
+|-------------------|-------------------------------------------------------------|
+| `-material-page`  | Adjusts the main section's layout for a **material page**.  |
+| `-tool-page`      | Adjusts the main section's layout for a **tool page**.      |
 
-| Class     | Description                                     |
-|-----------|-------------------------------------------------|
-| `-light`  | Uses a light theme.                             |
-| `-dark`   | Uses a dark theme.                              |
 
-### State
-
-Classes used for state changes are always prefixed with `is-` or `has-`. Classes that use the `is-` prefix are typically used to temporarily alter the pattern's appearance while classes that use the `has-` prefix tend to indicate some structural difference from the pattern's usual state.
-
-| Class       |                                                 |
-|-------------|-------------------------------------------------|
-| `is-active` | Indicates that it's **active**.                 |
+[compounds-blocks]: /patterns/40-compounds-blocks-blocks/40-compounds-blocks-blocks.html
+[organisms-intro-alt-text]: /patterns/50-organisms-intros-alt-text/50-organisms-intros-alt-text.html

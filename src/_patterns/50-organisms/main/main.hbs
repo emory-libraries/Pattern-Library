@@ -1,8 +1,7 @@
-<div class="main{{#if classes}} {{classes}}{{/if}}">
-    {{>organisms-intro-alternative-text classes="main-titles"}}
-    <main class="main-body-content">
-        {{>compounds-blocks classes="main-body-content"}}
-    </main>
-    <aside class="main-sidebar"></aside>
+<div class="main{{#if type}} -{{type}}{{/if}}{{#if classes}} {{classes}}{{/if}}">
+  {{> organisms-intro-alt-text}}
+  <main class="main-body">
+    {{> compounds-blocks}}
+  </main>
+  <aside class="main-sidebar"></aside>
 </div>
-

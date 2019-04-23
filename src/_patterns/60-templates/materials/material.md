@@ -10,24 +10,24 @@ php: false
 
 ## Getting Started
 
-Info pages are intended to provide users with some general information.
+Material pages are intended to provide users with some information about a specific library material.
 
 ###### EXPORT VIA GRUNT
 
 ```
-grunt export:templates-info
+grunt export:templates-materials
 ```
 
 
 ### Description
 
-The info template can be used to create an **info page**.
+The material template can be used to create an **material page**.
 
 
 ### Best Practices
 
 - Only ever include one main section within the template
-- Use the info template for pages with the **info page** page type
+- Use the material template for pages with the **material page** page type
 
 
 ## Schema
