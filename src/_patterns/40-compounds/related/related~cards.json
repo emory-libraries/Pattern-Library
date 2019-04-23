@@ -1,0 +1,60 @@
+{
+  "title": "Related Library Aids",
+  "type": "library-aid",
+  "cards": [
+    {
+      "title": "Access Library Resources",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "title": "Find a Book",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "title": "Find an Article in Full Text",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "title": "Find a Textbook",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "title": "Find a Video",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "title": "Find Course Reserve Material",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "title": "Understanding Citations",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "title": "Find Journals by Subject",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "title": "Access an Item in Storage",
+      "link": {
+        "href": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Related University Event Topics",
+  "topics": [
+    {"label": "Alumni", "href": "/"},
+    {"label": "College", "href": "/"},
+    {"label": "Community", "href": "/"},
+    {"label": "Diversity", "href": "/"},
+    {"label": "Faculty", "href": "/"},
+    {"label": "Graduate", "href": "/"},
+    {"label": "Humanities", "href": "/"},
+    {"label": "Student & Campus Life", "href": "/"}
+  ]
+}

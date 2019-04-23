@@ -229,7 +229,7 @@ module.exports = function( id = null ) {
         },
         {
           src: path.resolve(config.paths.source.data, `!(*.default).json`),
-          dest: 'src/data/__environment__/_meta'
+          dest: 'src/engine/__environment__/meta'
         },
         {
           src: path.resolve(config.paths.dist.images.replace('<%= pkg.version %>', `${version}-push`), '*'),
