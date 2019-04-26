@@ -51,4 +51,26 @@ $organisms-intro: (
     @include tokens-text('lead', $subtitle, $important: true);
   }
   
+  // Defines intro styles for heading formats.
+  &.-heading {
+    
+    // Modifies the intro title styles for heading formats.
+    &-title {
+      @include tokens-heading('h1', $title, $important: true);
+      text-align: center;
+      
+      // Adds color block to title.
+      &::before {
+        @include atoms-rule('heading');
+      }
+      
+      // Adds separator to title.
+      &::after {
+        
+      }
+      
+    }
+    
+  }
+  
 }

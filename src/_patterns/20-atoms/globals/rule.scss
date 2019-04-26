@@ -1,3 +1,14 @@
 .rule {
   @include atoms-rule;
+
+  $styles: 'light' 'dark' 'dotted' 'thick' 'heading' 'feed';
+
+  @each $style in $styles {
+
+    &.-#{$style} {
+      @include atoms-rule($style);
+    }
+
+  }
+
 }

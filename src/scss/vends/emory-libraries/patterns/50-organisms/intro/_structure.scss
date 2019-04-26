@@ -23,4 +23,30 @@
   // Builds the intro subtitle structure.
   &-subtitle { }
   
+  // Builds intro structure for heading formats.
+  &.-heading {
+    
+    // Modifies the intro context structure for heading formats.
+    &-context {
+      display: none;
+    }
+    
+    // Modifies the intro title structure for heading formats.
+    &-title {
+    
+      &::before,
+      &::after {
+        display: block;
+        @include absolute( null 0 0 0 );
+      }
+    
+    }
+    
+    // Modifies the intro subtitle structure for heading formats.
+    &-subtitle {
+      display: none;
+    }
+    
+  }
+  
 }
