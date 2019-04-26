@@ -1,8 +1,8 @@
 {
   "markdown": false,
   "context": "Service Name",
-  "heading": "Title of Page",
-  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  "title": "Title of Page",
+  "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   "blocks": [
     {
       "type": "rich-text",
