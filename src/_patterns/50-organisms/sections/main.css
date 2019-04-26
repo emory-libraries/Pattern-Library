@@ -1,41 +1,41 @@
-.main {
+.section-main {
   margin: 0 auto;
   max-width: 1236px;
   display: grid;
   grid-area: main;
 }
-.main {
+.section-main {
   grid-template-areas: "title" "subtitle" "body" "guides" "aside";
 }
 @media (min-width: 901px) {
-  .main {
+  .section-main {
     grid-template-areas: "title title" "subtitle subtitle" "body  aside" "guides guides";
     grid-template-columns: minmax(auto, 840px) minmax(auto, 340px);
   }
 }
 @media (min-width: 901px) {
-  .-material-page.main {
+  .-material-page.section-main {
     grid-template-areas: "title title" "subtitle aside" "body aside" "guides guides";
   }
 }
 @media (min-width: 901px) {
-  .-tool-page.main {
+  .-tool-page.section-main {
     grid-template-areas: "title title" "subtitle aside" "body aside" "guides guides";
   }
 }
-.main-title {
+.section-main-title {
   grid-area: title;
 }
-.main-subtitle {
+.section-main-subtitle {
   grid-area: subtitle;
 }
-.main-body {
+.section-main-body {
   grid-area: body;
 }
-.main-body .image {
+.section-main-body .image {
   max-width: 100%;
 }
-.main-sidebar {
+.section-main-sidebar {
   grid-area: aside;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -44,17 +44,17 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
-.main-sidebar::after {
+.section-main-sidebar::after {
   content: "Sidebar";
 }
-.main-guides {
+.section-main-guides {
   grid-area: guides;
 }
 
-.main {
+.section-main {
   grid-column-gap: 40px;
 }
-.main-body .heading.-h2 {
+.section-main-body .heading.-h2 {
   font-family: "Open Sans", sans-serif;
   font-size: 22px;
   font-weight: normal;
@@ -64,6 +64,6 @@
   text-transform: none;
   color: #082B73;
 }
-.main-sidebar {
+.section-main-sidebar {
   border: 1px solid #B6BDCC;
 }

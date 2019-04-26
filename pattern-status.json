@@ -90,11 +90,11 @@
   "40-compounds-blocks-blocks": "review",
   "50-organisms-intros-intro-text": "review",
   "50-organisms-intros-intro-alt-text": "review",
-  "50-organisms-main-main": "review",
-  "50-organisms-main-main-tool": "review",
-  "50-organisms-main-main-material": "review",
   "60-templates-generic-info": "review",
   "60-templates-tools-tool": "review",
   "60-templates-materials-material": "review",
-  "50-organisms-intros-intro-heading": "review"
+  "50-organisms-intros-intro-heading": "review",
+  "50-organisms-sections-main": "review",
+  "50-organisms-sections-main-material": "review",
+  "50-organisms-sections-main-tool": "review"
 }
