@@ -58,6 +58,7 @@
 @import '../../_patterns/30-molecules/boxes/feature';
 @import '../../_patterns/30-molecules/boxes/wayfinder';
 @import '../../_patterns/30-molecules/cards/card~action';
+@import '../../_patterns/30-molecules/cards/card~button';
 @import '../../_patterns/30-molecules/cards/card~contact';
 @import '../../_patterns/30-molecules/cards/card~librarian';
 @import '../../_patterns/30-molecules/cards/card~library-aid';
@@ -87,10 +88,9 @@
 @import '../../_patterns/50-organisms/intros/intro~heading';
 @import '../../_patterns/50-organisms/intros/intro~text';
 @import '../../_patterns/50-organisms/sections/main';
-@import '../../_patterns/50-organisms/sections/main~material';
-@import '../../_patterns/50-organisms/sections/main~tool';
 @import '../../_patterns/50-organisms/sections/major';
 @import '../../_patterns/50-organisms/sections/minor';
 @import '../../_patterns/60-templates/generic/info';
 @import '../../_patterns/60-templates/materials/material';
+@import '../../_patterns/60-templates/services/service-directory';
 @import '../../_patterns/60-templates/tools/tool';
