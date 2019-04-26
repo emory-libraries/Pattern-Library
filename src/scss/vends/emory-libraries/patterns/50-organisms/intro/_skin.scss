@@ -39,23 +39,18 @@ $organisms-intro: (
   // Defines the intro context styles.
   &-context {
     @include tokens-heading('h6', $context, $important: true);
+    
+    // Modifies styles when used for a heading intro.
+    &.-heading { }
+    
   }
   
   // Defines the intro title styles.
   &-title {
     @include tokens-heading('h1-alt', $title, $important: true);
-  }
-  
-  // Defines the intro subtitle styles.
-  &-subtitle {
-    @include tokens-text('lead', $subtitle, $important: true);
-  }
-  
-  // Defines intro styles for heading formats.
-  &.-heading {
     
-    // Modifies the intro title styles for heading formats.
-    &-title {
+    // Modifies styles when used for a heading intro.
+    &.-heading { 
       @include tokens-heading('h1', $title, $important: true);
       text-align: center;
       
@@ -66,10 +61,18 @@ $organisms-intro: (
       
       // Adds separator to title.
       &::after {
-        
+        @include atoms-rule;
       }
-      
     }
+    
+  }
+  
+  // Defines the intro subtitle styles.
+  &-subtitle {
+    @include tokens-text('lead', $subtitle, $important: true);
+    
+    // Modifies styles when used for a heading intro.
+    &.-heading { }
     
   }
   

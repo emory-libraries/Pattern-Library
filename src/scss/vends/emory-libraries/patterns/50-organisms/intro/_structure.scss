@@ -13,40 +13,45 @@
   // Builds the intro context structure.
   &-context {
     display: block;
+    
+    // Modifies structure when used for a heading intro.
+    &.-heading {
+      display: none;
+    }
+    
   }
   
   // Builds the intro title structure.
   &-title { 
-    margin: 0;
-  }
-  
-  // Builds the intro subtitle structure.
-  &-subtitle { }
-  
-  // Builds intro structure for heading formats.
-  &.-heading {
     
-    // Modifies the intro context structure for heading formats.
-    &-context {
-      display: none;
+    &:not(.-heading) {
+      margin: 0;
     }
     
-    // Modifies the intro title structure for heading formats.
-    &-title {
+    // Modifies structure when used for a heading intro.
+    &.-heading {
+      margin-top: 0;
     
       &::before,
       &::after {
+        content: '';
         display: block;
-        @include absolute( null 0 0 0 );
+        @include absolute( null 0 -.67em 0 );
+        margin: 0 auto;
       }
     
     }
     
-    // Modifies the intro subtitle structure for heading formats.
-    &-subtitle {
+  }
+  
+  // Builds the intro subtitle structure.
+  &-subtitle { 
+  
+    // Modifies structure when used for a heading intro.
+    &.-heading {
       display: none;
     }
-    
+  
   }
   
 }
