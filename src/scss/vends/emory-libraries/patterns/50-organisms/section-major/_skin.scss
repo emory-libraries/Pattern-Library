@@ -60,7 +60,7 @@ $organisms-section-major: (
   
   // Defines the major title styles.
   &-title {
-    @include tokens-heading('h5', $theme-heading);
+    @include tokens-heading('h5', $theme-heading, $important: true);
     text-align: center;
     
     &::after {
@@ -68,7 +68,7 @@ $organisms-section-major: (
     }
     
     @include breakpoint-m-l {
-      @include tokens-heading--font('h2', $tokens-heading, $theme-heading);
+      @include tokens-heading--font('h2', $tokens-heading, true);
     };
     
   }
@@ -91,12 +91,12 @@ $organisms-section-major: (
       background-color: $theme-background;
       
       // Adjust the title styles.
-      &-title {
-        color: $theme-heading;
+      #{$selector}-title {
+        color: $theme-heading !important;
       }
       
       // Adjust the body styles.
-      &-body {
+      #{$selector}-body {
         color: $theme-foreground;
       }
       
