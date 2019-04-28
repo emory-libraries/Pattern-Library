@@ -61,7 +61,7 @@ Components.register('filter-button', {
 
   },
 
-  created() {
+  mounted() {
 
     // Initialize the search utility.
     this.fuzzy = new Fuzzy(this.index, this.config);

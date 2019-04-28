@@ -62,10 +62,9 @@ Components.register('filter-search', {
       this.query = '';
 
     }
-
   },
 
-  created() {
+  mounted() {
 
     // Initialize the search utility.
     this.fuzzy = new Fuzzy(this.index, this.config);

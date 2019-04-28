@@ -53,7 +53,7 @@ Components.register('filter-dropdown', {
 
   },
 
-  created() {
+  mounted() {
 
     // Initialize the search utility.
     this.fuzzy = new Fuzzy(this.index, this.config);
