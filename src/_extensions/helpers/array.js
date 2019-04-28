@@ -104,6 +104,20 @@ module.exports = {
 
     return _.findIndex(array, item);
 
+  },
+
+  // Group items within an arry of objects by a given key.
+  keyBy( arrayOfObjects, key ) {
+
+    return _.keyBy(arrayOfObjects, key);
+
+  },
+
+  // Create an array from the given values.
+  makeArray( ...values ) {
+
+    return [..._.initial(values)];
+
   }
 
 };

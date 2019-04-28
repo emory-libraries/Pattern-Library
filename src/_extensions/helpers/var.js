@@ -8,14 +8,14 @@ module.exports = {
   // Set a key-value pair on a given context.
   set( key, value, context ) {
 
-    context[key] = value;
+    _.set(context, key, value);
 
   },
 
   // Unset a key-value pair on a given context.
   unset( key, context ) {
 
-    delete context[key];
+    _.unset(context, key);
 
   },
 
@@ -40,7 +40,31 @@ module.exports = {
   // Unassign a value to the current context.
   unassign( key ) {
 
-    delete this[key];
+    _.unset(this, key);
+
+  },
+
+  // Push an item onto the end of an array.
+  push( value, array, options ) {
+
+    // Make sure options is set.
+    if( options ) {
+
+      if( Array.isArray(array) ) array.push(value);
+
+    }
+
+  },
+
+  // Push an item onto the beginning of an array.
+  unshift( value, array, options ) {
+
+    // Make sure options is set.
+    if( options ) {
+
+      if( Array.isArray(array) ) array.unshift(value);
+
+    }
 
   }
 
