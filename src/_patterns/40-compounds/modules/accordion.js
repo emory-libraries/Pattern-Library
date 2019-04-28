@@ -37,7 +37,7 @@ Components.register('accordion', {
   mounted() {
 
     // Find all accordion panels.
-    this.panels = Array.from($(this.$el).find('.accordion-panel'));
+    this.panels = _.toArray($(this.$el).find('.accordion-panel'));
 
   }
 
