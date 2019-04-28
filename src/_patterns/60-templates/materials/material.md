@@ -32,6 +32,6 @@ The material template can be used to create an **material page**.
 
 ## Schema
 
-This pattern uses the schema for [`organisms-main`][organisms-main]
+This pattern uses the schema for [`organisms-main`][organisms-main].
 
 [organisms-main]: /patterns/50-organisms-main-main/50-organisms-main-main.html
