@@ -45,6 +45,7 @@
   -webkit-box-shadow: 0 0 0 1px rgba(231, 234, 241, 0.3), 0 0 0 15px #004990;
           box-shadow: 0 0 0 1px rgba(231, 234, 241, 0.3), 0 0 0 15px #004990;
   margin: 15px;
+  text-align: center !important;
 }
 .card-button {
   border: 1px solid #004990;
