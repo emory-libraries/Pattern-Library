@@ -160,14 +160,18 @@ Components.extend('filter-search', {
 
   mounted() {
 
-    // Insert a sample list to help demonstrate how the component works.
-    const $list = $('<ul>').insertAfter(this.$el);
+    // Add some data to our search filter to demo it.
+    if( $(this.$el).closest('#atoms-filter-search').length > 0 ) {
 
-    // Populate the list using our index items.
-    this.fuzzy.populate($list, {
-      template: '<li>:service</li>'
-    });
+      // Insert a sample list to help demonstrate how the component works.
+      const $list = $('<ul>').insertAfter(this.$el);
 
+      // Populate the list using our index items.
+      this.fuzzy.populate($list, {
+        template: '<li>:service</li>'
+      });
+
+    }
 
   }
 
