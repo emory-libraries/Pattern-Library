@@ -345,7 +345,7 @@ const Components = {
 class Fuzzy {
 
   // Constructor
-  constructor( index, options ) {
+  constructor( index, options = {} ) {
 
     // Capture self.
     const self = this;
@@ -374,10 +374,10 @@ class Fuzzy {
         sort( sorted ) {
 
           // Reorder items based on sort order.
-          _.each(sorted.map((item) => item.__el), ($el) => {
+          _.each(sorted.map((item) => item.__el), (el) => {
 
             // Sort.
-            if( $el ) $el.parent().append($el);
+            if( $(el) ) $(el).parent().append(el);
 
           });
 
@@ -385,18 +385,18 @@ class Fuzzy {
         filter( filtered, filteredout ) {
 
           // Show filtered.
-          _.each(filtered.map((item) => item.__el), ($el) => {
+          _.each(filtered.map((item) => item.__el), (el) => {
 
             // Show.
-            if( $el ) $el.show();
+            if( el ) $(el).show();
 
           });
 
           // Hide filteredout.
-          _.each(filteredout.map((item) => item.__el), ($el) => {
+          _.each(filteredout.map((item) => item.__el), (el) => {
 
             // Hide.
-            if( $el ) $el.hide();
+            if( el ) $(el).hide();
 
           });
 
@@ -404,18 +404,18 @@ class Fuzzy {
         search( results, nonresults ) {
 
           // Show results.
-          _.each(results.map((item) => item.__el), ($el) => {
+          _.each(results.map((item) => item.__el), (el) => {
 
             // Show.
-            if( $el ) $el.show();
+            if( el ) $(el).show();
 
           });
 
           // Hide nonresults.
-          _.each(nonresults.map((item) => item.__el), ($el) => {
+          _.each(nonresults.map((item) => item.__el), (el) => {
 
             // Hide.
-            if( $el ) $el.hide();
+            if( el ) $(el).hide();
 
           });
 
@@ -423,18 +423,18 @@ class Fuzzy {
         page( active, inactive, data ) {
 
           // Show active.
-          _.each(active.map((item) => item.__el), ($el) => {
+          _.each(active.map((item) => item.__el), (el) => {
 
             // Show.
-            if( $el ) $el.show();
+            if( el ) $(el).show();
 
           });
 
           // Hide inactive.
-          _.each(inactive.map((item) => item.__el), ($el) => {
+          _.each(inactive.map((item) => item.__el), (el) => {
 
             // Hide.
-            if( $el ) $el.hide();
+            if( el ) $(el).hide();
 
           });
 
@@ -454,24 +454,46 @@ class Fuzzy {
         // Get the ID attribute.
         const attr = this.attr('id');
 
-        // Locate elements for each index item.
-        return index.map((item) => {
+        // Use the index data as given, but associate it with elements on the page.
+        if( _.isPlainObject(index[0]) ) {
 
-          // Require that items have an ID.
-          if( _.has(item, 'id') ) {
+          // Locate elements for each index item.
+          return index.map((item) => {
+
+            // Get the item ID.
+            const id = item.id;
 
             // Attempt to find the element based on ID.
-            const $el = $(`[${attr}="${item.id}"]`);
+            const $el = $(`[${attr}="${id}"]`);
 
             // Save elements when found.
-            if( $el.length > 0 ) item.__el = $el;
+            if( $el.length > 0 ) item.__el = $el[0];
 
-          }
+            // Return.
+            return item;
 
-          // Return.
-          return item;
+          });
 
-        });
+        }
+
+        // Otherwise, assume a list of IDs was given and index items need to be located and parsed.
+        else {
+
+          // Locate elements by ID.
+          return this.index(index.map((id) => {
+
+            // Attempt to find the element based on ID.
+            const $el = $(`[${attr}="${id}"]`);
+
+            // Save elements when found.
+            if( $el.length > 0 ) return $el;
+
+            // Otherwise, return nothing.
+            return null;
+
+          }).filter((el) => !_.isNil(el)));
+
+        }
 
       },
 
@@ -481,58 +503,107 @@ class Fuzzy {
         // Initialize result.
         const result = [];
 
-        // Extract the items from the list, and index them.
-        $(list).children().each((i, item) => {
+        // Initialize a helper method for parsing elements as index items.
+        const parse = ( item ) => {
+
+          // Find all elements that have some search data.
+          const targets = $(item).add($(item).find('*')).filter((i, el) => {
+
+            // Get the element's attributes.
+            const attrs = _.toArray(el.attributes);
+
+            // Only keep elements with usable attributes.
+            return _.some(attrs, (attr) => attr.name.indexOf(this.attr('key')) === 0);
+
+          });
 
           // Find items with search data.
-          result.push(_.toArray($(item).find(`[${this.attr('key')}]`)).map((el) => {
+          result.push(_.reduce(_.toArray(targets).map((target) => {
 
-            // Get search attributes.
-            const attrs = _.toArray(el.attributes).reduce((result, attr) => {
+            // Get all of the target's attributes.
+            const attrs = _.toArray(target.attributes);
 
-              result[attr.name] = attr.value;
+            // Get only the target's relevant attribute data.
+            const rattrs = _.toArray(target.attributes).filter((attr) => {
 
-              return result;
+              // Only look for key attributes at the moment.
+              return attr.name.indexOf(self.config.attrs.base) === 0;
 
-            }, {});
+            });
 
-            // Initialize data.
-            const data = Object.keys(attrs).filter((attr) => {
+            // Get the data
+            const data = rattrs.filter((attr) => {
 
-              return attr.indexOf(this.attr('key')) === 0;
+              // Only use key attributes at the moment.
+              return attr.name.indexOf(this.attr('key')) === 0;
 
             }).reduce((data, attr) => {
 
-              if( attr.indexOf(':') > -1 ) _.set(data, attr.split(':')[1], attrs[attr]);
+              // Look for designated key-value pairs.
+              if( attr.name.indexOf(':') > -1 ) {
 
-              else {
-
-                let key = attrs[attr];
-                let value;
-
-                if( attrs[this.attr('attr')] ) value = attrs[this.attr('attr')];
-                if( attrs[this.attr('value')] ) value = attrs[this.attr('value')];
-
-                data[attrs[attr]] =  value || $(el).val() || $(el).text().trim();
+                // Capture the attribute key and value.
+                _.set(data, attr.name.split(':')[1], attr.value);
 
               }
 
+              // Otherwise, look for values elsewhere.
+              else {
+
+                // Look for an attribute or value.
+                const a = _.get(rattrs.filter((attr) => {
+
+                  // Find possible attribute values.
+                  return attr.name == this.attr('attr');
+
+                }), 0, false);
+                const v = _.get(rattrs.filter((attr) => {
+
+                  // Find possible attribute values.
+                  return attr.name == this.attr('value');
+
+                }), 0, false);
+
+                // Get the attribute's key and value.
+                const key = attr.value;
+                const value = a ? attrs[a.value] : v ? v.value : null;
+
+                // Save the data.
+                _.set(data, key, value || target.value || target.textContent.trim());
+
+              }
+
+              // Return the parsed data.
               return data;
 
             }, {});
 
             // Return data and element.
-            return _.merge({__el: $(item)}, data);
+            return _.merge({__el: $(item)[0]}, data);
 
-          }).reduce((result, data) => {
+          }), (result, data) => {
 
-            result = _.merge(result, data);
-
-            return result;
+            return _.merge(result, data);
 
           }, {}));
 
-        });
+        };
+
+        // If an array of items was given, then assume the array contains the items to be parsed.
+        if( _.isArray(list) ) {
+
+          // Index each item.
+          list.forEach((item) => parse(item));
+
+        }
+
+        // Otherwise, try to parse the items in a list.
+        else {
+
+          // Extract the items from the list, and index them.
+          $(list).children().each((i, item) => parse(item));
+
+        }
 
         // Return.
         return result;
