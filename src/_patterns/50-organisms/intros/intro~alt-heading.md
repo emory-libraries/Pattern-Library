@@ -1,8 +1,8 @@
 ---
 
-state: review
-created: 04/26/2019
-updated: 04/26/2019
+state: construction
+created: 05/15/2019
+updated: 05/15/2019
 js: false
 php: false
 
@@ -15,13 +15,13 @@ Intros identify the purpose of a page and help to give users an idea of what typ
 ###### EXPORT VIA GRUNT
 
 ```
-grunt export:organisms-intro-heading
+grunt export:organisms-intro-alt-heading
 ```
 
 
 ### Description
 
-The intro heading organism can be used to include a heading introduction within another pattern. Heading intros are made up of a title with a stylized rule.
+The intro alt heading organism can be used to include an alternative heading introduction within another pattern. Alternative heading intros are made up of a title with a stylized rule.
 
 
 ### Best Practices
