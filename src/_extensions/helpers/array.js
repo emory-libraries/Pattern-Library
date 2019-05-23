@@ -116,44 +116,8 @@ module.exports = {
   // Create an array from the given values.
   makeArray( ...values ) {
 
-    return _.initial(values);
+    return [..._.initial(values)];
 
-  },
-
-  // Condense an array of arrays to a single level.
-  condense( array, options ) {
-
-    // Return the condensed array flattened by one level.
-    return [].concat(...array);
-
-  },
-
-  // Push an item onto the end of an array.
-  // FIXME: Support for this `push` helper in the templating engine's version of handlebars is lacking.
-  /*push( value, array, options ) {
-
-    // Make sure options is set.
-    if( options ) {
-
-      // Push the item onto the pointer array.
-      if( _.isArray(array) ) array.push(value);
-
-    }
-
-  },*/
-
-  // Push an item onto the beginning of an array.
-  // FIXME: Support for this `push` helper in the templating engine's version of handlebars is lacking.
-  /*unshift( value, array, options ) {
-
-    // Make sure options is set.
-    if( options ) {
-
-      // Push the item onto the pointer array.
-      if( _.isArray(array) ) array.unshift(value);
-
-    }
-
-  }*/
+  }
 
 };

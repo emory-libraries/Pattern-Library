@@ -42,6 +42,30 @@ module.exports = {
 
     _.unset(this, key);
 
+  },
+
+  // Push an item onto the end of an array.
+  push( value, array, options ) {
+
+    // Make sure options is set.
+    if( options ) {
+
+      if( Array.isArray(array) ) array.push(value);
+
+    }
+
+  },
+
+  // Push an item onto the beginning of an array.
+  unshift( value, array, options ) {
+
+    // Make sure options is set.
+    if( options ) {
+
+      if( Array.isArray(array) ) array.unshift(value);
+
+    }
+
   }
 
 };
