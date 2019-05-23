@@ -22,9 +22,6 @@
 .section-main-body {
   grid-area: body;
 }
-.section-main-body .image {
-  max-width: 100%;
-}
 .section-main-sidebar {
   grid-area: aside;
   display: -webkit-box;
@@ -70,6 +67,28 @@
 }
 .-service-directory-page.section-main .section-main-guides,
 .-service-directory-page.section-main .section-main-sidebar {
+  display: none;
+}
+.-research-help-page.section-main {
+  grid-template-areas: "title" "subtitle" "body";
+}
+@media (max-width: 600px) {
+  .-research-help-page.section-main {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .-research-help-page.section-main {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 901px) {
+  .-research-help-page.section-main {
+    grid-template-columns: 1fr;
+  }
+}
+.-research-help-page.section-main .section-main-guides,
+.-research-help-page.section-main .section-main-sidebar {
   display: none;
 }
 
