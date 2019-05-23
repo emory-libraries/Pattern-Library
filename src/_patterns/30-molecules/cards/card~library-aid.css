@@ -68,8 +68,8 @@
 .card-library-aid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr repeat(2, -webkit-min-content);
-  grid-template-rows: 1fr repeat(2, min-content);
+  grid-template-rows: repeat(3, -webkit-min-content);
+  grid-template-rows: repeat(3, min-content);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
