@@ -1,0 +1,97 @@
+{
+  "markdown": false,
+  "title": "Research Help Page",
+  "blocks": [
+    {
+      "type": "rich-text",
+      "text": "<p>Lacus sed turpis tincidunt id aliquet risus. Sed elementum tempus egestas sed sed risus pretium quam. <a href=\"#\">Ullamcorper malesuada proin</a> libero nunc consequat interdum varius sit.</p>"
+    },
+    {
+      "type": "heading",
+      "level": "2",
+      "heading": "A Major Section"
+    },
+    {
+      "type": "rich-text",
+      "text": "<strong>Urna et pharetra pharetra massa massa ultricies mi quis hendrerit.</strong> Velit scelerisque in dictum non consectetur. Viverra orci sagittis eu volutpat odio facilisis mauris sit amet. Pellentesque sit amet porttitor eget. Mauris augue neque gravida in fermentum et sollicitudin. <em>Quis blandit turpis cursus in hac.</em></p>"
+    },
+    {
+      "type": "image",
+      "src": "https://via.placeholder.com/600x400.png?text=Placeholder+Image",
+      "alt": "Placeholder image 600 pixels wide",
+      "align": "center"
+    },
+    {
+      "type": "heading",
+      "level": "2",
+      "heading": "A Major Section"
+    },
+    {
+      "type": "rich-text",
+      "text": "<p>Nibh tortor id aliquet lectus proin nibh nisl condimentum id. Pellentesque elit <strong>eget gravida cum sociis</strong> natoque penatibus et. Libero justo laoreet sit amet cursus. Libero volutpat sed cras ornare arcu dui vivamus arcu. Imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor. Posuere urna nec tincidunt praesent semper feugiat nibh sed pulvinar. Tempor orci dapibus ultrices in.</p>"
+    },
+    {
+      "type": "image",
+      "src": "https://via.placeholder.com/600x400.png?text=Placeholder+Image",
+      "alt": "Placeholder image 600 pixels wide",
+      "align": "center"
+    },
+  ],
+  "type":"library-aid",
+  "cards": [
+    {
+      "title": "Access Library Resources",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "title": "Find a Book",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "title": "Find an Article in Full Text",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "title": "Find a Textbook",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "title": "Find a Video",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "title": "Find Course Reserve Material",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "title": "Understanding Citations",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "title": "Find Journals by Subject",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "title": "Access an Item in Storage",
+      "link": {
+        "href": ""
+      }
+    },
+  ]
+}
