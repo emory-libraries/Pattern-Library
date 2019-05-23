@@ -1,5 +1,6 @@
 {
-  "type": "video",
+  "icon-type": "video",
+  "card-type": "foo",
   "link": {
     "href": ""
   },

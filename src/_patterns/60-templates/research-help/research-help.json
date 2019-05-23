@@ -37,7 +37,9 @@
       "align": "center"
     },
   ],
-  "type":"library-aid",
+  "card-type":"library-aid",
+  "heading": "Related Research Help",
+  "has-related": true,
   "cards": [
     {
       "title": "Access Library Resources",
