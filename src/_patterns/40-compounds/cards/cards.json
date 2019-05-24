@@ -1,5 +1,5 @@
 {
-  "type": "library-aid",
+  "card-type": "library-aid",
   "cards": [
     {
       "title": "Access Library Resources",

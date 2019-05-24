@@ -1,5 +1,5 @@
 <div class="cards{{#if classes}} {{classes}}{{/if}}">
   {{#each cards}}
-    {{> (combine 'molecules-card-' (default ../type type)) classes=''}}
+    {{> (combine 'molecules-card-' (default ../card-type card-type)) classes='' icon-type=../icon-type}}
   {{/each}}
 </div>
