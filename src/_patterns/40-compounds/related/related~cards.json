@@ -1,6 +1,7 @@
 {
-  "title": "Related Library Aids",
-  "type": "library-aid",
+  "heading": "Related Library Aids",
+  "card-type": "library-aid",
+  "icon-type": "video",
   "cards": [
     {
       "title": "Access Library Resources",
