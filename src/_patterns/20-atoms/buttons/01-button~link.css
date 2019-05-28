@@ -1,31 +1,35 @@
-@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
-/*** INSERT NEW TOKENS HERE ***/
 .button.-error, .button.-caution, .button.-success, .button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   cursor: pointer;
 }
 .button.-error-group, .button.-caution-group, .button.-success-group, .button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .-inline.button.-error-group, .-inline.button.-caution-group, .-inline.button.-success-group, .-inline.button-group {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 [disabled].button, .is-disabled.button {
   cursor: not-allowed;
 }
 
-/*** INSERT NEW ATOMS HERE ***/
-/*** INSERT NEW MOLECULES HERE ***/
-/*** INSERT NEW COMPOUNDS HERE ***/
-/*** INSERT NEW ORGANISMS HERE ***/
-/*** INSERT NEW TEMPLATES HERE ***/
 .button {
   border: 1px solid #336BE6;
   background-color: #336BE6;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   padding-left: 25px;
   padding-right: 25px;
@@ -151,6 +155,7 @@
 .button.-success {
   border: 1px solid #257611;
   background-color: #257611;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   padding-left: 25px;
   padding-right: 25px;
@@ -276,6 +281,7 @@
 .button.-caution {
   border: 1px solid #AB750C;
   background-color: #AB750C;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   padding-left: 25px;
   padding-right: 25px;
@@ -401,6 +407,7 @@
 .button.-error {
   border: 1px solid #B82216;
   background-color: #B82216;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   padding-left: 25px;
   padding-right: 25px;
