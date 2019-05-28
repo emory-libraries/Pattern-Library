@@ -365,8 +365,10 @@ module.exports = function(grunt) {
       dev: {
         files: [{
           src: [
+            path.resolve(paths.source.js, '_head.index.js'),
             path.resolve(paths.source.js, 'index.js'),
-            path.resolve(paths.source.patterns, '**/*.js')
+            path.resolve(paths.source.patterns, '**/*.js'),
+            path.resolve(paths.source.js, '_foot.index.js')
           ],
           dest: path.resolve(paths.public.js, 'bundle.js')
         }]
@@ -375,8 +377,10 @@ module.exports = function(grunt) {
         files: [
           {
             src: [
+              path.resolve(paths.source.js, '_head.index.js'),
               path.resolve(paths.source.js, 'index.js'),
-              path.resolve(paths.source.patterns, '**/*.js')
+              path.resolve(paths.source.patterns, '**/*.js'),
+              path.resolve(paths.source.js, '_foot.index.js')
             ],
             dest: path.resolve(paths.dist.js, 'bundle.js')
           },

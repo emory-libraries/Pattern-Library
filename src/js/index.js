@@ -1,13 +1,3 @@
-// Load dependencies.
-//
-// NOTE: If not using a module bundler, like Browserify or Webpack, this will not work.
-// Instead, you will need to manually load these dependencies in the browser using `<script>` tags.
-const _ = require('lodash');
-const Vue = require('vue');
-const L = require('leaflet');
-const $ = require('jQuery');
-const {compareTwoStrings} = require('string-similarity');
-
 // Build utility methods.
 const EUL = {
 
@@ -1523,13 +1513,3 @@ class Fuzzy {
   }
 
 }
-
-// Export globals.
-global._ = _;
-global.Vue = Vue;
-global.Events = Events;
-global.Components = Components;
-global.Store = Store;
-global.Leaflet = global.L = L;
-global.jQuery = global.$ = $;
-global.EUL = EUL;
