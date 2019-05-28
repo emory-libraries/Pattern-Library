@@ -1,14 +1,46 @@
+.intro-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.intro-link .icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .intro-title.-heading-alt::after, .intro-title.-heading-alt::before, .intro-title.-heading::after, .intro-title.-heading::before {
   display: block;
   width: 100%;
   height: 0;
 }
 
+.intro-thumb {
+  display: block;
+  float: left;
+}
+.intro-thumb:not(.-bio.intro) {
+  display: none;
+}
 .intro-context {
   display: block;
 }
-.-heading.intro-context, .-heading-alt.intro-context {
+.-heading.intro-context, .-heading-alt.intro-context, .-bio.intro-context {
   display: none;
+}
+.intro-title {
+  display: block;
 }
 .intro-title:not(.-heading):not(.heading-alt) {
   margin: 0;
@@ -30,10 +62,33 @@
 .-heading-alt.intro-title::before, .-heading-alt.intro-title::after {
   margin: 0 auto 0 0;
 }
+.intro-subtitle {
+  display: block;
+}
 .-heading.intro-subtitle, .-heading-alt.intro-subtitle {
   display: none;
 }
+.-bio.intro-subtitle {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+.intro-link {
+  display: block;
+}
+.intro-link::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.intro-link:not(.-bio.intro) {
+  display: none;
+}
 
+.intro-thumb {
+  width: 150px;
+  height: 150px;
+  margin-right: 35px;
+}
 .intro-context {
   font-family: "Open Sans", sans-serif !important;
   font-size: 12px !important;
@@ -87,7 +142,7 @@
   font-size: 48px !important;
   font-weight: bold !important;
   font-style: normal !important;
-  line-height: 1.0833 !important;
+  line-height: normal !important;
   letter-spacing: normal !important;
   text-transform: none !important;
   color: #091C44 !important;
@@ -104,6 +159,16 @@
   background-color: transparent;
   color: transparent;
 }
+.intro-title.-bio {
+  font-family: "Cardo", serif !important;
+  font-size: 48px !important;
+  font-weight: bold !important;
+  font-style: normal !important;
+  line-height: normal !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  color: #091C44 !important;
+}
 .intro-subtitle {
   font-family: "Cardo", serif !important;
   font-size: 28px !important;
@@ -114,4 +179,60 @@
   text-transform: none !important;
   text-align: left !important;
   color: #004990 !important;
+}
+.intro-subtitle.-bio {
+  font-family: "Open Sans", sans-serif !important;
+  font-size: 22px !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  line-height: 1.6364 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  color: #091C44 !important;
+}
+.intro-link {
+  font-weight: bold;
+  font-style: normal;
+  color: #5387F7;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  background: none;
+  border: none;
+}
+.intro-link .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 1ex;
+}
+.intro-link .icon svg {
+  fill: #5387F7;
+}
+.intro-link:hover, .intro-link.is-hover, .intro-link:focus, .intro-link.is-focus {
+  color: #004990;
+}
+.intro-link:hover .icon svg, .intro-link.is-hover .icon svg, .intro-link:focus .icon svg, .intro-link.is-focus .icon svg {
+  fill: #004990;
+}
+.intro-link:active, .intro-link.is-active {
+  color: #004990;
+}
+.intro-link:active .icon svg, .intro-link.is-active .icon svg {
+  fill: #004990;
+}
+.intro-link.-popular {
+  font-family: "Cardo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 2.05;
+  color: #FFFFFF;
+}
+.intro-link.-popular:hover, .intro-link.-popular.is-hover, .intro-link.-popular:focus, .intro-link.-popular.is-focus {
+  color: #336BE6;
+}
+.intro-link.-popular:active, .intro-link.-popular.is-active {
+  color: #336BE6;
+}
+.intro-link.-underline {
+  text-decoration: underline;
 }
