@@ -8,6 +8,10 @@
   text-decoration: none;
   cursor: pointer;
 }
+.tile-listing-action::after, .tile-listing.has-description .tile-listing-title::after, .tile-listing:not(.has-description) .tile-listing-title::after {
+  content: attr(data-subtext);
+  display: block;
+}
 .tile-listing-action .icon, .tile-listing.has-description .tile-listing-title .icon, .tile-listing:not(.has-description) .tile-listing-title .icon {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -249,6 +253,21 @@
 .tile-listing:not(.has-description) .tile-listing-title:active .icon svg, .tile-listing:not(.has-description) .tile-listing-title.is-active .icon svg {
   fill: #336BE6;
 }
+.tile-listing:not(.has-description) .tile-listing-title::after {
+  font-size: 12px !important;
+  line-height: 1 !important;
+}
+.tile-listing:not(.has-description) .tile-listing-title::after {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
 .tile-listing:not(.has-description) .tile-listing-title.-popular {
   font-family: "Cardo", serif;
   font-size: 20px;
@@ -305,6 +324,21 @@
 }
 .tile-listing.has-description .tile-listing-title:active .icon svg, .tile-listing.has-description .tile-listing-title.is-active .icon svg {
   fill: #336BE6;
+}
+.tile-listing.has-description .tile-listing-title::after {
+  font-size: 12px !important;
+  line-height: 1 !important;
+}
+.tile-listing.has-description .tile-listing-title::after {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
 }
 .tile-listing.has-description .tile-listing-title.-popular {
   font-family: "Cardo", serif;
@@ -372,6 +406,21 @@
 }
 .tile-listing-action:active .icon svg, .tile-listing-action.is-active .icon svg {
   fill: #004990;
+}
+.tile-listing-action::after {
+  font-size: 12px !important;
+  line-height: 1 !important;
+}
+.tile-listing-action::after {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
 }
 .tile-listing-action.-popular {
   font-family: "Cardo", serif;

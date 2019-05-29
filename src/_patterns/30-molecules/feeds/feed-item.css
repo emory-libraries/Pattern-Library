@@ -36,6 +36,10 @@
   text-decoration: none;
   cursor: pointer;
 }
+.feed-item-title::after {
+  content: attr(data-subtext);
+  display: block;
+}
 .feed-item-title .icon {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -123,6 +127,21 @@
 }
 .feed-item-title:active .icon svg, .feed-item-title.is-active .icon svg {
   fill: #336BE6;
+}
+.feed-item-title::after {
+  font-size: 12px !important;
+  line-height: 1 !important;
+}
+.feed-item-title::after {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
 }
 .feed-item-title.-popular {
   font-family: "Cardo", serif;

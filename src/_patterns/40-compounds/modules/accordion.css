@@ -8,6 +8,10 @@
   text-decoration: none;
   cursor: pointer;
 }
+.accordion-toggles-toggle::after {
+  content: attr(data-subtext);
+  display: block;
+}
 .accordion-toggles-toggle .icon {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -108,6 +112,21 @@
 }
 .accordion-toggles-toggle:active .icon svg, .accordion-toggles-toggle.is-active .icon svg {
   fill: #004990;
+}
+.accordion-toggles-toggle::after {
+  font-size: 12px !important;
+  line-height: 1 !important;
+}
+.accordion-toggles-toggle::after {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
 }
 .accordion-toggles-toggle.-popular {
   font-family: "Cardo", serif;

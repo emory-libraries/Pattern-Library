@@ -8,6 +8,10 @@
   text-decoration: none;
   cursor: pointer;
 }
+.card-contact-email::after, .card-contact-name::after {
+  content: attr(data-subtext);
+  display: block;
+}
 .card-contact-email .icon, .card-contact-name .icon {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -134,6 +138,21 @@
 .card-contact-name:active .icon svg, .card-contact-name.is-active .icon svg {
   fill: #5387F7;
 }
+.card-contact-name::after {
+  font-size: 12px !important;
+  line-height: 1 !important;
+}
+.card-contact-name::after {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
 .card-contact-name.-popular {
   font-family: "Cardo", serif;
   font-size: 20px;
@@ -187,6 +206,21 @@
 }
 .card-contact-email:active .icon svg, .card-contact-email.is-active .icon svg {
   fill: #004990;
+}
+.card-contact-email::after {
+  font-size: 12px !important;
+  line-height: 1 !important;
+}
+.card-contact-email::after {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
 }
 .card-contact-email.-popular {
   font-family: "Cardo", serif;
