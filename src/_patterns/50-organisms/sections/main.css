@@ -91,6 +91,28 @@
 .-research-help-page.section-main .section-main-sidebar {
   display: none;
 }
+.-subject-librarian-directory-page.section-main {
+  grid-template-areas: "title" "subtitle" "body";
+}
+@media (max-width: 600px) {
+  .-subject-librarian-directory-page.section-main {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .-subject-librarian-directory-page.section-main {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 901px) {
+  .-subject-librarian-directory-page.section-main {
+    grid-template-columns: 1fr;
+  }
+}
+.-subject-librarian-directory-page.section-main .section-main-guides,
+.-subject-librarian-directory-page.section-main .section-main-sidebar {
+  display: none;
+}
 
 .section-main {
   grid-gap: 40px;
