@@ -8,6 +8,10 @@
   text-decoration: none;
   cursor: pointer;
 }
+.intro-link::after {
+  content: attr(data-subtext);
+  display: block;
+}
 .intro-link .icon {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -218,6 +222,21 @@
 }
 .intro-link:active .icon svg, .intro-link.is-active .icon svg {
   fill: #004990;
+}
+.intro-link::after {
+  font-size: 12px !important;
+  line-height: 1 !important;
+}
+.intro-link::after {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
 }
 .intro-link.-popular {
   font-family: "Cardo", serif;

@@ -8,6 +8,10 @@
   text-decoration: none;
   cursor: pointer;
 }
+.flyout-feed-item-link::after {
+  content: attr(data-subtext);
+  display: block;
+}
 .flyout-feed-item-link .icon {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -293,6 +297,21 @@
 }
 .flyout-feed-item-link:active .icon svg, .flyout-feed-item-link.is-active .icon svg {
   fill: #004990;
+}
+.flyout-feed-item-link::after {
+  font-size: 12px !important;
+  line-height: 1 !important;
+}
+.flyout-feed-item-link::after {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
 }
 .flyout-feed-item-link.-popular {
   font-family: "Cardo", serif;

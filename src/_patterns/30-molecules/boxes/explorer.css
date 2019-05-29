@@ -8,6 +8,10 @@
   text-decoration: none;
   cursor: pointer;
 }
+.explorer-link::after {
+  content: attr(data-subtext);
+  display: block;
+}
 .explorer-link .icon {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -117,6 +121,21 @@
 }
 .explorer-link:active .icon svg, .explorer-link.is-active .icon svg {
   fill: #FFFFFF;
+}
+.explorer-link::after {
+  font-size: 12px !important;
+  line-height: 1 !important;
+}
+.explorer-link::after {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
 }
 .explorer-link.-popular {
   font-family: "Cardo", serif;

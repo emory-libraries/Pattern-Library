@@ -8,6 +8,10 @@
   text-decoration: none;
   cursor: pointer;
 }
+.card-library-aid-title::after {
+  content: attr(data-subtext);
+  display: block;
+}
 .card-library-aid-title .icon {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -153,6 +157,21 @@
 }
 .card-library-aid-title:active .icon svg, .card-library-aid-title.is-active .icon svg {
   fill: #336BE6;
+}
+.card-library-aid-title::after {
+  font-size: 12px !important;
+  line-height: 1 !important;
+}
+.card-library-aid-title::after {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
 }
 .card-library-aid-title.-popular {
   font-family: "Cardo", serif;

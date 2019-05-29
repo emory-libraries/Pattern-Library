@@ -8,6 +8,10 @@
   text-decoration: none;
   cursor: pointer;
 }
+.card-multimedia-title::after {
+  content: attr(data-subtext);
+  display: block;
+}
 .card-multimedia-title .icon {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -158,6 +162,21 @@
 }
 .card-multimedia-title:active .icon svg, .card-multimedia-title.is-active .icon svg {
   fill: #336BE6;
+}
+.card-multimedia-title::after {
+  font-size: 12px !important;
+  line-height: 1 !important;
+}
+.card-multimedia-title::after {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
 }
 .card-multimedia-title.-popular {
   font-family: "Cardo", serif;

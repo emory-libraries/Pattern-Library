@@ -11,6 +11,13 @@
   text-decoration: none;
   cursor: pointer;
 }
+.card-librarian-name::after, .card-librarian-contact-links-item a::after,
+.card-librarian-contact-links-item .link::after, .card-librarian-contact-info-item a::after,
+.card-librarian-contact-info-item .link::after, .card-librarian-subjects-list-item a::after,
+.card-librarian-subjects-list-item .link::after {
+  content: attr(data-subtext);
+  display: block;
+}
 .card-librarian-name .icon, .card-librarian-contact-links-item a .icon,
 .card-librarian-contact-links-item .link .icon, .card-librarian-contact-info-item a .icon,
 .card-librarian-contact-info-item .link .icon, .card-librarian-subjects-list-item a .icon,
@@ -267,6 +274,23 @@
 .card-librarian-subjects-list-item .link.is-active .icon svg {
   fill: #5387F7;
 }
+.card-librarian-subjects-list-item a::after,
+.card-librarian-subjects-list-item .link::after {
+  font-size: 12px !important;
+  line-height: 1 !important;
+}
+.card-librarian-subjects-list-item a::after,
+.card-librarian-subjects-list-item .link::after {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
 .card-librarian-subjects-list-item a.-popular,
 .card-librarian-subjects-list-item .link.-popular {
   font-family: "Cardo", serif;
@@ -344,6 +368,23 @@
 .card-librarian-contact-info-item .link:active .icon svg,
 .card-librarian-contact-info-item .link.is-active .icon svg {
   fill: #5387F7;
+}
+.card-librarian-contact-info-item a::after,
+.card-librarian-contact-info-item .link::after {
+  font-size: 12px !important;
+  line-height: 1 !important;
+}
+.card-librarian-contact-info-item a::after,
+.card-librarian-contact-info-item .link::after {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
 }
 .card-librarian-contact-info-item a.-popular,
 .card-librarian-contact-info-item .link.-popular {
@@ -425,6 +466,23 @@
 .card-librarian-contact-links-item .link.is-active .icon svg {
   fill: #004990;
 }
+.card-librarian-contact-links-item a::after,
+.card-librarian-contact-links-item .link::after {
+  font-size: 12px !important;
+  line-height: 1 !important;
+}
+.card-librarian-contact-links-item a::after,
+.card-librarian-contact-links-item .link::after {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
 .card-librarian-contact-links-item a.-popular,
 .card-librarian-contact-links-item .link.-popular {
   font-family: "Cardo", serif;
@@ -487,6 +545,21 @@
 }
 .card-librarian-name:active .icon svg, .card-librarian-name.is-active .icon svg {
   fill: #5387F7;
+}
+.card-librarian-name::after {
+  font-size: 12px !important;
+  line-height: 1 !important;
+}
+.card-librarian-name::after {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
 }
 .card-librarian-name.-popular {
   font-family: "Cardo", serif;
