@@ -1,100 +1,88 @@
-{{! Reformat the accordion data for proper compatibility. }}
-{{!--#each accordions}}
+{{! Reformat the librarian data for proper compatibility. }}
+{{#each librarians}}
 
-  {{! Reformat the panel data. }}
-  {{#each panels}}
+  {{! Manipulate librarian option data if given. }}
+  {{#if options }}
 
-    {{! Set the panel's default title, content, and button. }}
-    {{#if (and link-type (eq link-type 'Cascade Page'))}}
-      {{assign 'title' cascade-page.title}}
-      {{assign 'content' cascade-page.description}}
-      {{assign 'button' (objectify href=cascade-page.path label=(default button-label 'Learn More'))}}
-    {{else if (and link-type (eq link-type 'Cascade File'))}}
-      {{assign 'title' link-label}}
-      {{assign 'content' link-description}}
-      {{assign 'button' (objectify href=cascade-file.path label=(default button-label 'Learn More'))}}
-    {{else if (and link-type (eq link-type 'External URL'))}}
-      {{assign 'title' link-label}}
-      {{assign 'content' link-description}}
-      {{assign 'button' (objectify href=external-url label=(default button-label 'Learn More'))}}
-    {{/if}}
+    {{! Determine if the librarian has some image data. }}
+    {{#inArray config 'Profile Photo'}}
+      {{assign 'config.image' true}}
+      {{unassign (combine 'config.' (indexOf config 'Profile Photo'))}}
+    {{else}}
+      {{assign 'config.image' false}}
+    {{/inArray}}
 
-    {{! Override the panel title and/or content if applicable. }}
-    {{#if (and (and link-type (eq link-type 'Cascade Page')) link-customizations)}}
-      {{#contains link-customizations 'Label'}}
-        {{#if link-label}}{{assign 'title' link-label}}{{/if}}
-      {{/contains}}
-      {{#contains link-customizations 'Description'}}
-        {{#if link-description}}{{assign 'content' link-description}}{{/if}}
-      {{/contains}}
-    {{/if}}
+    {{! Determine if the librarian has some quote data. }}
+    {{#inArray config 'Quote'}}
+      {{assign 'config.quote' true}}
+      {{unassign (combine 'config.' (indexOf config 'Quote'))}}
+    {{else}}
+      {{assign 'config.quote' false}}
+    {{/inArray}}
 
-    {{! Set the panel's ID, and save it to the index. }}
-    {{assign 'id' (lowercase (dashcase title))}}
+    {{! Determine if the librarian has some bio data. }}
+    {{#inArray config 'Description'}}
+      {{assign 'config.bio' true}}
+      {{unassign (combine 'config.' (indexOf config 'Description'))}}
+    {{else}}
+      {{assign 'config.bio' false}}
+    {{/inArray}}
 
-    {{! Use query parameters to determine which panels should be opened by default. }}
-    {{#if (and ../../__params__ ../../__params__.category)}}
-      {{#if (eq ../title (decodeURI ../../__params__.category))}}
-        {{assign 'state' 'open'}}
-      {{else}}
-        {{assign 'state' 'closed'}}
-      {{/if}}
-    {{/if}}
+    {{! Determine if the librarian has some education data. }}
+    {{#inArray config 'Education'}}
+      {{assign 'config.education' true}}
+      {{unassign (combine 'config.' (indexOf config 'Education'))}}
+    {{else}}
+      {{assign 'config.education' false}}
+    {{/inArray}}
 
-    {{! Save the updated panel to storage. }}
-    {{! NOTE: This is required as a patch for the templating engine. }}
-    {{storagePush 'panels' this}}
+    {{! Determine if the librarian has some contact info data. }}
+    {{#inArray config 'Contact Info'}}
+      {{assign 'config.contact' true}}
+      {{unassign (combine 'config.' (indexOf config 'Contact Info'))}}
+    {{else}}
+      {{assign 'config.contact' false}}
+    {{/inArray}}
 
-  {{/each}}
+    {{! Determine if the librarian has some subject area data. }}
+    {{#inArray config 'Subject Areas'}}
+      {{assign 'config.subjects' true}}
+      {{unassign (combine 'config.' (indexOf config 'Subject Areas'))}}
+    {{else}}
+      {{assign 'config.subjects' false}}
+    {{/inArray}}
 
-  {{! Save the accordion's updated panels. }}
+    {{! Determine if the librarian has some CV data. }}
+    {{#inArray config 'CV'}}
+      {{assign 'config.cv' true}}
+      {{unassign (combine 'config.' (indexOf config 'CV'))}}
+    {{else}}
+      {{assign 'config.cv' false}}
+    {{/inArray}}
+
+  {{/if}}
+
+  {{! Set the librarian's ID if not already set. }}
+  {{#unless id}}{{assign 'id' (dashcase (lowercase name))}}{{/unless}}
+
+  {{! Save the updated librarian to storage. }}
   {{! NOTE: This is required as a patch for the templating engine. }}
-  {{assign 'panels' (storageGet 'panels')}}
-
-  {{! Save the updated accordion to storage. }}
-  {{! NOTE: This is required as a patch for the templating engine. }}
-  {{storagePush 'accordions' this}}
+  {{storagePush 'librarians' this}}
 
 {{/each}}
 
-{{! Save the updated accordions. }}
+{{! Save the updated librarians. }}
 {{! NOTE: This is required as a patch for the templating engine. }}
-{{assign 'accordions' (storageGet 'accordions')}}
+{{assign 'librarians' (storageGet 'librarians')}}
 
-{{! Create an index contianing the IDs of all accordion panels in order to enable filtering. }}
-{{assign 'index' (pluck (condense (pluck accordions 'panels')) 'id')}}
+{{! Create an index contianing the IDs of all librarians in order to enable filtering. }}
+{{assign 'index' (pluck librarians 'id')}}
 
-{{! Reformat the button data for proper compatiblity. }}
-{{#each buttons}}
+{{! Create a list of options for the dropdown filter. }}
+{{assign 'options' (sort (unique (condense (pluck librarians 'subjects'))))}}
 
-  {{! Get the button's address and label. }}
-  {{#if (and link-type (eq link-type 'Cascade Page'))}}
-    {{assign 'label' cascade-page.title}}
-    {{assign 'href' cascade-page.path}}
-  {{else if (and link-type (eq link-type 'Cascade File'))}}
-    {{assign 'label' link-label}}
-    {{assign 'href' cascade-file.path}}
-  {{else if (and link-type (eq link-type 'External URL'))}}
-    {{assign 'label' link-label}}
-    {{assign 'href' external-url}}
-  {{/if}}
-
-  {{! Override the button label if applicable. }}
-  {{#if (and (and link-type (eq link-type 'Cascade Page')) link-customizations)}}
-    {{#contains link-customizations 'Label'}}
-      {{#if link-label}}{{assign 'label' link-label}}{{/if}}
-    {{/contains}}
-  {{/if}}
-
-  {{! Save the updated button to storage. }}
-  {{! NOTE: This is required as a patch for the templating engine. }}
-  {{storagePush 'buttons' this}}
-
-{{/each--}}
-
-{{! Save the updated buttons. }}
-{{! NOTE: This is required as a patch for the templating engine. }}
-{{!--assign 'buttons' (storageGet 'buttons')--}}
+{{! Determine if the default selection in the dropdown filter menu. }}
+{{#if __params__}}{{assign 'selected' (default __params__.subject '')}}{{/if}}
 
 <div class="subject-librarian-directory-page">
   <header class="subject-librarian-directory-page-header"></header>
@@ -106,12 +94,12 @@
         {{#content 'grid-items'}}
 
           {{! Render a search filter. }}
-          {{!> atoms-filter-dropdown key='Subject Areas'
-                                     config=(objectify sort=false)
-                                     label=(default label 'View All')}}
+          {{> atoms-filter-dropdown key='subjects'
+                                    config=(objectify sort=true)
+                                    label=(default label 'View All')}}
 
           {{! Render the bio cards. }}
-          {{#with librarians as |cards|}}{{> compounds-cards card-type='librarian'}}{{/with}}
+          {{> compounds-cards card-type='librarian' cards=librarians columns=1 classes="" filterable=true}}
 
         {{/content}}
       {{/extend}}

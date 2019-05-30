@@ -1,5 +1,16 @@
-<div class="cards{{#if classes}} {{classes}}{{/if}}">
+<div class="cards{{#if classes}} {{classes}}{{/if}}"
+     {{#if columns}}style="
+        {{#if (isObject size)}}
+          {{#each columns as |size screen|}}
+          --cols-{{screen}}: {{size}};
+          {{/each}}
+        {{else}}
+          --cols-s: {{columns}};
+          --cols-m: {{columns}};
+          --cols-l: {{columns}};
+        {{/if}}
+     "{{/if}}>
   {{#each cards}}
-    {{> (combine 'molecules-card-' (default ../card-type card-type)) classes='' icon-type=../icon-type}}
+    {{> (combine 'molecules-card-' (default ../card-type card-type)) classes='' icon-type=../icon-type filterable=(default ../filterable false)}}
   {{/each}}
 </div>

@@ -35,7 +35,15 @@ Components.register('filter-dropdown', {
       if( this.valid ) {
 
         // Filter the results.
-        this.fuzzy.filter((item) => item[this.field] == this.selected);
+        this.fuzzy.filter((item) => {
+
+          // Get the item's corresponding field data.
+          const field = item[this.field];
+
+          // Determine if the field matches.
+          return _.isArray(field) ? field.includes(this.selected) : field == this.selected;
+
+        });
 
       }
 

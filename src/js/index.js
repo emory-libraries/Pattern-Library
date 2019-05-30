@@ -470,7 +470,7 @@ class Fuzzy {
         else {
 
           // Locate elements by ID.
-          return this.index(index.map((id) => {
+          return this.index(_.compact(index.map((id) => {
 
             // Attempt to find the element based on ID.
             const $el = $(`[${attr}="${id}"]`);
@@ -481,7 +481,7 @@ class Fuzzy {
             // Otherwise, return nothing.
             return null;
 
-          }).filter((el) => !_.isNil(el)));
+          })));
 
         }
 
@@ -507,6 +507,9 @@ class Fuzzy {
 
           });
 
+          // Initialize the data for the item.
+          const data = {};
+
           // Find items with search data.
           result.push(_.reduce(_.toArray(targets).map((target) => {
 
@@ -522,18 +525,36 @@ class Fuzzy {
             });
 
             // Get the data
-            const data = rattrs.filter((attr) => {
+            rattrs.filter((attr) => {
 
               // Only use key attributes at the moment.
               return attr.name.indexOf(this.attr('key')) === 0;
 
-            }).reduce((data, attr) => {
+            }).reduce((result, attr, index, source) => {
+
+              // Initialize key and value.
+              let key, value;
 
               // Look for designated key-value pairs.
               if( attr.name.indexOf(':') > -1 ) {
 
-                // Capture the attribute key and value.
-                _.set(data, attr.name.split(':')[1], attr.value);
+                // Get the attribute key and value.
+                key = attr.name.split(':')[1];
+                value = attr.value;
+
+                // Check to see if the key already exists in the data, and if so, form an array.
+                if( _.has(result, key) ) {
+
+                  // Get the old value for the key.
+                  let old = _.get(result, key);
+
+                  // Merge the new value with the old value.
+                  _.set(result, key, _.isArray(old) ? _.concat(old, value) : [old, value]);
+
+                }
+
+                // Otherwise, capture the attribute key and value.
+                else _.set(result, key, value);
 
               }
 
@@ -555,18 +576,29 @@ class Fuzzy {
                 }), 0, false);
 
                 // Get the attribute's key and value.
-                const key = attr.value;
-                const value = a ? attrs[a.value] : v ? v.value : null;
+                key = attr.value;
+                value = (a ? attrs[a.value] : v ? v.value : null) || target.value || target.textContent.trim();
 
-                // Save the data.
-                _.set(data, key, value || target.value || target.textContent.trim());
+                // Check to see if the key already exists in the data, and if so, form an array.
+                if( _.has(result, key) ) {
+
+                  // Get the old value for the key.
+                  let old = _.get(result, key);
+
+                  // Merge the new value with the old value.
+                  _.set(result, key, _.isArray(old) ? _.concat(old, value) : [old, value]);
+
+                }
+
+                // Otherwise, save the data.
+                else _.set(result, key, value);
 
               }
 
               // Return the parsed data.
-              return data;
+              return result;
 
-            }, {});
+            }, data);
 
             // Return data and element.
             return _.merge({__el: $(item)[0]}, data);
