@@ -1,29 +1,38 @@
 .section-main {
   margin: 0 auto;
+  width: 100%;
   max-width: 1236px;
   display: grid;
   grid-area: main;
 }
-.section-main {
-  grid-template-areas: "title" "subtitle" "body" "guides" "aside";
+.section-main-breadcrumb {
+  grid-column: main;
+  grid-row: breadcrumb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-@media (min-width: 901px) {
-  .section-main {
-    grid-template-areas: "title title" "subtitle subtitle" "body  aside" "guides guides";
-    grid-template-columns: minmax(auto, 840px) minmax(auto, 340px);
-  }
+.section-main-breadcrumb::after {
+  content: "Breadcrumb";
 }
 .section-main-title {
-  grid-area: title;
+  grid-column: main;
+  grid-row: title;
 }
 .section-main-subtitle {
-  grid-area: subtitle;
+  grid-column: main;
+  grid-row: subtitle;
 }
 .section-main-body {
-  grid-area: body;
+  grid-column: main;
+  grid-row: body;
 }
 .section-main-sidebar {
-  grid-area: aside;
+  grid-column: main;
+  grid-row: sidebar;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,60 +43,182 @@
 .section-main-sidebar::after {
   content: "Sidebar";
 }
-.section-main-guides {
-  grid-area: guides;
-}
 @media (min-width: 901px) {
-  .-material-page.section-main {
-    grid-template-areas: "title title" "subtitle aside" "body aside" "guides guides";
+  .section-main-sidebar {
+    grid-column: sidebar;
+    grid-row: main;
+  }
+}
+.section-main-spacer {
+  grid-column: main;
+  grid-row: auto;
+}
+.section-main-content {
+  grid-column: main;
+  grid-row: auto;
+}
+.section-main-section {
+  grid-column: main/sidebar;
+  grid-row: section;
+}
+.-info-page.section-main .section-main-title, .-material-page.section-main .section-main-title, .-tool-page.section-main .section-main-title, .-research-help-page.section-main .section-main-title, .-service-directory-page.section-main .section-main-title {
+  margin-bottom: 0;
+}
+@media (max-width: 600px) {
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-research-help-page):not(.-service-directory-page), .-info-page.section-main {
+    grid-template-columns: [main-start] 1fr [main-end];
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) repeat(10, [section-start] -webkit-min-content [section-end]) [sidebar-start] -webkit-min-content [sidebar-end];
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) repeat(10, [section-start] min-content [section-end]) [sidebar-start] min-content [sidebar-end];
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-research-help-page):not(.-service-directory-page), .-info-page.section-main {
+    grid-template-columns: [main-start] 1fr [main-end];
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) repeat(10, [section-start] -webkit-min-content [section-end]) [sidebar-start] -webkit-min-content [sidebar-end];
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) repeat(10, [section-start] min-content [section-end]) [sidebar-start] min-content [sidebar-end];
   }
 }
 @media (min-width: 901px) {
-  .-tool-page.section-main {
-    grid-template-areas: "title title" "subtitle aside" "body aside" "guides guides";
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-research-help-page):not(.-service-directory-page), .-info-page.section-main {
+    grid-template-columns: [main-start] 1fr [main-end];
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) repeat(10, [section-start] -webkit-min-content [section-end]) [sidebar-start] -webkit-min-content [sidebar-end];
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) repeat(10, [section-start] min-content [section-end]) [sidebar-start] min-content [sidebar-end];
   }
 }
-.-service-directory-page.section-main {
-  grid-template-areas: "title" "subtitle" "body";
+@media (min-width: 901px) {
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-research-help-page):not(.-service-directory-page), .-info-page.section-main {
+    grid-template-columns: [main-start] 1fr [main-end sidebar-start] 340px [sidebar-end];
+    grid-template-rows: [main-start] [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) [main-end] repeat(10, [section-start] -webkit-min-content [section-end]);
+    grid-template-rows: [main-start] [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) [main-end] repeat(10, [section-start] min-content [section-end]);
+  }
+}
+@media (min-width: 901px) {
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-research-help-page):not(.-service-directory-page) .section-main-breadcrumb, .-info-page.section-main .section-main-breadcrumb {
+    grid-column: main/sidebar;
+  }
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-research-help-page):not(.-service-directory-page) .section-main-title,
+.section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-research-help-page):not(.-service-directory-page) .section-main-subtitle, .-info-page.section-main .section-main-title,
+.-info-page.section-main .section-main-subtitle {
+    grid-column: main/sidebar;
+  }
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-research-help-page):not(.-service-directory-page) .section-main-sidebar, .-info-page.section-main .section-main-sidebar {
+    grid-row: body/main;
+  }
+}
+@media (max-width: 600px) {
+  .-material-page.section-main, .-tool-page.section-main {
+    grid-template-columns: [main-start] 1fr [main-end];
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) repeat(10, [section-start] -webkit-min-content [section-end]) [sidebar-start] -webkit-min-content [sidebar-end];
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) repeat(10, [section-start] min-content [section-end]) [sidebar-start] min-content [sidebar-end];
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .-material-page.section-main, .-tool-page.section-main {
+    grid-template-columns: [main-start] 1fr [main-end];
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) repeat(10, [section-start] -webkit-min-content [section-end]) [sidebar-start] -webkit-min-content [sidebar-end];
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) repeat(10, [section-start] min-content [section-end]) [sidebar-start] min-content [sidebar-end];
+  }
+}
+@media (min-width: 901px) {
+  .-material-page.section-main, .-tool-page.section-main {
+    grid-template-columns: [main-start] 1fr [main-end];
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) repeat(10, [section-start] -webkit-min-content [section-end]) [sidebar-start] -webkit-min-content [sidebar-end];
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) repeat(10, [section-start] min-content [section-end]) [sidebar-start] min-content [sidebar-end];
+  }
+}
+@media (min-width: 901px) {
+  .-material-page.section-main, .-tool-page.section-main {
+    grid-template-columns: [main-start] 1fr [main-end sidebar-start] 340px [sidebar-end];
+    grid-template-rows: [main-start] [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) [main-end] repeat(10, [section-start] -webkit-min-content [section-end]);
+    grid-template-rows: [main-start] [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) [main-end] repeat(10, [section-start] min-content [section-end]);
+  }
+}
+@media (min-width: 901px) {
+  .-material-page.section-main .section-main-breadcrumb, .-tool-page.section-main .section-main-breadcrumb {
+    grid-column: main/sidebar;
+  }
+  .-material-page.section-main .section-main-title, .-tool-page.section-main .section-main-title {
+    grid-column: main/sidebar;
+  }
+  .-material-page.section-main .section-main-sidebar, .-tool-page.section-main .section-main-sidebar {
+    grid-row: subtitle/main;
+  }
 }
 @media (max-width: 600px) {
   .-service-directory-page.section-main {
-    grid-template-columns: 1fr;
+    grid-template-columns: [main-start] 1fr [main-end];
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .-service-directory-page.section-main {
-    grid-template-columns: 1fr;
+    grid-template-columns: [main-start] 1fr [main-end];
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]);
   }
 }
 @media (min-width: 901px) {
   .-service-directory-page.section-main {
-    grid-template-columns: 1fr;
+    grid-template-columns: [main-start] 1fr [main-end];
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]);
   }
 }
-.-service-directory-page.section-main .section-main-guides,
+.-service-directory-page.section-main .section-main-spacer,
+.-service-directory-page.section-main .section-main-content,
+.-service-directory-page.section-main .section-main-section,
 .-service-directory-page.section-main .section-main-sidebar {
   display: none;
 }
-.-research-help-page.section-main {
-  grid-template-areas: "title" "subtitle" "body";
+@media (max-width: 600px) {
+  .-service-directory-page.without-intro.section-main {
+    grid-template-columns: [main-start] 1fr [main-end];
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]);
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .-service-directory-page.without-intro.section-main {
+    grid-template-columns: [main-start] 1fr [main-end];
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]);
+  }
+}
+@media (min-width: 901px) {
+  .-service-directory-page.without-intro.section-main {
+    grid-template-columns: [main-start] 1fr [main-end];
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]);
+  }
+}
+.-service-directory-page.without-intro.section-main .section-main-title,
+.-service-directory-page.without-intro.section-main .section-main-subtitle {
+  display: none;
 }
 @media (max-width: 600px) {
   .-research-help-page.section-main {
-    grid-template-columns: 1fr;
+    grid-template-columns: [main-start] 1fr [main-end];
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .-research-help-page.section-main {
-    grid-template-columns: 1fr;
+    grid-template-columns: [main-start] 1fr [main-end];
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]);
   }
 }
 @media (min-width: 901px) {
   .-research-help-page.section-main {
-    grid-template-columns: 1fr;
+    grid-template-columns: [main-start] 1fr [main-end];
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]);
   }
 }
-.-research-help-page.section-main .section-main-guides,
+.-research-help-page.section-main .section-main-subtitle,
+.-research-help-page.section-main .section-main-section,
 .-research-help-page.section-main .section-main-sidebar {
   display: none;
 }
@@ -115,7 +246,10 @@
 }
 
 .section-main {
-  grid-gap: 40px;
+  grid-column-gap: 40px;
+}
+.section-main-breadcrumb {
+  border: 1px solid #B6BDCC;
 }
 .section-main-body .heading.-h2 {
   font-family: "Open Sans", sans-serif;
@@ -129,4 +263,7 @@
 }
 .section-main-sidebar {
   border: 1px solid #B6BDCC;
+}
+.section-main-spacer {
+  height: 40px;
 }
