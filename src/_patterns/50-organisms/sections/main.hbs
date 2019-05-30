@@ -2,6 +2,9 @@
   <div class="section-main-breadcrumb"></div>
   {{> organisms-intro-alt-text}}
   <main class="section-main-body">
+    {{#if libwizard-id}}
+    {{> molecules-form-libwizard}}
+    {{else}}
     {{#unless blocks}}
       {{#block 'section-main-body'}}{{/block}}
     {{else}}
@@ -10,6 +13,7 @@
     {{#if has-related}}
       <div class="section-main-spacer"></div>
       <div class="section-main-content">{{> compounds-related-cards}}</div>
+    {{/if}}
     {{/if}}
   </main>
   <aside class="section-main-sidebar"></aside>
