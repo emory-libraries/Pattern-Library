@@ -65,8 +65,8 @@
   display: grid;
   grid-template-areas: "image" "name" "title" "library";
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr -webkit-min-content auto -webkit-min-content;
-  grid-template-rows: 1fr min-content auto min-content;
+  grid-template-rows: repeat(4, -webkit-min-content);
+  grid-template-rows: repeat(4, min-content);
 }
 .card-librarian-subjects {
   display: none;
