@@ -106,5 +106,6 @@
   "60-templates-generic-info": "review",
   "60-templates-tools-tool": "review",
   "60-templates-materials-material": "review",
-  "60-templates-generic-form": "construction"
+  "60-templates-generic-form": "construction",
+  "30-molecules-forms-form-libwizard": "construction"
 }
