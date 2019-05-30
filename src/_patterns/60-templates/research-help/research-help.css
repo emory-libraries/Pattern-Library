@@ -1,3 +1,10 @@
+.research-help-page {
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: 150px 1fr 420px;
+  grid-template-columns: 1fr;
+}
 .research-help-page-header {
   grid-area: header;
   display: -webkit-box;
@@ -32,13 +39,6 @@
   content: "Footer";
 }
 
-.research-help-page {
-  margin: 0 auto;
-  display: grid;
-  grid-template-areas: "header" "main" "footer";
-  grid-template-rows: 150px 1fr 420px;
-  grid-template-columns: 1fr;
-}
 .research-help-page {
   grid-gap: 20px;
 }

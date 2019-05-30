@@ -39,6 +39,7 @@
 }
 .intro-context {
   display: block;
+  margin-top: 48px;
 }
 .-heading.intro-context, .-heading-alt.intro-context, .-bio.intro-context {
   display: none;
@@ -46,8 +47,8 @@
 .intro-title {
   display: block;
 }
-.intro-title:not(.-heading):not(.heading-alt) {
-  margin: 0;
+.intro-context + .intro-title:not(.-heading):not(.heading-alt) {
+  margin-top: 0;
 }
 .-heading.intro-title, .-heading-alt.intro-title {
   margin-top: 0;
