@@ -1,44 +1,50 @@
-.intro-fitted-hero {
+.intro-hero {
   display: grid;
-  grid-template-rows: 6fr repeat(2, -webkit-min-content) 1fr;
-  grid-template-rows: 6fr repeat(2, min-content) 1fr;
+  grid-template-rows: 5fr repeat(3, -webkit-min-content) 1fr;
+  grid-template-rows: 5fr repeat(3, min-content) 1fr;
   grid-template-columns: 1fr minmax(-webkit-min-content, 800px) 1fr;
   grid-template-columns: 1fr minmax(min-content, 800px) 1fr;
   background-size: cover;
   height: 437px;
 }
-.intro-fitted-hero-image {
+.intro-hero-image {
   grid-row: 1/-1;
   grid-column: 1/-1;
   background-size: cover;
   background-position: center center;
 }
-.intro-fitted-hero-gradient {
+.intro-hero-gradient {
   grid-row: 1/-1;
   grid-column: 1/-1;
 }
-.intro-fitted-hero-title {
+.intro-hero-badge {
   grid-row: 2/span 1;
   grid-column: 2/span 1;
   -ms-flex-item-align: center;
       align-self: center;
 }
-.intro-fitted-hero-subtitle {
+.intro-hero-title {
   grid-row: 3/span 1;
   grid-column: 2/span 1;
   -ms-flex-item-align: center;
       align-self: center;
 }
+.intro-hero-subtitle {
+  grid-row: 4/span 1;
+  grid-column: 2/span 1;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
 
-.intro-fitted-hero-gradient {
+.intro-hero-gradient {
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(-14.42%, #282828), color-stop(50%, rgba(40, 40, 40, 0)));
   background-image: linear-gradient(0deg, #282828 -14.42%, rgba(40, 40, 40, 0) 50%);
 }
-.intro-fitted-hero-title {
+.intro-hero-title {
   margin: 0;
   text-align: center;
 }
-.intro-fitted-hero-title {
+.intro-hero-title {
   font-family: "Cardo", serif !important;
   font-size: 50px !important;
   font-weight: bold !important;
@@ -48,7 +54,7 @@
   text-transform: none !important;
   color: #FFFFFF !important;
 }
-.intro-fitted-hero-subtitle {
+.intro-hero-subtitle {
   margin: 0;
   color: #FFFFFF;
   font-size: 16px;
