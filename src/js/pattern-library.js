@@ -216,28 +216,33 @@ Components.extend('filter-button', {
 
   mounted() {
 
-    // Insert a sample list to help demonstrate how the component works.
-    const $list = $('<div>', {
-      class: 'pl-grid'
-    }).css({
-      '--columns-l': '5',
-      '--columns-m': '3',
-      '--columns-s': '2',
-      margin: '25px 0'
-    }).insertAfter(this.$el);
+    // Add some data to our button filter to demo it.
+    if( $(this.$el).closest('#atoms-filter-button').length > 0 ) {
 
-    // Populate the list using our index items.
-    this.fuzzy.populate($list, {
-      template: `
-      <div class="pl-block">
-        <p class="pl-title">:title</p>
-      </div>`,
-      css: {
-        margin: 0,
-        'font-size': '12px',
-        'text-align': 'center'
-      }
-    });
+      // Insert a sample list to help demonstrate how the component works.
+      const $list = $('<div>', {
+        class: 'pl-grid'
+      }).css({
+        '--columns-l': '5',
+        '--columns-m': '3',
+        '--columns-s': '2',
+        margin: '25px 0'
+      }).insertAfter(this.$el);
+
+      // Populate the list using our index items.
+      this.fuzzy.populate($list, {
+        template: `
+        <div class="pl-block">
+          <p class="pl-title">:title</p>
+        </div>`,
+        css: {
+          margin: 0,
+          'font-size': '12px',
+          'text-align': 'center'
+        }
+      });
+
+    }
 
   }
 
@@ -306,21 +311,5 @@ Components.extend('notification', {
 // Prevent errors by forcing Vue to ignore Pattern Lab data.
 $('.sg-pattern-data').attr('v-pre', true);
 
-// Capture Vue instances.
-const PatternLibrary = [];
-
-// Initialize a Vue instance for each pattern.
-$('.sg-pattern').each((i, el) => PatternLibrary.push(new Vue({el})));
-
-// Otherwise, dynamically add a Vue instance for individual patterns.
-if( $('.sg-pattern').length === 0 ) {
-
-  // Add a wraper to the body that can be used to create a Vue instance.
-  $('body').children().not('script').not('style').wrap($('<div>', {
-    id: 'vue'
-  }));
-
-  // Create the Vue instance.
-  PatternLibrary.push(new Vue({el: '#vue'}));
-
-}
+// Instantiate all components.
+Array.from($('.eul-vue')).forEach((el) => App.push(new Vue({el})));

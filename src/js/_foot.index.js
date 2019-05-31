@@ -1,8 +1,8 @@
 // Initialize the Vue.
-let App;
+let App = [];
 
 // Instantiate the Vue.
-if( $('#eul-vue').length > 0 ) App = new Vue({el: '#eul-vue'});
+if( !PATTERNLAB ) Array.from($('.eul-vue')).forEach((el) => App.push(new Vue({el})));
 
 // Export globals.
 global._ = _;
