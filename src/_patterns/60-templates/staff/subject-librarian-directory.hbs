@@ -1,64 +1,138 @@
 {{! Reformat the librarian data for proper compatibility. }}
 {{#each librarians}}
 
-  {{! Manipulate librarian option data if given. }}
-  {{#if options }}
+  {{! Manipulate librarian config data if given. }}
+  {{#if config }}
 
-    {{! Determine if the librarian has some image data. }}
-    {{#inArray config 'Profile Photo'}}
-      {{assign 'config.image' true}}
-      {{unassign (combine 'config.' (indexOf config 'Profile Photo'))}}
-    {{else}}
-      {{assign 'config.image' false}}
-    {{/inArray}}
+    {{! Handle config data given in array form. }}
+    {{#if (isArray config)}}
 
-    {{! Determine if the librarian has some quote data. }}
-    {{#inArray config 'Quote'}}
-      {{assign 'config.quote' true}}
-      {{unassign (combine 'config.' (indexOf config 'Quote'))}}
-    {{else}}
-      {{assign 'config.quote' false}}
-    {{/inArray}}
+      {{! Determine if the librarian has some image data. }}
+      {{#inArray config 'Profile Photo'}}
+        {{assign 'config.image' true}}
+        {{unassign (combine 'config.' (indexOf config 'Profile Photo'))}}
+      {{else}}
+        {{assign 'config.image' false}}
+      {{/inArray}}
 
-    {{! Determine if the librarian has some bio data. }}
-    {{#inArray config 'Description'}}
-      {{assign 'config.bio' true}}
-      {{unassign (combine 'config.' (indexOf config 'Description'))}}
-    {{else}}
-      {{assign 'config.bio' false}}
-    {{/inArray}}
+      {{! Determine if the librarian has some quote data. }}
+      {{#inArray config 'Quote'}}
+        {{assign 'config.quote' true}}
+        {{unassign (combine 'config.' (indexOf config 'Quote'))}}
+      {{else}}
+        {{assign 'config.quote' false}}
+      {{/inArray}}
 
-    {{! Determine if the librarian has some education data. }}
-    {{#inArray config 'Education'}}
-      {{assign 'config.education' true}}
-      {{unassign (combine 'config.' (indexOf config 'Education'))}}
-    {{else}}
-      {{assign 'config.education' false}}
-    {{/inArray}}
+      {{! Determine if the librarian has some bio data. }}
+      {{#inArray config 'Description'}}
+        {{assign 'config.bio' true}}
+        {{unassign (combine 'config.' (indexOf config 'Description'))}}
+      {{else}}
+        {{assign 'config.bio' false}}
+      {{/inArray}}
 
-    {{! Determine if the librarian has some contact info data. }}
-    {{#inArray config 'Contact Info'}}
-      {{assign 'config.contact' true}}
-      {{unassign (combine 'config.' (indexOf config 'Contact Info'))}}
-    {{else}}
-      {{assign 'config.contact' false}}
-    {{/inArray}}
+      {{! Determine if the librarian has some education data. }}
+      {{#inArray config 'Education'}}
+        {{assign 'config.education' true}}
+        {{unassign (combine 'config.' (indexOf config 'Education'))}}
+      {{else}}
+        {{assign 'config.education' false}}
+      {{/inArray}}
 
-    {{! Determine if the librarian has some subject area data. }}
-    {{#inArray config 'Subject Areas'}}
-      {{assign 'config.subjects' true}}
-      {{unassign (combine 'config.' (indexOf config 'Subject Areas'))}}
-    {{else}}
-      {{assign 'config.subjects' false}}
-    {{/inArray}}
+      {{! Determine if the librarian has some contact info data. }}
+      {{#inArray config 'Contact Info'}}
+        {{assign 'config.contact' true}}
+        {{unassign (combine 'config.' (indexOf config 'Contact Info'))}}
+      {{else}}
+        {{assign 'config.contact' false}}
+      {{/inArray}}
 
-    {{! Determine if the librarian has some CV data. }}
-    {{#inArray config 'CV'}}
-      {{assign 'config.cv' true}}
-      {{unassign (combine 'config.' (indexOf config 'CV'))}}
+      {{! Determine if the librarian has some subject area data. }}
+      {{#inArray config 'Subject Areas'}}
+        {{assign 'config.subjects' true}}
+        {{unassign (combine 'config.' (indexOf config 'Subject Areas'))}}
+      {{else}}
+        {{assign 'config.subjects' false}}
+      {{/inArray}}
+
+      {{! Determine if the librarian has some CV data. }}
+      {{#inArray config 'CV'}}
+        {{assign 'config.cv' true}}
+        {{unassign (combine 'config.' (indexOf config 'CV'))}}
+      {{else}}
+        {{assign 'config.cv' false}}
+      {{/inArray}}
+
+    {{! Otherwise, handle config data given in string form. }}
     {{else}}
-      {{assign 'config.cv' false}}
-    {{/inArray}}
+
+      {{! Determine if the librarian has some config data. }}
+      {{#if (eq config 'Profile Photo')}}
+        {{assign 'config' (arrayify null)}}
+        {{assign 'config.image' true}}
+        {{assign 'config.quote' false}}
+        {{assign 'config.bio' false}}
+        {{assign 'config.education' false}}
+        {{assign 'config.contact' false}}
+        {{assign 'config.subjects' false}}
+        {{assign 'config.cv' false}}
+      {{else if (eq config 'Quote')}}
+        {{assign 'config' (arrayify null)}}
+        {{assign 'config.image' false}}
+        {{assign 'config.quote' true}}
+        {{assign 'config.bio' false}}
+        {{assign 'config.education' false}}
+        {{assign 'config.contact' false}}
+        {{assign 'config.subjects' false}}
+        {{assign 'config.cv' false}}
+      {{else if (eq config 'Description')}}
+        {{assign 'config' (arrayify null)}}
+        {{assign 'config.image' false}}
+        {{assign 'config.quote' false}}
+        {{assign 'config.bio' true}}
+        {{assign 'config.education' false}}
+        {{assign 'config.contact' false}}
+        {{assign 'config.subjects' false}}
+        {{assign 'config.cv' false}}
+      {{else if (eq config 'Education')}}
+        {{assign 'config' (arrayify null)}}
+        {{assign 'config.image' false}}
+        {{assign 'config.quote' false}}
+        {{assign 'config.bio' false}}
+        {{assign 'config.education' true}}
+        {{assign 'config.contact' false}}
+        {{assign 'config.subjects' false}}
+        {{assign 'config.cv' false}}
+      {{else if (eq config 'Contact Info')}}
+        {{assign 'config' (arrayify null)}}
+        {{assign 'config.image' false}}
+        {{assign 'config.quote' false}}
+        {{assign 'config.bio' false}}
+        {{assign 'config.education' false}}
+        {{assign 'config.contact' true}}
+        {{assign 'config.subjects' false}}
+        {{assign 'config.cv' false}}
+      {{else if (eq config 'Subject Areas')}}
+        {{assign 'config' (arrayify null)}}
+        {{assign 'config.image' false}}
+        {{assign 'config.quote' false}}
+        {{assign 'config.bio' false}}
+        {{assign 'config.education' false}}
+        {{assign 'config.contact' false}}
+        {{assign 'config.subjects' true}}
+        {{assign 'config.cv' false}}
+      {{else if (eq config 'CV')}}
+        {{assign 'config' (arrayify null)}}
+        {{assign 'config.image' false}}
+        {{assign 'config.quote' false}}
+        {{assign 'config.bio' false}}
+        {{assign 'config.education' false}}
+        {{assign 'config.contact' false}}
+        {{assign 'config.subjects' false}}
+        {{assign 'config.cv' true}}
+      {{/if}}
+
+    {{/if}}
 
   {{/if}}
 

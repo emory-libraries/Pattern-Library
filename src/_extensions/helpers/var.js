@@ -22,6 +22,13 @@ module.exports = {
   // Make an object or array.
   make( key, context, options ) {
 
+    // Get arguments.
+    const args = Array.from(arguments);
+
+    // Get the options and context.
+    options = _.last(args);
+    context = args.length == 3 ? context : this;
+
     // Get the content.
     let content = options.fn(this).trim();
 
