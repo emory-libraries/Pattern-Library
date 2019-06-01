@@ -71,6 +71,7 @@
     "handlebars-helpers": "^0.10.0",
     "handlebars-layouts": "^3.1.4",
     "handlebars-utils": "^1.0.6",
+    "he": "^1.2.0",
     "hex2dec": "^1.1.2",
     "inquirer": "^6.2.2",
     "intercept-stdout": "^0.1.2",

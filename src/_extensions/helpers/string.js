@@ -1,12 +1,15 @@
 // Load dependencies.
 const _ = require('lodash');
+const he = require('he');
 const regexEscape = require('escape-string-regexp');
 
 // Export helpers.
 module.exports = {
 
-  combine( ...strs ) { return strs.slice(0, -1).join('') },
+  // Combine two or more strings.
+  combine( ...strs ) { return _.initial(strs).join('') },
 
+  // Trim a substring from the start of another string.
   trimSubstringStart( str, substr, mods ) {
 
     // Set mods if not set.
@@ -17,6 +20,7 @@ module.exports = {
 
   },
 
+  // Trim a substring from the end of another string.
   trimSubstringEnd( str, substr, mods ) {
 
     // Set mods if not set.
@@ -27,8 +31,15 @@ module.exports = {
 
   },
 
-  trimSubstring( str, substr ) { return this.trimSubstringEnd(this.trimSubstringStart(str, substr), substr); },
+  // Trim a substring from another string.
+  trimSubstring( str, substr ) {
 
+    // Trim the start and end of the string.
+    return this.trimSubstringEnd(this.trimSubstringStart(str, substr), substr);
+
+  },
+
+  // Override the broken `truncateWords` helper in `handlebars-helpers`.
   truncateWords( str, count, suffix ) {
 
     if (_.isString(str) && _.isNumber(count)) {
@@ -51,6 +62,12 @@ module.exports = {
 
     }
 
-  }
+  },
+
+  // Encode a string to use HTML character codes as needed.
+  encodeHTML( str ) { return he.encode(str, {useNamedReferences: true}); },
+
+  // Decode a string using HTML character codes.
+  decodeHTML( str ) { return he.decode(str); }
 
 };
