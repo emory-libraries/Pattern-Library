@@ -102,7 +102,11 @@ module.exports = {
   // Get the index of an item within an array.
   indexOf( array, item ) {
 
-    return _.findIndex(array, item);
+    // Get the index.
+    const index = _.findIndex(array, item);
+
+    // Return the index or false when not found instead of -1.
+    return index < 0 ? false : index;
 
   },
 
