@@ -56,7 +56,7 @@ Components.register('filter-search', {
     cancel() {
 
       // Clear the search results.
-      this.fuzzy.unsearch();
+      if( this.fuzzy.searching.searched ) this.fuzzy.unsearch();
 
       // Clear the query.
       this.query = '';
