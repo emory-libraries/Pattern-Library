@@ -139,6 +139,13 @@
   {{! Set the librarian's ID if not already set. }}
   {{#unless id}}{{assign 'id' (dashcase (lowercase name))}}{{/unless}}
 
+  {{! Verify that the librarian has a valid image, or ignore it entirely. }}
+  {{#if (and image image.src)}}
+    {{#if (eq (indexOf (makeArray '.png' '.jpg' '.jpeg' '.gif') (extname image.src)) false)}}
+    {{assign 'image.src' null}}
+    {{/if}}
+  {{/if}}
+
   {{! Save the updated librarian to storage. }}
   {{! NOTE: This is required as a patch for the templating engine. }}
   {{storagePush 'librarians' this}}
