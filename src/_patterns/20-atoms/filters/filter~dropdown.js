@@ -66,6 +66,9 @@ Components.register('filter-dropdown', {
     // Initialize the search utility.
     this.fuzzy = new Fuzzy(this.index, this.config);
 
+    // Initialize a filter if an initial selection was made.
+    if( this.valid ) this.filter();
+
   },
 
   computed: {
