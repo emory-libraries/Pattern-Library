@@ -146,6 +146,13 @@
     {{/if}}
   {{/if}}
 
+  {{! Verify that the librarian has a valid CV, or ignore it entirely. }}
+  {{#if (and cv cv.href)}}
+    {{#if (eq cv.href '/')}}
+    {{assign 'cv.href' null}}
+    {{/if}}
+  {{/if}}
+
   {{! Save the updated librarian to storage. }}
   {{! NOTE: This is required as a patch for the templating engine. }}
   {{storagePush 'librarians' this}}

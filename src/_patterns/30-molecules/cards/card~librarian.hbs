@@ -1,7 +1,7 @@
 <div class="card-librarian"{{#if filterable}} data-search-id="{{id}}"{{/if}}>
   <div class="card-librarian-about">
-    <a href="{{link.href}}" class="card-librarian-image">{{> atoms-image src=(combine (baseUrl) (default image.src (combine '/images/avatars/placeholder.' (default gender 'male') '.jpg'))) alt=name}}</a>
-    {{#with link}}{{> atoms-link label=../name classes="card-librarian-name" icon=false}}{{/with}}
+    <a href="{{baseUrl}}{{link.href}}" class="card-librarian-image">{{> atoms-image src=(combine (baseUrl) (default image.src (combine '/images/avatars/placeholder.' (default gender 'male') '.jpg'))) alt=name}}</a>
+    {{#with link}}{{> atoms-link href=(combine (baseUrl) href) label=../name classes="card-librarian-name" icon=false}}{{/with}}
     <span class="card-librarian-title"
           {{#if filterable}} data-search-key="title"{{/if}}>
       {{title}}
@@ -47,12 +47,12 @@
       {{/if}}
     </ul>
     <ul class="card-librarian-contact-links">
-      {{#if cv}}
+      {{#if (and cv cv.href)}}
       <li class="card-librarian-contact-links-item">
         {{#with cv}}{{> atoms-link label='Download CV' classes="" icon=false}}{{/with}}
       </li>
       {{/if}}
-      {{#if guides}}
+      {{#if (and guides guides.href)}}
       <li class="card-librarian-contact-links-item">
         {{#with guides}}{{> atoms-link label='View Research Guides' classes="" icon=false}}{{/with}}
       </li>
