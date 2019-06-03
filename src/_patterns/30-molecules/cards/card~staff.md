@@ -1,6 +1,6 @@
 ---
 
-state: construction
+state: review
 created: 06/03/2019
 updated: 06/03/2019
 js: false
@@ -10,7 +10,7 @@ php: false
 
 ## Getting Started
 
-Insert a sentence or two identifying what the **card (staff)** pattern is and what purpose it serves.
+Cards can be used to callout some relevant information and visually group similar content. Staff cards are especially useful for inserting staff information within the context of another page.
 
 ###### EXPORT VIA GRUNT
 
@@ -21,40 +21,28 @@ grunt export:molecules-card-staff
 
 ### Description
 
-Provide a detailed description about the **card (staff)** pattern. This should include a short summary of how the pattern works; what options or configurations are available to further customize the pattern based on context, if any; and/or what state changes the pattern possesses, if any. This description may include use-case scenarios for different contexts and other information that's deemed helpful for other developers.
+The card staff molecule can be used to include a staff card within another pattern. Staff cards require an image, preferably in the form of a square headshot, but will default to a generic placeholder image if none is given.
 
 
 ### Best Practices
 
-Optionally, create a bulleted list of best practices for how to properly use this pattern in production and/or integrate this pattern within other user interface components.
+- Provide a square headshot whenever applicable
 
 
 ## Schema
 
-Optionally, build a table to identify any pattern schematics that are pertinent for developers to be aware of. A sample schema table is given below.
+| Name      | Type      | Description                                                                                               | Value(s)          |Default|
+|-----------|-----------|-----------------------------------------------------------------------------------------------------------|-------------------|-------|
+| name      | `String`  | The name of the staff, optionally formatted with postnominals included.                               |                   |       |
+| title     | `String`  | The staff's title or position.                                                                        |                   |       |
+| library   | `String`  | The staff's home library.                                                                             |                   |       |
+| link      | `Object`  | Some link data using the [`atoms-link`][atoms-link] schema.                                               |                   |       |
+| image     | `Object`  | Some image data for the staff's headshot using the [`atoms-image`][atoms-image] schema, preferably where the image is in a square format.           |                   |       |
+| gender    | `String`  | Optionally indicates the staff's gender for identifying the appropriate placeholder avatar when `image` is not given.  | `male` or `female` | `male` |
+| phone     | `Number` or `String` | The staff's phone number to be displayed.                                                  |                   |       |
+| email     | `String` | The staff's email address to be displayed.                                                             |                   |       |
+| cv        | `Object` | Some link data using the [`atoms-link`][atoms-link] schema, where the link's label always uses a default.  |                   |       |
 
-| Name  | Type      | Description | Value(s)  | Default   |
-|-------|-----------|-------------|-----------|-----------|
-| label | `String`  | Some text.  |           |           |
-| href  | `String`  | A path.     |           |           |
 
-## Classes
-
-Optionally, build a table to identify any pattern classes that are pertinent for developers to be aware of. For clarity, it could be useful to group classes into different tables based on their purpose, such as *Style Variations* or *State Changes*. Some sample class tables are given below.
-
-### Variations
-
-Classes used to indicate style variations are always prefixed with `-`. These classes tend to change the way the pattern appears.
-
-| Class     | Description                                     |
-|-----------|-------------------------------------------------|
-| `-light`  | Uses a light theme.                             |
-| `-dark`   | Uses a dark theme.                              |
-
-### State
-
-Classes used for state changes are always prefixed with `is-` or `has-`. Classes that use the `is-` prefix are typically used to temporarily alter the pattern's appearance while classes that use the `has-` prefix tend to indicate some structural difference from the pattern's usual state.
-
-| Class       |                                                 |
-|-------------|-------------------------------------------------|
-| `is-active` | Indicates that it's **active**.                 |
+[atoms-link]: /patterns/20-atoms-globals-link/20-atoms-globals-link.html
+[atoms-image]: /patterns/20-atoms-media-image/20-atoms-media-image.html

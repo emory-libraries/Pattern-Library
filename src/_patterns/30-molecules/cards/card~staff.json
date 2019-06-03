@@ -1,1 +1,17 @@
-{}
+{
+  "image": {
+    "src": "//source.unsplash.com/Wx2AjoLtpcU/550x850"
+  },
+  "link": {
+    "href": "//example.com/subject-librarians/john-doe"
+  },
+  "name": "Jill Doe",
+  "title": "Library Specialist",
+  "library": "Robert W. Woodruff Library",
+  "phone": 4047271234,
+  "email": "jill.doe@emory.edu",
+  "cv": {
+    "href": "//example.com/cv"
+  },
+  "gender": "female"
+}
