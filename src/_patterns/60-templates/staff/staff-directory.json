@@ -1,53 +1,30 @@
 {
-  "title": "Subject Librarians",
-  "subtitle": "Find a specialist to help with your research needs and schedule a research consulation for personalized, one-on-one assistance.",
-  "librarians": [
+  "title": "Staff Directory",
+  "subtitle": "Find a staff member within the library.",
+  "staff": [
     {
       "name": "Ellen Ambrose",
       "title": "South Asian Studies and Religion Librarian",
       "library": "Emory Libraries",
-      "subjects": [
-        "Religion",
-        "South Asian History",
-        "South Asian Literature",
-        "South Asian Religions",
-        "South Asian Studies"
-      ],
       "phone": 4047271277,
       "email": "ellen@example.com",
       "gender": "female",
       "cv": {"href": "//example.com/ellen-ambrose#cv"},
-      "guides": {"href": "//example.com/ellen-ambrose#research-guides"},
       "link": {"href": "//example.com/ellen-ambrose"}
     },
     {
       "name": "Erica Bruchko",
       "title": "African American Studies and U.S. History Librarian",
       "library": "Emory Libraries",
-      "subjects": [
-        "African American Studies",
-        "United States History"
-      ],
       "phone": 4047271277,
       "email": "erica@example.com",
       "gender": "female",
-      "guides": {"href": "//example.com/erica-bruchko#research-guides"},
       "link": {"href": "//example.com/erica-bruchko"}
     },
     {
       "name": "Phil MacLeod",
       "title": "Spanish, Portuguese, and Latin American Studies Librarian",
       "library": "Emory Libraries",
-      "subjects": [
-        "Comparative Literature",
-        "Portuguese",
-        "Portuguese Literature",
-        "Spanish",
-        "Spanish Literature",
-        "Latin American History",
-        "Latin American Literature",
-        "Latin American Studies"
-      ],
       "phone": 4047271277,
       "email": "phil@example.com",
       "gender": "male",
@@ -57,17 +34,10 @@
       "name": "Jeremy Kupsco",
       "title": "Research Informationist",
       "library": "Woodruff Health Sciences Center Library",
-      "subjects": [
-        "GDBBS",
-        "Health Sciences Center",
-        "Researchers",
-        "Yerkes"
-      ],
       "phone": 4047271277,
       "email": "jeremy@example.com",
       "gender": "male",
       "cv": {"href": "//example.com/jeremy-kupsco#cv"},
-      "guides": {"href": "//example.com/jeremy-kupsco#research-guides"},
       "link": {"href": "//example.com/jeremy-kupsco"}
     }
   ]
