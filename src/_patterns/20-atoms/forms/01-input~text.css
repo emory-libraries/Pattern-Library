@@ -395,26 +395,45 @@
 .input-container.-row {
   --columns: 2;
   --layout: repeat(var(--columns), auto);
+  --flow: column;
+  --auto: min-content;
   --gap: 1em;
   grid-template-columns: var(--layout);
+  grid-template-rows: -webkit-min-content;
+  grid-template-rows: min-content;
+  grid-auto-flow: var(--flow);
+  grid-auto-columns: var(--auto);
   grid-gap: var(--gap);
 }
-.input-container.-columns {
+.input-container.-column {
   --rows: 2;
   --layout: repeat(var(--rows), auto);
+  --flow: row;
+  --auto: min-content;
   --gap: 1em;
+  grid-template-columns: 1fr;
   grid-template-rows: var(--layout);
+  grid-auto-flow: var(--flow);
+  grid-auto-rows: var(--auto);
   grid-gap: var(--gap);
 }
 .input-container.-grid {
   --columns: 2;
   --rows: 2;
   --gap: 1em;
+  --gap-rows: 1em;
+  --gap-columns: 1em;
   --layout-rows: repeat(var(--rows), auto);
   --layout-columns: repeat(var(--columns), auto);
+  --auto-rows: min-content;
+  --auto-columns: min-content;
   grid-template-columns: var(--layout-columns);
   grid-template-rows: var(--layout-rows);
+  grid-auto-rows: var(--auto-rows);
+  grid-auto-columns: var(--auto-columns);
   grid-gap: var(--gap);
+  grid-row-gap: var(--gap-rows);
+  grid-column-gap: var(--gap-columns);
 }
 .input-group {
   margin-top: 2em;

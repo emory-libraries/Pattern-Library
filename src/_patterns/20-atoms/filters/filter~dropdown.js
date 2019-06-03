@@ -35,7 +35,15 @@ Components.register('filter-dropdown', {
       if( this.valid ) {
 
         // Filter the results.
-        this.fuzzy.filter((item) => item[this.field] == this.selected);
+        this.fuzzy.filter((item) => {
+
+          // Get the item's corresponding field data.
+          const field = item[this.field];
+
+          // Determine if the field matches.
+          return _.isArray(field) ? field.includes(this.selected) : field == this.selected;
+
+        });
 
       }
 
@@ -44,7 +52,7 @@ Components.register('filter-dropdown', {
     cancel() {
 
       // Clear the search results.
-      this.fuzzy.unfilter();
+      if( this. fuzzy.filtering.filtered ) this.fuzzy.unfilter();
 
       // Clear the selection.
       this.selected = this.defaults.selected || '';
@@ -57,6 +65,9 @@ Components.register('filter-dropdown', {
 
     // Initialize the search utility.
     this.fuzzy = new Fuzzy(this.index, this.config);
+
+    // Initialize a filter if an initial selection was made.
+    if( this.valid ) this.filter();
 
   },
 

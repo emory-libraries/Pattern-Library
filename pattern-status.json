@@ -91,6 +91,7 @@
   "40-compounds-related-related-links": "review",
   "40-compounds-blocks-blocks": "review",
   "40-compounds-lists-sidebar-list": "review",
+  "40-compounds-tiles-tiles": "review",
   "50-organisms-intros-intro-text": "review",
   "50-organisms-intros-intro-alt-text": "review",
   "50-organisms-intros-intro-heading": "review",
@@ -99,11 +100,11 @@
   "50-organisms-sections-minor": "review",
   "50-organisms-intros-intro-alt-heading": "construction",
   "50-organisms-intros-intro-bio": "review",
+  "50-organisms-intros-intro-hero": "review",
   "60-templates-services-service-directory": "review",
   "60-templates-research-help-research-help": "construction",
   "60-templates-generic-info": "review",
   "60-templates-tools-tool": "review",
   "60-templates-materials-material": "review",
-  "40-compounds-tiles-tiles": "review",
-  "50-organisms-intros-intro-hero": "review"
+  "60-templates-staff-subject-librarian-directory": "construction"
 }

@@ -1,5 +1,8 @@
-// Instantiate the vue.
-const App = new Vue({el: '#eul-vue'});
+// Initialize the Vue.
+let App;
+
+// Instantiate the Vue.
+if( $('#eul-vue').length > 0 ) App = new Vue({el: '#eul-vue'});
 
 // Export globals.
 global._ = _;

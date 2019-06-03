@@ -5,6 +5,7 @@
 .cards {
   grid-column-gap: 25px;
   grid-row-gap: 25px;
+  grid-auto-rows: 1fr;
   margin-top: 25px;
   margin-bottom: 25px;
   --cols-s: 1;

@@ -13,3 +13,4 @@ pattern_exports/
 env.json
 secret.json
 *.temp.*
+/dist/*-push/**/*
