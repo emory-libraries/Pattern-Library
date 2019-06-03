@@ -10,7 +10,7 @@ php: false
 
 ## Getting Started
 
-Insert a sentence or two identifying what the **staff directory** pattern is and what purpose it serves.
+The staff directory page is intended to provide users with an overview of all staff members working within the library.
 
 ###### EXPORT VIA GRUNT
 
@@ -21,40 +21,21 @@ grunt export:templates-staff-directory
 
 ### Description
 
-Provide a detailed description about the **staff directory** pattern. This should include a short summary of how the pattern works; what options or configurations are available to further customize the pattern based on context, if any; and/or what state changes the pattern possesses, if any. This description may include use-case scenarios for different contexts and other information that's deemed helpful for other developers.
+The staff directory template can be used to create a Staff Directory page.
 
 
 ### Best Practices
 
-Optionally, create a bulleted list of best practices for how to properly use this pattern in production and/or integrate this pattern within other user interface components.
+- Only ever include one main section within the template
+- Only one staff directory page should exist within a site
 
 
 ## Schema
 
-Optionally, build a table to identify any pattern schematics that are pertinent for developers to be aware of. A sample schema table is given below.
+This pattern extends [`organisms-main`][organisms-main] and uses the schemas for [`tokens-grid`][tokens-grid], [`atoms-filter-search`][atoms-filter-search], [`molecules-card-staff`][molecules-card-staff], and [`compounds-cards`][compounds-cards].
 
-| Name  | Type      | Description | Value(s)  | Default   |
-|-------|-----------|-------------|-----------|-----------|
-| label | `String`  | Some text.  |           |           |
-| href  | `String`  | A path.     |           |           |
-
-## Classes
-
-Optionally, build a table to identify any pattern classes that are pertinent for developers to be aware of. For clarity, it could be useful to group classes into different tables based on their purpose, such as *Style Variations* or *State Changes*. Some sample class tables are given below.
-
-### Variations
-
-Classes used to indicate style variations are always prefixed with `-`. These classes tend to change the way the pattern appears.
-
-| Class     | Description                                     |
-|-----------|-------------------------------------------------|
-| `-light`  | Uses a light theme.                             |
-| `-dark`   | Uses a dark theme.                              |
-
-### State
-
-Classes used for state changes are always prefixed with `is-` or `has-`. Classes that use the `is-` prefix are typically used to temporarily alter the pattern's appearance while classes that use the `has-` prefix tend to indicate some structural difference from the pattern's usual state.
-
-| Class       |                                                 |
-|-------------|-------------------------------------------------|
-| `is-active` | Indicates that it's **active**.                 |
+[organisms-main]: /patterns/50-organisms-main-main/50-organisms-main-main.html
+[tokens-grid]: /patterns/10-tokens-10-globals-grid/10-tokens-10-globals-grid.html
+[atoms-filter-search]: /patterns/20-atoms-filters-filter-search/20-atoms-filters-filter-search.html
+[molecules-card-staff]: /patterns/30-molecules-cards-card-staff/30-molecules-cards-card-staff.html
+[compounds-cards]: /patterns/40-compounds-cards-cards/40-compounds-cards-cards.html
