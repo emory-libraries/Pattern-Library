@@ -21,7 +21,7 @@ grunt export:templates-service-directory
 
 ### Description
 
-The service directory template can be used to create an **service directory page**.
+The service directory template can be used to create a Service Directory page.
 
 
 ### Best Practices
