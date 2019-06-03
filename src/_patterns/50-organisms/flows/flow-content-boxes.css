@@ -1,0 +1,16 @@
+.flow-content-boxes {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(460px, -webkit-min-content);
+  grid-template-rows: minmax(460px, min-content);
+}
+@media (min-width: 1200px) {
+  .flow-content-boxes {
+    grid-template-columns: minmax(-webkit-min-content, 2fr) minmax(-webkit-min-content, 376px);
+    grid-template-columns: minmax(min-content, 2fr) minmax(min-content, 376px);
+  }
+}
+
+.flow-content-boxes {
+  grid-column-gap: 36px;
+}
