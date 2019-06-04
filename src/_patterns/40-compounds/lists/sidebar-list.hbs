@@ -2,10 +2,12 @@
 
   {{#each sections}}
   <div class="sidebar-list-section{{#if ../divider}}{{#if (and ../divider.start @first)}} -divider-start{{/if}}{{#if (and ../divider.end @last)}} -divider-end{{/if}}{{/if}}">
+    {{#if title}}
     <span class="sidebar-list-section-title{{#if icon}} has-icon{{/if}}">
       {{#if icon}}{{> tokens-icon id=icon}}{{/if}}
       {{title}}
     </span>
+    {{/if}}
     <div class="sidebar-list-section-content">
       {{#if (isArray this.content)}}
         <ul class="list">
