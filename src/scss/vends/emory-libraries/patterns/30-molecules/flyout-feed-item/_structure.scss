@@ -1,0 +1,97 @@
+////
+/// @group emory-libraries.patterns.molecules.flyout-feed-item
+////
+
+/// Defines the base structure of the flyout-feed-item component.
+///
+/// @since 1.0.0
+%molecules-flyout-feed-item {
+  
+  // Capture selector.
+  $selector: &;
+  
+  // Builds the flyout-feed-item structure.
+  display: grid;
+  grid-template-areas: "date" 
+                       "heading";
+  grid-template-rows: repeat(2, min-content);
+  align-items: start;
+  
+  // Modifies structure for larger screens.
+  @include breakpoint-m-l {
+    grid-template-areas: "date" 
+                         "heading" 
+                         "description" 
+                         "link";
+    grid-template-rows: repeat(2, min-content) 1fr min-content;
+  };
+  
+  // Modifies structure for thumbnails.
+  &.has-thumbnail {
+    grid-template-areas: "thumbnail date" 
+                         "thumbnail heading";
+    
+    @include breakpoint-m-l {
+      grid-template-areas: "thumbnail date" 
+                           "thumbnail heading" 
+                           "thumbnail description" 
+                           "thumbnail link";
+    };
+    
+  }
+  
+  // Builds the flyout feed item's thumbnail structure.
+  &-thumbnail { 
+    grid-area: thumbnail;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    @include absolute-center-contents;
+    
+    img {
+      width: 100%;
+    }
+    
+    @include when-descendant-of( '#{$selector}:not(.has-thumbnail)' ) {
+      display: none;
+    };
+    
+  }
+  
+  // Builds the flyout feed item's date structure.
+  &-date { 
+    grid-area: date;
+    margin: 0;
+  }
+  
+  // Builds the flyout feed item's heading structure.
+  &-heading { 
+    grid-area: heading;
+    margin: 0;
+  }
+  
+  // Builds the flyout feed item's description structure.
+  &-description { 
+    grid-area: description;
+    margin: 0;
+    display: none;
+    
+    @include breakpoint-m-l {
+      display: block;
+    }
+    
+  }
+  
+  // Builds the flyout feed item's link structure.
+  &-link { 
+    grid-area: link;
+    padding: 0;
+    display: none;
+    
+    @include breakpoint-m-l {
+      display: inline-block;
+    }
+    
+  }
+  
+}

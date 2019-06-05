@@ -1,0 +1,109 @@
+////
+/// Use this section to build user interface components.
+/// A component typically has a consistent structure but
+/// may have one or more variations in terms of its appearance.
+/// In theory, a truce component could be written as a mixin.
+///
+/// @group emory-libraries.patterns
+////
+
+
+// Load tokens.
+///
+/// @since 1.0.0
+@import '10-tokens/heading';
+@import '10-tokens/text';
+@import '10-tokens/icon';
+@import '10-tokens/layout';
+@import '10-tokens/grid';
+/*** INSERT NEW TOKENS HERE ***/
+
+/// Load atoms.
+///
+/// @since 1.0.0
+@import '20-atoms/button';
+@import '20-atoms/badge';
+@import '20-atoms/input';
+@import '20-atoms/table';
+@import '20-atoms/tab';
+@import '20-atoms/nav-button';
+@import '20-atoms/subnav-button';
+@import '20-atoms/list';
+@import '20-atoms/link';
+@import '20-atoms/image';
+@import '20-atoms/video';
+@import '20-atoms/callout';
+@import '20-atoms/note';
+@import '20-atoms/map';
+@import '20-atoms/copyright';
+@import '20-atoms/search';
+@import '20-atoms/rule';
+/*** INSERT NEW ATOMS HERE ***/
+
+
+/// Loads molecules.
+///
+/// @since 1.0.0
+@import '30-molecules/block';
+@import '30-molecules/flyout-feed-item';
+@import '30-molecules/flyout-info-item';
+@import '30-molecules/feature';
+@import '30-molecules/wayfinder';
+@import '30-molecules/explorer';
+@import '30-molecules/card-contact';
+@import '30-molecules/card-librarian';
+@import '30-molecules/card-multimedia';
+@import '30-molecules/card-library-aid';
+@import '30-molecules/card-library-guide';
+@import '30-molecules/card-listing';
+@import '30-molecules/card-action';
+@import '30-molecules/tile-listing';
+@import '30-molecules/tile-utility';
+@import '30-molecules/slide';
+@import '30-molecules/accordion';
+@import '30-molecules/figure';
+@import '30-molecules/feed-item';
+@import '30-molecules/utility-list-item';
+@import '30-molecules/sidebar-list-item';
+@import '30-molecules/alert';
+@import '30-molecules/notification';
+@import '30-molecules/card-button';
+@import '30-molecules/card-staff';
+/*** INSERT NEW MOLECULES HERE ***/
+
+
+/// Load compounds.
+///
+/// @since 1.0.0
+@import '40-compounds/utility-list';
+@import '40-compounds/cards';
+@import '40-compounds/accordion';
+@import '40-compounds/related';
+@import '40-compounds/blocks';
+@import '40-compounds/sidebar-list';
+@import '40-compounds/tiles';
+/*** INSERT NEW COMPOUNDS HERE ***/
+
+
+/// Loads organisms.
+///
+/// @since 1.0.0
+@import '50-organisms/intro';
+@import '50-organisms/section-main';
+@import '50-organisms/section-major';
+@import '50-organisms/section-minor';
+@import '50-organisms/intro-hero';
+/*** INSERT NEW ORGANISMS HERE ***/
+
+
+/// Loads templates.
+///
+/// @since 1.0.0
+@import '60-templates/info';
+@import '60-templates/material';
+@import '60-templates/tool';
+@import '60-templates/service-directory';
+@import '60-templates/research-help';
+@import '60-templates/subject-librarian-directory';
+@import '60-templates/staff-directory';
+/*** INSERT NEW TEMPLATES HERE ***/

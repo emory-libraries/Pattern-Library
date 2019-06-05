@@ -1,0 +1,211 @@
+////
+/// @group emory-libraries.patterns.atoms.button
+////
+
+/// Defines the base skin of the button component.
+///
+/// @since 1.0.0
+///
+/// @requires {variable} $color-actionable
+/// @requires {variable} $border-width-s
+/// @requires {variable} $transition-duration
+/// @requires {variable} $transition-timing
+///
+/// @prop {map} color - Assigns the component's color properties
+/// @prop {color} color.normal [$color-actionable] - The component's normal color
+/// @prop {color} color.normal [$color-actionable] - The component's color on hover/focus
+/// @prop {number} border [$border-width-s] - The component's border width
+/// @prop {map} transition - Assigns the component's transition properties
+/// @prop {number} transition.duration [$transition-duration] - The component's transition duration
+/// @prop {number} transition.timing [$transition-timing] - The component's transition timing
+///
+/// @type map
+$atoms-button: (
+
+  'size': 50px,
+  'padding': 25px,
+  'background': (
+    'normal': $color-actionable,
+    'hover': color('blue', 'mid'),
+    'active': color('blue', 'mid'),
+    'hollow': color('blue', 'light')
+  ),
+  'foreground': (
+    'normal': $color-text-light,
+    'hover': $color-text-light,
+    'active': $color-text-light,
+    'hollow': $color-actionable
+  ),
+  'fade': .5,
+  'border': $border-width-s,
+  'transition': (
+    'duration': $transition-duration,
+    'timing': $transition-timing
+  ),
+  'icon': (
+    'offset': $rhythm-x
+  ),
+  'group': (
+    'gap': (
+      'x': 15px,
+      'y': 15px
+    )
+  )
+  
+);
+
+
+/// Defines the button component theme.
+///
+/// @since 1.0.0
+///
+/// @requires {mixin} tokens-text
+/// @requires {function} Brandy::map-deep-get <https://laurenhamel.github.io/brandy/docs/#brandy-maps-function-map-deep-get>
+/// @requires {function} Brandy::color-contrast <https://laurenhamel.github.io/brandy/docs/#brandy-colors-function-color-contrast>
+///
+/// @param {map} skin - The component's skin
+///
+/// @output The button component's themeable properties
+@mixin atoms-button--theme ( $skin ) {
+  
+  // Capture any variables that will be used.
+  $border: map-deep-get($skin, 'border');
+  $duration: map-deep-get($skin, 'transition.duration');
+  $timing: map-deep-get($skin, 'transition.timing');
+  $offset: map-deep-get($skin, 'icon.offset');
+  $fade: map-deep-get($skin, 'fade');
+  $size: map-deep-get($skin, 'size');
+  $padding: map-deep-get($skin, 'padding');
+  
+  // Get foreground-specific variables.
+  $foreground-normal: map-deep-get($skin, 'foreground.normal');
+  $foreground-hover: map-deep-get($skin, 'foreground.hover');
+  $foreground-active: map-deep-get($skin, 'foreground.active');
+  $foreground-hollow: map-deep-get($skin, 'foreground.hollow');
+  
+  // Get background-specific variables.
+  $background-normal: map-deep-get($skin, 'background.normal');
+  $background-hover: map-deep-get($skin, 'background.hover');
+  $background-active: map-deep-get($skin, 'background.active');
+  $background-hollow: map-deep-get($skin, 'background.hollow');
+  
+  // Assign base styles.
+  border: $border solid $background-normal;
+  background-color: $background-normal;
+  @include tokens-text('button', $foreground-normal);
+  transition: all $duration $timing;
+  @include padding-x( $padding );
+  height: $size;
+  
+  // Assign icon styles.
+  .icon {
+    
+    &.-left {
+      margin-right: $offset;
+    }
+    
+    &.-right {
+      margin-left: $offset;
+    }
+    
+    svg {
+      fill: $foreground-normal;
+    }
+    
+  }
+  
+  // Assign hollow variation styles.
+  &.-hollow {
+    background-color: transparent;
+    @include tokens-text('button', $background-normal);
+
+    .icon {
+
+      svg {
+        fill: $background-normal;
+      }
+
+    }
+    
+  }
+  
+  // Assign pill variation styles.
+  &.-pill {
+    border-radius: ($size / 2);
+  }
+  
+  // Assign style variation for transforming text.
+  &.-uncapitalize {
+    text-transform: none !important;
+  }
+  
+  // Assign hovered/focused styles.
+  &:hover,
+  &:focus,
+  &.is-hover,
+  &.is-focus {
+    border-color: $background-hover;
+    background-color: $background-hover;
+    @include tokens-text('button', $foreground-hover);
+    
+    .icon {
+
+      svg {
+        fill: $foreground-hover;
+      }
+
+    }
+    
+    &.-hollow { 
+      border-color: $background-normal;
+      background-color: $background-hollow; 
+      @include tokens-text('button', $background-normal);
+      
+      .icon {
+
+        svg {
+          fill: $background-hover;
+        }
+
+      }
+      
+    }
+    
+  }
+  
+  // Assigns pressed styles.
+  &:active,
+  &.is-active {
+    border-color: $background-hover;
+    background-color: $background-hover;
+    @include tokens-text('button', rgba($foreground-active, $fade));
+    
+    &.-hollow {
+      border-color: $background-normal;
+      background-color: $background-hollow;
+      @include tokens-text('button', rgba($background-normal, $fade));
+    }
+    
+  }
+  
+  // Assigns disabled styles.
+  &[disabled],
+  &.is-disabled { 
+    opacity: $fade; 
+  }
+  
+  // Assigns button group styles.
+  &-group {
+    
+    // Get group-specific variables.
+    $gap-x: map-deep-get($skin, 'group.gap.x');
+    $gap-y: map-deep-get($skin, 'group.gap.y');
+    
+    > * {
+      margin-right: $gap-x;
+      @include margin-y( $gap-y / 2 );
+    }
+    
+  }
+  
+}

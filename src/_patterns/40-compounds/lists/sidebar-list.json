@@ -1,0 +1,42 @@
+{
+  "sections": [
+    {
+      "title": "Location",
+      "icon": "material-map",
+      "content": "Jones Room, Woodruff Library Level 3"
+    },
+    {
+      "title": "Cost",
+      "icon": "material-attach_money",
+      "content": "FREE"
+    },
+    {
+      "title": "Speaker",
+      "icon": "material-person",
+      "content": [
+        "Randall K. Burkett",
+        "Rosemary Magee"
+      ]
+    },
+    {
+      "title": "Department",
+      "icon": "material-office",
+      "content": [
+        "Emory Libraries",
+        "Rose Library"
+      ]
+    },
+    {
+      "title": "Contact",
+      "icon": "material-mail",
+      "content": "Maya Cody [maya.cody@emory.edu](mailto:maya@example.com)",
+      "markdown": true
+    }
+  ],
+  "buttons": [
+    {
+      "label": "Register Now",
+      "href": ""
+    }
+  ]
+}

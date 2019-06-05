@@ -1,0 +1,676 @@
+// Load our framework to make scaffolding quicker.
+@import 'vends/emory-libraries';
+
+// Set variables.
+$code: (
+  'background': #f5f2f0,
+  'foreground': slategray,
+  'tokens': (
+    'comment': slategray,
+    'prolog': slategray,
+    'doctype': slategray,
+    'cdata': slategray,
+    'punctuation': #999999,
+    'property': #990055,
+    'tag': #990055,
+    'boolean': #990055,
+    'number': #990055,
+    'constant': #990055,
+    'symbol': #990055,
+    'deleted': #990055,
+    'selector': #669900,
+    'attr-name': #669900,
+    'string': #669900,
+    'char': #669900,
+    'builtin': #669900,
+    'inserted': #669900,
+    'operator': #9a6e3a,
+    'entity': #9a6e3a,
+    'url': #9a6e3a,
+    'atrule': #0077aa,
+    'attr-value': #0077aa,
+    'keyword': #0077aa,
+    'function': #dd4a68,
+    'class-name': #dd4a68,
+    'regex': #ee9900,
+    'important': #ee9900,
+    'variable': #ee9900
+  ),
+  'styles': (
+    'important': (
+      'font-weight': bold
+    ),
+    'bold': (
+      'font-weight': bold
+    ),
+    'italic': (
+      'font-style': italic
+    ),
+    'operator': (
+      'background': hsla(0, 0%, 100%, .5)
+    ),
+    'entity': (
+      'background': hsla(0, 0%, 100%, .5),
+      'cursor': help
+    )
+  ),
+  'mods': (
+    '.language-css .token-string': (
+      'color': #9a6e3a,
+      'background': hsla(0, 0%, 100%, .5)
+    ),
+    '.style .token-string': (
+      'color': #9a6e3a,
+      'background': hsla(0, 0%, 100%, .5)
+    )
+  )
+);
+$breakpoints: (
+  's': max-width 599px,
+  'm': 900px 600px,
+  'l': min-width 901px
+);
+$pl-border: $border-width-s solid color('slate', 'light');
+
+// Set core styles.
+body {
+  @include tokens-text;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+svg { fill: $color-text-dark; }
+
+h1 { @include tokens-heading('h1'); }
+h2 { @include tokens-heading('h2'); }
+h3 { @include tokens-heading('h3'); }
+h4 { @include tokens-heading('h4'); }
+h5 { @include tokens-heading('h5'); }
+h6 { @include tokens-heading('h6'); }
+
+pre {
+  background-color: map-deep-get($code, 'background');
+  color: map-deep-get($code, 'foreground');
+  padding: 10px $rhythm-x;
+}
+
+pre,
+code {
+  font-family: monospace;
+}
+
+:not(pre) code {
+  background-color: map-get($code, 'background');
+  color: map-get($code, 'foreground');
+  padding: 2.5px 5px;
+  border-radius: 3px;
+}
+
+// Set clipboard styles.
+.copy {
+  cursor: copy;
+}
+
+// Set tooltip styles.
+.tippy-popper {
+
+  $tippy-background: #333333;
+  $tippy-foreground: color('white');
+
+  @include tokens-text( $color: $tippy-foreground );
+
+  // Tooltip
+  .tippy-tooltip {
+    background-color: $tippy-background;
+  }
+
+  // Arrow
+  .tippy-arrow {
+    border-botton-color: $tippy-background;
+  }
+
+  // Content
+  .tippy-content {
+    font-size: .8rem !important;
+  }
+
+  // UI Colors
+  @each $state in ('success', 'caution', 'error') {
+
+    &.-#{$state} .tippy-tooltip {
+      background-color: color('ui', $state);
+    }
+
+    &.-#{$state} .tippy-arrow {
+      border-bottom-color: color('ui', $state);
+    }
+
+  }
+
+}
+
+// Set styles for code snippets.
+pre[class*="language-"],
+code[class*="language-"] {
+
+  .token {
+
+    @each $token, $color in map-get($code, 'tokens') {
+
+      &.#{$token} {
+        color: $color;
+      }
+
+    }
+
+    @each $token, $properties in map-get($code, 'styles') {
+
+      &.#{$token} {
+        @include expand-properties($properties);
+      }
+
+    }
+
+    &.rule {
+      display: inline;
+      border-top: none;
+    }
+
+    &.atrule {
+      display: inline-block;
+      margin-top: 15px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -(15px / 2);
+        border-top: 1px solid rgba(9, 28, 68, .1);
+        width: 250px;
+      }
+
+    }
+
+
+  }
+
+  @each $selector, $properties in map-get($code, 'mods') {
+
+    #{selector($selector)} {
+      @include expand-properties($properties);
+    }
+
+  }
+
+}
+
+// Set pattern styles.
+#sg-patterns {
+  @include padding-x($rhythm-x);
+}
+
+// Set pattern styles.
+.sg-pattern {
+
+  // Head
+  & &-head {}
+
+  // Title
+  & &-title {
+    @include tokens-heading('h2', $important: true);
+  }
+
+  // Links
+  & .patternLink { color: inherit; }
+
+}
+
+// Set pattern category styles.
+.sg-pattern-category {
+
+  // Title
+  & &-title {
+    @include tokens-heading('h1', $important: true);
+  }
+
+  // Description
+  & &-body {
+
+  }
+
+  // Links
+  & .patternLink { color: inherit; }
+
+
+}
+
+// Set pattern extra styles.
+.sg-pattern-extra {
+  overflow: auto !important;
+
+  // Container
+  & &-inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Info & Code
+  & &-info,
+  & &-code {
+    width: 100%;
+  }
+
+  // Info
+  & &-info {
+    @include tokens-text;
+
+    // Descriptions
+    .sg-pattern-desc {
+
+      // Tables within Descriptions
+      table {
+
+        $table-border: $border-width-s solid color('slate');
+
+        @include atoms-table;
+        border-collapse: collapse;
+        border: $table-border;
+        width: 100%;
+
+        th, td { padding: 10px $rhythm-x; }
+
+        tr { border-bottom: $table-border; }
+
+        thead { background-color: color('slate', 'light'); }
+
+      }
+
+    }
+
+  }
+
+}
+
+// Set pattern state styles.
+.sg-pattern-state {
+
+   $states: (
+    'specification': #708090,
+    'construction': #F2C900,
+    'review': #FFAB4A,
+    'complete': #61BD4F,
+    'reconsideration': #0079BF,
+    'deprecated': #EB5A46
+  );
+
+  @include absolute-center-contents(true);
+  padding: 1.5px 5px;
+  margin-left: $rhythm-x;
+  @include tokens-text('badge', white !important);
+  border-radius: 3px;
+  text-shadow: 0px 0px 3px rgba($color-text-dark, .4);
+  font-weight: 500 !important;
+
+  // States
+  @each $state, $color in $states {
+    &.#{$state} {
+      background-color: $color;
+      text-transform: uppercase !important;
+      font-size: .75rem !important;
+    }
+  }
+
+  // Remove bullets.
+  &::before { content: none !important; }
+
+}
+
+// Set core styles for meta patterns.
+[id^="meta-"] {
+
+  // Always hide code snippets...
+  .sg-pattern-extra-code { display: none !important; }
+
+}
+
+// Set styles for meta patterns.
+
+.pl-iconset {
+
+  // Name
+  &-name {}
+
+  // Icon Groups
+  &-icons {}
+
+  // Icons
+  &-icon {
+    display: inline-block;
+    svg { fill: $color-text-dark; }
+
+    &.-material { @include size(25px); }
+    &.-socicon { @include size(22px); padding: 1.5px; }
+
+  }
+
+}
+
+.pl-block {
+  margin-top: $rhythm-y;
+  border: $pl-border;
+  padding: 1em;
+
+  // Name and Class
+  &-name,
+  &-class {
+    display: inline-flex;
+  }
+
+  // Name
+  &-name { }
+
+  // Class
+  &-class {
+    margin-left: $rhythm-x;
+    font-size: .85rem;
+  }
+
+  // Info
+  &-info {
+    border-top: ($pl-border);
+  }
+
+  @include first-child {
+    margin-top: auto;
+  }
+
+}
+
+.pl-grid {
+
+  --columns-s: 1;
+  --columns-m: 2;
+  --columns-l: 3;
+  --gap: 1rem;
+
+  display: grid;
+  grid-gap: var(--gap);
+  grid-auto-rows: min-content;
+  grid-template-columns: repeat(var(--columns-s), 1fr);
+
+  @include breakpoint( map-get($breakpoints, 'm') ) {
+    grid-template-columns: repeat(var(--columns-m), 1fr);
+  };
+  @include breakpoint( map-get($breakpoints, 'l') ) {
+    grid-template-columns: repeat(var(--columns-l), 1fr);
+  };
+
+  // Item
+  &-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: $pl-border;
+    align-items: center;
+
+    // ID
+    &-id {
+      @include tokens-heading('h5-alt');
+      text-align: center;
+      text-transform: uppercase !important;
+      font-size: 1rem !important;
+    }
+
+    // Info
+    &-info {
+      @include margin-y(10px);
+      width: 100%;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+    }
+
+    // Meta
+    &-meta {
+      display: grid;
+      grid-template-areas: "label data";
+      grid-template-columns: max-content minmax(0, auto);
+      grid-gap: 10px;
+      @include tokens-text;
+      font-size: .8rem !important;
+      justify-content: center;
+      margin-top: auto;
+
+      // Label
+      &-label {
+        grid-area: label;
+        text-transform: uppercase;
+        font-weight: bold !important;
+      }
+
+      // Data
+      &-data {
+        grid-area: data;
+      }
+
+    }
+
+  }
+
+}
+
+.pl-callout {
+  @include tokens-text;
+  padding: $rhythm-x;
+  margin-bottom: 1em;
+  border: $pl-border;
+}
+
+@mixin pl-table( $columns: 6, $fixed: 200px, $cells: 45px ) {
+
+  $selector: &;
+  $border: 1px solid color('slate', 'light');
+  $count: if(is-list($fixed), count($fixed), 1);
+
+  display: grid;
+  grid-template-areas: "fixed scrollable";
+  grid-template-columns: $fixed 1fr;
+  font-size: 12px;
+
+  // Header
+  &-header {
+    text-align: center;
+    display: contents;
+  }
+
+  // Body
+  &-body {
+    text-align: left;
+    display: contents;
+  }
+
+  // Fixed
+  &-fixed {
+    grid-area: fixed;
+    border-left: $border;
+  }
+
+  // Scrollable
+  &-scrollable {
+    grid-area: scrollable;
+    display: block;
+    overflow-x: auto;
+    text-align: left;
+    border-right: $border;
+
+    &-area {
+      display: grid;
+      grid-template-columns: repeat(#{$columns - $count}, minmax(max-content, 1fr));
+    }
+
+  }
+
+  // Headings
+  &-heading {
+    font-weight: bold;
+
+    @include when-descendant-of( '#{$selector}-header' ) {
+      background-color: color('blue', 'dark');
+      color: color('gold');
+      text-transform: uppercase;
+    };
+
+    @include when-descendant-of( '#{$selector}-body' ) {
+      @include border-x( $border );
+    };
+
+  }
+
+  // Cells
+  &-cell {
+    display: block;
+    padding: 10px;
+    border-bottom: $border;
+    height: $cells;
+
+    @include when-descendant-of( '#{$selector}-fixed' ) {
+
+      &:nth-child(#{$count}n) {
+        border-right: $border;
+      }
+
+    };
+
+    @include when-descendant-of( '#{$selector}-scrollable' ) {
+
+      &:nth-child(#{$columns - $count}n - #{$columns - $count - 1}) {
+        border-left: $border;
+      }
+
+    };
+
+    @include when-descendant-of( '#{$selector}-header' ) {
+      @include border-x( none !important );
+    };
+
+    &.pl-table-align-left { text-align: left; }
+    &.pl-table-align-center { text-align: center; }
+    &.pl-table-align-right { text-align: right; }
+    &.pl-table-align-justify { text-align: justify; }
+
+  }
+
+  // Fixed and Scrollable
+  &-fixed + &-scrollable &-cell {
+
+    &:nth-child(#{$columns - $count}n - #{$columns - $count - 1}) {
+      border-left: none;
+    }
+
+  }
+
+  // Modifies statuses.
+  .sg-pattern-state {
+    margin: 0;
+  }
+
+}
+
+.pl-table {
+  @include pl-table;
+}
+
+.pl-ui {
+
+  @each $name, $map in $colors-ui {
+    @each $variant, $color in $map {
+
+      @if ( $variant == 'base' ) {
+
+        &-#{$name} { color: $color; }
+        &-#{$name}-bg { background-color: $color; }
+        &-#{$name}-fill, &-#{$name}-fill svg { fill: $color; }
+
+      }
+
+      @else {
+
+        &-#{$name}-#{$variant} { color: $color; }
+        &-#{$name}-#{$variant}-bg { background-color: $color; }
+         &-#{$name}-#{$variant}-fill, &-#{$name}-#{$variant}-fill svg { fill: $color; }
+
+      }
+
+    }
+  }
+
+  &-true {
+    color: #6ab04c;
+  }
+  &-true-bg {
+    background-color: #6ab04c
+  }
+  &-true-fill, &-true-fill svg {
+    fill: #6ab04c
+  }
+
+  &-false {
+    color: #eb4d4b;
+  }
+  &-false-bg {
+    background-color: #eb4d4b
+  }
+  &-false-fill, &-false-fill svg {
+    fill: #eb4d4b
+  }
+
+  &-null {
+    color: color('slate');
+  }
+  &-null-bg {
+    background-color: color('slate');
+  }
+  &-null-fill, &-null-fill svg {
+    fill: color('slate');
+  }
+
+}
+
+.pl-size {
+
+  @each $name, $size in (
+    'xxxs': 0em,
+    'xxs': .25em,
+    'xs': .5em,
+    's': .75em,
+    'm': 1em,
+    'l': 1.25em,
+    'xl': 1.5em,
+    'xxl': 1.75em,
+    'xxxl': 2em
+  ) {
+
+    &-#{$name} {
+      font-size: $size;
+    }
+
+  }
+
+}
+
+.pl-symbol {
+  @include size( 25px );
+  border-radius: 100%;
+  @include absolute-center-contents( true );
+  color: white;
+}

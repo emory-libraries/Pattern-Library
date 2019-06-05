@@ -1,0 +1,83 @@
+.leaflet-container {
+
+  .leaflet-control-attribution {
+    background: $color--attribution--background;
+    background: rgba($color--attribution--background, 0.7);
+    margin: 0;
+  }
+
+  .leaflet-control-attribution,
+  .leaflet-control-scale {
+    font-size: 11px;
+  }
+
+}
+
+.leaflet-control-attribution,
+.leaflet-control-scale-line {
+  padding: 0 5px;
+  color: $color--attribution--foreground;
+}
+
+.leaflet-control-attribution {
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+  }
+
+}
+
+.leaflet-left .leaflet-control-scale {
+  margin-left: 5px;
+}
+
+.leaflet-bottom .leaflet-control-scale {
+  margin-bottom: 5px;
+}
+
+.leaflet-control-scale-line {
+  border: 2px solid #777;
+  border-top: none;
+  line-height: 1.1;
+  padding: 2px 5px 1px;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  background: #fff;
+  background: rgba(255, 255, 255, 0.5);
+
+  &:not(:first-child) {
+    border-top: 2px solid #777;
+    border-bottom: none;
+    margin-top: -2px;
+  }
+
+  &:not(:first-child):not(:last-child) {
+    border-bottom: 2px solid #777;
+  }
+
+}
+
+.leaflet-touch {
+
+  .leaflet-control-attribution,
+  .leaflet-control-layers,
+  .leaflet-bar {
+    box-shadow: none;
+  }
+
+  .leaflet-control-layers,
+  .leaflet-bar {
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    background-clip: padding-box;
+  }
+
+}

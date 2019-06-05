@@ -1,0 +1,47 @@
+.research-help-page {
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: 150px 1fr 420px;
+  grid-template-columns: 1fr;
+}
+.research-help-page-header {
+  grid-area: header;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.research-help-page-header::after {
+  content: "Header";
+}
+.research-help-page-main {
+  grid-area: main;
+}
+.research-help-page-footer {
+  grid-area: footer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.research-help-page-footer::after {
+  content: "Footer";
+}
+
+.research-help-page {
+  grid-gap: 20px;
+}
+.research-help-page-header, .research-help-page-footer {
+  border: 1px solid #B6BDCC;
+}

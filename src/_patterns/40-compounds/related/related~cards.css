@@ -1,0 +1,21 @@
+.related-title {
+  display: block;
+  margin: 0;
+}
+.related {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  border-top: 1px solid rgba(231, 234, 241, 0.5);
+}
+.related-title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.6667;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #082B73;
+}

@@ -1,0 +1,34 @@
+////
+/// @group emory-libraries.config
+////
+
+/// Sets the default border width for small borders.
+///
+/// @since 1.0.0
+///
+/// @type number
+$border-width-s: 1px !default;
+
+
+/// Sets the default border width for medium borders.
+///
+/// @since 1.0.0
+///
+/// @type number
+$border-width-m: 2px !default;
+
+
+/// Sets the default border width for large borders.
+///
+/// @since 1.0.0
+///
+/// @type number
+$border-width-l: 4px !default;
+
+
+/// Sets the default border width for extra-large borders.
+///
+/// @since 1.0.0
+///
+/// @type number
+$border-width-xl: 6px !default;

@@ -6,6 +6,8 @@ module.exports = (plop) => {
   const _ = require('lodash');
   const utils = require('./scripts/utils.js');
   const plconfig = require('./patternlab-config.json');
+  const spawn = require('child_process').spawn;
+  const moment = require('moment');
 
   // Configures generators.
   const config = {
@@ -82,13 +84,32 @@ module.exports = (plop) => {
   plop.setActionType('mkdir', (answers, config, plop) => {
 
     // Get the path.
-    const path = plop.renderString(config.path, answers);
+    const target = plop.renderString(config.path, answers);
 
     // Make the directory.
-    fs.mkdirSync(path);
+    fs.mkdirSync(target);
+
+    // Add a .gitkeep file to the directory.
+    fs.writeFileSync(path.join(target, '.gitkeep'), '');
 
     // Return the new path.
-    return path;
+    return target;
+
+  });
+
+  // Defines an action for triggering a grunt task.
+  plop.setActionType('grunt', (answers, config) => {
+
+    // Make it asynchronous.
+    return new Promise((resolve, reject) => {
+
+      // Run grunt.
+      const grunt = spawn('grunt', [...config.tasks], {stdio: 'inherit'});
+
+      // Resolve when done.
+      grunt.on('close', () => resolve());
+
+    });
 
   });
 
@@ -191,12 +212,12 @@ module.exports = (plop) => {
         name: 'subgroup',
         message: "Does the pattern belong to a pattern group?",
         choices( answers ) {
-          
+
           // Initialize choices.
           const choices = ['none'];
 
           // Extract pattern groups.
-          const groups = _.map(utils.groups(answers.group), (number, name) => { 
+          const groups = _.map(utils.groups(answers.group), (number, name) => {
             return number ? `${number}-${name}` : name;
           });
 
@@ -233,6 +254,12 @@ module.exports = (plop) => {
         name: 'js',
         message: "Will this pattern use JS?",
         default: false
+      },
+      {
+        type: 'confirm',
+        name: 'php',
+        message: "Will this pattern use PHP?",
+        default: false
       }
     ],
     actions(data) {
@@ -248,6 +275,12 @@ module.exports = (plop) => {
 
       // Determine the pattern's name.
       data.name = plop.renderString('{{prefix}}{{pattern}}', data);
+
+      // Determine the pattern's ID.
+      data.id = plop.renderString('{{group}}-{{pattern}}', data).replace('~', '-');
+
+      // Get the date.
+      data.date = moment().format('MM/DD/YYYY');
 
       // Initialize actions.
       const actions = [];
@@ -290,6 +323,20 @@ module.exports = (plop) => {
         path: '{{path}}/{{name}}.js',
         templateFile: 'templates/pattern/pattern.js',
         data
+      });
+
+      // 6. Create the new pattern's PHP file.
+      if( data.php ) actions.push({
+        type: 'add',
+        path: '{{path}}/{{name}}.php',
+        templateFile: 'templates/pattern/pattern.php',
+        data
+      });
+
+      // 7. Re-export all pattern statuses.
+      actions.push({
+        type: 'grunt',
+        tasks: ['status:export']
       });
 
       // Generate.

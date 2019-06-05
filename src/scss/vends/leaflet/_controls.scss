@@ -1,0 +1,51 @@
+.leaflet-control {
+  position: relative;
+  z-index: $z-index--control;
+  pointer-events: visiblePainted;
+  pointer-events: auto;
+  float: left;
+  clear: both;
+}
+
+.leaflet-control-container {
+  width: 100%;
+  height: 100%;
+}
+
+.leaflet-top,
+.leaflet-bottom {
+  position: absolute;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.leaflet-top {
+  top: 0;
+
+  .leaflet-control { margin-top: 10px; }
+
+}
+
+.leaflet-right {
+  right: 0;
+
+  .leaflet-control {
+    float: right;
+    margin-right: 10px;
+  }
+
+}
+
+.leaflet-bottom {
+  bottom: 0;
+
+  .leaflet-control { margin-bottom: 10px; }
+
+}
+
+.leaflet-left {
+  left: 0;
+
+  .leaflet-control { margin-left: 10px; }
+
+}

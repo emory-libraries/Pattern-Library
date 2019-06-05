@@ -1,0 +1,8 @@
+.leaflet-default-icon-path {
+  background-image: leaflet-icon-url('marker-icon');
+}
+
+.leaflet-div-icon {
+  background: $color--icon--background;
+  border: 1px solid $color--icon--border;
+}

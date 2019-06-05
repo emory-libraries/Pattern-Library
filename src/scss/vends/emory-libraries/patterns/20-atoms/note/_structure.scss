@@ -1,0 +1,23 @@
+////
+/// @group emory-libraries.patterns.atoms.note
+////
+
+/// Defines the base structure of the note component.
+///
+/// @since 1.0.0
+%atoms-note {
+  
+  // Builds the note structure.
+  display: block;
+  
+  // Handle structure of descendents.
+  
+  :first-child {
+    margin-top: 0;
+  }
+  
+  :last-child {
+    margin-bottom: 0;
+  }
+  
+}
