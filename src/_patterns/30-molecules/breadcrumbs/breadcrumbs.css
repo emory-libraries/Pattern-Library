@@ -1,0 +1,20 @@
+@charset "UTF-8";
+.breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumbs li {
+  font-size: 0.8125em !important;
+  line-height: 1.4 !important;
+}
+.breadcrumbs li:not(:last-child)::after {
+  margin: 0 0.5em;
+  content: "›";
+  color: #5387F7;
+  font-weight: bold;
+}
