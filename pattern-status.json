@@ -84,6 +84,7 @@
   "30-molecules-messaging-notification": "review",
   "30-molecules-cards-card-button": "review",
   "30-molecules-cards-card-staff": "review",
+  "30-molecules-breadcrumbs-breadcrumbs": "review",
   "40-compounds-lists-utility-list": "review",
   "40-compounds-cards-cards": "review",
   "40-compounds-modules-accordion": "review",
@@ -109,6 +110,5 @@
   "60-templates-materials-material": "review",
   "60-templates-staff-subject-librarian-directory": "review",
   "60-templates-staff-staff-directory": "review",
-  "60-templates-staff-bio": "review",
-  "30-molecules-breadcrumbs-breadcrumbs": "construction"
+  "60-templates-staff-bio": "review"
 }
