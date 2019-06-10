@@ -49,11 +49,15 @@
 .sidebar-list-section-content ol li::before {
   content: none !important;
 }
-.sidebar-list-section-content .button,
-.sidebar-list-section-content button,
 .sidebar-list-section-content .link,
 .sidebar-list-section-content a {
   display: block;
+}
+.sidebar-list-section-content .button,
+.sidebar-list-section-content button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .sidebar-list-button {
   display: block;

@@ -67,6 +67,10 @@
 .-heading-alt.intro-title::before, .-heading-alt.intro-title::after {
   margin: 0 auto 0 0;
 }
+.-bio.intro-title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 .intro-subtitle {
   display: block;
 }
