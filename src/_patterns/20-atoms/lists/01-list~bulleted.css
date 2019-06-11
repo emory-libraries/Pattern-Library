@@ -42,11 +42,15 @@
 }
 .-files.list {
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: auto;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 .-files.list .list-item {
   display: block;
+}
+.-files.list .link {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .list:not(.-numbered):not(.-links):not(.-topics):not(.-files), .list.-bulleted {
@@ -76,7 +80,5 @@
   content: "," " ";
 }
 .list.-files {
-  --rows: 4;
-  grid-template-rows: repeat(var(--rows), auto);
   grid-gap: 10px;
 }

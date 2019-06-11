@@ -55,6 +55,8 @@
 }
 .feature-image img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .feature-image img {
