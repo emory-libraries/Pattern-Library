@@ -1,0 +1,40 @@
+{
+  "arrows": true,
+  "slides": [
+    {
+      "image": {"src": "//source.unsplash.com/random"},
+      "title": "Tempor a Ingeniis Litteris",
+      "buttons": [
+        {"label": "Learn More", "href": ""}
+      ]
+    },
+    {
+      "image": {"src": "//source.unsplash.com/random"},
+      "title": "Velit et A eu Adipisicing",
+      "buttons": [
+        {"label": "Learn More", "href": ""}
+      ]
+    },
+    {
+      "image": {"src": "//source.unsplash.com/random"},
+      "title": "Offendit Exquisitaque Adipisicing Tamen Coniunctione Relinqueret",
+      "buttons": [
+        {"label": "Learn More", "href": ""}
+      ]
+    },
+    {
+      "image": {"src": "//source.unsplash.com/random"},
+      "title": "Ubi Arbitror Tamen An",
+      "buttons": [
+        {"label": "Learn More", "href": ""}
+      ]
+    },
+    {
+      "image": {"src": "//source.unsplash.com/random"},
+      "title": "Summis iis Mandaremus",
+      "buttons": [
+        {"label": "Learn More", "href": ""}
+      ]
+    }
+  ]
+}
