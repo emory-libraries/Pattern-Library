@@ -1,0 +1,60 @@
+.landing-page {
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: 150px 1fr 420px;
+  grid-template-columns: 1fr;
+}
+.landing-page-header {
+  grid-area: header;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.landing-page-header::after {
+  content: "Header";
+}
+.landing-page-main {
+  grid-area: main;
+}
+.landing-page-main .section-main-body {
+  margin-bottom: 68px;
+}
+.landing-page-main .section-main-body,
+.landing-page-main .section-major-body,
+.landing-page-main .breadcrumbs {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.landing-page .breadcrumbs {
+  height: 88px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.landing-page-footer {
+  grid-area: footer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.landing-page-footer::after {
+  content: "Footer";
+}
+
+.landing-page-header, .landing-page-footer {
+  border: 1px solid #B6BDCC;
+}

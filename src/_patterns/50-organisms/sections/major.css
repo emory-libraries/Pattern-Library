@@ -5,7 +5,7 @@
 }
 
 .section-major {
-  display: block;
+  display: grid;
 }
 .section-major-title {
   margin-top: 0;
