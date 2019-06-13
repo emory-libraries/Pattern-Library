@@ -137,8 +137,8 @@ ico,
 .branding-header {
   display: grid;
   grid-template-areas: "badge organization" "badge division" "badge dropdown";
-  grid-template-columns: repeat(2, -webkit-min-content);
-  grid-template-columns: repeat(2, min-content);
+  grid-template-columns: -webkit-min-content -webkit-max-content;
+  grid-template-columns: min-content max-content;
   grid-template-rows: repeat(3, -webkit-min-content);
   grid-template-rows: repeat(3, min-content);
 }
