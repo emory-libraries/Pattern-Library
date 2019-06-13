@@ -2,6 +2,7 @@
 const _ = require('lodash');
 const he = require('he');
 const regexEscape = require('escape-string-regexp');
+const uniqid = require('uniqid');
 
 // Export helpers.
 module.exports = {
@@ -68,6 +69,17 @@ module.exports = {
   encodeHTML( str ) { return he.encode(str, {useNamedReferences: true}); },
 
   // Decode a string using HTML character codes.
-  decodeHTML( str ) { return he.decode(str); }
+  decodeHTML( str ) { return he.decode(str); },
+
+  // Generate a unique ID.
+  uid( prefix ) {
+
+    // Use an empty prefix if none was given.
+    prefix = _.isString(prefix) ? prefix : '';
+
+    // Return a unique ID with the prefix prepended.
+    return uniqid(prefix);
+
+  }
 
 };
