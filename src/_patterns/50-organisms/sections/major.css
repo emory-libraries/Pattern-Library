@@ -19,6 +19,10 @@
   position: absolute;
   margin: 0 auto;
 }
+.section-major-body {
+  padding-top: 2em;
+}
+
 .section-major {
   background-color: #FFFFFF;
 }
