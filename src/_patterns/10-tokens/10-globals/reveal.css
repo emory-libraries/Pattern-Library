@@ -1,0 +1,53 @@
+@charset "UTF-8";
+.big-reveal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.big-reveal-toggle {
+  display: none;
+}
+.big-reveal-content {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  overflow: hidden;
+}
+.big-reveal-toggle:not(:checked) + .big-reveal-content {
+  max-height: 0;
+  opacity: 0;
+}
+.big-reveal-toggle:checked + .big-reveal-content {
+  max-height: 1000vh;
+  opacity: 1;
+}
+.big-reveal-button {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  margin-top: 2em;
+}
+.big-reveal-toggle:not(:checked) ~ .big-reveal-button:not(.-once)::before {
+  content: attr(data-show) " ";
+}
+.big-reveal-toggle:checked ~ .big-reveal-button:not(.-once)::before {
+  content: attr(data-hide) " ";
+}
+.big-reveal-toggle:checked ~ .-once.big-reveal-button {
+  display: none;
+}
+
+.big-reveal-content {
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
