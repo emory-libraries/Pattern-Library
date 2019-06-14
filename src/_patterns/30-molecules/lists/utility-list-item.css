@@ -1,3 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
+/*** INSERT NEW TOKENS HERE ***/
+/*** INSERT NEW ATOMS HERE ***/
 .utility-list-item {
   list-style-type: none;
   padding: 0;
@@ -30,8 +34,7 @@
   display: block;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate3d(-50%, -50%, 0);
-          transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
   display: block;
   min-width: 100%;
   min-height: 100%;
@@ -41,14 +44,14 @@
 }
 .utility-list-item-title {
   grid-area: title;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
 }
 
+/*** INSERT NEW MOLECULES HERE ***/
+/*** INSERT NEW COMPOUNDS HERE ***/
+/*** INSERT NEW ORGANISMS HERE ***/
+/*** INSERT NEW TEMPLATES HERE ***/
 .utility-list-item {
   padding-top: 25px;
   padding-bottom: 25px;
@@ -57,7 +60,6 @@
 .utility-list-item:not(.has-image).has-context {
   grid-gap: 10px;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, -webkit-min-content);
   grid-template-rows: repeat(2, min-content);
 }
 .utility-list-item.has-image:not(.has-context) {
@@ -68,7 +70,6 @@
 .utility-list-item.has-image.has-context {
   grid-gap: 10px;
   grid-template-columns: 40% 1fr;
-  grid-template-rows: -webkit-min-content 1fr;
   grid-template-rows: min-content 1fr;
 }
 .utility-list-item-image {

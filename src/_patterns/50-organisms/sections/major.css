@@ -1,9 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
+/*** INSERT NEW TOKENS HERE ***/
 .section-major-title::after {
   display: block;
   width: 100%;
   height: 0;
 }
 
+/*** INSERT NEW ATOMS HERE ***/
+/*** INSERT NEW MOLECULES HERE ***/
+/*** INSERT NEW COMPOUNDS HERE ***/
 .section-major {
   display: block;
 }
@@ -23,11 +29,12 @@
   padding-top: 2em;
 }
 
+/*** INSERT NEW ORGANISMS HERE ***/
+/*** INSERT NEW TEMPLATES HERE ***/
 .section-major {
   background-color: #FFFFFF;
 }
 .section-major {
-  -webkit-transition: padding 0.25s ease;
   transition: padding 0.25s ease;
 }
 @media (max-width: 600px) {

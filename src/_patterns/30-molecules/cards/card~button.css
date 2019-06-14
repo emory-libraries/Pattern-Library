@@ -1,56 +1,45 @@
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
+/*** INSERT NEW TOKENS HERE ***/
 .card-button {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 .card-button-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .-inline.card-button-group {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 [disabled].card-button, .is-disabled.card-button {
   cursor: not-allowed;
 }
 
+/*** INSERT NEW ATOMS HERE ***/
 .card-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 .-hollow.card-button {
   display: none;
 }
 
+/*** INSERT NEW MOLECULES HERE ***/
+/*** INSERT NEW COMPOUNDS HERE ***/
+/*** INSERT NEW ORGANISMS HERE ***/
+/*** INSERT NEW TEMPLATES HERE ***/
 .card-button {
-  -webkit-box-shadow: 0 0 0 1px rgba(231, 234, 241, 0.3), 0 0 0 15px #004990;
-          box-shadow: 0 0 0 1px rgba(231, 234, 241, 0.3), 0 0 0 15px #004990;
+  box-shadow: 0 0 0 1px rgba(231, 234, 241, 0.3), 0 0 0 15px #004990;
   margin: 15px;
   text-align: center !important;
 }
 .card-button {
   border: 1px solid #004990;
   background-color: #004990;
-  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   padding-left: 20px;
   padding-right: 20px;
@@ -184,12 +173,10 @@
   color: #FFFFFF !important;
 }
 .card-button:hover, .card-button:focus, .card-button.is-hover, .card-button.is-focus {
-  -webkit-box-shadow: 0 0 0 1px rgba(231, 234, 241, 0.3), 0 0 0 15px #082B73;
-          box-shadow: 0 0 0 1px rgba(231, 234, 241, 0.3), 0 0 0 15px #082B73;
+  box-shadow: 0 0 0 1px rgba(231, 234, 241, 0.3), 0 0 0 15px #082B73;
   color: #FFFFFF !important;
 }
 .card-button:active, .card-button.is-active {
-  -webkit-box-shadow: 0 0 0 1px rgba(231, 234, 241, 0.3), 0 0 0 15px #082B73;
-          box-shadow: 0 0 0 1px rgba(231, 234, 241, 0.3), 0 0 0 15px #082B73;
+  box-shadow: 0 0 0 1px rgba(231, 234, 241, 0.3), 0 0 0 15px #082B73;
   color: #FFFFFF !important;
 }

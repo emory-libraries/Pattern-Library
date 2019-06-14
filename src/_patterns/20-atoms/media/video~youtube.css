@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
+/*** INSERT NEW TOKENS HERE ***/
 .video {
   border: 0;
   width: 100%;
@@ -13,6 +16,11 @@
   overflow: hidden;
 }
 
+/*** INSERT NEW ATOMS HERE ***/
+/*** INSERT NEW MOLECULES HERE ***/
+/*** INSERT NEW COMPOUNDS HERE ***/
+/*** INSERT NEW ORGANISMS HERE ***/
+/*** INSERT NEW TEMPLATES HERE ***/
 .video-frame {
   --aspect-ratio: 0.5625;
   padding-top: calc(var(--aspect-ratio) * 100%);

@@ -1,10 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
+/*** INSERT NEW TOKENS HERE ***/
 .explorer-link {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-decoration: none;
   cursor: pointer;
 }
@@ -13,22 +12,16 @@
   display: block;
 }
 .explorer-link .icon {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
+/*** INSERT NEW ATOMS HERE ***/
 .explorer {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "context" "heading" "list";
-  grid-template-rows: repeat(2, -webkit-min-content) 1fr;
   grid-template-rows: repeat(2, min-content) 1fr;
 }
 .explorer-context {
@@ -47,13 +40,16 @@
   margin: 0;
   grid-area: list;
 }
+/*** INSERT NEW MOLECULES HERE ***/
+/*** INSERT NEW COMPOUNDS HERE ***/
+/*** INSERT NEW ORGANISMS HERE ***/
+/*** INSERT NEW TEMPLATES HERE ***/
 .explorer {
   grid-gap: 10px;
   padding: 30px;
   background-color: #004990;
   margin: 15px;
-  -webkit-box-shadow: 0 0 0 1px rgba(231, 234, 241, 0.3), 0 0 0 15px #004990;
-          box-shadow: 0 0 0 1px rgba(231, 234, 241, 0.3), 0 0 0 15px #004990;
+  box-shadow: 0 0 0 1px rgba(231, 234, 241, 0.3), 0 0 0 15px #004990;
 }
 .explorer {
   font-family: "Open Sans", sans-serif;
@@ -97,7 +93,6 @@
   font-weight: normal;
   font-style: normal;
   color: #E7EAF1;
-  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background: none;
   border: none;

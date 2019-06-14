@@ -1,13 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
+/*** INSERT NEW TOKENS HERE ***/
 .subnav-button {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 [disabled].subnav-button, .is-disabled.subnav-button {
@@ -15,19 +12,10 @@
 }
 
 .subnav-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   min-height: 55px;
   height: auto;
   width: 100%;
@@ -37,68 +25,36 @@
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .subnav-button {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
 @media (min-width: 901px) {
   .subnav-button {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
 .subnav-button .icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .-viewall.subnav-button {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
     min-height: 75px;
   }
 }
 @media (min-width: 901px) {
   .-viewall.subnav-button {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
     min-height: 75px;
   }
 }
@@ -106,27 +62,14 @@
   display: none;
 }
 .-back.subnav-button {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 .-back.subnav-button::before {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .-back.subnav-button {
@@ -139,8 +82,6 @@
   }
 }
 .-resource.subnav-button .subnav-button-options {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   top: 0;
   right: 0;
@@ -151,25 +92,14 @@
   display: none;
 }
 .-resource.subnav-button .subnav-button-option {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-item-align: stretch;
-      align-self: stretch;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
 }
 .subnav-button-alias {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .subnav-button-alias {
@@ -206,13 +136,15 @@
   opacity: 0.5;
 }
 
+/*** INSERT NEW ATOMS HERE ***/
+/*** INSERT NEW MOLECULES HERE ***/
+/*** INSERT NEW COMPOUNDS HERE ***/
+/*** INSERT NEW ORGANISMS HERE ***/
+/*** INSERT NEW TEMPLATES HERE ***/
 .subnav-button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   border: none;
   background: none;
-  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 @media (max-width: 600px) {
@@ -391,10 +323,8 @@
 }
 .subnav-button.-resource .subnav-button-options {
   --max: 300px;
-  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
-  -webkit-box-shadow: inset 2px 2px 3px rgba(9, 28, 68, 0.1);
-          box-shadow: inset 2px 2px 3px rgba(9, 28, 68, 0.1);
+  box-shadow: inset 2px 2px 3px rgba(9, 28, 68, 0.1);
   color: inherit;
   background-color: #D0DEFD;
 }
@@ -413,7 +343,6 @@
   overflow: auto;
 }
 .subnav-button.-resource .subnav-button-option {
-  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background-color: transparent;
   padding-left: 10px;
@@ -670,7 +599,6 @@
 }
 .subnav-button-overflow {
   --max: 1500px;
-  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .subnav-button-overflow-toggle:not(:checked):not(.is-checked) + .subnav-button-overflow {

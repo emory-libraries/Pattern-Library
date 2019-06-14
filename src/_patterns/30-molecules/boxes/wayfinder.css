@@ -1,7 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
+/*** INSERT NEW TOKENS HERE ***/
+/*** INSERT NEW ATOMS HERE ***/
 .wayfinder {
   display: grid;
   grid-template-areas: "heading" "text" "action";
-  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   grid-template-columns: 1fr;
 }
@@ -16,15 +19,9 @@
   z-index: 1;
 }
 .wayfinder-image {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -50,34 +47,22 @@
   }
 }
 .-align-x-left.wayfinder-image {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
 .-align-x-right.wayfinder-image {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
 .-align-x-center.wayfinder-image {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 .-align-y-top.wayfinder-image {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
 }
 .-align-y-bottom.wayfinder-image {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
 }
 .-align-y-center.wayfinder-image {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .wayfinder-heading, .wayfinder-text, .wayfinder-action {
   z-index: 2;
@@ -86,46 +71,30 @@
   margin: 0;
 }
 .wayfinder-action {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .wayfinder-action {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 }
 @media (min-width: 901px) {
   .wayfinder-action {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 }
 
+/*** INSERT NEW MOLECULES HERE ***/
+/*** INSERT NEW COMPOUNDS HERE ***/
+/*** INSERT NEW ORGANISMS HERE ***/
+/*** INSERT NEW TEMPLATES HERE ***/
 .wayfinder {
   padding: 25px;
   padding-top: calc(25px + 60% - 35%);
@@ -133,20 +102,20 @@
   min-height: 350px;
   background-color: #091C44;
   margin: 15px;
-  -webkit-box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #091C44;
-          box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #091C44;
+  box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #091C44;
 }
 .wayfinder::before {
   top: -15px;
   bottom: -15px;
   left: -15px;
   right: -15px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(35%, #091C44));
+  background-image: -webkit-linear-gradient(to bottom, transparent, #091C44 35%);
+  background-image: -moz-linear-gradient(to bottom, transparent, #091C44 35%);
+  background-image: -o-linear-gradient(to bottom, transparent, #091C44 35%);
   background-image: linear-gradient(to bottom, transparent, #091C44 35%);
 }
 .wayfinder::after {
-  -webkit-box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px transparent;
-          box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px transparent;
+  box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px transparent;
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .wayfinder {
@@ -154,7 +123,9 @@
     padding-left: calc(25px + 60% - 35%);
   }
   .wayfinder::before {
-    background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(35%, #091C44));
+    background-image: -webkit-linear-gradient(to right, transparent, #091C44 35%);
+    background-image: -moz-linear-gradient(to right, transparent, #091C44 35%);
+    background-image: -o-linear-gradient(to right, transparent, #091C44 35%);
     background-image: linear-gradient(to right, transparent, #091C44 35%);
   }
 }
@@ -164,7 +135,9 @@
     padding-left: calc(25px + 60% - 35%);
   }
   .wayfinder::before {
-    background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(35%, #091C44));
+    background-image: -webkit-linear-gradient(to right, transparent, #091C44 35%);
+    background-image: -moz-linear-gradient(to right, transparent, #091C44 35%);
+    background-image: -o-linear-gradient(to right, transparent, #091C44 35%);
     background-image: linear-gradient(to right, transparent, #091C44 35%);
   }
 }

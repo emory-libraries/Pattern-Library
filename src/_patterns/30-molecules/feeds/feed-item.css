@@ -1,25 +1,17 @@
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
+/*** INSERT NEW TOKENS HERE ***/
 .feed-item-action {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 .feed-item-action-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .-inline.feed-item-action-group {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 [disabled].feed-item-action, .is-disabled.feed-item-action {
@@ -27,12 +19,8 @@
 }
 
 .feed-item-title {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-decoration: none;
   cursor: pointer;
 }
@@ -41,20 +29,14 @@
   display: block;
 }
 .feed-item-title .icon {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
+/*** INSERT NEW ATOMS HERE ***/
 .feed-item {
   display: grid;
-  grid-template-rows: repeat(2, -webkit-min-content);
   grid-template-rows: repeat(2, min-content);
 }
 .feed-item:not(.has-action) {
@@ -63,7 +45,6 @@
 }
 .has-action.feed-item {
   grid-template-areas: "date date" "title action";
-  grid-template-columns: 1fr -webkit-max-content;
   grid-template-columns: 1fr max-content;
 }
 .feed-item-date {
@@ -81,11 +62,13 @@
   display: none;
 }
 .has-action.feed-item .feed-item-action {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
+/*** INSERT NEW MOLECULES HERE ***/
+/*** INSERT NEW COMPOUNDS HERE ***/
+/*** INSERT NEW ORGANISMS HERE ***/
+/*** INSERT NEW TEMPLATES HERE ***/
 .feed-item {
   grid-gap: 5px;
 }
@@ -103,7 +86,6 @@
   font-weight: bold;
   font-style: normal;
   color: #605858;
-  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background: none;
   border: none;
@@ -174,7 +156,6 @@
 .feed-item-action {
   border: 1px solid #336BE6;
   background-color: #336BE6;
-  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   padding-left: 15px;
   padding-right: 15px;
