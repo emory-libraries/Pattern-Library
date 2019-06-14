@@ -33,7 +33,7 @@ The reveal token can be used to hide some content temporarily that can later be 
 
 | Name    | Type        | Description                                                                                   | Value(s)          | Default           |
 |---------|-------------|-----------------------------------------------------------------------------------------------|-------------------|-------------------|
-| content | `String`    | Some optional content to display. Alternatively, the `reveal-content` block can be extended.  |                   |                   |
+| content | `String`    | Some optional content to display. Alternatively, the `big-reveal-content` block can be extended.  |                   |                   |
 | id      | `String`    | An unique ID for the reveal component.                                                        |                   | *auto-generated*  |
 | once    | `Boolean`   | Inidicates if the reveal button can only be clicked once (to show all content).               | `true` or `false` | `false`           |
 

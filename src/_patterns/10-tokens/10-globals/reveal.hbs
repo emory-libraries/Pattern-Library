@@ -6,7 +6,7 @@
   <input type="{{#if once}}radio{{else}}checkbox{{/if}}"  class="big-reveal-toggle" id="{{id}}">
   <div class="big-reveal-content">
     {{#unless this.content}}
-      {{#block 'reveal-content'}}{{/block}}
+      {{#block 'big-reveal-content'}}{{/block}}
     {{else}}
       {{{this.content}}}
     {{/unless}}
