@@ -1,7 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
-/*** INSERT NEW TOKENS HERE ***/
-/*** INSERT NEW ATOMS HERE ***/
 .card-listing {
   display: grid;
 }
@@ -12,12 +8,14 @@
 @media (min-width: 601px) and (max-width: 900px) {
   .card-listing:not(.has-description):not(.-vertical) {
     grid-template-areas: "date image" "title image" "action image";
+    grid-template-rows: repeat(2, -webkit-min-content) 1fr;
     grid-template-rows: repeat(2, min-content) 1fr;
   }
 }
 @media (min-width: 901px) {
   .card-listing:not(.has-description):not(.-vertical) {
     grid-template-areas: "date image" "title image" "action image";
+    grid-template-rows: repeat(2, -webkit-min-content) 1fr;
     grid-template-rows: repeat(2, min-content) 1fr;
   }
 }
@@ -31,12 +29,14 @@
 @media (min-width: 601px) and (max-width: 900px) {
   .has-description.card-listing:not(.-vertical) {
     grid-template-areas: "date image" "title image" "description image" "action image";
+    grid-template-rows: repeat(2, -webkit-min-content) 1fr;
     grid-template-rows: repeat(2, min-content) 1fr;
   }
 }
 @media (min-width: 901px) {
   .has-description.card-listing:not(.-vertical) {
     grid-template-areas: "date image" "title image" "description image" "action image";
+    grid-template-rows: repeat(2, -webkit-min-content) 1fr;
     grid-template-rows: repeat(2, min-content) 1fr;
   }
 }
@@ -67,9 +67,14 @@
 .card-listing-action {
   margin: 0;
   grid-area: action;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 .card-listing-image {
   grid-area: image;
@@ -78,9 +83,15 @@
   bottom: 0;
   left: 0;
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   overflow: hidden;
 }
 .card-listing-image::after {
@@ -103,12 +114,16 @@
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .card-listing-image {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 @media (min-width: 901px) {
   .card-listing-image {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 .-portrait.card-listing-image img {
@@ -156,28 +171,36 @@
   }
 }
 .-align-x-left.card-listing-image {
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 .-align-x-center.card-listing-image {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .-align-x-right.card-listing-image {
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 .-align-y-top.card-listing-image {
-  align-items: top;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
 }
 .-align-y-bottom.card-listing-image {
-  align-items: bottom;
+  -webkit-box-align: bottom;
+      -ms-flex-align: bottom;
+          align-items: bottom;
 }
 .-align-y-center.card-listing-image {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-/*** INSERT NEW MOLECULES HERE ***/
-/*** INSERT NEW COMPOUNDS HERE ***/
-/*** INSERT NEW ORGANISMS HERE ***/
-/*** INSERT NEW TEMPLATES HERE ***/
 .card-listing {
   grid-row-gap: 5px;
   grid-column-gap: 25px;
@@ -185,9 +208,11 @@
   padding: 50px 25px 25px;
   background-color: #f3f5f8;
   margin: 15px;
-  box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #f3f5f8;
+  -webkit-box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #f3f5f8;
+          box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #f3f5f8;
 }
 .card-listing, .card-listing.-vertical {
+  grid-template-rows: 375px repeat(2, -webkit-min-content) 1fr;
   grid-template-rows: 375px repeat(2, min-content) 1fr;
 }
 .card-listing .card-listing-date, .card-listing.-vertical .card-listing-date {
@@ -382,7 +407,8 @@
 }
 .card-listing.-light {
   background-color: #f3f5f8;
-  box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #f3f5f8;
+  -webkit-box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #f3f5f8;
+          box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #f3f5f8;
 }
 .card-listing.-light-date {
   color: #082B73;
@@ -395,7 +421,8 @@
 }
 .card-listing.-dark {
   background-color: #FFFFFF;
-  box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #FFFFFF;
+  -webkit-box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #FFFFFF;
+          box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #FFFFFF;
 }
 .card-listing.-dark-title {
   color: #091C44;

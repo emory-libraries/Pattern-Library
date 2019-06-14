@@ -1,7 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
-/*** INSERT NEW TOKENS HERE ***/
-/*** INSERT NEW ATOMS HERE ***/
 .alert {
   display: grid;
   grid-template-areas: "title" "message";
@@ -14,19 +10,28 @@
   margin: 0;
 }
 .alert-dismiss {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   top: 0;
   right: 0;
   position: absolute;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   cursor: pointer;
 }
 .alert:not(.is-dismissible) .alert-dismiss {
   display: none;
 }
 .is-dismissible.alert .alert-dismiss {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .alert-dismiss {
@@ -38,13 +43,10 @@
   opacity: 0.5;
 }
 
-/*** INSERT NEW MOLECULES HERE ***/
-/*** INSERT NEW COMPOUNDS HERE ***/
-/*** INSERT NEW ORGANISMS HERE ***/
-/*** INSERT NEW TEMPLATES HERE ***/
 .alert {
   background-color: #dfdede;
-  box-shadow: 0 0 0 1px rgba(160, 155, 155, 0.3), 0 0 0 25px #dfdede;
+  -webkit-box-shadow: 0 0 0 1px rgba(160, 155, 155, 0.3), 0 0 0 25px #dfdede;
+          box-shadow: 0 0 0 1px rgba(160, 155, 155, 0.3), 0 0 0 25px #dfdede;
   margin: 25px;
   padding: 25px;
   grid-gap: 10px;
@@ -75,10 +77,12 @@
   height: 25px;
   padding: 5px;
   color: #a09b9b;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .alert-dismiss svg {
   fill: #a09b9b;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .alert-dismiss:hover, .alert-dismiss:focus, .alert-dismiss.is-hover, .alert-dismiss.is-focus {
@@ -95,7 +99,8 @@
 }
 .alert.-default {
   background-color: #dfdede;
-  box-shadow: 0 0 0 1px rgba(160, 155, 155, 0.3), 0 0 0 25px #dfdede;
+  -webkit-box-shadow: 0 0 0 1px rgba(160, 155, 155, 0.3), 0 0 0 25px #dfdede;
+          box-shadow: 0 0 0 1px rgba(160, 155, 155, 0.3), 0 0 0 25px #dfdede;
 }
 .alert.-default .alert-title {
   color: #605858;
@@ -123,7 +128,8 @@
 }
 .alert.-info {
   background-color: #D0DEFD;
-  box-shadow: 0 0 0 1px rgba(83, 135, 247, 0.3), 0 0 0 25px #D0DEFD;
+  -webkit-box-shadow: 0 0 0 1px rgba(83, 135, 247, 0.3), 0 0 0 25px #D0DEFD;
+          box-shadow: 0 0 0 1px rgba(83, 135, 247, 0.3), 0 0 0 25px #D0DEFD;
 }
 .alert.-info .alert-title {
   color: #082B73;
@@ -151,7 +157,8 @@
 }
 .alert.-success {
   background-color: #E0F6DA;
-  box-shadow: 0 0 0 1px rgba(110, 237, 87, 0.3), 0 0 0 25px #E0F6DA;
+  -webkit-box-shadow: 0 0 0 1px rgba(110, 237, 87, 0.3), 0 0 0 25px #E0F6DA;
+          box-shadow: 0 0 0 1px rgba(110, 237, 87, 0.3), 0 0 0 25px #E0F6DA;
 }
 .alert.-success .alert-title {
   color: #257611;
@@ -179,7 +186,8 @@
 }
 .alert.-caution {
   background-color: #F6E4C1;
-  box-shadow: 0 0 0 1px rgba(233, 191, 85, 0.3), 0 0 0 25px #F6E4C1;
+  -webkit-box-shadow: 0 0 0 1px rgba(233, 191, 85, 0.3), 0 0 0 25px #F6E4C1;
+          box-shadow: 0 0 0 1px rgba(233, 191, 85, 0.3), 0 0 0 25px #F6E4C1;
 }
 .alert.-caution .alert-title {
   color: #AB750C;
@@ -207,7 +215,8 @@
 }
 .alert.-error {
   background-color: #EABDB9;
-  box-shadow: 0 0 0 1px rgba(250, 85, 85, 0.3), 0 0 0 25px #EABDB9;
+  -webkit-box-shadow: 0 0 0 1px rgba(250, 85, 85, 0.3), 0 0 0 25px #EABDB9;
+          box-shadow: 0 0 0 1px rgba(250, 85, 85, 0.3), 0 0 0 25px #EABDB9;
 }
 .alert.-error .alert-title {
   color: #B82216;
@@ -235,7 +244,8 @@
 }
 .alert.-light {
   background-color: #FFFFFF;
-  box-shadow: 0 0 0 1px rgba(207, 205, 205, 0.3), 0 0 0 25px #FFFFFF;
+  -webkit-box-shadow: 0 0 0 1px rgba(207, 205, 205, 0.3), 0 0 0 25px #FFFFFF;
+          box-shadow: 0 0 0 1px rgba(207, 205, 205, 0.3), 0 0 0 25px #FFFFFF;
 }
 .alert.-light .alert-title {
   color: #605858;
@@ -263,7 +273,8 @@
 }
 .alert.-dark {
   background-color: #605858;
-  box-shadow: 0 0 0 1px rgba(184, 180, 180, 0.3), 0 0 0 25px #605858;
+  -webkit-box-shadow: 0 0 0 1px rgba(184, 180, 180, 0.3), 0 0 0 25px #605858;
+          box-shadow: 0 0 0 1px rgba(184, 180, 180, 0.3), 0 0 0 25px #605858;
 }
 .alert.-dark .alert-title {
   color: #FFFFFF;

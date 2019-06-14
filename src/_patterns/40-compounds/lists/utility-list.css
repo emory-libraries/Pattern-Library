@@ -1,7 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
-/*** INSERT NEW TOKENS HERE ***/
-/*** INSERT NEW ATOMS HERE ***/
 .utility-list-list-item {
   list-style-type: none;
   padding: 0;
@@ -34,7 +30,8 @@
   display: block;
   left: 50%;
   top: 50%;
-  transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
   display: block;
   min-width: 100%;
   min-height: 100%;
@@ -44,32 +41,42 @@
 }
 .utility-list-list-item-title {
   grid-area: title;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-/*** INSERT NEW MOLECULES HERE ***/
 .utility-list-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
 }
 .utility-list-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-/*** INSERT NEW COMPOUNDS HERE ***/
-/*** INSERT NEW ORGANISMS HERE ***/
-/*** INSERT NEW TEMPLATES HERE ***/
 .utility-list {
   padding: 25px;
   margin: 25px;
   background-color: #E7EAF1;
-  box-shadow: 0 0 0 1px #dfdede, 0 0 0 25px #E7EAF1;
+  -webkit-box-shadow: 0 0 0 1px #dfdede, 0 0 0 25px #E7EAF1;
+          box-shadow: 0 0 0 1px #dfdede, 0 0 0 25px #E7EAF1;
 }
 .utility-list-title {
   font-family: "Cardo", serif;
@@ -100,6 +107,7 @@
 .utility-list-list-item:not(.has-image).has-context {
   grid-gap: 10px;
   grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, -webkit-min-content);
   grid-template-rows: repeat(2, min-content);
 }
 .utility-list-list-item.has-image:not(.has-context) {
@@ -110,6 +118,7 @@
 .utility-list-list-item.has-image.has-context {
   grid-gap: 10px;
   grid-template-columns: 40% 1fr;
+  grid-template-rows: -webkit-min-content 1fr;
   grid-template-rows: min-content 1fr;
 }
 .utility-list-list-item-image {

@@ -1,21 +1,20 @@
-@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
-/*** INSERT NEW TOKENS HERE ***/
-/*** INSERT NEW ATOMS HERE ***/
 .feature {
   display: grid;
   grid-template-areas: "image" "context" "heading" "action";
+  grid-template-rows: 250px repeat(3, -webkit-min-content);
   grid-template-rows: 250px repeat(3, min-content);
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .feature {
     grid-template-areas: "image context" "image heading" "image action";
+    grid-template-rows: repeat(2, -webkit-min-content) 1fr;
     grid-template-rows: repeat(2, min-content) 1fr;
   }
 }
 @media (min-width: 901px) {
   .feature {
     grid-template-areas: "image context" "image heading" "image action";
+    grid-template-rows: repeat(2, -webkit-min-content) 1fr;
     grid-template-rows: repeat(2, min-content) 1fr;
   }
 }
@@ -25,12 +24,14 @@
 @media (min-width: 601px) and (max-width: 900px) {
   .has-description.feature {
     grid-template-areas: "image context" "image heading" "image description" "image action";
+    grid-template-rows: repeat(2, -webkit-min-content) auto 1fr;
     grid-template-rows: repeat(2, min-content) auto 1fr;
   }
 }
 @media (min-width: 901px) {
   .has-description.feature {
     grid-template-areas: "image context" "image heading" "image description" "image action";
+    grid-template-rows: repeat(2, -webkit-min-content) auto 1fr;
     grid-template-rows: repeat(2, min-content) auto 1fr;
   }
 }
@@ -40,15 +41,22 @@
   bottom: 0;
   left: 0;
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   grid-area: image;
   overflow: hidden;
 }
 .feature-image img {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .feature-image img {
@@ -75,31 +83,47 @@
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .feature-image {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 @media (min-width: 901px) {
   .feature-image {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 .-align-x-left.feature-image {
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 .-align-x-center.feature-image {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .-align-x-right.feature-image {
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 .-align-y-top.feature-image {
-  align-items: top;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
 }
 .-align-y-bottom.feature-image {
-  align-items: bottom;
+  -webkit-box-align: bottom;
+      -ms-flex-align: bottom;
+          align-items: bottom;
 }
 .-align-y-center.feature-image {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .feature-context {
   grid-area: context;
@@ -121,10 +145,6 @@
   grid-area: action;
 }
 
-/*** INSERT NEW MOLECULES HERE ***/
-/*** INSERT NEW COMPOUNDS HERE ***/
-/*** INSERT NEW ORGANISMS HERE ***/
-/*** INSERT NEW TEMPLATES HERE ***/
 .feature {
   grid-template-columns: 1fr;
   grid-gap: 5px;
@@ -132,7 +152,8 @@
   margin: 15px;
   background-color: #f3f5f8;
   min-height: 370px;
-  box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #f3f5f8;
+  -webkit-box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #f3f5f8;
+          box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #f3f5f8;
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .feature {
@@ -232,7 +253,8 @@
 }
 .feature.-light {
   background-color: #f3f5f8;
-  box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #f3f5f8;
+  -webkit-box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #f3f5f8;
+          box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #f3f5f8;
 }
 .feature.-light .feature-context {
   color: #605858;
@@ -245,7 +267,8 @@
 }
 .feature.-dark {
   background-color: #FFFFFF;
-  box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #FFFFFF;
+  -webkit-box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #FFFFFF;
+          box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #FFFFFF;
 }
 .feature.-dark .feature-context {
   color: #b0acac;

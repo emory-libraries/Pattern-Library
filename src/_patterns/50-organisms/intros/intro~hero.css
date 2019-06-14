@@ -1,12 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
-/*** INSERT NEW TOKENS HERE ***/
-/*** INSERT NEW ATOMS HERE ***/
-/*** INSERT NEW MOLECULES HERE ***/
-/*** INSERT NEW COMPOUNDS HERE ***/
 .intro-hero {
   display: grid;
+  grid-template-rows: 5fr repeat(3, -webkit-min-content) 1fr;
   grid-template-rows: 5fr repeat(3, min-content) 1fr;
+  grid-template-columns: 1fr minmax(-webkit-min-content, 800px) 1fr;
   grid-template-columns: 1fr minmax(min-content, 800px) 1fr;
   background-size: cover;
   height: 437px;
@@ -24,25 +20,24 @@
 .intro-hero-badge {
   grid-row: 2/span 1;
   grid-column: 2/span 1;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 .intro-hero-title {
   grid-row: 3/span 1;
   grid-column: 2/span 1;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 .intro-hero-subtitle {
   grid-row: 4/span 1;
   grid-column: 2/span 1;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
-/*** INSERT NEW ORGANISMS HERE ***/
-/*** INSERT NEW TEMPLATES HERE ***/
 .intro-hero-gradient {
-  background-image: -webkit-linear-gradient(0deg, #282828 -14.42%, rgba(40, 40, 40, 0) 50%);
-  background-image: -moz-linear-gradient(0deg, #282828 -14.42%, rgba(40, 40, 40, 0) 50%);
-  background-image: -o-linear-gradient(0deg, #282828 -14.42%, rgba(40, 40, 40, 0) 50%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(-14.42%, #282828), color-stop(50%, rgba(40, 40, 40, 0)));
   background-image: linear-gradient(0deg, #282828 -14.42%, rgba(40, 40, 40, 0) 50%);
 }
 .intro-hero-title {

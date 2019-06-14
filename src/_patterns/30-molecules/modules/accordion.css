@@ -1,7 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
-/*** INSERT NEW TOKENS HERE ***/
-/*** INSERT NEW ATOMS HERE ***/
 .panel {
   display: grid;
   grid-template-areas: "toggle" "content";
@@ -18,16 +14,24 @@
 }
 .panel-toggle .panel-title,
 .panel-toggle .panel-indicator {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .panel-toggle .panel-title {
   grid-area: title;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 .panel-toggle .panel-indicator {
   grid-area: indicator;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .panel-toggle .panel-indicator .icon svg {
   width: 100%;
@@ -37,14 +41,11 @@
   grid-area: content;
 }
 
-/*** INSERT NEW MOLECULES HERE ***/
-/*** INSERT NEW COMPOUNDS HERE ***/
-/*** INSERT NEW ORGANISMS HERE ***/
-/*** INSERT NEW TEMPLATES HERE ***/
 .panel {
   grid-template-rows: 100px 1fr;
   border-top: 1px solid #B6BDCC;
   border-bottom: 1px solid #B6BDCC;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .panel-switch:checked ~ .panel-content {
@@ -73,10 +74,12 @@
   opacity: 0;
 }
 .panel-switch:checked ~ .panel-toggle > .panel-indicator .icon {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .panel-switch:not(:checked) ~ .panel-toggle > .panel-indicator .icon {
-  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 .panel-switch:checked ~ .panel-toggle, .panel-switch:checked ~ .panel-content {
   background-color: rgba(231, 234, 241, 0.5);
@@ -87,6 +90,7 @@
 .panel-toggle {
   grid-template-columns: 1fr minmax(50px, auto);
   grid-template-rows: 100px;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .panel-toggle .panel-title {
@@ -108,6 +112,7 @@
 .panel-toggle .panel-indicator .icon {
   width: 25px;
   height: 25px;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .panel-toggle .panel-indicator .icon svg {
@@ -115,10 +120,13 @@
 }
 .panel-content {
   padding: 25px;
-  transform-origin: top center;
-  transform-style: preserve-3d;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   position: relative !important;
   width: 100% !important;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .panel-content {

@@ -1,15 +1,19 @@
-@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
-/*** INSERT NEW TOKENS HERE ***/
 .tab {
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   -webkit-appearance: none;
   border: 0;
   background: transparent;
   padding: 0.5em 2em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   cursor: pointer;
 }
 .tab::before {
@@ -24,10 +28,13 @@
   top: 100%;
   left: 50%;
   position: absolute;
-  transform: translatey(-50%) translatex(-50%);
+  -webkit-transform: translatey(-50%) translatex(-50%);
+          transform: translatey(-50%) translatex(-50%);
   z-index: 1;
 }
 .tab-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 2em;
   margin-bottom: 2em;
@@ -42,12 +49,8 @@
   left: 0;
   right: 0;
 }
-/*** INSERT NEW ATOMS HERE ***/
-/*** INSERT NEW MOLECULES HERE ***/
-/*** INSERT NEW COMPOUNDS HERE ***/
-/*** INSERT NEW ORGANISMS HERE ***/
-/*** INSERT NEW TEMPLATES HERE ***/
 .tab {
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .tab {
@@ -99,9 +102,7 @@
   color: #336BE6;
 }
 .tab-menu .tab:active::after, .tab-menu .tab.is-active::after, .tab-menu.-light .tab:active::after, .tab-menu.-light .tab.is-active::after {
-  background-image: -webkit-linear-gradient(to bottom, transparent 45%, #FFFFFF 45%, #FFFFFF 55%, transparent 55%);
-  background-image: -moz-linear-gradient(to bottom, transparent 45%, #FFFFFF 45%, #FFFFFF 55%, transparent 55%);
-  background-image: -o-linear-gradient(to bottom, transparent 45%, #FFFFFF 45%, #FFFFFF 55%, transparent 55%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #FFFFFF), color-stop(55%, #FFFFFF), color-stop(55%, transparent));
   background-image: linear-gradient(to bottom, transparent 45%, #FFFFFF 45%, #FFFFFF 55%, transparent 55%);
 }
 .tab-menu .tab:active::after, .tab-menu .tab.is-active::after, .tab-menu.-light .tab:active::after, .tab-menu.-light .tab.is-active::after {
@@ -126,9 +127,7 @@
   color: #E9BF55;
 }
 .tab-menu.-dark .tab:active::after, .tab-menu.-dark .tab.is-active::after {
-  background-image: -webkit-linear-gradient(to bottom, transparent 45%, #091C44 45%, #091C44 55%, transparent 55%);
-  background-image: -moz-linear-gradient(to bottom, transparent 45%, #091C44 45%, #091C44 55%, transparent 55%);
-  background-image: -o-linear-gradient(to bottom, transparent 45%, #091C44 45%, #091C44 55%, transparent 55%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #091C44), color-stop(55%, #091C44), color-stop(55%, transparent));
   background-image: linear-gradient(to bottom, transparent 45%, #091C44 45%, #091C44 55%, transparent 55%);
 }
 .tab-menu.-dark .tab:active::after, .tab-menu.-dark .tab.is-active::after {

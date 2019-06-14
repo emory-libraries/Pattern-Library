@@ -1,7 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
-/*** INSERT NEW TOKENS HERE ***/
-/*** INSERT NEW ATOMS HERE ***/
 .block {
   display: grid;
   grid-template-areas: "content" "image";
@@ -21,9 +17,15 @@
 }
 .block-content {
   grid-area: content;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-self: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 .block-content .block-content-heading {
   margin: 0;
@@ -32,13 +34,21 @@
   margin: 0;
 }
 .block-content .block-content-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .block-image {
   grid-area: image;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .block-image img {
   width: 100%;
@@ -100,16 +110,15 @@
   }
 }
 
-/*** INSERT NEW MOLECULES HERE ***/
-/*** INSERT NEW COMPOUNDS HERE ***/
-/*** INSERT NEW ORGANISMS HERE ***/
-/*** INSERT NEW TEMPLATES HERE ***/
 .block {
   grid-gap: 100px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #091C44;
 }
 .block {
+  -webkit-transition: padding 0.25s ease;
   transition: padding 0.25s ease;
 }
 @media (max-width: 600px) {
@@ -162,12 +171,16 @@
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .block {
-    justify-content: start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
   }
 }
 @media (min-width: 901px) {
   .block {
-    justify-content: start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
@@ -216,30 +229,22 @@
 }
 .block.-shadow-bottom::after {
   bottom: 0;
-  background-image: -webkit-linear-gradient(to bottom, transparent, #000000);
-  background-image: -moz-linear-gradient(to bottom, transparent, #000000);
-  background-image: -o-linear-gradient(to bottom, transparent, #000000);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#000000));
   background-image: linear-gradient(to bottom, transparent, #000000);
 }
 .block.-shadow-top::after {
   top: 0;
-  background-image: -webkit-linear-gradient(to top, transparent, #000000);
-  background-image: -moz-linear-gradient(to top, transparent, #000000);
-  background-image: -o-linear-gradient(to top, transparent, #000000);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#000000));
   background-image: linear-gradient(to top, transparent, #000000);
 }
 .block.-shadow-left::after {
   left: 0;
-  background-image: -webkit-linear-gradient(to left, transparent, #000000);
-  background-image: -moz-linear-gradient(to left, transparent, #000000);
-  background-image: -o-linear-gradient(to left, transparent, #000000);
+  background-image: -webkit-gradient(linear, right top, left top, from(transparent), to(#000000));
   background-image: linear-gradient(to left, transparent, #000000);
 }
 .block.-shadow-right::after {
   right: 0;
-  background-image: -webkit-linear-gradient(to right, transparent, #000000);
-  background-image: -moz-linear-gradient(to right, transparent, #000000);
-  background-image: -o-linear-gradient(to right, transparent, #000000);
+  background-image: -webkit-gradient(linear, left top, right top, from(transparent), to(#000000));
   background-image: linear-gradient(to right, transparent, #000000);
 }
 .block-content .block-heading + .block-heading,
@@ -288,16 +293,22 @@
   color: #FFFFFF;
 }
 .block-content .block-action {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .block-content .block-action {
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 @media (min-width: 901px) {
   .block-content .block-action {
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
@@ -586,27 +597,19 @@
   color: #FFFFFF;
 }
 .block.-dark.-shadow-bottom::after {
-  background-image: -webkit-linear-gradient(to bottom, transparent, #000000);
-  background-image: -moz-linear-gradient(to bottom, transparent, #000000);
-  background-image: -o-linear-gradient(to bottom, transparent, #000000);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#000000));
   background-image: linear-gradient(to bottom, transparent, #000000);
 }
 .block.-dark.-shadow-top::after {
-  background-image: -webkit-linear-gradient(to top, transparent, #000000);
-  background-image: -moz-linear-gradient(to top, transparent, #000000);
-  background-image: -o-linear-gradient(to top, transparent, #000000);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#000000));
   background-image: linear-gradient(to top, transparent, #000000);
 }
 .block.-dark.-shadow-left::after {
-  background-image: -webkit-linear-gradient(to left, transparent, #000000);
-  background-image: -moz-linear-gradient(to left, transparent, #000000);
-  background-image: -o-linear-gradient(to left, transparent, #000000);
+  background-image: -webkit-gradient(linear, right top, left top, from(transparent), to(#000000));
   background-image: linear-gradient(to left, transparent, #000000);
 }
 .block.-dark.-shadow-right::after {
-  background-image: -webkit-linear-gradient(to right, transparent, #000000);
-  background-image: -moz-linear-gradient(to right, transparent, #000000);
-  background-image: -o-linear-gradient(to right, transparent, #000000);
+  background-image: -webkit-gradient(linear, left top, right top, from(transparent), to(#000000));
   background-image: linear-gradient(to right, transparent, #000000);
 }
 .block.-light {
@@ -619,26 +622,18 @@
   color: #605858;
 }
 .block.-light.-shadow-bottom::after {
-  background-image: -webkit-linear-gradient(to bottom, transparent, #605858);
-  background-image: -moz-linear-gradient(to bottom, transparent, #605858);
-  background-image: -o-linear-gradient(to bottom, transparent, #605858);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#605858));
   background-image: linear-gradient(to bottom, transparent, #605858);
 }
 .block.-light.-shadow-top::after {
-  background-image: -webkit-linear-gradient(to top, transparent, #605858);
-  background-image: -moz-linear-gradient(to top, transparent, #605858);
-  background-image: -o-linear-gradient(to top, transparent, #605858);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#605858));
   background-image: linear-gradient(to top, transparent, #605858);
 }
 .block.-light.-shadow-left::after {
-  background-image: -webkit-linear-gradient(to left, transparent, #605858);
-  background-image: -moz-linear-gradient(to left, transparent, #605858);
-  background-image: -o-linear-gradient(to left, transparent, #605858);
+  background-image: -webkit-gradient(linear, right top, left top, from(transparent), to(#605858));
   background-image: linear-gradient(to left, transparent, #605858);
 }
 .block.-light.-shadow-right::after {
-  background-image: -webkit-linear-gradient(to right, transparent, #605858);
-  background-image: -moz-linear-gradient(to right, transparent, #605858);
-  background-image: -o-linear-gradient(to right, transparent, #605858);
+  background-image: -webkit-gradient(linear, left top, right top, from(transparent), to(#605858));
   background-image: linear-gradient(to right, transparent, #605858);
 }

@@ -1,11 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
-/*** INSERT NEW TOKENS HERE ***/
 .card-staff-name, .card-staff-contact-links-item a,
 .card-staff-contact-links-item .link, .card-staff-contact-info-item a,
 .card-staff-contact-info-item .link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-decoration: none;
   cursor: pointer;
 }
@@ -18,12 +19,17 @@
 .card-staff-name .icon, .card-staff-contact-links-item a .icon,
 .card-staff-contact-links-item .link .icon, .card-staff-contact-info-item a .icon,
 .card-staff-contact-info-item .link .icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-/*** INSERT NEW ATOMS HERE ***/
 .card-staff {
   display: grid;
   grid-template-areas: "about";
@@ -56,12 +62,16 @@
   display: grid;
   grid-template-areas: "image" "name" "title" "library";
   grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, -webkit-min-content);
   grid-template-rows: repeat(4, min-content);
 }
 .card-staff-contact {
   display: none;
   grid-area: contact;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .card-staff-contact-info {
   list-style-type: none;
@@ -73,8 +83,12 @@
   grid-auto-rows: auto;
 }
 .card-staff-contact-info-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .card-staff-contact-links {
   list-style-type: none;
@@ -90,19 +104,29 @@
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .card-staff-contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 }
 @media (min-width: 901px) {
   .card-staff-contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 }
 .card-staff-image {
   grid-area: image;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
@@ -113,9 +137,15 @@
 .card-staff-name {
   grid-area: name;
   margin: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .card-staff-title {
   grid-area: title;
@@ -130,10 +160,6 @@
   margin: 0;
 }
 
-/*** INSERT NEW MOLECULES HERE ***/
-/*** INSERT NEW COMPOUNDS HERE ***/
-/*** INSERT NEW ORGANISMS HERE ***/
-/*** INSERT NEW TEMPLATES HERE ***/
 .card-staff {
   padding: 25px;
   grid-gap: 50px;
@@ -157,7 +183,8 @@
   height: 100%;
   width: 1px;
   background-color: #dbdee6;
-  transform: translatex(-50%);
+  -webkit-transform: translatex(-50%);
+          transform: translatex(-50%);
 }
 .card-staff-about {
   grid-gap: 15px;
@@ -176,6 +203,7 @@
   font-weight: normal;
   font-style: normal;
   color: #082B73;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background: none;
   border: none;
@@ -272,6 +300,7 @@
   font-weight: bold;
   font-style: normal;
   color: #5387F7;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background: none;
   border: none;
@@ -365,6 +394,7 @@
   font-weight: bold;
   font-style: normal;
   color: #091C44;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background: none;
   border: none;

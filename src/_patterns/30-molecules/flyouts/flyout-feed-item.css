@@ -1,9 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
-/*** INSERT NEW TOKENS HERE ***/
 .flyout-feed-item-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-decoration: none;
   cursor: pointer;
 }
@@ -12,27 +13,37 @@
   display: block;
 }
 .flyout-feed-item-link .icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-/*** INSERT NEW ATOMS HERE ***/
 .flyout-feed-item {
   display: grid;
   grid-template-areas: "date" "heading";
+  grid-template-rows: repeat(2, -webkit-min-content);
   grid-template-rows: repeat(2, min-content);
-  align-items: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .flyout-feed-item {
     grid-template-areas: "date" "heading" "description" "link";
+    grid-template-rows: repeat(2, -webkit-min-content) 1fr -webkit-min-content;
     grid-template-rows: repeat(2, min-content) 1fr min-content;
   }
 }
 @media (min-width: 901px) {
   .flyout-feed-item {
     grid-template-areas: "date" "heading" "description" "link";
+    grid-template-rows: repeat(2, -webkit-min-content) 1fr -webkit-min-content;
     grid-template-rows: repeat(2, min-content) 1fr min-content;
   }
 }
@@ -54,9 +65,15 @@
   overflow: hidden;
   top: 0;
   bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .flyout-feed-item-thumbnail img {
   width: 100%;
@@ -103,10 +120,6 @@
   }
 }
 
-/*** INSERT NEW MOLECULES HERE ***/
-/*** INSERT NEW COMPOUNDS HERE ***/
-/*** INSERT NEW ORGANISMS HERE ***/
-/*** INSERT NEW TEMPLATES HERE ***/
 .flyout-feed-item {
   grid-column-gap: 25px;
   grid-row-gap: 5px;
@@ -144,6 +157,7 @@
   }
 }
 .flyout-feed-item-thumbnail {
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 @media (max-width: 600px) {
@@ -259,6 +273,7 @@
   font-weight: bold;
   font-style: normal;
   color: #5387F7;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background: none;
   border: none;
