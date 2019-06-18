@@ -173,7 +173,7 @@ module.exports = {
   limitDifference( array, limit ) {
 
     // Return the difference of the array with the limit applied.
-    return array.slice(limit - 1);
+    return array.slice(limit);
 
   }
 

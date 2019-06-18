@@ -80,6 +80,22 @@ module.exports = {
     // Return a unique ID with the prefix prepended.
     return uniqid(prefix);
 
+  },
+  
+  // Determine if a string starts with another string.
+  startsWithSubstring( str, substr, options ) {
+    
+    // Determine if the string starts with the substring.
+    return str.substring(0, substr.length) === substr;
+    
+  },
+  
+  // Determine if a string ends with another substring.
+  endsWithSubstring( str, substr, options ) {
+    
+    // Determine if the string ends with the substring.
+    return str.substring(str.length - substr.length) === substr;
+    
   }
 
 };
