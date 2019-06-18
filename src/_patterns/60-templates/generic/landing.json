@@ -20,7 +20,7 @@
             "href": "",
             "hollow": true
           }
-        ],
+        ]
       },
       "explorer": {
         "heading": "Popular Links",
@@ -50,7 +50,7 @@
             "label": "Printing, Logging In, and Access"
           }
         ]
-      },
+      }
     },
     "wayfinder": {
       "image": {
@@ -68,7 +68,7 @@
           "href": ""
         }
       ]
-    },
+    }
   },
   "section-major": {
     "heading": "Get Help Using the Library",
@@ -97,6 +97,6 @@
           }
         }
       ]
-    },
-  },
+    }
+  }
 }
