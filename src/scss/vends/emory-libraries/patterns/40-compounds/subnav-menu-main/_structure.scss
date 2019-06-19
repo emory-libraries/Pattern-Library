@@ -32,12 +32,21 @@
       > *:nth-child(even) {
         grid-column: right;
       }
+      
+      &.has-search {
+        > *:nth-child(odd) {
+          grid-column: right; 
+        }
+        > *:nth-child(even) {
+          grid-column: left;
+        }
+      }
 
       > *.-stretch {
-        grid-column: left / right;
+        grid-column: left / right !important;
       }
       > *.-span {
-        grid-column: 1 / span 4;
+        grid-column: 1 / span 4 !important;
       }
       
     };
