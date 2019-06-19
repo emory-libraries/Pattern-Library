@@ -33,7 +33,7 @@ module.exports = {
     let content = options.fn(this).trim();
 
     // Create the object or array.
-    context[key] = cast(content);
+    _.set(context, key, cast(content));
 
   },
 
