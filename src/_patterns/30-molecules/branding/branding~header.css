@@ -1,0 +1,358 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon/icomoon.eot");
+  src: url("../fonts/icomoon/icomoon.eot#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf") format("truetype"), url("../fonts/icomoon/icomoon.woff") format("woff"), url("../fonts/icomoon/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+ico,
+[class^=ico-],
+[class*=ico-] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-arrow-down-circle::before {
+  content: "";
+}
+
+.ico-arrow-left-circle::before {
+  content: "";
+}
+
+.ico-arrow-right-circle::before {
+  content: "";
+}
+
+.ico-arrow-up-circle::before {
+  content: "";
+}
+
+.ico-arrow-down-left::before {
+  content: "";
+}
+
+.ico-arrow-down-right::before {
+  content: "";
+}
+
+.ico-arrow-up-right::before {
+  content: "";
+}
+
+.ico-arrow-up-left::before {
+  content: "";
+}
+
+.ico-arrow-down::before {
+  content: "";
+}
+
+.ico-arrow-left::before {
+  content: "";
+}
+
+.ico-arrow-right::before {
+  content: "";
+}
+
+.ico-arrow-up::before {
+  content: "";
+}
+
+.ico-chevron-down::before {
+  content: "";
+}
+
+.ico-chevron-left::before {
+  content: "";
+}
+
+.ico-chevron-right::before {
+  content: "";
+}
+
+.ico-chevron-up::before {
+  content: "";
+}
+
+.ico-chevrons-down::before {
+  content: "";
+}
+
+.ico-chevrons-left::before {
+  content: "";
+}
+
+.ico-chevrons-right::before {
+  content: "";
+}
+
+.ico-chevrons-up::before {
+  content: "";
+}
+
+.ico-corner-down-left::before {
+  content: "";
+}
+
+.ico-corner-down-right::before {
+  content: "";
+}
+
+.ico-corner-left-down::before {
+  content: "";
+}
+
+.ico-corner-left-up::before {
+  content: "";
+}
+
+.ico-corner-right-down::before {
+  content: "";
+}
+
+.ico-corner-right-up::before {
+  content: "";
+}
+
+.ico-corner-up-left::before {
+  content: "";
+}
+
+.ico-corner-up-right::before {
+  content: "";
+}
+
+.branding-header {
+  display: grid;
+  grid-template-areas: "badge organization" "badge division" "badge dropdown";
+  grid-template-columns: -webkit-min-content -webkit-max-content;
+  grid-template-columns: min-content max-content;
+  grid-template-rows: repeat(3, -webkit-min-content);
+  grid-template-rows: repeat(3, min-content);
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .branding-header {
+    grid-template-areas: "badge organization organization" "badge division dropdown";
+    grid-template-columns: -webkit-min-content -webkit-max-content -webkit-min-content;
+    grid-template-columns: min-content max-content min-content;
+    grid-template-rows: repeat(2, -webkit-min-content);
+    grid-template-rows: repeat(2, min-content);
+  }
+}
+@media (min-width: 901px) {
+  .branding-header {
+    grid-template-areas: "badge organization organization" "badge division dropdown";
+    grid-template-columns: -webkit-min-content -webkit-max-content -webkit-min-content;
+    grid-template-columns: min-content max-content min-content;
+    grid-template-rows: repeat(2, -webkit-min-content);
+    grid-template-rows: repeat(2, min-content);
+  }
+}
+.branding-header-badge {
+  grid-area: badge;
+}
+.branding-header-badge .logo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+}
+.branding-header-badge svg {
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  width: 100%;
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .branding-header-badge svg {
+    position: absolute;
+    display: block;
+    left: 50%;
+    -webkit-transform: translatex(-50%);
+            transform: translatex(-50%);
+    top: 0;
+  }
+}
+@media (min-width: 901px) {
+  .branding-header-badge svg {
+    position: absolute;
+    display: block;
+    left: 50%;
+    -webkit-transform: translatex(-50%);
+            transform: translatex(-50%);
+    top: 0;
+  }
+}
+.branding-header-organization {
+  grid-area: organization;
+}
+.branding-header-division {
+  grid-area: division;
+}
+.branding-header-dropdown {
+  grid-area: dropdown;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+.branding-header-dropdown-menu {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  max-width: 115px;
+  background-repeat: no-repeat;
+  background-position: right 70%;
+}
+.branding-header-dropdown-menu option {
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.branding-header {
+  padding: 20px 30px;
+  grid-column-gap: 5px;
+  background-color: #FFFFFF;
+}
+.branding-header-badge {
+  display: block;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  width: 75px;
+}
+.branding-header-badge svg {
+  height: 85px;
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .branding-header-badge {
+    width: 87.5px;
+  }
+  .branding-header-badge svg {
+    top: -20px;
+    height: 97.5px;
+  }
+}
+@media (min-width: 901px) {
+  .branding-header-badge {
+    width: 100px;
+  }
+  .branding-header-badge svg {
+    top: -20px;
+    height: 110px;
+  }
+}
+.branding-header-badge .logo:nth-child(1) svg {
+  fill: transparent;
+  stroke-width: 20px;
+  stroke: #FFFFFF;
+}
+.branding-header-badge .logo:nth-child(2) svg {
+  fill: #004990;
+  z-index: 1;
+}
+.branding-header-organization {
+  font-size: 10px !important;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.branding-header-organization {
+  font-family: "Cardo", serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6111;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  text-align: left;
+  color: #091C44;
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .branding-header-organization {
+    font-size: 14px !important;
+  }
+}
+@media (min-width: 901px) {
+  .branding-header-organization {
+    font-size: 14px !important;
+  }
+}
+.branding-header-division {
+  font-size: 18px !important;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.branding-header-division {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #091C44;
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .branding-header-division {
+    font-size: 24px !important;
+  }
+}
+@media (min-width: 901px) {
+  .branding-header-division {
+    font-size: 24px !important;
+  }
+}
+.branding-header-dropdown-menu {
+  background-image: url(../icons/php/icon.php?id=material-chevron_down&color=5387F7&size[width]=15&size[height]=15);
+  background-size: 15px;
+  padding-right: 15px;
+}
+.branding-header-dropdown-menu {
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.6364;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: left;
+  color: #5387F7;
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .branding-header-dropdown-menu {
+    margin-left: 1em;
+  }
+}
+@media (min-width: 901px) {
+  .branding-header-dropdown-menu {
+    margin-left: 1em;
+  }
+}

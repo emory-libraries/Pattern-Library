@@ -29,7 +29,7 @@ module.exports = function( id = null ) {
 
   });
   const glob = require('glob').sync;
-  
+
   // Make asynchronous.
   const done = this.async();
 
@@ -60,6 +60,10 @@ module.exports = function( id = null ) {
         {
           src: 'icons/php/',
           dest: path.resolve(config.paths.source.icons)
+        },
+        {
+          src: 'fonts/',
+          dest: path.resolve(config.paths.source.root)
         }
       ],
       after() {
@@ -91,7 +95,7 @@ module.exports = function( id = null ) {
     }
 
   ];
-  
+
   // Initialize tasks.
   const tasks = [];
 
@@ -109,15 +113,15 @@ module.exports = function( id = null ) {
 
       // Do stuff that needs to happen before the item is pulled.
       const before = new Promise((resolve, reject) => {
-     
+
         // Do some stuff.
         if( item.before && _.isFunction(item.before) ) item.before(resolve, reject);
-        
+
         // Otherwise, be done.
         else resolve();
-        
+
       });
-      
+
       // Pull some stuff.
       tasks.push(Promise.all([before]).then(() => {
 
@@ -157,7 +161,7 @@ module.exports = function( id = null ) {
 
         // Do stuff that needs to happen after the item is pulled.
         if( item.after && _.isFunction(item.after) ) item.after();
-        
+
       }));
 
     }
@@ -173,7 +177,7 @@ module.exports = function( id = null ) {
     }
 
   });
-  
+
   // Wait for pulls to finish.
   Promise.all(tasks).then(() => {
 
@@ -190,10 +194,10 @@ module.exports = function( id = null ) {
 
     // Otherwise, report done.
     else console.log('Pull completed successfully.');
-    
+
     // Done.
     done();
-    
+
   });
 
 };
