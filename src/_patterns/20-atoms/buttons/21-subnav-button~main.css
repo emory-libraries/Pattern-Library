@@ -210,20 +210,6 @@ ico,
       -ms-flex-pack: center;
           justify-content: center;
 }
-@media (min-width: 601px) and (max-width: 900px) {
-  .-viewall.subnav-button {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    min-height: 75px;
-  }
-}
 @media (min-width: 901px) {
   .-viewall.subnav-button {
     display: -webkit-box;
@@ -263,11 +249,6 @@ ico,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-@media (min-width: 601px) and (max-width: 900px) {
-  .-back.subnav-button {
-    display: none;
-  }
 }
 @media (min-width: 901px) {
   .-back.subnav-button {
@@ -321,19 +302,15 @@ ico,
 }
 .subnav-button-group-heading, .subnav-button-category-heading {
   min-height: 0;
+  display: block;
+}
+@media (min-width: 901px) {
+  .subnav-button-group .subnav-button {
+    min-height: 35px;
+  }
 }
 .subnav-button-category:not(.-utility), .-main.subnav-button-category {
   min-height: 0;
-}
-@media (min-width: 601px) and (max-width: 900px) {
-  .subnav-button-category .subnav-button {
-    min-height: 35px;
-  }
-}
-@media (min-width: 901px) {
-  .subnav-button-category .subnav-button {
-    min-height: 35px;
-  }
 }
 .subnav-button-overflow-toggle {
   display: none;
@@ -473,27 +450,11 @@ ico,
     width: calc(100% - 50px);
   }
 }
-@media (min-width: 601px) and (max-width: 900px) {
-  .subnav-button.-viewall {
-    color: #FFFFFF;
-    background-color: #336BE6;
-  }
-  .subnav-button.-viewall:hover, .subnav-button.-viewall:focus, .subnav-button.-viewall.is-hover, .subnav-button.-viewall.is-focus {
-    color: #FFFFFF;
-    background-color: #004990;
-  }
-  .subnav-button.-viewall:active, .subnav-button.-viewall.is-active {
-    color: #FFFFFF;
-    background-color: #004990;
-  }
-  .subnav-button.-viewall::before {
-    content: none;
-  }
-}
 @media (min-width: 901px) {
   .subnav-button.-viewall {
     color: #FFFFFF;
     background-color: #336BE6;
+    margin-top: 4em;
   }
   .subnav-button.-viewall:hover, .subnav-button.-viewall:focus, .subnav-button.-viewall.is-hover, .subnav-button.-viewall.is-focus {
     color: #FFFFFF;

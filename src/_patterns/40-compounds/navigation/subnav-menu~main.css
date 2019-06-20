@@ -1,0 +1,94 @@
+.subnav-menu-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (min-width: 901px) {
+  .subnav-menu-main {
+    width: 690px;
+  }
+}
+.-grouped.subnav-menu-main {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 901px) {
+  .-grouped.subnav-menu-main {
+    grid-template-columns: 1em [left-start] 1fr [left-end right-start] 1fr [right-end] 1em;
+    width: 730px;
+  }
+  .-grouped.subnav-menu-main > *:nth-child(odd) {
+    grid-column: left;
+  }
+  .-grouped.subnav-menu-main > *:nth-child(even) {
+    grid-column: right;
+  }
+  .-grouped.has-search.subnav-menu-main > *:nth-child(odd) {
+    grid-column: right;
+  }
+  .-grouped.has-search.subnav-menu-main > *:nth-child(even) {
+    grid-column: left;
+  }
+  .-grouped.subnav-menu-main > *.-stretch {
+    grid-column: left/right !important;
+  }
+  .-grouped.subnav-menu-main > *.-span {
+    grid-column: 1/span 4 !important;
+  }
+}
+@media (min-width: 901px) {
+  .-categorized.subnav-menu-main {
+    width: 350px;
+  }
+}
+.subnav-menu-main-heading {
+  display: block;
+}
+@media (min-width: 901px) {
+  .subnav-menu-main-heading {
+    display: none;
+  }
+}
+
+.subnav-menu-main {
+  background-color: #091C44;
+}
+.subnav-menu-main-heading {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  background-color: #091C44;
+}
+.subnav-menu-main-heading {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.6667;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #E9BF55;
+}
+@media (max-width: 600px) {
+  .subnav-menu-main-heading {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .subnav-menu-main-heading {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+@media (min-width: 901px) {
+  .subnav-menu-main-heading {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
