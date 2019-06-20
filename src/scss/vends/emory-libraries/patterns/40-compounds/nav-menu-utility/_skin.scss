@@ -1,0 +1,33 @@
+////
+/// @group emory-libraries.patterns.compounds.nav-menu-utility
+////
+
+/// Defines the base skin of the nav-menu-utility component.
+///
+/// @since 1.0.0-dev.0
+///
+/// @type map
+$compounds-nav-menu-utility: (
+  
+  
+  
+);
+
+/// Defines the nav-menu-utility component theme.
+///
+/// @since 1.0.0-dev.0
+///
+/// @requires {function} Brandy::map-deep-get <https://laurenhamel.github.io/brandy/docs/#brandy-maps-function-map-deep-get>
+///
+/// @param {map} skin - The component's skin
+///
+/// @output The nav-menu-utility component's themeable properties
+@mixin compounds-nav-menu-utility--theme ( $skin ) {
+  
+  // Capture themeable variables from skin.
+  // ...
+  
+  // Defines the nav-menu-utility component's base styles.
+  // ...
+  
+}
