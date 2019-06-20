@@ -98,6 +98,48 @@ module.exports = {
     return objects;
 
   },
+  
+  // Filter an array of objects to extract only items missing a given key.
+  filterHasNot( arrayOfObjects, key ) {
+    
+    // Ignore non-arrays.
+    if( type(arrayOfObjects) != 'array' ) return [];
+
+    // Extract all objects within the array.
+    let objects = arrayOfObjects.filter((item) => type(item) == 'object');
+
+    // Ignore arrays that don't contain any objects.
+    if( objects.length === 0 ) return [];
+
+    // Parse the keys, which may have been passed in dot-delimited notation.
+    const keys = key.split('.');
+
+    // Filter the objects by key.
+    objects = objects.filter((object) => {
+
+      // Initialize a pointer.
+      let pointer = object;
+
+      // Move the pointer according to keys.
+      for( key of keys ) {
+
+        // Pass if the key does not exist.
+        if( !pointer[key] ) return true;
+
+        // Otherwise, move the pointer.
+        pointer = pointer[key];
+
+      }
+
+      // Fail if all keys were found.
+      return false;
+
+    });
+
+    // Return the result.
+    return objects;
+    
+  },
 
   // Get the index of an item within an array.
   indexOf( array, item ) {

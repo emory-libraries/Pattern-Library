@@ -1,15 +1,143 @@
-@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
+@charset "UTF-8";
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon/icomoon.eot");
+  src: url("../fonts/icomoon/icomoon.eot#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf") format("truetype"), url("../fonts/icomoon/icomoon.woff") format("woff"), url("../fonts/icomoon/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+ico,
+[class^=ico-],
+[class*=ico-] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-arrow-down-circle::before {
+  content: "";
+}
+
+.ico-arrow-left-circle::before {
+  content: "";
+}
+
+.ico-arrow-right-circle::before {
+  content: "";
+}
+
+.ico-arrow-up-circle::before {
+  content: "";
+}
+
+.ico-arrow-down-left::before {
+  content: "";
+}
+
+.ico-arrow-down-right::before {
+  content: "";
+}
+
+.ico-arrow-up-right::before {
+  content: "";
+}
+
+.ico-arrow-up-left::before {
+  content: "";
+}
+
+.ico-arrow-down::before {
+  content: "";
+}
+
+.ico-arrow-left::before {
+  content: "";
+}
+
+.ico-arrow-right::before {
+  content: "";
+}
+
+.ico-arrow-up::before {
+  content: "";
+}
+
+.ico-chevron-down::before {
+  content: "";
+}
+
+.ico-chevron-left::before {
+  content: "";
+}
+
+.ico-chevron-right::before {
+  content: "";
+}
+
+.ico-chevron-up::before {
+  content: "";
+}
+
+.ico-chevrons-down::before {
+  content: "";
+}
+
+.ico-chevrons-left::before {
+  content: "";
+}
+
+.ico-chevrons-right::before {
+  content: "";
+}
+
+.ico-chevrons-up::before {
+  content: "";
+}
+
+.ico-corner-down-left::before {
+  content: "";
+}
+
+.ico-corner-down-right::before {
+  content: "";
+}
+
+.ico-corner-left-down::before {
+  content: "";
+}
+
+.ico-corner-left-up::before {
+  content: "";
+}
+
+.ico-corner-right-down::before {
+  content: "";
+}
+
+.ico-corner-right-up::before {
+  content: "";
+}
+
+.ico-corner-up-left::before {
+  content: "";
+}
+
+.ico-corner-up-right::before {
+  content: "";
+}
+
 .grid {
   display: grid;
 }
 
-/*** INSERT NEW TOKENS HERE ***/
-/*** INSERT NEW ATOMS HERE ***/
-/*** INSERT NEW MOLECULES HERE ***/
-/*** INSERT NEW COMPOUNDS HERE ***/
-/*** INSERT NEW ORGANISMS HERE ***/
-/*** INSERT NEW TEMPLATES HERE ***/
 .grid {
   --gap-cols: 25px;
   --gap-rows: 25px;
@@ -21,8 +149,12 @@
   grid-row-gap: var(--gap-rows);
   grid-template-rows: var(--rows);
   grid-template-columns: var(--cols);
-  justify-content: var(--align-cols);
-  align-items: var(--align-rows);
+  -webkit-box-pack: var(--align-cols);
+      -ms-flex-pack: var(--align-cols);
+          justify-content: var(--align-cols);
+  -webkit-box-align: var(--align-rows);
+      -ms-flex-align: var(--align-rows);
+          align-items: var(--align-rows);
 }
 @media (max-width: 600px) {
   .grid.-s {
@@ -36,8 +168,12 @@
     grid-row-gap: var(--gap-rows-s);
     grid-template-rows: var(--rows-s);
     grid-template-columns: var(--cols-s);
-    justify-content: var(--align-cols-s);
-    align-items: var(--align-rows-s);
+    -webkit-box-pack: var(--align-cols-s);
+        -ms-flex-pack: var(--align-cols-s);
+            justify-content: var(--align-cols-s);
+    -webkit-box-align: var(--align-rows-s);
+        -ms-flex-align: var(--align-rows-s);
+            align-items: var(--align-rows-s);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
@@ -52,8 +188,12 @@
     grid-row-gap: var(--gap-rows-m);
     grid-template-rows: var(--rows-m);
     grid-template-columns: var(--cols-m);
-    justify-content: var(--align-cols-m);
-    align-items: var(--align-rows-m);
+    -webkit-box-pack: var(--align-cols-m);
+        -ms-flex-pack: var(--align-cols-m);
+            justify-content: var(--align-cols-m);
+    -webkit-box-align: var(--align-rows-m);
+        -ms-flex-align: var(--align-rows-m);
+            align-items: var(--align-rows-m);
   }
 }
 @media (min-width: 901px) {
@@ -68,8 +208,12 @@
     grid-row-gap: var(--gap-rows-l);
     grid-template-rows: var(--rows-l);
     grid-template-columns: var(--cols-l);
-    justify-content: var(--align-cols-l);
-    align-items: var(--align-rows-l);
+    -webkit-box-pack: var(--align-cols-l);
+        -ms-flex-pack: var(--align-cols-l);
+            justify-content: var(--align-cols-l);
+    -webkit-box-align: var(--align-rows-l);
+        -ms-flex-align: var(--align-rows-l);
+            align-items: var(--align-rows-l);
   }
 }
 @media (min-width: 1200px) {
@@ -84,7 +228,11 @@
     grid-row-gap: var(--gap-rows-xl);
     grid-template-rows: var(--rows-xl);
     grid-template-columns: var(--cols-xl);
-    justify-content: var(--align-cols-xl);
-    align-items: var(--align-rows-xl);
+    -webkit-box-pack: var(--align-cols-xl);
+        -ms-flex-pack: var(--align-cols-xl);
+            justify-content: var(--align-cols-xl);
+    -webkit-box-align: var(--align-rows-xl);
+        -ms-flex-align: var(--align-rows-xl);
+            align-items: var(--align-rows-xl);
   }
 }
