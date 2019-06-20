@@ -219,8 +219,6 @@ ico,
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
-  background-repeat: no-repeat;
-  background-position: right 70%;
 }
 .branding-header-dropdown-menu {
   -webkit-appearance: none;
@@ -229,6 +227,8 @@ ico,
   border: none;
   background: none;
   max-width: 115px;
+  background-repeat: no-repeat;
+  background-position: right 70%;
 }
 .branding-header-dropdown-menu option {
   margin: 0;
@@ -330,10 +330,10 @@ ico,
     font-size: 24px !important;
   }
 }
-.branding-header-dropdown {
-  padding-right: 15px;
+.branding-header-dropdown-menu {
   background-image: url(../icons/php/icon.php?id=material-chevron_down&color=5387F7&size[width]=15&size[height]=15);
   background-size: 15px;
+  padding-right: 15px;
 }
 .branding-header-dropdown-menu {
   font-family: "Open Sans", sans-serif;

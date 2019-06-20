@@ -13,7 +13,7 @@
       <select class="branding-header-dropdown-menu"
               v-model="selection"
               @change="redirect">
-        <option value="">Select a Library &#xe90c;</option>
+        <option value="">Select a Library</option>
         {{#each sites}}
           {{#unless active}}
           <option value="{{href}}">{{site}}</option>
