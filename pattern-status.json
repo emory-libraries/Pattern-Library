@@ -85,6 +85,7 @@
   "30-molecules-cards-card-button": "review",
   "30-molecules-cards-card-staff": "review",
   "30-molecules-breadcrumbs-breadcrumbs": "review",
+  "30-molecules-branding-branding-header": "review",
   "40-compounds-lists-utility-list": "review",
   "40-compounds-cards-cards": "review",
   "40-compounds-modules-accordion": "review",
@@ -96,6 +97,8 @@
   "40-compounds-tiles-tiles": "review",
   "40-compounds-groupings-files": "review",
   "40-compounds-navigation-subnav-menu-main": "review",
+  "40-compounds-lists-popular-links-menu": "construction",
+  "40-compounds-modules-slider": "review",
   "50-organisms-intros-intro-text": "review",
   "50-organisms-intros-intro-alt-text": "review",
   "50-organisms-intros-intro-heading": "review",
@@ -113,7 +116,5 @@
   "60-templates-materials-material": "review",
   "60-templates-staff-subject-librarian-directory": "review",
   "60-templates-staff-staff-directory": "review",
-  "60-templates-staff-bio": "review",
-  "30-molecules-branding-branding-header": "review",
-  "40-compounds-modules-slider": "review"
+  "60-templates-staff-bio": "review"
 }

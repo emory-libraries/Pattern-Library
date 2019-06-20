@@ -1,0 +1,29 @@
+{
+  "title": "Popular Links",
+  "items": [
+    {
+      "title": "Databases @ Emory",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "title": "discoverE",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "title": "Course Reserves",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "title": "eJournals",
+      "link": {
+        "href": ""
+      }
+    }
+  ]
+}
