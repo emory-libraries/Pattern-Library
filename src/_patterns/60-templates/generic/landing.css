@@ -58,3 +58,6 @@
 .landing-page-header, .landing-page-footer {
   border: 1px solid #B6BDCC;
 }
+.landing-page-main-subtitle {
+  text-align: center !important;
+}
