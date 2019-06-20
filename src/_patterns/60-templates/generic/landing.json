@@ -1,6 +1,10 @@
 {
   "title": "Page Title",
-  "background-image": "https://source.unsplash.com/1450x440",
+  "subtitle": "This is a subtitle for the introduction of the page",
+  //"background-image": "https://source.unsplash.com/1450x440",
+  "background-image": {
+    "src": "\/",
+  },
   "url": "",
   "main": {
     "flow-content-box": {
