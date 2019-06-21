@@ -100,7 +100,7 @@
 .exhibition-page-main .section-main {
   padding-top: 0 !important;
 }
-.exhibition-page-main .section-main-body p:first-of-type {
+.exhibition-page-main .section-main-body > *:first-child, .exhibition-page-main .section-main-sidebar > *:first-child {
   margin-top: 0;
 }
 .exhibition-page-footer {
