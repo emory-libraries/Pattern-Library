@@ -8,9 +8,8 @@
 ///
 /// @type map
 $compounds-nav-menu-utility: (
-  
-  
-  
+  'border-color': color('blue','dark'),
+
 );
 
 /// Defines the nav-menu-utility component theme.
@@ -23,11 +22,66 @@ $compounds-nav-menu-utility: (
 ///
 /// @output The nav-menu-utility component's themeable properties
 @mixin compounds-nav-menu-utility--theme ( $skin ) {
-  
+
   // Capture themeable variables from skin.
-  // ...
-  
+
+  $border-color: map-deep-get($skin, 'border-color');
+
+
   // Defines the nav-menu-utility component's base styles.
-  // ...
-  
+
+  &.-desktop {
+
+    .utility-left {
+
+      li {
+
+        &:not(:last-child) {
+
+          &:after {
+            content: "";
+            opacity: 0.1;
+            border-left: 1px solid $border-color;
+            height: 30px;
+            margin: auto;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  &.-mobile {
+
+    .utility-right {
+
+      li {
+
+        &:not(:last-child) {
+
+          &:after {
+            content: "";
+            opacity: 0.1;
+            border-left: 1px solid $border-color;
+            height: 30px;
+            margin: auto;
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .nav-button.-librarian {
+      text-decoration: none;
+    }
+
+  }
+
 }

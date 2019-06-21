@@ -8,19 +8,76 @@
 %compounds-nav-menu-utility {
 
   // Builds the nav-menu-utility structure.
-  &-nav {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
-    ul {
-      list-style: none;
-      padding: 0;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .utility-left,
+  .utility-right {
+    display: flex;
+    text-align: center;
+  }
+
+  &.-desktop {
+
+    @include breakpoint-s-m {
+      display: none;
+    }
+
+    .utility-right {
+      justify-content: space-between;
     }
 
     .utility-left {
-      display: flex;
+      padding: 0 1em;
+      margin: 0;
+
+      li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex: 1 0 auto;
+
+        &:last-child {
+          flex: 0;
+        }
+      }
 
     }
 
   }
+
+  &.-mobile {
+    display: none;
+
+    @include breakpoint-s-m {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .utility-right {
+      padding: 0 1em;
+      margin: 0;
+
+      li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex: 1 1 auto;
+
+        &:last-child {
+          flex: 0;
+        }
+      }
+
+    }
+
+
+  }
+
 }

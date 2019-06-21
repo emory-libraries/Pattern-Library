@@ -6,7 +6,7 @@
     },
     {
       "href": "",
-      "label": "For Faculty"
+      "label": "For Instructors"
     }
   ],
   "right-links": [
@@ -17,7 +17,7 @@
     },
     {
       "href": "",
-      "label": "Events & Exhibits",
+      "label": "Events",
       "icon": "material-event"
     },
     {

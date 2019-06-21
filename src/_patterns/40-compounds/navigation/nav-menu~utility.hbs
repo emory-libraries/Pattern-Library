@@ -1,4 +1,4 @@
-<nav class="nav-menu-utility">
+<nav class="nav-menu-utility -desktop">
   <ul class="utility-left">
     {{#each left-links}}
     <li>{{>atoms-nav-button-utility}}</li>
@@ -9,4 +9,14 @@
     <li>{{>atoms-nav-button-flyout}}</li>
     {{/each}}
   </ul>
-</nav
+</nav>
+<nav class="nav-menu-utility -mobile">
+  <ul class="utility-right">
+    {{#each right-links}}
+    {{#unless @first}}
+    {{!-- If first, then ignore. That same first item should be what populates the "Ask a Librarian" link at the bottom of the mobile main nav" --}}
+    <li>{{>atoms-nav-button-flyout}}</li>
+    {{/unless}}
+    {{/each}}
+  </ul>
+</nav>
