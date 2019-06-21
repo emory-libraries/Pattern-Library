@@ -25,6 +25,7 @@
     "leaflet-providers": "github:leaflet-extras/leaflet-providers",
     "string-similarity": "^3.0.0",
     "tippy.js": "^3.4.1",
+    "uniqid": "^5.0.3",
     "velocity-animate": "^1.5.2",
     "vue": "^2.6.8"
   },
