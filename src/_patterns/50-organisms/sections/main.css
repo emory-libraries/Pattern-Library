@@ -24,12 +24,7 @@
 .section-main-sidebar {
   grid-column: main;
   grid-row: sidebar;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: block;
 }
 @media (min-width: 901px) {
   .section-main-sidebar {
@@ -53,43 +48,43 @@
   margin-bottom: 0;
 }
 @media (max-width: 600px) {
-  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page), .-info-page.section-main {
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-exhibition-page), .-info-page.section-main {
     grid-template-columns: [main-start] 1fr [main-end];
     grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) repeat(10, [section-start] -webkit-min-content [section-end]) [sidebar-start] -webkit-min-content [sidebar-end];
     grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) repeat(10, [section-start] min-content [section-end]) [sidebar-start] min-content [sidebar-end];
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
-  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page), .-info-page.section-main {
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-exhibition-page), .-info-page.section-main {
     grid-template-columns: [main-start] 1fr [main-end];
     grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) repeat(10, [section-start] -webkit-min-content [section-end]) [sidebar-start] -webkit-min-content [sidebar-end];
     grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) repeat(10, [section-start] min-content [section-end]) [sidebar-start] min-content [sidebar-end];
   }
 }
 @media (min-width: 901px) {
-  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page), .-info-page.section-main {
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-exhibition-page), .-info-page.section-main {
     grid-template-columns: [main-start] 1fr [main-end];
     grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) repeat(10, [section-start] -webkit-min-content [section-end]) [sidebar-start] -webkit-min-content [sidebar-end];
     grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) repeat(10, [section-start] min-content [section-end]) [sidebar-start] min-content [sidebar-end];
   }
 }
 @media (min-width: 901px) {
-  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page), .-info-page.section-main {
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-exhibition-page), .-info-page.section-main {
     grid-template-columns: [main-start] 1fr [main-end sidebar-start] 340px [sidebar-end];
     grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end main-start title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) [main-end] repeat(10, [section-start] -webkit-min-content [section-end]);
     grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end main-start title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) [main-end] repeat(10, [section-start] min-content [section-end]);
   }
 }
 @media (min-width: 901px) {
-  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page) .section-main-breadcrumb, .-info-page.section-main .section-main-breadcrumb {
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-exhibition-page) .section-main-breadcrumb, .-info-page.section-main .section-main-breadcrumb {
     grid-column: main/sidebar;
   }
-  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page) .section-main-title,
-.section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page) .section-main-subtitle, .-info-page.section-main .section-main-title,
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-exhibition-page) .section-main-title,
+.section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-exhibition-page) .section-main-subtitle, .-info-page.section-main .section-main-title,
 .-info-page.section-main .section-main-subtitle {
     grid-column: main/sidebar;
   }
-  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page) .section-main-sidebar, .-info-page.section-main .section-main-sidebar {
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-exhibition-page) .section-main-sidebar, .-info-page.section-main .section-main-sidebar {
     grid-row: body/main;
   }
 }
@@ -179,22 +174,22 @@
 @media (max-width: 600px) {
   .-service-directory-page.section-main {
     grid-template-columns: [main-start] 1fr [main-end];
-    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
-    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]);
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end];
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end];
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .-service-directory-page.section-main {
     grid-template-columns: [main-start] 1fr [main-end];
-    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
-    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]);
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end];
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end];
   }
 }
 @media (min-width: 901px) {
   .-service-directory-page.section-main {
     grid-template-columns: [main-start] 1fr [main-end];
-    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
-    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]);
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end];
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end];
   }
 }
 .-service-directory-page.section-main .section-main-spacer,
@@ -257,22 +252,22 @@
 @media (max-width: 600px) {
   .-subject-librarian-directory-page.section-main, .-staff-directory-page.section-main {
     grid-template-columns: [main-start] 1fr [main-end];
-    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
-    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]);
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end];
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end];
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .-subject-librarian-directory-page.section-main, .-staff-directory-page.section-main {
     grid-template-columns: [main-start] 1fr [main-end];
-    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
-    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]);
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end];
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end];
   }
 }
 @media (min-width: 901px) {
   .-subject-librarian-directory-page.section-main, .-staff-directory-page.section-main {
     grid-template-columns: [main-start] 1fr [main-end];
-    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
-    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]);
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end];
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end];
   }
 }
 .-subject-librarian-directory-page.section-main .section-main-spacer,
@@ -309,6 +304,65 @@
 .-subject-librarian-directory-page.without-intro.section-main .section-main-subtitle, .-staff-directory-page.without-intro.section-main .section-main-title,
 .-staff-directory-page.without-intro.section-main .section-main-subtitle {
   display: none;
+}
+@media (max-width: 600px) {
+  .-exhibition-page.section-main {
+    grid-template-columns: [main-start] 1fr [main-end];
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) [sidebar-start] -webkit-min-content [sidebar-end];
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) [sidebar-start] min-content [sidebar-end];
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .-exhibition-page.section-main {
+    grid-template-columns: [main-start] 1fr [main-end];
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) [sidebar-start] -webkit-min-content [sidebar-end];
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) [sidebar-start] min-content [sidebar-end];
+  }
+}
+@media (min-width: 901px) {
+  .-exhibition-page.section-main {
+    grid-template-columns: [main-start] 1fr [main-end];
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) [sidebar-start] -webkit-min-content [sidebar-end];
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) [sidebar-start] min-content [sidebar-end];
+  }
+}
+@media (min-width: 901px) {
+  .-exhibition-page.section-main {
+    grid-template-columns: [main-start] 1fr [main-end sidebar-start] 340px [sidebar-end];
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end main-start subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) [main-end];
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end main-start subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) [main-end];
+  }
+}
+.-exhibition-page.section-main .section-main-title,
+.-exhibition-page.section-main .section-main-section,
+.-exhibition-page.section-main .section-main-spacer {
+  display: none;
+}
+.-exhibition-page.section-main .section-main-content {
+  grid-row: sidebar-end;
+}
+.-exhibition-page.section-main .section-main-body,
+.-exhibition-page.section-main .section-main-sidebar {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+@media (min-width: 901px) {
+  .-exhibition-page.section-main {
+    grid-template-columns: [main-start] 1fr [main-end divider-start] 0.25fr [divider-end sidebar-start] 1fr [sidebar-end] !important;
+  }
+  .-exhibition-page.section-main .section-main-breadcrumb {
+    grid-column: main/sidebar;
+  }
+  .-exhibition-page.section-main .section-main-subtitle {
+    grid-column: main/sidebar;
+  }
+  .-exhibition-page.section-main .section-main-sidebar {
+    grid-row: body;
+  }
+  .-exhibition-page.section-main .section-main-spacer,
+.-exhibition-page.section-main .section-main-content {
+    grid-column: main/sidebar;
+  }
 }
 
 .section-main {
