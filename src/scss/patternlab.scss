@@ -76,6 +76,7 @@ $pl-border: $border-width-s solid color('slate', 'light');
 body {
   @include tokens-text;
   overflow-x: hidden;
+  width: 100vw;
 }
 
 a {
