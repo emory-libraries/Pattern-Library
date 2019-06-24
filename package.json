@@ -20,6 +20,7 @@
   "main": "./core/lib/patternlab.js",
   "dependencies": {
     "clipboard": "^2.0.4",
+    "hammerjs": "^2.0.8",
     "jquery": "^3.3.1",
     "leaflet": "^1.4.0",
     "leaflet-providers": "github:leaflet-extras/leaflet-providers",
@@ -90,7 +91,8 @@
     "styleguidekit-mustache-default": "^3.1.0",
     "terminal-link": "^1.2.0",
     "type-of": "^2.0.1",
-    "uglifyify": "^5.0.1"
+    "uglifyify": "^5.0.1",
+    "uniqid": "^5.0.3"
   },
   "author": "Lauren Hamel",
   "repository": {
