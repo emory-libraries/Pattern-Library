@@ -4,8 +4,8 @@ const he = require('he');
 const regexEscape = require('escape-string-regexp');
 const uniqid = require('uniqid');
 
-// Export helpers.
-module.exports = {
+// Initialize helpers.
+const helpers = {
 
   // Combine two or more strings.
   combine( ...strs ) { return _.initial(strs).join('') },
@@ -36,7 +36,7 @@ module.exports = {
   trimSubstring( str, substr ) {
 
     // Trim the start and end of the string.
-    return this.trimSubstringEnd(this.trimSubstringStart(str, substr), substr);
+    return helpers.trimSubstringEnd(helpers.trimSubstringStart(str, substr), substr);
 
   },
 
@@ -99,3 +99,6 @@ module.exports = {
   }
 
 };
+
+// Export helpers.
+module.exports = helpers;
