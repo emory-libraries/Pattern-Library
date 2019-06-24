@@ -66,5 +66,23 @@
         }
       ]
     }
-  ]
+  ],
+  "sponsor": "Support was provided by the **Annual Exhibition Fund**. The audio tour is supported by **Bloomberg Pilanthropies**.",
+  "extras": {
+    "heading": "Dive Deeper",
+    "content": [
+      {
+        "heading": "Guided Tours",
+        "text": "Guided tours are are available on request. Please complete the [tour request form]() to request a tour."
+      },
+      {
+        "heading": "Audio Tours",
+        "text": "Curator Randy Gue interviewed photographer Billy Howard about the stories behind some of his subjects' portraits.\n1. [Introduction]()\n2. [Part 1]()\n3. [Part 2]()\n4. [Part 3]()\n5. [Closing Remarks]()"
+      },
+      {
+        "heading": "Further Reading",
+        "text": "[Press Release]()\n[Online Exhibit]()\n[Title of an Article in the Emory Repository]()"
+      }
+    ]
+  }
 }

@@ -11,7 +11,7 @@
       {{/each}}
     </div>
 
-    {{#if footer}}
+    {{#if (and footer (not (eq footer.text '')))}}
     <footer class="section-deep-dive-footer">
       {{#if this.markdown}}{{{markdown footer.text}}}{{else}}{{{footer.text}}}{{/if}}
     </footer>
