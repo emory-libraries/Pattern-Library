@@ -104,14 +104,8 @@
 .-utility.nav-button {
   height: 60px;
 }
-@media (min-width: 601px) and (max-width: 900px) {
-  .-utility.nav-button {
-    height: 40px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
+.-utility.nav-button .icon {
+  display: none;
 }
 @media (min-width: 901px) {
   .-utility.nav-button {
@@ -120,6 +114,9 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .-utility.nav-button::after {
+    content: none !important;
   }
 }
 .-flyout.nav-button {
@@ -135,6 +132,9 @@
       -ms-flex-pack: center;
           justify-content: center;
   width: auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 @media (min-width: 901px) {
   .-flyout.nav-button {
@@ -143,6 +143,9 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
   }
 }
 .-librarian.nav-button {
@@ -1460,9 +1463,6 @@
 .nav-button.-utility {
   padding-right: 54px;
 }
-.nav-button.-utility .icon {
-  display: none;
-}
 .nav-button.-utility::after {
   padding-left: 10px;
   padding-right: 10px;
@@ -1492,36 +1492,29 @@
 .nav-button.-utility::after {
   content: url("../icons/php/icon.php?id=material-chevron_right&color=B6BDCC&size[width]=24&size[height]=24");
 }
-@media (min-width: 601px) and (max-width: 900px) {
-  .nav-button.-utility {
-    padding-right: 10px;
-  }
-  .nav-button.-utility::after {
-    content: none;
-  }
-}
 @media (min-width: 901px) {
   .nav-button.-utility {
+    padding-left: 10px;
     padding-right: 10px;
-  }
-  .nav-button.-utility::after {
-    content: none;
   }
 }
 .nav-button.-flyout .icon {
   margin-bottom: 0.25em;
 }
-@media (min-width: 601px) and (max-width: 900px) {
+@media (min-width: 901px) {
   .nav-button.-flyout .icon {
     margin-right: 0.5em;
     margin-bottom: 0;
   }
 }
 @media (min-width: 901px) {
-  .nav-button.-flyout .icon {
-    margin-right: 0.5em;
-    margin-bottom: 0;
+  .nav-button.-flyout {
+    padding-left: 10px;
+    padding-right: 10px;
   }
+}
+.nav-button.-librarian {
+  text-decoration: none;
 }
 .nav-button.-librarian .icon {
   margin-right: 0.5em;

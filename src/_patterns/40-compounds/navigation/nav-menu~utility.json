@@ -1,5 +1,5 @@
 {
-  "left-links": [
+  "utilities": [
     {
       "href": "",
       "label": "Initiatives"
@@ -9,12 +9,12 @@
       "label": "For Instructors"
     }
   ],
-  "right-links": [
-    {
-      "href": "",
-      "label": "Ask a Librarian",
-      "icon": "material-help_outline"
-    },
+  "button": {
+    "href": "",
+    "label": "Ask a Librarian",
+    "icon": "material-help_outline"
+  },
+  "flyouts": [
     {
       "href": "",
       "label": "Events",
@@ -39,6 +39,6 @@
       "href": "",
       "label": "Contact",
       "icon": "material-question_answer"
-    },
+    }
   ]
 }
