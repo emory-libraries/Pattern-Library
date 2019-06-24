@@ -19,7 +19,7 @@
 ///
 /// @output The native structure and skin of our section-deep-dive component
 ///
-/// @status construction
+/// @status review
 @mixin organisms-section-deep-dive ( $custom: () ) {
 
   // Extend the default skin.
@@ -35,17 +35,20 @@
     &-title {
       @extend %organisms-section-deep-dive-title;
     }
-
     &-body {
       @extend %organisms-section-deep-dive-body;
     }
-
     &-column {
       @extend %organisms-section-deep-dive-column;
+      &-heading {
+        @extend %organisms-section-deep-dive-column-heading;
+      }
     }
-
     &-footer {
       @extend %organisms-section-deep-dive-footer;
+    }
+    &-link {
+      @extend %organisms-section-deep-dive-link;
     }
 
     // Load skins.
