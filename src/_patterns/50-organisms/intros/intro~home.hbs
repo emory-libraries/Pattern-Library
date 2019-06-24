@@ -1,0 +1,9 @@
+<header class="intro-home">
+    <div class="intro-home-image" style="background-image: url({{background-image}});"></div>
+    <div class="intro-home-gradient"></div>
+    <div class="intro-home-search">
+      {{> atoms-search mode='big' layout='contained' classes="intro-home-search" id=search.id services=search.services button=search.button processor=search.processor }}
+    </div>
+    {{#if badge}}{{> atoms-badge label=badge white=true square=true classes="intro-home-badge"}}{{/if}}
+    <a class="intro-home-title" href="{{link.href}}" target="_self">{{> tokens-heading level="1" alternate=true heading=link.title icon=false}}</a>
+</header>
