@@ -1,22 +1,14 @@
 <nav class="nav-menu-utility -desktop">
-  <ul class="utility-left">
-    {{#each left-links}}
-    <li>{{>atoms-nav-button-utility}}</li>
-    {{/each}}
-  </ul>
-  <ul class="utility-right">
-    {{#each right-links}}
-    <li>{{>atoms-nav-button-flyout}}</li>
-    {{/each}}
-  </ul>
+  <div class="nav-menu-utility-left">
+    {{#each utilities}}{{> atoms-nav-button-utility}}{{/each}}
+  </div>
+  <div class="nav-menu-utility-right">
+    {{#if button}}{{#with button}}{{> atoms-nav-button-flyout}}{{/with}}{{/if}}
+    {{#each flyouts}}{{> atoms-nav-button-flyout}}{{/each}}
+  </div>
 </nav>
 <nav class="nav-menu-utility -mobile">
-  <ul class="utility-right">
-    {{#each right-links}}
-    {{#unless @first}}
-    {{!-- If first, then ignore. That same first item should be what populates the "Ask a Librarian" link at the bottom of the mobile main nav" --}}
-    <li>{{>atoms-nav-button-flyout}}</li>
-    {{/unless}}
-    {{/each}}
-  </ul>
+  <div class="nav-menu-utility-right">
+    {{#each flyouts}}{{> atoms-nav-button-flyout}}{{/each}}
+  </div>
 </nav>
