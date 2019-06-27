@@ -174,6 +174,51 @@ module.exports = {
 
   },
 
+  // Gets the first `n` items from an array.
+  firstN( array, n, options ) {
+
+    // Return the first `n` items within the array.
+    return array.slice(0, n + 1);
+
+  },
+
+  // Get the last `n` items from an array.
+  lastN( array, n, options ) {
+
+
+    // Return the last `n` items within the array.
+    return array.slice(-n);
+
+  },
+
+  // Slice an array at the given beginning and ending indices.
+  slice( array, begin, end ) {
+
+    // Set the beginning and end by default.
+    begin = _.isNumer(begin) ? begin : 0;
+    end = _.isNumber(end) ? end : array.length;
+
+    // Return the slice of the array.
+    return array.slice(begin, end);
+
+  },
+
+  // Limit an array to the given length.
+  limit( array, limit ) {
+
+    // Return the array with the limit applied.
+    return array.slice(0, limit);
+
+  },
+
+  // Get the difference of an array after a limit has been applied.
+  limitDifference( array, limit ) {
+
+    // Return the difference of the array with the limit applied.
+    return array.slice(limit);
+
+  }
+
   // Push an item onto the end of an array.
   // FIXME: Support for this `push` helper in the templating engine's version of handlebars is lacking.
   /*push( value, array, options ) {

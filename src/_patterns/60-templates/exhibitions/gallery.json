@@ -1,0 +1,284 @@
+{
+  "title": "Current and Past Exhibitions",
+  "exhibits": [
+    {
+      "image": {
+        "src": "//source.unsplash.com/random"
+      },
+      "date": {
+        "start": {
+          "date": "09-13-2017"
+        },
+        "end": {
+          "date": "02-03-2019"
+        }
+      },
+      "title": "Building Emory's African American Collections: Highlights from the Curatorial Career of Randall K. Burkett",
+      "link": {
+        "label": "Exhibition Details",
+        "href": ""
+      }
+    },
+    {
+      "image": {
+        "src": "//source.unsplash.com/random"
+      },
+      "date": {
+        "start": {
+          "date": "10-08-2018"
+        },
+        "end": {
+          "date": null
+        }
+      },
+      "title": "Common Thread: Women's Experience Through Artists' Books",
+      "link": {
+        "label": "Exhibition Details",
+        "href": ""
+      }
+    },
+    {
+      "image": {
+        "src": "//source.unsplash.com/random"
+      },
+      "date": {
+        "start": {
+          "date": "06-18-2019"
+        },
+        "end": {
+          "date": "10-03-2018"
+        }
+      },
+      "title": "She Gathers Me: Networking Among Black Women Writers",
+      "link": {
+        "label": "Exhibition Details",
+        "href": ""
+      }
+    },
+    {
+      "image": {
+        "src": "//source.unsplash.com/random"
+      },
+      "date": {
+        "start": {
+          "date": "03-23-2018"
+        },
+        "end": {
+          "date": "04-01-2020",
+          "month": true
+        }
+      },
+      "title": "History of Teaching Medicine at Emory",
+      "link": {
+        "label": "Exhibition Details",
+        "href": ""
+      }
+    },
+    {
+      "image": {
+        "src": "//source.unsplash.com/random"
+      },
+      "date": {
+        "start": {
+          "date": "09-28-2017"
+        },
+        "end": {
+          "date": "05-15-2018"
+        }
+      },
+      "title": "The Dream Machine: The Beat Generation &amp; the Counterculture, 1940-1975",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "image": {
+        "src": "//source.unsplash.com/random"
+      },
+      "date": {
+        "start": {
+          "date": "02-18-2018"
+        },
+        "end": {
+          "date": null
+        }
+      },
+      "title": "Stepping Out of Line: Exploring LGBTQ Activism",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "image": {
+        "src": "//source.unsplash.com/random"
+      },
+      "date": {
+        "start": {
+          "date": "10-02-2017"
+        },
+        "end": {
+          "date": "12-28-2017"
+        }
+      },
+      "title": "Open Access and the Book",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "image": {
+        "src": "//source.unsplash.com/random"
+      },
+      "date": {
+        "start": {
+          "date": "10-11-2017"
+        },
+        "end": {
+          "date": "01-31-2018"
+        }
+      },
+      "title": "A Question of Manhood: African Americans and World War 1",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "image": {
+        "src": "//source.unsplash.com/random"
+      },
+      "date": {
+        "start": {
+          "date": null
+        },
+        "end": {
+          "date": "01-31-2018"
+        }
+      },
+      "title": "To Care for Others: 100 Years of Nursing at Emory",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "image": {
+        "src": "//source.unsplash.com/random"
+      },
+      "date": {
+        "start": {
+          "date": "06-15-2017"
+        },
+        "end": {
+          "date": "09-10-2017"
+        }
+      },
+      "title": "Billy Howard's Epitaphs for the Living",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "image": {
+        "src": "//source.unsplash.com/random"
+      },
+      "date": {
+        "start": {
+          "date": null
+        },
+        "end": {
+          "date": "09-01-2017",
+          "month": true
+        }
+      },
+      "title": "All the World's an eStage: Shakespeare Postcards in a Digital Age",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "image": {
+        "src": "//source.unsplash.com/random"
+      },
+      "date": {
+        "start": {
+          "date": null
+        },
+        "end": {
+          "date": "05-28-2017"
+        }
+      },
+      "title": "Still Raising Hell: The Art, Activism, and Archives of Camille Billops and James V. Hatch",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "image": {
+        "src": "//source.unsplash.com/random"
+      },
+      "date": {
+        "start": {
+          "date": "01-01-2017"
+        },
+        "end": {
+          "date": "04-21-2017"
+        }
+      },
+      "title": "100 Years of Women at Emory: Many Milestones of Progress",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "image": {
+        "src": "//source.unsplash.com/random"
+      },
+      "date": {
+        "start": {
+          "date": "11-1-2016",
+          "month": true
+        },
+        "end": {
+          "date": "01-13-2017"
+        }
+      },
+      "title": "Connecting Contexts: The Letters of Samuel Beckett",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "image": {
+        "src": "//source.unsplash.com/random"
+      },
+      "date": {
+        "start": {
+          "date": null
+        },
+        "end": {
+          "date": "02-26-2017"
+        }
+      },
+      "title": "Shakespeare Artists' Books",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "image": {
+        "src": "//source.unsplash.com/random"
+      },
+      "date": {
+        "start": {
+          "date": null
+        },
+        "end": {
+          "date": "05-14-2017"
+        }
+      },
+      "title": "Othello: The Moor Speaks",
+      "link": {
+        "href": ""
+      }
+    }
+  ]
+}
