@@ -135,32 +135,74 @@ ico,
 }
 
 .intro-interior-cover {
-  display: grid;
-  grid-template-rows: repeat(2, -webkit-min-content) 540px;
-  grid-template-rows: repeat(2, min-content) 540px;
+  display: block;
 }
 .intro-interior-cover-title {
   grid-row: 1;
+  margin-bottom: 0;
 }
 .intro-interior-cover-subtitle {
   grid-row: 2;
 }
-.intro-interior-cover-title, .intro-interior-cover-subtitle {
-  text-align: center;
+.intro-interior-cover-subtitle:not(.-date) {
+  margin-top: 0;
 }
 .intro-interior-cover-image {
+  margin-top: 2em;
+  margin-bottom: 2em;
   grid-row: 3;
-  background-size: cover;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.intro-interior-cover-image img {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: none;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .intro-interior-cover-title, .intro-interior-cover-subtitle {
-  color: #091C44;
+  text-align: center;
 }
 .intro-interior-cover-title {
-  margin: 0;
+  font-family: "Cardo", serif;
+  font-size: 48px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.0833;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #091C44;
 }
 .intro-interior-cover-subtitle {
+  font-family: "Open Sans", sans-serif;
   font-size: 22px;
   font-weight: bold;
-  margin-top: 0;
+  font-style: normal;
+  line-height: 1.6364;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #091C44;
+}
+.intro-interior-cover-subtitle.-date {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.6667;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #091C44;
+}
+.intro-interior-cover-image {
+  height: 540px;
 }
