@@ -5,5 +5,6 @@
 const _ = require('lodash');
 const Vue = require('vue');
 const L = require('leaflet');
+const Hammer = require('hammerjs');
 const $ = require('jQuery');
 const {compareTwoStrings} = require('string-similarity');
