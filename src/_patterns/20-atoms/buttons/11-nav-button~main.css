@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -134,16 +136,11 @@ ico,
   content: "";
 }
 
+/*** INSERT NEW TOKENS HERE ***/
 .nav-button {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 [disabled].nav-button, .is-disabled.nav-button {
@@ -151,46 +148,21 @@ ico,
 }
 
 .nav-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
   width: 100%;
-}
-@media (min-width: 601px) and (max-width: 900px) {
-  .nav-button {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: auto;
-  }
 }
 @media (min-width: 901px) {
   .nav-button {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
     display: inline-flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     width: auto;
   }
 }
 .nav-button .icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 .nav-button:not(.-utility):not(.-flyout):not(.-search):not(.-toggle):not(.-librarian), .-main.nav-button {
   height: 60px;
@@ -207,12 +179,8 @@ ico,
 }
 .-toggle.nav-button {
   height: 40px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: auto;
 }
 @media (min-width: 601px) and (max-width: 900px) {
@@ -227,12 +195,8 @@ ico,
 }
 .-search.nav-button {
   height: 40px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: auto;
   margin-left: auto;
 }
@@ -251,88 +215,59 @@ ico,
 .-utility.nav-button {
   height: 60px;
 }
-@media (min-width: 601px) and (max-width: 900px) {
-  .-utility.nav-button {
-    height: 40px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
+.-utility.nav-button .icon {
+  display: none;
 }
 @media (min-width: 901px) {
   .-utility.nav-button {
     height: 40px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
+  }
+  .-utility.nav-button::after {
+    content: none !important;
   }
 }
 .-flyout.nav-button {
-  height: 70;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
+  height: 70px;
   display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   width: auto;
-}
-@media (min-width: 601px) and (max-width: 900px) {
-  .-flyout.nav-button {
-    height: 40px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
+  flex: 1;
 }
 @media (min-width: 901px) {
   .-flyout.nav-button {
     height: 40px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
+    flex: unset;
   }
 }
 .-librarian.nav-button {
   height: 45px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .-librarian.nav-button {
     height: 40px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
 }
 @media (min-width: 901px) {
   .-librarian.nav-button {
     height: 40px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
 }
 
+/*** INSERT NEW ATOMS HERE ***/
+/*** INSERT NEW MOLECULES HERE ***/
+/*** INSERT NEW COMPOUNDS HERE ***/
+/*** INSERT NEW ORGANISMS HERE ***/
+/*** INSERT NEW TEMPLATES HERE ***/
 .nav-button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   border: none;
   background: none;
-  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 @media (max-width: 600px) {
@@ -549,17 +484,10 @@ ico,
   position: absolute;
   display: block;
   top: 50%;
-  -webkit-transform: translatey(-50%);
-          transform: translatey(-50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  transform: translatey(-50%);
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 24px;
   height: 24px;
   color: #B6BDCC;
@@ -999,10 +927,10 @@ ico,
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .nav-button.-librarian {
-    color: #004990;
+    color: #FFFFFF;
   }
   .nav-button.-librarian .icon svg {
-    fill: #004990;
+    fill: #FFFFFF;
   }
 }
 @media (min-width: 901px) {
@@ -1023,10 +951,10 @@ ico,
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .nav-button.-librarian:hover, .nav-button.-librarian:focus, .nav-button.-librarian.is-hover, .nav-button.-librarian.is-focus {
-    color: #336BE6;
+    color: #FFFFFF;
   }
   .nav-button.-librarian:hover .icon svg, .nav-button.-librarian:focus .icon svg, .nav-button.-librarian.is-hover .icon svg, .nav-button.-librarian.is-focus .icon svg {
-    fill: #336BE6;
+    fill: #FFFFFF;
   }
 }
 @media (min-width: 901px) {
@@ -1047,10 +975,10 @@ ico,
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .nav-button.-librarian:active, .nav-button.-librarian.is-active {
-    color: #336BE6;
+    color: #FFFFFF;
   }
   .nav-button.-librarian:active .icon svg, .nav-button.-librarian.is-active .icon svg {
-    fill: #336BE6;
+    fill: #FFFFFF;
   }
 }
 @media (min-width: 901px) {
@@ -1068,7 +996,7 @@ ico,
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .nav-button.-librarian {
-    background-color: #FFFFFF;
+    background-color: #336BE6;
   }
 }
 @media (min-width: 901px) {
@@ -1083,7 +1011,7 @@ ico,
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .nav-button.-librarian:hover, .nav-button.-librarian:focus, .nav-button.-librarian.is-hover, .nav-button.-librarian.is-focus {
-    background-color: #FFFFFF;
+    background-color: #004990;
   }
 }
 @media (min-width: 901px) {
@@ -1098,7 +1026,7 @@ ico,
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .nav-button.-librarian :active, .nav-button.-librarian.is-active {
-    background-color: #FFFFFF;
+    background-color: #004990;
   }
 }
 @media (min-width: 901px) {
@@ -1475,8 +1403,8 @@ ico,
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .nav-button.-librarian .icon {
-    width: 14px;
-    height: 14px;
+    width: 24px;
+    height: 24px;
   }
 }
 @media (min-width: 901px) {
@@ -1616,9 +1544,6 @@ ico,
 .nav-button.-utility {
   padding-right: 54px;
 }
-.nav-button.-utility .icon {
-  display: none;
-}
 .nav-button.-utility::after {
   padding-left: 10px;
   padding-right: 10px;
@@ -1629,17 +1554,10 @@ ico,
   position: absolute;
   display: block;
   top: 50%;
-  -webkit-transform: translatey(-50%);
-          transform: translatey(-50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  transform: translatey(-50%);
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 24px;
   height: 24px;
   color: #B6BDCC;
@@ -1648,36 +1566,29 @@ ico,
 .nav-button.-utility::after {
   content: url("../icons/php/icon.php?id=material-chevron_right&color=B6BDCC&size[width]=24&size[height]=24");
 }
-@media (min-width: 601px) and (max-width: 900px) {
-  .nav-button.-utility {
-    padding-right: 10px;
-  }
-  .nav-button.-utility::after {
-    content: none;
-  }
-}
 @media (min-width: 901px) {
   .nav-button.-utility {
+    padding-left: 10px;
     padding-right: 10px;
-  }
-  .nav-button.-utility::after {
-    content: none;
   }
 }
 .nav-button.-flyout .icon {
   margin-bottom: 0.25em;
 }
-@media (min-width: 601px) and (max-width: 900px) {
+@media (min-width: 901px) {
   .nav-button.-flyout .icon {
     margin-right: 0.5em;
     margin-bottom: 0;
   }
 }
 @media (min-width: 901px) {
-  .nav-button.-flyout .icon {
-    margin-right: 0.5em;
-    margin-bottom: 0;
+  .nav-button.-flyout {
+    padding-left: 10px;
+    padding-right: 10px;
   }
+}
+.nav-button.-librarian {
+  text-decoration: none;
 }
 .nav-button.-librarian .icon {
   margin-right: 0.5em;

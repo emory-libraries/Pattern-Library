@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -134,12 +136,18 @@ ico,
   content: "";
 }
 
+/*** INSERT NEW TOKENS HERE ***/
 .rule.-feed, .rule.-heading, .rule.-thick, .rule.-dotted, .rule.-dark, .rule.-light, .rule {
   display: block;
   width: 100%;
   height: 0;
 }
 
+/*** INSERT NEW ATOMS HERE ***/
+/*** INSERT NEW MOLECULES HERE ***/
+/*** INSERT NEW COMPOUNDS HERE ***/
+/*** INSERT NEW ORGANISMS HERE ***/
+/*** INSERT NEW TEMPLATES HERE ***/
 .rule {
   border-top: 1px solid rgba(9, 28, 68, 0.1);
   width: 100%;
