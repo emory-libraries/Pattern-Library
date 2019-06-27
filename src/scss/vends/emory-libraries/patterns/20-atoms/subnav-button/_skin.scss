@@ -99,7 +99,6 @@ $atoms-subnav-button: (
   ),
   
   'viewall': (
-    'spacing': ($rhythm-y * 2),
     'foreground': (
       'normal': $color-text-light,
       'hover': $color-text-light,
@@ -339,14 +338,12 @@ $atoms-subnav-button: (
       };
     }
     
-    @include breakpoint-l {
+    @include breakpoint-m-l {
       $background: map-deep-get($skin, 'viewall.background');
       $foreground: map-deep-get($skin, 'viewall.foreground');
-      $spacing: map-deep-get($skin, 'viewall.spacing');
       
       color: map-get($foreground, 'normal');
       background-color: map-get($background, 'normal');
-      margin-top: $spacing;
 
       &:hover,
       &:focus,

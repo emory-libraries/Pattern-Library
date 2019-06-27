@@ -128,7 +128,7 @@
 
       @if( $i == $index ){ $result: append( $result, $value ); }
 
-      $result: append( $result, nth( $list, $i ), list-separator($list) );
+      $result: append( $result, nth( $list, $i ) );
 
     }
     
@@ -136,7 +136,7 @@
   
   @else {
     
-    $result: append($list, $value, list-separator($list));
+    $result: append($list, $value);
     
   }
     
