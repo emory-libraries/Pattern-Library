@@ -329,7 +329,7 @@ ico,
 }
 .section-deep-dive-body a,
 .section-deep-dive-body .link {
-  font-weight: bold;
+  text-decoration: underline;
 }
 .section-deep-dive-body a,
 .section-deep-dive-body .link {
