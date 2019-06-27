@@ -95,7 +95,7 @@ const helpers = {
 
     // Determine if the string ends with the substring.
     return str.substring(str.length - substr.length) === substr;
-
+    
   }
 
 };

@@ -10,18 +10,18 @@ php: false
 
 ## Getting Started
 
-Insert a sentence or two identifying what the **exhibition** pattern is and what purpose it serves.
+Insert a sentence or two identifying what the **nav menu (utility)** pattern is and what purpose it serves.
 
 ###### EXPORT VIA GRUNT
 
 ```
-grunt export:templates-exhibition
+grunt export:compounds-nav-menu-utility
 ```
 
 
 ### Description
 
-Provide a detailed description about the **exhibition** pattern. This should include a short summary of how the pattern works; what options or configurations are available to further customize the pattern based on context, if any; and/or what state changes the pattern possesses, if any. This description may include use-case scenarios for different contexts and other information that's deemed helpful for other developers.
+Provide a detailed description about the **nav menu (utility)** pattern. This should include a short summary of how the pattern works; what options or configurations are available to further customize the pattern based on context, if any; and/or what state changes the pattern possesses, if any. This description may include use-case scenarios for different contexts and other information that's deemed helpful for other developers.
 
 
 ### Best Practices

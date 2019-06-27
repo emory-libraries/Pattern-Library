@@ -159,17 +159,6 @@ ico,
           justify-content: flex-start;
   width: 100%;
 }
-@media (min-width: 601px) and (max-width: 900px) {
-  .nav-button {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: auto;
-  }
-}
 @media (min-width: 901px) {
   .nav-button {
     display: -webkit-inline-box;
@@ -251,14 +240,8 @@ ico,
 .-utility.nav-button {
   height: 60px;
 }
-@media (min-width: 601px) and (max-width: 900px) {
-  .-utility.nav-button {
-    height: 40px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
+.-utility.nav-button .icon {
+  display: none;
 }
 @media (min-width: 901px) {
   .-utility.nav-button {
@@ -268,9 +251,12 @@ ico,
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .-utility.nav-button::after {
+    content: none !important;
+  }
 }
 .-flyout.nav-button {
-  height: 70;
+  height: 70px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -282,15 +268,9 @@ ico,
       -ms-flex-pack: center;
           justify-content: center;
   width: auto;
-}
-@media (min-width: 601px) and (max-width: 900px) {
-  .-flyout.nav-button {
-    height: 40px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 @media (min-width: 901px) {
   .-flyout.nav-button {
@@ -299,6 +279,9 @@ ico,
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
   }
 }
 .-librarian.nav-button {
@@ -999,10 +982,10 @@ ico,
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .nav-button.-librarian {
-    color: #004990;
+    color: #FFFFFF;
   }
   .nav-button.-librarian .icon svg {
-    fill: #004990;
+    fill: #FFFFFF;
   }
 }
 @media (min-width: 901px) {
@@ -1023,10 +1006,10 @@ ico,
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .nav-button.-librarian:hover, .nav-button.-librarian:focus, .nav-button.-librarian.is-hover, .nav-button.-librarian.is-focus {
-    color: #336BE6;
+    color: #FFFFFF;
   }
   .nav-button.-librarian:hover .icon svg, .nav-button.-librarian:focus .icon svg, .nav-button.-librarian.is-hover .icon svg, .nav-button.-librarian.is-focus .icon svg {
-    fill: #336BE6;
+    fill: #FFFFFF;
   }
 }
 @media (min-width: 901px) {
@@ -1047,10 +1030,10 @@ ico,
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .nav-button.-librarian:active, .nav-button.-librarian.is-active {
-    color: #336BE6;
+    color: #FFFFFF;
   }
   .nav-button.-librarian:active .icon svg, .nav-button.-librarian.is-active .icon svg {
-    fill: #336BE6;
+    fill: #FFFFFF;
   }
 }
 @media (min-width: 901px) {
@@ -1068,7 +1051,7 @@ ico,
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .nav-button.-librarian {
-    background-color: #FFFFFF;
+    background-color: #336BE6;
   }
 }
 @media (min-width: 901px) {
@@ -1083,7 +1066,7 @@ ico,
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .nav-button.-librarian:hover, .nav-button.-librarian:focus, .nav-button.-librarian.is-hover, .nav-button.-librarian.is-focus {
-    background-color: #FFFFFF;
+    background-color: #004990;
   }
 }
 @media (min-width: 901px) {
@@ -1098,7 +1081,7 @@ ico,
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .nav-button.-librarian :active, .nav-button.-librarian.is-active {
-    background-color: #FFFFFF;
+    background-color: #004990;
   }
 }
 @media (min-width: 901px) {
@@ -1475,8 +1458,8 @@ ico,
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .nav-button.-librarian .icon {
-    width: 14px;
-    height: 14px;
+    width: 24px;
+    height: 24px;
   }
 }
 @media (min-width: 901px) {
@@ -1616,9 +1599,6 @@ ico,
 .nav-button.-utility {
   padding-right: 54px;
 }
-.nav-button.-utility .icon {
-  display: none;
-}
 .nav-button.-utility::after {
   padding-left: 10px;
   padding-right: 10px;
@@ -1648,36 +1628,29 @@ ico,
 .nav-button.-utility::after {
   content: url("../icons/php/icon.php?id=material-chevron_right&color=B6BDCC&size[width]=24&size[height]=24");
 }
-@media (min-width: 601px) and (max-width: 900px) {
-  .nav-button.-utility {
-    padding-right: 10px;
-  }
-  .nav-button.-utility::after {
-    content: none;
-  }
-}
 @media (min-width: 901px) {
   .nav-button.-utility {
+    padding-left: 10px;
     padding-right: 10px;
-  }
-  .nav-button.-utility::after {
-    content: none;
   }
 }
 .nav-button.-flyout .icon {
   margin-bottom: 0.25em;
 }
-@media (min-width: 601px) and (max-width: 900px) {
+@media (min-width: 901px) {
   .nav-button.-flyout .icon {
     margin-right: 0.5em;
     margin-bottom: 0;
   }
 }
 @media (min-width: 901px) {
-  .nav-button.-flyout .icon {
-    margin-right: 0.5em;
-    margin-bottom: 0;
+  .nav-button.-flyout {
+    padding-left: 10px;
+    padding-right: 10px;
   }
+}
+.nav-button.-librarian {
+  text-decoration: none;
 }
 .nav-button.-librarian .icon {
   margin-right: 0.5em;
