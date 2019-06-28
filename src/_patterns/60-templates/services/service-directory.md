@@ -34,7 +34,7 @@ The service directory template can be used to create a Service Directory page.
 
 This pattern extends [`organisms-main`][organisms-main] and uses the schemas for [`tokens-grid`][tokens-grid], [`atoms-filter-search`][atoms-filter-search], [`molecules-card-button`][molecules-card-button], and [`compounds-accordion`][compounds-accordion].
 
-[organisms-main]: /patterns/50-organisms-main-main/50-organisms-main-main.html
+[organisms-main]: /patterns/50-organisms-sections-main/50-organisms-sections-main.html
 [tokens-grid]: /patterns/10-tokens-10-globals-grid/10-tokens-10-globals-grid.html
 [atoms-filter-search]: /patterns/20-atoms-filters-filter-search/20-atoms-filters-filter-search.html
 [molecules-card-button]: /patterns/30-molecules-cards-card-button/30-molecules-cards-card-button.html

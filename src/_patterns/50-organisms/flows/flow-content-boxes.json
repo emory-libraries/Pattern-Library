@@ -1,0 +1,49 @@
+{
+  "feature": {
+    "image": {
+      "src": "//source.unsplash.com/6fv1nBklWIU/500x650"
+    },
+    "context": "Confused About Research or an Assignment?",
+    "heading": "Use the expertise of our subject librarians to get help finding sources, conducting research, and understanding an assignment or topic.",
+    "buttons": [
+      {
+        "label": "Continue Reading",
+        "href": ""
+      },
+      {
+        "label": "Consult a Subject Librarian",
+        "href": "",
+        "hollow": true
+      }
+    ]
+  },
+  "explorer": {
+    "heading": "Popular Links",
+    "links": [
+      {
+        "href": "",
+        "label": "Get Help with Your Research"
+      },
+      {
+        "href": "",
+        "label": "Understand InterLibrary Loans"
+      },
+      {
+        "href": "",
+        "label": "Find a Study Space or Reserve a Room"
+      },
+      {
+        "href": "",
+        "label": "Access Course Reserves"
+      },
+      {
+        "href": "",
+        "label": "Guest Access"
+      },
+      {
+        "href": "",
+        "label": "Printing, Logging In, and Access"
+      }
+    ]
+  }
+}

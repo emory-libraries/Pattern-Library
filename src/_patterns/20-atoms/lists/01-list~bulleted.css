@@ -1,4 +1,139 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon/icomoon.eot");
+  src: url("../fonts/icomoon/icomoon.eot#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf") format("truetype"), url("../fonts/icomoon/icomoon.woff") format("woff"), url("../fonts/icomoon/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+ico,
+[class^=ico-],
+[class*=ico-] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-arrow-down-circle::before {
+  content: "";
+}
+
+.ico-arrow-left-circle::before {
+  content: "";
+}
+
+.ico-arrow-right-circle::before {
+  content: "";
+}
+
+.ico-arrow-up-circle::before {
+  content: "";
+}
+
+.ico-arrow-down-left::before {
+  content: "";
+}
+
+.ico-arrow-down-right::before {
+  content: "";
+}
+
+.ico-arrow-up-right::before {
+  content: "";
+}
+
+.ico-arrow-up-left::before {
+  content: "";
+}
+
+.ico-arrow-down::before {
+  content: "";
+}
+
+.ico-arrow-left::before {
+  content: "";
+}
+
+.ico-arrow-right::before {
+  content: "";
+}
+
+.ico-arrow-up::before {
+  content: "";
+}
+
+.ico-chevron-down::before {
+  content: "";
+}
+
+.ico-chevron-left::before {
+  content: "";
+}
+
+.ico-chevron-right::before {
+  content: "";
+}
+
+.ico-chevron-up::before {
+  content: "";
+}
+
+.ico-chevrons-down::before {
+  content: "";
+}
+
+.ico-chevrons-left::before {
+  content: "";
+}
+
+.ico-chevrons-right::before {
+  content: "";
+}
+
+.ico-chevrons-up::before {
+  content: "";
+}
+
+.ico-corner-down-left::before {
+  content: "";
+}
+
+.ico-corner-down-right::before {
+  content: "";
+}
+
+.ico-corner-left-down::before {
+  content: "";
+}
+
+.ico-corner-left-up::before {
+  content: "";
+}
+
+.ico-corner-right-down::before {
+  content: "";
+}
+
+.ico-corner-right-up::before {
+  content: "";
+}
+
+.ico-corner-up-left::before {
+  content: "";
+}
+
+.ico-corner-up-right::before {
+  content: "";
+}
+
 .list {
   margin-left: 0;
   margin-right: 0;
@@ -42,11 +177,15 @@
 }
 .-files.list {
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: auto;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 .-files.list .list-item {
   display: block;
+}
+.-files.list .link {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .list:not(.-numbered):not(.-links):not(.-topics):not(.-files), .list.-bulleted {
@@ -76,7 +215,5 @@
   content: "," " ";
 }
 .list.-files {
-  --rows: 4;
-  grid-template-rows: repeat(var(--rows), auto);
   grid-gap: 10px;
 }
