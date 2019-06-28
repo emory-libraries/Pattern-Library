@@ -697,6 +697,9 @@ ico,
 .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-underline {
   text-decoration: underline;
 }
+.section-main-title.intro-title {
+  color: #082B73 !important;
+}
 .section-main-body .heading.-h2 {
   font-family: "Open Sans", sans-serif;
   font-size: 22px;
@@ -775,6 +778,9 @@ ico,
 .section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-underline {
   text-decoration: underline;
 }
+.section-main.-light .section-main-title.intro-title {
+  color: #082B73 !important;
+}
 .section-main.-light .section-main-body .heading.-h2 {
   color: #082B73;
 }
@@ -842,6 +848,9 @@ ico,
 }
 .section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-underline {
   text-decoration: underline;
+}
+.section-main.-dark .section-main-title.intro-title {
+  color: #FFFFFF !important;
 }
 .section-main.-dark .section-main-body .heading.-h2 {
   color: #FFFFFF;

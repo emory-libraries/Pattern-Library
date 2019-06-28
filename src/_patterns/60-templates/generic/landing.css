@@ -159,6 +159,18 @@ ico,
 .landing-page-main {
   grid-area: main;
 }
+.landing-page-main .section-main:not(.without-intro) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.landing-page-main .section-main:not(.without-intro) .section-main-body {
+  padding-top: 2em;
+}
 .landing-page-main .section-main .section-main-body {
   display: grid;
   grid-template-columns: 1fr;
