@@ -7,11 +7,11 @@
 /// @since 1.0.0-dev.0
 %templates-landing {
 
-  // Builds the landing structure.
-  // ...
-
   // Captures selector.
   $selector: &;
+
+  // Builds the landing structure.
+  // ...
 
   // Builds the landing structure.
   margin: 0 auto;
@@ -32,27 +32,24 @@
 
   }
 
+  // Builds the landing main structure.
   &-main {
     grid-area: main;
 
-    .section-main-body {
-      margin-bottom: 68px;
+    // Apply overrides to main section.
+    .section-main {
+
+      .section-main-body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: $rhythm-y;
+      }
+
     }
 
-    .section-main-body,
-    .section-major-body,
-    .breadcrumbs {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
   }
 
-    .breadcrumbs {
-      height: 88px;
-      align-items: center;
-    }
-
+  // Builds the landing footer structure.
   &-footer {
     grid-area: footer;
     @include absolute-center-contents;
@@ -62,4 +59,5 @@
     }
 
   }
+
 }
