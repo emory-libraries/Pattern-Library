@@ -11,6 +11,7 @@ global.Events = Events;
 global.Components = Components;
 global.Store = Store;
 global.Leaflet = global.L = L;
+global.Hammer = Hammer;
 global.jQuery = global.$ = $;
 global.EUL = EUL;
 global.App = App;
