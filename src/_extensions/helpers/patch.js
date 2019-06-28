@@ -37,5 +37,10 @@ module.exports = {
     return value;
 
   },
+  storageHas( key ) {
+
+    return _.has(storage, key);
+
+  }
 
 };

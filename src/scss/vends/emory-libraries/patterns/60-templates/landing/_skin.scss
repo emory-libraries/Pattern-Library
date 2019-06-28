@@ -48,10 +48,6 @@ $templates-landing: (
   // Defines landing main styles.
   &-main {
 
-    &-subtitle {
-      text-align: center !important;
-    }
-
     // Adjust the main section styles.
     .section-main {
       @include tokens-layout((
@@ -66,5 +62,5 @@ $templates-landing: (
 
   // Defines landing footer styles.
   &-footer { }
-  
+
 }
