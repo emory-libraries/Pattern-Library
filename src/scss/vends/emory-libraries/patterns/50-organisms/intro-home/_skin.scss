@@ -62,44 +62,45 @@ $organisms-intro-home: (
 
   &-search {
 
+    background: transparent;
+    transition: $transition-all;
+
     &-options {
       position: absolute;
       left: -10000px;
       border-bottom: $border;
+      margin-bottom: 0;
+      transition: $transition-all;
 
-      &-list-item {
-        font-size: 12px;
-        font-weight: bold;
-        line-height: 1.25;
-        letter-spacing: .05em;
-        text-transform: uppercase;
-        text-align: center;
-
-        a {
-          color: $search-options-color;
-
-          &:hover,
-          &:active,
-          &:focus {
-            color: $active-color;
-          }
-
-        }
-
+      &.tab-menu {
+        padding: 0;
       }
 
-      &-list-item:not(:last-child) {
+      .tab {
+        &:hover,
+        &:active,
+        &:focus,
+        &.is-hover,
+        &.is-focus {
+          //color: $active-color;
 
-        &:after {
-          content: "";
-          border-left: $border;
-          height: 12px;
-          margin: auto;
 
-          @include breakpoint-s() {
-            border-left: none;
+          &:after {
+            /*content:'';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            margin: .25em 50%;
+            width: 0;
+            height: 0;
+            background-color: $search-background;*/
+            margin-top: .25em;
+            border-top: solid 7px $active-color;
+            border-left: solid 7px transparent;
+            border-right: solid 7px transparent;
           }
-          
+
         }
 
       }
@@ -112,9 +113,10 @@ $organisms-intro-home: (
     &:active {
       background-color: $search-background;
       opacity: .9;
+      transition: $transition-all;
 
       & .intro-home-search-options {
-        position: relative;
+        position: initial;
         left: initial;
       }
 
