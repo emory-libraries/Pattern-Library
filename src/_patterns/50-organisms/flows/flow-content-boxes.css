@@ -178,11 +178,5 @@ ico,
 }
 
 .flow-content-boxes {
-  grid-row-gap: 23px;
-}
-@media (min-width: 1200px) {
-  .flow-content-boxes {
-    grid-column-gap: 36px;
-    grid-row-gap: 0;
-  }
+  grid-gap: 2em;
 }

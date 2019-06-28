@@ -134,6 +134,32 @@ ico,
   content: "";
 }
 
+.breadcrumbs-crumb a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.breadcrumbs-crumb a::after {
+  content: attr(data-subtext);
+  display: block;
+}
+.breadcrumbs-crumb a .icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .breadcrumbs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -142,14 +168,78 @@ ico,
   padding: 0;
   margin: 0;
 }
+.breadcrumbs-crumb + .breadcrumbs-crumb::before {
+  content: "›";
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
 
-.breadcrumbs li {
+.breadcrumbs-crumb {
   font-size: 0.8125em !important;
   line-height: 1.4 !important;
 }
-.breadcrumbs li:not(:last-child)::after {
-  margin: 0 0.5em;
-  content: "›";
+.breadcrumbs-crumb + .breadcrumbs-crumb::before {
   color: #5387F7;
   font-weight: bold;
+}
+.breadcrumbs-crumb a {
+  font-weight: bold;
+  font-style: normal;
+  color: #5387F7;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  background: none;
+  border: none;
+}
+.breadcrumbs-crumb a .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 1ex;
+}
+.breadcrumbs-crumb a .icon svg {
+  fill: #5387F7;
+}
+.breadcrumbs-crumb a:hover, .breadcrumbs-crumb a.is-hover, .breadcrumbs-crumb a:focus, .breadcrumbs-crumb a.is-focus {
+  color: #004990;
+}
+.breadcrumbs-crumb a:hover .icon svg, .breadcrumbs-crumb a.is-hover .icon svg, .breadcrumbs-crumb a:focus .icon svg, .breadcrumbs-crumb a.is-focus .icon svg {
+  fill: #004990;
+}
+.breadcrumbs-crumb a:active, .breadcrumbs-crumb a.is-active {
+  color: #004990;
+}
+.breadcrumbs-crumb a:active .icon svg, .breadcrumbs-crumb a.is-active .icon svg {
+  fill: #004990;
+}
+.breadcrumbs-crumb a::after {
+  font-size: 12px !important;
+  line-height: 1 !important;
+}
+.breadcrumbs-crumb a::after {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
+.breadcrumbs-crumb a.-popular {
+  font-family: "Cardo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 2.05;
+  color: #FFFFFF;
+}
+.breadcrumbs-crumb a.-popular:hover, .breadcrumbs-crumb a.-popular.is-hover, .breadcrumbs-crumb a.-popular:focus, .breadcrumbs-crumb a.-popular.is-focus {
+  color: #336BE6;
+}
+.breadcrumbs-crumb a.-popular:active, .breadcrumbs-crumb a.-popular.is-active {
+  color: #336BE6;
+}
+.breadcrumbs-crumb a.-underline {
+  text-decoration: underline;
 }

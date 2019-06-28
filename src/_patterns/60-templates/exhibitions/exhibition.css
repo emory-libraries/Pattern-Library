@@ -375,29 +375,29 @@ ico,
 @media (max-width: 600px) {
   .exhibition-page-main .section-main,
 .exhibition-page-main .section-deep-dive {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .exhibition-page-main .section-main,
 .exhibition-page-main .section-deep-dive {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 70px;
+    padding-right: 70px;
   }
 }
 @media (min-width: 901px) {
   .exhibition-page-main .section-main,
 .exhibition-page-main .section-deep-dive {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 120px;
+    padding-right: 120px;
   }
 }
 @media (min-width: 1200px) {
   .exhibition-page-main .section-main,
 .exhibition-page-main .section-deep-dive {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 170px;
+    padding-right: 170px;
   }
 }
 @media (max-width: 600px) {

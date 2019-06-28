@@ -98,10 +98,10 @@ module.exports = {
     return objects;
 
   },
-  
+
   // Filter an array of objects to extract only items missing a given key.
   filterHasNot( arrayOfObjects, key ) {
-    
+
     // Ignore non-arrays.
     if( type(arrayOfObjects) != 'array' ) return [];
 
@@ -138,14 +138,14 @@ module.exports = {
 
     // Return the result.
     return objects;
-    
+
   },
 
-  // Get the index of an item within an array.
-  indexOf( array, item ) {
+  // Get the index of an item within an array or string.
+  indexOf( haystack, needle ) {
 
     // Get the index.
-    const index = _.findIndex(array, item);
+    const index = _.isArray(haystack) ? _.findIndex(haystack, needle) : haystack.indexOf(needle);
 
     // Return the index or false when not found instead of -1.
     return index < 0 ? false : index;

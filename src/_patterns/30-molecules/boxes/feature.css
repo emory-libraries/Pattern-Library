@@ -140,13 +140,6 @@ ico,
   grid-template-rows: 250px repeat(3, -webkit-min-content);
   grid-template-rows: 250px repeat(3, min-content);
 }
-@media (min-width: 601px) and (max-width: 900px) {
-  .feature {
-    grid-template-areas: "image context" "image heading" "image action";
-    grid-template-rows: repeat(2, -webkit-min-content) 1fr;
-    grid-template-rows: repeat(2, min-content) 1fr;
-  }
-}
 @media (min-width: 901px) {
   .feature {
     grid-template-areas: "image context" "image heading" "image action";
@@ -156,13 +149,6 @@ ico,
 }
 .has-description.feature {
   grid-template-areas: "image" "context" "heading" "description" "action";
-}
-@media (min-width: 601px) and (max-width: 900px) {
-  .has-description.feature {
-    grid-template-areas: "image context" "image heading" "image description" "image action";
-    grid-template-rows: repeat(2, -webkit-min-content) auto 1fr;
-    grid-template-rows: repeat(2, min-content) auto 1fr;
-  }
 }
 @media (min-width: 901px) {
   .has-description.feature {
@@ -194,13 +180,6 @@ ico,
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media (min-width: 601px) and (max-width: 900px) {
-  .feature-image img {
-    height: 100%;
-    width: auto;
-    min-width: 100%;
-  }
-}
 @media (min-width: 901px) {
   .feature-image img {
     height: 100%;
@@ -216,13 +195,6 @@ ico,
   bottom: 0;
   left: 0;
   position: absolute;
-}
-@media (min-width: 601px) and (max-width: 900px) {
-  .feature-image {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
 }
 @media (min-width: 901px) {
   .feature-image {
@@ -291,13 +263,6 @@ ico,
   -webkit-box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #f3f5f8;
           box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #f3f5f8;
 }
-@media (min-width: 601px) and (max-width: 900px) {
-  .feature {
-    grid-column-gap: 25px;
-    grid-row-gap: 5px;
-    grid-template-columns: 275px 1fr;
-  }
-}
 @media (min-width: 901px) {
   .feature {
     grid-column-gap: 25px;
@@ -307,44 +272,29 @@ ico,
 }
 .feature-image {
   margin-bottom: 25px;
-  top: -41px;
-  left: -41px;
-  right: -41px;
-}
-@media (min-width: 601px) and (max-width: 900px) {
-  .feature-image {
-    margin-bottom: 0;
-    right: 0;
-    bottom: -41px;
-  }
+  top: -40px;
+  left: -40px;
+  right: -40px;
 }
 @media (min-width: 901px) {
   .feature-image {
     margin-bottom: 0;
     right: 0;
-    bottom: -41px;
+    bottom: -40px;
   }
 }
 .feature-image::after {
-  top: 15px;
-  left: 15px;
-  right: 15px;
+  top: 14px;
+  left: 14px;
+  right: 14px;
   border-left: 1px solid rgba(96, 88, 88, 0.2);
   border-top: 1px solid rgba(96, 88, 88, 0.2);
   border-right: 1px solid rgba(96, 88, 88, 0.2);
 }
-@media (min-width: 601px) and (max-width: 900px) {
-  .feature-image::after {
-    right: 0;
-    bottom: 15px;
-    border-right: none;
-    border-bottom: 1px solid rgba(96, 88, 88, 0.2);
-  }
-}
 @media (min-width: 901px) {
   .feature-image::after {
     right: 0;
-    bottom: 15px;
+    bottom: 14px;
     border-right: none;
     border-bottom: 1px solid rgba(96, 88, 88, 0.2);
   }
