@@ -35,7 +35,7 @@
       "src": "https://via.placeholder.com/600x400.png?text=Placeholder+Image",
       "alt": "Placeholder image 600 pixels wide",
       "align": "center"
-    },
+    }
   ],
   "card-type":"library-aid",
   "heading": "Related Research Help",
@@ -94,6 +94,6 @@
       "link": {
         "href": ""
       }
-    },
+    }
   ]
 }
