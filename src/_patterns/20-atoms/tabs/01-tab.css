@@ -219,6 +219,9 @@ ico,
 .tab:active::after, .tab.is-active::after {
   content: url("../icons/php/icon.php?id=material-arrow_drop_down&color=082B73&size[width]=30&size[height]=30");
 }
+.tab-menu {
+  margin: 0;
+}
 .tab-menu::after {
   height: 1px;
 }
@@ -236,6 +239,11 @@ ico,
 }
 .tab-menu .tab:active, .tab-menu .tab.is-active, .tab-menu.-light .tab:active, .tab-menu.-light .tab.is-active {
   color: #336BE6;
+  /*margin-top: .5em;
+  border-top: solid 7px $active-color;
+  border-left: solid 7px transparent;
+  border-right: solid 7px transparent;
+  @include size(1px);*/
 }
 .tab-menu .tab:active::after, .tab-menu .tab.is-active::after, .tab-menu.-light .tab:active::after, .tab-menu.-light .tab.is-active::after {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #FFFFFF), color-stop(55%, #FFFFFF), color-stop(55%, transparent));
