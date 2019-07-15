@@ -125,5 +125,6 @@
   "60-templates-exhibitions-exhibition": "review",
   "60-templates-research-help-research-help-directory": "review",
   "60-templates-generic-landing": "construction",
-  "40-compounds-navigation-nav-menu-main": "review"
+  "40-compounds-navigation-nav-menu-main": "review",
+  "50-organisms-navigation-nav-bar-main": "construction"
 }
