@@ -145,6 +145,8 @@ ico,
 }
 @media (min-width: 901px) {
   .subnav-menu-main {
+    padding-top: 25px;
+    padding-bottom: 25px;
     width: 100vw;
   }
 }
@@ -182,11 +184,17 @@ ico,
   .-grouped.subnav-menu-main > *.-span {
     grid-column: 1/span 4 !important;
   }
+  .-grouped.subnav-menu-main > *.-span:last-child {
+    margin-bottom: -25px;
+  }
 }
 @media (min-width: 1200px) {
   .-grouped.subnav-menu-main {
     width: 730px;
   }
+}
+.-categorized.subnav-menu-main > *:last-child {
+  margin-bottom: 0;
 }
 .subnav-menu-main-heading {
   display: block;

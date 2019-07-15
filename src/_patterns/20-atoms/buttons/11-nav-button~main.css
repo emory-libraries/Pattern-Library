@@ -366,6 +366,12 @@ ico,
 }
 @media (min-width: 901px) {
   .nav-button {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .nav-button {
     padding-left: 25px;
     padding-right: 25px;
   }
