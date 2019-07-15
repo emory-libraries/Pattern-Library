@@ -1,0 +1,9 @@
+<div class="index-page">
+  <header class="index-page-header"></header>
+  {{#extend 'organisms-main' type='index-page' classes='index-page-main'}}
+    {{#content 'section-main-body'}}
+      {{> compounds-tiles columns=(objectify s=1 m=2 l=3) tile-type='utility'}}
+    {{/content}}
+  {{/extend}}
+  <footer class="index-page-footer"></footer>
+</div>
