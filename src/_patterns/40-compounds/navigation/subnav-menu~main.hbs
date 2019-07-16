@@ -84,7 +84,7 @@
 
     {{#each (filterHasNot navigation 'category')}}
       {{#if (hasOwn this 'resource')}}
-        {{> atoms-subnav-button-resource classes=''}}
+        {{> atoms-subnav-button-resource classes='' noscript=(default ../noscript false)}}
       {{else}}
         {{> atoms-subnav-button-main classes=''}}
       {{/if}}

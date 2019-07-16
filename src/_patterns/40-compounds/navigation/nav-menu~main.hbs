@@ -65,7 +65,8 @@
   </nav>
 </eul-nav-menu>
 
-{{!--<noscript>
+<noscript>
+
   <nav class="nav-menu-main">
 
     {{! Toggles }}
@@ -78,7 +79,7 @@
       {{#each navigation}}
         <div class="nav-menu-main-nav-group">
           {{> atoms-nav-button-main}}
-          {{> compounds-subnav-menu-main heading=label navigation=subnavigation}}
+          {{> compounds-subnav-menu-main heading=label navigation=subnavigation noscript=true}}
         </div>
       {{/each}}
 
@@ -89,7 +90,7 @@
 
       {{#each navigation}}
         {{> atoms-nav-button-main classes=''}}
-        {{> compounds-subnav-menu-main heading=label navigation=subnavigation}}
+        {{> compounds-subnav-menu-main heading=label navigation=subnavigation noscript=true}}
       {{/each}}
 
     </nav>
@@ -110,8 +111,16 @@
 
         <div class="nav-menu-main-nav-menu-area">
           {{#each navigation}}
-            {{> atoms-nav-button-main classes=''}}
-            {{> compounds-subnav-menu-main heading=label navigation=subnavigation}}
+            {{> atoms-nav-button-main classes='' mouseover=false mouseleave=false}}
+            {{> compounds-subnav-menu-main heading=label navigation=subnavigation mouseover=false mouseleave=false noscript=true}}
+          {{/each}}
+          {{#each utilities}}
+            {{#unless subnavigation}}
+              {{> atoms-nav-button-main classes='' link=true}}
+            {{else}}
+              {{> atoms-nav-button-main classes='' mouseover=false mouseleave=false}}
+              {{> compounds-subnav-menu-main heading=label navigation=subnavigation mouseover=false mouseleave=false noscript=true}}
+            {{/unless}}
           {{/each}}
         </div>
 
@@ -122,4 +131,4 @@
     </nav>
 
   </nav>
-</noscript>--}}
+</noscript>
