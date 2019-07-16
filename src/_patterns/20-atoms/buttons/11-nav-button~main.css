@@ -630,7 +630,7 @@ ico,
   opacity: 0.15;
   width: calc(100% - 20px);
 }
-.nav-button:not(.-utility):not(.-flyout):not(.-search):not(.-toggle):not(.-librarian):first-of-type::before, .nav-button.-main:first-of-type::before {
+.nav-button:not(.-utility):not(.-flyout):not(.-search):not(.-toggle):not(.-librarian):first-child::before, .nav-button.-main:first-child::before {
   content: none;
 }
 .nav-button.-toggle {

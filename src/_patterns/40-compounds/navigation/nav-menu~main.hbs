@@ -46,6 +46,14 @@
             {{> atoms-nav-button-main classes='' mouseover=false mouseleave=false}}
             {{> compounds-subnav-menu-main heading=label navigation=subnavigation mouseover=false mouseleave=false}}
           {{/each}}
+          {{#each utilities}}
+            {{#unless subnavigation}}
+              {{> atoms-nav-button-main classes='' link=true}}
+            {{else}}
+              {{> atoms-nav-button-main classes='' mouseover=false mouseleave=false}}
+              {{> compounds-subnav-menu-main heading=label navigation=subnavigation mouseover=false mouseleave=false}}
+            {{/unless}}
+          {{/each}}
         </div>
 
         {{#with button}}{{> atoms-nav-button-librarian classes=''}}{{/with}}
