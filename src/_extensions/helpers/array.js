@@ -21,7 +21,7 @@ module.exports = {
     const keys = key.split('.');
 
     // Set the comparator to equals by default.
-    if( !['==', '===', '>', '>=', '<', '<='].includes(comparator) ) comparator = '==';
+    if( !['==', '===', '>', '>=', '<', '<=', '!=', '!=='].includes(comparator) ) comparator = '==';
 
     // Filter the objects by key-value pair.
     objects = objects.filter((object) => {
@@ -43,10 +43,12 @@ module.exports = {
       // Verify that the values passes the comparison.
       switch(comparator) {
         case '===': return pointer === value;
+        case '!==': return pointer !== value;
         case '>': return pointer > value;
         case '>=': return pointer >= value;
         case '<': return pointer < value;
         case '<=': return pointer <= value;
+        case '!=': return pointer != value;
         default: return pointer == value;
       }
 
@@ -73,7 +75,7 @@ module.exports = {
     const keys = key.split('.');
 
     // Set the comparator to equals by default.
-    if( !['==', '===', '>', '>=', '<', '<='].includes(comparator) ) comparator = '==';
+    if( !['==', '===', '>', '>=', '<', '<=', '!=', '!=='].includes(comparator) ) comparator = '==';
 
     // Filter the objects by key-value pair.
     objects = objects.filter((object) => {
@@ -95,10 +97,12 @@ module.exports = {
       // Verify that the values passes the comparison.
       switch(comparator) {
         case '===': return pointer !== value;
+        case '!==': return pointer === value;
         case '>': return pointer <= value;
         case '>=': return pointer < value;
         case '<': return pointer >= value;
         case '<=': return pointer > value;
+        case '!=': return pointer == value;
         default: return pointer != value;
       }
 
