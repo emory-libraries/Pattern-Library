@@ -472,7 +472,7 @@ ico,
 }
 .-research-help-page.section-main .section-main-subtitle,
 .-research-help-page.section-main .section-main-section,
-.-research-help-page.section-main .section-main-sidebar {
+.-research-help-page.section-main .section-main-sidebar .section-main-content .section-main-spacer {
   display: none;
 }
 @media (max-width: 600px) {
