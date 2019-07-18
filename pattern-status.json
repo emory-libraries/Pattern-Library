@@ -114,7 +114,7 @@
   "50-organisms-flows-flow-content-boxes": "review",
   "50-organisms-sections-deep-dive": "review",
   "50-organisms-intros-intro-interior-cover": "review",
-  "50-organisms-navigation-nav-bar-main": "construction",
+  "50-organisms-navigation-nav-bar-main": "review",
   "60-templates-services-service-directory": "review",
   "60-templates-research-help-research-help": "review",
   "60-templates-generic-info": "review",
@@ -126,6 +126,6 @@
   "60-templates-exhibitions-gallery": "review",
   "60-templates-exhibitions-exhibition": "review",
   "60-templates-research-help-research-help-directory": "review",
-  "60-templates-generic-landing": "construction",
-  "60-templates-generic-index": "construction"
+  "60-templates-generic-landing": "review",
+  "60-templates-generic-index": "review"
 }
