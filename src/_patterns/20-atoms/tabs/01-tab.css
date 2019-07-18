@@ -285,19 +285,19 @@ ico,
 .tab-menu.-dark.-dropdown {
   background-color: #091C44;
 }
-.tab-switch:checked ~ .tab {
+.tab-switch:checked + .tab {
   color: #082B73;
 }
-.tab-switch:checked ~ .tab::after {
+.tab-switch:checked + .tab::after {
   width: 30px;
   height: 30px;
 }
-.tab-switch:checked ~ .tab::after {
+.tab-switch:checked + .tab::after {
   content: url("../icons/php/icon.php?id=material-arrow_drop_down&color=082B73&size[width]=30&size[height]=30");
 }
-.tab-switch:not(:checked) ~ .tab {
+.tab-switch:not(:checked) + .tab {
   color: #605858;
 }
-.tab-switch:not(:checked) ~ .tab::after {
+.tab-switch:not(:checked) + .tab::after {
   content: none;
 }
