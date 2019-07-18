@@ -43,6 +43,14 @@ Components.register('search', {
     // Set the default source.
     this.source = _.find(this.services, {default: true}).id;
 
+    // Listen for source changes as needed.
+    Events.$on(`${this._uid}:relay`, (data) => {
+
+      // Search for the source by ID.
+      if( _.find(this.services, {id: data.value}) ) this.source = _.find(this.services, {id: data.value});
+
+    });
+
   },
 
   computed: {
