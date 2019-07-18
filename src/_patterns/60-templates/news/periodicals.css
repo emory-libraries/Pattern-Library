@@ -133,3 +133,54 @@ ico,
 .ico-corner-up-right::before {
   content: "";
 }
+
+.periodicals-page {
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: 150px 1fr 420px;
+  grid-template-columns: 1fr;
+}
+.periodicals-page-header {
+  grid-area: header;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.periodicals-page-header::after {
+  content: "Header";
+}
+.periodicals-page-main {
+  grid-area: main;
+}
+.periodicals-page-main .intro-subtitle {
+  display: none;
+}
+.periodicals-page-footer {
+  grid-area: footer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.periodicals-page-footer::after {
+  content: "Footer";
+}
+
+.periodicals-page {
+  grid-gap: 20px;
+}
+.periodicals-page-header, .periodicals-page-footer {
+  border: 1px solid #B6BDCC;
+}
