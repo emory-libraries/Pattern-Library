@@ -1,0 +1,349 @@
+{
+  "navigation": [
+    {
+      "label": "Materials",
+      "subnavigation": [
+        {
+          "label": "Books",
+          "href": ""
+        },
+        {
+          "label": "Films and Videos",
+          "href": ""
+        },
+        {
+          "label": "Music and Scores",
+          "href": ""
+        },
+        {
+          "label": "Journals",
+          "href": ""
+        },
+        {
+          "label": "Databases",
+          "href": ""
+        },
+        {
+          "label": "Course Reserves",
+          "href": ""
+        },
+        {
+          "label": "eBooks and Audiobooks",
+          "href": ""
+        },
+        {
+          "label": "Research and Library Guides",
+          "href": ""
+        },
+        {
+          "label": "Theses and Dissertations",
+          "href": ""
+        },
+        {
+          "label": "Archival and Manuscripts",
+          "href": ""
+        },
+        {
+          "label": "Faculty Works",
+          "href": ""
+        },
+        {
+          "label": "Images and Maps",
+          "href": ""
+        },
+        {
+          "label": "Equipment and Gadgets",
+          "href": ""
+        }
+      ]
+    },
+    {
+      "label": "Tools",
+      "subnavigation": [
+        {
+          "label": "DiscoverE",
+          "alias": "Books, eBooks, Journals, Videos",
+          "href": "",
+          "resource": ""
+        },
+        {
+          "label": "eJournals",
+          "alias": "Academic Journals",
+          "href": "",
+          "resource": ""
+        },
+        {
+          "label": "ILLiad",
+          "alias": "Inter-Library Loans",
+          "href": "",
+          "resource": ""
+        },
+        {
+          "label": "Databases @ Emory",
+          "alias": "Databases",
+          "href": "",
+          "resource": ""
+        },
+        {
+          "label": "Emory Finding Aids",
+          "alias": "Archival and Manuscripts",
+          "href": "",
+          "resource": ""
+        },
+        {
+          "label": "Emory Center for Digital Scholarship",
+          "href": "",
+          "resource": ""
+        },
+        {
+          "label": "ETD",
+          "alias": "Theses and Dissertations",
+          "href": "",
+          "resource": ""
+        },
+        {
+          "label": "OpenEmory",
+          "alias": "Faculty Works",
+          "href": "",
+          "resource": ""
+        },
+        {
+          "label": "Overdrive",
+          "alias": "eBooks, Audiobooks",
+          "href": "",
+          "resource": ""
+        },
+        {
+          "label": "Ares",
+          "alias": "Course Reserves",
+          "href": "",
+          "resource": ""
+        },
+        {
+          "label": "LibGuides",
+          "alias": "Research Help and Guides",
+          "href": "",
+          "resource": ""
+        }
+      ]
+    },
+    {
+      "label": "Services",
+      "subnavigation": [
+        {
+          "group": "Around the Library",
+          "subnavigation": [
+            {
+              "label": "Reserve a Study or Presentation Room",
+              "href": ""
+            },
+            {
+              "label": "Find a Quiet Study Area",
+              "href": ""
+            },
+            {
+              "label": "Find a Workstation or Application",
+              "href": ""
+            },
+            {
+              "label": "Print, Copy, and Scan",
+              "href": ""
+            }
+          ]
+        },
+        {
+          "group": "Get Assistance",
+          "subnavigation": [
+            {
+              "label": "Borrow Equipment and Gadgets",
+              "href": ""
+            },
+            {
+              "label": "Research and Writing Assistance",
+              "href": ""
+            },
+            {
+              "label": "Access Course Reserves",
+              "href": ""
+            },
+            {
+              "label": "Request or Recall Materials",
+              "href": ""
+            }
+          ]
+        },
+        {
+          "group": "Technology Assistance",
+          "subnavigation": [
+            {
+              "label": "Connect Off-Campus (VPNs and Proxies)",
+              "href": ""
+            },
+            {
+              "label": "Connect to the Internet (On-Campus)",
+              "href": ""
+            },
+            {
+              "label": "Get Hardware or Software Support",
+              "href": ""
+            },
+            {
+              "label": "Repair Your Device or Computer",
+              "href": ""
+            }
+          ]
+        },
+        {
+          "group": "Make a Request",
+          "subnavigation": [
+            {
+              "label": "Submit an ILL Request (ILLiad)",
+              "href": ""
+            },
+            {
+              "label": "Request a Purchase",
+              "href": ""
+            },
+            {
+              "label": "Submit Ask eJournals",
+              "href": ""
+            },
+            {
+              "label": "Apply for an Individual Study Room",
+              "href": ""
+            }
+          ]
+        }
+      ],
+      "viewall": {
+        "href": ""
+      }
+    },
+    {
+      "label": "Research",
+      "subnavigation": [
+        {
+          "label": "Subject Librarians Directory",
+          "href": ""
+        },
+        {
+          "label": "Research Data",
+          "href": ""
+        },
+        {
+          "label": "Award and Research Programs",
+          "href": ""
+        },
+        {
+          "category": "Help With Research",
+          "subnavigation": [
+            {
+              "label": "Selecting Research Topics",
+              "href": ""
+            },
+            {
+              "label": "Finding Source Materials",
+              "href": ""
+            },
+            {
+              "label": "Evaluating Sources",
+              "href": ""
+            },
+            {
+              "label": "Citing and Using Sources",
+              "href": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Using the Library",
+      "subnavigation": [
+        {
+          "label": "Borrowing Privileges",
+          "href": ""
+        },
+        {
+          "label": "InterLibrary Lending (ILL)",
+          "href": ""
+        },
+        {
+          "label": "Library Maps and Spaces",
+          "href": ""
+        },
+        {
+          "label": "Course Reserves",
+          "href": ""
+        },
+        {
+          "label": "Guest Access",
+          "href": ""
+        },
+        {
+          "category": "Help Using the Library",
+          "subnavigation": [
+            {
+              "label": "Search for Specific Items",
+              "href": ""
+            },
+            {
+              "label": "Questions About Articles",
+              "href": ""
+            },
+            {
+              "label": "Questions About Books",
+              "href": ""
+            },
+            {
+              "label": "Printing, Logging In, and Access",
+              "href": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "utilities": [
+    {
+      "label": "Initiatives",
+      "href": ""
+    },
+    {
+      "label": "For Instructors",
+      "href": ""
+    }
+  ],
+  "flyouts": [
+    {
+      "label": "Events",
+      "href": "",
+      "icon": "material-event"
+    },
+    {
+      "label": "Maps",
+      "href": "",
+      "icon": "material-map"
+    },
+    {
+      "label": "Hours",
+      "href": "",
+      "icon": "material-access_time"
+    },
+    {
+      "label": "News",
+      "href": "",
+      "icon": "material-newspaper"
+    },
+    {
+      "label": "Contact",
+      "href": "",
+      "icon": "material-question_answer"
+    }
+  ],
+  "button": {
+    "label": "Ask a Librarian",
+    "href": "",
+    "icon": "material-help_outline"
+  }
+}

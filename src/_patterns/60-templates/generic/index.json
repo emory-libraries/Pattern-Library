@@ -1,0 +1,56 @@
+{
+  "title": "Collections",
+  "subtitle": "Submit a request for the library to purchase specific materials. Learn about the library's collection areas or explore the activities of the Preservation Office through its blog. Find information about donating to the library and learn about current collection-management related projects and activities.",
+  "tiles": [
+    {
+      "image": {
+        "src": "//source.unsplash.com/ggeZ9oyI-PE"
+      },
+      "link": {
+        "href": ""
+      },
+      "title": "Collection Policies",
+      "description": "This section covers the \"Woodruff Library Collection Management Policy\", as well as departmental, or subject, policies; which outline our efforts in building collections to support more than 30 academic programs. View policies by subject area in this section."
+    },
+    {
+      "image": {
+        "src": "//source.unsplash.com/PkyL3p9Kx8c"
+      },
+      "link": {
+        "href": ""
+      },
+      "title": "Digitization Program",
+      "description": " The digitization program at Emory digitizes texts, manuscripts, photographic materials, flat art and AV materials to make them more usable and accessible to scholars at Emory University and the world at large, and for preservation purposes. "
+    },
+    {
+      "image": {
+        "src": "//source.unsplash.com/Y_x747Yshlw"
+      },
+      "link": {
+        "href": ""
+      },
+      "title": "Gifts and Donations",
+      "description": "The Emory Libraries welcome gifts in kind from Emory students, faculty and staff and from the community. Gifts are subject to review in terms of their size, their relevance and scope - the library typically does not accept donations that are out of scope for our collections. "
+    },
+    {
+      "image": {
+        "src": "//source.unsplash.com/mLoWrEOtdTw"
+      },
+      "link": {
+        "href": ""
+      },
+      "title": "Preservation Office",
+      "description": "Preservation Office staff serves as a resource for the latest techniques and information, maintains the disaster plan for all Emory libraries, and monitors environmental conditions and lighting levels in exhibition areas in all library buildings. "
+    },
+    {
+      "image": {
+        "src": "//source.unsplash.com/GJao3ZTX9gU"
+      },
+      "link": {
+        "href": ""
+      },
+      "title": "Purchase Request Form",
+      "description": "Submit a request for the library to purchase specific materials. "
+    }
+  ]
+}

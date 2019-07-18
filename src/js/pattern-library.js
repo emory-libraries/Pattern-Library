@@ -316,7 +316,7 @@ $('.sg-pattern').each((i, el) => PatternLibrary.push(new Vue({el})));
 if( $('.sg-pattern').length === 0 ) {
 
   // Add a wraper to the body that can be used to create a Vue instance.
-  $('body').children().not('script').not('style').wrap($('<div>', {
+  $('body').children().not('script').not('style').not('noscript').wrap($('<div>', {
     id: 'vue'
   }));
 
