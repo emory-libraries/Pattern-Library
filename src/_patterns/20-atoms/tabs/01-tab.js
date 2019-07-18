@@ -1,7 +1,13 @@
 // Register a Tab component.
 Components.register('tab', {
 
-  props: {},
+  props: {
+    menu: {
+      type: String,
+      default: null
+    },
+    id: String
+  },
 
   data() {
     return {
@@ -14,7 +20,7 @@ Components.register('tab', {
 
   methods: {
 
-    click() {
+    activate() {
 
       // Use `Components.extend` to register a handler for your specific use case.
 
@@ -22,6 +28,21 @@ Components.register('tab', {
 
   },
 
-  filters: {}
+  filters: {},
+
+  created() {
+
+    // Register event listeners if a menu ID was given.
+    if( this.menu ) {
+
+      Events.$on(`${this.menu}:activate`, (uid) => {
+
+
+
+      });
+
+    }
+
+  }
 
 });

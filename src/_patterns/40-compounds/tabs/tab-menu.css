@@ -1,0 +1,243 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon/icomoon.eot");
+  src: url("../fonts/icomoon/icomoon.eot#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf") format("truetype"), url("../fonts/icomoon/icomoon.woff") format("woff"), url("../fonts/icomoon/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+ico,
+[class^=ico-],
+[class*=ico-] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-arrow-down-circle::before {
+  content: "";
+}
+
+.ico-arrow-left-circle::before {
+  content: "";
+}
+
+.ico-arrow-right-circle::before {
+  content: "";
+}
+
+.ico-arrow-up-circle::before {
+  content: "";
+}
+
+.ico-arrow-down-left::before {
+  content: "";
+}
+
+.ico-arrow-down-right::before {
+  content: "";
+}
+
+.ico-arrow-up-right::before {
+  content: "";
+}
+
+.ico-arrow-up-left::before {
+  content: "";
+}
+
+.ico-arrow-down::before {
+  content: "";
+}
+
+.ico-arrow-left::before {
+  content: "";
+}
+
+.ico-arrow-right::before {
+  content: "";
+}
+
+.ico-arrow-up::before {
+  content: "";
+}
+
+.ico-chevron-down::before {
+  content: "";
+}
+
+.ico-chevron-left::before {
+  content: "";
+}
+
+.ico-chevron-right::before {
+  content: "";
+}
+
+.ico-chevron-up::before {
+  content: "";
+}
+
+.ico-chevrons-down::before {
+  content: "";
+}
+
+.ico-chevrons-left::before {
+  content: "";
+}
+
+.ico-chevrons-right::before {
+  content: "";
+}
+
+.ico-chevrons-up::before {
+  content: "";
+}
+
+.ico-corner-down-left::before {
+  content: "";
+}
+
+.ico-corner-down-right::before {
+  content: "";
+}
+
+.ico-corner-left-down::before {
+  content: "";
+}
+
+.ico-corner-left-up::before {
+  content: "";
+}
+
+.ico-corner-right-down::before {
+  content: "";
+}
+
+.ico-corner-right-up::before {
+  content: "";
+}
+
+.ico-corner-up-left::before {
+  content: "";
+}
+
+.ico-corner-up-right::before {
+  content: "";
+}
+
+.tab-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+.tab-menu:not(.-dropdown) {
+  display: none;
+}
+@media (min-width: 901px) {
+  .tab-menu:not(.-dropdown) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.-dropdown.tab-menu {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0;
+}
+.-dropdown.tab-menu::after {
+  content: "";
+  display: block;
+  top: unset;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+.-dropdown.tab-menu select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  background-color: transparent;
+}
+@media (min-width: 901px) {
+  .-dropdown.tab-menu {
+    display: none;
+  }
+}
+
+.tab-menu.-dropdown {
+  font-size: 18px !important;
+  padding: 5px;
+}
+.tab-menu.-dropdown {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  text-align: left;
+  color: #336BE6;
+}
+.tab-menu.-dropdown::after {
+  width: calc(100% - 35px);
+  height: 1px;
+  background-color: #336BE6;
+  bottom: 5px;
+}
+.tab-menu.-dropdown select {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 35px;
+  background-image: url(../icons/php/icon.php?id=material-chevron_down&color=336BE6&size[width]=20&size[height]=20);
+  background-size: 20px auto;
+  background-repeat: no-repeat;
+  background-position: center right;
+  color: inherit;
+  font: inherit;
+  text-transform: inherit;
+}
+.tab-menu.-dropdown select option {
+  color: #605858;
+  font: initial;
+  font-family: sans-serif;
+}
+.tab-menu.-light.-dropdown {
+  color: #336BE6;
+}
+.tab-menu.-light.-dropdown::after {
+  background-color: #336BE6;
+}
+.tab-menu.-light.-dropdown select {
+  background-image: url(../icons/php/icon.php?id=material-chevron_down&color=336BE6&size[width]=20&size[height]=20);
+}
+.tab-menu.-dark.-dropdown {
+  color: #E9BF55;
+}
+.tab-menu.-dark.-dropdown::after {
+  background-color: #E9BF55;
+}
+.tab-menu.-dark.-dropdown select {
+  background-image: url(../icons/php/icon.php?id=material-chevron_down&color=E9BF55&size[width]=20&size[height]=20);
+}
