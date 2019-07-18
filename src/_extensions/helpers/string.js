@@ -4,8 +4,8 @@ const he = require('he');
 const regexEscape = require('escape-string-regexp');
 const uniqid = require('uniqid');
 
-// Export helpers.
-module.exports = {
+// Initialize helpers.
+const helpers = {
 
   // Combine two or more strings.
   combine( ...strs ) { return _.initial(strs).join('') },
@@ -36,7 +36,7 @@ module.exports = {
   trimSubstring( str, substr ) {
 
     // Trim the start and end of the string.
-    return this.trimSubstringEnd(this.trimSubstringStart(str, substr), substr);
+    return helpers.trimSubstringEnd(helpers.trimSubstringStart(str, substr), substr);
 
   },
 
@@ -80,6 +80,25 @@ module.exports = {
     // Return a unique ID with the prefix prepended.
     return uniqid(prefix);
 
+  },
+
+  // Determine if a string starts with another string.
+  startsWithSubstring( str, substr, options ) {
+
+    // Determine if the string starts with the substring.
+    return str.substring(0, substr.length) === substr;
+
+  },
+
+  // Determine if a string ends with another substring.
+  endsWithSubstring( str, substr, options ) {
+
+    // Determine if the string ends with the substring.
+    return str.substring(str.length - substr.length) === substr;
+    
   }
 
 };
+
+// Export helpers.
+module.exports = helpers;
