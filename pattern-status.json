@@ -101,6 +101,7 @@
   "40-compounds-lists-popular-links-menu": "review",
   "40-compounds-modules-slider": "review",
   "40-compounds-navigation-nav-menu-utility": "review",
+  "40-compounds-navigation-nav-menu-main": "review",
   "50-organisms-intros-intro-text": "review",
   "50-organisms-intros-intro-alt-text": "review",
   "50-organisms-intros-intro-heading": "review",
@@ -113,6 +114,7 @@
   "50-organisms-flows-flow-content-boxes": "review",
   "50-organisms-sections-deep-dive": "review",
   "50-organisms-intros-intro-interior-cover": "review",
+  "50-organisms-navigation-nav-bar-main": "construction",
   "60-templates-services-service-directory": "review",
   "60-templates-research-help-research-help": "review",
   "60-templates-generic-info": "review",
@@ -125,6 +127,5 @@
   "60-templates-exhibitions-exhibition": "review",
   "60-templates-research-help-research-help-directory": "review",
   "60-templates-generic-landing": "construction",
-  "40-compounds-navigation-nav-menu-main": "review",
-  "50-organisms-navigation-nav-bar-main": "construction"
+  "60-templates-generic-index": "construction"
 }
