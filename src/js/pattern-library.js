@@ -91,7 +91,7 @@ Components.extend('tab', {
 
   methods: {
 
-    click() {
+    activate() {
 
       // See if the tooltip is showing.
       if( this.showing === false ) {
@@ -121,13 +121,18 @@ Components.extend('tab', {
 
   mounted() {
 
-    // Create a tooltip.
-    this.tooltip = Tippy.one(this.$el, {
-      content: 'This would do something when clicked...',
-      placement: 'right',
-      arrow: true,
-      trigger: 'manual'
-    });
+    // Add a tooltip to demo the tab buttons.
+    if( $(this.$el).closest('#atoms-tab').length > 0 ) {
+
+      // Create a tooltip.
+      this.tooltip = Tippy.one(this.$el, {
+        content: 'This would do something when clicked...',
+        placement: 'right',
+        arrow: true,
+        trigger: 'manual'
+      });
+
+    }
 
   }
 
