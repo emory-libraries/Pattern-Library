@@ -9,6 +9,12 @@
                 isHover: {{default button.hover false}},
                 isFocus: {{default button.focus false}}
               },
+              cancel: {
+                isDisabled: {{#if cancelable}}{{default cancel.disabled true}}{{else}}true{{/if}},
+                isActive: {{#if cancelable}}{{default cancel.active false}}{{else}}false{{/if}},
+                isHover: {{#if cancelable}}{{default cancel.hover false}}{{else}}false{{/if}},
+                isFocus: {{#if cancelable}}{{default cancel.focus false}}{{else}}false{{/if}}
+              },
               input: {
                 isDisabled: {{default disabled false}},
                 isHover: {{default hover false}},
@@ -22,7 +28,7 @@
            v-model="query"
            autocomplete="{{#if autocomplete}}on{{else}}off{{/if}}"
            :placeholder="placeholder"
-           @input="button.isDisabled = !valid"
+           @input="button.isDisabled = !valid; cancel.isDisabled = !valid"
            @focus.native="input.isFocus = true"
            @blur.native="input.isFocus = false"
            @mouseover.native="input.isHover = true"
@@ -61,6 +67,30 @@
       {{/unless}}
     </a>
 
+    {{#if cancelable}}
+    <button class="link search-cancel"
+            @click="reset"
+            @mousedown.native="cancel.isActive = true"
+            @mouseup.native="cancel.isActive = false"
+            @keydown.enter="cancel.isActive = true"
+            @keyup.enter="cancel.isActive = false"
+            @focus.native="cancel.isFocus = true"
+            @blur.native="cancel.isFocus = false"
+            @mouseover.native="cancel.isHover = true"
+            @mouseleave.native="cancel.isHover = false"
+            @keypress.enter="reset"
+            :class="{
+               'is-disabled': cancel.isDisabled,
+               'is-active': cancel.isActive,
+               'is-hover': cancel.isHover,
+               'is-focus': cancel.isFocus,
+             }"
+             :disabled="cancel.isDisabled"
+             v-show="valid">
+      Cancel
+    </button>
+    {{/if}}
+
   </div>
 
 </eul-search>
@@ -96,6 +126,13 @@
              value="{{#unless (and ../layout (eq ../layout 'contained'))}}{{../button.label}}{{/unless}}"
              class="button search-button{{#if ../button.disabled}} is-disabled{{/if}}{{#if ../button.active}} is-active{{/if}}{{#if ../button.hover}} is-hover{{/if}}{{#if ../button.focus}} is-focus{{/if}}"
              {{#if ../button.disabled}}disabled{{/if}}>
+
+      {{#if cancelable}}
+        <input type="reset"
+               value="Cancel"
+               class="link search-cancel{{#if ../cancel.disabled}} is-disabled{{/if}}{{#if ../cancel.active}} is-active{{/if}}{{#if ../cancel.hover}} is-hover{{/if}}{{#if ../cancel.focus}} is-focus{{/if}}"
+               {{#if ../cancel.disabled}}disabled{{/if}}>
+      {{/if}}
 
     </form>
 

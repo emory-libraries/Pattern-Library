@@ -20,6 +20,12 @@ Components.register('search', {
         isFocus: false,
         isDisabled: true
       },
+      cancel: {
+        isActive: false,
+        isHover: false,
+        isFocus: false,
+        isDisabled: true
+      },
       input: {
         isHover: false,
         isFocus: false,
@@ -32,7 +38,19 @@ Components.register('search', {
 
     validate( $event ) {
 
+      // Validate search field, and if it's invalid, prevent the search from submitting.
       if( !this.valid ) $event.preventDefault();
+
+    },
+
+    reset( $event ) {
+
+      // Reset the search query.
+      this.query = '';
+
+      // Disable the button again.
+      this.button.isDisabled = true;
+      this.cancel.isDisabled = true;
 
     }
 
