@@ -1,0 +1,28 @@
+{
+  "tabs": [
+    {
+      "label": "Library Catalog",
+      "value": "library-catalog"
+    },
+    {
+      "label": "Databases",
+      "value": "databases"
+    },
+    {
+      "label": "eJournals",
+      "value": "ejournals"
+    },
+    {
+      "label": "Research & Course Guides",
+      "value": "research-course-guides"
+    },
+    {
+      "label": "Finding Aids",
+      "value": "finding-aids"
+    },
+    {
+      "label": "This Site",
+      "value": "this-site"
+    }
+  ]
+}
