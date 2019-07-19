@@ -73,6 +73,7 @@
 @import '../../_patterns/30-molecules/feeds/feed-item';
 @import '../../_patterns/30-molecules/flyouts/flyout-feed-item';
 @import '../../_patterns/30-molecules/flyouts/flyout-info-item';
+@import '../../_patterns/30-molecules/forms/form~libwizard';
 @import '../../_patterns/30-molecules/lists/sidebar-list-item';
 @import '../../_patterns/30-molecules/lists/utility-list-item';
 @import '../../_patterns/30-molecules/media/figure';
@@ -93,9 +94,11 @@
 @import '../../_patterns/40-compounds/navigation/nav-menu~main';
 @import '../../_patterns/40-compounds/navigation/nav-menu~utility';
 @import '../../_patterns/40-compounds/navigation/subnav-menu~main';
+@import '../../_patterns/40-compounds/navigation/tab-menu';
 @import '../../_patterns/40-compounds/related/related~cards';
 @import '../../_patterns/40-compounds/related/related~links';
 @import '../../_patterns/40-compounds/related/related~topics';
+@import '../../_patterns/40-compounds/tabs/tab-menu';
 @import '../../_patterns/40-compounds/tiles/tiles';
 @import '../../_patterns/50-organisms/flows/flow-content-boxes';
 @import '../../_patterns/50-organisms/intros/intro~alt-heading';
@@ -105,6 +108,7 @@
 @import '../../_patterns/50-organisms/intros/intro~hero';
 @import '../../_patterns/50-organisms/intros/intro~interior-cover';
 @import '../../_patterns/50-organisms/intros/intro~text';
+@import '../../_patterns/50-organisms/navigation/search-menu';
 @import '../../_patterns/50-organisms/navigation/nav-bar~main';
 @import '../../_patterns/50-organisms/sections/deep-dive';
 @import '../../_patterns/50-organisms/sections/main';
@@ -112,10 +116,12 @@
 @import '../../_patterns/50-organisms/sections/minor';
 @import '../../_patterns/60-templates/exhibitions/exhibition';
 @import '../../_patterns/60-templates/exhibitions/gallery';
+@import '../../_patterns/60-templates/generic/form';
 @import '../../_patterns/60-templates/generic/index';
 @import '../../_patterns/60-templates/generic/info';
 @import '../../_patterns/60-templates/generic/landing';
 @import '../../_patterns/60-templates/materials/material';
+@import '../../_patterns/60-templates/news/periodicals';
 @import '../../_patterns/60-templates/research-help/research-help-directory';
 @import '../../_patterns/60-templates/research-help/research-help';
 @import '../../_patterns/60-templates/services/service-directory';
