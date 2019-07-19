@@ -89,45 +89,50 @@ Components.extend('tab', {
     };
   },
 
-  methods: {
-
-    click() {
-
-      // See if the tooltip is showing.
-      if( this.showing === false ) {
-
-        // Show the tooltip.
-        this.tooltip.show();
-
-        // Set the flag.
-        this.showing = true;
-
-        // Automatically hide the tooltip.
-        setTimeout(() => {
-
-          // Hide the tooltip.
-          this.tooltip.hide();
-
-          // Reset the flag.
-          this.showing = false;
-
-        }, this.timeout);
-
-      }
-
-    }
-
-  },
-
   mounted() {
 
-    // Create a tooltip.
-    this.tooltip = Tippy.one(this.$el, {
-      content: 'This would do something when clicked...',
-      placement: 'right',
-      arrow: true,
-      trigger: 'manual'
-    });
+    // Add a tooltip to demo the tab buttons.
+    if( $(this.$el).closest('#atoms-tab').length > 0 ) {
+
+      // Create a tooltip.
+      const tooltip = Tippy.one(this.$el, {
+        content: 'This would do something when clicked...',
+        placement: 'right',
+        arrow: true,
+        trigger: 'manual'
+      });
+
+      // Initialize a showing flag.
+      let showing = false;
+
+      // When the tab is clicked, show the tooltip.
+      $(this.$el).on('click', () => {
+
+        // See if the tooltip is showing.
+        if( showing === false ) {
+
+          // Show the tooltip.
+          tooltip.show();
+
+          // Set the flag.
+          showing = true;
+
+          // Automatically hide the tooltip.
+          setTimeout(() => {
+
+            // Hide the tooltip.
+            tooltip.hide();
+
+            // Reset the flag.
+            showing = false;
+
+          }, 2000);
+
+        }
+
+      });
+
+    }
 
   }
 
