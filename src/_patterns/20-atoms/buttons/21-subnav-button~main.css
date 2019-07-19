@@ -210,6 +210,11 @@ ico,
       -ms-flex-pack: center;
           justify-content: center;
 }
+.-viewall.subnav-button {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+}
 @media (min-width: 901px) {
   .-viewall.subnav-button {
     display: -webkit-box;
@@ -222,6 +227,8 @@ ico,
         -ms-flex-pack: center;
             justify-content: center;
     min-height: 75px;
+    position: relative;
+    bottom: unset;
   }
 }
 .-viewall.is-dismissed.subnav-button {
@@ -238,6 +245,10 @@ ico,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 .-back.subnav-button::before {
   display: -webkit-box;
