@@ -1,0 +1,44 @@
+{
+  "title": "Staff Directory",
+  "subtitle": "Find a staff member within the library.",
+  "staff": [
+    {
+      "name": "Ellen Ambrose",
+      "title": "South Asian Studies and Religion Librarian",
+      "library": "Emory Libraries",
+      "phone": 4047271277,
+      "email": "ellen@example.com",
+      "gender": "female",
+      "cv": {"href": "//example.com/ellen-ambrose#cv"},
+      "link": {"href": "//example.com/ellen-ambrose"}
+    },
+    {
+      "name": "Erica Bruchko",
+      "title": "African American Studies and U.S. History Librarian",
+      "library": "Emory Libraries",
+      "phone": 4047271277,
+      "email": "erica@example.com",
+      "gender": "female",
+      "link": {"href": "//example.com/erica-bruchko"}
+    },
+    {
+      "name": "Phil MacLeod",
+      "title": "Spanish, Portuguese, and Latin American Studies Librarian",
+      "library": "Emory Libraries",
+      "phone": 4047271277,
+      "email": "phil@example.com",
+      "gender": "male",
+      "link": {"href": "//example.com/phil-macleod"}
+    },
+    {
+      "name": "Jeremy Kupsco",
+      "title": "Research Informationist",
+      "library": "Woodruff Health Sciences Center Library",
+      "phone": 4047271277,
+      "email": "jeremy@example.com",
+      "gender": "male",
+      "cv": {"href": "//example.com/jeremy-kupsco#cv"},
+      "link": {"href": "//example.com/jeremy-kupsco"}
+    }
+  ]
+}

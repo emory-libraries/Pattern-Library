@@ -1,12 +1,16 @@
 // Load dependencies.
 const _ = require('lodash');
+const he = require('he');
 const regexEscape = require('escape-string-regexp');
+const uniqid = require('uniqid');
 
-// Export helpers.
-module.exports = {
+// Initialize helpers.
+const helpers = {
 
-  combine( ...strs ) { return strs.slice(0, -1).join('') },
+  // Combine two or more strings.
+  combine( ...strs ) { return _.initial(strs).join('') },
 
+  // Trim a substring from the start of another string.
   trimSubstringStart( str, substr, mods ) {
 
     // Set mods if not set.
@@ -17,6 +21,7 @@ module.exports = {
 
   },
 
+  // Trim a substring from the end of another string.
   trimSubstringEnd( str, substr, mods ) {
 
     // Set mods if not set.
@@ -27,8 +32,15 @@ module.exports = {
 
   },
 
-  trimSubstring( str, substr ) { return this.trimSubstringEnd(this.trimSubstringStart(str, substr), substr); },
+  // Trim a substring from another string.
+  trimSubstring( str, substr ) {
 
+    // Trim the start and end of the string.
+    return helpers.trimSubstringEnd(helpers.trimSubstringStart(str, substr), substr);
+
+  },
+
+  // Override the broken `truncateWords` helper in `handlebars-helpers`.
   truncateWords( str, count, suffix ) {
 
     if (_.isString(str) && _.isNumber(count)) {
@@ -51,6 +63,42 @@ module.exports = {
 
     }
 
+  },
+
+  // Encode a string to use HTML character codes as needed.
+  encodeHTML( str ) { return he.encode(str, {useNamedReferences: true}); },
+
+  // Decode a string using HTML character codes.
+  decodeHTML( str ) { return he.decode(str); },
+
+  // Generate a unique ID.
+  uid( prefix ) {
+
+    // Use an empty prefix if none was given.
+    prefix = _.isString(prefix) ? prefix : '';
+
+    // Return a unique ID with the prefix prepended.
+    return uniqid(prefix);
+
+  },
+
+  // Determine if a string starts with another string.
+  startsWithSubstring( str, substr, options ) {
+
+    // Determine if the string starts with the substring.
+    return str.substring(0, substr.length) === substr;
+
+  },
+
+  // Determine if a string ends with another substring.
+  endsWithSubstring( str, substr, options ) {
+
+    // Determine if the string ends with the substring.
+    return str.substring(str.length - substr.length) === substr;
+    
   }
 
 };
+
+// Export helpers.
+module.exports = helpers;

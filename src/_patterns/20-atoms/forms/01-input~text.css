@@ -1,3 +1,139 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon/icomoon.eot");
+  src: url("../fonts/icomoon/icomoon.eot#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf") format("truetype"), url("../fonts/icomoon/icomoon.woff") format("woff"), url("../fonts/icomoon/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+ico,
+[class^=ico-],
+[class*=ico-] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-arrow-down-circle::before {
+  content: "";
+}
+
+.ico-arrow-left-circle::before {
+  content: "";
+}
+
+.ico-arrow-right-circle::before {
+  content: "";
+}
+
+.ico-arrow-up-circle::before {
+  content: "";
+}
+
+.ico-arrow-down-left::before {
+  content: "";
+}
+
+.ico-arrow-down-right::before {
+  content: "";
+}
+
+.ico-arrow-up-right::before {
+  content: "";
+}
+
+.ico-arrow-up-left::before {
+  content: "";
+}
+
+.ico-arrow-down::before {
+  content: "";
+}
+
+.ico-arrow-left::before {
+  content: "";
+}
+
+.ico-arrow-right::before {
+  content: "";
+}
+
+.ico-arrow-up::before {
+  content: "";
+}
+
+.ico-chevron-down::before {
+  content: "";
+}
+
+.ico-chevron-left::before {
+  content: "";
+}
+
+.ico-chevron-right::before {
+  content: "";
+}
+
+.ico-chevron-up::before {
+  content: "";
+}
+
+.ico-chevrons-down::before {
+  content: "";
+}
+
+.ico-chevrons-left::before {
+  content: "";
+}
+
+.ico-chevrons-right::before {
+  content: "";
+}
+
+.ico-chevrons-up::before {
+  content: "";
+}
+
+.ico-corner-down-left::before {
+  content: "";
+}
+
+.ico-corner-down-right::before {
+  content: "";
+}
+
+.ico-corner-left-down::before {
+  content: "";
+}
+
+.ico-corner-left-up::before {
+  content: "";
+}
+
+.ico-corner-right-down::before {
+  content: "";
+}
+
+.ico-corner-right-up::before {
+  content: "";
+}
+
+.ico-corner-up-left::before {
+  content: "";
+}
+
+.ico-corner-up-right::before {
+  content: "";
+}
+
 .input {
   -moz-appearance: none;
        appearance: none;
@@ -395,26 +531,45 @@
 .input-container.-row {
   --columns: 2;
   --layout: repeat(var(--columns), auto);
+  --flow: column;
+  --auto: min-content;
   --gap: 1em;
   grid-template-columns: var(--layout);
+  grid-template-rows: -webkit-min-content;
+  grid-template-rows: min-content;
+  grid-auto-flow: var(--flow);
+  grid-auto-columns: var(--auto);
   grid-gap: var(--gap);
 }
-.input-container.-columns {
+.input-container.-column {
   --rows: 2;
   --layout: repeat(var(--rows), auto);
+  --flow: row;
+  --auto: min-content;
   --gap: 1em;
+  grid-template-columns: 1fr;
   grid-template-rows: var(--layout);
+  grid-auto-flow: var(--flow);
+  grid-auto-rows: var(--auto);
   grid-gap: var(--gap);
 }
 .input-container.-grid {
   --columns: 2;
   --rows: 2;
   --gap: 1em;
+  --gap-rows: 1em;
+  --gap-columns: 1em;
   --layout-rows: repeat(var(--rows), auto);
   --layout-columns: repeat(var(--columns), auto);
+  --auto-rows: min-content;
+  --auto-columns: min-content;
   grid-template-columns: var(--layout-columns);
   grid-template-rows: var(--layout-rows);
+  grid-auto-rows: var(--auto-rows);
+  grid-auto-columns: var(--auto-columns);
   grid-gap: var(--gap);
+  grid-row-gap: var(--gap-rows);
+  grid-column-gap: var(--gap-columns);
 }
 .input-group {
   margin-top: 2em;

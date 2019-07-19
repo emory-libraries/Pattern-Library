@@ -1,0 +1,52 @@
+{
+  "name": "Ellen Ambrosone, PhD",
+  "title": "South Asian Studies and Religions Librarian",
+  "email": "ellen.ambrosone@emory.edu",
+  "phone": 4047271277,
+  "fax": 4047271278,
+  "address": {
+    "name": "Oxford College Library",
+    "street": "801 Emory St.",
+    "city": "Oxford",
+    "state": "Georgia",
+    "zip": 30054
+  },
+  "thumbnail": "//source.unsplash.com/4Xk43LiDtZc/450x500",
+  "guides": {
+    "href": "//example.com/ellen#research-guides"
+  },
+  "cv": {
+    "href": "//example.com/ellen#cv"
+  },
+  "libcal": "//example.com/ellen#libcal",
+  "subjects": [
+    "Religion",
+    "South Asian History",
+    "South Asian Literature",
+    "South Asian Religions",
+    "South Asian Studies"
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Arts",
+      "major": "Political Science",
+      "school": "Butler University",
+      "address": "Indianapolis, Ind."
+    },
+    {
+      "degree": "Master of Arts",
+      "major": "Divinity",
+      "concentration": "History of Religion",
+      "school": "University of Chicago Divinity School",
+      "address": "Chicago, Ill."
+    },
+    {
+      "degree": "Doctor of Philosophy",
+      "major": "South Asian Languages and Civilizations",
+      "school": "University of Chicago",
+      "address": "Chicago, Ill."
+    }
+  ],
+  "quote": "E fore cillum dolor arbitror. Qui aute praetermissum, e de veniam multos sint ubi nam malis appellat illustriora, non eu efflorescere. E iis graviterque se ingeniis malis multos offendit nulla, e varias commodo despicationes, in irure exquisitaque, nulla concursionibus ullamco multos laboris se culpa de vidisse iis nisi.",
+  "bio": "<p>Ellen Ambrosone joined Emory's Robert W. Woodruff Library in 2016 as the South Asian Studies librarian. In 2017, she also became the subject librarian for Religion. She has a BA in Political Science from Butler University, an MA in Divinity with a focus on the History of Religions from the University of Chicago Divinity School, and a PhD in South Asian Languages and Civilizations from the University of Chicago. In the spring of 2016, she completed her dissertation, \"Making Modern Malayalam: Literary and Educational Practices in Nineteenth-Century Kerala.\" In addition to area-specific expertise, Ellen cultivated hands-on knowledge of the academic library environment when she worked in Special Collections at the Joseph Regenstein Library at the University of Chicago.</p><p>Ellen is also a member of the Association for Asian Studies (AAS) and the American Library Association (ALA).</p><p>Ellen supports the South Asian Studies community at Emory primarily across the Departments of Middle Eastern and South Asian Studies (MESAS), Religion, and History. Her current interests include cultivating digital resources for the study of South Asia and supporting digital humanities scholarship. In April 2018, she co-organized and hosted the Emory Digital Humanities Symposium: DH for the Study and Teaching of South Asia. Her research interests also include the history of print, the emergence of public and university libraries and reading rooms, and language reform in South Asia.</p>"
+}

@@ -13,3 +13,5 @@ pattern_exports/
 env.json
 secret.json
 *.temp.*
+/dist/*-push/**/*
+src/_patterns/**/*.temp.scss

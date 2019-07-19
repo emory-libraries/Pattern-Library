@@ -182,25 +182,30 @@ Components.extend('filter-dropdown', {
 
   mounted() {
 
-    // Insert a sample list to help demonstrate how the component works.
-    const $list = $('<div>', {
-      class: 'pl-grid'
-    }).css({
-      '--columns-l': '2',
-      '--columns-m': '1',
-      '--columns-s': '1',
-    }).insertAfter(this.$el);
+    // Add some data to our dropdown filter to demo it.
+    if( $(this.$el).closest('#atoms-filter-dropdown').length > 0 ) {
 
-    // Populate the list using our index items.
-    this.fuzzy.populate($list, {
-      template: `
-      <div class="pl-block">
-        <h5 class="pl-title">:title</h6>
-        <p class="pl-date">:date</p>
-        <p class="pl-description">:description</p>
-      </div>`,
-      css: {margin: 0}
-    });
+      // Insert a sample list to help demonstrate how the component works.
+      const $list = $('<div>', {
+        class: 'pl-grid'
+      }).css({
+        '--columns-l': '2',
+        '--columns-m': '1',
+        '--columns-s': '1',
+      }).insertAfter(this.$el);
+
+      // Populate the list using our index items.
+      this.fuzzy.populate($list, {
+        template: `
+        <div class="pl-block">
+          <h5 class="pl-title">:title</h6>
+          <p class="pl-date">:date</p>
+          <p class="pl-description">:description</p>
+        </div>`,
+        css: {margin: 0}
+      });
+
+    }
 
   }
 
@@ -311,7 +316,7 @@ $('.sg-pattern').each((i, el) => PatternLibrary.push(new Vue({el})));
 if( $('.sg-pattern').length === 0 ) {
 
   // Add a wraper to the body that can be used to create a Vue instance.
-  $('body').children().not('script').not('style').wrap($('<div>', {
+  $('body').children().not('script').not('style').not('noscript').wrap($('<div>', {
     id: 'vue'
   }));
 
