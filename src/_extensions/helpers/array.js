@@ -21,7 +21,7 @@ module.exports = {
     const keys = key.split('.');
 
     // Set the comparator to equals by default.
-    if( !['==', '===', '>', '>=', '<', '<='].includes(comparator) ) comparator = '==';
+    if( !['==', '===', '>', '>=', '<', '<=', '!=', '!=='].includes(comparator) ) comparator = '==';
 
     // Filter the objects by key-value pair.
     objects = objects.filter((object) => {
@@ -43,11 +43,67 @@ module.exports = {
       // Verify that the values passes the comparison.
       switch(comparator) {
         case '===': return pointer === value;
+        case '!==': return pointer !== value;
         case '>': return pointer > value;
         case '>=': return pointer >= value;
         case '<': return pointer < value;
         case '<=': return pointer <= value;
+        case '!=': return pointer != value;
         default: return pointer == value;
+      }
+
+    });
+
+    // Return the result.
+    return objects;
+
+  },
+
+  // Filter an array of objects to extract only items not containing a given key-value pair.
+  filterWhereNot( arrayOfObjects, key, value, comparator ) {
+
+    // Ignore non-arrays.
+    if( type(arrayOfObjects) != 'array' ) return [];
+
+    // Extract all objects within the array.
+    let objects = arrayOfObjects.filter((item) => type(item) == 'object');
+
+    // Ignore arrays that don't contain any objects.
+    if( objects.length === 0 ) return [];
+
+    // Parse the keys, which may have been passed in dot-delimited notation.
+    const keys = key.split('.');
+
+    // Set the comparator to equals by default.
+    if( !['==', '===', '>', '>=', '<', '<=', '!=', '!=='].includes(comparator) ) comparator = '==';
+
+    // Filter the objects by key-value pair.
+    objects = objects.filter((object) => {
+
+      // Initialize a pointer.
+      let pointer = object;
+
+      // Move the pointer according to keys.
+      for( key of keys ) {
+
+        // Exit if the key does not exist.
+        if( !pointer[key] ) return false;
+
+        // Otherwise, move the pointer.
+        pointer = pointer[key];
+
+      }
+
+      // Verify that the values passes the comparison.
+      switch(comparator) {
+        case '===': return pointer !== value;
+        case '!==': return pointer === value;
+        case '>': return pointer <= value;
+        case '>=': return pointer < value;
+        case '<': return pointer >= value;
+        case '<=': return pointer > value;
+        case '!=': return pointer == value;
+        default: return pointer != value;
       }
 
     });

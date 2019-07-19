@@ -142,16 +142,7 @@ ico,
   grid-template-rows: repeat(3, -webkit-min-content);
   grid-template-rows: repeat(3, min-content);
 }
-@media (min-width: 601px) and (max-width: 900px) {
-  .branding-header {
-    grid-template-areas: "badge organization organization" "badge division dropdown";
-    grid-template-columns: -webkit-min-content -webkit-max-content -webkit-min-content;
-    grid-template-columns: min-content max-content min-content;
-    grid-template-rows: repeat(2, -webkit-min-content);
-    grid-template-rows: repeat(2, min-content);
-  }
-}
-@media (min-width: 901px) {
+@media (min-width: 1200px) {
   .branding-header {
     grid-template-areas: "badge organization organization" "badge division dropdown";
     grid-template-columns: -webkit-min-content -webkit-max-content -webkit-min-content;
@@ -182,17 +173,7 @@ ico,
           transform: translate3d(-50%, -50%, 0);
   width: 100%;
 }
-@media (min-width: 601px) and (max-width: 900px) {
-  .branding-header-badge svg {
-    position: absolute;
-    display: block;
-    left: 50%;
-    -webkit-transform: translatex(-50%);
-            transform: translatex(-50%);
-    top: 0;
-  }
-}
-@media (min-width: 901px) {
+@media (min-width: 1200px) {
   .branding-header-badge svg {
     position: absolute;
     display: block;
@@ -252,16 +233,15 @@ ico,
 .branding-header-badge svg {
   height: 85px;
 }
-@media (min-width: 601px) and (max-width: 900px) {
+@media (min-width: 901px) {
   .branding-header-badge {
     width: 87.5px;
   }
   .branding-header-badge svg {
-    top: -20px;
     height: 97.5px;
   }
 }
-@media (min-width: 901px) {
+@media (min-width: 1200px) {
   .branding-header-badge {
     width: 100px;
   }
@@ -295,11 +275,6 @@ ico,
   text-align: left;
   color: #091C44;
 }
-@media (min-width: 601px) and (max-width: 900px) {
-  .branding-header-organization {
-    font-size: 14px !important;
-  }
-}
 @media (min-width: 901px) {
   .branding-header-organization {
     font-size: 14px !important;
@@ -319,11 +294,6 @@ ico,
   letter-spacing: normal;
   text-transform: none;
   color: #091C44;
-}
-@media (min-width: 601px) and (max-width: 900px) {
-  .branding-header-division {
-    font-size: 24px !important;
-  }
 }
 @media (min-width: 901px) {
   .branding-header-division {
@@ -346,12 +316,7 @@ ico,
   text-align: left;
   color: #5387F7;
 }
-@media (min-width: 601px) and (max-width: 900px) {
-  .branding-header-dropdown-menu {
-    margin-left: 1em;
-  }
-}
-@media (min-width: 901px) {
+@media (min-width: 1200px) {
   .branding-header-dropdown-menu {
     margin-left: 1em;
   }
