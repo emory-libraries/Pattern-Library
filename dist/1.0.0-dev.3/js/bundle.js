@@ -1563,10 +1563,21 @@ Components.register('search', {
     }
   },
   created: function created() {
+    var _this11 = this;
+
     // Set the default source.
     this.source = _.find(this.services, {
       "default": true
-    }).id;
+    }).id; // Listen for source changes as needed.
+
+    Events.$on("".concat(this._uid, ":relay"), function (data) {
+      // Search for the source by ID.
+      if (_.find(_this11.services, {
+        id: data.value
+      })) _this11.source = _.find(_this11.services, {
+        id: data.value
+      });
+    });
   },
   computed: {
     // Get the placeholder text.
@@ -1620,7 +1631,20 @@ Components.register('map', {
 }); // Register a Tab component.
 
 Components.register('tab', {
-  props: {},
+  props: {
+    menu: {
+      type: [String, Number],
+      "default": null
+    },
+    value: {
+      type: null,
+      "default": null
+    },
+    uid: {
+      type: String,
+      required: true
+    }
+  },
   data: function data() {
     return {
       isDisabled: false,
@@ -1630,10 +1654,32 @@ Components.register('tab', {
     };
   },
   methods: {
-    click: function click() {// Use `Components.extend` to register a handler for your specific use case.
+    activate: function activate() {
+      // Verify that the tab is within an existing menu.
+      if (this.menu) {
+        // Indicate to the menu that the activated tab should be changed.
+        Events.$emit("".concat(this.menu, ":activated"), {
+          uid: this.uid,
+          value: this.value,
+          initiator: this.uid
+        });
+      }
     }
   },
-  filters: {}
+  filters: {},
+  created: function created() {
+    var _this12 = this;
+
+    // Register event listeners if a menu ID was given.
+    if (this.menu) {
+      // Listen for changes to tab states within the tab menu.
+      Events.$on("".concat(this.menu, ":activated"), function (data) {
+        // If the activated UID matches the current tab's UID, indicate that the tab is activated.
+        if (data.uid === _this12.uid) _this12.isActive = true; // Otherwise, deactivate the tab.
+        else _this12.isActive = false;
+      });
+    }
+  }
 }); // Register a Branding Header component.
 
 Components.register('branding-header', {
@@ -1783,16 +1829,16 @@ Components.register('slider', {
     }
   },
   mounted: function mounted() {
-    var _this11 = this;
+    var _this13 = this;
 
     // Enable touch events.
     this.hammer = new Hammer(this.$el); // Setup swipe events on the slider.
 
     this.hammer.on('swipe', function (event) {
       // Go to the previous slide when a right swipe occurs.
-      if (event.direction === Hammer.DIRECTION_RIGHT) _this11.previous(); // Go to the next slide when a left swipe occurs.
+      if (event.direction === Hammer.DIRECTION_RIGHT) _this13.previous(); // Go to the next slide when a left swipe occurs.
 
-      if (event.direction === Hammer.DIRECTION_LEFT) _this11.next();
+      if (event.direction === Hammer.DIRECTION_LEFT) _this13.next();
     }); // Setup scroll events on the slider.
 
     $(this.$el).on('scroll', function (event) {
@@ -1872,6 +1918,52 @@ Components.register('nav-menu', {
   mounted: function mounted() {
     // Find the toggles.
     this.toggles = $(this.$el).children('.input.-toggle');
+  }
+}); // Register a Tab component.
+
+Components.register('tab-menu', {
+  props: {
+    uid: {
+      type: String,
+      required: true
+    },
+    relay: {
+      type: String,
+      "default": null
+    }
+  },
+  data: function data() {
+    return {
+      selected: false
+    };
+  },
+  methods: {
+    change: function change($event) {
+      // When the dropdown is changed, indicate that a new tab menu item should be activated.
+      Events.$emit("".concat(this.uid, ":activated"), {
+        uid: this.selected.uid,
+        value: this.selected.value,
+        initiator: this.uid
+      });
+    }
+  },
+  filters: {},
+  created: function created() {
+    var _this14 = this;
+
+    // Listen for changes to tab states within the tab menu.
+    Events.$on("".concat(this.uid, ":activated"), function (data) {
+      // If a relay was given, then relay the data to the targeted relay element.
+      if (_this14.relay) Events.$emit("".concat(_this14.relay, ":relay"), {
+        uid: _this14.uid,
+        value: data.value
+      }); // If the tab menu was not the initiator of the event, then also update the selected tab menu item.
+
+      if (data.initiator !== _this14.uid) _this14.selected = {
+        uid: data.uid,
+        value: data.value
+      };
+    });
   }
 }); // Initialize the Vue.
 
