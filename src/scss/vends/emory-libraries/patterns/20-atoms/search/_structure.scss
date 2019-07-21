@@ -92,7 +92,7 @@
     display: grid;
     grid-template-areas: "box button cancel";
     grid-template-columns: 1fr auto;
-    align-items: center;
+    align-items: stretch;
   }
   
   // Builds the structure for form search boxes.
@@ -106,7 +106,7 @@
 
     // Modifies structure for search button.
     #{$selector}-button {
-      display: block;
+      display: flex;
       grid-area: button;
     }
     

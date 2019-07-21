@@ -17,16 +17,17 @@
                        "search";
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, min-content);
+  align-items: center;
 
   // Modify the search menu structure when not used for the home page.
   &:not(.-home) {
 
     // Adjust the search menu layout on larger screens.
     @include breakpoint-l {
-      grid-template-areas: "tabs tabs"
-                           "search back";
-      grid-template-columns: 2fr 1fr;
-      grid-template-rows: repeat(2, min-content);
+      grid-template-areas: "tabs tabs tabs"
+                           "search space back";
+      grid-template-columns: 3fr 1fr max-content;
+      grid-template-rows: min-content 50px;
     };
 
   }
@@ -56,6 +57,11 @@
     // Always force search to be full-width of its container.
     .search {
       width: 100%;
+
+      //Collapse margins for alignment with back button.
+      .-form {
+        margin: 0;
+      }
     }
 
     // Adjust the layout of search boxes when not used in the home page.

@@ -206,16 +206,18 @@ ico,
   display: grid;
   grid-template-areas: "box button cancel";
   grid-template-columns: 1fr auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 .-form.search .search-box {
   display: block;
   grid-area: box;
 }
 .-form.search .search-button {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   grid-area: button;
 }
 .-form.-contained.search .search-box {

@@ -88,6 +88,14 @@ $organisms-search-menu: (
     // Override search button styles.
     .search {
 
+      // Reset height and margins for alignment with back button
+      .-small,
+      .-form,
+      .-small .search-button {
+        height: auto;
+        margin: 0;
+      }
+
       // Set cancel button states.
       &-cancel {
         @include atoms-link(('color': $theme-cancel));
