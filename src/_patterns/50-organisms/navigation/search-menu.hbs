@@ -1,11 +1,5 @@
-{{! Generate a unique ID for the search menu. }}
-{{assign 'uid' (uid 'search-menu--')}}
-
-
 {{#unless (eq noscript true)}}
-  <eul-search-menu inline-template  :defaults="{}"
-                                    :uid="{{JSONstringify this.uid}}">
-    <div class="search-menu{{#if home}} -home {{/if}} {{#if (eq theme 'dark')}}-dark{{/if}}" data-uid="{{this.uid}}">
+    <div class="search-menu{{#if home}} -home {{/if}} {{#if (eq theme 'dark')}}-dark{{/if}}">
       <div class="search-menu-tabs">
           {{>compounds-tab-menu theme="dark"}}
       </div>
@@ -20,5 +14,4 @@
       </div>
       {{> atoms-button-toggle classes="search-menu-back"}}
     </div>
-  </eul-search-menu>
 {{/unless}}
