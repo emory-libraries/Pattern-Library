@@ -1,18 +1,24 @@
-<div class="search-menu{{#if home}} -home{{/if}}">
-  <div class="tab-menu-row">
-      {{>compounds-tab-menu}}
-  </div>
-  <div class="search-row">
-    <div class="search -form">
-      {{#if home}}
-      {{> atoms-search mode='big' layout='contained' classes="intro-home-search" id=search.id }}
-      {{else}}
-      {{>atoms-search mode='small'}}
-      {{/if}}
+{{! Generate a unique ID for the search menu. }}
+{{assign 'uid' (uid 'search-menu--')}}
+
+
+{{#unless (eq noscript true)}}
+  <eul-search-menu inline-template  :defaults="{}"
+                                    :uid="{{JSONstringify this.uid}}">
+    <div class="search-menu{{#if home}} -home {{/if}} {{#if (eq theme 'dark')}}-dark{{/if}}" data-uid="{{this.uid}}">
+      <div class="search-menu-tabs">
+          {{>compounds-tab-menu theme="dark"}}
+      </div>
+      <div class="search-menu-search">
+        <div class="search -form">
+          {{#if home}}
+          {{> atoms-search mode='big' layout='contained' classes="intro-home-search" id=search.id }}
+          {{else}}
+          {{>atoms-search cancelable=true mode='small'}}
+          {{/if}}
+        </div>
+      </div>
+      {{> atoms-button-toggle classes="search-menu-back"}}
     </div>
-    {{#unless home}}
-    {{>atoms-link classes="search-clear -underline" label="Cancel" icon=false}}
-    {{>atoms-button-toggle id=icon.id position="icon.position" classes="-toggle"}}
-    {{/unless}}
-  </div>
-</div>
+  </eul-search-menu>
+{{/unless}}
