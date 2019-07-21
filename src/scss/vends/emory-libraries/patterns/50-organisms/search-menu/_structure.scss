@@ -26,7 +26,7 @@
     @include breakpoint-l {
       grid-template-areas: "tabs tabs tabs"
                            "search space back";
-      grid-template-columns: 3fr 1fr max-content;
+      grid-template-columns: 8fr 1fr max-content;
       grid-template-rows: min-content 50px;
     };
 

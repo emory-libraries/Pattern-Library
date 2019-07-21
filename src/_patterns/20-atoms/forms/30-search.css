@@ -205,7 +205,8 @@ ico,
 .search:not(.-contained):not(.-form), .search-form {
   display: grid;
   grid-template-areas: "box button cancel";
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr -webkit-min-content 100px;
+  grid-template-columns: 1fr min-content 100px;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;

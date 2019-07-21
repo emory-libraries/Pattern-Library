@@ -173,8 +173,8 @@ ico,
 @media (min-width: 901px) {
   .search-menu:not(.-home) {
     grid-template-areas: "tabs tabs tabs" "search space back";
-    grid-template-columns: 3fr 1fr -webkit-max-content;
-    grid-template-columns: 3fr 1fr max-content;
+    grid-template-columns: 8fr 1fr -webkit-max-content;
+    grid-template-columns: 8fr 1fr max-content;
     grid-template-rows: -webkit-min-content 50px;
     grid-template-rows: min-content 50px;
   }
