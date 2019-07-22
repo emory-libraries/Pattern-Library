@@ -1,12 +1,12 @@
 {
-  "home": false,
-  "theme": "dark",
-  "icon": {
-    "id": "material-chevron_right",
-    "position": "left"
+
+  "back": {
+    "label": "Back to Menu",
+    "icon": {
+      "id": "material-chevron_right",
+      "position": "left"
+    }
   },
-  "label": "Back to Menu",
-  "id": "search",
   "tabs": [
     {
       "label": "Library Catalog",
@@ -22,7 +22,7 @@
     },
     {
       "label": "Research & Course Guides",
-      "value": "research-course-guides"
+      "value": "research-guides"
     },
     {
       "label": "Finding Aids",
@@ -37,7 +37,7 @@
     {
       "label": "Library Catalog",
       "placeholder": "Search the Emory Library Catalog",
-      "id": "catalog",
+      "id": "library-catalog",
       "src": "http://discovere.emory.edu/primo_library/libweb/action/dlSearch.do?institution=EMORY&vid=discovere&query=any,contains,:query&libsearch=woodruff",
       "default": true
     },
@@ -56,19 +56,19 @@
     {
       "label": "Research & Course Guides",
       "placeholder": "Search Research & Course Guides",
-      "id": "guides",
+      "id": "research-guides",
       "src": "http://guides.main.library.emory.edu/srch.php?q=:query&libsearch=woodruff"
     },
     {
       "label": "Finding Aids",
       "placeholder": "Search Manuscript and Archival Collections",
-      "id": "aids",
+      "id": "finding-aids",
       "src": "https://findingaids.library.emory.edu/search/?Submit=Search&keywords=:query&libsearch=woodruff"
     },
     {
       "label": "This Site",
       "placeholder": "Search this site on Google",
-      "id": "site",
+      "id": "this-site",
       "src": "https://www.google.com/search?q=:query%20site:web.library.emory.edu"
     }
   ],

@@ -7,6 +7,10 @@ Components.register('search', {
     param: {
       type: String,
       default: ':query'
+    },
+    uid: {
+      type: [String, Number],
+      required: true
     }
   },
 
@@ -43,14 +47,10 @@ Components.register('search', {
 
     },
 
-    reset( $event ) {
+    reset() {
 
       // Reset the search query.
       this.query = '';
-
-      // Disable the button again.
-      this.button.isDisabled = true;
-      this.cancel.isDisabled = true;
 
     }
 
@@ -59,10 +59,10 @@ Components.register('search', {
   created() {
 
     // Set the default source.
-    this.source = _.find(this.services, {default: true}).id;
+    this.source = _.find(this.services, {default: true}) || this.services[0];
 
     // Listen for source changes as needed.
-    Events.$on(`${this._uid}:relay`, (data) => {
+    Events.$on(`${this.uid}:relay`, (data) => {
 
       // Search for the source by ID.
       if( _.find(this.services, {id: data.value}) ) this.source = _.find(this.services, {id: data.value});
@@ -76,14 +76,14 @@ Components.register('search', {
     // Get the placeholder text.
     placeholder() {
 
-      return _.find(this.services, {id: this.source}).placeholder || '';
+      return _.find(this.services, {id: this.source.id}).placeholder || '';
 
     },
 
     // Get the search URL.
     href() {
 
-      return _.find(this.services, {id: this.source}).src.replace(this.param, this.query);
+      return _.find(this.services, {id: this.source.id}).src.replace(this.param, this.query);
 
     },
 
@@ -91,6 +91,17 @@ Components.register('search', {
     valid() {
 
       return !_.isNil(this.query) && this.query !== '';
+
+    }
+
+  },
+
+  watch: {
+
+    valid( isValid ) {
+
+      this.button.isDisabled = isValid === false;
+      this.cancel.isDisabled = isValid === false;
 
     }
 

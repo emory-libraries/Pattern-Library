@@ -17,17 +17,16 @@
                        "search";
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, min-content);
-  align-items: center;
 
   // Modify the search menu structure when not used for the home page.
   &:not(.-home) {
 
     // Adjust the search menu layout on larger screens.
     @include breakpoint-l {
-      grid-template-areas: "tabs tabs tabs"
-                           "search space back";
-      grid-template-columns: 8fr 1fr max-content;
-      grid-template-rows: min-content 50px;
+      grid-template-areas: "tabs tabs"
+                           "search back";
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: repeat(2, min-content);
     };
 
   }
@@ -57,11 +56,6 @@
     // Always force search to be full-width of its container.
     .search {
       width: 100%;
-
-      //Collapse margins for alignment with back button.
-      .-form {
-        margin: 0;
-      }
     }
 
     // Adjust the layout of search boxes when not used in the home page.
@@ -103,69 +97,5 @@
     };
 
   }
-
-  // .search-row {
-  //   display: grid;
-  //   grid-template-columns: 8fr 1fr 3fr 150px;
-  //   align-items: center;
-  //   margin: 0;
-  //
-  //   .search.-form {
-  //     grid-column: 1;
-  //     height: auto;
-  //   }
-  //   .-form.search .search-button {
-  //     display: flex;
-  //     text-decoration: none;
-  //   }
-  //   .search-clear {
-  //     grid-column: 2;
-  //     margin: 0 1em;
-  //     justify-self: center;
-  //   }
-  //
-  //   .-toggle {
-  //     grid-column: 4;
-  //     max-height: 40px;
-  //     font-size: .75em;
-  //     padding-left: 8px;
-  //     padding-right: 16px;
-  //   }
-  //   .button .icon.-left {
-  //       margin-right: 0;
-  //   }
-  //
-  //   .search {
-  //     margin: 0;
-  //   }
-  //
-  // }
-
-
-  // .search-form {
-  //   display: grid;
-  //   align-items: center;
-  //
-  //   @include breakpoint-l() {
-  //     grid-template-columns: 10fr 1fr 6fr;
-  //
-  //     .search {
-  //       grid-column: 1;
-  //     }
-  //
-  //     .subnav-button {
-  //       grid-column: 2/span 1;
-  //     }
-  //
-  //     .button {
-  //       grid-column: -1;
-  //     }
-  //   }
-  //
-  //   &.-home .search-input {
-  //     grid-column: 1/-1;
-  //   }
-  //
-  // }
 
 }

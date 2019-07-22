@@ -205,11 +205,10 @@ ico,
 .search:not(.-contained):not(.-form), .search-form {
   display: grid;
   grid-template-areas: "box button cancel";
-  grid-template-columns: 1fr -webkit-min-content 100px;
-  grid-template-columns: 1fr min-content 100px;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  grid-template-columns: 1fr auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .-form.search .search-box {
   display: block;
