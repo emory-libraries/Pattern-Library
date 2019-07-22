@@ -1,18 +1,24 @@
-<div class="search-menu{{#if home}} -home{{/if}}">
-  <div class="tab-menu-row">
-      {{>compounds-tab-menu}}
+{{!assign 'noscript' true}}
+
+{{! Generate a unique ID for the search box. }}
+{{assign 'searchUID' (uid 'search--')}}
+
+{{! Determine if a search form should be used instead of the default. }}
+{{#if (eq noscript true)}}{{assign 'form' true}}{{/if}}
+
+<div class="search-menu -{{default theme 'dark'}}{{#if home}} -home{{/if}}" data-uid="{{this.uid}}">
+  <span class="search-menu-context">{{default context 'Searching:'}}</span>
+  <div class="search-menu-tabs">
+    {{> compounds-tab-menu theme=(default theme 'dark') relay=searchUID}}
   </div>
-  <div class="search-row">
-    <div class="search -form">
-      {{#if home}}
-      {{> atoms-search mode='big' layout='contained' classes="intro-home-search" id=search.id }}
-      {{else}}
-      {{>atoms-search mode='small'}}
-      {{/if}}
-    </div>
+  <div class="search-menu-search">
     {{#unless home}}
-    {{>atoms-link classes="search-clear -underline" label="Cancel" icon=false}}
-    {{>atoms-button-toggle id=icon.id position="icon.position" classes="-toggle"}}
+      {{> atoms-search mode='small' layout=false cancelable=true uid=searchUID}}
+    {{else}}
+      {{> atoms-search mode='big' layout='contained' uid=searchUID}}
     {{/unless}}
+  </div>
+  <div class="search-menu-back">
+    {{#with back}}{{> atoms-button-toggle classes='search-menu-back' for=this.uid}}{{/with}}
   </div>
 </div>

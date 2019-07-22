@@ -1,4 +1,5 @@
 {
+  "cancelable": true,
   "id": "big-search",
   "services": [
     {
