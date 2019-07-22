@@ -1538,6 +1538,10 @@ Components.register('search', {
     param: {
       type: String,
       "default": ':query'
+    },
+    uid: {
+      type: [String, Number],
+      required: true
     }
   },
   data: function data() {
@@ -1545,6 +1549,12 @@ Components.register('search', {
       source: null,
       query: '',
       button: {
+        isActive: false,
+        isHover: false,
+        isFocus: false,
+        isDisabled: true
+      },
+      cancel: {
         isActive: false,
         isHover: false,
         isFocus: false,
@@ -1559,7 +1569,12 @@ Components.register('search', {
   },
   methods: {
     validate: function validate($event) {
+      // Validate search field, and if it's invalid, prevent the search from submitting.
       if (!this.valid) $event.preventDefault();
+    },
+    reset: function reset() {
+      // Reset the search query.
+      this.query = '';
     }
   },
   created: function created() {
@@ -1568,9 +1583,9 @@ Components.register('search', {
     // Set the default source.
     this.source = _.find(this.services, {
       "default": true
-    }).id; // Listen for source changes as needed.
+    }) || this.services[0]; // Listen for source changes as needed.
 
-    Events.$on("".concat(this._uid, ":relay"), function (data) {
+    Events.$on("".concat(this.uid, ":relay"), function (data) {
       // Search for the source by ID.
       if (_.find(_this11.services, {
         id: data.value
@@ -1583,18 +1598,24 @@ Components.register('search', {
     // Get the placeholder text.
     placeholder: function placeholder() {
       return _.find(this.services, {
-        id: this.source
+        id: this.source.id
       }).placeholder || '';
     },
     // Get the search URL.
     href: function href() {
       return _.find(this.services, {
-        id: this.source
+        id: this.source.id
       }).src.replace(this.param, this.query);
     },
     // Make sure a query was entered before searching.
     valid: function valid() {
       return !_.isNil(this.query) && this.query !== '';
+    }
+  },
+  watch: {
+    valid: function valid(isValid) {
+      this.button.isDisabled = isValid === false;
+      this.cancel.isDisabled = isValid === false;
     }
   }
 }); // Refer to the JS example for `atoms-search`.
@@ -1960,6 +1981,52 @@ Components.register('tab-menu', {
       }); // If the tab menu was not the initiator of the event, then also update the selected tab menu item.
 
       if (data.initiator !== _this14.uid) _this14.selected = {
+        uid: data.uid,
+        value: data.value
+      };
+    });
+  }
+}); // Register a Tab component.
+
+Components.register('tab-menu', {
+  props: {
+    uid: {
+      type: String,
+      required: true
+    },
+    relay: {
+      type: String,
+      "default": null
+    }
+  },
+  data: function data() {
+    return {
+      selected: false
+    };
+  },
+  methods: {
+    change: function change($event) {
+      // When the dropdown is changed, indicate that a new tab menu item should be activated.
+      Events.$emit("".concat(this.uid, ":activated"), {
+        uid: this.selected.uid,
+        value: this.selected.value,
+        initiator: this.uid
+      });
+    }
+  },
+  filters: {},
+  created: function created() {
+    var _this15 = this;
+
+    // Listen for changes to tab states within the tab menu.
+    Events.$on("".concat(this.uid, ":activated"), function (data) {
+      // If a relay was given, then relay the data to the targeted relay element.
+      if (_this15.relay) Events.$emit("".concat(_this15.relay, ":relay"), {
+        uid: _this15.uid,
+        value: data.value
+      }); // If the tab menu was not the initiator of the event, then also update the selected tab menu item.
+
+      if (data.initiator !== _this15.uid) _this15.selected = {
         uid: data.uid,
         value: data.value
       };

@@ -1311,12 +1311,12 @@ body {
 }
 
 .exhibition-page-main-sidenote-link, .section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a, .section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a, .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a, .section-deep-dive-body a,
-.section-deep-dive-body .link, .intro-link, .accordion-toggles-toggle, .tile-utility-title, .tile-listing-action, .tile-listing.has-description .tile-listing-title, .tile-listing:not(.has-description) .tile-listing-title, .flyout-feed-item-link, .feed-item-title, .card-staff-name, .card-staff-contact-links-item a,
+.section-deep-dive-body .link, .search-menu.-dark .search-menu-search .search-cancel, .search-menu.-light .search-menu-search .search-cancel, .search-menu-search .search-cancel, .intro-link, .accordion-toggles-toggle, .tile-utility-title, .tile-listing-action, .tile-listing.has-description .tile-listing-title, .tile-listing:not(.has-description) .tile-listing-title, .flyout-feed-item-link, .feed-item-title, .card-staff-name, .card-staff-contact-links-item a,
 .card-staff-contact-links-item .link, .card-staff-contact-info-item a,
 .card-staff-contact-info-item .link, .card-multimedia-title, .card-library-guide-title, .card-library-aid-title, .card-librarian-name, .card-librarian-contact-links-item a,
 .card-librarian-contact-links-item .link, .card-librarian-contact-info-item a,
 .card-librarian-contact-info-item .link, .card-librarian-subjects-list-item a,
-.card-librarian-subjects-list-item .link, .card-contact-email, .card-contact-name, .breadcrumbs-crumb a, .explorer-link, .link, a {
+.card-librarian-subjects-list-item .link, .card-contact-email, .card-contact-name, .breadcrumbs-crumb a, .explorer-link, .link, .search-cancel, a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1327,16 +1327,16 @@ body {
   cursor: pointer;
 }
 .exhibition-page-main-sidenote-link::after, .section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a::after, .section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a::after, .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a::after, .section-deep-dive-body a::after,
-.section-deep-dive-body .link::after, .intro-link::after, .accordion-toggles-toggle::after, .tile-utility-title::after, .tile-listing-action::after, .tile-listing.has-description .tile-listing-title::after, .tile-listing:not(.has-description) .tile-listing-title::after, .flyout-feed-item-link::after, .feed-item-title::after, .card-staff-name::after, .card-staff-contact-links-item a::after,
+.section-deep-dive-body .link::after, .search-menu.-dark .search-menu-search .search-cancel::after, .search-menu.-light .search-menu-search .search-cancel::after, .search-menu-search .search-cancel::after, .intro-link::after, .accordion-toggles-toggle::after, .tile-utility-title::after, .tile-listing-action::after, .tile-listing.has-description .tile-listing-title::after, .tile-listing:not(.has-description) .tile-listing-title::after, .flyout-feed-item-link::after, .feed-item-title::after, .card-staff-name::after, .card-staff-contact-links-item a::after,
 .card-staff-contact-links-item .link::after, .card-staff-contact-info-item a::after,
 .card-staff-contact-info-item .link::after, .card-multimedia-title::after, .card-library-guide-title::after, .card-library-aid-title::after, .card-librarian-name::after, .card-librarian-contact-links-item a::after,
 .card-librarian-contact-links-item .link::after, .card-librarian-contact-info-item a::after,
 .card-librarian-contact-info-item .link::after, .card-librarian-subjects-list-item a::after,
-.card-librarian-subjects-list-item .link::after, .card-contact-email::after, .card-contact-name::after, .breadcrumbs-crumb a::after, .explorer-link::after, .link::after, a::after {
+.card-librarian-subjects-list-item .link::after, .card-contact-email::after, .card-contact-name::after, .breadcrumbs-crumb a::after, .explorer-link::after, .link::after, .search-cancel::after, a::after {
   content: attr(data-subtext);
   display: block;
 }
-.exhibition-page-main-sidenote-link .icon, .section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon, .section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon, .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon, .intro-link .icon, .accordion-toggles-toggle .icon, .tile-utility-title .icon, .tile-listing-action .icon, .tile-listing.has-description .tile-listing-title .icon, .tile-listing:not(.has-description) .tile-listing-title .icon, .flyout-feed-item-link .icon, .feed-item-title .icon, .card-staff-name .icon, .card-multimedia-title .icon, .card-library-guide-title .icon, .card-library-aid-title .icon, .card-librarian-name .icon, .card-contact-email .icon, .card-contact-name .icon, .explorer-link .icon, .link .icon, a .icon {
+.exhibition-page-main-sidenote-link .icon, .section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon, .section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon, .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon, .search-menu.-dark .search-menu-search .search-cancel .icon, .search-menu.-light .search-menu-search .search-cancel .icon, .intro-link .icon, .accordion-toggles-toggle .icon, .tile-utility-title .icon, .tile-listing-action .icon, .tile-listing.has-description .tile-listing-title .icon, .tile-listing:not(.has-description) .tile-listing-title .icon, .flyout-feed-item-link .icon, .feed-item-title .icon, .card-staff-name .icon, .card-multimedia-title .icon, .card-library-guide-title .icon, .card-library-aid-title .icon, .card-librarian-name .icon, .card-contact-email .icon, .card-contact-name .icon, .explorer-link .icon, .link .icon, .search-cancel .icon, a .icon {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1577,7 +1577,9 @@ body {
   grid-area: box;
 }
 .-form.search .search-button {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   grid-area: button;
 }
 .-form.-contained.search .search-box {
@@ -6540,6 +6542,47 @@ body {
   }
 }
 
+.intro-home {
+  display: grid;
+  grid-template-rows: 180px -webkit-min-content 6fr repeat(2, -webkit-min-content) 1fr;
+  grid-template-rows: 180px min-content 6fr repeat(2, min-content) 1fr;
+  grid-template-columns: 1fr 2fr minmax(-webkit-min-content, 800px) 2fr 1fr;
+  grid-template-columns: 1fr 2fr minmax(min-content, 800px) 2fr 1fr;
+  background-size: cover;
+  height: 845px;
+}
+.intro-home-search {
+  grid-row: 1;
+  grid-column: 1/-1;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  margin: 0 !important;
+}
+.intro-home-search .search-menu {
+  padding-top: 0;
+}
+@media (min-width: 901px) {
+  .intro-home-search {
+    padding-left: 6em;
+    padding-right: 6em;
+    padding-top: 0.5em;
+  }
+}
+.intro-home-badge {
+  grid-row: 4;
+  grid-column: 3;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin: 0 auto !important;
+}
+.intro-home-title {
+  grid-row: 5;
+  grid-column: 3;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin: 0 auto !important;
+}
+
 .intro-interior-cover {
   display: block;
 }
@@ -6577,70 +6620,71 @@ body {
 }
 
 .search-menu {
-  padding: 0 2em;
   display: grid;
-  grid-template-rows: auto 90px;
-  /*  .search-form {
-      display: grid;
-      align-items: center;
-
-      @include breakpoint-l() {
-        grid-template-columns: 10fr 1fr 6fr;
-
-        .search {
-          grid-column: 1;
-        }
-
-        .subnav-button {
-          grid-column: 2/span 1;
-        }
-
-        .button {
-          grid-column: -1;
-        }
-      }
-
-      &.-home .search-input {
-        grid-column: 1/-1;
-      }
-
-    }*/
+  grid-template-areas: "context" "tabs" "search";
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, -webkit-min-content);
+  grid-template-rows: repeat(3, min-content);
 }
-.search-menu .search-row {
-  display: grid;
-  grid-template-columns: 8fr 1fr 3fr 150px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0;
+@media (min-width: 901px) {
+  .search-menu:not(.-home) {
+    grid-template-areas: "tabs tabs" "search back";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, -webkit-min-content);
+    grid-template-rows: repeat(2, min-content);
+  }
 }
-.search-menu .search-row .search.-form {
-  grid-column: 1;
-  height: auto;
+.search-menu-context {
+  grid-area: context;
 }
-.search-menu .search-row .-form.search .search-button {
+@media (min-width: 901px) {
+  .search-menu-context {
+    display: none;
+  }
+}
+.search-menu-tabs {
+  grid-area: tabs;
+}
+.search-menu-search {
+  grid-area: search;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-decoration: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.search-menu .search-row .search-clear {
-  grid-column: 2;
-  margin: 0 1em;
-  justify-self: center;
+.search-menu-search .search {
+  width: 100%;
 }
-.search-menu .search-row .-toggle {
-  grid-column: 4;
-  max-height: 40px;
-  font-size: 0.75em;
-  padding-left: 8px;
-  padding-right: 16px;
+@media (max-width: 600px) {
+  .search-menu:not(.-home) .search-menu-search .search {
+    grid-template-areas: "box box" "button cancel" !important;
+    grid-template-columns: 1fr -webkit-min-content !important;
+    grid-template-columns: 1fr min-content !important;
+    grid-row-gap: 1em !important;
+    height: auto !important;
+  }
 }
-.search-menu .search-row .button .icon.-left {
-  margin-right: 0;
+.search-menu-back {
+  grid-area: back;
+  display: none;
 }
-.search-menu .search-row .search {
-  margin: 0;
+@media (min-width: 901px) {
+  .search-menu-back {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+.-home.search-menu .search-menu-back {
+  display: none;
 }
 
 .nav-bar-main {
@@ -11282,6 +11326,15 @@ button, input[type=button], input[type=submit], input[type=reset] {
 .search-button:active, .search-button.is-active {
   color: rgba(255, 255, 255, 0.5);
 }
+.search:not(.-contained) .search-button .icon svg {
+  fill: #FFFFFF;
+}
+.search:not(.-contained) .search-button:hover .icon svg, .search:not(.-contained) .search-button:focus .icon svg, .search:not(.-contained) .search-button.is-hover .icon svg, .search:not(.-contained) .search-button.is-focus .icon svg {
+  fill: #FFFFFF;
+}
+.search:not(.-contained) .search-button:active .icon svg, .search:not(.-contained) .search-button.is-active .icon svg {
+  color: rgba(255, 255, 255, 0.5);
+}
 .search.-contained .search-button {
   background: -webkit-gradient(linear, left top, right top, color-stop(1.9047619048%, #E7EAF1), color-stop(1.9047619048%, transparent)) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=5387F7&size[width]=20&size[height]=20) no-repeat 20px center;
   background: linear-gradient(to right, #E7EAF1 1.9047619048%, transparent 1.9047619048%) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=5387F7&size[width]=20&size[height]=20) no-repeat 20px center;
@@ -11323,6 +11376,67 @@ button, input[type=button], input[type=submit], input[type=reset] {
 }
 .search-cancel {
   margin-left: 1em;
+  text-decoration: underline !important;
+}
+.search-cancel {
+  font-weight: bold;
+  font-style: normal;
+  color: #5387F7;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  background: none;
+  border: none;
+}
+.search-cancel .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 1ex;
+}
+.search-cancel .icon svg {
+  fill: #5387F7;
+}
+.search-cancel:hover, .search-cancel.is-hover, .search-cancel:focus, .search-cancel.is-focus {
+  color: #004990;
+}
+.search-cancel:hover .icon svg, .search-cancel.is-hover .icon svg, .search-cancel:focus .icon svg, .search-cancel.is-focus .icon svg {
+  fill: #004990;
+}
+.search-cancel:active, .search-cancel.is-active {
+  color: #004990;
+}
+.search-cancel:active .icon svg, .search-cancel.is-active .icon svg {
+  fill: #004990;
+}
+.search-cancel::after {
+  font-size: 12px !important;
+  line-height: 1 !important;
+}
+.search-cancel::after {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
+.search-cancel.-popular {
+  font-family: "Cardo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 2.05;
+  color: #FFFFFF;
+}
+.search-cancel.-popular:hover, .search-cancel.-popular.is-hover, .search-cancel.-popular:focus, .search-cancel.-popular.is-focus {
+  color: #336BE6;
+}
+.search-cancel.-popular:active, .search-cancel.-popular.is-active {
+  color: #336BE6;
+}
+.search-cancel.-underline {
   text-decoration: underline;
 }
 .search.-contained .search-button {
@@ -16882,8 +16996,9 @@ button, input[type=button], input[type=submit], input[type=reset] {
   color: #082B73;
 }
 .tab-menu.-dropdown {
+  padding-top: 5px;
+  padding-bottom: 5px;
   font-size: 18px !important;
-  padding: 5px;
 }
 .tab-menu.-dropdown {
   font-family: "Open Sans", sans-serif;
@@ -16897,17 +17012,15 @@ button, input[type=button], input[type=submit], input[type=reset] {
   color: #336BE6;
 }
 .tab-menu.-dropdown::after {
-  width: calc(100% - 35px);
+  width: calc(100% - 20px);
   height: 1px;
   background-color: #336BE6;
   bottom: 5px;
 }
 .tab-menu.-dropdown select {
-  padding-left: 10px;
-  padding-right: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
-  padding-right: 35px;
+  padding-right: 20px;
   background-image: url(../icons/php/icon.php?id=material-chevron_down&color=336BE6&size[width]=20&size[height]=20);
   background-size: 20px auto;
   background-repeat: no-repeat;
@@ -17002,6 +17115,40 @@ button, input[type=button], input[type=submit], input[type=reset] {
   text-transform: none;
   text-align: center;
   color: #FFFFFF;
+}
+
+.intro-home {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(-14.42%, #091C44), color-stop(51.12%, transparent)), var(--image);
+  background-image: linear-gradient(0deg, #091C44 -14.42%, transparent 51.12%), var(--image);
+}
+.intro-home-title {
+  text-align: center;
+  text-decoration: none;
+}
+.intro-home-title h1, .intro-home-title h2, .intro-home-title h3, .intro-home-title h4, .intro-home-title h5, .intro-home-title h6,
+.intro-home-title .heading {
+  font-family: "Cardo", serif !important;
+  font-size: 48px !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  line-height: 1.0833 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  color: #FFFFFF !important;
+}
+.intro-home-search {
+  background-color: transparent;
+  -webkit-transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease;
+}
+.intro-home-search:focus-within, .intro-home-search:focus, .intro-home-search:hover, .intro-home-search:active, .intro-home-search.is-hover, .intro-home-search.is-focus {
+  background-color: rgba(9, 28, 68, 0.9);
+}
+.intro-home-search .search-menu, .intro-home-search .search-menu:hover, .intro-home-search .search-menu:focus, .intro-home-search .search-menu.is-hover, .intro-home-search .search-menu.is-focus, .intro-home-search .search-menu.is-hover, .intro-home-search .search-menu.is-focus {
+  background-color: transparent !important;
+}
+.intro-home-search .tab:active::after, .intro-home-search .tab.is-active::after {
+  background-image: none !important;
 }
 
 .intro-interior-cover-title, .intro-interior-cover-subtitle {
@@ -17283,37 +17430,260 @@ button, input[type=button], input[type=submit], input[type=reset] {
 }
 
 .search-menu {
-  background-color: #091C44;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #FFFFFF;
 }
-.search-menu .search-clear {
-  color: #fff;
-  font-size: 0.9em;
+.search-menu-context {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.6667;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #605858;
+}
+.search-menu-search .search-cancel {
+  font-weight: bold;
+  font-style: normal;
+  color: #5387F7;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  background: none;
+  border: none;
+}
+.search-menu-search .search-cancel .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 1ex;
+}
+.search-menu-search .search-cancel .icon svg {
+  fill: #5387F7;
+}
+.search-menu-search .search-cancel:hover, .search-menu-search .search-cancel.is-hover, .search-menu-search .search-cancel:focus, .search-menu-search .search-cancel.is-focus {
+  color: #004990;
+}
+.search-menu-search .search-cancel:hover .icon svg, .search-menu-search .search-cancel.is-hover .icon svg, .search-menu-search .search-cancel:focus .icon svg, .search-menu-search .search-cancel.is-focus .icon svg {
+  fill: #004990;
+}
+.search-menu-search .search-cancel:active, .search-menu-search .search-cancel.is-active {
+  color: #004990;
+}
+.search-menu-search .search-cancel:active .icon svg, .search-menu-search .search-cancel.is-active .icon svg {
+  fill: #004990;
+}
+.search-menu-search .search-cancel::after {
+  font-size: 12px !important;
+  line-height: 1 !important;
+}
+.search-menu-search .search-cancel::after {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
+.search-menu-search .search-cancel.-popular {
+  font-family: "Cardo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 2.05;
+  color: #FFFFFF;
+}
+.search-menu-search .search-cancel.-popular:hover, .search-menu-search .search-cancel.-popular.is-hover, .search-menu-search .search-cancel.-popular:focus, .search-menu-search .search-cancel.-popular.is-focus {
+  color: #336BE6;
+}
+.search-menu-search .search-cancel.-popular:active, .search-menu-search .search-cancel.-popular.is-active {
+  color: #336BE6;
+}
+.search-menu-search .search-cancel.-underline {
+  text-decoration: underline;
 }
 .search-menu.-home {
-  background: transparent;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
+  background-color: transparent;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+.search-menu.-home .search-menu-context,
+.search-menu.-home .search-menu-tabs {
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+.search-menu.-home:hover, .search-menu.-home:focus, .search-menu.-home:focus-within, .search-menu.-home.is-hover, .search-menu.-home.is-focus {
+  background-color: #FFFFFF;
+}
+.search-menu.-home:hover .search-menu-context,
+.search-menu.-home:hover .search-menu-tabs, .search-menu.-home:focus .search-menu-context,
+.search-menu.-home:focus .search-menu-tabs, .search-menu.-home:focus-within .search-menu-context,
+.search-menu.-home:focus-within .search-menu-tabs, .search-menu.-home.is-hover .search-menu-context,
+.search-menu.-home.is-hover .search-menu-tabs, .search-menu.-home.is-focus .search-menu-context,
+.search-menu.-home.is-focus .search-menu-tabs {
+  opacity: 0.9;
+}
+.search-menu.-home .search-menu, .search-menu.-home .search-menu:hover, .search-menu.-home .search-menu:focus, .search-menu.-home .search-menu:focus-within, .search-menu.-home .search-menu.is-hover, .search-menu.-home .search-menu.is-focus {
+  background-color: transparent !important;
+  -webkit-transition: none !important;
+  transition: none !important;
 }
 .search-menu.-home .tab-menu {
-  position: absolute;
-  left: -10000px;
-  margin-bottom: 0;
-  background: transparent;
+  background-color: transparent !important;
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+.search-menu.-light {
+  background-color: #FFFFFF;
+}
+.search-menu.-light .search-menu-context {
+  color: #605858;
+}
+.search-menu.-light .search-menu-search .search-cancel {
+  font-weight: bold;
+  font-style: normal;
+  color: #5387F7;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
-  padding: 0;
+  background: none;
+  border: none;
 }
-.search-menu.-home:focus, .search-menu.-home:focus-within, .search-menu.-home:hover, .search-menu.-home:active {
+.search-menu.-light .search-menu-search .search-cancel .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 1ex;
+}
+.search-menu.-light .search-menu-search .search-cancel .icon svg {
+  fill: #5387F7;
+}
+.search-menu.-light .search-menu-search .search-cancel:hover, .search-menu.-light .search-menu-search .search-cancel.is-hover, .search-menu.-light .search-menu-search .search-cancel:focus, .search-menu.-light .search-menu-search .search-cancel.is-focus {
+  color: #004990;
+}
+.search-menu.-light .search-menu-search .search-cancel:hover .icon svg, .search-menu.-light .search-menu-search .search-cancel.is-hover .icon svg, .search-menu.-light .search-menu-search .search-cancel:focus .icon svg, .search-menu.-light .search-menu-search .search-cancel.is-focus .icon svg {
+  fill: #004990;
+}
+.search-menu.-light .search-menu-search .search-cancel:active, .search-menu.-light .search-menu-search .search-cancel.is-active {
+  color: #004990;
+}
+.search-menu.-light .search-menu-search .search-cancel:active .icon svg, .search-menu.-light .search-menu-search .search-cancel.is-active .icon svg {
+  fill: #004990;
+}
+.search-menu.-light .search-menu-search .search-cancel::after {
+  font-size: 12px !important;
+  line-height: 1 !important;
+}
+.search-menu.-light .search-menu-search .search-cancel::after {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
+.search-menu.-light .search-menu-search .search-cancel.-popular {
+  font-family: "Cardo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 2.05;
+  color: #FFFFFF;
+}
+.search-menu.-light .search-menu-search .search-cancel.-popular:hover, .search-menu.-light .search-menu-search .search-cancel.-popular.is-hover, .search-menu.-light .search-menu-search .search-cancel.-popular:focus, .search-menu.-light .search-menu-search .search-cancel.-popular.is-focus {
+  color: #336BE6;
+}
+.search-menu.-light .search-menu-search .search-cancel.-popular:active, .search-menu.-light .search-menu-search .search-cancel.-popular.is-active {
+  color: #336BE6;
+}
+.search-menu.-light .search-menu-search .search-cancel.-underline {
+  text-decoration: underline;
+}
+.search-menu.-light.-home {
+  background-color: transparent;
+}
+.search-menu.-light.-home:hover, .search-menu.-light.-home:focus, .search-menu.-light.-home:focus-within, .search-menu.-light.-home.is-hover, .search-menu.-light.-home.is-focus {
+  background-color: #FFFFFF;
+}
+.search-menu.-dark {
   background-color: #091C44;
-  opacity: 0.9;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
 }
-.search-menu.-home:focus .tab-menu, .search-menu.-home:focus-within .tab-menu, .search-menu.-home:hover .tab-menu, .search-menu.-home:active .tab-menu {
-  position: initial;
-  left: initial;
+.search-menu.-dark .search-menu-context {
+  color: #FFFFFF;
+}
+.search-menu.-dark .search-menu-search .search-cancel {
+  font-weight: bold;
+  font-style: normal;
+  color: #FFFFFF;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
+  background: none;
+  border: none;
+}
+.search-menu.-dark .search-menu-search .search-cancel .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 1ex;
+}
+.search-menu.-dark .search-menu-search .search-cancel .icon svg {
+  fill: #FFFFFF;
+}
+.search-menu.-dark .search-menu-search .search-cancel:hover, .search-menu.-dark .search-menu-search .search-cancel.is-hover, .search-menu.-dark .search-menu-search .search-cancel:focus, .search-menu.-dark .search-menu-search .search-cancel.is-focus {
+  color: #5387F7;
+}
+.search-menu.-dark .search-menu-search .search-cancel:hover .icon svg, .search-menu.-dark .search-menu-search .search-cancel.is-hover .icon svg, .search-menu.-dark .search-menu-search .search-cancel:focus .icon svg, .search-menu.-dark .search-menu-search .search-cancel.is-focus .icon svg {
+  fill: #5387F7;
+}
+.search-menu.-dark .search-menu-search .search-cancel:active, .search-menu.-dark .search-menu-search .search-cancel.is-active {
+  color: #5387F7;
+}
+.search-menu.-dark .search-menu-search .search-cancel:active .icon svg, .search-menu.-dark .search-menu-search .search-cancel.is-active .icon svg {
+  fill: #5387F7;
+}
+.search-menu.-dark .search-menu-search .search-cancel::after {
+  font-size: 12px !important;
+  line-height: 1 !important;
+}
+.search-menu.-dark .search-menu-search .search-cancel::after {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.9375;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
+.search-menu.-dark .search-menu-search .search-cancel.-popular {
+  font-family: "Cardo", serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 2.05;
+  color: #FFFFFF;
+}
+.search-menu.-dark .search-menu-search .search-cancel.-popular:hover, .search-menu.-dark .search-menu-search .search-cancel.-popular.is-hover, .search-menu.-dark .search-menu-search .search-cancel.-popular:focus, .search-menu.-dark .search-menu-search .search-cancel.-popular.is-focus {
+  color: #336BE6;
+}
+.search-menu.-dark .search-menu-search .search-cancel.-popular:active, .search-menu.-dark .search-menu-search .search-cancel.-popular.is-active {
+  color: #336BE6;
+}
+.search-menu.-dark .search-menu-search .search-cancel.-underline {
+  text-decoration: underline;
+}
+.search-menu.-dark.-home {
+  background-color: transparent;
+}
+.search-menu.-dark.-home:hover, .search-menu.-dark.-home:focus, .search-menu.-dark.-home:focus-within, .search-menu.-dark.-home.is-hover, .search-menu.-dark.-home.is-focus {
+  background-color: #091C44;
 }
 
 .section-deep-dive {
