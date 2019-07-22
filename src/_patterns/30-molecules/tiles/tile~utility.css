@@ -179,6 +179,9 @@ ico,
 .has-description.tile-utility .tile-utility-description {
   display: block;
 }
+.tile-utility:not(.has-image) .tile-utility-image {
+  display: none;
+}
 .tile-utility-image {
   top: 0;
   right: 0;
@@ -266,10 +269,12 @@ ico,
 
 .tile-utility {
   padding: 25px;
-  padding-top: calc(55% + 25px);
   grid-gap: 10px;
   border-radius: 5px;
   border: 1px solid #dbdee6;
+}
+.tile-utility.has-image {
+  padding-top: calc(55% + 25px);
 }
 .tile-utility-image {
   padding-top: 55%;

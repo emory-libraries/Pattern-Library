@@ -135,11 +135,11 @@ ico,
 }
 
 .tab {
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   -webkit-appearance: none;
-  border: 0;
-  background: transparent;
+  -moz-appearance: none;
+  background: none !important;
+  border: none !important;
   padding: 0.5em 2em;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -185,6 +185,10 @@ ico,
   left: 0;
   right: 0;
 }
+.tab-switch {
+  display: none;
+}
+
 .tab {
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
@@ -219,56 +223,81 @@ ico,
 .tab:active::after, .tab.is-active::after {
   content: url("../icons/php/icon.php?id=material-arrow_drop_down&color=082B73&size[width]=30&size[height]=30");
 }
+.tab-menu {
+  margin: 0;
+}
 .tab-menu::after {
   height: 1px;
 }
-.tab-menu, .tab-menu.-light {
+.tab-menu:not(.-dropdown), .tab-menu.-light:not(.-dropdown) {
   background-color: #FFFFFF;
 }
-.tab-menu::after, .tab-menu.-light::after {
+.tab-menu:not(.-dropdown)::after, .tab-menu.-light:not(.-dropdown)::after {
   background-color: rgba(182, 189, 204, 0.5);
 }
-.tab-menu .tab, .tab-menu.-light .tab {
+.tab-menu:not(.-dropdown) .tab, .tab-menu.-light:not(.-dropdown) .tab {
   color: #004990;
 }
-.tab-menu .tab:hover, .tab-menu .tab:focus, .tab-menu .tab.is-hover, .tab-menu .tab.is-focus, .tab-menu.-light .tab:hover, .tab-menu.-light .tab:focus, .tab-menu.-light .tab.is-hover, .tab-menu.-light .tab.is-focus {
+.tab-menu:not(.-dropdown) .tab:hover, .tab-menu:not(.-dropdown) .tab:focus, .tab-menu:not(.-dropdown) .tab.is-hover, .tab-menu:not(.-dropdown) .tab.is-focus, .tab-menu.-light:not(.-dropdown) .tab:hover, .tab-menu.-light:not(.-dropdown) .tab:focus, .tab-menu.-light:not(.-dropdown) .tab.is-hover, .tab-menu.-light:not(.-dropdown) .tab.is-focus {
   color: #336BE6;
 }
-.tab-menu .tab:active, .tab-menu .tab.is-active, .tab-menu.-light .tab:active, .tab-menu.-light .tab.is-active {
+.tab-menu:not(.-dropdown) .tab:active, .tab-menu:not(.-dropdown) .tab.is-active, .tab-menu.-light:not(.-dropdown) .tab:active, .tab-menu.-light:not(.-dropdown) .tab.is-active {
   color: #336BE6;
 }
-.tab-menu .tab:active::after, .tab-menu .tab.is-active::after, .tab-menu.-light .tab:active::after, .tab-menu.-light .tab.is-active::after {
+.tab-menu:not(.-dropdown) .tab:active::after, .tab-menu:not(.-dropdown) .tab.is-active::after, .tab-menu.-light:not(.-dropdown) .tab:active::after, .tab-menu.-light:not(.-dropdown) .tab.is-active::after {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #FFFFFF), color-stop(55%, #FFFFFF), color-stop(55%, transparent));
   background-image: linear-gradient(to bottom, transparent 45%, #FFFFFF 45%, #FFFFFF 55%, transparent 55%);
 }
-.tab-menu .tab:active::after, .tab-menu .tab.is-active::after, .tab-menu.-light .tab:active::after, .tab-menu.-light .tab.is-active::after {
+.tab-menu:not(.-dropdown) .tab:active::after, .tab-menu:not(.-dropdown) .tab.is-active::after, .tab-menu.-light:not(.-dropdown) .tab:active::after, .tab-menu.-light:not(.-dropdown) .tab.is-active::after {
   content: url("../icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30");
 }
-.tab-menu .tab + .tab::before, .tab-menu.-light .tab + .tab::before {
+.tab-menu:not(.-dropdown) .tab + .tab::before, .tab-menu.-light:not(.-dropdown) .tab + .tab::before {
   background-color: rgba(182, 189, 204, 0.5);
 }
-.tab-menu.-dark {
+.tab-menu.-dropdown, .tab-menu.-light.-dropdown {
+  background-color: #FFFFFF;
+}
+.tab-menu.-dark:not(.-dropdown) {
   background-color: #091C44;
 }
-.tab-menu.-dark::after {
+.tab-menu.-dark:not(.-dropdown)::after {
   background-color: rgba(231, 234, 241, 0.25);
 }
-.tab-menu.-dark .tab {
+.tab-menu.-dark:not(.-dropdown) .tab {
   color: #FFFFFF;
 }
-.tab-menu.-dark .tab:hover, .tab-menu.-dark .tab:focus, .tab-menu.-dark .tab.is-hover, .tab-menu.-dark .tab.is-focus {
+.tab-menu.-dark:not(.-dropdown) .tab:hover, .tab-menu.-dark:not(.-dropdown) .tab:focus, .tab-menu.-dark:not(.-dropdown) .tab.is-hover, .tab-menu.-dark:not(.-dropdown) .tab.is-focus {
   color: #B6BDCC;
 }
-.tab-menu.-dark .tab:active, .tab-menu.-dark .tab.is-active {
+.tab-menu.-dark:not(.-dropdown) .tab:active, .tab-menu.-dark:not(.-dropdown) .tab.is-active {
   color: #E9BF55;
 }
-.tab-menu.-dark .tab:active::after, .tab-menu.-dark .tab.is-active::after {
+.tab-menu.-dark:not(.-dropdown) .tab:active::after, .tab-menu.-dark:not(.-dropdown) .tab.is-active::after {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #091C44), color-stop(55%, #091C44), color-stop(55%, transparent));
   background-image: linear-gradient(to bottom, transparent 45%, #091C44 45%, #091C44 55%, transparent 55%);
 }
-.tab-menu.-dark .tab:active::after, .tab-menu.-dark .tab.is-active::after {
+.tab-menu.-dark:not(.-dropdown) .tab:active::after, .tab-menu.-dark:not(.-dropdown) .tab.is-active::after {
   content: url("../icons/php/icon.php?id=material-arrow_drop_down&color=E9BF55&size[width]=30&size[height]=30");
 }
-.tab-menu.-dark .tab + .tab::before {
+.tab-menu.-dark:not(.-dropdown) .tab + .tab::before {
   background-color: rgba(231, 234, 241, 0.25);
+}
+.tab-menu.-dark.-dropdown {
+  background-color: #091C44;
+}
+.tab-switch:checked + .tab {
+  color: #082B73;
+}
+.tab-switch:checked + .tab::after {
+  width: 30px;
+  height: 30px;
+}
+.tab-switch:checked + .tab::after {
+  content: url("../icons/php/icon.php?id=material-arrow_drop_down&color=082B73&size[width]=30&size[height]=30");
+}
+.tab-switch:not(:checked) + .tab {
+  color: #605858;
+}
+.tab-switch:not(:checked) + .tab::after {
+  content: none;
 }

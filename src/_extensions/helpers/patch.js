@@ -13,9 +13,34 @@ module.exports = {
   // Pattern Lab fail gracefully when attempting to use these
   // helpers.
   API: () => null,
-  storageSet( key, value ) { _.set(storage, key, value); },
-  storagePush( key, value ) { _.set(storage, key, _.concat(_.get(storage, key, []), value)); },
-  storageUnshift( key, value ) { _.set(storage, key, _.concat(value, _.get(storage, key, []))); },
-  storageGet( key ) { return _.get(storage, key); },
+  storageSet( key, value ) {
+
+    _.set(storage, key, value);
+
+  },
+  storagePush( key, value ) {
+
+    _.set(storage, key, _.concat(_.get(storage, key, []), value));
+
+  },
+  storageUnshift( key, value ) {
+
+    _.set(storage, key, _.concat(value, _.get(storage, key, [])));
+
+  },
+  storageGet( key ) {
+
+    const value = _.get(storage, key);
+
+    _.unset(storage, key);
+
+    return value;
+
+  },
+  storageHas( key ) {
+
+    return _.has(storage, key);
+
+  }
 
 };
