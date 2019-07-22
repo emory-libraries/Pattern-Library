@@ -317,15 +317,26 @@ ico,
   transition: opacity 0.5s ease;
   opacity: 0;
 }
-.search-menu.-home:hover, .search-menu.-home:focus, .search-menu.-home.is-hover, .search-menu.-home.is-focus {
+.search-menu.-home:hover, .search-menu.-home:focus, .search-menu.-home:focus-within, .search-menu.-home.is-hover, .search-menu.-home.is-focus {
   background-color: #FFFFFF;
 }
 .search-menu.-home:hover .search-menu-context,
 .search-menu.-home:hover .search-menu-tabs, .search-menu.-home:focus .search-menu-context,
-.search-menu.-home:focus .search-menu-tabs, .search-menu.-home.is-hover .search-menu-context,
+.search-menu.-home:focus .search-menu-tabs, .search-menu.-home:focus-within .search-menu-context,
+.search-menu.-home:focus-within .search-menu-tabs, .search-menu.-home.is-hover .search-menu-context,
 .search-menu.-home.is-hover .search-menu-tabs, .search-menu.-home.is-focus .search-menu-context,
 .search-menu.-home.is-focus .search-menu-tabs {
-  opacity: 1;
+  opacity: 0.9;
+}
+.search-menu.-home .search-menu, .search-menu.-home .search-menu:hover, .search-menu.-home .search-menu:focus, .search-menu.-home .search-menu:focus-within, .search-menu.-home .search-menu.is-hover, .search-menu.-home .search-menu.is-focus {
+  background-color: transparent !important;
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+.search-menu.-home .tab-menu {
+  background-color: transparent !important;
+  -webkit-transition: none !important;
+  transition: none !important;
 }
 .search-menu.-light {
   background-color: #FFFFFF;
@@ -397,7 +408,7 @@ ico,
 .search-menu.-light.-home {
   background-color: transparent;
 }
-.search-menu.-light.-home:hover, .search-menu.-light.-home:focus, .search-menu.-light.-home.is-hover, .search-menu.-light.-home.is-focus {
+.search-menu.-light.-home:hover, .search-menu.-light.-home:focus, .search-menu.-light.-home:focus-within, .search-menu.-light.-home.is-hover, .search-menu.-light.-home.is-focus {
   background-color: #FFFFFF;
 }
 .search-menu.-dark {
@@ -470,6 +481,6 @@ ico,
 .search-menu.-dark.-home {
   background-color: transparent;
 }
-.search-menu.-dark.-home:hover, .search-menu.-dark.-home:focus, .search-menu.-dark.-home.is-hover, .search-menu.-dark.-home.is-focus {
+.search-menu.-dark.-home:hover, .search-menu.-dark.-home:focus, .search-menu.-dark.-home:focus-within, .search-menu.-dark.-home.is-hover, .search-menu.-dark.-home.is-focus {
   background-color: #091C44;
 }

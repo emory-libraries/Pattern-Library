@@ -143,16 +143,6 @@ ico,
   background-size: cover;
   height: 845px;
 }
-.intro-home-image {
-  grid-row: 1/-1;
-  grid-column: 1/-1;
-  background-size: cover;
-  background-position: center center;
-}
-.intro-home-gradient {
-  grid-row: 1/-1;
-  grid-column: 1/-1;
-}
 .intro-home-search {
   grid-row: 1;
   grid-column: 1/-1;
@@ -160,11 +150,15 @@ ico,
       align-self: stretch;
   margin: 0 !important;
   padding-top: 0.5em;
-  padding-left: 6em;
-  padding-right: 6em;
 }
-.intro-home-search .search-menu.-home {
+.intro-home-search .search-menu {
   padding-top: 0;
+}
+@media (min-width: 901px) {
+  .intro-home-search {
+    padding-left: 6em;
+    padding-right: 6em;
+  }
 }
 .intro-home-badge {
   grid-row: 4;
@@ -181,16 +175,16 @@ ico,
   margin: 0 auto !important;
 }
 
-.intro-home-gradient {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(-4.85%, #091C44), color-stop(51.12%, rgba(9, 28, 68, 0)));
-  background-image: linear-gradient(0deg, #091C44 -4.85%, rgba(9, 28, 68, 0) 51.12%);
+.intro-home {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(-14.42%, #091C44), color-stop(51.12%, transparent)), var(--image);
+  background-image: linear-gradient(0deg, #091C44 -14.42%, transparent 51.12%), var(--image);
 }
 .intro-home-title {
-  margin: 0;
   text-align: center;
   text-decoration: none;
 }
-.intro-home-title h1 {
+.intro-home-title h1, .intro-home-title h2, .intro-home-title h3, .intro-home-title h4, .intro-home-title h5, .intro-home-title h6,
+.intro-home-title .heading {
   font-family: "Cardo", serif !important;
   font-size: 48px !important;
   font-weight: normal !important;
@@ -201,19 +195,16 @@ ico,
   color: #FFFFFF !important;
 }
 .intro-home-search {
-  background: transparent;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
+  background-color: transparent;
+  -webkit-transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease;
 }
-.intro-home-search:focus-within, .intro-home-search:focus, .intro-home-search:hover, .intro-home-search:active {
-  background-color: #091C44;
-  opacity: 0.9;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
+.intro-home-search:focus-within, .intro-home-search:focus, .intro-home-search:hover, .intro-home-search:active, .intro-home-search.is-hover, .intro-home-search.is-focus {
+  background-color: rgba(9, 28, 68, 0.9);
 }
-.intro-home-search .search-menu.-dark.-home:hover, .intro-home-search .search-menu.-dark.-home:focus, .intro-home-search .search-menu.-dark.-home.is-hover, .intro-home-search .search-menu.-dark.-home.is-focus {
-  background: transparent;
+.intro-home-search .search-menu, .intro-home-search .search-menu:hover, .intro-home-search .search-menu:focus, .intro-home-search .search-menu.is-hover, .intro-home-search .search-menu.is-focus, .intro-home-search .search-menu.is-hover, .intro-home-search .search-menu.is-focus {
+  background-color: transparent !important;
 }
-.intro-home-search .tab-menu.-dark:not(.-dropdown) {
-  background: transparent;
+.intro-home-search .tab:active::after, .intro-home-search .tab.is-active::after {
+  background-image: none !important;
 }
