@@ -65,48 +65,6 @@ $organisms-intro-home: (
     background: transparent;
     transition: $transition-all;
 
-    &-options {
-      position: absolute;
-      left: -10000px;
-      border-bottom: $border;
-      margin-bottom: 0;
-      transition: $transition-all;
-
-      &.tab-menu {
-        padding: 0;
-      }
-
-      .tab {
-        &:hover,
-        &:active,
-        &:focus,
-        &.is-hover,
-        &.is-focus {
-          //color: $active-color;
-
-
-          &:after {
-            /*content:'';
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            margin: .25em 50%;
-            width: 0;
-            height: 0;
-            background-color: $search-background;*/
-            margin-top: .25em;
-            border-top: solid 7px $active-color;
-            border-left: solid 7px transparent;
-            border-right: solid 7px transparent;
-          }
-
-        }
-
-      }
-
-    }
-
     &:focus-within,
     &:focus,
     &:hover,
@@ -114,12 +72,21 @@ $organisms-intro-home: (
       background-color: $search-background;
       opacity: .9;
       transition: $transition-all;
+    }
 
-      & .intro-home-search-options {
-        position: initial;
-        left: initial;
+    .search-menu.-dark.-home {
+
+      &:hover,
+      &:focus,
+      &.is-hover,
+      &.is-focus {
+        background: transparent;
       }
 
+    }
+
+    .tab-menu.-dark:not(.-dropdown) {
+      background: transparent;
     }
 
   }
