@@ -1,11 +1,49 @@
 {
-  "cancelable": true,
+  "badge": "Featured",
+  "background-image": "https:\/\/source.unsplash.com/1450x440",
+  "link": {
+    "href": "",
+    "title": "Emory's African American collections celebrated in new exhibit"
+  },
   "id": "big-search",
+  "back": {
+    "label": "Back to Menu",
+    "icon": {
+      "id": "material-chevron_right",
+      "position": "left"
+    }
+  },
+  "tabs": [
+    {
+      "label": "Library Catalog",
+      "value": "library-catalog"
+    },
+    {
+      "label": "Databases",
+      "value": "databases"
+    },
+    {
+      "label": "eJournals",
+      "value": "ejournals"
+    },
+    {
+      "label": "Research & Course Guides",
+      "value": "research-guides"
+    },
+    {
+      "label": "Finding Aids",
+      "value": "finding-aids"
+    },
+    {
+      "label": "This Site",
+      "value": "this-site"
+    }
+  ],
   "services": [
     {
       "label": "Library Catalog",
       "placeholder": "Search the Emory Library Catalog",
-      "id": "catalog",
+      "id": "library-catalog",
       "src": "http://discovere.emory.edu/primo_library/libweb/action/dlSearch.do?institution=EMORY&vid=discovere&query=any,contains,:query&libsearch=woodruff",
       "default": true
     },
@@ -24,19 +62,19 @@
     {
       "label": "Research & Course Guides",
       "placeholder": "Search Research & Course Guides",
-      "id": "guides",
+      "id": "research-guides",
       "src": "http://guides.main.library.emory.edu/srch.php?q=:query&libsearch=woodruff"
     },
     {
       "label": "Finding Aids",
       "placeholder": "Search Manuscript and Archival Collections",
-      "id": "aids",
+      "id": "finding-aids",
       "src": "https://findingaids.library.emory.edu/search/?Submit=Search&keywords=:query&libsearch=woodruff"
     },
     {
       "label": "This Site",
       "placeholder": "Search this site on Google",
-      "id": "site",
+      "id": "this-site",
       "src": "https://www.google.com/search?q=:query%20site:web.library.emory.edu"
     }
   ],
@@ -46,4 +84,5 @@
     "label": "Search"
   },
   "processor": "/php/example-search.php"
+  
 }
