@@ -1,9 +1,8 @@
 {
-  "markdown": false,
-  "context": "Service Name",
-  "title": "Title of Page",
+  "category": "Instructional Services",
+  "title": "Instructional Services for Faculty and TAs",
+  "subtitle": "We offer several services to support teaching and student learning.",
   "toc": true,
-  "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   "blocks": [
     {
       "type": "rich-text",
@@ -11,13 +10,8 @@
     },
     {
       "type": "heading",
-      "level": "2",
+      "level": 2,
       "heading": "A Major Section of the Content"
-    },
-    {
-      "type": "heading",
-      "level": "3",
-      "heading": "A Subsection"
     },
     {
       "type": "image",
@@ -25,32 +19,63 @@
       "alt": "Placeholder image 600 pixels wide",
       "align": "center"
     },
-    {
+     {
       "type": "heading",
-      "level": 4,
-      "heading": "An h4"
+      "level": "3",
+      "heading": "A Subsection"
     },
-    {
+   {
       "type": "rich-text",
       "text": "<p>Nibh tortor id aliquet lectus proin nibh nisl condimentum id. Pellentesque elit <strong>eget gravida cum sociis</strong> natoque penatibus et. Libero justo laoreet sit amet cursus. Libero volutpat sed cras ornare arcu dui vivamus arcu. Imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor. Posuere urna nec tincidunt praesent semper feugiat nibh sed pulvinar. Tempor orci dapibus ultrices in.</p>"
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "heading": "Another h3"
     },
     {
       "type": "video",
       "id": "W-h1FtNYim4"
     },
     {
-      "type": "heading",
-      "level": 2,
-      "heading": "Another h2"
-    },
-    {
       "type": "rich-text",
       "text": "<p>Eget velit aliquet sagittis id. Rhoncus dolor purus non enim praesent elementum facilisis. Viverra justo nec ultrices dui sapien eget mi proin. Cursus euismod quis viverra nibh cras pulvinar mattis nunc sed. Vitae aliquet nec ullamcorper sit. Lacus sed viverra tellus in hac habitasse. Elit pellentesque habitant morbi tristique senectus et netus. Mattis rhoncus urna neque viverra justo nec. Diam quam nulla porttitor massa id neque aliquam vestibulum morbi. Gravida rutrum quisque non tellus orci ac. Purus semper eget duis at. Pharetra magna ac placerat vestibulum. Aliquam ultrices sagittis orci a scelerisque. Risus feugiat in ante metus dictum at tempor.</p><p>Iaculis nunc sed augue lacus viverra vitae congue eu. A condimentum vitae sapien pellentesque. Nullam non nisi est sit amet facilisis magna etiam. Pulvinar neque laoreet suspendisse interdum consectetur. Morbi tempus iaculis urna id volutpat lacus laoreet non curabitur. Sed libero enim sed faucibus turpis in. Vestibulum sed arcu non odio euismod lacinia at quis. Risus commodo viverra maecenas accumsan lacus vel. Venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam. Metus dictum at tempor commodo ullamcorper a lacus vestibulum. Ornare suspendisse sed nisi lacus sed viverra. Accumsan in nisl nisi scelerisque eu ultrices vitae. Enim tortor at auctor urna nunc id cursus metus. Consectetur lorem donec massa sapien faucibus et molestie.</p>"
     }
-  ]
+  ],
+  "explorer": {
+    "heading": "Popular Links",
+    "links": [
+      {
+        "href": "",
+        "label": "Get Help with Your Research"
+      },
+      {
+        "href": "",
+        "label": "Understand InterLibrary Loans"
+      },
+      {
+        "href": "",
+        "label": "Find a Study Space or Reserve a Room"
+      },
+      {
+        "href": "",
+        "label": "Access Course Reserves"
+      },
+      {
+        "href": "",
+        "label": "Guest Access"
+      },
+      {
+        "href": "",
+        "label": "Printing, Logging In, and Access"
+      }
+    ]
+  },
+  "action": {
+    "text": "Need Help?",
+    "image": {
+      "src": "//source.unsplash.com/GX8KBbVmC6c"
+    },
+    "button": {
+      "type": "link",
+      "label": "Ask a Librarian",
+      "href": "",
+      "hollow": true
+    }
+  }
 }
