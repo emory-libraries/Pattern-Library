@@ -134,6 +134,18 @@ ico,
   content: "";
 }
 
+.anchor.heading.-h6, .anchor.heading.-h5-alt, .anchor.heading.-h5, .anchor.heading.-h4, .anchor.heading.-h3, .anchor.heading.-h2, .anchor.heading.-h1-hero, .anchor.heading.-h1-alt, .anchor.heading.-h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.anchor.heading.-h6 .icon, .anchor.heading.-h5-alt .icon, .anchor.heading.-h5 .icon, .anchor.heading.-h4 .icon, .anchor.heading.-h3 .icon, .anchor.heading.-h2 .icon, .anchor.heading.-h1-hero .icon, .anchor.heading.-h1-alt .icon, .anchor.heading.-h1 .icon {
+  visibility: hidden;
+}
+.anchor.heading.-h6:hover .icon, .anchor.heading.-h5-alt:hover .icon, .anchor.heading.-h5:hover .icon, .anchor.heading.-h4:hover .icon, .anchor.heading.-h3:hover .icon, .anchor.heading.-h2:hover .icon, .anchor.heading.-h1-hero:hover .icon, .anchor.heading.-h1-alt:hover .icon, .anchor.heading.-h1:hover .icon {
+  visibility: visible;
+}
+
 .heading.-h1 {
   font-family: "Cardo", serif;
   font-size: 72px;

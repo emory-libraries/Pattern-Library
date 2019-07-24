@@ -134,6 +134,18 @@ ico,
   content: "";
 }
 
+.anchor.card-staff-context {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.anchor.card-staff-context .icon {
+  visibility: hidden;
+}
+.anchor.card-staff-context:hover .icon {
+  visibility: visible;
+}
+
 .card-staff-name, .card-staff-contact-links-item a,
 .card-staff-contact-links-item .link, .card-staff-contact-info-item a,
 .card-staff-contact-info-item .link {

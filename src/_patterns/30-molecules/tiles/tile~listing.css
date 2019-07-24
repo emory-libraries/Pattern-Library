@@ -134,6 +134,18 @@ ico,
   content: "";
 }
 
+.anchor.tile-listing-action, .tile-listing:not(.has-description) .anchor.tile-listing-title, .anchor.tile-listing-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.anchor.tile-listing-action .icon, .tile-listing:not(.has-description) .anchor.tile-listing-title .icon, .anchor.tile-listing-date .icon {
+  visibility: hidden;
+}
+.anchor.tile-listing-action:hover .icon, .tile-listing:not(.has-description) .anchor.tile-listing-title:hover .icon, .anchor.tile-listing-date:hover .icon {
+  visibility: visible;
+}
+
 .tile-listing-action, .tile-listing.has-description .tile-listing-title, .tile-listing:not(.has-description) .tile-listing-title {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;

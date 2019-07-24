@@ -134,6 +134,18 @@ ico,
   content: "";
 }
 
+.anchor.feed-item-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.anchor.feed-item-date .icon {
+  visibility: hidden;
+}
+.anchor.feed-item-date:hover .icon {
+  visibility: visible;
+}
+
 .feed-item-action {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;

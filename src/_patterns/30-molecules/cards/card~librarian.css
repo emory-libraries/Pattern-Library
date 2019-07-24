@@ -134,6 +134,18 @@ ico,
   content: "";
 }
 
+.anchor.card-librarian-context {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.anchor.card-librarian-context .icon {
+  visibility: hidden;
+}
+.anchor.card-librarian-context:hover .icon {
+  visibility: visible;
+}
+
 .card-librarian-name, .card-librarian-contact-links-item a,
 .card-librarian-contact-links-item .link, .card-librarian-contact-info-item a,
 .card-librarian-contact-info-item .link, .card-librarian-subjects-list-item a,

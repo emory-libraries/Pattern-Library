@@ -134,6 +134,18 @@ ico,
   content: "";
 }
 
+.anchor.alert-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.anchor.alert-title .icon {
+  visibility: hidden;
+}
+.anchor.alert-title:hover .icon {
+  visibility: visible;
+}
+
 .alert {
   display: grid;
   grid-template-areas: "title" "message";

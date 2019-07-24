@@ -134,6 +134,18 @@ ico,
   content: "";
 }
 
+.anchor.card-action-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.anchor.card-action-text .icon {
+  visibility: hidden;
+}
+.anchor.card-action-text:hover .icon {
+  visibility: visible;
+}
+
 .card-action {
   display: grid;
   grid-template-areas: "image image" "text action";

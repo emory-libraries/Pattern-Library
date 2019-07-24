@@ -134,6 +134,18 @@ ico,
   content: "";
 }
 
+.anchor.branding-header-division {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.anchor.branding-header-division .icon {
+  visibility: hidden;
+}
+.anchor.branding-header-division:hover .icon {
+  visibility: visible;
+}
+
 .branding-header {
   display: grid;
   grid-template-areas: "badge organization" "badge division" "badge dropdown";

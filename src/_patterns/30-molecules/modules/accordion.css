@@ -134,6 +134,18 @@ ico,
   content: "";
 }
 
+.panel-toggle .anchor.panel-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.panel-toggle .anchor.panel-title .icon {
+  visibility: hidden;
+}
+.panel-toggle .anchor.panel-title:hover .icon {
+  visibility: visible;
+}
+
 .panel {
   display: grid;
   grid-template-areas: "toggle" "content";

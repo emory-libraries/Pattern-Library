@@ -134,6 +134,18 @@ ico,
   content: "";
 }
 
+.anchor.wayfinder-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.anchor.wayfinder-heading .icon {
+  visibility: hidden;
+}
+.anchor.wayfinder-heading:hover .icon {
+  visibility: visible;
+}
+
 .wayfinder {
   display: grid;
   grid-template-areas: "heading" "text" "action";

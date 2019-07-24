@@ -134,6 +134,18 @@ ico,
   content: "";
 }
 
+.anchor.intro-hero-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.anchor.intro-hero-title .icon {
+  visibility: hidden;
+}
+.anchor.intro-hero-title:hover .icon {
+  visibility: visible;
+}
+
 .intro-hero {
   display: grid;
   grid-template-rows: 5fr repeat(3, -webkit-min-content) 1fr;

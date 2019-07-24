@@ -134,6 +134,18 @@ ico,
   content: "";
 }
 
+.section-main-body .anchor.heading.-h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.section-main-body .anchor.heading.-h2 .icon {
+  visibility: hidden;
+}
+.section-main-body .anchor.heading.-h2:hover .icon {
+  visibility: visible;
+}
+
 .section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a, .section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a, .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -788,6 +800,15 @@ ico,
   letter-spacing: normal;
   text-transform: none;
   color: #082B73;
+}
+.section-main-toc {
+  padding-left: 0;
+}
+.section-main-toc, .section-main-toc ol {
+  list-style-type: none;
+}
+.section-main-toc ol {
+  padding-left: 1.5em;
 }
 .section-main-spacer {
   height: 40px;

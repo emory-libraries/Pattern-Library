@@ -134,6 +134,18 @@ ico,
   content: "";
 }
 
+.anchor.accordion-toggles-toggle, .anchor.accordion-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.anchor.accordion-toggles-toggle .icon, .anchor.accordion-title .icon {
+  visibility: hidden;
+}
+.anchor.accordion-toggles-toggle:hover .icon, .anchor.accordion-title:hover .icon {
+  visibility: visible;
+}
+
 .accordion-toggles-toggle {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;

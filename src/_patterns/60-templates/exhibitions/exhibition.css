@@ -134,6 +134,18 @@ ico,
   content: "";
 }
 
+.anchor.exhibition-page-main-sidenote-heading, .anchor.exhibition-page-main-date, .anchor.exhibition-page-main-context {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.anchor.exhibition-page-main-sidenote-heading .icon, .anchor.exhibition-page-main-date .icon, .anchor.exhibition-page-main-context .icon {
+  visibility: hidden;
+}
+.anchor.exhibition-page-main-sidenote-heading:hover .icon, .anchor.exhibition-page-main-date:hover .icon, .anchor.exhibition-page-main-context:hover .icon {
+  visibility: visible;
+}
+
 .exhibition-page-main-sidenote-link {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
