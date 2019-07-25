@@ -38,7 +38,7 @@
 
 {{#unless (eq noscript true)}}<noscript>{{/unless}}
 
-  <input type="radio" class="tab-switch" id="{{this.uid}}" name="{{group}}" value="{{this.uid}}"{{#if active}} checked{{/if}}>
+  {{!<input type="radio" class="tab-switch" id="{{this.uid}}" name="{{group}}" value="{{this.uid}}"{{#if active}} checked{{/if}}>--}}
 
   <label class="tab" for="{{this.uid}}" data-group="{{group}}">{{label}}</label>
 

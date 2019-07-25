@@ -17,7 +17,7 @@
 
 {{! Determine the active tab. }}
 {{#if (gt (length (filterWhere tabs 'selected' true '===')) 0)}}
-  {{assign 'selected' (itemAt (filterWhere tabs 'selected' true) 0)}}
+  {{assign 'selected' (itemAt (filterWhere tabs 'selected' true '===') 0)}}
 {{else}}
   {{assign 'selected' (itemAt tabs 0)}}
 {{/if}}
@@ -69,15 +69,11 @@
 {{/unless}}
 
 {{#unless (eq noscript true)}}<noscript>{{/unless}}
-  <div class="tab-menu">
+  <div class="tab-menu -noscript">
     {{#each tabs}}
 
-      {{! Determine if the tab should be active. }}
-      {{#if (eq ../selected.uid this.uid)}}
-        {{assign 'active' true}}
-      {{else}}
-        {{assign 'active' false}}
-      {{/if}}
+    {{! Determine if the tab should be active. }}
+    {{#if (eq ../selected.uid this.uid)}}{{assign 'active' true}}{{else}}{{assign 'active' false}}
 
       {{> atoms-tab noscript=true uid=this.uid group=../uid}}
 
