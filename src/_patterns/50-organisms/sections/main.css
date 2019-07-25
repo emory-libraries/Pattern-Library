@@ -683,25 +683,24 @@ ico,
 @media (max-width: 600px) {
   .-form-page.section-main {
     grid-template-columns: [main-start] 1fr [main-end];
-    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
-    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]);
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .-form-page.section-main {
     grid-template-columns: [main-start] 1fr [main-end];
-    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
-    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]);
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]);
   }
 }
 @media (min-width: 901px) {
   .-form-page.section-main {
     grid-template-columns: [main-start] 1fr [main-end];
-    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
-    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]);
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]);
   }
 }
-.-form-page.section-main .section-main-subtitle,
 .-form-page.section-main .section-main-section,
 .-form-page.section-main .section-main-sidebar {
   display: none;
