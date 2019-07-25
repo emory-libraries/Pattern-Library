@@ -458,6 +458,9 @@ ico,
 .search-cancel.-underline {
   text-decoration: underline;
 }
+.search-cancel[disabled], .search-cancel.is-disabled {
+  opacity: 0.5;
+}
 .search.-contained .search-button {
   border: none;
   border-top-right-radius: 2px;
