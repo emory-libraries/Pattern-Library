@@ -42,6 +42,18 @@ const options = {
   tagValueProcessor : a => he.decode(a) //default is a=>a
 };
 
+// Define content mime types.
+const types = {
+  'application/json': 'json',
+  'application/xml': 'rss',
+  'application/rss+xml': 'rss',
+  'application/rdf+xml': 'rdf',
+  'application/atom+xml': 'atom',
+  'text/xml': 'rss',
+  'text/html': 'rss',
+  'text/plain': 'rss'
+};
+
 // Export helpers.
 module.exports = {
 
@@ -49,22 +61,22 @@ module.exports = {
 
     const response = request('GET', `${PROTOCOL}://cors-anywhere.herokuapp.com/${url}`, {
       headers: {
-        'Accept': [
-          'application/json',
-          'application/xml',
-          'application/rss+xml',
-          'application/rdf+xml',
-          'application/atom+xml',
-          'text/xml',
-          'text/html',
-          'text/plain'
-        ].join(', '),
+        'Accept': _.keys(types).join(', '),
         'X-Requested-With': DOMAIN
       }
     });
 
+    // Use the request headers to determine the content type.
+    const type = types[response.headers['content-type'].split(';').map(_.trim)[0]];
+
+    // Get the response body.
+    const body = response.getBody('utf8');
+
+    // Parse and return JSON as is.
+    if( type === 'json' ) return JSON.parse(body);
+
     // Extract and parse the feed data from the response.
-    let feed = parser.parse(response.getBody('utf8'), options);
+    let feed = parser.parse(body, options);
 
     // Remove the root node if found.
     if( _.isPlainObject(feed) && _.keys(feed).length === 1 ) {
