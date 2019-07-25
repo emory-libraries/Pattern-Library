@@ -149,7 +149,6 @@ ico,
   -ms-flex-item-align: stretch;
       align-self: stretch;
   margin: 0 !important;
-  padding-top: 0.5em;
 }
 .intro-home-search .search-menu {
   padding-top: 0;
@@ -158,6 +157,7 @@ ico,
   .intro-home-search {
     padding-left: 6em;
     padding-right: 6em;
+    padding-top: 0.5em;
   }
 }
 .intro-home-badge {
