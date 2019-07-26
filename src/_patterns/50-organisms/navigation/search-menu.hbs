@@ -1,5 +1,3 @@
-{{assign 'noscript' true}}
-
 {{! Generate a unique ID for the search box. }}
 {{assign 'searchUID' (uid 'search--')}}
 
@@ -44,7 +42,7 @@
       {{! Determine if the tab should be active. }}
       {{#if (eq ../selected this.uid)}}{{assign 'active' true}}{{else}}{{assign 'active' false}}{{/if}}
 
-      <input type="radio" class="tab-switch" id="{{this.uid}}" name="{{group}}" value="{{this.uid}}"{{#if active}} checked{{/if}}>
+      <input type="radio" class="search-menu-toggle" id="{{this.uid}}" name="{{group}}" value="{{this.uid}}"{{#if active}} checked{{/if}}>
 
     {{/each}}
   {{/if}}

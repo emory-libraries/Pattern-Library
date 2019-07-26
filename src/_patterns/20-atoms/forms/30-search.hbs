@@ -101,8 +101,6 @@
   <div class="search -form{{#if (and layout (eq layout 'contained'))}} -contained{{/if}}">
   {{#each services as |service|}}
 
-    {{!<input type="radio" name="{{default ../uid ../id}}" id="{{default ../uid ../id}}-{{id}}" class="search-toggle"{{#if service.default}} checked{{/if}}>}}
-
     <form action="{{../processor}}"
           method="GET"
           class="search-form{{#if service.default}} is-default{{/if}}"
@@ -127,9 +125,9 @@
              class="button search-button{{#if ../button.disabled}} is-disabled{{/if}}{{#if ../button.active}} is-active{{/if}}{{#if ../button.hover}} is-hover{{/if}}{{#if ../button.focus}} is-focus{{/if}}"
              {{#if ../button.disabled}}disabled{{/if}}>
 
-      {{#if cancel}}
+      {{#if ../cancel}}
       <input type="reset"
-             value="{{default cancel.label 'Cancel'}}"
+             value="{{default ../cancel.label 'Cancel'}}"
              class="link search-cancel{{#if ../cancel.disabled}} is-disabled{{/if}}{{#if ../cancel.active}} is-active{{/if}}{{#if ../cancel.hover}} is-hover{{/if}}{{#if ../cancel.focus}} is-focus{{/if}}"
              {{#if ../cancel.disabled}}disabled{{/if}}>
       {{/if}}

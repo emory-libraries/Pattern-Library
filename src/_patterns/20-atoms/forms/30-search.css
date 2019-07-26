@@ -191,7 +191,7 @@ ico,
   display: none;
 }
 .is-default.search-form {
-  display: block;
+  display: grid;
 }
 .search-toggle {
   display: none;
