@@ -702,6 +702,8 @@ ico,
   }
 }
 .-form-page.section-main .section-main-section,
+.-form-page.section-main .section-main-content,
+.-form-page.section-main .section-main-spacer,
 .-form-page.section-main .section-main-sidebar {
   display: none;
 }
