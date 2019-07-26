@@ -227,7 +227,7 @@ ico,
 }
 .-form.-contained.search .search-button {
   display: block;
-  grid-area: none;
+  grid-area: button;
 }
 .-contained.search {
   display: grid;

@@ -136,8 +136,8 @@ ico,
 
 .intro-home {
   display: grid;
-  grid-template-rows: 180px -webkit-min-content 6fr repeat(2, -webkit-min-content) 1fr;
-  grid-template-rows: 180px min-content 6fr repeat(2, min-content) 1fr;
+  grid-template-rows: minmax(180px, -webkit-min-content) -webkit-min-content 6fr repeat(2, -webkit-min-content) 1fr;
+  grid-template-rows: minmax(180px, min-content) min-content 6fr repeat(2, min-content) 1fr;
   grid-template-columns: 1fr 2fr minmax(-webkit-min-content, 800px) 2fr 1fr;
   grid-template-columns: 1fr 2fr minmax(min-content, 800px) 2fr 1fr;
   background-size: cover;
