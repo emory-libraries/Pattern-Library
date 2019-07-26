@@ -779,16 +779,6 @@ ico,
 .section-main-title.intro-title {
   color: #082B73 !important;
 }
-.section-main-body .heading.-h2 {
-  font-family: "Open Sans", sans-serif;
-  font-size: 22px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1.6364;
-  letter-spacing: normal;
-  text-transform: none;
-  color: #082B73;
-}
 .section-main-spacer {
   height: 40px;
 }

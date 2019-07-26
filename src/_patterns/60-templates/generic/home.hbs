@@ -1,0 +1,13 @@
+<div class="home-page">
+  <header class="home-page-header"></header>
+  <div class="home-page-main">
+    {{#extend 'organisms-main' type="home-page" classes=""}}
+    {{#content 'section-main-body'}}
+        {{>organisms-intro-home badge=intro.badge link=intro.link id=intro-id back=intro.back tabs=intro.tabs services=intro.services button=intro.button processor=intro.processor}}
+        {{>compounds-popular-links-menu title=popular-links.title items=popular-links.items}}
+        {{>compounds-slider arrows=slider.arrows slides=slider.slides}}
+      {{/content}}
+    {{/extend}}
+  </div>
+  <footer class="home-page-footer"></footer>
+</div>
