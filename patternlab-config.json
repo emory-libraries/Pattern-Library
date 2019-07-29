@@ -11,10 +11,14 @@
       "styleguide": "./node_modules/styleguidekit-assets-default/dist/",
       "patternlabFiles": "./node_modules/styleguidekit-mustache-default/views/",
       "js": "./src/js",
+      "php": "./src/php",
       "images": "./src/images",
       "fonts": "./src/fonts",
+      "icons": "./src/icons",
+      "logos": "./src/logos",
       "css": "./src/css/",
-      "scss": "./src/scss/"
+      "scss": "./src/scss/",
+      "extensions": "./src/_extensions"
     },
     "public": {
       "root": "./public/",
@@ -23,8 +27,11 @@
       "annotations": "./public/annotations/",
       "styleguide": "./public/styleguide/",
       "js": "./public/js/",
+      "php": "./public/php/",
       "images": "./public/images/",
       "fonts": "./public/fonts/",
+      "icons": "./public/icons/",
+      "logos": "./public/logos/",
       "css": "./public/css/",
       "scss": "./public/scss/"
     },
@@ -33,7 +40,14 @@
       "js": "./dist/<%= pkg.version %>/js/",
       "images": "./dist/<%= pkg.version %>/images/",
       "fonts": "./dist/<%= pkg.version %>/fonts/",
-      "css": "./dist/<%= pkg.version %>/css/"
+      "icons": "./dist/<%= pkg.version %>/icons/",
+      "logos": "./dist/<%= pkg.version %>/logos/",
+      "css": "./dist/<%= pkg.version %>/css/",
+      "php": "./dist/<%= pkg.version %>/php/"
+    },
+    "live": {
+      "hostname": "template.library.emory.edu",
+      "pathname": "/styleguide/patternlibrary/current"
     }
   },
   "styleGuideExcludes": [
@@ -92,7 +106,10 @@
       "options": {
         "tabsToAdd": [
           "scss",
-          "js"
+          "css",
+          "js",
+          "json",
+          "php"
         ]
       }
     },

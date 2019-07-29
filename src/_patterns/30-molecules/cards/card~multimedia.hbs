@@ -1,0 +1,25 @@
+<div class="card-multimedia">
+  <div class="card-multimedia-icon">
+    {{#make 'icon-map'}}
+    {
+      video: 'material-videocam',
+      audio: 'material-audiotrack',
+      photo: 'material-camera_alt',
+      image: 'material-camera_alt',
+      text: 'material-description',
+      document: 'material-description',
+      chart: 'material-insert_chart',
+      diagram: 'material-insert_chart',
+      presentation: 'material-slideshow',
+      slideshow: 'material-slideshow',
+      activity: 'material-touch_app'
+    }
+    {{/make}}
+    {{> tokens-icon id=(get icon-type icon-map)}}
+  </div>
+  <span class="card-multimedia-context">{{context}}</span>
+  {{#with link}}{{> atoms-link label=../title classes='card-multimedia-title'}}{{/with}}
+  {{#inArray (makeArray 'video' 'audio' 'presentation' 'slideshow') icon-type}}
+    <span class="card-multimedia-duration">{{duration}}</span>
+  {{/inArray}}
+</div>

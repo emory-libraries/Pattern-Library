@@ -1,0 +1,39 @@
+////
+/// @group emory-libraries.config
+////
+
+/// Indentifies the configuration set.
+/// This map uses a schema compatible
+/// with Brandy's `config()` function.
+///
+/// @since 1.0.0
+///
+/// @prop {map} path - A set of paths
+/// @prop {string} path.icons [../icons] - The path to the icons directory
+///
+/// @link https://laurenhamel.github.io/brandy/docs/#brandy-getters-function-config Brandy::config
+///
+/// @type map
+$config: (
+
+  'path': (
+    'icons': '../icons',
+    'fonts': '../fonts'
+  )
+
+);
+
+
+/// Sets the default configuration map
+/// used by Brandy to the chosen configuration
+/// set, making it available through the
+/// `config()` function.
+///
+/// @since 1.0.0
+///
+/// @requires {variable} Brandy::brandy-config-map <https://laurenhamel.github.io/brandy/docs/#brandy-config-variable-brandy-config-map>
+///
+/// @link https://laurenhamel.github.io/brandy/docs/#brandy-getters-function-config Brandy::config
+///
+/// @type map
+$brandy-config-map: $config;

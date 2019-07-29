@@ -1,0 +1,158 @@
+////
+/// @group emory-libraries.patterns.atoms.link
+////
+
+/// Defines the base skin of the link component.
+///
+/// @since 1.0.0
+///
+/// @type map
+$atoms-link: (
+  
+  'color': (
+    'normal': color('blue', 'bright'),
+    'hover': color('blue', 'mid'),
+    'active': color('blue', 'mid')
+  ),
+  'weight': bold,
+  'style': normal,
+  'icon': (
+    'size': 24px,
+    'spacing': 1ex
+  ),
+  'transition': (
+    'duration': $transition-duration,
+    'timing': $transition-timing
+  ),
+  
+  'popular': (
+    'font': (
+      'font-family': font('accent'),
+      'font-size': 20px,
+      'font-weight': normal,
+      'font-style': normal,
+      'line-height': 2.05
+    ),
+    'color': (
+      'normal': $color-text-light,
+      'hover': $color-actionable,
+      'active': $color-actionable
+    )
+  )
+  
+);
+
+/// Defines the link component theme.
+///
+/// @since 1.0.0
+///
+/// @requires {function} Brandy::map-deep-get <https://laurenhamel.github.io/brandy/docs/#brandy-maps-function-map-deep-get>
+///
+/// @param {map} skin - The component's skin
+///
+/// @output The link component's themeable properties
+@mixin atoms-link--theme ( $skin ) {
+  
+  // Capture themeable variables from skin.
+  $normal: map-deep-get($skin, 'color.normal');
+  $hover: map-deep-get($skin, 'color.hover');
+  $active: map-deep-get($skin, 'color.active');
+  $visited: map-deep-get($skin, 'color.visited');
+  $weight: map-deep-get($skin, 'weight');
+  $style: map-deep-get($skin, 'style');
+  $duration: map-deep-get($skin, 'transition.duration');
+  $timing: map-deep-get($skin, 'transition.timing');
+  
+  // Get icon-specific variables.
+  $icon-size: map-deep-get($skin, 'icon.size');
+  $icon-spacing: map-deep-get($skin, 'icon.spacing');
+  
+  // Defines the link component's base styles.
+  font-weight: $weight;
+  font-style: $style;
+  color: $normal;
+  transition: all $duration $timing;
+  background: none;
+  border: none;
+  
+  // Adds styles for icons.
+  .icon {
+    @include size( $icon-size );
+    margin-right: $icon-spacing;
+    
+    svg {
+      fill: $normal;
+    }
+    
+  }
+  
+  &:hover,
+  &.is-hover,
+  &:focus,
+  &.is-focus {
+    color: $hover;
+    
+    // Adds styles for icons.
+    .icon {
+
+      svg {
+        fill: $hover;
+      }
+
+    }
+    
+  }
+  
+  &:active,
+  &.is-active {
+    color: $active;
+    
+    // Adds styles for icons.
+    .icon {
+
+      svg {
+        fill: $active;
+      }
+
+    }
+    
+  }
+  
+  &::after {
+    @include tokens-text('body', $custom: ( 'body': (
+      'font-style': italic
+    )));
+    font-size: 12px !important;
+    line-height: 1 !important;
+  }
+  
+  // Adds style variation for popular links.
+  &.-popular {
+    $font: map-deep-get($skin, 'popular.font');
+    $normal: map-deep-get($skin, 'popular.color.normal');
+    $hover: map-deep-get($skin, 'popular.color.hover');
+    $active: map-deep-get($skin, 'popular.color.active');
+    
+    @include expand-properties($font);
+    color: $normal;
+    
+    &:hover,
+    &.is-hover,
+    &:focus,
+    &.is-focus {
+      color: $hover;
+    }
+    
+    &:active,
+    &.is-active {
+      color: $active;
+    }
+    
+  }
+  
+  // Adds style variation for underlining.
+  &.-underline {
+    text-decoration: underline;
+  }
+  
+}

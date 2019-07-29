@@ -1,0 +1,205 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon/icomoon.eot");
+  src: url("../fonts/icomoon/icomoon.eot#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf") format("truetype"), url("../fonts/icomoon/icomoon.woff") format("woff"), url("../fonts/icomoon/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+ico,
+[class^=ico-],
+[class*=ico-] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-arrow-down-circle::before {
+  content: "";
+}
+
+.ico-arrow-left-circle::before {
+  content: "";
+}
+
+.ico-arrow-right-circle::before {
+  content: "";
+}
+
+.ico-arrow-up-circle::before {
+  content: "";
+}
+
+.ico-arrow-down-left::before {
+  content: "";
+}
+
+.ico-arrow-down-right::before {
+  content: "";
+}
+
+.ico-arrow-up-right::before {
+  content: "";
+}
+
+.ico-arrow-up-left::before {
+  content: "";
+}
+
+.ico-arrow-down::before {
+  content: "";
+}
+
+.ico-arrow-left::before {
+  content: "";
+}
+
+.ico-arrow-right::before {
+  content: "";
+}
+
+.ico-arrow-up::before {
+  content: "";
+}
+
+.ico-chevron-down::before {
+  content: "";
+}
+
+.ico-chevron-left::before {
+  content: "";
+}
+
+.ico-chevron-right::before {
+  content: "";
+}
+
+.ico-chevron-up::before {
+  content: "";
+}
+
+.ico-chevrons-down::before {
+  content: "";
+}
+
+.ico-chevrons-left::before {
+  content: "";
+}
+
+.ico-chevrons-right::before {
+  content: "";
+}
+
+.ico-chevrons-up::before {
+  content: "";
+}
+
+.ico-corner-down-left::before {
+  content: "";
+}
+
+.ico-corner-down-right::before {
+  content: "";
+}
+
+.ico-corner-left-down::before {
+  content: "";
+}
+
+.ico-corner-left-up::before {
+  content: "";
+}
+
+.ico-corner-right-down::before {
+  content: "";
+}
+
+.ico-corner-right-up::before {
+  content: "";
+}
+
+.ico-corner-up-left::before {
+  content: "";
+}
+
+.ico-corner-up-right::before {
+  content: "";
+}
+
+.card-action {
+  display: grid;
+  grid-template-areas: "image image" "text action";
+  grid-template-columns: 1fr auto;
+}
+.card-action-image {
+  grid-area: image;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  overflow: hidden;
+}
+.card-action-image img {
+  width: 100%;
+}
+.card-action-text {
+  grid-area: text;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.card-action-action {
+  grid-area: action;
+}
+
+.card-action {
+  padding: 25px;
+  grid-gap: 25px;
+  min-height: 265px;
+  border: 1px solid #E7EAF1;
+  border-top: 4px solid #5387F7;
+  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.08);
+  grid-template-rows: 190px auto;
+}
+.card-action-image {
+  height: calc(190px + 25px);
+  width: calc(100% + (25px * 2));
+  top: -25px;
+  left: -25px;
+  right: -25px;
+}
+.card-action-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 22px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6364;
+  letter-spacing: normal;
+  text-transform: none;
+  color: #082B73;
+}

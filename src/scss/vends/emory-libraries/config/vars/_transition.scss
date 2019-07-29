@@ -1,0 +1,27 @@
+////
+/// @group emory-libraries.config
+////
+
+
+/// Sets the default transition duration.
+///
+/// @since 1.0.0
+///
+/// @type number
+$transition-duration: .25s !default;
+
+
+/// Sets the default transition timing.
+///
+/// @since 1.0.0
+///
+/// @type number
+$transition-timing: ease !default;
+
+
+/// Sets the default transition all.
+///
+/// @since 1.0.0
+///
+/// @type number
+$transition-all: all $transition-duration $transition-timing !default;

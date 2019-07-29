@@ -1,0 +1,135 @@
+////
+/// @group emory-libraries.patterns.tokens.heading
+////
+
+/// Defines the base skin of the heading component.
+///
+/// @since 1.0.0
+///
+/// @requires {variable} color-heading
+/// @requires {variable} color-text-dark
+///
+/// @type map
+$tokens-heading: (
+  
+  'h1': (
+    'font-weight': bold,
+    'font-style': normal,
+    'line-height': normal,
+    'letter-spacing': normal,
+    'text-transform': none,
+    'color': $color-heading
+  ),
+  'h1-alt': (
+    'font-weight': bold,
+    'font-style': normal,
+    'line-height': normal,
+    'letter-spacing': normal,
+    'text-transform': none,
+    'color': $color-heading
+  ),
+  'h1-hero': (
+    'font-weight': bold,
+    'font-style': normal,
+    'line-height': 1.36, // 68px
+    'letter-spacing': normal,
+    'text-transform': none,
+    'color': $color-text-light
+  ),
+  'h2': (
+    'font-weight': normal,
+    'font-style': normal,
+    'line-height': 1.0833, // 78px
+    'letter-spacing': normal,
+    'text-transform': none,
+    'color': $color-heading
+  ),
+  'h3': (
+    'font-weight': bold,
+    'font-style': normal,
+    'line-height': 1.7083, // 41px,
+    'letter-spacing': normal,
+    'text-transform': none,
+    'color': $color-text-dark
+  ),
+  'h4': (
+    'font-weight': normal,
+    'font-style': normal,
+    'line-height': 1.5, // 42px
+    'letter-spacing': normal,
+    'text-transform': none,
+    'color': $color-text-dark
+  ),
+  'h5': (
+    'font-weight': normal,
+    'font-style': normal,
+    'line-height': normal,
+    'letter-spacing': normal,
+    'text-transform': none,
+    'color': $color-text-dark
+  ),
+  'h5-alt': (
+    'font-weight': normal,
+    'font-style': normal,
+    'line-height': 1.6364, // 36px
+    'letter-spacing': normal,
+    'text-transform': none,
+    'color': $color-text-dark
+  ),
+  'h6': (
+    'font-weight': bold,
+    'font-style': normal,
+    'line-height': 1.6667, // 20px
+    'letter-spacing': 0.05em,
+    'text-transform': uppercase,
+    'color': $color-text-dark
+  )
+  
+);
+
+/// Defines the heading token's font properties.
+///
+/// @since 1.0.0
+///
+/// @requires {variable} font-size
+/// @requires {variable} fonts-scale
+/// @requires {function} Brandy::important <https://laurenhamel.github.io/brandy/docs/#brandy.help-function-important>
+/// @requires {function} Brandy::font <https://laurenhamel.github.io/brandy/docs/#brandy-getters-function-font>
+/// @requires {function} Brandy::map-deep-get <https://laurenhamel.github.io/brandy/docs/#brandy-maps-function-map-deep-get>
+///
+/// @param {string} level - The intended heading level
+/// @param {map} skin - The token's skin
+///
+/// @output The heading component's font property
+@mixin tokens-heading--font ( $level, $skin, $important: false ) {
+  
+  // Defines the heading token's font styles.
+  font-family: important(font('heading.' + $level), $important);
+  font-size: important(($font-size * map-deep-get($fonts-scale, 'heading.' + $level)), $important);
+  font-weight: important(map-deep-get($skin, $level + '.font-weight'), $important);
+  font-style: important(map-deep-get($skin, $level + '.font-style'), $important);
+  line-height: important(map-deep-get($skin, $level + '.line-height'), $important);
+  letter-spacing: important(map-deep-get($skin, $level + '.letter-spacing'), $important);
+  text-transform: important(map-deep-get($skin, $level + '.text-transform'), $important);
+  
+}
+
+/// Defines the heading token's color properties.
+///
+/// @since 1.0.0
+///
+/// @require {function} Brandy::default <https://laurenhamel.github.io/brandy/docs/#brandy.help-function-default>
+/// @require {function} Brandy::important <https://laurenhamel.github.io/brandy/docs/#brandy.help-function-important>
+/// @requires {function} Brandy::map-deep-get <https://laurenhamel.github.io/brandy/docs/#brandy-maps-function-map-deep-get>
+///
+/// @param {string} level - The intended heading level
+/// @param {map} skin - The token's skin
+/// @param {color} color [null] - The desired heading color
+///
+/// @output The heading component's font property
+@mixin tokens-heading--color ( $level, $skin, $color: null, $important: false ) {
+  
+  // Defines the heading token's color styles.
+  color: important(default($color, map-deep-get($skin, $level + '.color')), $important);
+  
+}

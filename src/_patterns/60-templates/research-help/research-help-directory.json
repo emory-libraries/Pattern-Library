@@ -1,0 +1,69 @@
+{
+  "title": "Research Help",
+  "subtitle": "Need help finding materials at the library? You're not alone! We've created this simple guide to help you learn more about the library and the services we have to offer. To get started, find your question below and follow the links to learn more! ",
+  "cards": [
+    {
+      "context": "Research Help",
+      "title": "Access Library Resources",
+      "link": { 
+        "href": ""
+      }
+    },
+    {
+      "context": "Research Help",
+      "title": "Find a Book",
+      "link": { 
+        "href": ""
+      }
+    },
+    {
+      "context": "Research Help",
+      "title": "Find an Article in Full Text",
+      "link": { 
+        "href": ""
+      }
+    },
+    {
+      "context": "Research Help",
+      "title": "Find a Textbook",
+      "link": { 
+        "href": ""
+      }
+    },
+    {
+      "context": "Research Help",
+      "title": "Find a Video",
+      "link": { 
+        "href": ""
+      }
+    },
+    {
+      "context": "Research Help",
+      "title": "Find Course Reserve Material",
+      "link": { 
+        "href": ""
+      }
+    },
+    {
+      "context": "Research Help",
+      "title": "Understanding Citations",
+      "link": { 
+        "href": ""
+      }
+    },
+    {
+      "context": "Research Help",
+      "title": "Find Journals by Subject",
+      "link": { 
+        "href": ""
+      }
+    },
+    {
+      "context": "Research Help",
+      "title": "Access an Item in Storage",
+      "link": { 
+        "href": ""
+      }
+    }
+  ]
+}

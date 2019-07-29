@@ -1,0 +1,36 @@
+////
+/// @group emory-libraries.patterns.tokens.icon
+////
+
+/// Defines the base skin of the icon component.
+///
+/// @since 1.0.0
+///
+/// @type map
+$tokens-icon: (
+  
+  'color': null,
+  'size': null
+  
+);
+
+/// Defines the icon token's icon.
+///
+/// @since 1.0.0
+///
+/// @requires {function} icon
+/// @requires {function} Brandy::map-deep-get <https://laurenhamel.github.io/brandy/docs/#brandy-maps-function-map-deep-get>
+///
+/// @param {map} skin - The component's skin
+///
+/// @output The icon token's themeable properties
+@mixin tokens-icon--icon ( $id, $color: null, $size: null, $skin ) {
+  
+  // Capture icon variables from skin.
+  $color: default($color, map-deep-get($skin, 'color'));
+  $size: default($size, map-deep-get($skin, 'size'));
+  
+  // Defines the icon token's base styles.
+  content: url( icon($id, $color, $size) );
+  
+}

@@ -1,0 +1,70 @@
+{
+  "heading": "Tools",
+  "navigation": [
+    {
+      "label": "DiscoverE",
+      "alias": "Books, eBooks, Journals, Videos",
+      "href": "",
+      "resource": ""
+    },
+    {
+      "label": "eJournals",
+      "alias": "Academic Journals",
+      "href": "",
+      "resource": ""
+    },
+    {
+      "label": "ILLiad",
+      "alias": "Inter-Library Loans",
+      "href": "",
+      "resource": ""
+    },
+    {
+      "label": "Databases @ Emory",
+      "alias": "Databases",
+      "href": "",
+      "resource": ""
+    },
+    {
+      "label": "Emory Finding Aids",
+      "alias": "Archival and Manuscripts",
+      "href": "",
+      "resource": ""
+    },
+    {
+      "label": "Emory Center for Digital Scholarship",
+      "href": "",
+      "resource": ""
+    },
+    {
+      "label": "ETD",
+      "alias": "Theses and Dissertations",
+      "href": "",
+      "resource": ""
+    },
+    {
+      "label": "OpenEmory",
+      "alias": "Faculty Works",
+      "href": "",
+      "resource": ""
+    },
+    {
+      "label": "Overdrive",
+      "alias": "eBooks, Audiobooks",
+      "href": "",
+      "resource": ""
+    },
+    {
+      "label": "Ares",
+      "alias": "Course Reserves",
+      "href": "",
+      "resource": ""
+    },
+    {
+      "label": "LibGuides",
+      "alias": "Research Help and Guides",
+      "href": "",
+      "resource": ""
+    }
+  ]
+}

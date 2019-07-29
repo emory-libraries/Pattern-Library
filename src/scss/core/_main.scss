@@ -1,0 +1,22 @@
+// Reset body styles.
+body {
+  @include tokens-text;
+}
+
+// Reset all element styles.
+*,
+*::before,
+*::after {
+  position: relative;
+  box-sizing: border-box;
+}
+
+// Reset link styles.
+a {
+  @include atoms-link;
+}
+
+// Reset button styles.
+#{$all-buttons} {
+  appearance: none;
+}

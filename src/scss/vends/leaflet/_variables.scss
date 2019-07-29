@@ -1,0 +1,56 @@
+// PATHS
+
+$path--images: '../images/maps';
+
+// Z-INDEXES
+
+$z-index--pane:         400;
+$z-index--tile:         200;
+$z-index--overlay:      400;
+$z-index--shadow:       500;
+$z-index--marker:       600;
+$z-index--tooltip:      650;
+$z-index--popup:        700;
+$z-index--map--canvas:  100;
+$z-index--map--svg:     200;
+$z-index--zoom:         800;
+$z-index--control:      800;
+
+// FONTS
+
+$font:        12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+$font--zoom:  bold 18px 'Lucida Console', Monaco, monospace;
+
+// COLORS
+
+$color--background:                               #dddddd;
+
+$color--link:                                     #0078a8;
+$color--link--outline:                            orange;
+$color--link--tap:                                rgba(51, 181, 229, .4);
+
+$color--zoom--border:                             #3388ff;
+$color--zoom--background:                         rgba(white, .5);
+
+$color--toolbar--shadow:                          rgba(0, 0, 0, .65);
+$color--toolbar--link--background--normal:        white;
+$color--toolbar--link--background--hover:         #f4f4f4;
+$color--toolbar--link--background--disabled:      #f4f4f4;
+$color--toolbar--link--foreground--normal:        black;
+$color--toolbar--link--foreground--disabled:      #dddddd;
+$color--toolbar--link--border:                    #cccccc;
+
+$color--layers--shadow:                           rgba(0, 0, 0, .4);
+$color--layers--background:                       white;
+$color--layers--icon:                             #dddddd;
+$color--layers--expanded--foreground:             #333333;
+$color--layers--expanded--background:             white;
+$color--layers--separator:                        #dddddd;
+
+$color--marker:                                   color('blue');
+
+$color--icon--background:                         white;
+$color--icon--border:                             #666666;
+
+$color--attribution--background:                  white;
+$color--attribution--foreground:                  #333333;

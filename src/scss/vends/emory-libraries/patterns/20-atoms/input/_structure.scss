@@ -1,0 +1,177 @@
+////
+/// @group emory-libraries.patterns.atoms.input
+////
+
+/// Defines the base structure of the input component.
+///
+/// @since 1.0.0
+///
+/// @requires {variable} $rhythm-y
+/// @requires {variable} $rhythm-x
+/// @requires {variable} $colors
+/// @requires {function} icon
+/// @requires {mixin} Brandy::size <https://laurenhamel.github.io/brandy/docs/#brandy-layout-mixin-size>
+/// @requires {mixin} Brandy::radial-gradient <https://laurenhamel.github.io/brandy/docs/#brandy-colors-mixin-radial-gradient>
+/// @requires {mixin} Brandy::margin-y <https://laurenhamel.github.io/brandy/docs/#brandy-layout-mixin-margin-y>
+/// @requires {function} Brandy::color <https://laurenhamel.github.io/brandy/docs/#brandy-getters-function-color>
+%atoms-input {
+  
+  // Capture class name.
+  $class: &;
+  
+  appearance: none;
+  -webkit-appearance: none;
+  display: block;
+  
+  // Defines base input structure.
+  &,
+  &.-text { 
+  
+    &[disabled],
+    &.is-disabled {
+      cursor: not-allowed;
+    }
+    
+  }
+  
+  // Defines the structure for search inputs.
+  &.-search { }
+  
+  // Defines the structure for date and time inputs.
+  &.-date,
+  &.-time {
+    
+    // Disables the spin button.
+    &::-webkit-inner-spin-button {
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    
+  }
+  
+  // Defines the structure specific to date inputs.
+  &.-date {
+    
+    // Disable calendar picker button.
+    &::-webkit-calendar-picker-indicator {
+      color: transparent;
+      background: transparent;
+      position: absolute;
+      right: 0;
+      height: 100%;
+      box-sizing: border-box;
+      z-index: z('above');
+    }
+    
+  }
+  
+  // Defines the structure specific to select inputs.
+  &.-select { 
+  
+    // Modified style for inline select inputs.
+    &.-inline {
+      display: inline-block;
+    }
+    
+  }
+  
+  // Defines the structure for checkbox and radio inputs.
+  &.-checkbox,
+  &.-radio {
+    display: inline-block;
+    padding: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    
+    // Overrides the structure of labes when following a checkbox or radio.
+    + #{$class}-label {
+      vertical-align: middle;
+    }
+    
+  }
+  
+  // Defines the structure specific to checkbox inputs.
+  &.-checkbox { }
+  
+  // Defines the structure specific to radio inputs.
+  &.-radio { }
+
+  // Defines the structure specific to toggle inputs.
+  &.-toggle {
+    display: none;
+  }
+  
+  // Defines the structure of an input label.
+  &-label {
+   
+    // Defines the structure for block labels.
+    &:not(.-inline) {
+      display: block;
+    }
+    
+    // Defines the structure for inline labels (used for labeling inputs).
+    &.-inline {
+      display: inline-block;
+    }
+    
+  }
+  
+  // Defines the structure of an input field wrapper. 
+  &-field {
+    display: grid;
+    
+    // Apply style when not used inline.
+    &:not(.-inline) {
+      grid-template-areas: "label" "field";
+      grid-template-columns: min-content;
+    }
+    
+    // Apply styles when used inline.
+    &.-inline {
+      grid-template-areas: "field label";
+      grid-template-columns: min-content auto;
+      align-items: center;
+    }
+    
+    // Overrides the base input structure when wrapped.
+    #{$class} {
+      margin-bottom: 0;
+      grid-area: field;
+    }
+    
+    // Overrides the label structure when wrapped.
+    #{$class}-label {
+      margin: 0;
+      grid-area: label;
+    }
+    
+  }
+
+  // Defines the structure of an input container.
+  &-container {
+    display: grid;
+    
+    &.-row {
+      align-items: center;
+      grid-template-rows: 1fr;
+    }
+    
+    &.-column {
+      justify-content: left;
+    }
+    
+    &.-grid {}
+    
+    &.-inline {
+      display: inline-grid;
+    }
+    
+  }
+
+  // Defines the structure of an input group wrapper.
+  &-group {
+    display: block;
+  }
+  
+}

@@ -33,15 +33,15 @@ Before contributing to the Pattern Library, make sure all [prerequisites](#prere
 
 ### Pulling Dependencies
 
-Our Pattern Library depends on files from other [Emory Libraries](https://github.com/emory-libraries) projects, such as the [Emory Libraries Sass Framework](https://github.com/emory-libraries/stemplate-sass). These files can be pulled into the Pattern Library from other local repos on your system as needed using the [`grunt pull`](#grunt-pull) command. 
+Our Pattern Library depends on files from other [Emory Libraries](https://github.com/emory-libraries) projects, such as the [Emory Libraries Sass Framework](https://github.com/emory-libraries/stemplate-sass). These files can be pulled into the Pattern Library from other local repos on your system as needed using the [`grunt pull`](#grunt-pull) command.
 
-> Note, the `grunt pull` command has been preconfigured to pull in any files from other (local) repos that the Pattern Library integrates with. You must downlod or `git clone` these repos to your system in a location adjacent to your Pattern Library repo in order for this to work. 
+> Note, the `grunt pull` command has been preconfigured to pull in any files from other (local) repos that the Pattern Library integrates with. You must downlod or `git clone` these repos to your system in a location adjacent to your Pattern Library repo in order for this to work.
 
 ### Pushing Dependencies
 
-Some files within our Pattern Library are utilized by other [Emory Libraries](https://github.com/emory-libraries) projects, such as the [Emory Libraries Style Guide](https://github.com/emory-libraries/style-guide-guide) and [Templating Engine](https://github.com/emory-libraries/templating-engine). These files can be pushed to other local repos on your system as needed using the [`grunt push`](#grunt-push) command. 
+Some files within our Pattern Library are utilized by other [Emory Libraries](https://github.com/emory-libraries) projects, such as the [Emory Libraries Style Guide](https://github.com/emory-libraries/style-guide-guide) and [Templating Engine](https://github.com/emory-libraries/templating-engine). These files can be pushed to other local repos on your system as needed using the [`grunt push`](#grunt-push) command.
 
-> Note, the `grunt push` command has been preconfigured to push out any files to other (local) repos that require some integration with the Pattern Library. You must downlod or `git clone` these repos to your system in a location adjacent to your Pattern Library repo in order for this to work. 
+> Note, the `grunt push` command has been preconfigured to push out any files to other (local) repos that require some integration with the Pattern Library. You must downlod or `git clone` these repos to your system in a location adjacent to your Pattern Library repo in order for this to work.
 
 
 ### Committing Changes
@@ -67,14 +67,23 @@ Builds the Pattern Library, listens for changes during development, and enables 
 | Subtask                   | Description                                                             |
 |---------------------------|-------------------------------------------------------------------------|
 | `dev:startup`             | Runs an initial build and forces any active browser windows to reload.  |
+| `dev:buildonly`           | Runs an initial build only without running a subsequent watch task.     |
 
 #### `grunt dist`
 
 Compiles assets and creates production-ready files for distribution.
 
+#### `grunt serve`
+
+Spins up a PHP-enabled server that allows previewing of the Pattern Library in real-time during development.
+
+#### `grunt deploy`
+
+Generates production-ready files for distribution (like `grunt dist`) and additionally deploys them to our host server
+
 #### `grunt release`
 
-Generates production-ready files for distribution (like `grunt dist`) and additionally adds a new release to Github.
+Generates production-ready files for distribution and deploys them to our host server (like `grunt deploy`) and additionally adds a new release to Github.
 
 #### `grunt patternlab`
 
@@ -93,12 +102,12 @@ Runs the Pattern Lab core processor to generate an instance of our Pattern Libra
 
 #### `grunt export`
 
-Exports a pattern definition, or group of pattern definitions, and any respective assets.
+Exports a single pattern withs its assets or all patterns with their respective assets. To export a single pattern, pass the pattern's Pattern Lab ID (i.e., `atoms-button`) into the grunt task as an argument.
 
 **Example**
 
 ```
-grunt export:10-atoms/01-button
+grunt export:atoms-button
 ```
 
 #### `grunt build:dev`
@@ -133,6 +142,29 @@ Pulls in files from other repos that feed into the Pattern Library. Current depe
 #### `grunt push`
 
 Pushes out selected files from our Pattern Library to other repos that utilize those files. Current projects that depend of our Pattern Library include our [Emory Libraries Style Guide](https://github.com/emory-libraries/style-guide-guide) and [Templating Engine](https://github.com/emory-libraries/templating-engine). Note that in order for this task to work, you will need to download or `git clone` these repos to your system, and afterwards, you will want to `git commit` these pushed files to the other repos.
+
+#### `grunt map`
+
+Retrieves place data from the [Google Places API](https://developers.google.com/places/web-service/intro) for use when rendering maps. Use of this command requires that you setup an `env.json` file at the project's root and include a Google Places API key (`GOOGLE_PLACES_API.key`). The retrieved data is saved to `map.json` found in the `src/_data` folder. Any existing data within `map.json` will be overwritten with the newly retrieved, up-to-date information. **It is not likely that you will need to use this task unless additional data for new places is needed.**
+
+> Refer to the `map.default.json` file for minimum field requirements when adding new places to the `map.json` file. Place IDs for newly added places can be found by using the [Place ID Finder](https://developers.google.com/places/place-id) tool provided by Google.
+
+#### `grunt status`
+
+Updates a given pattern's status or enables batch dumping and/or updating of all pattern statuses using `export` and `import`, respectively. A `pattern-status.json` file is used when exporting and/or importing pattern statuses. To update the status of a single pattern, pass the pattern's Pattern Lab ID (i.e., `atoms-button`) into the grunt task as an argument.
+
+**Example**
+
+```
+grunt status:atoms-button
+```
+
+**Subtasks**
+
+| Subtask         | Description                                                                 |
+|-----------------|-----------------------------------------------------------------------------|
+| `export`        | Performs a bulk dump of all pattern statuses to `pattern-status.json`.      |
+| `import`        | Performs a bulk update of all pattern statuses from `pattern-status.json`.  |
 
 
 ### Exporting Patterns
