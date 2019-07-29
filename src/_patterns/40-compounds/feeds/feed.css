@@ -190,12 +190,16 @@ ico,
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .feed-button {
-    width: auto;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
 }
 @media (min-width: 901px) {
   .feed-button {
-    width: auto;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
 }
 
