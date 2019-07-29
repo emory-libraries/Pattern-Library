@@ -217,6 +217,9 @@ ico,
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  font: initial;
+  font-family: sans-serif;
+  color: #605858;
 }
 
 .branding-header {
