@@ -52,7 +52,7 @@
 
     // Adjust size on larger screens.
     @include breakpoint-m-l {
-      width: auto;
+      width: max-content;
     };
 
   }
