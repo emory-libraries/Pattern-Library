@@ -142,6 +142,9 @@ ico,
       -ms-flex-align: center;
           align-items: center;
 }
+.subnav-button-category-heading .anchor .icon, .subnav-button-group-heading .anchor .icon {
+  margin: 0 !important;
+}
 .subnav-button-category-heading:not(.is-anchored) .subnav-button-category-heading .anchor, .subnav-button-group-heading:not(.is-anchored) .subnav-button-category-heading .anchor, .subnav-button-category-heading:not(.is-anchored) .subnav-button-group-heading .anchor, .subnav-button-group-heading:not(.is-anchored) .subnav-button-group-heading .anchor {
   display: none;
 }

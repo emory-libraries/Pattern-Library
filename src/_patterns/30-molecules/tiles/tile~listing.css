@@ -142,6 +142,9 @@ ico,
       -ms-flex-align: center;
           align-items: center;
 }
+.tile-listing-action .anchor .icon, .tile-listing:not(.has-description) .tile-listing-title .anchor .icon, .tile-listing-date .anchor .icon {
+  margin: 0 !important;
+}
 .tile-listing-action:not(.is-anchored) .tile-listing-action .anchor, .tile-listing:not(.has-description) .tile-listing-title:not(.is-anchored) .tile-listing-action .anchor, .tile-listing-action:not(.is-anchored) .tile-listing:not(.has-description) .tile-listing-title .anchor, .tile-listing:not(.has-description) .tile-listing-action:not(.is-anchored) .tile-listing-title .anchor, .tile-listing:not(.has-description) .tile-listing-title:not(.is-anchored) .tile-listing-title .anchor, .tile-listing-date:not(.is-anchored) .tile-listing-action .anchor, .tile-listing-date:not(.is-anchored) .tile-listing:not(.has-description) .tile-listing-title .anchor, .tile-listing:not(.has-description) .tile-listing-date:not(.is-anchored) .tile-listing-title .anchor, .tile-listing-action:not(.is-anchored) .tile-listing-date .anchor, .tile-listing:not(.has-description) .tile-listing-title:not(.is-anchored) .tile-listing-date .anchor, .tile-listing-date:not(.is-anchored) .tile-listing-date .anchor {
   display: none;
 }

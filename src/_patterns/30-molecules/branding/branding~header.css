@@ -142,6 +142,9 @@ ico,
       -ms-flex-align: center;
           align-items: center;
 }
+.branding-header-division .anchor .icon {
+  margin: 0 !important;
+}
 .branding-header-division:not(.is-anchored) .branding-header-division .anchor {
   display: none;
 }

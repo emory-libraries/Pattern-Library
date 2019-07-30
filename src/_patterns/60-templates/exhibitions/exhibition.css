@@ -142,6 +142,9 @@ ico,
       -ms-flex-align: center;
           align-items: center;
 }
+.exhibition-page-main-sidenote-heading .anchor .icon, .exhibition-page-main-date .anchor .icon, .exhibition-page-main-context .anchor .icon {
+  margin: 0 !important;
+}
 .exhibition-page-main-sidenote-heading:not(.is-anchored) .exhibition-page-main-sidenote-heading .anchor, .exhibition-page-main-date:not(.is-anchored) .exhibition-page-main-sidenote-heading .anchor, .exhibition-page-main-sidenote-heading:not(.is-anchored) .exhibition-page-main-date .anchor, .exhibition-page-main-date:not(.is-anchored) .exhibition-page-main-date .anchor, .exhibition-page-main-context:not(.is-anchored) .exhibition-page-main-sidenote-heading .anchor, .exhibition-page-main-context:not(.is-anchored) .exhibition-page-main-date .anchor, .exhibition-page-main-sidenote-heading:not(.is-anchored) .exhibition-page-main-context .anchor, .exhibition-page-main-date:not(.is-anchored) .exhibition-page-main-context .anchor, .exhibition-page-main-context:not(.is-anchored) .exhibition-page-main-context .anchor {
   display: none;
 }

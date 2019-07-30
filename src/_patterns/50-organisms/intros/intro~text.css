@@ -142,6 +142,9 @@ ico,
       -ms-flex-align: center;
           align-items: center;
 }
+.intro-subtitle.-bio .anchor .icon, .intro-title .anchor .icon, .intro-context .anchor .icon {
+  margin: 0 !important;
+}
 .intro-subtitle.-bio:not(.is-anchored) .intro-subtitle.-bio .anchor, .intro-title:not(.is-anchored) .intro-subtitle.-bio .anchor, .intro-subtitle.-bio:not(.is-anchored) .intro-title .anchor, .intro-title:not(.is-anchored) .intro-title .anchor, .intro-context:not(.is-anchored) .intro-subtitle.-bio .anchor, .intro-context:not(.is-anchored) .intro-title .anchor, .intro-subtitle.-bio:not(.is-anchored) .intro-context .anchor, .intro-title:not(.is-anchored) .intro-context .anchor, .intro-context:not(.is-anchored) .intro-context .anchor {
   display: none;
 }

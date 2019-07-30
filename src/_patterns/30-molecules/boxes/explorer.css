@@ -142,6 +142,9 @@ ico,
       -ms-flex-align: center;
           align-items: center;
 }
+.explorer-heading .anchor .icon, .explorer-context .anchor .icon {
+  margin: 0 !important;
+}
 .explorer-heading:not(.is-anchored) .explorer-heading .anchor, .explorer-context:not(.is-anchored) .explorer-heading .anchor, .explorer-heading:not(.is-anchored) .explorer-context .anchor, .explorer-context:not(.is-anchored) .explorer-context .anchor {
   display: none;
 }

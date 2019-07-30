@@ -142,6 +142,9 @@ ico,
       -ms-flex-align: center;
           align-items: center;
 }
+.card-button .anchor .icon {
+  margin: 0 !important;
+}
 .card-button:not(.is-anchored) .card-button .anchor {
   display: none;
 }

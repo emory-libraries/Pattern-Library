@@ -142,6 +142,9 @@ ico,
       -ms-flex-align: center;
           align-items: center;
 }
+.slide-title .anchor .icon, .slide-context .anchor .icon {
+  margin: 0 !important;
+}
 .slide-title:not(.is-anchored) .slide-title .anchor, .slide-context:not(.is-anchored) .slide-title .anchor, .slide-title:not(.is-anchored) .slide-context .anchor, .slide-context:not(.is-anchored) .slide-context .anchor {
   display: none;
 }

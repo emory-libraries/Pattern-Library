@@ -142,6 +142,9 @@ ico,
       -ms-flex-align: center;
           align-items: center;
 }
+.card-multimedia-duration .anchor .icon, .card-multimedia-title .anchor .icon, .card-multimedia-context .anchor .icon {
+  margin: 0 !important;
+}
 .card-multimedia-duration:not(.is-anchored) .card-multimedia-duration .anchor, .card-multimedia-title:not(.is-anchored) .card-multimedia-duration .anchor, .card-multimedia-duration:not(.is-anchored) .card-multimedia-title .anchor, .card-multimedia-title:not(.is-anchored) .card-multimedia-title .anchor, .card-multimedia-context:not(.is-anchored) .card-multimedia-duration .anchor, .card-multimedia-context:not(.is-anchored) .card-multimedia-title .anchor, .card-multimedia-duration:not(.is-anchored) .card-multimedia-context .anchor, .card-multimedia-title:not(.is-anchored) .card-multimedia-context .anchor, .card-multimedia-context:not(.is-anchored) .card-multimedia-context .anchor {
   display: none;
 }

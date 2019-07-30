@@ -142,6 +142,9 @@ ico,
       -ms-flex-align: center;
           align-items: center;
 }
+.alert-title .anchor .icon {
+  margin: 0 !important;
+}
 .alert-title:not(.is-anchored) .alert-title .anchor {
   display: none;
 }

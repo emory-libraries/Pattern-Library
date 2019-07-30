@@ -142,6 +142,9 @@ ico,
       -ms-flex-align: center;
           align-items: center;
 }
+.intro-interior-cover-subtitle .anchor .icon, .intro-interior-cover-title .anchor .icon {
+  margin: 0 !important;
+}
 .intro-interior-cover-subtitle:not(.is-anchored) .intro-interior-cover-subtitle .anchor, .intro-interior-cover-title:not(.is-anchored) .intro-interior-cover-subtitle .anchor, .intro-interior-cover-subtitle:not(.is-anchored) .intro-interior-cover-title .anchor, .intro-interior-cover-title:not(.is-anchored) .intro-interior-cover-title .anchor {
   display: none;
 }

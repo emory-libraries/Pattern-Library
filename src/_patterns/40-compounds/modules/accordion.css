@@ -142,6 +142,9 @@ ico,
       -ms-flex-align: center;
           align-items: center;
 }
+.accordion-toggles-toggle .anchor .icon, .accordion-title .anchor .icon {
+  margin: 0 !important;
+}
 .accordion-toggles-toggle:not(.is-anchored) .accordion-toggles-toggle .anchor, .accordion-title:not(.is-anchored) .accordion-toggles-toggle .anchor, .accordion-toggles-toggle:not(.is-anchored) .accordion-title .anchor, .accordion-title:not(.is-anchored) .accordion-title .anchor {
   display: none;
 }

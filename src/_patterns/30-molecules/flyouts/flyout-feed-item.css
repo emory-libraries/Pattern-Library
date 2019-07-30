@@ -142,6 +142,9 @@ ico,
       -ms-flex-align: center;
           align-items: center;
 }
+.flyout-feed-item-date .anchor .icon {
+  margin: 0 !important;
+}
 .flyout-feed-item-date:not(.is-anchored) .flyout-feed-item-date .anchor {
   display: none;
 }

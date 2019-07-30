@@ -142,6 +142,9 @@ ico,
       -ms-flex-align: center;
           align-items: center;
 }
+.card-library-aid-title .anchor .icon, .card-library-aid-context .anchor .icon {
+  margin: 0 !important;
+}
 .card-library-aid-title:not(.is-anchored) .card-library-aid-title .anchor, .card-library-aid-context:not(.is-anchored) .card-library-aid-title .anchor, .card-library-aid-title:not(.is-anchored) .card-library-aid-context .anchor, .card-library-aid-context:not(.is-anchored) .card-library-aid-context .anchor {
   display: none;
 }
