@@ -1,0 +1,128 @@
+{
+  "feature": {
+    "badge": "Exhibition",
+    "date": "September 13, 2017 - February 3, 2019",
+    "title": "Building Emory's African American Collections: Highlights from the Curatorial Career of Randall K. Burkett",
+    "image": {
+      "src": "//source.unsplash.com/ekBOf6sJYYo"
+    },
+    "buttons": [
+      {
+        "label": "Exhibition Details",
+        "href": "",
+        "hollow": true
+      }
+    ]
+  },
+  "feeds": [
+    {
+      "heading": "Events & Exhibits",
+      "icon": "material-calendar_month_outline",
+      "content": [
+        {
+          "title": "Building Emory's African American Collections: Highlights form the Curatorial Career of Randall K. Burkett (exhibit)",
+          "date": "Through Feb. 3, 2019",
+          "link": {
+            "href": ""
+          }
+        },
+        {
+          "title": "EndNote Introduction",
+          "date": "Sept. 26, 2018 | 9:30 AM - 4:30 PM",
+          "link": {
+            "href": ""
+          }
+        },
+        {
+          "title": "Wikipedia in Higher Education Symposium & Workshop",
+          "date": "Sept. 26, 2018 | 7:00 PM - 8:00 PM",
+          "link": {
+            "href": ""
+          }
+        },
+        {
+          "title": "A Conversation with Kosmo Vinyl",
+          "date": "Sept. 26, 2018 | 7:00 PM - 8:00 PM",
+          "link": {
+            "href": ""
+          }
+        },
+        {
+          "title": "Common Thread: Women's Experience through Artists' Books (exhbit)",
+          "date": "Oct. 8, 2018 - Jan. 11, 2019",
+          "link": {
+            "href": ""
+          }
+        },
+        {
+          "title": "Bound with History: Encounters with the Rose Library's Rare Book Collections",
+          "date": "Oct. 11, 2018 | 4:30 PM - 6:00 PM",
+          "link": {
+            "href": ""
+          }
+        }
+      ],
+      "button": {
+        "label": "View All Events & Exhibits",
+        "href": ""
+      }
+    },
+    {
+      "heading": "Upcoming Workshops",
+      "icon": "material-pencil_ruler",
+      "content": [
+        {
+          "title": "Geocoding Street Addresses",
+          "date": "Sept. 25, 2018",
+          "link": {
+            "href": ""
+          }
+        },
+        {
+          "title": "EndNote Introduction",
+          "date": "Sept. 25, 2018",
+          "link": {
+            "href": ""
+          },
+          "button": {
+            "label": "Sign Up",
+            "href": ""
+          }
+        },
+        {
+          "title": "Wikipedia in Higher Education Symposium & Workshop",
+          "date": "Sept. 26, 2018",
+          "link": {
+            "href": ""
+          }
+        },
+        {
+          "title": "Canvas 101 - Online Only Session",
+          "date": "Sept. 27, 2018",
+          "link": {
+            "href": ""
+          },
+          "button": {
+            "label": "Sign Up",
+            "href": ""
+          }
+        },
+        {
+          "title": "Canvas 101 - Online Only Session",
+          "date": "Oct. 3, 2018",
+          "link": {
+            "href": ""
+          },
+          "button": {
+            "label": "Sign Up",
+            "href": ""
+          }
+        }
+      ],
+      "button": {
+        "label": "View All Workshops",
+        "href": ""
+      }
+    }
+  ]
+}

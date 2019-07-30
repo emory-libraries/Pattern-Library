@@ -134,96 +134,35 @@ ico,
   content: "";
 }
 
-.feed-heading::after {
-  display: block;
-  width: 100%;
-  height: 0;
-}
-
-.feed {
+.flow-feed-preview {
   display: grid;
+  grid-template-areas: "feeds";
   grid-template-columns: 1fr;
-  grid-template-rows: 75px 1fr;
-  grid-auto-rows: -webkit-min-content;
-  grid-auto-rows: min-content;
 }
-.feed-heading {
-  grid-row: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  margin: 0;
+.has-feature.flow-feed-preview {
+  grid-template-areas: "feature" "feeds";
 }
-.feed-heading::after {
-  content: "";
-  display: block;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  -webkit-transform: translatey(50%);
-          transform: translatey(50%);
+.flow-feed-preview-feature {
+  grid-area: feature;
 }
-.feed-heading .icon {
-  margin-right: 20px;
+.flow-feed-preview:not(.has-feature) .flow-feed-preview-feature {
+  display: none;
 }
-.feed-content {
-  grid-row: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.feed-button {
-  grid-row: 3;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  width: 100%;
-}
-@media (min-width: 601px) and (max-width: 900px) {
-  .feed-button {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-  }
+.flow-feed-preview-feeds {
+  display: grid;
+  grid-area: feeds;
+  grid-template-columns: 1fr;
 }
 @media (min-width: 901px) {
-  .feed-button {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
+  .flow-feed-preview-feeds {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.feed-heading {
-  font-family: "Open Sans", sans-serif !important;
-  font-size: 24px !important;
-  font-weight: bold !important;
-  font-style: normal !important;
-  line-height: 1.7083 !important;
-  letter-spacing: normal !important;
-  text-transform: none !important;
-  color: #004990 !important;
+.flow-feed-preview {
+  grid-row-gap: 40px;
 }
-.feed-heading::after {
-  border-top: 6px solid #E7EAF1;
-  width: 30px;
-  background-color: transparent;
-  color: transparent;
-}
-.feed-heading svg {
-  fill: #004990;
-}
-.feed .feed-item {
-  padding-top: 2em;
-  padding-bottom: 2em;
-  border-bottom: 1px solid #E7EAF1;
+.flow-feed-preview-feeds {
+  grid-column-gap: 80px;
+  grid-row-gap: 40px;
 }
