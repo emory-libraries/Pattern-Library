@@ -156,13 +156,6 @@ ico,
   grid-template-areas: "image" "date" "title" "action";
   grid-template-columns: 1fr;
 }
-@media (min-width: 601px) and (max-width: 900px) {
-  .card-listing:not(.has-description):not(.-vertical) {
-    grid-template-areas: "date image" "title image" "action image";
-    grid-template-rows: repeat(2, -webkit-min-content) 1fr;
-    grid-template-rows: repeat(2, min-content) 1fr;
-  }
-}
 @media (min-width: 901px) {
   .card-listing:not(.has-description):not(.-vertical) {
     grid-template-areas: "date image" "title image" "action image";
