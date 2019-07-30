@@ -135,11 +135,23 @@ ico,
 }
 
 .table-of-contents {
-  padding-left: 0;
+  display: block;
 }
-.table-of-contents, .table-of-contents ol {
+.table-of-contents-heading {
+  margin-top: 0;
+}
+.table-of-contents-list {
+  padding: 0;
   list-style-type: none;
 }
-.table-of-contents ol {
+
+.table-of-contents {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.section-main-body > .table-of-contents:first-child {
+  margin-top: 0;
+}
+.table-of-contents-list .table-of-contents-list {
   padding-left: 1.5em;
 }

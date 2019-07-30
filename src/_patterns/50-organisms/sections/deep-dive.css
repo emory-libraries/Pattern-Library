@@ -134,16 +134,16 @@ ico,
   content: "";
 }
 
-.anchor.section-deep-dive-column-heading, .anchor.section-deep-dive-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.section-deep-dive-column-heading .anchor, .section-deep-dive-title .anchor {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.anchor.section-deep-dive-column-heading .icon, .anchor.section-deep-dive-title .icon {
-  visibility: hidden;
-}
-.anchor.section-deep-dive-column-heading:hover .icon, .anchor.section-deep-dive-title:hover .icon {
-  visibility: visible;
+.section-deep-dive-column-heading:not(.is-anchored) .section-deep-dive-column-heading .anchor, .section-deep-dive-title:not(.is-anchored) .section-deep-dive-column-heading .anchor, .section-deep-dive-column-heading:not(.is-anchored) .section-deep-dive-title .anchor, .section-deep-dive-title:not(.is-anchored) .section-deep-dive-title .anchor {
+  display: none;
 }
 
 .section-deep-dive-body a,
@@ -300,6 +300,19 @@ ico,
   text-transform: none !important;
   color: #FFFFFF !important;
 }
+.section-deep-dive-title.is-anchored:hover .anchor, .section-deep-dive-title.is-anchored.is-hover .anchor, .section-deep-dive-title.is-anchored:focus .anchor, .section-deep-dive-title.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.section-deep-dive-title .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
+}
 .section-deep-dive-title::after {
   border-top: 6px solid #E9BF55;
   width: 60px;
@@ -441,6 +454,19 @@ ico,
   letter-spacing: 0.05em !important;
   text-transform: uppercase !important;
   color: #E9BF55 !important;
+}
+.section-deep-dive-column-heading.is-anchored:hover .anchor, .section-deep-dive-column-heading.is-anchored.is-hover .anchor, .section-deep-dive-column-heading.is-anchored:focus .anchor, .section-deep-dive-column-heading.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.section-deep-dive-column-heading .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
 }
 .section-deep-dive-footer {
   color: #FFFFFF;

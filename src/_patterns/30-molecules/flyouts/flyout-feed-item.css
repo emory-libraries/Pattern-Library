@@ -134,16 +134,16 @@ ico,
   content: "";
 }
 
-.anchor.flyout-feed-item-date {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.flyout-feed-item-date .anchor {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.anchor.flyout-feed-item-date .icon {
-  visibility: hidden;
-}
-.anchor.flyout-feed-item-date:hover .icon {
-  visibility: visible;
+.flyout-feed-item-date:not(.is-anchored) .flyout-feed-item-date .anchor {
+  display: none;
 }
 
 .flyout-feed-item-link {
@@ -335,6 +335,19 @@ ico,
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #605858;
+}
+.flyout-feed-item-date.is-anchored:hover .anchor, .flyout-feed-item-date.is-anchored.is-hover .anchor, .flyout-feed-item-date.is-anchored:focus .anchor, .flyout-feed-item-date.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.flyout-feed-item-date .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
 }
 @media (max-width: 600px) {
   .flyout-feed-item-date {

@@ -134,16 +134,16 @@ ico,
   content: "";
 }
 
-.anchor.intro-subtitle.-bio, .anchor.intro-title, .anchor.intro-context {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.intro-subtitle.-bio .anchor, .intro-title .anchor, .intro-context .anchor {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.anchor.intro-subtitle.-bio .icon, .anchor.intro-title .icon, .anchor.intro-context .icon {
-  visibility: hidden;
-}
-.anchor.intro-subtitle.-bio:hover .icon, .anchor.intro-title:hover .icon, .anchor.intro-context:hover .icon {
-  visibility: visible;
+.intro-subtitle.-bio:not(.is-anchored) .intro-subtitle.-bio .anchor, .intro-title:not(.is-anchored) .intro-subtitle.-bio .anchor, .intro-subtitle.-bio:not(.is-anchored) .intro-title .anchor, .intro-title:not(.is-anchored) .intro-title .anchor, .intro-context:not(.is-anchored) .intro-subtitle.-bio .anchor, .intro-context:not(.is-anchored) .intro-title .anchor, .intro-subtitle.-bio:not(.is-anchored) .intro-context .anchor, .intro-title:not(.is-anchored) .intro-context .anchor, .intro-context:not(.is-anchored) .intro-context .anchor {
+  display: none;
 }
 
 .intro-link {
@@ -256,6 +256,19 @@ ico,
   text-transform: uppercase !important;
   color: #082B73 !important;
 }
+.intro-context.is-anchored:hover .anchor, .intro-context.is-anchored.is-hover .anchor, .intro-context.is-anchored:focus .anchor, .intro-context.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.intro-context .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
+}
 .intro-title {
   font-family: "Cardo", serif !important;
   font-size: 48px !important;
@@ -265,6 +278,19 @@ ico,
   letter-spacing: normal !important;
   text-transform: none !important;
   color: #091C44 !important;
+}
+.intro-title.is-anchored:hover .anchor, .intro-title.is-anchored.is-hover .anchor, .intro-title.is-anchored:focus .anchor, .intro-title.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.intro-title .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
 }
 .intro-title.-heading {
   text-align: center;
@@ -278,6 +304,19 @@ ico,
   letter-spacing: normal !important;
   text-transform: none !important;
   color: #091C44 !important;
+}
+.intro-title.-heading.is-anchored:hover .anchor, .intro-title.-heading.is-anchored.is-hover .anchor, .intro-title.-heading.is-anchored:focus .anchor, .intro-title.-heading.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.intro-title.-heading .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
 }
 .intro-title.-heading::before {
   border-top: 6px solid #E9BF55;
@@ -304,6 +343,19 @@ ico,
   text-transform: none !important;
   color: #091C44 !important;
 }
+.intro-title.-heading-alt.is-anchored:hover .anchor, .intro-title.-heading-alt.is-anchored.is-hover .anchor, .intro-title.-heading-alt.is-anchored:focus .anchor, .intro-title.-heading-alt.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.intro-title.-heading-alt .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
+}
 .intro-title.-heading-alt::before {
   border-top: 6px solid #E9BF55;
   width: 60px;
@@ -326,6 +378,19 @@ ico,
   text-transform: none !important;
   color: #091C44 !important;
 }
+.intro-title.-bio.is-anchored:hover .anchor, .intro-title.-bio.is-anchored.is-hover .anchor, .intro-title.-bio.is-anchored:focus .anchor, .intro-title.-bio.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.intro-title.-bio .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
+}
 .intro-subtitle {
   font-family: "Cardo", serif !important;
   font-size: 28px !important;
@@ -346,6 +411,19 @@ ico,
   letter-spacing: normal !important;
   text-transform: none !important;
   color: #091C44 !important;
+}
+.intro-subtitle.-bio.is-anchored:hover .anchor, .intro-subtitle.-bio.is-anchored.is-hover .anchor, .intro-subtitle.-bio.is-anchored:focus .anchor, .intro-subtitle.-bio.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.intro-subtitle.-bio .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
 }
 .intro-link {
   font-weight: bold;

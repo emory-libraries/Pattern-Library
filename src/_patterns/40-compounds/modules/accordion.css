@@ -134,16 +134,16 @@ ico,
   content: "";
 }
 
-.anchor.accordion-toggles-toggle, .anchor.accordion-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.accordion-toggles-toggle .anchor, .accordion-title .anchor {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.anchor.accordion-toggles-toggle .icon, .anchor.accordion-title .icon {
-  visibility: hidden;
-}
-.anchor.accordion-toggles-toggle:hover .icon, .anchor.accordion-title:hover .icon {
-  visibility: visible;
+.accordion-toggles-toggle:not(.is-anchored) .accordion-toggles-toggle .anchor, .accordion-title:not(.is-anchored) .accordion-toggles-toggle .anchor, .accordion-toggles-toggle:not(.is-anchored) .accordion-title .anchor, .accordion-title:not(.is-anchored) .accordion-title .anchor {
+  display: none;
 }
 
 .accordion-toggles-toggle {
@@ -219,6 +219,19 @@ ico,
   text-transform: uppercase;
   color: #004990;
 }
+.accordion-title.is-anchored:hover .anchor, .accordion-title.is-anchored.is-hover .anchor, .accordion-title.is-anchored:focus .anchor, .accordion-title.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.accordion-title .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
+}
 .accordion-toggles-toggle {
   line-height: 1 !important;
 }
@@ -231,6 +244,19 @@ ico,
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #605858;
+}
+.accordion-toggles-toggle.is-anchored:hover .anchor, .accordion-toggles-toggle.is-anchored.is-hover .anchor, .accordion-toggles-toggle.is-anchored:focus .anchor, .accordion-toggles-toggle.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.accordion-toggles-toggle .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
 }
 .accordion-toggles-toggle {
   font-weight: bold;

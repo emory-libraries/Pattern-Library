@@ -134,18 +134,6 @@ ico,
   content: "";
 }
 
-.section-main-body .anchor.heading.-h2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.section-main-body .anchor.heading.-h2 .icon {
-  visibility: hidden;
-}
-.section-main-body .anchor.heading.-h2:hover .icon {
-  visibility: visible;
-}
-
 .section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a, .section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a, .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -790,16 +778,6 @@ ico,
 }
 .section-main-title.intro-title {
   color: #082B73 !important;
-}
-.section-main-body .heading.-h2 {
-  font-family: "Open Sans", sans-serif;
-  font-size: 22px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1.6364;
-  letter-spacing: normal;
-  text-transform: none;
-  color: #082B73;
 }
 .section-main-spacer {
   height: 40px;

@@ -134,16 +134,16 @@ ico,
   content: "";
 }
 
-.anchor.heading.-h6, .anchor.heading.-h5-alt, .anchor.heading.-h5, .anchor.heading.-h4, .anchor.heading.-h3, .anchor.heading.-h2, .anchor.heading.-h1-hero, .anchor.heading.-h1-alt, .anchor.heading.-h1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.heading.-h6 .anchor, .heading.-h5-alt .anchor, .heading.-h5 .anchor, .heading.-h4 .anchor, .heading.-h3 .anchor, .heading.-h2 .anchor, .heading.-h1-hero .anchor, .heading.-h1-alt .anchor, .heading.-h1 .anchor {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.anchor.heading.-h6 .icon, .anchor.heading.-h5-alt .icon, .anchor.heading.-h5 .icon, .anchor.heading.-h4 .icon, .anchor.heading.-h3 .icon, .anchor.heading.-h2 .icon, .anchor.heading.-h1-hero .icon, .anchor.heading.-h1-alt .icon, .anchor.heading.-h1 .icon {
-  visibility: hidden;
-}
-.anchor.heading.-h6:hover .icon, .anchor.heading.-h5-alt:hover .icon, .anchor.heading.-h5:hover .icon, .anchor.heading.-h4:hover .icon, .anchor.heading.-h3:hover .icon, .anchor.heading.-h2:hover .icon, .anchor.heading.-h1-hero:hover .icon, .anchor.heading.-h1-alt:hover .icon, .anchor.heading.-h1:hover .icon {
-  visibility: visible;
+.heading.-h6:not(.is-anchored) .heading.-h6 .anchor, .heading.-h5-alt:not(.is-anchored) .heading.-h6 .anchor, .heading.-h6:not(.is-anchored) .heading.-h5-alt .anchor, .heading.-h5-alt:not(.is-anchored) .heading.-h5-alt .anchor, .heading.-h5:not(.is-anchored) .heading.-h6 .anchor, .heading.-h5:not(.is-anchored) .heading.-h5-alt .anchor, .heading.-h6:not(.is-anchored) .heading.-h5 .anchor, .heading.-h5-alt:not(.is-anchored) .heading.-h5 .anchor, .heading.-h5:not(.is-anchored) .heading.-h5 .anchor, .heading.-h4:not(.is-anchored) .heading.-h6 .anchor, .heading.-h4:not(.is-anchored) .heading.-h5-alt .anchor, .heading.-h4:not(.is-anchored) .heading.-h5 .anchor, .heading.-h6:not(.is-anchored) .heading.-h4 .anchor, .heading.-h5-alt:not(.is-anchored) .heading.-h4 .anchor, .heading.-h5:not(.is-anchored) .heading.-h4 .anchor, .heading.-h4:not(.is-anchored) .heading.-h4 .anchor, .heading.-h3:not(.is-anchored) .heading.-h6 .anchor, .heading.-h3:not(.is-anchored) .heading.-h5-alt .anchor, .heading.-h3:not(.is-anchored) .heading.-h5 .anchor, .heading.-h3:not(.is-anchored) .heading.-h4 .anchor, .heading.-h6:not(.is-anchored) .heading.-h3 .anchor, .heading.-h5-alt:not(.is-anchored) .heading.-h3 .anchor, .heading.-h5:not(.is-anchored) .heading.-h3 .anchor, .heading.-h4:not(.is-anchored) .heading.-h3 .anchor, .heading.-h3:not(.is-anchored) .heading.-h3 .anchor, .heading.-h2:not(.is-anchored) .heading.-h6 .anchor, .heading.-h2:not(.is-anchored) .heading.-h5-alt .anchor, .heading.-h2:not(.is-anchored) .heading.-h5 .anchor, .heading.-h2:not(.is-anchored) .heading.-h4 .anchor, .heading.-h2:not(.is-anchored) .heading.-h3 .anchor, .heading.-h6:not(.is-anchored) .heading.-h2 .anchor, .heading.-h5-alt:not(.is-anchored) .heading.-h2 .anchor, .heading.-h5:not(.is-anchored) .heading.-h2 .anchor, .heading.-h4:not(.is-anchored) .heading.-h2 .anchor, .heading.-h3:not(.is-anchored) .heading.-h2 .anchor, .heading.-h2:not(.is-anchored) .heading.-h2 .anchor, .heading.-h1-hero:not(.is-anchored) .heading.-h6 .anchor, .heading.-h1-hero:not(.is-anchored) .heading.-h5-alt .anchor, .heading.-h1-hero:not(.is-anchored) .heading.-h5 .anchor, .heading.-h1-hero:not(.is-anchored) .heading.-h4 .anchor, .heading.-h1-hero:not(.is-anchored) .heading.-h3 .anchor, .heading.-h1-hero:not(.is-anchored) .heading.-h2 .anchor, .heading.-h6:not(.is-anchored) .heading.-h1-hero .anchor, .heading.-h5-alt:not(.is-anchored) .heading.-h1-hero .anchor, .heading.-h5:not(.is-anchored) .heading.-h1-hero .anchor, .heading.-h4:not(.is-anchored) .heading.-h1-hero .anchor, .heading.-h3:not(.is-anchored) .heading.-h1-hero .anchor, .heading.-h2:not(.is-anchored) .heading.-h1-hero .anchor, .heading.-h1-hero:not(.is-anchored) .heading.-h1-hero .anchor, .heading.-h1-alt:not(.is-anchored) .heading.-h6 .anchor, .heading.-h1-alt:not(.is-anchored) .heading.-h5-alt .anchor, .heading.-h1-alt:not(.is-anchored) .heading.-h5 .anchor, .heading.-h1-alt:not(.is-anchored) .heading.-h4 .anchor, .heading.-h1-alt:not(.is-anchored) .heading.-h3 .anchor, .heading.-h1-alt:not(.is-anchored) .heading.-h2 .anchor, .heading.-h1-alt:not(.is-anchored) .heading.-h1-hero .anchor, .heading.-h6:not(.is-anchored) .heading.-h1-alt .anchor, .heading.-h5-alt:not(.is-anchored) .heading.-h1-alt .anchor, .heading.-h5:not(.is-anchored) .heading.-h1-alt .anchor, .heading.-h4:not(.is-anchored) .heading.-h1-alt .anchor, .heading.-h3:not(.is-anchored) .heading.-h1-alt .anchor, .heading.-h2:not(.is-anchored) .heading.-h1-alt .anchor, .heading.-h1-hero:not(.is-anchored) .heading.-h1-alt .anchor, .heading.-h1-alt:not(.is-anchored) .heading.-h1-alt .anchor, .heading.-h1:not(.is-anchored) .heading.-h6 .anchor, .heading.-h1:not(.is-anchored) .heading.-h5-alt .anchor, .heading.-h1:not(.is-anchored) .heading.-h5 .anchor, .heading.-h1:not(.is-anchored) .heading.-h4 .anchor, .heading.-h1:not(.is-anchored) .heading.-h3 .anchor, .heading.-h1:not(.is-anchored) .heading.-h2 .anchor, .heading.-h1:not(.is-anchored) .heading.-h1-hero .anchor, .heading.-h1:not(.is-anchored) .heading.-h1-alt .anchor, .heading.-h6:not(.is-anchored) .heading.-h1 .anchor, .heading.-h5-alt:not(.is-anchored) .heading.-h1 .anchor, .heading.-h5:not(.is-anchored) .heading.-h1 .anchor, .heading.-h4:not(.is-anchored) .heading.-h1 .anchor, .heading.-h3:not(.is-anchored) .heading.-h1 .anchor, .heading.-h2:not(.is-anchored) .heading.-h1 .anchor, .heading.-h1-hero:not(.is-anchored) .heading.-h1 .anchor, .heading.-h1-alt:not(.is-anchored) .heading.-h1 .anchor, .heading.-h1:not(.is-anchored) .heading.-h1 .anchor {
+  display: none;
 }
 
 .heading.-h1 {
@@ -156,6 +156,19 @@ ico,
   text-transform: none;
   color: #091C44;
 }
+.heading.-h1.is-anchored:hover .anchor, .heading.-h1.is-anchored.is-hover .anchor, .heading.-h1.is-anchored:focus .anchor, .heading.-h1.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.heading.-h1 .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
+}
 .heading.-h1-alt {
   font-family: "Cardo", serif;
   font-size: 48px;
@@ -165,6 +178,19 @@ ico,
   letter-spacing: normal;
   text-transform: none;
   color: #091C44;
+}
+.heading.-h1-alt.is-anchored:hover .anchor, .heading.-h1-alt.is-anchored.is-hover .anchor, .heading.-h1-alt.is-anchored:focus .anchor, .heading.-h1-alt.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.heading.-h1-alt .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
 }
 .heading.-h1-hero {
   font-family: "Cardo", serif;
@@ -176,6 +202,19 @@ ico,
   text-transform: none;
   color: #FFFFFF;
 }
+.heading.-h1-hero.is-anchored:hover .anchor, .heading.-h1-hero.is-anchored.is-hover .anchor, .heading.-h1-hero.is-anchored:focus .anchor, .heading.-h1-hero.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.heading.-h1-hero .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
+}
 .heading.-h2 {
   font-family: "Cardo", serif;
   font-size: 48px;
@@ -185,6 +224,19 @@ ico,
   letter-spacing: normal;
   text-transform: none;
   color: #091C44;
+}
+.heading.-h2.is-anchored:hover .anchor, .heading.-h2.is-anchored.is-hover .anchor, .heading.-h2.is-anchored:focus .anchor, .heading.-h2.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.heading.-h2 .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
 }
 .heading.-h3 {
   font-family: "Open Sans", sans-serif;
@@ -196,6 +248,19 @@ ico,
   text-transform: none;
   color: #605858;
 }
+.heading.-h3.is-anchored:hover .anchor, .heading.-h3.is-anchored.is-hover .anchor, .heading.-h3.is-anchored:focus .anchor, .heading.-h3.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.heading.-h3 .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
+}
 .heading.-h4 {
   font-family: "Cardo", serif;
   font-size: 28px;
@@ -205,6 +270,19 @@ ico,
   letter-spacing: normal;
   text-transform: none;
   color: #605858;
+}
+.heading.-h4.is-anchored:hover .anchor, .heading.-h4.is-anchored.is-hover .anchor, .heading.-h4.is-anchored:focus .anchor, .heading.-h4.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.heading.-h4 .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
 }
 .heading.-h5 {
   font-family: "Cardo", serif;
@@ -216,6 +294,19 @@ ico,
   text-transform: none;
   color: #605858;
 }
+.heading.-h5.is-anchored:hover .anchor, .heading.-h5.is-anchored.is-hover .anchor, .heading.-h5.is-anchored:focus .anchor, .heading.-h5.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.heading.-h5 .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
+}
 .heading.-h5-alt {
   font-family: "Open Sans", sans-serif;
   font-size: 22px;
@@ -226,6 +317,19 @@ ico,
   text-transform: none;
   color: #605858;
 }
+.heading.-h5-alt.is-anchored:hover .anchor, .heading.-h5-alt.is-anchored.is-hover .anchor, .heading.-h5-alt.is-anchored:focus .anchor, .heading.-h5-alt.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.heading.-h5-alt .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
+}
 .heading.-h6 {
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
@@ -235,4 +339,17 @@ ico,
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #605858;
+}
+.heading.-h6.is-anchored:hover .anchor, .heading.-h6.is-anchored.is-hover .anchor, .heading.-h6.is-anchored:focus .anchor, .heading.-h6.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.heading.-h6 .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
 }
