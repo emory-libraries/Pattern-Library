@@ -196,6 +196,16 @@ ico,
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
+.social-media-link .icon {
+  width: 20px;
+  height: 20px;
+}
+@media (max-width: 600px) {
+  .social-media-link {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
 
 .social-media-link {
   border: 1px solid #091C44;

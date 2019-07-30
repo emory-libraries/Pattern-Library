@@ -134,6 +134,21 @@ ico,
   content: "";
 }
 
+.card-library-aid-title .anchor, .card-library-aid-context .anchor {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.card-library-aid-title .anchor .icon, .card-library-aid-context .anchor .icon {
+  margin: 0 !important;
+}
+.card-library-aid-title:not(.is-anchored) .card-library-aid-title .anchor, .card-library-aid-context:not(.is-anchored) .card-library-aid-title .anchor, .card-library-aid-title:not(.is-anchored) .card-library-aid-context .anchor, .card-library-aid-context:not(.is-anchored) .card-library-aid-context .anchor {
+  display: none;
+}
+
 .card-library-aid-title {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -252,6 +267,19 @@ ico,
   text-transform: uppercase;
   color: #082B73;
 }
+.card-library-aid-context.is-anchored:hover .anchor, .card-library-aid-context.is-anchored.is-hover .anchor, .card-library-aid-context.is-anchored:focus .anchor, .card-library-aid-context.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.card-library-aid-context .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
+}
 .card-library-aid-title {
   text-align: center;
 }
@@ -264,6 +292,19 @@ ico,
   letter-spacing: normal;
   text-transform: none;
   color: #605858;
+}
+.card-library-aid-title.is-anchored:hover .anchor, .card-library-aid-title.is-anchored.is-hover .anchor, .card-library-aid-title.is-anchored:focus .anchor, .card-library-aid-title.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.card-library-aid-title .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
 }
 .card-library-aid-title {
   font-weight: normal;

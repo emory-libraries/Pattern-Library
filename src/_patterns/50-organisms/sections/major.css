@@ -134,6 +134,21 @@ ico,
   content: "";
 }
 
+.section-major-title .anchor {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.section-major-title .anchor .icon {
+  margin: 0 !important;
+}
+.section-major-title:not(.is-anchored) .section-major-title .anchor {
+  display: none;
+}
+
 .section-major-title::after {
   display: block;
   width: 100%;
@@ -226,6 +241,19 @@ ico,
   letter-spacing: normal !important;
   text-transform: none !important;
   color: #605858 !important;
+}
+.section-major-title.is-anchored:hover .anchor, .section-major-title.is-anchored.is-hover .anchor, .section-major-title.is-anchored:focus .anchor, .section-major-title.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.section-major-title .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
 }
 .section-major-title::after {
   border-top: 6px solid #E9BF55;
