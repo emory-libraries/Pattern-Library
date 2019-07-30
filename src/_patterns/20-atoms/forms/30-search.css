@@ -191,7 +191,7 @@ ico,
   display: none;
 }
 .is-default.search-form {
-  display: block;
+  display: grid;
 }
 .search-toggle {
   display: none;
@@ -227,7 +227,7 @@ ico,
 }
 .-form.-contained.search .search-button {
   display: block;
-  grid-area: none;
+  grid-area: button;
 }
 .-contained.search {
   display: grid;
@@ -457,6 +457,9 @@ ico,
 }
 .search-cancel.-underline {
   text-decoration: underline;
+}
+.search-cancel[disabled], .search-cancel.is-disabled {
+  opacity: 0.5;
 }
 .search.-contained .search-button {
   border: none;

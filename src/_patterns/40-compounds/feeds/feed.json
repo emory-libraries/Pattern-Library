@@ -1,0 +1,57 @@
+{
+  "heading": "Upcoming Workshops",
+  "icon": "material-pencil_ruler",
+  "content": [
+    {
+      "title": "Geocoding Street Addresses",
+      "date": "Sept. 25, 2018",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "title": "EndNote Introduction",
+      "date": "Sept. 25, 2018",
+      "link": {
+        "href": ""
+      },
+      "button": {
+        "label": "Sign Up",
+        "href": ""
+      }
+    },
+    {
+      "title": "Wikipedia in Higher Education Symposium & Workshop",
+      "date": "Sept. 26, 2018",
+      "link": {
+        "href": ""
+      }
+    },
+    {
+      "title": "Canvas 101 - Online Only Session",
+      "date": "Sept. 27, 2018",
+      "link": {
+        "href": ""
+      },
+      "button": {
+        "label": "Sign Up",
+        "href": ""
+      }
+    },
+    {
+      "title": "Canvas 101 - Online Only Session",
+      "date": "Oct. 3, 2018",
+      "link": {
+        "href": ""
+      },
+      "button": {
+        "label": "Sign Up",
+        "href": ""
+      }
+    }
+  ],
+  "button": {
+    "label": "View All Workshops",
+    "href": ""
+  }
+}
