@@ -134,6 +134,21 @@ ico,
   content: "";
 }
 
+.utility-list-list-item-context .anchor, .utility-list-title .anchor {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.utility-list-list-item-context .anchor .icon, .utility-list-title .anchor .icon {
+  margin: 0 !important;
+}
+.utility-list-list-item-context:not(.is-anchored) .utility-list-list-item-context .anchor, .utility-list-title:not(.is-anchored) .utility-list-list-item-context .anchor, .utility-list-list-item-context:not(.is-anchored) .utility-list-title .anchor, .utility-list-title:not(.is-anchored) .utility-list-title .anchor {
+  display: none;
+}
+
 .utility-list-list-item {
   list-style-type: none;
   padding: 0;
@@ -224,6 +239,19 @@ ico,
   text-transform: none;
   color: #082B73 !important;
 }
+.utility-list-title.is-anchored:hover .anchor, .utility-list-title.is-anchored.is-hover .anchor, .utility-list-title.is-anchored:focus .anchor, .utility-list-title.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.utility-list-title .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
+}
 .utility-list-title .icon {
   height: 25px;
   margin-right: 5px;
@@ -269,6 +297,19 @@ ico,
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #082B73;
+}
+.utility-list-list-item-context.is-anchored:hover .anchor, .utility-list-list-item-context.is-anchored.is-hover .anchor, .utility-list-list-item-context.is-anchored:focus .anchor, .utility-list-list-item-context.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.utility-list-list-item-context .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
 }
 .utility-list-list-item-title {
   font-size: 13px;
