@@ -76,6 +76,5 @@
     "icon": "material-search",
     "label": "Search"
   },
-  "cancel": "Clear",
   "processor": "/php/example-search.php"
 }
