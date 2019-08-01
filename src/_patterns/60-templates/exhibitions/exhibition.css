@@ -436,49 +436,56 @@ ico,
 @media (min-width: 601px) and (max-width: 900px) {
   .exhibition-page-main .section-main,
 .exhibition-page-main .section-deep-dive {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 @media (min-width: 901px) {
   .exhibition-page-main .section-main,
 .exhibition-page-main .section-deep-dive {
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 @media (min-width: 1200px) {
   .exhibition-page-main .section-main,
 .exhibition-page-main .section-deep-dive {
-    padding-left: 170px;
-    padding-right: 170px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (min-width: 1290px) {
+  .exhibition-page-main .section-main,
+.exhibition-page-main .section-deep-dive {
+    padding-left: calc((100vw - 1250px) / 2);
+    padding-right: calc((100vw - 1250px) / 2);
   }
 }
 @media (max-width: 600px) {
+  .exhibition-page-main .section-main,
+.exhibition-page-main .section-deep-dive {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .exhibition-page-main .section-main,
+.exhibition-page-main .section-deep-dive {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+@media (min-width: 901px) {
   .exhibition-page-main .section-main,
 .exhibition-page-main .section-deep-dive {
     padding-top: 40px;
     padding-bottom: 40px;
   }
 }
-@media (min-width: 601px) and (max-width: 900px) {
-  .exhibition-page-main .section-main,
-.exhibition-page-main .section-deep-dive {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-}
-@media (min-width: 901px) {
-  .exhibition-page-main .section-main,
-.exhibition-page-main .section-deep-dive {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-}
 @media (min-width: 1200px) {
   .exhibition-page-main .section-main,
 .exhibition-page-main .section-deep-dive {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
