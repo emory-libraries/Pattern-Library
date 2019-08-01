@@ -1,0 +1,206 @@
+{{! Validate feature image. }}
+{{#if (eq feature.image.src '/')}}
+  {{assign 'feature.image.src' null}}
+{{/if}}
+
+{{! Initialize the feature's buttons if they don't already exist. }}
+{{#unless (isArray feature.buttons)}}
+  {{assign 'feature.buttons' (arrayify null)}}
+{{/unless}}
+
+{{! Adds any feature buttons or links into the buttons collection. }}
+{{#if feature.link }}
+  {{assign 'feature.buttons.0' feature.link}}
+  {{unassign 'feature.link'}}
+{{else if feature.button }}
+  {{assign 'feature.buttons.0' feature.button}}
+  {{unassign 'feature.button'}}
+{{/if}}
+
+{{! Reformat feature buttons as needed. }}
+{{#each feature.buttons}}
+
+  {{#if (eq link-type 'Cascade Page')}}
+    {{assign 'href' cascade-page.path}}
+    {{assign 'label' button-label}}
+    {{#unless (storageHas 'feature.context')}}
+      {{storageSet 'feature.context' context}}
+    {{/unless}}
+    {{#unless (storageHas 'feature.heading')}}
+      {{storageSet 'feature.heading' cascade-page.title}}
+      {{#if link-customizations}}
+        {{#if (not (eq (indexOf link-customizations 'Label') false))}}
+          {{storageSet 'feature.heading' link-label}}
+        {{/if}}
+      {{/if}}
+    {{/unless}}
+    {{#unless (storageHas 'feature.description')}}
+      {{storageSet 'feature.description' cascade-page.description}}
+      {{#if link-customizations}}
+        {{#if (not (eq (indexOf link-customizations 'Description') false))}}
+          {{storageSet 'feature.description' link-description}}
+        {{/if}}
+      {{/if}}
+    {{/unless}}
+  {{else if (eq link-type 'Cascade File')}}
+    {{assign 'href' cascade-file.path}}
+    {{assign 'label' button-label}}
+    {{#unless (storageHas 'feature.context')}}
+      {{storageSet 'feature.context' context}}
+    {{/unless}}
+    {{#unless (storageHas 'feature.heading')}}
+      {{storageSet 'feature.heading' (stem cascade-file.display-name)}}
+      {{#if link-customizations}}
+        {{#if (not (eq (indexOf link-customizations 'Label') false))}}
+          {{storageSet 'feature.heading' link-label}}
+        {{/if}}
+      {{/if}}
+    {{/unless}}
+    {{#unless (storageHas 'feature.description')}}
+      {{storageSet 'feature.description' (stem cascade-file.display-name)}}
+      {{#if link-customizations}}
+        {{#if (not (eq (indexOf link-customizations 'Description') false))}}
+          {{storageSet 'feature.description' link-description}}
+        {{/if}}
+      {{/if}}
+    {{/unless}}
+  {{else if (eq link-type 'External URL')}}
+    {{assign 'href' external-url}}
+    {{assign 'label' button-label}}
+    {{#unless (storageHas 'feature.context')}}{{storageSet 'feature.context' context}}{{/unless}}
+    {{#unless (storageHas 'feature.heading')}}{{storageSet 'feature.heading' link-label}}{{/unless}}
+    {{#unless (storageHas 'feature.description')}}{{storageSet 'feature.description' link-description}}{{/unless}}
+  {{/if}}
+
+  {{! Always use hollow button styles. }}
+  {{assign 'hollow' true}}
+
+  {{! Save the button. }}
+  {{storagePush 'feature.buttons' this}}
+
+{{/each}}
+
+{{! Update feature buttons, context, heading, and/or description. }}
+{{assign 'feature.buttons' (storageGet 'feature.buttons')}}
+{{#unless feature.context}}{{assign 'feature.context' (storageGet 'feature.context')}}{{/unless}}
+{{#unless feature.heading}}{{assign 'feature.heading' (storageGet 'feature.heading')}}{{/unless}}
+{{#unless feature.description}}{{assign 'feature.description' (storageGet 'feature.description')}}{{/unless}}
+
+{{! Reformat explorer links. }}
+{{#each explorer.links }}
+
+  {{#if (eq link-type 'Cascade Page')}}
+    {{assign 'href' cascade-page.path}}
+    {{assign 'label' cascade-page.title}}
+    {{#if link-customizations}}
+      {{#if (not (eq (indexOf link-customizations 'Label') false))}}
+        {{assign 'label' link-label}}
+      {{/if}}
+    {{/if}}
+  {{else if (eq link-type 'Cascade File')}}
+    {{assign 'href' cascade-file.path}}
+    {{assign 'label' cascade-file.title}}
+    {{#if link-customizations}}
+      {{#if (not (eq (indexOf link-customizations 'Label') false))}}
+        {{assign 'label' link-label}}
+      {{/if}}
+    {{/if}}
+  {{else if (eq link-type 'External URL')}}
+    {{assign 'href' external-url}}
+    {{assign 'label' link-label}}
+  {{/if}}
+
+  {{! Save the explorer link. }}
+  {{storagePush 'explorer.links' this}}
+
+{{/each}}
+
+{{! Update explorer links. }}
+{{assign 'explorer.links' (storageGet 'explorer.links')}}
+
+{{! Update listing buttons. }}
+{{assign 'listing.buttons' (storageGet 'listing.buttons')}}
+
+{{! Reformat listing buttons. }}
+{{#each listing.buttons}}
+
+  {{#if (eq link-type 'Cascade Page')}}
+    {{assign 'href' cascade-page.path}}
+    {{assign 'label' cascade-page.title}}
+    {{#if link-customizations}}
+      {{#if (not (eq (indexOf link-customizations 'Label') false))}}
+        {{assign 'label' link-label}}
+      {{/if}}
+    {{/if}}
+  {{else if (eq link-type 'Cascade File')}}
+    {{assign 'href' cascade-file.path}}
+    {{assign 'label' cascade-file.title}}
+    {{#if link-customizations}}
+      {{#if (not (eq (indexOf link-customizations 'Label') false))}}
+        {{assign 'label' link-label}}
+      {{/if}}
+    {{/if}}
+  {{else if (eq link-type 'External URL')}}
+    {{assign 'href' external-url}}
+    {{assign 'label' link-label}}
+  {{/if}}
+
+  {{! Save the wayfinder button. }}
+  {{storagePush 'wayfinder.buttons' this}}
+
+{{/each}}
+
+{{! Update listing buttons. }}
+{{assign 'listing.buttons' (storageGet 'listing.buttons')}}
+
+{{! Validate hero images. }}
+{{#if (or (eq hero '/') (not hero))}}
+  {{assign 'hero' false}}
+{{else}}
+  {{assign 'main-classes' 'without-intro'}}
+{{/if}}
+
+{{! Load feed data from all feed sources. }}
+{{#each feeds.sources}}
+
+  {{! Fetch the feed's content, and map it to the desired data model. }}
+  {{assign 'content' (mapFeed model (fetchFeed url))}}
+
+  {{! Save the feed with its updated content. }}
+  {{storagePush 'feeds.sources' this}}
+
+{{/each}}
+
+{{! Update feeds. }}
+{{assign 'feeds.sources' (storageGet 'feeds.sources')}}
+
+<div class="cover-page{{#if hero}} has-hero{{/if}}">
+
+  <header class="cover-page-header"></header>
+
+  <div class="cover-page-main">
+
+    {{! Load a hero if applicable. }}
+    {{#if hero}}{{> organisms-intro-hero classes='cover-page-intro' background-image=hero}}{{/if}}
+
+    {{! Load the main section. }}
+    {{#extend 'organisms-main' type='cover-page' classes=main-classes}}
+      {{#content 'section-main-body'}}
+        {{> organisms-flow-content-boxes}}
+        {{> compounds-tiles tile-type='listing'}}
+        {{#with listing}}{{> molecules-card-listing theme='light' }}{{/with}}
+      {{/content}}
+    {{/extend}}
+
+    {{! Load the major section. }}
+    {{#extend 'organisms-major' theme='light' heading=(default feeds.heading 'Upcoming')}}
+      {{#content 'section-major-body'}}
+        {{> organisms-flow-feed-preview feature=false feeds=feeds.sources}}
+      {{/content}}
+    {{/extend}}
+
+  </div>
+
+  <footer class="cover-page-footer"></footer>
+
+</div>
