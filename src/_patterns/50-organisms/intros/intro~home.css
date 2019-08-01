@@ -161,6 +161,11 @@ ico,
     padding-top: 0.5em;
   }
 }
+@media (min-width: 1200px) {
+  .intro-home-search {
+    grid-column: 2/-2;
+  }
+}
 .intro-home-badge {
   grid-row: 4;
   grid-column: 3;
