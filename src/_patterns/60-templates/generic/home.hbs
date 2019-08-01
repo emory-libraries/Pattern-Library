@@ -23,6 +23,7 @@
     {{#extend 'organisms-major' type="home-page" heading=related.heading theme="light" classes=""}}
       {{#content 'section-major-body'}}
         {{>compounds-cards card-type=related.card-type cards=related.cards}}
+        {{>atoms-button-link classes="view-more" label=related.button.label href=related.button.href target=related.button.target}}
       {{/content}}
     {{/extend}}
 

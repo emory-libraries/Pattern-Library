@@ -179,6 +179,11 @@
   "related": {
     "heading": "Improve Your Research & Writing",
     "card-type": "library-aid",
+    "button": {
+      "href": "",
+      "target": "_blank",
+      "label": "View More",
+    },
     "cards": [
       {
         "title": "Access Library Resources",
