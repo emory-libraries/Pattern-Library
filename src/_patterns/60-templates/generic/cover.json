@@ -1,7 +1,7 @@
 {
   "title": "Events & Exhibitions",
   "subtitle": "Nam quae incididunt fabulas ad eram relinqueret admodum esse arbitror.",
-  "hero": "",
+  "hero": "//source.unspash.com/0RDBOAdnbWM",
   "feature": {
     "image": {
       "src": "//source.unsplash.com/LWkFHEGpleE/500x800"
@@ -128,7 +128,7 @@
           "id": "{eventID}",
           "date": "{dateTimeFormatted}",
           "link": {
-            "href": "/event?feed={:url:}&id={eventID}"
+            "href": "/class?feed={:url:}&id={eventID}"
           },
           "button?": {
             "criteria": "{openSignUp} === true && {pastDeadline} === false",
