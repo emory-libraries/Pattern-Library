@@ -171,7 +171,7 @@ module.exports = {
         let placeholders;
 
         // Search for placeholders that should be replaced with data from the given context.
-        if( (placeholders = value.match(/\{\:[\S]+\:\}/g)) ) {
+        if( (placeholders = value.match(/\{\:[\S]+?\:\}/g)) ) {
 
           // Bind the placeholder data into the value.
           placeholders.forEach((placeholder) => {
@@ -187,7 +187,7 @@ module.exports = {
         }
 
         // Search for placeholders that should be replaced with data from the feed item.
-        if( (placeholders = value.match(/\{[\S]+\}/g)) ) {
+        if( (placeholders = value.match(/\{[\S]+?\}/g)) ) {
 
           // Bind the placeholder data into the value.
           placeholders.forEach((placeholder) => {
@@ -212,7 +212,7 @@ module.exports = {
     // Map each item within the feed.
     feed = feed.map((data) => {
 
-      // Loop through the data model, and made things as needed.
+      // Loop through the data model, and map things as needed.
       _.each(model, (value, key) => {
 
         // Determine if the key is conditional.
