@@ -134,6 +134,21 @@ ico,
   content: "";
 }
 
+.card-librarian-context .anchor {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.card-librarian-context .anchor .icon {
+  margin: 0 !important;
+}
+.card-librarian-context:not(.is-anchored) .card-librarian-context .anchor {
+  display: none;
+}
+
 .card-librarian-name, .card-librarian-contact-links-item a,
 .card-librarian-contact-links-item .link, .card-librarian-contact-info-item a,
 .card-librarian-contact-info-item .link, .card-librarian-subjects-list-item a,
@@ -741,4 +756,17 @@ ico,
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #091C44;
+}
+.card-librarian-context.is-anchored:hover .anchor, .card-librarian-context.is-anchored.is-hover .anchor, .card-librarian-context.is-anchored:focus .anchor, .card-librarian-context.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.card-librarian-context .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
 }
