@@ -118,23 +118,21 @@
   },
   "access-links": {
     "title": "Today's Hours (Woodruff)",
-    "hours": "24 Hours",
-    "items": [
-      {
-        "label": "View All Hours",
-        "icon": "material-access_time",
-        "link": {
-          "href": ""
-        }
-      },
-      {
-        "label": "Get Directions",
-        "icon": "material-map",
-        "link": {
-          "href": ""
-        }
+    "todays-hours": "24 Hours",
+    "hours": {
+      "label": "View All Hours",
+      "icon": "material-access_time",
+      "link": {
+        "href": ""
       }
-    ]
+    },
+    "directions": {
+      "label": "Get Directions",
+      "icon": "material-map",
+      "link": {
+        "href": ""
+      }
+    }
   },
   "slider": {
     "arrows": true,
