@@ -4,6 +4,6 @@
     {{#each (limit content 5)}}{{> molecules-feed-item}}{{/each}}
   </div>
   {{#if button}}
-    {{#with button}}{{> atoms-button-link classes='feed-button' icon=false}}{{/with}}
+    {{#with button}}{{> atoms-button-link classes='feed-button' label=(default label (combine 'View All ' ../heading)) icon=false}}{{/with}}
   {{/if}}
 </div>

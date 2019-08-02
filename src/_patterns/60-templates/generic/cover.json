@@ -1,7 +1,7 @@
 {
   "title": "Events & Exhibitions",
   "subtitle": "Nam quae incididunt fabulas ad eram relinqueret admodum esse arbitror.",
-  "hero": "//source.unspash.com/0RDBOAdnbWM",
+  "hero": "//source.unsplash.com/0RDBOAdnbWM",
   "feature": {
     "image": {
       "src": "//source.unsplash.com/LWkFHEGpleE/500x800"
@@ -105,6 +105,10 @@
         "url": "https://www.trumba.com/calendars/robert-woodruff-library.json",
         "heading": "Events",
         "icon": "material-calendar_month_outline",
+        "button": {
+          "label": "View All Events",
+          "href": ""
+        },
         "model": {
           "id": "{eventID}",
           "date": "{dateTimeFormatted}",
@@ -124,6 +128,10 @@
         "url": "https://www.trumba.com/calendars/robert-woodruff-library-classes-at-woodruff-library.json",
         "heading": "Workshops",
         "icon": "material-pencil_ruler",
+        "button": {
+          "label": "View All Workshops",
+          "href": ""
+        },
         "model": {
           "id": "{eventID}",
           "date": "{dateTimeFormatted}",
