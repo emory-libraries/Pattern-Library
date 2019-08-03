@@ -155,7 +155,7 @@ ico,
   -moz-appearance: none;
   background: none !important;
   border: none !important;
-  padding: 0.5em 2em;
+  padding: 0.5em 1.5em;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -166,6 +166,7 @@ ico,
 }
 @media (min-width: 901px) {
   .tab {
+    padding: 0.5em 2em;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;

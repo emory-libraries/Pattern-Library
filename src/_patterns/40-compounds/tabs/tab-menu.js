@@ -41,10 +41,18 @@ Components.register('tab-menu', {
     Events.$on(`${this.uid}:activated`, (data) => {
 
       // If a relay was given, then relay the data to the targeted relay element.
-      if( this.relay ) Events.$emit(`${this.relay}:relay`, {
-        uid: this.uid,
-        value: data.value
-      });
+      if( this.relay ) {
+
+        // Relay the data to the targeted relay element.
+        Events.$emit(`${this.relay}:relay`, {
+          uid: this.uid,
+          value: data.value
+        });
+
+        // Also, find the tab's respective toggle input, and make sure it's checked.
+        if( $(`#${data.uid}`).length > 0 ) $(`#${data.uid}`).prop('checked', true);
+
+      }
 
       // If the tab menu was not the initiator of the event, then also update the selected tab menu item.
       if( data.initiator !== this.uid ) this.selected = {
