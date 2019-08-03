@@ -1,27 +1,27 @@
 ---
 
 state: review
-created: 05/30/2019
-updated: 07/31/2019
-js: true
+created: 07/29/2019
+updated: 07/29/2019
+js: false
 php: false
 
 ---
 
 ## Getting Started
 
-Insert a sentence or two identifying what the **form (libwizard)** pattern is and what purpose it serves.
+Insert a sentence or two identifying what the **alert** pattern is and what purpose it serves.
 
 ###### EXPORT VIA GRUNT
 
 ```
-grunt export:molecules-form-libwizard
+grunt export:compounds-alert
 ```
 
 
 ### Description
 
-Provide a detailed description about the **form (libwizard)** pattern. This should include a short summary of how the pattern works; what options or configurations are available to further customize the pattern based on context, if any; and/or what state changes the pattern possesses, if any. This description may include use-case scenarios for different contexts and other information that's deemed helpful for other developers.
+Provide a detailed description about the **alert** pattern. This should include a short summary of how the pattern works; what options or configurations are available to further customize the pattern based on context, if any; and/or what state changes the pattern possesses, if any. This description may include use-case scenarios for different contexts and other information that's deemed helpful for other developers.
 
 
 ### Best Practices
