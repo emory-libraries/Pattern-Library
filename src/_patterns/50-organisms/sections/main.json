@@ -2,6 +2,7 @@
   "markdown": false,
   "context": "Service Name",
   "title": "Title of Page",
+  "toc": true,
   "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   "blocks": [
     {
@@ -14,10 +15,20 @@
       "heading": "A Major Section of the Content"
     },
     {
+      "type": "heading",
+      "level": "3",
+      "heading": "A Subsection"
+    },
+    {
       "type": "image",
       "src": "https://via.placeholder.com/600x400.png?text=Placeholder+Image",
       "alt": "Placeholder image 600 pixels wide",
       "align": "center"
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "heading": "An h4"
     },
     {
       "type": "rich-text",
@@ -25,12 +36,17 @@
     },
     {
       "type": "heading",
-      "level": "3",
-      "heading": "A Subsection"
+      "level": 3,
+      "heading": "Another h3"
     },
     {
       "type": "video",
       "id": "W-h1FtNYim4"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "heading": "Another h2"
     },
     {
       "type": "rich-text",
