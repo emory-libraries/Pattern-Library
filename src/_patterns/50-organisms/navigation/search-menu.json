@@ -1,5 +1,4 @@
 {
-
   "back": {
     "label": "Back to Menu",
     "icon": {
@@ -77,5 +76,6 @@
     "icon": "material-search",
     "label": "Search"
   },
+  "cancel": "Clear",
   "processor": "/php/example-search.php"
 }

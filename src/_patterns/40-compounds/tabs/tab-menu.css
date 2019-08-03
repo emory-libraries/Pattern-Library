@@ -145,11 +145,11 @@ ico,
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
 }
-.tab-menu:not(.-dropdown) {
+.tab-menu:not(.-dropdown):not(.-noscript) {
   display: none;
 }
 @media (min-width: 901px) {
-  .tab-menu:not(.-dropdown) {
+  .tab-menu:not(.-dropdown):not(.-noscript) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -180,6 +180,20 @@ ico,
 @media (min-width: 901px) {
   .-dropdown.tab-menu {
     display: none;
+  }
+}
+.-noscript.tab-menu {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (min-width: 901px) {
+  .-noscript.tab-menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
