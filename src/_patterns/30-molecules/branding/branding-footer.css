@@ -184,9 +184,9 @@ ico,
   appearance: none;
   border: none;
   background: none;
-  max-width: 130px;
+  max-width: 135px;
   background-repeat: no-repeat;
-  background-position: right 70%;
+  background-position: right 50%;
 }
 .branding-footer-dropdown-menu option {
   margin: 0;
