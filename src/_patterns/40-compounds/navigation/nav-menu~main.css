@@ -156,9 +156,9 @@ ico,
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -209,36 +209,60 @@ ico,
   z-index: 1;
   overflow: auto;
 }
-.-mobile.nav-menu-main-nav > .input.-toggle:checked ~ .nav-menu-main-nav-menu {
-  height: 100vh;
-  margin-top: 40px;
+.-mobile.nav-menu-main-nav > .input.-toggle.for-menu:checked ~ .is-menu.nav-menu-main-nav-menu {
   opacity: 1;
   overflow: visible;
   -webkit-transform: scaley(1);
           transform: scaley(1);
 }
-.-mobile.nav-menu-main-nav > .input.-toggle:checked ~ .nav-menu-main-nav-toggles .nav-button.-toggle.-open {
+.-mobile.nav-menu-main-nav > .input.-toggle.for-menu:checked ~ .nav-menu-main-nav-toggles .nav-button.-toggle.for-menu.-open {
   display: none;
 }
-.-mobile.nav-menu-main-nav > .input.-toggle:checked ~ .nav-menu-main-nav-toggles .nav-button.-toggle.-close {
+.-mobile.nav-menu-main-nav > .input.-toggle.for-menu:checked ~ .nav-menu-main-nav-toggles .nav-button.-toggle.for-menu.-close {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.-mobile.nav-menu-main-nav > .input.-toggle:not(:checked) ~ .nav-menu-main-nav-menu {
-  height: 0;
-  margin-top: 0;
+.-mobile.nav-menu-main-nav > .input.-toggle.for-menu:not(:checked) ~ .is-menu.nav-menu-main-nav-menu {
   opacity: 0;
   overflow: hidden;
   -webkit-transform: scaley(0);
           transform: scaley(0);
 }
-.-mobile.nav-menu-main-nav > .input.-toggle:not(:checked) ~ .nav-menu-main-nav-toggles .nav-button.-toggle.-open {
+.-mobile.nav-menu-main-nav > .input.-toggle.for-menu:not(:checked) ~ .nav-menu-main-nav-toggles .nav-button.-toggle.for-menu.-open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.-mobile.nav-menu-main-nav > .input.-toggle:not(:checked) ~ .nav-menu-main-nav-toggles .nav-button.-toggle.-close {
+.-mobile.nav-menu-main-nav > .input.-toggle.for-menu:not(:checked) ~ .nav-menu-main-nav-toggles .nav-button.-toggle.for-menu.-close {
+  display: none;
+}
+.-mobile.nav-menu-main-nav > .input.-toggle.for-search:checked ~ .is-search.nav-menu-main-nav-menu {
+  opacity: 1;
+  overflow: visible;
+  -webkit-transform: scaley(1);
+          transform: scaley(1);
+}
+.-mobile.nav-menu-main-nav > .input.-toggle.for-search:checked ~ .nav-menu-main-nav-toggles .nav-button.-toggle.for-search.-open {
+  display: none;
+}
+.-mobile.nav-menu-main-nav > .input.-toggle.for-search:checked ~ .nav-menu-main-nav-toggles .nav-button.-toggle.for-search.-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.-mobile.nav-menu-main-nav > .input.-toggle.for-search:not(:checked) ~ .is-search.nav-menu-main-nav-menu {
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transform: scaley(0);
+          transform: scaley(0);
+}
+.-mobile.nav-menu-main-nav > .input.-toggle.for-search:not(:checked) ~ .nav-menu-main-nav-toggles .nav-button.-toggle.for-search.-open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.-mobile.nav-menu-main-nav > .input.-toggle.for-search:not(:checked) ~ .nav-menu-main-nav-toggles .nav-button.-toggle.for-search.-close {
   display: none;
 }
 @media (min-width: 901px) {
@@ -1899,4 +1923,19 @@ ico,
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background-color: #091C44;
+}
+.nav-menu-main-nav.-mobile .nav-menu-main-nav-menu {
+  margin-top: calc(40px + 1px);
+}
+.nav-menu-main-nav.-mobile > .input.-toggle.for-menu:checked ~ .nav-menu-main-nav-menu.is-menu {
+  height: calc(100vh - 40px - 1px);
+}
+.nav-menu-main-nav.-mobile > .input.-toggle.for-menu:not(:checked) ~ .nav-menu-main-nav-menu.is-menu {
+  height: 0;
+}
+.nav-menu-main-nav.-mobile > .input.-toggle.for-search:checked ~ .nav-menu-main-nav-menu.is-search {
+  height: calc(100vh - 40px - 1px);
+}
+.nav-menu-main-nav.-mobile > .input.-toggle.for-search:not(:checked) ~ .nav-menu-main-nav-menu.is-search {
+  height: 0;
 }

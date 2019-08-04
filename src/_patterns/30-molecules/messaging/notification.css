@@ -138,14 +138,25 @@ ico,
   display: grid;
 }
 .is-dismissible.notification {
-  grid-template-areas: "label message dismiss";
-  grid-template-columns: -webkit-min-content 1fr -webkit-min-content;
-  grid-template-columns: min-content 1fr min-content;
+  grid-template-areas: "label dismiss" "message message";
+  grid-template-columns: 1fr -webkit-min-content;
+  grid-template-columns: 1fr min-content;
 }
 .notification:not(.is-dismissible) {
-  grid-template-areas: "label message";
-  grid-template-columns: -webkit-min-content 1fr;
-  grid-template-columns: min-content 1fr;
+  grid-template-areas: "label" "message";
+  grid-template-columns: 1fr;
+}
+@media (min-width: 901px) {
+  .is-dismissible.notification {
+    grid-template-areas: "label message dismiss";
+    grid-template-columns: -webkit-min-content 1fr -webkit-min-content;
+    grid-template-columns: min-content 1fr min-content;
+  }
+  .notification:not(.is-dismissible) {
+    grid-template-areas: "label message";
+    grid-template-columns: -webkit-min-content 1fr;
+    grid-template-columns: min-content 1fr;
+  }
 }
 .notification::before {
   grid-area: label;
