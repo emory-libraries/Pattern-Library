@@ -52,7 +52,7 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: $rhythm-y;
-        margin-top: ($rhythm-y * 2);
+        margin-top: $rhythm-y;
       }
 
     }
@@ -62,7 +62,7 @@
 
       // Override the major body structure.
       .section-major-body {
-        margin-top: ($rhythm-y * 2);
+        margin-top: $rhythm-y;
       }
 
     }

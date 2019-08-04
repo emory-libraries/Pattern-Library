@@ -87,53 +87,59 @@
     },
     "processor": "/php/example-search.php"
   },
-  "popular-links": {
-    "title": "Popular Links",
-    "items": [
-      {
-        "title": "Databases @ Emory",
-        "link": {
-          "href": ""
+  "popular": [
+    {
+      "title": "Popular Links",
+      "items": [
+        {
+          "title": "Databases @ Emory",
+          "link": {
+            "href": ""
+          }
+        },
+        {
+          "title": "discoverE",
+          "link": {
+            "href": ""
+          }
+        },
+        {
+          "title": "Course Reserves",
+          "link": {
+            "href": ""
+          }
+        },
+        {
+          "title": "eJournals",
+          "link": {
+            "href": ""
+          }
         }
-      },
-      {
-        "title": "discoverE",
-        "link": {
-          "href": ""
-        }
-      },
-      {
-        "title": "Course Reserves",
-        "link": {
-          "href": ""
-        }
-      },
-      {
-        "title": "eJournals",
-        "link": {
-          "href": ""
-        }
-      }
-    ]
-  },
-  "access-links": {
-    "title": "Today's Hours (Woodruff)",
-    "todays-hours": "24 Hours",
-    "hours": {
-      "label": "View All Hours",
-      "icon": "material-access_time",
-      "link": {
-        "href": ""
-      }
+      ]
     },
-    "directions": {
-      "label": "Get Directions",
-      "icon": "material-map",
-      "link": {
-        "href": ""
-      }
+    {
+      "title": "Today's Hours (Woodruff)",
+      "items": [
+        {
+          "title": "Open 24 Hours"
+        },
+        {
+          "title": "View All Hours",
+          "link": {
+            "href": ""
+          },
+          "icon": "material-access_time"
+        },
+        {
+          "title": "Get Directions",
+          "link": {
+            "href": ""
+          },
+          "icon": "material-map"
+        }
+      ]
     }
-  },
+  ],
   "slider": {
     "arrows": true,
     "slides": [
@@ -174,14 +180,14 @@
       }
     ]
   },
-  "related": {
+  "cards": {
     "heading": "Improve Your Research & Writing",
-    "card-type": "library-aid",
-    "button": {
-      "href": "",
-      "target": "_blank",
-      "label": "View More",
-    },
+    "buttons": [
+      {
+        "href": "",
+        "label": "Browse All Research Help"
+      }
+    ],
     "cards": [
       {
         "title": "Access Library Resources",
@@ -203,8 +209,8 @@
       }
     ]
   },
-  "content-well-heading": "Get Help Using the Library",
-  "content-boxes": {
+  "boxes": {
+    "heading": "Get Help Using the Library",
     "feature": {
         "image": {
           "src": "//source.unsplash.com/6fv1nBklWIU/500x650"
@@ -251,26 +257,26 @@
           "label": "Printing, Logging In, and Access"
         }
       ]
+    },
+    "wayfinder": {
+      "image": {
+        "src": "//source.unsplash.com/PkbZahEG2Ng"
+      },
+      "heading": "Trying to find your way around?",
+      "text": "View our library maps and spaces to help you navigate through all of our libraries and get what you need to find.",
+      "buttons": [
+        {
+          "label": "Download Map Guide",
+          "href": ""
+        },
+        {
+          "label": "View All Maps and Spaces",
+          "href": ""
+        }
+      ]
     }
   },
-  "wayfinder": {
-    "image": {
-      "src": "//source.unsplash.com/PkbZahEG2Ng"
-    },
-    "heading": "Trying to find your way around?",
-    "text": "View our library maps and spaces to help you navigate through all of our libraries and get what you need to find.",
-    "buttons": [
-      {
-        "label": "Download Map Guide",
-        "href": ""
-      },
-      {
-        "label": "View All Maps and Spaces",
-        "href": ""
-      }
-    ]
-  },
-  "feed-preview": {
+  "feeds": {
     "heading": "What's Happening at the Library",
     "feature": {
       "badge": "Exhibition",
