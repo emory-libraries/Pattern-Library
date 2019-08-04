@@ -109,7 +109,11 @@ $compounds-popular-links-menu: (
         // Force links to use default text styles.
         .link,
         a {
-          @include tokens-text;
+          @include tokens-text('body', $custom: ('body': (
+            'text-transform': uppercase
+          )));
+          font-size: 11px !important;
+          text-decoration: underline !important;
           @include atoms-link(('color': (
             'hover': $color-actionable,
             'active': $color-actionable
