@@ -253,20 +253,26 @@ ico,
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .footer {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 @media (min-width: 901px) {
   .footer {
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 @media (min-width: 1200px) {
   .footer {
-    padding-left: 170px;
-    padding-right: 170px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (min-width: 1290px) {
+  .footer {
+    padding-left: calc((100vw - 1250px) / 2);
+    padding-right: calc((100vw - 1250px) / 2);
   }
 }
 @media (max-width: 600px) {
@@ -393,11 +399,19 @@ ico,
 }
 .footer-list .link.-popular,
 .footer-list a.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.footer-list .link.-popular,
+.footer-list a.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .footer-list .link.-popular:hover, .footer-list .link.-popular.is-hover, .footer-list .link.-popular:focus, .footer-list .link.-popular.is-focus,
