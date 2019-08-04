@@ -446,11 +446,18 @@ ico,
   color: #605858;
 }
 .tile-listing:not(.has-description) .tile-listing-title.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.tile-listing:not(.has-description) .tile-listing-title.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .tile-listing:not(.has-description) .tile-listing-title.-popular:hover, .tile-listing:not(.has-description) .tile-listing-title.-popular.is-hover, .tile-listing:not(.has-description) .tile-listing-title.-popular:focus, .tile-listing:not(.has-description) .tile-listing-title.-popular.is-focus {
@@ -518,11 +525,18 @@ ico,
   color: #605858;
 }
 .tile-listing.has-description .tile-listing-title.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.tile-listing.has-description .tile-listing-title.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .tile-listing.has-description .tile-listing-title.-popular:hover, .tile-listing.has-description .tile-listing-title.-popular.is-hover, .tile-listing.has-description .tile-listing-title.-popular:focus, .tile-listing.has-description .tile-listing-title.-popular.is-focus {
@@ -613,11 +627,18 @@ ico,
   color: #605858;
 }
 .tile-listing-action.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.tile-listing-action.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .tile-listing-action.-popular:hover, .tile-listing-action.-popular.is-hover, .tile-listing-action.-popular:focus, .tile-listing-action.-popular.is-focus {

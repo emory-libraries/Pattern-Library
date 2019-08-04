@@ -473,11 +473,18 @@ ico,
   color: #605858;
 }
 .intro-link.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.intro-link.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .intro-link.-popular:hover, .intro-link.-popular.is-hover, .intro-link.-popular:focus, .intro-link.-popular.is-focus {
