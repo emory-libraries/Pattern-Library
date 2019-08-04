@@ -1,4 +1,5 @@
-{ "type": "listing",
+{ 
+  "type": "listing",
   "tiles": [
     {
       "image": {
