@@ -73,15 +73,20 @@ module.exports = {
     // Get the response body.
     const body = response.getBody('utf8');
 
-    // Parse and return JSON as is.
-    if( type === 'json' ) return JSON.parse(body);
+    if (type == 'json') {
+      const parsedBody = JSON.parse(body);
+      parsedBody.__meta__ = {};
+      parsedBody.__meta__.type = type;
 
-    // Extract and parse the feed data from the response.
+      // Parse and return JSON as is.
+      return parsedBody
+    }
+
+    // Extract and parse the feed data from the response.\
     let feed = parser.parse(body, options);
 
     // Remove the root node if found.
     if( _.isPlainObject(feed) && _.keys(feed).length === 1 ) {
-
       // Get the feed's root node.
       const root = _.keys(feed)[0];
 
