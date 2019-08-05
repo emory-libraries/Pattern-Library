@@ -80,28 +80,34 @@
 
   {{! Set (decoded) related topics value }}
   {{assign 'topics' (decodeHTML topics)}}
+
+  {{! Set the subtitle to be the date of the event }}
+  {{assign 'title' event.title}}
   
   {{! Set the subtitle to be the date of the event }}
   {{assign 'subtitle' event.dateTimeFormatted}}
 
   {{! set the hero image (This could be bad)}}
-  {{#unless hero}}
-    {{assign 'hero' event.eventImage.url}}
-  {{/unless}}
-  
+  {{assign 'hero' event.eventImage.url}}
+
 {{/if}}
 
 <div class="event-page">
+  <header class="event-page-header"></header>
+  <div class="event-page-main">
 
-  {{#extend 'organisms-main' type="event-page" classes=""}}
-    {{#content 'section-main-body'}}
-      {{> tokens-text rich=true text=event.description}}
-      {{>atoms-rule}}
-      {{>tokens-heading level=6 heading="Related University Event Topics"}}
-      {{>tokens-text text=topics}}
-    {{/content}}
-    {{#content 'section-main-sidebar' sections=sections}}
-      {{>compounds-sidebar-list}}
-    {{/content}}
-  {{/extend}}
+    {{#extend 'organisms-main' type="event-page" classes="event-page-main"}}
+      {{#content 'section-main-body'}}
+        {{> tokens-text rich=true text=event.description}}
+        {{>atoms-rule}}
+        {{>tokens-heading level=6 heading="Related University Event Topics"}}
+        {{>tokens-text text=topics}}
+      {{/content}}
+      {{#content 'section-main-sidebar'}}
+        {{>compounds-sidebar-list}}
+      {{/content}}
+    {{/extend}}
+    
+  </div>
+  <footer class="event-page-footer"></footer>
 </div>
