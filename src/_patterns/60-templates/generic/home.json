@@ -1,0 +1,347 @@
+{
+  "title": "Emory Libraries",
+  "intro": {
+    "badge": "Featured",
+    "hero": "//source.unsplash.com/1450x440",
+    "link": {
+      "href": "",
+      "title": "Emory's African American collections celebrated in new exhibit"
+    },
+    "search": {
+      "id": "big-search",
+      "back": {
+        "label": "Back to Menu",
+        "icon": {
+          "id": "material-chevron_right",
+          "position": "left"
+        }
+      },
+      "tabs": [
+        {
+          "label": "Library Catalog",
+          "value": "library-catalog"
+        },
+        {
+          "label": "Databases",
+          "value": "databases"
+        },
+        {
+          "label": "eJournals",
+          "value": "ejournals"
+        },
+        {
+          "label": "Research & Course Guides",
+          "value": "research-guides"
+        },
+        {
+          "label": "Finding Aids",
+          "value": "finding-aids"
+        },
+        {
+          "label": "This Site",
+          "value": "this-site"
+        }
+      ],
+      "services": [
+        {
+          "label": "Library Catalog",
+          "placeholder": "Search the Emory Library Catalog",
+          "id": "library-catalog",
+          "src": "http://discovere.emory.edu/primo_library/libweb/action/dlSearch.do?institution=EMORY&vid=discovere&query=any,contains,:query&libsearch=woodruff",
+          "default": true
+        },
+        {
+          "label": "Databases",
+          "placeholder": "Search for a Database",
+          "id": "databases",
+          "src": "https://guides.main.library.emory.edu/az.php?q=:query"
+        },
+        {
+          "label": "eJournals",
+          "placeholder": "Search Journal Titles",
+          "id": "ejournals",
+          "src": "http://emory-primoprod.hosted.exlibrisgroup.com/primo_library/libweb/action/dlSearch.do?institution=01EMORY&vid=discovere&loc=local%2Cscope%3A%28AZ01EMORY%29&fn=goAlmaAz&almaAzSearch=true&vl(freeText0)=:query&libsearch=woodruff"
+        },
+        {
+          "label": "Research & Course Guides",
+          "placeholder": "Search Research & Course Guides",
+          "id": "research-guides",
+          "src": "http://guides.main.library.emory.edu/srch.php?q=:query&libsearch=woodruff"
+        },
+        {
+          "label": "Finding Aids",
+          "placeholder": "Search Manuscript and Archival Collections",
+          "id": "finding-aids",
+          "src": "https://findingaids.library.emory.edu/search/?Submit=Search&keywords=:query&libsearch=woodruff"
+        },
+        {
+          "label": "This Site",
+          "placeholder": "Search this site on Google",
+          "id": "this-site",
+          "src": "https://www.google.com/search?q=:query%20site:web.library.emory.edu"
+        }
+      ],
+      "button": {
+        "position": "inside",
+        "icon": "material-search",
+        "label": "Search"
+      },
+      "processor": "/php/example-search.php"
+    }
+  },
+  "popular": [
+    {
+      "title": "Popular Links",
+      "items": [
+        {
+          "title": "Databases @ Emory",
+          "link": {
+            "href": ""
+          }
+        },
+        {
+          "title": "discoverE",
+          "link": {
+            "href": ""
+          }
+        },
+        {
+          "title": "Course Reserves",
+          "link": {
+            "href": ""
+          }
+        },
+        {
+          "title": "eJournals",
+          "link": {
+            "href": ""
+          }
+        }
+      ]
+    },
+    {
+      "title": "Today's Hours (Woodruff)",
+      "items": [
+        {
+          "title": "Open 24 Hours"
+        },
+        {
+          "title": "View All Hours",
+          "link": {
+            "href": ""
+          },
+          "icon": "material-access_time"
+        },
+        {
+          "title": "Get Directions",
+          "link": {
+            "href": ""
+          },
+          "icon": "material-map"
+        }
+      ]
+    }
+  ],
+  "slider": {
+    "arrows": true,
+    "slides": [
+      {
+        "image": {"src": "//source.unsplash.com/random"},
+        "title": "Tempor a Ingeniis Litteris",
+        "buttons": [
+          {"label": "Learn More", "href": ""}
+        ]
+      },
+      {
+        "image": {"src": "//source.unsplash.com/random"},
+        "title": "Velit et A eu Adipisicing",
+        "buttons": [
+          {"label": "Learn More", "href": ""}
+        ]
+      },
+      {
+        "image": {"src": "//source.unsplash.com/random"},
+        "title": "Offendit Exquisitaque Adipisicing Tamen Coniunctione Relinqueret",
+        "buttons": [
+          {"label": "Learn More", "href": ""}
+        ]
+      },
+      {
+        "image": {"src": "//source.unsplash.com/random"},
+        "title": "Ubi Arbitror Tamen An",
+        "buttons": [
+          {"label": "Learn More", "href": ""}
+        ]
+      },
+      {
+        "image": {"src": "//source.unsplash.com/random"},
+        "title": "Summis iis Mandaremus",
+        "buttons": [
+          {"label": "Learn More", "href": ""}
+        ]
+      }
+    ]
+  },
+  "cards": {
+    "heading": "Improve Your Research & Writing",
+    "buttons": [
+      {
+        "href": "",
+        "label": "Browse All Research Help"
+      }
+    ],
+    "cards": [
+      {
+        "title": "Access Library Resources",
+        "link": {
+          "href": ""
+        }
+      },
+      {
+        "title": "Find a Book",
+        "link": {
+          "href": ""
+        }
+      },
+      {
+        "title": "Find an Article in Full Text",
+        "link": {
+          "href": ""
+        }
+      }
+    ]
+  },
+  "boxes": {
+    "heading": "Get Help Using the Library",
+    "feature": {
+        "image": {
+          "src": "//source.unsplash.com/6fv1nBklWIU/500x650"
+        },
+        "context": "Confused About Research or an Assignment?",
+        "heading": "Use the expertise of our subject librarians to get help finding sources, conducting research, and understanding an assignment or topic.",
+        "buttons": [
+          {
+            "label": "Continue Reading",
+            "href": ""
+          },
+          {
+            "label": "Consult a Subject Librarian",
+            "href": "",
+            "hollow": true
+          }
+        ]
+    },
+    "explorer": {
+      "heading": "Popular Links",
+      "links": [
+        {
+          "href": "",
+          "label": "Get Help with Your Research"
+        },
+        {
+          "href": "",
+          "label": "Understand InterLibrary Loans"
+        },
+        {
+          "href": "",
+          "label": "Find a Study Space or Reserve a Room"
+        },
+        {
+          "href": "",
+          "label": "Access Course Reserves"
+        },
+        {
+          "href": "",
+          "label": "Guest Access"
+        },
+        {
+          "href": "",
+          "label": "Printing, Logging In, and Access"
+        }
+      ]
+    },
+    "wayfinder": {
+      "image": {
+        "src": "//source.unsplash.com/PkbZahEG2Ng"
+      },
+      "heading": "Trying to find your way around?",
+      "text": "View our library maps and spaces to help you navigate through all of our libraries and get what you need to find.",
+      "buttons": [
+        {
+          "label": "Download Map Guide",
+          "href": ""
+        },
+        {
+          "label": "View All Maps and Spaces",
+          "href": ""
+        }
+      ]
+    }
+  },
+  "feeds": {
+    "heading": "What's Happening at the Library",
+    "feature": {
+      "badge": "Exhibition",
+      "date": "September 13, 2017 - February 3, 2019",
+      "title": "Building Emory's African American Collections: Highlights from the Curatorial Career of Randall K. Burkett",
+      "image": {
+        "src": "//source.unsplash.com/ekBOf6sJYYo"
+      },
+      "buttons": [
+        {
+          "label": "Exhibition Details",
+          "href": "",
+          "hollow": true
+        }
+      ]
+    },
+    "sources": [
+      {
+        "heading": "Events & Exhibits",
+        "icon": "material-calendar_month_outline",
+        "url": "https://www.trumba.com/calendars/robert-woodruff-library.json",
+        "button": {
+          "label": "View All Events & Exhibits",
+          "href": ""
+        },
+        "model": {
+          "id": "{eventID}",
+          "date": "{dateTimeFormatted}",
+          "link": {
+            "href": "/event?feed={:url:}&id={eventID}"
+          },
+          "button?": {
+            "criteria": "{openSignUp} === true && {pastDeadline} === false",
+            "value": {
+              "label": "Sign Up",
+              "href": "{signUpUrl}"
+            }
+          }
+        }
+      },
+      {
+        "heading": "Upcoming Workshops",
+        "icon": "material-pencil_ruler",
+        "url": "https://www.trumba.com/calendars/robert-woodruff-library-classes-at-woodruff-library.json",
+        "button": {
+          "label": "View All Workshops",
+          "href": ""
+        },
+        "model": {
+          "id": "{eventID}",
+          "date": "{dateTimeFormatted}",
+          "link": {
+            "href": "/class?feed={:url:}&id={eventID}"
+          },
+          "button?": {
+            "criteria": "{openSignUp} === true && {pastDeadline} === false",
+            "value": {
+              "label": "Sign Up",
+              "href": "{signUpUrl}"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

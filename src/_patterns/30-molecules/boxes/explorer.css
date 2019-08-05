@@ -315,11 +315,18 @@ ico,
   color: #605858;
 }
 .explorer-link.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.explorer-link.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .explorer-link.-popular:hover, .explorer-link.-popular.is-hover, .explorer-link.-popular:focus, .explorer-link.-popular.is-focus {

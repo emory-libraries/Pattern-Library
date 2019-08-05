@@ -1,0 +1,12 @@
+{
+  "notifications": [
+    {
+      "uid": "notification-1",
+      "message": "Ipsum deserunt ita nulla velit, ea quibusdam est probant eu occaecat si enim litteris, vidisse fugiat voluptate, duis laboris se exercitation."
+    },
+    {
+      "uid": "notification-2",
+      "message": "Ipsum deserunt ita nulla velit, ea quibusdam est probant eu occaecat si enim litteris, vidisse fugiat voluptate, duis laboris se exercitation."
+    }
+  ]
+}

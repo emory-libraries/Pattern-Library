@@ -327,11 +327,18 @@ ico,
   color: #605858;
 }
 .feed-item-title.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.feed-item-title.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .feed-item-title.-popular:hover, .feed-item-title.-popular.is-hover, .feed-item-title.-popular:focus, .feed-item-title.-popular.is-focus {

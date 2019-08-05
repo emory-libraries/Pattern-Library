@@ -356,11 +356,18 @@ ico,
   color: #605858;
 }
 .card-multimedia-title.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.card-multimedia-title.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .card-multimedia-title.-popular:hover, .card-multimedia-title.-popular.is-hover, .card-multimedia-title.-popular:focus, .card-multimedia-title.-popular.is-focus {

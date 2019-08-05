@@ -56,6 +56,9 @@ module.exports = {
 
   },
 
+  // Get a list of all icons.
+  getIcons: () => icons,
+
   // Dynamically loads our logos by ID.
   logo( id ) {
 
@@ -68,6 +71,9 @@ module.exports = {
     // Return the icon.
     return logos[logo];
 
-  }
+  },
+
+  // Get a list of all logos.
+  getLogos: () => logos
 
 };
