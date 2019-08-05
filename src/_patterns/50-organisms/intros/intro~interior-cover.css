@@ -176,13 +176,13 @@ ico,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 .intro-interior-cover-image img {
-  min-width: 100%;
-  min-height: 100%;
-  max-width: none;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  width: 100%;
 }
 
 .intro-interior-cover-title, .intro-interior-cover-subtitle {
