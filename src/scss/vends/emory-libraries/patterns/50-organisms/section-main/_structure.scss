@@ -280,6 +280,7 @@
   &.-subject-librarian-directory-page,
   &.-staff-directory-page,
   &.-research-help-directory-page,
+  &.-event-page,
   &.-periodical-page {
 
     #{$selector}-title {
@@ -289,29 +290,51 @@
   }
 
   // Builds the main structure when used for an info page.
-  #{$selector-info-page} {
-    @include grid-layout;
+  &#{selector-excludes(
+    '.-info-page',
+    '.-material-page',
+    '.-tool-page',
+    '.-bio-page',
+    '.-research-help-page',
+    '.-service-directory-page',
+    '.-form-page',
+    '.-subject-librarian-directory-page',
+    '.-staff-directory-page',
+    '.-landing-page',
+    '.-gallery-page',
+    '.-exhibition-page',
+    '.-research-help-directory-page',
+    '.-index-page',
+    '.-periodicals-page',
+    '.-event-page'
+  )},
+  &.-info-page {
 
-    // Adjust the main structure across large screens.
-    @include breakpoint-l {
+    #{$selector-info-page} {
+      @include grid-layout;
 
-      // Adjust the breadcrumb placement within the grid.
-      #{$selector}-breadcrumb {
-        grid-column: main / sidebar;
-      }
+      // Adjust the main structure across large screens.
+      @include breakpoint-l {
 
-      // Adjust the title and subtitle placement within the grid.
-      #{$selector}-title,
-      #{$selector}-subtitle, {
-        grid-column: main / sidebar;
-      }
+        // Adjust the breadcrumb placement within the grid.
+        #{$selector}-breadcrumb {
+          grid-column: main / sidebar;
+        }
 
-      // Adjust the sidebar placement within the grid.
-      #{$selector}-sidebar {
-        grid-row: body / main;
-      }
+        // Adjust the title and subtitle placement within the grid.
+        #{$selector}-title,
+        #{$selector}-subtitle, {
+          grid-column: main / sidebar;
+        }
 
-    };
+        // Adjust the sidebar placement within the grid.
+        #{$selector}-sidebar {
+          grid-row: body / main;
+        }
+
+      };
+
+    }
 
   }
 
@@ -547,6 +570,54 @@
       display: none;
     }
 
+  }
+  // Builds the main structure when used for an event page.
+  &.-event-page {
+    @include grid-layout((
+      'spacer': false
+    ));
+
+    // Hide grid areas that are not being used within this page type.
+    
+    #{$selector}-spacer {
+      display: none;
+    }
+
+    // Reorder the content.
+    #{$selector}-content {
+      grid-row: sidebar-end;
+    }
+
+    // Adjust the spacing for sidebar and body within the grid.
+   /* #{$selector}-body,
+    #{$selector}-sidebar {
+      @include margin-y($rhythm-y);
+    }*/
+
+    // Adjusts the main structure across large screens.
+    @include breakpoint-l {
+
+      // Adjust the header placement within the grid.
+      .intro-interior-cover {
+        grid-column: main / sidebar-end;
+      }
+
+      // Adjust the breadcrumb placement within the grid.
+      #{$selector}-breadcrumb {
+        grid-column: main / sidebar-end;
+      }
+
+      // Adjust the sidebar placement within the grid.
+      #{$selector}-sidebar {
+        grid-row: body;
+      }
+
+      // Adjust the spacer and content placement within the grid.
+      #{$selector}-content {
+        grid-column: main / sidebar;
+      }
+
+    };
   }
 
   // Builds the main structure when used for an exhibition page.

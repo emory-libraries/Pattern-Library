@@ -23,12 +23,16 @@
       {{storageSet 'topics' value}}
     {{/if}}
   {{/each}}
+
   {{! Assign topics }}
   {{assign 'topics' (storageGet 'topics')}}
 
   {{! Add location to sections object for sidebar list}}
   {{assign 'location' (JSONparse (combine '{"content": "' (sanitize event.location) '","icon": "material-map","title":"Location"}'))}}
   {{storagePush 'sections' location}}
+
+  {{! set the button values}}
+  {{assign 'buttons' (JSONparse (combine '[{"href": "' event.signUpUrl '","label": "Register Now"}]'))}}
 
   {{! Loop through Get sidebar list items}}
   {{#each event.customFields}}
@@ -70,6 +74,7 @@
     {{/if}}
 
   {{/each}}
+
   {{! Set the looped sections to the sections array }}
   {{assign 'sections' (storageGet 'sections')}}
 
@@ -78,8 +83,12 @@
   
   {{! Set the subtitle to be the date of the event }}
   {{assign 'subtitle' event.dateTimeFormatted}}
+
   {{! set the hero image (This could be bad)}}
-  {{assign 'hero' event.eventImage.url}}
+  {{#unless hero}}
+    {{assign 'hero' event.eventImage.url}}
+  {{/unless}}
+  
 {{/if}}
 
 <div class="event-page">
