@@ -444,11 +444,19 @@ ico,
 }
 .card-librarian-subjects-list-item a.-popular,
 .card-librarian-subjects-list-item .link.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.card-librarian-subjects-list-item a.-popular,
+.card-librarian-subjects-list-item .link.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .card-librarian-subjects-list-item a.-popular:hover, .card-librarian-subjects-list-item a.-popular.is-hover, .card-librarian-subjects-list-item a.-popular:focus, .card-librarian-subjects-list-item a.-popular.is-focus,
@@ -539,11 +547,19 @@ ico,
 }
 .card-librarian-contact-info-item a.-popular,
 .card-librarian-contact-info-item .link.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.card-librarian-contact-info-item a.-popular,
+.card-librarian-contact-info-item .link.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .card-librarian-contact-info-item a.-popular:hover, .card-librarian-contact-info-item a.-popular.is-hover, .card-librarian-contact-info-item a.-popular:focus, .card-librarian-contact-info-item a.-popular.is-focus,
@@ -636,11 +652,19 @@ ico,
 }
 .card-librarian-contact-links-item a.-popular,
 .card-librarian-contact-links-item .link.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.card-librarian-contact-links-item a.-popular,
+.card-librarian-contact-links-item .link.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .card-librarian-contact-links-item a.-popular:hover, .card-librarian-contact-links-item a.-popular.is-hover, .card-librarian-contact-links-item a.-popular:focus, .card-librarian-contact-links-item a.-popular.is-focus,
@@ -713,11 +737,18 @@ ico,
   color: #605858;
 }
 .card-librarian-name.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.card-librarian-name.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .card-librarian-name.-popular:hover, .card-librarian-name.-popular.is-hover, .card-librarian-name.-popular:focus, .card-librarian-name.-popular.is-focus {

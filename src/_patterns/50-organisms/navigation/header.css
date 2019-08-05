@@ -145,6 +145,13 @@ ico,
   grid-template-rows: repeat(2, min-content);
   z-index: 5;
 }
+#eul-vue .header {
+  top: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+}
 .header-notifications {
   grid-area: notifications;
 }

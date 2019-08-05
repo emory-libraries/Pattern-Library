@@ -1,8 +1,8 @@
 ---
 
 state: review
-created: 06/27/2019
-updated: 06/27/2019
+created: 08/04/2019
+updated: 08/04/2019
 js: false
 php: false
 
@@ -10,18 +10,18 @@ php: false
 
 ## Getting Started
 
-Insert a sentence or two identifying what the **periodicals** pattern is and what purpose it serves.
+Insert a sentence or two identifying what the **popular** pattern is and what purpose it serves.
 
 ###### EXPORT VIA GRUNT
 
 ```
-grunt export:templates-periodicals
+grunt export:organisms-popular
 ```
 
 
 ### Description
 
-Provide a detailed description about the **periodicals** pattern. This should include a short summary of how the pattern works; what options or configurations are available to further customize the pattern based on context, if any; and/or what state changes the pattern possesses, if any. This description may include use-case scenarios for different contexts and other information that's deemed helpful for other developers.
+Provide a detailed description about the **popular** pattern. This should include a short summary of how the pattern works; what options or configurations are available to further customize the pattern based on context, if any; and/or what state changes the pattern possesses, if any. This description may include use-case scenarios for different contexts and other information that's deemed helpful for other developers.
 
 
 ### Best Practices

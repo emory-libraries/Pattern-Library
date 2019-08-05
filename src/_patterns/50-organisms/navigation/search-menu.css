@@ -324,11 +324,18 @@ ico,
   color: #605858;
 }
 .search-menu-search .search-cancel.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.search-menu-search .search-cancel.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .search-menu-search .search-cancel.-popular:hover, .search-menu-search .search-cancel.-popular.is-hover, .search-menu-search .search-cancel.-popular:focus, .search-menu-search .search-cancel.-popular.is-focus {
@@ -3113,11 +3120,18 @@ ico,
   color: #605858;
 }
 .search-menu.-light .search-menu-search .search-cancel.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.search-menu.-light .search-menu-search .search-cancel.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .search-menu.-light .search-menu-search .search-cancel.-popular:hover, .search-menu.-light .search-menu-search .search-cancel.-popular.is-hover, .search-menu.-light .search-menu-search .search-cancel.-popular:focus, .search-menu.-light .search-menu-search .search-cancel.-popular.is-focus {
@@ -3186,11 +3200,18 @@ ico,
   color: #605858;
 }
 .search-menu.-dark .search-menu-search .search-cancel.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.search-menu.-dark .search-menu-search .search-cancel.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .search-menu.-dark .search-menu-search .search-cancel.-popular:hover, .search-menu.-dark .search-menu-search .search-cancel.-popular.is-hover, .search-menu.-dark .search-menu-search .search-cancel.-popular:focus, .search-menu.-dark .search-menu-search .search-cancel.-popular.is-focus {

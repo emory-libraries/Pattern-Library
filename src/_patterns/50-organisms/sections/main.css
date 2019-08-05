@@ -871,11 +871,18 @@ ico,
   color: #605858;
 }
 .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular:hover, .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular.is-hover, .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular:focus, .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular.is-focus {
@@ -942,11 +949,18 @@ ico,
   color: #605858;
 }
 .section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular:hover, .section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular.is-hover, .section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular:focus, .section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular.is-focus {
@@ -1013,11 +1027,18 @@ ico,
   color: #605858;
 }
 .section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular:hover, .section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular.is-hover, .section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular:focus, .section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular.is-focus {

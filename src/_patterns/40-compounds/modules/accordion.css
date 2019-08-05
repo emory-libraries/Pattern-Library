@@ -306,11 +306,18 @@ ico,
   color: #605858;
 }
 .accordion-toggles-toggle.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.accordion-toggles-toggle.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .accordion-toggles-toggle.-popular:hover, .accordion-toggles-toggle.-popular.is-hover, .accordion-toggles-toggle.-popular:focus, .accordion-toggles-toggle.-popular.is-focus {

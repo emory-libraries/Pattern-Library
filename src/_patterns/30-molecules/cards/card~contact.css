@@ -290,11 +290,18 @@ ico,
   color: #605858;
 }
 .card-contact-name.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.card-contact-name.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .card-contact-name.-popular:hover, .card-contact-name.-popular.is-hover, .card-contact-name.-popular:focus, .card-contact-name.-popular.is-focus {
@@ -359,11 +366,18 @@ ico,
   color: #605858;
 }
 .card-contact-email.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.card-contact-email.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .card-contact-email.-popular:hover, .card-contact-email.-popular.is-hover, .card-contact-email.-popular:focus, .card-contact-email.-popular.is-focus {
