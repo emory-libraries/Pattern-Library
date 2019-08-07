@@ -1,6 +1,6 @@
 {
-  "feed": {
-    "url": "https://www.trumba.com/calendars/robert-woodruff-library.json",
-    "eventID": 133548190
+  "__params__": {
+    "feed": "https://www.trumba.com/calendars/robert-woodruff-library.json",
+    "id": 133548190
   }
 }
