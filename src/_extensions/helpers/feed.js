@@ -73,13 +73,18 @@ module.exports = {
     // Get the response body.
     const body = response.getBody('utf8');
 
-    if (type == 'json') {
-      const parsedBody = JSON.parse(body);
-      parsedBody.__meta__ = {};
-      parsedBody.__meta__.type = type;
+    // Parse and return JSON as is.
+    if( type === 'json' ) {
 
-      // Parse and return JSON as is.
-      return parsedBody
+      // Parse the JSON.
+      const json =  JSON.parse(body);
+
+      // Merge the feed type into the JSON.
+      _.set(json, '__meta__.type', type);
+
+      // Return the parsed JSON.
+      return json;
+
     }
 
     // Extract and parse the feed data from the response.\
@@ -144,6 +149,9 @@ module.exports = {
     // Remove all xmlns references.
     feed = removeXmlns(feed);
 
+    // Merge the feed type into the JSON.
+    _.set(feed, '__meta__.type', type);
+
     // Return the parsed feed data.
     return feed;
 
@@ -154,6 +162,9 @@ module.exports = {
 
     // Capture the context.
     const context = this;
+
+    // Remove any metadata from the feed.
+    _.unset(feed, '__meta__');
 
     // Initialize a helper for binding source data within a value.
     const bind = ( value, item, recursive = true ) => {

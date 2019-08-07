@@ -372,11 +372,19 @@ ico,
 }
 .copyright .link.-popular,
 .copyright a.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.copyright .link.-popular,
+.copyright a.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .copyright .link.-popular:hover, .copyright .link.-popular.is-hover, .copyright .link.-popular:focus, .copyright .link.-popular.is-focus,

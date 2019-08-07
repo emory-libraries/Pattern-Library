@@ -401,11 +401,18 @@ ico,
   color: #605858;
 }
 .exhibition-page-main-sidenote-link.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.exhibition-page-main-sidenote-link.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .exhibition-page-main-sidenote-link.-popular:hover, .exhibition-page-main-sidenote-link.-popular.is-hover, .exhibition-page-main-sidenote-link.-popular:focus, .exhibition-page-main-sidenote-link.-popular.is-focus {

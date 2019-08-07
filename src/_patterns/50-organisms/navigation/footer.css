@@ -399,11 +399,19 @@ ico,
 }
 .footer-list .link.-popular,
 .footer-list a.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.footer-list .link.-popular,
+.footer-list a.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .footer-list .link.-popular:hover, .footer-list .link.-popular.is-hover, .footer-list .link.-popular:focus, .footer-list .link.-popular.is-focus,

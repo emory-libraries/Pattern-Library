@@ -412,11 +412,19 @@ ico,
 }
 .card-staff-contact-info-item a.-popular,
 .card-staff-contact-info-item .link.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.card-staff-contact-info-item a.-popular,
+.card-staff-contact-info-item .link.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .card-staff-contact-info-item a.-popular:hover, .card-staff-contact-info-item a.-popular.is-hover, .card-staff-contact-info-item a.-popular:focus, .card-staff-contact-info-item a.-popular.is-focus,
@@ -509,11 +517,19 @@ ico,
 }
 .card-staff-contact-links-item a.-popular,
 .card-staff-contact-links-item .link.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.card-staff-contact-links-item a.-popular,
+.card-staff-contact-links-item .link.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .card-staff-contact-links-item a.-popular:hover, .card-staff-contact-links-item a.-popular.is-hover, .card-staff-contact-links-item a.-popular:focus, .card-staff-contact-links-item a.-popular.is-focus,
@@ -586,11 +602,18 @@ ico,
   color: #605858;
 }
 .card-staff-name.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.card-staff-name.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .card-staff-name.-popular:hover, .card-staff-name.-popular.is-hover, .card-staff-name.-popular:focus, .card-staff-name.-popular.is-focus {
