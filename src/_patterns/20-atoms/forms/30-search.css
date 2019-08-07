@@ -191,7 +191,7 @@ ico,
   display: none;
 }
 .is-default.search-form {
-  display: block;
+  display: grid;
 }
 .search-toggle {
   display: none;
@@ -227,7 +227,7 @@ ico,
 }
 .-form.-contained.search .search-button {
   display: block;
-  grid-area: none;
+  grid-area: button;
 }
 .-contained.search {
   display: grid;
@@ -442,11 +442,18 @@ ico,
   color: #605858;
 }
 .search-cancel.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.search-cancel.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .search-cancel.-popular:hover, .search-cancel.-popular.is-hover, .search-cancel.-popular:focus, .search-cancel.-popular.is-focus {
@@ -457,6 +464,9 @@ ico,
 }
 .search-cancel.-underline {
   text-decoration: underline;
+}
+.search-cancel[disabled], .search-cancel.is-disabled {
+  opacity: 0.5;
 }
 .search.-contained .search-button {
   border: none;

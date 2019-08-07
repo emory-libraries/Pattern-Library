@@ -134,13 +134,44 @@ ico,
   content: "";
 }
 
+.intro-home-title h1 .anchor, .intro-home-title h2 .anchor, .intro-home-title h3 .anchor, .intro-home-title h4 .anchor, .intro-home-title h5 .anchor, .intro-home-title h6 .anchor,
+.intro-home-title .heading .anchor {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.intro-home-title h1 .anchor .icon, .intro-home-title h2 .anchor .icon, .intro-home-title h3 .anchor .icon, .intro-home-title h4 .anchor .icon, .intro-home-title h5 .anchor .icon, .intro-home-title h6 .anchor .icon,
+.intro-home-title .heading .anchor .icon {
+  margin: 0 !important;
+}
+.intro-home-title h1:not(.is-anchored) h1 .anchor, .intro-home-title h2:not(.is-anchored) h1 .anchor, .intro-home-title h3:not(.is-anchored) h1 .anchor, .intro-home-title h4:not(.is-anchored) h1 .anchor, .intro-home-title h5:not(.is-anchored) h1 .anchor, .intro-home-title h6:not(.is-anchored) h1 .anchor,
+.intro-home-title .heading:not(.is-anchored) h1 .anchor, .intro-home-title h1:not(.is-anchored) h2 .anchor, .intro-home-title h2:not(.is-anchored) h2 .anchor, .intro-home-title h3:not(.is-anchored) h2 .anchor, .intro-home-title h4:not(.is-anchored) h2 .anchor, .intro-home-title h5:not(.is-anchored) h2 .anchor, .intro-home-title h6:not(.is-anchored) h2 .anchor,
+.intro-home-title .heading:not(.is-anchored) h2 .anchor, .intro-home-title h1:not(.is-anchored) h3 .anchor, .intro-home-title h2:not(.is-anchored) h3 .anchor, .intro-home-title h3:not(.is-anchored) h3 .anchor, .intro-home-title h4:not(.is-anchored) h3 .anchor, .intro-home-title h5:not(.is-anchored) h3 .anchor, .intro-home-title h6:not(.is-anchored) h3 .anchor,
+.intro-home-title .heading:not(.is-anchored) h3 .anchor, .intro-home-title h1:not(.is-anchored) h4 .anchor, .intro-home-title h2:not(.is-anchored) h4 .anchor, .intro-home-title h3:not(.is-anchored) h4 .anchor, .intro-home-title h4:not(.is-anchored) h4 .anchor, .intro-home-title h5:not(.is-anchored) h4 .anchor, .intro-home-title h6:not(.is-anchored) h4 .anchor,
+.intro-home-title .heading:not(.is-anchored) h4 .anchor, .intro-home-title h1:not(.is-anchored) h5 .anchor, .intro-home-title h2:not(.is-anchored) h5 .anchor, .intro-home-title h3:not(.is-anchored) h5 .anchor, .intro-home-title h4:not(.is-anchored) h5 .anchor, .intro-home-title h5:not(.is-anchored) h5 .anchor, .intro-home-title h6:not(.is-anchored) h5 .anchor,
+.intro-home-title .heading:not(.is-anchored) h5 .anchor, .intro-home-title h1:not(.is-anchored) h6 .anchor, .intro-home-title h2:not(.is-anchored) h6 .anchor, .intro-home-title h3:not(.is-anchored) h6 .anchor, .intro-home-title h4:not(.is-anchored) h6 .anchor, .intro-home-title h5:not(.is-anchored) h6 .anchor, .intro-home-title h6:not(.is-anchored) h6 .anchor,
+.intro-home-title .heading:not(.is-anchored) h6 .anchor,
+.intro-home-title h1:not(.is-anchored) .heading .anchor,
+.intro-home-title h2:not(.is-anchored) .heading .anchor,
+.intro-home-title h3:not(.is-anchored) .heading .anchor,
+.intro-home-title h4:not(.is-anchored) .heading .anchor,
+.intro-home-title h5:not(.is-anchored) .heading .anchor,
+.intro-home-title h6:not(.is-anchored) .heading .anchor,
+.intro-home-title .heading:not(.is-anchored) .heading .anchor {
+  display: none;
+}
+
 .intro-home {
   display: grid;
-  grid-template-rows: 180px -webkit-min-content 6fr repeat(2, -webkit-min-content) 1fr;
-  grid-template-rows: 180px min-content 6fr repeat(2, min-content) 1fr;
+  grid-template-rows: minmax(180px, -webkit-min-content) -webkit-min-content 6fr repeat(2, -webkit-min-content) 1fr;
+  grid-template-rows: minmax(180px, min-content) min-content 6fr repeat(2, min-content) 1fr;
   grid-template-columns: 1fr 2fr minmax(-webkit-min-content, 800px) 2fr 1fr;
   grid-template-columns: 1fr 2fr minmax(min-content, 800px) 2fr 1fr;
   background-size: cover;
+  background-position: center;
   height: 845px;
 }
 .intro-home-search {
@@ -152,13 +183,6 @@ ico,
 }
 .intro-home-search .search-menu {
   padding-top: 0;
-}
-@media (min-width: 901px) {
-  .intro-home-search {
-    padding-left: 6em;
-    padding-right: 6em;
-    padding-top: 0.5em;
-  }
 }
 .intro-home-badge {
   grid-row: 4;
@@ -194,10 +218,86 @@ ico,
   text-transform: none !important;
   color: #FFFFFF !important;
 }
+.intro-home-title h1.is-anchored:hover .anchor, .intro-home-title h1.is-anchored.is-hover .anchor, .intro-home-title h1.is-anchored:focus .anchor, .intro-home-title h1.is-anchored.is-focus .anchor, .intro-home-title h2.is-anchored:hover .anchor, .intro-home-title h2.is-anchored.is-hover .anchor, .intro-home-title h2.is-anchored:focus .anchor, .intro-home-title h2.is-anchored.is-focus .anchor, .intro-home-title h3.is-anchored:hover .anchor, .intro-home-title h3.is-anchored.is-hover .anchor, .intro-home-title h3.is-anchored:focus .anchor, .intro-home-title h3.is-anchored.is-focus .anchor, .intro-home-title h4.is-anchored:hover .anchor, .intro-home-title h4.is-anchored.is-hover .anchor, .intro-home-title h4.is-anchored:focus .anchor, .intro-home-title h4.is-anchored.is-focus .anchor, .intro-home-title h5.is-anchored:hover .anchor, .intro-home-title h5.is-anchored.is-hover .anchor, .intro-home-title h5.is-anchored:focus .anchor, .intro-home-title h5.is-anchored.is-focus .anchor, .intro-home-title h6.is-anchored:hover .anchor, .intro-home-title h6.is-anchored.is-hover .anchor, .intro-home-title h6.is-anchored:focus .anchor, .intro-home-title h6.is-anchored.is-focus .anchor,
+.intro-home-title .heading.is-anchored:hover .anchor,
+.intro-home-title .heading.is-anchored.is-hover .anchor,
+.intro-home-title .heading.is-anchored:focus .anchor,
+.intro-home-title .heading.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.intro-home-title h1 .anchor, .intro-home-title h2 .anchor, .intro-home-title h3 .anchor, .intro-home-title h4 .anchor, .intro-home-title h5 .anchor, .intro-home-title h6 .anchor,
+.intro-home-title .heading .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
+}
 .intro-home-search {
   background-color: transparent;
   -webkit-transition: background-color 0.25s ease;
   transition: background-color 0.25s ease;
+}
+.intro-home-search {
+  -webkit-transition: padding 0.25s ease;
+  transition: padding 0.25s ease;
+}
+@media (max-width: 600px) {
+  .intro-home-search {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .intro-home-search {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (min-width: 901px) {
+  .intro-home-search {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .intro-home-search {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (min-width: 1290px) {
+  .intro-home-search {
+    padding-left: calc((100vw - 1250px) / 2);
+    padding-right: calc((100vw - 1250px) / 2);
+  }
+}
+@media (max-width: 600px) {
+  .intro-home-search {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .intro-home-search {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+}
+@media (min-width: 901px) {
+  .intro-home-search {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+}
+@media (min-width: 1200px) {
+  .intro-home-search {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
 }
 .intro-home-search:focus-within, .intro-home-search:focus, .intro-home-search:hover, .intro-home-search:active, .intro-home-search.is-hover, .intro-home-search.is-focus {
   background-color: rgba(9, 28, 68, 0.9);

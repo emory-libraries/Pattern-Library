@@ -134,6 +134,21 @@ ico,
   content: "";
 }
 
+.card-multimedia-duration .anchor, .card-multimedia-title .anchor, .card-multimedia-context .anchor {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.card-multimedia-duration .anchor .icon, .card-multimedia-title .anchor .icon, .card-multimedia-context .anchor .icon {
+  margin: 0 !important;
+}
+.card-multimedia-duration:not(.is-anchored) .card-multimedia-duration .anchor, .card-multimedia-title:not(.is-anchored) .card-multimedia-duration .anchor, .card-multimedia-duration:not(.is-anchored) .card-multimedia-title .anchor, .card-multimedia-title:not(.is-anchored) .card-multimedia-title .anchor, .card-multimedia-context:not(.is-anchored) .card-multimedia-duration .anchor, .card-multimedia-context:not(.is-anchored) .card-multimedia-title .anchor, .card-multimedia-duration:not(.is-anchored) .card-multimedia-context .anchor, .card-multimedia-title:not(.is-anchored) .card-multimedia-context .anchor, .card-multimedia-context:not(.is-anchored) .card-multimedia-context .anchor {
+  display: none;
+}
+
 .card-multimedia-title {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -256,6 +271,19 @@ ico,
   text-transform: uppercase;
   color: #082B73;
 }
+.card-multimedia-context.is-anchored:hover .anchor, .card-multimedia-context.is-anchored.is-hover .anchor, .card-multimedia-context.is-anchored:focus .anchor, .card-multimedia-context.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.card-multimedia-context .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
+}
 .card-multimedia-title {
   text-align: center;
   margin-top: 25px;
@@ -269,6 +297,19 @@ ico,
   letter-spacing: normal;
   text-transform: none;
   color: #605858;
+}
+.card-multimedia-title.is-anchored:hover .anchor, .card-multimedia-title.is-anchored.is-hover .anchor, .card-multimedia-title.is-anchored:focus .anchor, .card-multimedia-title.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.card-multimedia-title .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
 }
 .card-multimedia-title {
   font-weight: normal;
@@ -315,11 +356,18 @@ ico,
   color: #605858;
 }
 .card-multimedia-title.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.card-multimedia-title.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .card-multimedia-title.-popular:hover, .card-multimedia-title.-popular.is-hover, .card-multimedia-title.-popular:focus, .card-multimedia-title.-popular.is-focus {
@@ -344,4 +392,17 @@ ico,
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #605858;
+}
+.card-multimedia-duration.is-anchored:hover .anchor, .card-multimedia-duration.is-anchored.is-hover .anchor, .card-multimedia-duration.is-anchored:focus .anchor, .card-multimedia-duration.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.card-multimedia-duration .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
 }

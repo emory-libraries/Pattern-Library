@@ -1,0 +1,152 @@
+{
+  "title": "Events & Exhibitions",
+  "subtitle": "Nam quae incididunt fabulas ad eram relinqueret admodum esse arbitror.",
+  "hero": "//source.unsplash.com/0RDBOAdnbWM",
+  "feature": {
+    "image": {
+      "src": "//source.unsplash.com/LWkFHEGpleE/500x800"
+    },
+    "context": "September 27, 2018 | 7:00-8:00 PM",
+    "heading": "SisterWriters: An Evening with Pearl Cleage and Tayari Jones",
+    "description": "New York Times best-selling author Tajari Jones joins Pearl Cleage, the nationally recognized playwright, poet, novelist, and social activist, to discuss mentorship and writing.",
+    "buttons": [
+      {
+        "label": "Event Details",
+        "href": "",
+        "hollow": true
+      }
+    ]
+  },
+  "explorer": {
+    "heading": "Join Us",
+    "links": [
+      {
+        "href": "",
+        "label": "Full Events Calendar"
+      },
+      {
+        "href": "",
+        "label": "Current and Past Exhibitions"
+      },
+      {
+        "href": "",
+        "label": "Upcoming Library Workshops"
+      },
+      {
+        "href": "",
+        "label": "Propose an Event"
+      },
+      {
+        "href": "",
+        "label": "Propose an Exhibit"
+      }
+    ]
+  },
+  "tiles": [
+    {
+      "image": {
+        "src": "//source.unsplash.com/2JIvboGLeho"
+      },
+      "link": {
+        "href": "",
+        "label": "Learn More"
+      },
+      "badge": "Exhibit",
+      "date": "March 7, 2018",
+      "title": "Nulla Eram Summis Illum",
+      "description": "Offendit enim voluptate expetendis ubi non ipsum in duis."
+    },
+    {
+      "image": {
+        "src": "//source.unsplash.com/2JIvboGLeho"
+      },
+      "link": {
+        "href": "",
+        "label": "Learn More"
+      },
+      "badge": "Event",
+      "date": "March 7, 2018",
+      "title": "Nulla Eram Summis Illum",
+      "description": "Offendit enim voluptate expetendis ubi non ipsum in duis."
+    },
+    {
+      "image": {
+        "src": "//source.unsplash.com/2JIvboGLeho"
+      },
+      "link": {
+        "href": "",
+        "label": "Learn More"
+      },
+      "badge": "Exhibit",
+      "date": "March 7, 2018",
+      "title": "Nulla Eram Summis Illum",
+      "description": "Offendit enim voluptate expetendis ubi non ipsum in duis."
+    }
+  ],
+  "listing": {
+    "badge": "Exhibition",
+    "date": "September 13, 2017 - Februrary 3, 2019",
+    "title": "Building Emory's African American Collections: Highlights from the Curatorial Career of Randall K. Burkett",
+    "image": {
+      "src": "//source.unsplash.com/ekBOf6sJYYo"
+    },
+    "buttons": [
+      {
+        "label": "Exhibition Details",
+        "href": "",
+        "hollow": true
+      }
+    ]
+  },
+  "feeds": {
+    "heading": "Upcoming",
+    "sources": [
+      {
+        "url": "https://www.trumba.com/calendars/robert-woodruff-library.json",
+        "heading": "Events",
+        "icon": "material-calendar_month_outline",
+        "button": {
+          "label": "View All Events",
+          "href": ""
+        },
+        "model": {
+          "id": "{eventID}",
+          "date": "{dateTimeFormatted}",
+          "link": {
+            "href": "/event?feed={:url:}&id={eventID}"
+          },
+          "button?": {
+            "criteria": "{openSignUp} === true && {pastDeadline} === false",
+            "value": {
+              "label": "Sign Up",
+              "href": "{signUpUrl}"
+            }
+          }
+        }
+      },
+      {
+        "url": "https://www.trumba.com/calendars/robert-woodruff-library-classes-at-woodruff-library.json",
+        "heading": "Workshops",
+        "icon": "material-pencil_ruler",
+        "button": {
+          "label": "View All Workshops",
+          "href": ""
+        },
+        "model": {
+          "id": "{eventID}",
+          "date": "{dateTimeFormatted}",
+          "link": {
+            "href": "/class?feed={:url:}&id={eventID}"
+          },
+          "button?": {
+            "criteria": "{openSignUp} === true && {pastDeadline} === false",
+            "value": {
+              "label": "Sign Up",
+              "href": "{signUpUrl}"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

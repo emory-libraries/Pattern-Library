@@ -1,3 +1,22 @@
+{{! Get all icons and group them by iconset. }}
+{{#each (getIcons)}}
+
+  {{! Find Material icons. }}
+  {{#startsWith 'material-' @key}}
+    {{storagePush 'material-icons' (objectify svg=this id=@key meta=(objectify id=@key))}}
+  {{/startsWith}}
+
+  {{! Find Socicon icons. }}
+  {{#startsWith 'socicon-' @key}}
+    {{storagePush 'socicon-icons' (objectify svg=this id=@key meta=(objectify id=@key))}}
+  {{/startsWith}}
+
+{{/each}}
+
+{{! Initialize the iconsets. }}
+{{assign 'iconsets.0' (objectify name='Material' icons=(storageGet 'material-icons'))}}
+{{assign 'iconsets.1' (objectify name='Socicon' icons=(storageGet 'socicon-icons'))}}
+
 {{#each iconsets}}
 
   <div class="pl-iconset">
@@ -12,24 +31,25 @@
 
           {{#if name}}<strong class="pl-grid-item-id">{{name}}</strong>{{/if}}
 
-          <div class="pl-iconset-icon -{{downcase ../name}} pl-grid-item-info" title="{{id}}">
-
-            {{> tokens-icon }}
+          <div class="pl-iconset-icon -{{lowercase ../name}} pl-grid-item-info" title="{{id}}">
+            {{{svg}}}
+            {{!> tokens-icon }}
 
           </div>
 
+          {{#if meta}}
+            {{#each meta}}
 
-          {{#if meta}}{{#each meta}}
+              <div class="pl-grid-item-meta">
 
-            <div class="pl-grid-item-meta">
+                  <strong class="pl-grid-item-meta-label">{{@key}}</strong>
 
-                <strong class="pl-grid-item-meta-label">{{@key}}</strong>
+                  <span class="pl-grid-item-meta-data copy" data-clipboard-text="{{.}}">{{.}}</span>
 
-                <span class="pl-grid-item-meta-data copy" data-clipboard-text="{{.}}">{{.}}</span>
+              </div>
 
-            </div>
-
-          {{/each}}{{/if}}
+            {{/each}}
+          {{/if}}
 
         </div>
 

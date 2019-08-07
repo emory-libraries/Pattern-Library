@@ -1,0 +1,55 @@
+{
+  "popular": [
+    {
+      "title": "Popular Links",
+      "items": [
+        {
+          "title": "Databases @ Emory",
+          "link": {
+            "href": ""
+          }
+        },
+        {
+          "title": "discoverE",
+          "link": {
+            "href": ""
+          }
+        },
+        {
+          "title": "Course Reserves",
+          "link": {
+            "href": ""
+          }
+        },
+        {
+          "title": "eJournals",
+          "link": {
+            "href": ""
+          }
+        }
+      ]
+    },
+    {
+      "title": "Today's Hours (Woodruff)",
+      "items": [
+        {
+          "title": "Open 24 Hours"
+        },
+        {
+          "title": "View All Hours",
+          "link": {
+            "href": "",
+            "icon": "material-access_time"
+          }
+        },
+        {
+          "title": "Get Directions",
+          "link": {
+            "href": "",
+            "icon": "material-map"
+          }
+        }
+      ]
+    }
+  ]
+}

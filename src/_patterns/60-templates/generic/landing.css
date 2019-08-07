@@ -159,6 +159,15 @@ ico,
 .landing-page-main {
   grid-area: main;
 }
+.landing-page-main .section-main {
+  padding-top: 2em !important;
+  padding-bottom: 4em !important;
+}
+.landing-page-main .section-main .section-main-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2em;
+}
 .landing-page-main .section-main:not(.without-intro) {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -170,11 +179,6 @@ ico,
 }
 .landing-page-main .section-main:not(.without-intro) .section-main-body {
   padding-top: 2em;
-}
-.landing-page-main .section-main .section-main-body {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 2em;
 }
 .landing-page-footer {
   grid-area: footer;
@@ -194,60 +198,4 @@ ico,
 
 .landing-page-header, .landing-page-footer {
   border: 1px solid #B6BDCC;
-}
-.landing-page-main .section-main {
-  padding-top: 2em !important;
-  padding-bottom: 4em !important;
-}
-.landing-page-main .section-main {
-  -webkit-transition: padding 0.25s ease;
-  transition: padding 0.25s ease;
-}
-@media (max-width: 600px) {
-  .landing-page-main .section-main {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-@media (min-width: 601px) and (max-width: 900px) {
-  .landing-page-main .section-main {
-    padding-left: 70px;
-    padding-right: 70px;
-  }
-}
-@media (min-width: 901px) {
-  .landing-page-main .section-main {
-    padding-left: 120px;
-    padding-right: 120px;
-  }
-}
-@media (min-width: 1200px) {
-  .landing-page-main .section-main {
-    padding-left: 170px;
-    padding-right: 170px;
-  }
-}
-@media (max-width: 600px) {
-  .landing-page-main .section-main {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-@media (min-width: 601px) and (max-width: 900px) {
-  .landing-page-main .section-main {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-@media (min-width: 901px) {
-  .landing-page-main .section-main {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-@media (min-width: 1200px) {
-  .landing-page-main .section-main {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
 }

@@ -134,6 +134,21 @@ ico,
   content: "";
 }
 
+.exhibition-page-main-sidenote-heading .anchor, .exhibition-page-main-date .anchor, .exhibition-page-main-context .anchor {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.exhibition-page-main-sidenote-heading .anchor .icon, .exhibition-page-main-date .anchor .icon, .exhibition-page-main-context .anchor .icon {
+  margin: 0 !important;
+}
+.exhibition-page-main-sidenote-heading:not(.is-anchored) .exhibition-page-main-sidenote-heading .anchor, .exhibition-page-main-date:not(.is-anchored) .exhibition-page-main-sidenote-heading .anchor, .exhibition-page-main-sidenote-heading:not(.is-anchored) .exhibition-page-main-date .anchor, .exhibition-page-main-date:not(.is-anchored) .exhibition-page-main-date .anchor, .exhibition-page-main-context:not(.is-anchored) .exhibition-page-main-sidenote-heading .anchor, .exhibition-page-main-context:not(.is-anchored) .exhibition-page-main-date .anchor, .exhibition-page-main-sidenote-heading:not(.is-anchored) .exhibition-page-main-context .anchor, .exhibition-page-main-date:not(.is-anchored) .exhibition-page-main-context .anchor, .exhibition-page-main-context:not(.is-anchored) .exhibition-page-main-context .anchor {
+  display: none;
+}
+
 .exhibition-page-main-sidenote-link {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -271,6 +286,19 @@ ico,
   text-transform: uppercase;
   color: #605858;
 }
+.exhibition-page-main-context.is-anchored:hover .anchor, .exhibition-page-main-context.is-anchored.is-hover .anchor, .exhibition-page-main-context.is-anchored:focus .anchor, .exhibition-page-main-context.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.exhibition-page-main-context .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
+}
 .exhibition-page-main-quote {
   font-family: "Cardo", serif;
   font-size: 48px;
@@ -292,6 +320,19 @@ ico,
   text-transform: none;
   color: #082B73;
 }
+.exhibition-page-main-date.is-anchored:hover .anchor, .exhibition-page-main-date.is-anchored.is-hover .anchor, .exhibition-page-main-date.is-anchored:focus .anchor, .exhibition-page-main-date.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.exhibition-page-main-date .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
+}
 .exhibition-page-main-sidenote-heading {
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
@@ -301,6 +342,19 @@ ico,
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #082B73;
+}
+.exhibition-page-main-sidenote-heading.is-anchored:hover .anchor, .exhibition-page-main-sidenote-heading.is-anchored.is-hover .anchor, .exhibition-page-main-sidenote-heading.is-anchored:focus .anchor, .exhibition-page-main-sidenote-heading.is-anchored.is-focus .anchor {
+  visibility: visible;
+  opacity: 1;
+}
+.exhibition-page-main-sidenote-heading .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
+  transition: visibility 0s, opacity 0.25s ease;
+  margin-left: 20px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+  visibility: hidden;
 }
 .exhibition-page-main-sidenote-link {
   font-weight: bold;
@@ -347,11 +401,18 @@ ico,
   color: #605858;
 }
 .exhibition-page-main-sidenote-link.-popular {
+  font-size: 20px !important;
+  color: #FFFFFF;
+}
+.exhibition-page-main-sidenote-link.-popular {
   font-family: "Cardo", serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   line-height: 2.05;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
   color: #FFFFFF;
 }
 .exhibition-page-main-sidenote-link.-popular:hover, .exhibition-page-main-sidenote-link.-popular.is-hover, .exhibition-page-main-sidenote-link.-popular:focus, .exhibition-page-main-sidenote-link.-popular.is-focus {
@@ -382,49 +443,56 @@ ico,
 @media (min-width: 601px) and (max-width: 900px) {
   .exhibition-page-main .section-main,
 .exhibition-page-main .section-deep-dive {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 @media (min-width: 901px) {
   .exhibition-page-main .section-main,
 .exhibition-page-main .section-deep-dive {
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 @media (min-width: 1200px) {
   .exhibition-page-main .section-main,
 .exhibition-page-main .section-deep-dive {
-    padding-left: 170px;
-    padding-right: 170px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (min-width: 1290px) {
+  .exhibition-page-main .section-main,
+.exhibition-page-main .section-deep-dive {
+    padding-left: calc((100vw - 1250px) / 2);
+    padding-right: calc((100vw - 1250px) / 2);
   }
 }
 @media (max-width: 600px) {
+  .exhibition-page-main .section-main,
+.exhibition-page-main .section-deep-dive {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .exhibition-page-main .section-main,
+.exhibition-page-main .section-deep-dive {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+@media (min-width: 901px) {
   .exhibition-page-main .section-main,
 .exhibition-page-main .section-deep-dive {
     padding-top: 40px;
     padding-bottom: 40px;
   }
 }
-@media (min-width: 601px) and (max-width: 900px) {
-  .exhibition-page-main .section-main,
-.exhibition-page-main .section-deep-dive {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-}
-@media (min-width: 901px) {
-  .exhibition-page-main .section-main,
-.exhibition-page-main .section-deep-dive {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-}
 @media (min-width: 1200px) {
   .exhibition-page-main .section-main,
 .exhibition-page-main .section-deep-dive {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
