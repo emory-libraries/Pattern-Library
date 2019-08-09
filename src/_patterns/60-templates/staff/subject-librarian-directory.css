@@ -143,7 +143,12 @@ ico,
 }
 @media (min-width: 901px) {
   .subject-librarian-directory-page {
-    rid-template-rows: 150px 1fr auto;
+    grid-template-rows: 150px 1fr auto;
+  }
+}
+@media (min-width: 1200px) {
+  .subject-librarian-directory-page {
+    grid-template-rows: 130px 1fr auto;
   }
 }
 .subject-librarian-directory-page-header {

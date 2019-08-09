@@ -156,3 +156,8 @@ ico,
     grid-template-rows: 150px 1fr auto;
   }
 }
+@media (min-width: 1200px) {
+  .gallery-page {
+    grid-template-rows: 130px 1fr auto;
+  }
+}
