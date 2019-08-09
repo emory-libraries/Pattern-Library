@@ -20,6 +20,24 @@ const helpers = {
 
   },
 
+  // Set the moment
+  momentSet( unit, val ) {
+    // Set the default unit.
+    unit = _.isNil(unit) || _.isPlainObject(unit) ? null : unit;
+
+    // Determine the offset result.
+    return moment().set(unit, val);
+
+  },
+
+  // Get the day of the week N days before or after
+  momentAddDays( int ) {
+
+    // Determine the offset result.
+    return moment().add(int, 'days').format('dddd');
+
+  },
+
   // Check if a moment is before another moment.
   momentIsBefore( ref, comp, unit ) {
 
