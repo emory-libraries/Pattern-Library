@@ -156,6 +156,3 @@ ico,
     grid-template-rows: 150px 1fr auto;
   }
 }
-.gallery-page {
-  grid-gap: 20px;
-}

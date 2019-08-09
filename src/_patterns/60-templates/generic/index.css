@@ -155,7 +155,3 @@ ico,
 .index-page-footer {
   grid-area: footer;
 }
-
-.index-page {
-  grid-gap: 20px;
-}

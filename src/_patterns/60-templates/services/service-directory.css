@@ -155,7 +155,3 @@ ico,
 .service-directory-page-footer {
   grid-area: footer;
 }
-
-.service-directory-page {
-  grid-gap: 20px;
-}

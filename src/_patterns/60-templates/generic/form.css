@@ -155,7 +155,3 @@ ico,
 .form-page-footer {
   grid-area: footer;
 }
-
-.form-page {
-  grid-gap: 20px;
-}

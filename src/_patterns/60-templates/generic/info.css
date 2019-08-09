@@ -167,7 +167,3 @@ ico,
 .info-page-footer {
   grid-area: footer;
 }
-
-.info-page {
-  grid-gap: 20px;
-}

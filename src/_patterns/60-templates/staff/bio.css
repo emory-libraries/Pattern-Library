@@ -155,7 +155,3 @@ ico,
 .bio-page-footer {
   grid-area: footer;
 }
-
-.bio-page {
-  grid-gap: 20px;
-}

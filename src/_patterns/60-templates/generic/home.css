@@ -169,7 +169,3 @@ ico,
 .home-page-footer {
   grid-area: footer;
 }
-
-.home-page {
-  grid-gap: 2em;
-}

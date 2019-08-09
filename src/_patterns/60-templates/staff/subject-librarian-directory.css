@@ -155,7 +155,3 @@ ico,
 .subject-librarian-directory-page-footer {
   grid-area: footer;
 }
-
-.subject-librarian-directory-page {
-  grid-gap: 20px;
-}

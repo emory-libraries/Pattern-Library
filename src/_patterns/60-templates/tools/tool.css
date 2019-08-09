@@ -155,7 +155,3 @@ ico,
 .tool-page-footer {
   grid-area: footer;
 }
-
-.tool-page {
-  grid-gap: 20px;
-}

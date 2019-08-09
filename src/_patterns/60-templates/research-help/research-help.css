@@ -155,7 +155,3 @@ ico,
 .research-help-page-footer {
   grid-area: footer;
 }
-
-.research-help-page {
-  grid-gap: 20px;
-}
