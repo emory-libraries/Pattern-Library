@@ -264,6 +264,9 @@ ico,
     background-color: #E7EAF1;
     right: -15px;
   }
+  .popular-links-menu-list-item:last-child {
+    margin-right: 0;
+  }
 }
 @media (min-width: 1200px) {
   .popular-links-menu-list-item {
