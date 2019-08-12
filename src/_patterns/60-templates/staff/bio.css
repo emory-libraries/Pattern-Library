@@ -138,46 +138,25 @@ ico,
   margin: 0 auto;
   display: grid;
   grid-template-areas: "header" "main" "footer";
-  grid-template-rows: 150px 1fr 420px;
-  grid-template-columns: 1fr;
+  grid-template-rows: 135px 1fr auto;
+  grid-template-columns: 100%;
+}
+@media (min-width: 901px) {
+  .bio-page {
+    grid-template-rows: 150px 1fr auto;
+  }
+}
+@media (min-width: 1200px) {
+  .bio-page {
+    grid-template-rows: 130px 1fr auto;
+  }
 }
 .bio-page-header {
   grid-area: header;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.bio-page-header::after {
-  content: "Header";
 }
 .bio-page-main {
   grid-area: main;
 }
 .bio-page-footer {
   grid-area: footer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.bio-page-footer::after {
-  content: "Footer";
-}
-
-.bio-page {
-  grid-gap: 20px;
-}
-.bio-page-header, .bio-page-footer {
-  border: 1px solid #B6BDCC;
 }
