@@ -292,6 +292,7 @@ ico,
           justify-content: center;
   margin-top: 35px;
   margin-bottom: 35px;
+  text-decoration: none !important;
 }
 .sidebar-list-button:first-of-type {
   margin-top: 0;
