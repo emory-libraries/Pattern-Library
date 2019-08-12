@@ -594,48 +594,43 @@ ico,
 .-gallery-page.section-main .section-main-sidebar {
   display: none;
 }
-.-event-page.section-main {
-  /* %organisms-section-main-body,
-   %organisms-section-main-sidebar {
-     @include margin-y($rhythm-y);
-   }*/
-}
 @media (max-width: 600px) {
   .-event-page.section-main {
     grid-template-columns: [main-start] 1fr [main-end];
-    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) repeat(10, [section-start] -webkit-min-content [section-end]) [sidebar-start] -webkit-min-content [sidebar-end];
-    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) repeat(10, [section-start] min-content [section-end]) [sidebar-start] min-content [sidebar-end];
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) [sidebar-start] -webkit-min-content [sidebar-end];
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) [sidebar-start] min-content [sidebar-end];
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .-event-page.section-main {
     grid-template-columns: [main-start] 1fr [main-end];
-    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) repeat(10, [section-start] -webkit-min-content [section-end]) [sidebar-start] -webkit-min-content [sidebar-end];
-    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) repeat(10, [section-start] min-content [section-end]) [sidebar-start] min-content [sidebar-end];
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) [sidebar-start] -webkit-min-content [sidebar-end];
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) [sidebar-start] min-content [sidebar-end];
   }
 }
 @media (min-width: 901px) {
   .-event-page.section-main {
     grid-template-columns: [main-start] 1fr [main-end];
-    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) repeat(10, [section-start] -webkit-min-content [section-end]) [sidebar-start] -webkit-min-content [sidebar-end];
-    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) repeat(10, [section-start] min-content [section-end]) [sidebar-start] min-content [sidebar-end];
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) [sidebar-start] -webkit-min-content [sidebar-end];
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) [sidebar-start] min-content [sidebar-end];
   }
 }
 @media (min-width: 901px) {
   .-event-page.section-main {
     grid-template-columns: [main-start] 1fr [main-end sidebar-start] 340px [sidebar-end];
-    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end main-start title-start] -webkit-min-content [title-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) [main-end] repeat(10, [section-start] -webkit-min-content [section-end]);
-    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end main-start title-start] min-content [title-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) [main-end] repeat(10, [section-start] min-content [section-end]);
+    grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end main-start title-start] -webkit-min-content [title-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) [main-end];
+    grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end main-start title-start] min-content [title-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) [main-end];
   }
 }
-.-event-page.section-main .intro-interior-cover {
-  grid-column: 1/-1;
+.-event-page.section-main .section-main-section,
+.-event-page.section-main .section-main-subtitle {
+  display: none;
 }
 @media (min-width: 901px) {
-  .-event-page.section-main .intro-interior-cover {
+  .-event-page.section-main .section-main-breadcrumb {
     grid-column: main/sidebar;
   }
-  .-event-page.section-main .section-main-breadcrumb {
+  .-event-page.section-main .section-main-title {
     grid-column: main/sidebar;
   }
   .-event-page.section-main .section-main-sidebar {

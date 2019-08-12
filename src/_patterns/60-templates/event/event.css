@@ -138,92 +138,25 @@ ico,
   margin: 0 auto;
   display: grid;
   grid-template-areas: "header" "main" "footer";
-  grid-template-rows: 150px 1fr 420px;
-  grid-template-columns: 1fr;
-}
-.event-page-header {
-  grid-area: header;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.event-page-header::after {
-  content: "Header";
-}
-.event-page-main {
-  grid-area: main;
-  /*.section-main {
-    padding-top: 0 !important;
-
-    // Adjust the main body and sidebar section.
-    &-body,
-    &-sidebar {
-      margin-top: ($rhythm-y * 2);
-    }
-
-    // Adjust the main body section.
-    &-body {
-
-      > *:first-child {
-        margin-top: 0;
-      }
-
-    }
-
-    // Adjust the main sidebar section.
-    &-sidebar {
-
-      > * + * {
-        margin-top: $rhythm-y;
-      }
-
-    }
-
-  }*/
-}
-.event-page-footer {
-  grid-area: footer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.event-page-footer::after {
-  content: "Footer";
-}
-
-.event-page {
-  grid-gap: 20px;
-}
-.event-page-header, .event-page-footer {
-  border: 1px solid #B6BDCC;
-}
-.event-page-main .intro-interior-cover-title {
-  font-size: 40px;
-}
-@media (min-width: 601px) and (max-width: 900px) {
-  .event-page-main .intro-interior-cover-title {
-    font-size: 74px;
-  }
+  grid-template-rows: 135px 1fr auto;
+  grid-template-columns: 100%;
 }
 @media (min-width: 901px) {
-  .event-page-main .intro-interior-cover-title {
-    font-size: 74px;
+  .event-page {
+    grid-template-rows: 150px 1fr auto;
   }
 }
 @media (min-width: 1200px) {
-  .event-page-main .intro-interior-cover-title {
-    font-size: 74px;
+  .event-page {
+    grid-template-rows: 130px 1fr auto;
   }
+}
+.event-page-header {
+  grid-area: header;
+}
+.event-page-main {
+  grid-area: main;
+}
+.event-page-footer {
+  grid-area: footer;
 }
