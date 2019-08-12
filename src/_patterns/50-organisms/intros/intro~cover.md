@@ -15,7 +15,7 @@ Insert a sentence or two identifying what the **intro (interior cover)** pattern
 ###### EXPORT VIA GRUNT
 
 ```
-grunt export:organisms-intro-interior-cover
+grunt export:organisms-intro-cover
 ```
 
 

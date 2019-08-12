@@ -1,15 +1,15 @@
 ////
-/// @group emory-libraries.patterns.organisms.intro-interior-cover
+/// @group emory-libraries.patterns.organisms.intro-cover
 ////
 
-/// Defines the base structure of the intro-interior-cover component.
+/// Defines the base structure of the intro-cover component.
 ///
 /// @since 1.0.0-dev.0
-%organisms-intro-interior-cover {
-  
-  // Builds the intro-interior-cover structure.
+%organisms-intro-cover {
+
+  // Builds the intro-cover structure.
   display: block;
-  
+
   &-title {
     grid-row: 1;
     margin-bottom: 0;
@@ -17,11 +17,11 @@
 
   &-subtitle {
     grid-row: 2;
-    
+
     &:not(.-date) {
       margin-top: 0;
     }
-    
+
   }
 
   &-image {
@@ -29,15 +29,15 @@
     grid-row: 3;
     overflow: hidden;
     @include absolute-center-contents;
-    
+
+    object-fit: cover;
+    object-position: center;
+
     img {
-      min-width: 100%;
-      min-height: 100%;
-      max-width: none;
-      flex-shrink: 0;
+      width: 100%;
     }
-    
+
   }
 
-  
+
 }
