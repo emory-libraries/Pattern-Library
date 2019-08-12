@@ -1,7 +1,7 @@
 {
   "markdown": false,
-  "title": "Tool Page",
-  "subtitle": "This is a brief statement about the tool this page discusses. This tool can help you get work done.",
+  "title": "DiscoverE (Catalog)",
+  "subtitle": "Veniam voluptate in coniunctione id ex malis consequat. Sunt commodo appellat, irure mentitum ubi transferrem.",
   "blocks": [
     {
       "type": "rich-text",
@@ -86,5 +86,91 @@
         "href": ""
       }
     }
-  ]
+  ],
+  "access": {
+    "title": "Access DiscoverE",
+    "icon": "material-office",
+    "links": [
+      {
+        "label": "discoverE",
+        "href": ""
+      }
+    ]
+  },
+  "learn": {
+    "title": "Learn About DiscoverE",
+    "icon": "material-search",
+    "links": [
+      {
+        "label": "Using Your discoverE Account",
+        "href": ""
+      },
+      {
+        "label": "Searching discoverE",
+        "href": ""
+      },
+      {
+        "label": "Results in discoverE",
+        "href": ""
+      },
+      {
+        "label": "Accessing Materials in discoverE",
+        "href": ""
+      },
+      {
+        "label": "Sources in discoverE",
+        "href": ""
+      }
+    ]
+  },
+  "materials": {
+    "title": "Materials in DiscoverE",
+    "icon": "material-access_point",
+    "links": [
+      {
+        "label": "Books",
+        "href": ""
+      },
+      {
+        "label": "eBooks",
+        "href": ""
+      },
+      {
+        "label": "Journals",
+        "href": ""
+      },
+      {
+        "label": "Videos",
+        "href": ""
+      },
+      {
+        "label": "Articles",
+        "href": ""
+      },
+      {
+        "label": "Web Sies",
+        "href": ""
+      },
+      {
+        "label": "Audio",
+        "href": ""
+      },
+      {
+        "label": "Images",
+        "href": ""
+      },
+      {
+        "label": "Maps",
+        "href": ""
+      },
+      {
+        "label": "Text Resources",
+        "href": ""
+      },
+      {
+        "label": "Audio Scores",
+        "href": ""
+      }
+    ]
+  }
 }
