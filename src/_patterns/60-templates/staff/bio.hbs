@@ -210,13 +210,25 @@
         {{#if markdown}}{{{markdown bio}}}{{else}}{{{bio}}}{{/if}}
 
       {{/if}}
-      {{#if (and cv cv.href)}}{{> atoms-button-link href=cv.href label='Download Full CV' icon=false}}{{/if}}
+
     {{/content}}
     {{#content 'section-main-sidebar'}}
 
       {{> compounds-sidebar-list divider=(objectify start=true end=true)}}
 
     {{/content}}
+
+    {{! Insert link to CV if given. }}
+    {{#if (and cv cv.href)}}
+      {{#content 'section-main-other'}}
+
+        <div class="section-main-spacer"></div>
+
+        <div class="section-main-content">{{> atoms-button-link href=cv.href label='Download Full CV' icon=false}}</div>
+
+      {{/content}}
+    {{/if}}
+
   {{/extend}}
   <footer class="bio-page-footer"></footer>
 </div>
