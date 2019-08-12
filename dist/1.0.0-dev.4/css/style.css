@@ -7607,7 +7607,6 @@ body {
   -webkit-transform: translatex(-50%);
           transform: translatex(-50%);
 }
-
 .section-popular {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7685,7 +7684,6 @@ body {
 .info-page-footer {
   grid-area: footer;
 }
-
 .material-page {
   margin: 0 auto;
   display: grid;
@@ -7892,7 +7890,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
-
 .bio-page {
   margin: 0 auto;
   display: grid;
@@ -24452,7 +24449,6 @@ button, input[type=button], input[type=submit], input[type=reset] {
     margin-top: 20px;
   }
 }
-
 .exhibition-page-main-context {
   text-align: center;
 }
