@@ -483,5 +483,150 @@
         "icon": "material-search"
       }
     }
+  },
+  "footer": {
+    "navigation": {
+      "lists": [
+        [
+          {
+            "label": "Initiatives",
+            "href": ""
+          },
+          {
+            "label": "Instructional Support",
+            "href": ""
+          },
+          {
+            "label": "Events & Exhibitions",
+            "href": ""
+          }
+        ],
+        [
+          {
+            "label": "Maps",
+            "href": ""
+          },
+          {
+            "label": "Hours",
+            "href": ""
+          },
+          {
+            "label": "News",
+            "href": ""
+          },
+          {
+            "label": "Contact Us",
+            "href": ""
+          }
+        ],
+        [
+          {
+            "label": "Materials",
+            "href": ""
+          },
+          {
+            "label": "Tools",
+            "href": ""
+          },
+          {
+            "label": "Services",
+            "href": ""
+          },
+          {
+            "label": "Research",
+            "href": ""
+          },
+          {
+            "label": "Using the Library",
+            "href": ""
+          }
+        ],
+        [
+          {
+            "label": "Employment",
+            "href": ""
+          },
+          {
+            "label": "Support Emory Libraries",
+            "href": ""
+          },
+          {
+            "label": "Emergency",
+            "href": ""
+          },
+          {
+            "label": "Status",
+            "href": ""
+          }
+        ]
+      ],
+      "sites": [
+        {
+          "site": "Emory Libraries",
+          "href": "web.library.emory.edu",
+          "active": true
+        },
+        {
+          "site": "Business",
+          "href": "business.library.emory.edu"
+        },
+        {
+          "site": "Health Sciences",
+          "href": "health.library.emory.edu"
+        },
+        {
+          "site": "Music & Media",
+          "href": "http://web.library.emory.edu/about/libraries/woodruff-building/music-media-library"
+        },
+        {
+          "site": "Center for Digital Scholarship",
+          "href": "digitalscholarship.emory.edu"
+        },
+        {
+          "site": "Computing Center",
+          "href": "it.emory.edu/studentdigitallife/study_production_spaces/computing-center-at-cox-hall"
+        },
+        {
+          "site": "Law",
+          "href": "library.law.emory.edu"
+        },
+        {
+          "site": "Library Service Center",
+          "href": "libraryservicecenter.org"
+        },
+        {
+          "site": "Oxford College",
+          "href": "oxford.library.emory.edu"
+        },
+        {
+          "site": "Rose",
+          "href": "rose.library.emory.edu"
+        },
+        {
+          "site": "Science Commons",
+          "href": "web.library.emory.edu/about/libraries/other-libraries/science-commons"
+        },
+        {
+          "site": "Theology",
+          "href": "www.pitts.emory.edu"
+        }
+      ],
+      "channels": [
+        "https://facebook.com",
+        "https://twitter.com",
+        "https://youtube.com",
+        "https://wordpress.com",
+        "https://instagram.com",
+        "https://soundcloud.com"
+      ]
+    },
+    "copyright": {
+      "policies": [
+        {
+          "label": "Privacy Policy",
+          "href": "http://web.library.emory.edu/privacy-policy/privacy-policy.html"
+        }
+      ]
+    }
   }
 }

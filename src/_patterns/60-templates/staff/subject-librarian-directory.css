@@ -138,46 +138,25 @@ ico,
   margin: 0 auto;
   display: grid;
   grid-template-areas: "header" "main" "footer";
-  grid-template-rows: 150px 1fr 420px;
-  grid-template-columns: 1fr;
+  grid-template-rows: 135px 1fr auto;
+  grid-template-columns: 100%;
+}
+@media (min-width: 901px) {
+  .subject-librarian-directory-page {
+    grid-template-rows: 150px 1fr auto;
+  }
+}
+@media (min-width: 1200px) {
+  .subject-librarian-directory-page {
+    grid-template-rows: 130px 1fr auto;
+  }
 }
 .subject-librarian-directory-page-header {
   grid-area: header;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.subject-librarian-directory-page-header::after {
-  content: "Header";
 }
 .subject-librarian-directory-page-main {
   grid-area: main;
 }
 .subject-librarian-directory-page-footer {
   grid-area: footer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.subject-librarian-directory-page-footer::after {
-  content: "Footer";
-}
-
-.subject-librarian-directory-page {
-  grid-gap: 20px;
-}
-.subject-librarian-directory-page-header, .subject-librarian-directory-page-footer {
-  border: 1px solid #B6BDCC;
 }
