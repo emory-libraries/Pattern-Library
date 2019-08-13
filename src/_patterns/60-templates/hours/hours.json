@@ -1,0 +1,405 @@
+{
+  "title": "Hours",
+  "subtitle": "Below is a list of hours for our locations and services.",
+  "table": {
+    "head": [
+      [
+        {"data": "Day"},
+        {"data": "Open"},
+        {"data": "Close"}
+      ]
+    ]
+  },
+  "locations": [
+    {
+      "location": "Robert W. Woodruff Library",
+      "semester-hours":
+      {
+        "semester": "Summer Intersession 2019",
+        "start-date": "06-10-2019",
+        "end-date": "08-27-2019",
+        "sunday":
+        {
+          "open":
+          {
+            "hour": "11",
+            "minute": "00",
+            "am-pm": "AM"
+          },
+          "close":
+          {
+            "hour": "10",
+            "minute": "00",
+            "am-pm": "PM"
+          }
+        },
+        "monday":
+        {
+          "open":
+          {
+            "hour": "7",
+            "minute": "30",
+            "am-pm": "AM"
+          },
+          "close":
+          {
+            "hour": "10",
+            "minute": "00",
+            "am-pm": "PM"
+          }
+        },
+        "tuesday":
+        {
+          "open":
+          {
+            "hour": "7",
+            "minute": "30",
+            "am-pm": "AM"
+          },
+          "close":
+          {
+            "hour": "10",
+            "minute": "00",
+            "am-pm": "PM"
+          }
+        },
+        "wednesday":
+        {
+          "open":
+          {
+            "hour": "7",
+            "minute": "30",
+            "am-pm": "AM"
+          },
+          "close":
+          {
+            "hour": "10",
+            "minute": "00",
+            "am-pm": "PM"
+          }
+        },
+        "thursday":
+        {
+          "open":
+          {
+            "hour": "7",
+            "minute": "30",
+            "am-pm": "AM"
+          },
+          "close":
+          {
+            "hour": "10",
+            "minute": "00",
+            "am-pm": "PM"
+          }
+        },
+        "friday":
+        {
+          "open":
+          {
+            "hour": "7",
+            "minute": "30",
+            "am-pm": "AM"
+          },
+          "close":
+          {
+            "hour": "6",
+            "minute": "00",
+            "am-pm": "PM"
+          }
+        },
+        "saturday":
+        {
+          "open":
+          {
+            "hour": "7",
+            "minute": "30",
+            "am-pm": "AM"
+          },
+          "close":
+          {
+            "hour": "6",
+            "minute": "00",
+            "am-pm": "PM"
+          }
+        },
+        "exceptions":
+        {
+          "exception": [
+          {
+            "type": "Alternative Hours",
+            "start-date": "08-10-2019",
+            "end-date": "08-10-2019",
+            "open":
+            {
+              "hour": "11",
+              "minute": "00",
+              "am-pm": "AM"
+            },
+            "close":
+            {
+              "hour": "6",
+              "minute": "00",
+              "am-pm": "PM"
+            }
+          },
+          {
+            "type": "Closed",
+            "start-date": "08-11-2019",
+            "end-date": "08-11-2019",
+            "open":
+            {
+              "hour": "11",
+              "minute": "00",
+              "am-pm": "AM"
+            },
+            "close":
+            {
+              "hour": "6",
+              "minute": "00",
+              "am-pm": "PM"
+            }
+          },
+          {
+            "type": "Alternative Hours",
+            "start-date": "08-12-2019",
+            "end-date": "08-16-2019",
+            "open":
+            {
+              "hour": "7",
+              "minute": "30",
+              "am-pm": "AM"
+            },
+            "close":
+            {
+              "hour": "6",
+              "minute": "00",
+              "am-pm": "PM"
+            }
+          },
+          {
+            "type": "Alternative Hours",
+            "start-date": "08-17-2019",
+            "end-date": "08-17-2019",
+            "open":
+            {
+              "hour": "11",
+              "minute": "00",
+              "am-pm": "AM"
+            },
+            "close":
+            {
+              "hour": "6",
+              "minute": "00",
+              "am-pm": "PM"
+            }
+          },
+          {
+            "type": "Closed",
+            "start-date": "08-18-2019",
+            "end-date": "08-18-2019",
+            "open":
+            {
+              "hour": "",
+              "minute": "",
+              "am-pm": ""
+            },
+            "close":
+            {
+              "hour": "",
+              "minute": "",
+              "am-pm": ""
+            }
+          },
+          {
+            "type": "Alternative Hours",
+            "start-date": "08-19-2019",
+            "end-date": "08-23-2019",
+            "open":
+            {
+              "hour": "7",
+              "minute": "30",
+              "am-pm": "AM"
+            },
+            "close":
+            {
+              "hour": "6",
+              "minute": "00",
+              "am-pm": "PM"
+            }
+          },
+          {
+            "type": "Alternative Hours",
+            "start-date": "08-24-2019",
+            "end-date": "08-25-2019",
+            "open":
+            {
+              "hour": "11",
+              "minute": "00",
+              "am-pm": "AM"
+            },
+            "close":
+            {
+              "hour": "6",
+              "minute": "00",
+              "am-pm": "PM"
+            }
+          },
+          {
+            "type": "Alternative Hours",
+            "start-date": "08-26-2019",
+            "end-date": "08-27-2019",
+            "open":
+            {
+              "hour": "7",
+              "minute": "30",
+              "am-pm": "AM"
+            },
+            "close":
+            {
+              "hour": "6",
+              "minute": "00",
+              "am-pm": "PM"
+            }
+          },
+          {
+            "type": "Alternative Hours",
+            "start-date": "08-28-2019",
+            "end-date": "08-29-2019",
+            "open":
+            {
+              "hour": "7",
+              "minute": "30",
+              "am-pm": "AM"
+            },
+            "close":
+            {
+              "hour": "12",
+              "minute": "00",
+              "am-pm": "AM"
+            }
+          },
+          {
+            "type": "Alternative Hours",
+            "start-date": "08-30-2019",
+            "end-date": "08-31-2019",
+            "open":
+            {
+              "hour": "7",
+              "minute": "30",
+              "am-pm": "AM"
+            },
+            "close":
+            {
+              "hour": "6",
+              "minute": "00",
+              "am-pm": "PM"
+            }
+          },
+          {
+            "type": "Alternative Hours",
+            "start-date": "09-01-2019",
+            "end-date": "09-01-2019",
+            "open":
+            {
+              "hour": "11",
+              "minute": "00",
+              "am-pm": "AM"
+            },
+            "close":
+            {
+              "hour": "6",
+              "minute": "00",
+              "am-pm": "PM"
+            }
+          },
+          {
+            "type": "Closed",
+            "start-date": "09-02-2019",
+            "end-date": "09-02-2019",
+            "open":
+            {
+              "hour": "",
+              "minute": "",
+              "am-pm": ""
+            },
+            "close":
+            {
+              "hour": "",
+              "minute": "",
+              "am-pm": ""
+            }
+          },
+          {
+            "type": "Alternative Hours",
+            "start-date": "09-03-2019",
+            "end-date": "",
+            "open":
+            {
+              "hour": "7",
+              "minute": "30",
+              "am-pm": "AM"
+            },
+            "close":
+            {
+              "hour": "",
+              "minute": "",
+              "am-pm": ""
+            }
+          },
+          {
+            "type": "Alternative Hours",
+            "start-date": "10-12-2019",
+            "end-date": "10-13-2019",
+            "open":
+            {
+              "hour": "11",
+              "minute": "00",
+              "am-pm": "AM"
+            },
+            "close":
+            {
+              "hour": "6",
+              "minute": "00",
+              "am-pm": "PM"
+            }
+          },
+          {
+            "type": "Alternative Hours",
+            "start-date": "10-14-2019",
+            "end-date": "10-14-2019",
+            "open":
+            {
+              "hour": "7",
+              "minute": "30",
+              "am-pm": "AM"
+            },
+            "close":
+            {
+              "hour": "6",
+              "minute": "00",
+              "am-pm": "PM"
+            }
+          },
+          {
+            "type": "Alternative Hours",
+            "start-date": "10-15-2019",
+            "end-date": "10-15-2019",
+            "open":
+            {
+              "hour": "7",
+              "minute": "30",
+              "am-pm": "AM"
+            },
+            "close":
+            {
+              "hour": "",
+              "minute": "",
+              "am-pm": ""
+            }
+          }]
+        }
+      }
+    }
+  ]
+}
