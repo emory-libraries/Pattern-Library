@@ -7,63 +7,74 @@
 
   {{! Loop through the location's semester hours and capture the property's name }}  
   {{assign 'semester-hours' (arrayify semester-hours)}}
-  {{#each semester-hours}}
-      {{! Check if the semester is current }}    
-    {{#if (and (momentIsSameOrBeforeToday start-date) (momentIsSameOrAfterToday end-date))}}
+    {{! Check exceptions against today. }}
+    {{#each ../exceptions.exception}}
 
-      {{#each this as |value key|}}
+      {{! Transform AM/PM to a.m./p.m. to match AP Style Guide}}
+      {{#if (eq open.am-pm 'AM')}}
+        {{assign 'open.am-pm' 'a.m.'}}
+      {{/if}}
 
-        {{!-- {{{_inspect exceptions}}} --}}
+      {{#if (eq open.am-pm 'PM')}}
+        {{assign 'open.am-pm' 'p.m.'}}
+      {{/if}}
 
-          {{! Transform AM/PM to a.m./p.m. to match AP Style Guide}}
-          {{#if (eq open.am-pm 'AM')}}
-            {{assign 'open.am-pm' 'a.m.'}}
-          {{else if (eq open.am-pm 'PM')}}
-            {{assign 'open.am-pm' 'p.m.'}}
-          {{/if}}
+      {{#if (eq close.am-pm 'AM')}}
+        {{assign 'close.am-pm' 'a.m.'}}
+      {{/if}}
+      
+      {{#if (eq close.am-pm 'PM')}}
+        {{assign 'close.am-pm' 'p.m.'}}
+      {{/if}}
 
-          {{#if (eq close.am-pm 'AM')}}
-            {{assign 'close.am-pm' 'a.m.'}}
-          {{else if (eq close.am-pm 'PM')}}
-            {{assign 'close.am-pm' 'p.m.'}}
-          {{/if}}
-          
-          {{#if (eq @key ../../../now) }}
-          
-            {{!-- {{{_inspect exceptions}}} --}}
+      {{#if (and (momentIsSameOrBeforeToday start-date) (momentIsSameOrAfterToday end-date))}}
 
-            {{! Check against exceptions }}
-            <p>Today is {{capitalize @key}}</p>
+        {{#if (eq type 'Closed')}}
+          <p>Closed</p>
+        {{else if (eq type 'Alternative Hours')}}
+            <p>Today's Special Hours: {{#with open}} {{combine hour ':' minute ' ' am-pm}} {{/with}}–{{#with close}} {{combine hour ':' minute ' ' am-pm}}{{/with}}</p>
+        {{/if}}
 
-            {{#each ../exceptions.exception}}
-              {{storageGet 'day'}}
-              {{{_inspect start-date}}}
-              {{{_inspect end-date}}}
-              <p>The exception start date is the same or before today? {{momentIsSameOrBeforeToday start-date}}</p>
-              
-              <p>The exception end date is the same or after today? {{momentIsSameOrBeforeToday start-date}}</p>
-              {{and (momentIsSameOrBeforeToday start-date) (momentIsSameOrAfterToday end-date) }}
-              {{#if (and (momentIsSameOrBeforeToday start-date) (momentIsSameOrAfterToday end-date) )}}
-                {{#if (eq type 'Closed')}}
-                  <p>Closed</p>
-                {{else}}
-                  {{#with @value}}
-                    <p>Today's Hours: {{#with open}} {{combine hour ':' minute ' ' am-pm}} {{/with}}–{{#with close}} {{combine hour ':' minute ' ' am-pm}}{{/with}}</p>
-                  {{/with}}
-                {{/if}}
-              {{else}}
-                {{#with @value}}
-                  <p>Today's Hours: {{#with open}} {{combine hour ':' minute ' ' am-pm}} {{/with}}–{{#with close}} {{combine hour ':' minute ' ' am-pm}}{{/with}}</p>
-                {{/with}}
-              {{/if}}
-            {{/each}}
-          {{/if}}
+      {{/if}}
+      {{#each semester-hours}}
 
-      {{/each}}
-    {{/if}}
+        {{! Check if the semester is current }}    
+        {{#if (and (momentIsSameOrBeforeToday start-date) (momentIsSameOrAfterToday end-date))}}
+
+          {{#each this as |value key|}}
+
+            {{! Transform AM/PM to a.m./p.m. to match AP Style Guide}}
+            {{#if (eq open.am-pm 'AM')}}
+              {{assign 'open.am-pm' 'a.m.'}}
+            {{/if}}
+
+            {{#if (eq open.am-pm 'PM')}}
+              {{assign 'open.am-pm' 'p.m.'}}
+            {{/if}}
+
+            {{#if (eq close.am-pm 'AM')}}
+              {{assign 'am-pm' 'a.m.'}}
+            {{/if}}
+            
+            {{#if (eq close.am-pm 'PM')}}
+              {{assign 'am-pm' 'p.m.'}}
+            {{/if}}
+            
+            {{#if (eq @key ../../../now) }}
+            
+              {{storageSet 'default' this}}
+            {{/if}}
+          {{/each}}
+        {{/if}}
+
+
+    {{/each}}
+
+
   {{/each}}
+{{!-- 
 
-  {{#each semester-hours as |value key|}}
+  {{#each this as |value key|}}
 
     {{! Check if the semester is current }}
     {{#if (and (momentIsSameOrBeforeToday start-date) (momentIsSameOrAfterToday end-date))}}
@@ -81,7 +92,7 @@
     {{/if}}
   {{/each}}
 
-  {{#each semester-hours as |value key|}}
+  {{#each this as |value key|}}
 
     {{! Check if the semester is current }}
     {{#if (and (momentIsSameOrBeforeToday start-date) (momentIsSameOrAfterToday end-date))}}
@@ -98,7 +109,7 @@
     {{/if}}
   {{/each}}
 
-  {{#each semester-hours as |value key|}}
+  {{#each this as |value key|}}
 
     {{! Check if the semester is current }}
     {{#if (and (momentIsSameOrBeforeToday start-date) (momentIsSameOrAfterToday end-date))}}
@@ -114,7 +125,7 @@
     {{/if}}
   {{/each}}
 
-  {{#each semester-hours as |value key|}}
+  {{#each this as |value key|}}
 
     {{! Check if the semester is current }}
     {{#if (and (momentIsSameOrBeforeToday start-date) (momentIsSameOrAfterToday end-date))}}
@@ -131,7 +142,7 @@
     {{/if}}
   {{/each}}
 
-  {{#each semester-hours as |value key|}}
+  {{#each this as |value key|}}
 
     {{! Check if the semester is current }}
     {{#if (and (momentIsSameOrBeforeToday start-date) (momentIsSameOrAfterToday end-date))}}
@@ -147,7 +158,7 @@
     {{/if}}
   {{/each}}
 
-  {{#each semester-hours as |value key|}}
+  {{#each this as |value key|}}
 
     {{! Check if the semester is current }}
     {{#if (and (momentIsSameOrBeforeToday start-date) (momentIsSameOrAfterToday end-date))}}
@@ -164,7 +175,7 @@
       {{/if}}
   {{/each}}
 
-  {{#each semester-hours as |value key|}}
+  {{#each this as |value key|}}
 
     {{! Check if the semester is current }}
     {{#if (and (momentIsSameOrBeforeToday start-date) (momentIsSameOrAfterToday end-date))}}
@@ -178,7 +189,7 @@
         {{/if}}
 
       {{/if}}
-  {{/each}}
+  {{/each}} --}}
 
 {{/each}}
 
