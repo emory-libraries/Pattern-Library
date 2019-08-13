@@ -87,12 +87,11 @@ module.exports = {
 
     }
 
-    // Extract and parse the feed data from the response.
+    // Extract and parse the feed data from the response.\
     let feed = parser.parse(body, options);
 
     // Remove the root node if found.
     if( _.isPlainObject(feed) && _.keys(feed).length === 1 ) {
-
       // Get the feed's root node.
       const root = _.keys(feed)[0];
 

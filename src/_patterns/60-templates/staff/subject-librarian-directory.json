@@ -30,6 +30,7 @@
       ],
       "phone": 4047271277,
       "email": "erica@example.com",
+      "libcal": "https://emory.libcal.com/appointments?u=53677",
       "gender": "female",
       "guides": {"href": "//example.com/erica-bruchko#research-guides"},
       "link": {"href": "//example.com/erica-bruchko"}
