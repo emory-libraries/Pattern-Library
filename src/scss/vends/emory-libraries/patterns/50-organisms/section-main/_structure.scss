@@ -86,7 +86,7 @@
     @include breakpoint-s-m-l {
 
       // Define a single-column layout as the default.
-      grid-template-columns: [main-start] 1fr [main-end];
+      grid-template-columns: [main-start] 100% [main-end];
 
       // Define the grid's default row templates.
       grid-template-rows: #{unstringify($rows)};
@@ -154,7 +154,7 @@
         $rows: append($rows, '[#{$name}]', space);
       }
 
-      // Override the gird layout for large screens.
+      // Override the grid layout for large screens.
       @include breakpoint-l {
 
         // Define a two-column grid layout for large screens.
@@ -247,7 +247,9 @@
     '.-research-help-directory-page',
     '.-index-page',
     '.-periodicals-page',
-    '.-cover-page'
+    '.-cover-page',
+    '.-event-page',
+    '.-hours-page'
   )}, &.-info-page");
 
   // Remove top padding from the main section on most pages.
@@ -265,7 +267,9 @@
   &.-staff-directory-page,
   &.-exhibition-page,
   &.-index-page,
-  &.-cover-page {
+  &.-hours-page,
+  &.-cover-page,
+  &.-event-page {
     padding-top: 0 !important;
   }
 
@@ -289,29 +293,52 @@
   }
 
   // Builds the main structure when used for an info page.
-  #{$selector-info-page} {
-    @include grid-layout;
+  &#{selector-excludes(
+    '.-info-page',
+    '.-material-page',
+    '.-tool-page',
+    '.-bio-page',
+    '.-research-help-page',
+    '.-service-directory-page',
+    '.-form-page',
+    '.-subject-librarian-directory-page',
+    '.-staff-directory-page',
+    '.-landing-page',
+    '.-gallery-page',
+    '.-exhibition-page',
+    '.-research-help-directory-page',
+    '.-index-page',
+    '.-periodicals-page',
+    '.-event-page',
+    '.-hours-page'
+  )},
+  &.-info-page {
 
-    // Adjust the main structure across large screens.
-    @include breakpoint-l {
+    #{$selector-info-page} {
+      @include grid-layout;
 
-      // Adjust the breadcrumb placement within the grid.
-      #{$selector}-breadcrumb {
-        grid-column: main / sidebar;
-      }
+      // Adjust the main structure across large screens.
+      @include breakpoint-l {
 
-      // Adjust the title and subtitle placement within the grid.
-      #{$selector}-title,
-      #{$selector}-subtitle, {
-        grid-column: main / sidebar;
-      }
+        // Adjust the breadcrumb placement within the grid.
+        #{$selector}-breadcrumb {
+          grid-column: main / sidebar;
+        }
 
-      // Adjust the sidebar placement within the grid.
-      #{$selector}-sidebar {
-        grid-row: body / main;
-      }
+        // Adjust the title and subtitle placement within the grid.
+        #{$selector}-title,
+        #{$selector}-subtitle {
+          grid-column: main / sidebar;
+        }
 
-    };
+        // Adjust the sidebar placement within the grid.
+        #{$selector}-sidebar {
+          grid-row: body / main;
+        }
+
+      };
+
+    }
 
   }
 
@@ -549,6 +576,41 @@
 
   }
 
+  // Builds the main structure when used for an event page.
+  &.-event-page {
+    @include grid-layout((
+      'subtitle': false,
+      'section': false
+    ));
+
+    // Hide grid areas that are not being used within this page type.
+    #{$selector}-section,
+    #{$selector}-subtitle {
+      display: none;
+    }
+
+    // Adjust the main structure across large screens.
+    @include breakpoint-l {
+
+      // Adjust the breadcrumb placement within the grid.
+      #{$selector}-breadcrumb {
+        grid-column: main / sidebar;
+      }
+
+      // Adjust the title and subtitle placement within the grid.
+      #{$selector}-title {
+        grid-column: main / sidebar;
+      }
+
+      // Adjust the sidebar placement within the grid.
+      #{$selector}-sidebar {
+        grid-row: body / main;
+      }
+
+    };
+
+  }
+
   // Builds the main structure when used for an exhibition page.
   &.-exhibition-page {
     @include grid-layout((
@@ -606,8 +668,9 @@
 
   }
 
-  // Builds the main structure when used for an index page.
-  &.-index-page {
+  // Builds the main structure when used for an index and hours page.
+  &.-index-page,
+  &.-hours-page {
     @include grid-layout((
       'spacer': false,
       'auto': false,

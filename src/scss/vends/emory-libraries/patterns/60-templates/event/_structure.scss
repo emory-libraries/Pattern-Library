@@ -1,16 +1,16 @@
 ////
-/// @group emory-libraries.patterns.templates.material
+/// @group emory-libraries.patterns.templates.event
 ////
 
-/// Defines the base structure of the material component.
+/// Defines the base structure of the event component.
 ///
-/// @since 1.0.0
-%templates-material {
+/// @since 1.0.0-dev.3
+%templates-event {
 
   // Captures selector.
   $selector: &;
 
-  // Builds the material structure.
+  // Builds the event structure.
   margin: 0 auto;
   display: grid;
   grid-template-areas: "header"
@@ -29,14 +29,18 @@
     grid-template-rows: 130px 1fr auto;
   };
 
+
+  // Builds the event header structure.
   &-header {
     grid-area: header;
   }
 
+  // Builds the event main structure
   &-main {
     grid-area: main;
   }
 
+  // Builds the event footer structure.
   &-footer {
     grid-area: footer;
   }

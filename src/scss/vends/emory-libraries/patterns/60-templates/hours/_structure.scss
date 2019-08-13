@@ -1,16 +1,13 @@
 ////
-/// @group emory-libraries.patterns.templates.material
+/// @group emory-libraries.patterns.templates.hours
 ////
 
-/// Defines the base structure of the material component.
+/// Defines the base structure of the hours component.
 ///
-/// @since 1.0.0
-%templates-material {
+/// @since 1.0.0-dev.5
+%templates-hours {
 
-  // Captures selector.
-  $selector: &;
-
-  // Builds the material structure.
+  // Builds the hours structure.
   margin: 0 auto;
   display: grid;
   grid-template-areas: "header"
@@ -29,14 +26,17 @@
     grid-template-rows: 130px 1fr auto;
   };
 
+  // Builds the hours header structure.
   &-header {
     grid-area: header;
   }
 
+  // Buidls the hours main structure.
   &-main {
     grid-area: main;
   }
 
+  // Builds the hours footer structure.
   &-footer {
     grid-area: footer;
   }
