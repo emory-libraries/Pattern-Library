@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -134,50 +136,36 @@ ico,
   content: "";
 }
 
+/*** INSERT NEW TOKENS HERE ***/
+/*** INSERT NEW ATOMS HERE ***/
+/*** INSERT NEW MOLECULES HERE ***/
+/*** INSERT NEW COMPOUNDS HERE ***/
+/*** INSERT NEW ORGANISMS HERE ***/
 .service-directory-page {
   margin: 0 auto;
   display: grid;
   grid-template-areas: "header" "main" "footer";
-  grid-template-rows: 150px 1fr 420px;
-  grid-template-columns: 1fr;
+  grid-template-rows: 135px 1fr auto;
+  grid-template-columns: 100%;
+}
+@media (min-width: 901px) {
+  .service-directory-page {
+    grid-template-rows: 150px 1fr auto;
+  }
+}
+@media (min-width: 1200px) {
+  .service-directory-page {
+    grid-template-rows: 130px 1fr auto;
+  }
 }
 .service-directory-page-header {
   grid-area: header;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.service-directory-page-header::after {
-  content: "Header";
 }
 .service-directory-page-main {
   grid-area: main;
 }
 .service-directory-page-footer {
   grid-area: footer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.service-directory-page-footer::after {
-  content: "Footer";
 }
 
-.service-directory-page {
-  grid-gap: 20px;
-}
-.service-directory-page-header, .service-directory-page-footer {
-  border: 1px solid #B6BDCC;
-}
+/*** INSERT NEW TEMPLATES HERE ***/

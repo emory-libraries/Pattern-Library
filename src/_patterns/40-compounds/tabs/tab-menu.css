@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -134,30 +136,23 @@ ico,
   content: "";
 }
 
+/*** INSERT NEW TOKENS HERE ***/
+/*** INSERT NEW ATOMS HERE ***/
+/*** INSERT NEW MOLECULES HERE ***/
 .tab-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 .tab-menu:not(.-dropdown):not(.-noscript) {
   display: none;
 }
 @media (min-width: 901px) {
   .tab-menu:not(.-dropdown):not(.-noscript) {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }
 .-dropdown.tab-menu {
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   padding: 0;
 }
@@ -183,20 +178,17 @@ ico,
   }
 }
 .-noscript.tab-menu {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 @media (min-width: 901px) {
   .-noscript.tab-menu {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
 }
 
+/*** INSERT NEW COMPOUNDS HERE ***/
+/*** INSERT NEW ORGANISMS HERE ***/
+/*** INSERT NEW TEMPLATES HERE ***/
 .tab-menu.-dropdown {
   padding-top: 5px;
   padding-bottom: 5px;

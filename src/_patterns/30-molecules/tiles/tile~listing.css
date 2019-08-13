@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -135,12 +137,8 @@ ico,
 }
 
 .tile-listing-action .anchor, .tile-listing:not(.has-description) .tile-listing-title .anchor, .tile-listing-date .anchor {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .tile-listing-action .anchor .icon, .tile-listing:not(.has-description) .tile-listing-title .anchor .icon, .tile-listing-date .anchor .icon {
   margin: 0 !important;
@@ -149,13 +147,10 @@ ico,
   display: none;
 }
 
+/*** INSERT NEW TOKENS HERE ***/
 .tile-listing-action, .tile-listing.has-description .tile-listing-title, .tile-listing:not(.has-description) .tile-listing-title {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-decoration: none;
   cursor: pointer;
 }
@@ -164,17 +159,12 @@ ico,
   display: block;
 }
 .tile-listing-action .icon, .tile-listing.has-description .tile-listing-title .icon, .tile-listing:not(.has-description) .tile-listing-title .icon {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
+/*** INSERT NEW ATOMS HERE ***/
 .tile-listing {
   display: grid;
   grid-template-columns: 1fr;
@@ -191,8 +181,6 @@ ico,
   grid-template-areas: "date" "title" "description" "action";
 }
 .has-description.has-action.tile-listing .tile-listing-description .tile-listing-action {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .tile-listing:not(.has-description).has-action {
@@ -202,16 +190,12 @@ ico,
   display: none;
 }
 .tile-listing:not(.has-description).has-action .tile-listing-action {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .tile-listing:not(.has-action).has-description {
   grid-template-areas: "date" "title" "description";
 }
 .tile-listing:not(.has-action).has-description .tile-listing-description {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .tile-listing:not(.has-action).has-description .tile-listing-action {
@@ -243,8 +227,7 @@ ico,
   display: block;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate3d(-50%, -50%, 0);
-          transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
   min-height: 100%;
 }
 .tile-listing-image img {
@@ -256,53 +239,45 @@ ico,
 }
 .-align-x-left.tile-listing-image:not(.-align-y-top):not(.-align-y-bottom) img {
   left: 0;
-  -webkit-transform: translatex(0%) translatey(-50%);
-          transform: translatex(0%) translatey(-50%);
+  transform: translatex(0%) translatey(-50%);
 }
 .-align-x-right.tile-listing-image:not(.-align-y-top):not(.-align-y-bottom) img {
   left: auto;
   right: 0;
-  -webkit-transform: translatex(0%) translatey(-50%);
-          transform: translatex(0%) translatey(-50%);
+  transform: translatex(0%) translatey(-50%);
 }
 .-align-y-top.tile-listing-image:not(.-align-x-left):not(.-align-x-right) img {
   top: 0;
-  -webkit-transform: translatex(-50%) translatey(0%);
-          transform: translatex(-50%) translatey(0%);
+  transform: translatex(-50%) translatey(0%);
 }
 .-align-y-bottom.tile-listing-image:not(.-align-x-left):not(.-align-x-right) img {
   top: auto;
   bottom: 0;
-  -webkit-transform: translatex(-50%) translatey(0%);
-          transform: translatex(-50%) translatey(0%);
+  transform: translatex(-50%) translatey(0%);
 }
 .-align-x-left.-align-y-top.tile-listing-image img {
   left: 0;
   top: 0;
-  -webkit-transform: translatex(0%) translatey(0%);
-          transform: translatex(0%) translatey(0%);
+  transform: translatex(0%) translatey(0%);
 }
 .-align-x-left.-align-y-bottom.tile-listing-image img {
   left: 0;
   top: auto;
   bottom: 0;
-  -webkit-transform: translatex(0%) translatey(0%);
-          transform: translatex(0%) translatey(0%);
+  transform: translatex(0%) translatey(0%);
 }
 .-align-x-right.-align-y-top.tile-listing-image img {
   left: auto;
   right: 0;
   top: 0;
-  -webkit-transform: translatex(0%) translatey(0%);
-          transform: translatex(0%) translatey(0%);
+  transform: translatex(0%) translatey(0%);
 }
 .-align-x-right.-align-y-bottom.tile-listing-image img {
   left: auto;
   right: 0;
   top: auto;
   bottom: 0;
-  -webkit-transform: translatex(0%) translatey(0%);
-          transform: translatex(0%) translatey(0%);
+  transform: translatex(0%) translatey(0%);
 }
 .tile-listing-date {
   grid-area: date;
@@ -315,17 +290,17 @@ ico,
 .tile-listing-description {
   grid-area: description;
   margin: 0;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
 }
 .tile-listing-action {
   grid-area: action;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
 }
 
+/*** INSERT NEW MOLECULES HERE ***/
+/*** INSERT NEW COMPOUNDS HERE ***/
+/*** INSERT NEW ORGANISMS HERE ***/
+/*** INSERT NEW TEMPLATES HERE ***/
 .tile-listing {
   padding: 40px 25px;
   padding-top: calc(55% + 40px);
@@ -334,19 +309,15 @@ ico,
   border: 1px solid #dbdee6;
 }
 .tile-listing:not(.has-description):not(.has-action) {
-  grid-template-rows: repeat(2, -webkit-min-content);
   grid-template-rows: repeat(2, min-content);
 }
 .tile-listing.has-description.has-action {
-  grid-template-rows: repeat(3, -webkit-min-content) 1fr;
   grid-template-rows: repeat(3, min-content) 1fr;
 }
 .tile-listing:not(.has-description).has-action {
-  grid-template-rows: repeat(2, -webkit-min-content) 1fr;
   grid-template-rows: repeat(2, min-content) 1fr;
 }
 .tile-listing:not(.has-action).has-description {
-  grid-template-rows: repeat(2, -webkit-min-content) 1fr;
   grid-template-rows: repeat(2, min-content) 1fr;
 }
 .tile-listing.has-badge {
@@ -370,7 +341,6 @@ ico,
   opacity: 1;
 }
 .tile-listing-date .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;
@@ -393,7 +363,6 @@ ico,
   opacity: 1;
 }
 .tile-listing:not(.has-description) .tile-listing-title .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;
@@ -405,7 +374,6 @@ ico,
   font-weight: normal;
   font-style: normal;
   color: #082B73;
-  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background: none;
   border: none;
@@ -484,7 +452,6 @@ ico,
   font-weight: normal;
   font-style: normal;
   color: #082B73;
-  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background: none;
   border: none;
@@ -574,7 +541,6 @@ ico,
   opacity: 1;
 }
 .tile-listing-action .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;
@@ -586,7 +552,6 @@ ico,
   font-weight: bold;
   font-style: normal;
   color: #5387F7;
-  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background: none;
   border: none;

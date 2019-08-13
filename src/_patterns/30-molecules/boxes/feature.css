@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -135,12 +137,8 @@ ico,
 }
 
 .feature-heading .anchor, .feature-context .anchor {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .feature-heading .anchor .icon, .feature-context .anchor .icon {
   margin: 0 !important;
@@ -149,16 +147,16 @@ ico,
   display: none;
 }
 
+/*** INSERT NEW TOKENS HERE ***/
+/*** INSERT NEW ATOMS HERE ***/
 .feature {
   display: grid;
   grid-template-areas: "image" "context" "heading" "action";
-  grid-template-rows: 250px repeat(3, -webkit-min-content);
   grid-template-rows: 250px repeat(3, min-content);
 }
 @media (min-width: 901px) {
   .feature {
     grid-template-areas: "image context" "image heading" "image action";
-    grid-template-rows: repeat(2, -webkit-min-content) 1fr;
     grid-template-rows: repeat(2, min-content) 1fr;
   }
 }
@@ -168,7 +166,6 @@ ico,
 @media (min-width: 901px) {
   .has-description.feature {
     grid-template-areas: "image context" "image heading" "image description" "image action";
-    grid-template-rows: repeat(2, -webkit-min-content) auto 1fr;
     grid-template-rows: repeat(2, min-content) auto 1fr;
   }
 }
@@ -178,22 +175,15 @@ ico,
   bottom: 0;
   left: 0;
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   grid-area: image;
   overflow: hidden;
 }
 .feature-image img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media (min-width: 901px) {
   .feature-image img {
@@ -213,40 +203,26 @@ ico,
 }
 @media (min-width: 901px) {
   .feature-image {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
 }
 .-align-x-left.feature-image {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
 .-align-x-center.feature-image {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 .-align-x-right.feature-image {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
 .-align-y-top.feature-image {
-  -webkit-box-align: top;
-      -ms-flex-align: top;
-          align-items: top;
+  align-items: top;
 }
 .-align-y-bottom.feature-image {
-  -webkit-box-align: bottom;
-      -ms-flex-align: bottom;
-          align-items: bottom;
+  align-items: bottom;
 }
 .-align-y-center.feature-image {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .feature-context {
   grid-area: context;
@@ -268,6 +244,10 @@ ico,
   grid-area: action;
 }
 
+/*** INSERT NEW MOLECULES HERE ***/
+/*** INSERT NEW COMPOUNDS HERE ***/
+/*** INSERT NEW ORGANISMS HERE ***/
+/*** INSERT NEW TEMPLATES HERE ***/
 .feature {
   grid-template-columns: 1fr;
   grid-gap: 5px;
@@ -275,8 +255,7 @@ ico,
   margin: 15px;
   background-color: #f3f5f8;
   min-height: 370px;
-  -webkit-box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #f3f5f8;
-          box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #f3f5f8;
+  box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #f3f5f8;
 }
 @media (min-width: 901px) {
   .feature {
@@ -329,7 +308,6 @@ ico,
   opacity: 1;
 }
 .feature-context .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;
@@ -352,7 +330,6 @@ ico,
   opacity: 1;
 }
 .feature-heading .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;
@@ -380,8 +357,7 @@ ico,
 }
 .feature.-light {
   background-color: #f3f5f8;
-  -webkit-box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #f3f5f8;
-          box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #f3f5f8;
+  box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #f3f5f8;
 }
 .feature.-light .feature-context {
   color: #605858;
@@ -394,8 +370,7 @@ ico,
 }
 .feature.-dark {
   background-color: #FFFFFF;
-  -webkit-box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #FFFFFF;
-          box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #FFFFFF;
+  box-shadow: 0 0 0 1px rgba(96, 88, 88, 0.2), 0 0 0 15px #FFFFFF;
 }
 .feature.-dark .feature-context {
   color: #b0acac;

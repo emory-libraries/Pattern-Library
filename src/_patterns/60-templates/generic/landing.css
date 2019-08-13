@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -134,27 +136,30 @@ ico,
   content: "";
 }
 
+/*** INSERT NEW TOKENS HERE ***/
+/*** INSERT NEW ATOMS HERE ***/
+/*** INSERT NEW MOLECULES HERE ***/
+/*** INSERT NEW COMPOUNDS HERE ***/
+/*** INSERT NEW ORGANISMS HERE ***/
 .landing-page {
   margin: 0 auto;
   display: grid;
   grid-template-areas: "header" "main" "footer";
-  grid-template-rows: 150px 1fr 420px;
-  grid-template-columns: 1fr;
+  grid-template-rows: 135px 1fr auto;
+  grid-template-columns: 100%;
+}
+@media (min-width: 901px) {
+  .landing-page {
+    grid-template-rows: 150px 1fr auto;
+  }
+}
+@media (min-width: 1200px) {
+  .landing-page {
+    grid-template-rows: 130px 1fr auto;
+  }
 }
 .landing-page-header {
   grid-area: header;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.landing-page-header::after {
-  content: "Header";
 }
 .landing-page-main {
   grid-area: main;
@@ -169,33 +174,14 @@ ico,
   grid-gap: 2em;
 }
 .landing-page-main .section-main:not(.without-intro) {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 .landing-page-main .section-main:not(.without-intro) .section-main-body {
   padding-top: 2em;
 }
 .landing-page-footer {
   grid-area: footer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.landing-page-footer::after {
-  content: "Footer";
 }
 
-.landing-page-header, .landing-page-footer {
-  border: 1px solid #B6BDCC;
-}
+/*** INSERT NEW TEMPLATES HERE ***/

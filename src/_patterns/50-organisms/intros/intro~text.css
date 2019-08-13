@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -135,12 +137,8 @@ ico,
 }
 
 .intro-subtitle.-bio .anchor, .intro-title .anchor, .intro-context .anchor {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .intro-subtitle.-bio .anchor .icon, .intro-title .anchor .icon, .intro-context .anchor .icon {
   margin: 0 !important;
@@ -149,13 +147,10 @@ ico,
   display: none;
 }
 
+/*** INSERT NEW TOKENS HERE ***/
 .intro-link {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-decoration: none;
   cursor: pointer;
 }
@@ -164,15 +159,9 @@ ico,
   display: block;
 }
 .intro-link .icon {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .intro-title.-heading-alt::after, .intro-title.-heading-alt::before, .intro-title.-heading::after, .intro-title.-heading::before {
@@ -181,6 +170,9 @@ ico,
   height: 0;
 }
 
+/*** INSERT NEW ATOMS HERE ***/
+/*** INSERT NEW MOLECULES HERE ***/
+/*** INSERT NEW COMPOUNDS HERE ***/
 .intro-thumb {
   display: block;
   float: left;
@@ -244,6 +236,8 @@ ico,
   display: none;
 }
 
+/*** INSERT NEW ORGANISMS HERE ***/
+/*** INSERT NEW TEMPLATES HERE ***/
 .intro-thumb {
   width: 150px;
   height: 150px;
@@ -264,7 +258,6 @@ ico,
   opacity: 1;
 }
 .intro-context .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;
@@ -287,7 +280,6 @@ ico,
   opacity: 1;
 }
 .intro-title .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;
@@ -313,7 +305,6 @@ ico,
   opacity: 1;
 }
 .intro-title.-heading .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;
@@ -351,7 +342,6 @@ ico,
   opacity: 1;
 }
 .intro-title.-heading-alt .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;
@@ -386,7 +376,6 @@ ico,
   opacity: 1;
 }
 .intro-title.-bio .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;
@@ -420,7 +409,6 @@ ico,
   opacity: 1;
 }
 .intro-subtitle.-bio .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;
@@ -432,7 +420,6 @@ ico,
   font-weight: bold;
   font-style: normal;
   color: #5387F7;
-  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background: none;
   border: none;

@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -134,14 +136,16 @@ ico,
   content: "";
 }
 
+/*** INSERT NEW TOKENS HERE ***/
+/*** INSERT NEW ATOMS HERE ***/
+/*** INSERT NEW MOLECULES HERE ***/
+/*** INSERT NEW COMPOUNDS HERE ***/
 .header {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   display: grid;
   grid-template-areas: "notifications" "main";
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, -webkit-min-content);
   grid-template-rows: repeat(2, min-content);
   z-index: 5;
 }
@@ -162,9 +166,7 @@ ico,
 @media (min-width: 901px) {
   .header-main {
     display: grid;
-    grid-template-columns: [full-start body-start] 1fr [body-end search-start] -webkit-min-content [search-end full-end];
     grid-template-columns: [full-start body-start] 1fr [body-end search-start] min-content [search-end full-end];
-    grid-template-rows: [full-start utility-start] 40px [utility-end main-start] -webkit-min-content [main-end full-end];
     grid-template-rows: [full-start utility-start] 40px [utility-end main-start] min-content [main-end full-end];
   }
 }
@@ -179,6 +181,16 @@ ico,
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+@media (min-width: 901px) {
+  .header-main-utility::after {
+    content: "";
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+}
 .header-main-main {
   grid-row: main;
   grid-column: body;
@@ -192,8 +204,6 @@ ico,
 }
 @media (min-width: 901px) {
   .header-main-search {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
     display: flex !important;
   }
 }
@@ -210,11 +220,29 @@ ico,
     display: grid !important;
   }
 }
+.header-main::after {
+  content: "";
+  display: block;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  position: absolute;
+  display: block;
+  left: 50%;
+  transform: translatex(-50%);
+}
 
+/*** INSERT NEW ORGANISMS HERE ***/
+/*** INSERT NEW TEMPLATES HERE ***/
 @media (max-width: 600px) {
   .header-main {
     padding-left: 10px;
     padding-right: 10px;
+  }
+  .header-main::after {
+    width: calc(100% - 20px);
   }
   .header-main-overlay {
     margin-left: -10px;
@@ -226,6 +254,9 @@ ico,
     padding-left: 10px;
     padding-right: 10px;
   }
+  .header-main::after {
+    width: calc(100% - 20px);
+  }
   .header-main-overlay {
     margin-left: -10px;
     margin-right: -10px;
@@ -235,6 +266,9 @@ ico,
   .header-main {
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .header-main::after {
+    width: calc(100% - 40px);
   }
   .header-main-overlay {
     margin-left: -20px;
@@ -249,6 +283,9 @@ ico,
     padding-left: 30px;
     padding-right: 30px;
   }
+  .header-main::after {
+    width: calc(100% - 60px);
+  }
   .header-main-overlay {
     margin-left: -30px;
     margin-right: -30px;
@@ -259,6 +296,17 @@ ico,
 }
 .header-main {
   background-color: #FFFFFF;
+}
+.header-main::after {
+  height: 1px;
+  background-color: rgba(9, 28, 68, 0.1);
+  bottom: -1px;
+}
+@media (min-width: 901px) {
+  .header-main-utility::after {
+    height: 1px;
+    background-color: rgba(9, 28, 68, 0.1);
+  }
 }
 .header-main-search {
   width: 60px !important;
@@ -277,7 +325,6 @@ ico,
   opacity: 1;
   z-index: 6;
   top: 0;
-  -webkit-transition: right 0s linear, z-index 0s linear, opacity 0.25s ease, top 0.25s ease;
   transition: right 0s linear, z-index 0s linear, opacity 0.25s ease, top 0.25s ease;
 }
 .header-main-toggle:not(:checked) ~ .header-main-overlay {
@@ -285,6 +332,5 @@ ico,
   opacity: 0;
   z-index: -1;
   top: -100%;
-  -webkit-transition: opacity 0.25s ease, top 0.25s ease, z-index 0s linear 0.25s, right 0s linear 0.25s;
   transition: opacity 0.25s ease, top 0.25s ease, z-index 0s linear 0.25s, right 0s linear 0.25s;
 }

@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -135,12 +137,8 @@ ico,
 }
 
 .feed-heading .anchor {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .feed-heading .anchor .icon {
   margin: 0 !important;
@@ -149,30 +147,26 @@ ico,
   display: none;
 }
 
+/*** INSERT NEW TOKENS HERE ***/
 .feed-heading::after {
   display: block;
   width: 100%;
   height: 0;
 }
 
+/*** INSERT NEW ATOMS HERE ***/
+/*** INSERT NEW MOLECULES HERE ***/
 .feed {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 75px 1fr;
-  grid-auto-rows: -webkit-min-content;
   grid-auto-rows: min-content;
 }
 .feed-heading {
   grid-row: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  align-items: center;
+  justify-content: flex-start;
   margin: 0;
 }
 .feed-heading::after {
@@ -181,21 +175,15 @@ ico,
   bottom: 0;
   left: 0;
   position: absolute;
-  -webkit-transform: translatey(50%);
-          transform: translatey(50%);
+  transform: translatey(50%);
 }
 .feed-heading .icon {
   margin-right: 20px;
 }
 .feed-content {
   grid-row: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 .feed-button {
   grid-row: 3;
@@ -205,19 +193,18 @@ ico,
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .feed-button {
-    width: -webkit-max-content;
-    width: -moz-max-content;
     width: max-content;
   }
 }
 @media (min-width: 901px) {
   .feed-button {
-    width: -webkit-max-content;
-    width: -moz-max-content;
     width: max-content;
   }
 }
 
+/*** INSERT NEW COMPOUNDS HERE ***/
+/*** INSERT NEW ORGANISMS HERE ***/
+/*** INSERT NEW TEMPLATES HERE ***/
 .feed-heading {
   font-family: "Open Sans", sans-serif !important;
   font-size: 24px !important;
@@ -233,7 +220,6 @@ ico,
   opacity: 1;
 }
 .feed-heading .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;

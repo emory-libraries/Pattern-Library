@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -135,12 +137,8 @@ ico,
 }
 
 .section-deep-dive-column-heading .anchor, .section-deep-dive-title .anchor {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .section-deep-dive-column-heading .anchor .icon, .section-deep-dive-title .anchor .icon {
   margin: 0 !important;
@@ -149,14 +147,11 @@ ico,
   display: none;
 }
 
+/*** INSERT NEW TOKENS HERE ***/
 .section-deep-dive-body a,
 .section-deep-dive-body .link {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-decoration: none;
   cursor: pointer;
 }
@@ -167,15 +162,9 @@ ico,
 }
 .section-deep-dive-body a .icon,
 .section-deep-dive-body .link .icon {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .section-deep-dive-footer::before, .section-deep-dive-title::after {
@@ -184,14 +173,12 @@ ico,
   height: 0;
 }
 
+/*** INSERT NEW ATOMS HERE ***/
+/*** INSERT NEW MOLECULES HERE ***/
+/*** INSERT NEW COMPOUNDS HERE ***/
 .section-deep-dive {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 .section-deep-dive-title {
   margin-top: 0;
@@ -214,9 +201,7 @@ ico,
   .section-deep-dive-body {
     grid-template-columns: repeat(3, minmax(10%, calc((1250px - (100px * 3)) / 3)));
     grid-column-gap: 100px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
 }
 .section-deep-dive-body ol {
@@ -235,11 +220,12 @@ ico,
   display: block;
 }
 
+/*** INSERT NEW ORGANISMS HERE ***/
+/*** INSERT NEW TEMPLATES HERE ***/
 .section-deep-dive {
   background-color: #082B73;
 }
 .section-deep-dive {
-  -webkit-transition: padding 0.25s ease;
   transition: padding 0.25s ease;
 }
 @media (max-width: 600px) {
@@ -314,7 +300,6 @@ ico,
   opacity: 1;
 }
 .section-deep-dive-title .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;
@@ -370,7 +355,6 @@ ico,
   font-weight: bold;
   font-style: normal;
   color: #FFFFFF;
-  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background: none;
   border: none;
@@ -477,7 +461,6 @@ ico,
   opacity: 1;
 }
 .section-deep-dive-column-heading .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;

@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -135,12 +137,8 @@ ico,
 }
 
 .card-library-aid-title .anchor, .card-library-aid-context .anchor {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .card-library-aid-title .anchor .icon, .card-library-aid-context .anchor .icon {
   margin: 0 !important;
@@ -149,13 +147,10 @@ ico,
   display: none;
 }
 
+/*** INSERT NEW TOKENS HERE ***/
 .card-library-aid-title {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-decoration: none;
   cursor: pointer;
 }
@@ -164,27 +159,16 @@ ico,
   display: block;
 }
 .card-library-aid-title .icon {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
+/*** INSERT NEW ATOMS HERE ***/
 .card-library-aid-icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
@@ -192,15 +176,9 @@ ico,
 .card-library-aid-icon .icon {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 .card-library-aid-icon svg {
   width: 100% !important;
@@ -210,25 +188,20 @@ ico,
 }
 .card-library-aid-title {
   margin: 0;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 .card-library-aid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, -webkit-min-content);
   grid-template-rows: repeat(3, min-content);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
+/*** INSERT NEW MOLECULES HERE ***/
+/*** INSERT NEW COMPOUNDS HERE ***/
+/*** INSERT NEW ORGANISMS HERE ***/
+/*** INSERT NEW TEMPLATES HERE ***/
 .card-library-aid {
   grid-gap: 5px;
   padding: 40px 25px 25px;
@@ -237,11 +210,13 @@ ico,
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   background-color: #FFFFFF;
+  background-image: -webkit-linear-gradient(to bottom, #f3f5f8 70px, transparent 70px);
+  background-image: -moz-linear-gradient(to bottom, #f3f5f8 70px, transparent 70px);
+  background-image: -o-linear-gradient(to bottom, #f3f5f8 70px, transparent 70px);
   background-image: linear-gradient(to bottom, #f3f5f8 70px, transparent 70px);
 }
 .card-library-aid-icon {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   text-align: center;
   width: 60px;
   height: 60px;
@@ -272,7 +247,6 @@ ico,
   opacity: 1;
 }
 .card-library-aid-context .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;
@@ -298,7 +272,6 @@ ico,
   opacity: 1;
 }
 .card-library-aid-title .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;
@@ -310,7 +283,6 @@ ico,
   font-weight: normal;
   font-style: normal;
   color: #082B73;
-  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background: none;
   border: none;

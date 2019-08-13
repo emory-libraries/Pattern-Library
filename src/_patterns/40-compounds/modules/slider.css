@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -134,43 +136,31 @@ ico,
   content: "";
 }
 
+/*** INSERT NEW TOKENS HERE ***/
+/*** INSERT NEW ATOMS HERE ***/
+/*** INSERT NEW MOLECULES HERE ***/
 .slider {
   width: 100%;
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .slider-slides {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   width: 100%;
   overflow: visible;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+  order: 1;
 }
 .slider-slides .slide {
   width: 100%;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
 }
 .slider-indicator {
   margin: 0 auto;
-  -webkit-transform: translatey(50%);
-          transform: translatey(50%);
+  transform: translatey(50%);
   z-index: 1;
   cursor: pointer;
   -webkit-appearance: none;
@@ -178,9 +168,7 @@ ico,
   appearance: none;
   border: none;
   background: none;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+  order: 2;
 }
 .slider-toggle {
   display: none;
@@ -206,18 +194,15 @@ ico,
     display: block;
     left: 50%;
     top: 50%;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-            transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
   }
   .-previous.slider-toggle {
     left: 50px;
-    -webkit-transform: translatey(-50%) translatex(-50%);
-            transform: translatey(-50%) translatex(-50%);
+    transform: translatey(-50%) translatex(-50%);
   }
   .-next.slider-toggle {
     right: 50px;
-    -webkit-transform: translatey(-50%) translatex(50%);
-            transform: translatey(-50%) translatex(50%);
+    transform: translatey(-50%) translatex(50%);
   }
   [disabled].slider-toggle {
     opacity: 0.5;
@@ -245,18 +230,15 @@ ico,
     display: block;
     left: 50%;
     top: 50%;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-            transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
   }
   .-previous.slider-toggle {
     left: 50px;
-    -webkit-transform: translatey(-50%) translatex(-50%);
-            transform: translatey(-50%) translatex(-50%);
+    transform: translatey(-50%) translatex(-50%);
   }
   .-next.slider-toggle {
     right: 50px;
-    -webkit-transform: translatey(-50%) translatex(50%);
-            transform: translatey(-50%) translatex(50%);
+    transform: translatey(-50%) translatex(50%);
   }
   [disabled].slider-toggle {
     opacity: 0.5;
@@ -264,6 +246,9 @@ ico,
   }
 }
 
+/*** INSERT NEW COMPOUNDS HERE ***/
+/*** INSERT NEW ORGANISMS HERE ***/
+/*** INSERT NEW TEMPLATES HERE ***/
 .slider-indicator {
   width: 11px;
   height: 11px;
@@ -272,7 +257,6 @@ ico,
   margin-top: -31px;
   border-radius: 100%;
   border: 2px solid #5387F7;
-  -webkit-transition: background-color 0.25s ease;
   transition: background-color 0.25s ease;
   background-color: transparent;
 }
@@ -392,6 +376,5 @@ ico,
   outline: 1px dotted #FFFFFF;
 }
 .slider-slides {
-  -webkit-transition: left 0.25s ease;
   transition: left 0.25s ease;
 }

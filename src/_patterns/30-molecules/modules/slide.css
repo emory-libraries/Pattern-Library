@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -135,12 +137,8 @@ ico,
 }
 
 .slide-title .anchor, .slide-context .anchor {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .slide-title .anchor .icon, .slide-context .anchor .icon {
   margin: 0 !important;
@@ -149,34 +147,25 @@ ico,
   display: none;
 }
 
+/*** INSERT NEW TOKENS HERE ***/
 .slide-action .button {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 .slide-action .button-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .slide-action .-inline.button-group {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 .slide-action [disabled].button, .slide-action .is-disabled.button {
   cursor: not-allowed;
 }
 
+/*** INSERT NEW ATOMS HERE ***/
 .slide {
   display: grid;
   grid-template-areas: "image context" "image title" "action action";
@@ -198,8 +187,7 @@ ico,
 .slide-image {
   grid-area: image;
   overflow: hidden;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
   justify-self: center;
 }
 .slide-image img {
@@ -208,8 +196,7 @@ ico,
   display: block;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate3d(-50%, -50%, 0);
-          transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
   width: 100%;
   min-height: 100%;
 }
@@ -225,53 +212,45 @@ ico,
 }
 .-align-x-left.slide-image:not(.-align-y-top):not(.-align-y-bottom) img {
   left: 0;
-  -webkit-transform: translatex(0%) translatey(-50%);
-          transform: translatex(0%) translatey(-50%);
+  transform: translatex(0%) translatey(-50%);
 }
 .-align-x-right.slide-image:not(.-align-y-top):not(.-align-y-bottom) img {
   left: auto;
   right: 0;
-  -webkit-transform: translatex(0%) translatey(-50%);
-          transform: translatex(0%) translatey(-50%);
+  transform: translatex(0%) translatey(-50%);
 }
 .-align-y-top.slide-image:not(.-align-x-left):not(.-align-x-right) img {
   top: 0;
-  -webkit-transform: translatex(-50%) translatey(0%);
-          transform: translatex(-50%) translatey(0%);
+  transform: translatex(-50%) translatey(0%);
 }
 .-align-y-bottom.slide-image:not(.-align-x-left):not(.-align-x-right) img {
   top: auto;
   bottom: 0;
-  -webkit-transform: translatex(-50%) translatey(0%);
-          transform: translatex(-50%) translatey(0%);
+  transform: translatex(-50%) translatey(0%);
 }
 .-align-x-left.-align-y-top.slide-image img {
   left: 0;
   top: 0;
-  -webkit-transform: translatex(0%) translatey(0%);
-          transform: translatex(0%) translatey(0%);
+  transform: translatex(0%) translatey(0%);
 }
 .-align-x-left.-align-y-bottom.slide-image img {
   left: 0;
   top: auto;
   bottom: 0;
-  -webkit-transform: translatex(0%) translatey(0%);
-          transform: translatex(0%) translatey(0%);
+  transform: translatex(0%) translatey(0%);
 }
 .-align-x-right.-align-y-top.slide-image img {
   left: auto;
   right: 0;
   top: 0;
-  -webkit-transform: translatex(0%) translatey(0%);
-          transform: translatex(0%) translatey(0%);
+  transform: translatex(0%) translatey(0%);
 }
 .-align-x-right.-align-y-bottom.slide-image img {
   left: auto;
   right: 0;
   top: auto;
   bottom: 0;
-  -webkit-transform: translatex(0%) translatey(0%);
-          transform: translatex(0%) translatey(0%);
+  transform: translatex(0%) translatey(0%);
 }
 .slide-title {
   grid-area: title;
@@ -279,37 +258,29 @@ ico,
 }
 .slide-action {
   grid-area: action;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: flex-end;
+  justify-content: center;
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .slide-action {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
   }
 }
 @media (min-width: 901px) {
   .slide-action {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
   }
 }
 
+/*** INSERT NEW MOLECULES HERE ***/
+/*** INSERT NEW COMPOUNDS HERE ***/
+/*** INSERT NEW ORGANISMS HERE ***/
+/*** INSERT NEW TEMPLATES HERE ***/
 .slide {
   padding-top: 40px;
   padding-bottom: 40px;
-  grid-template-columns: -webkit-min-content 1fr;
   grid-template-columns: min-content 1fr;
-  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   grid-column-gap: 25px;
   grid-row-gap: 10px;
@@ -318,17 +289,13 @@ ico,
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .slide {
-    grid-template-columns: -webkit-min-content 1fr;
     grid-template-columns: min-content 1fr;
-    grid-template-rows: repeat(2, -webkit-min-content) 1fr;
     grid-template-rows: repeat(2, min-content) 1fr;
   }
 }
 @media (min-width: 901px) {
   .slide {
-    grid-template-columns: -webkit-min-content 1fr;
     grid-template-columns: min-content 1fr;
-    grid-template-rows: repeat(2, -webkit-min-content) 1fr;
     grid-template-rows: repeat(2, min-content) 1fr;
   }
 }
@@ -365,7 +332,6 @@ ico,
   opacity: 1;
 }
 .slide-context .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;
@@ -415,7 +381,6 @@ ico,
   opacity: 1;
 }
 .slide-title .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;
@@ -436,7 +401,6 @@ ico,
 .slide-action .button {
   border: 1px solid #FFFFFF;
   background-color: #FFFFFF;
-  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   padding-left: 25px;
   padding-right: 25px;

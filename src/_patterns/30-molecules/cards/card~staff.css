@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -135,12 +137,8 @@ ico,
 }
 
 .card-staff-context .anchor {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .card-staff-context .anchor .icon {
   margin: 0 !important;
@@ -149,15 +147,12 @@ ico,
   display: none;
 }
 
+/*** INSERT NEW TOKENS HERE ***/
 .card-staff-name, .card-staff-contact-links-item a,
 .card-staff-contact-links-item .link, .card-staff-contact-info-item a,
 .card-staff-contact-info-item .link {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-decoration: none;
   cursor: pointer;
 }
@@ -170,17 +165,12 @@ ico,
 .card-staff-name .icon, .card-staff-contact-links-item a .icon,
 .card-staff-contact-links-item .link .icon, .card-staff-contact-info-item a .icon,
 .card-staff-contact-info-item .link .icon {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
+/*** INSERT NEW ATOMS HERE ***/
 .card-staff {
   display: grid;
   grid-template-areas: "about";
@@ -213,16 +203,12 @@ ico,
   display: grid;
   grid-template-areas: "image" "name" "title" "library";
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, -webkit-min-content);
   grid-template-rows: repeat(4, min-content);
 }
 .card-staff-contact {
   display: none;
   grid-area: contact;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 .card-staff-contact-info {
   list-style-type: none;
@@ -234,12 +220,8 @@ ico,
   grid-auto-rows: auto;
 }
 .card-staff-contact-info-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .card-staff-contact-links {
   list-style-type: none;
@@ -255,29 +237,19 @@ ico,
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .card-staff-contact {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }
 @media (min-width: 901px) {
   .card-staff-contact {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }
 .card-staff-image {
   grid-area: image;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  justify-content: center;
+  align-items: flex-start;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
@@ -288,15 +260,9 @@ ico,
 .card-staff-name {
   grid-area: name;
   margin: 0;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 .card-staff-title {
   grid-area: title;
@@ -311,6 +277,10 @@ ico,
   margin: 0;
 }
 
+/*** INSERT NEW MOLECULES HERE ***/
+/*** INSERT NEW COMPOUNDS HERE ***/
+/*** INSERT NEW ORGANISMS HERE ***/
+/*** INSERT NEW TEMPLATES HERE ***/
 .card-staff {
   padding: 25px;
   grid-gap: 50px;
@@ -334,8 +304,7 @@ ico,
   height: 100%;
   width: 1px;
   background-color: #dbdee6;
-  -webkit-transform: translatex(-50%);
-          transform: translatex(-50%);
+  transform: translatex(-50%);
 }
 .card-staff-about {
   grid-gap: 15px;
@@ -354,7 +323,6 @@ ico,
   font-weight: normal;
   font-style: normal;
   color: #082B73;
-  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background: none;
   border: none;
@@ -459,7 +427,6 @@ ico,
   font-weight: bold;
   font-style: normal;
   color: #5387F7;
-  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background: none;
   border: none;
@@ -561,7 +528,6 @@ ico,
   font-weight: bold;
   font-style: normal;
   color: #091C44;
-  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background: none;
   border: none;
@@ -658,7 +624,6 @@ ico,
   opacity: 1;
 }
 .card-staff-context .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;

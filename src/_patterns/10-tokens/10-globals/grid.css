@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -138,6 +140,12 @@ ico,
   display: grid;
 }
 
+/*** INSERT NEW TOKENS HERE ***/
+/*** INSERT NEW ATOMS HERE ***/
+/*** INSERT NEW MOLECULES HERE ***/
+/*** INSERT NEW COMPOUNDS HERE ***/
+/*** INSERT NEW ORGANISMS HERE ***/
+/*** INSERT NEW TEMPLATES HERE ***/
 .grid {
   --gap-cols: 25px;
   --gap-rows: 25px;
@@ -149,12 +157,8 @@ ico,
   grid-row-gap: var(--gap-rows);
   grid-template-rows: var(--rows);
   grid-template-columns: var(--cols);
-  -webkit-box-pack: var(--align-cols);
-      -ms-flex-pack: var(--align-cols);
-          justify-content: var(--align-cols);
-  -webkit-box-align: var(--align-rows);
-      -ms-flex-align: var(--align-rows);
-          align-items: var(--align-rows);
+  justify-content: var(--align-cols);
+  align-items: var(--align-rows);
 }
 @media (max-width: 600px) {
   .grid.-s {
@@ -168,12 +172,8 @@ ico,
     grid-row-gap: var(--gap-rows-s);
     grid-template-rows: var(--rows-s);
     grid-template-columns: var(--cols-s);
-    -webkit-box-pack: var(--align-cols-s);
-        -ms-flex-pack: var(--align-cols-s);
-            justify-content: var(--align-cols-s);
-    -webkit-box-align: var(--align-rows-s);
-        -ms-flex-align: var(--align-rows-s);
-            align-items: var(--align-rows-s);
+    justify-content: var(--align-cols-s);
+    align-items: var(--align-rows-s);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
@@ -188,12 +188,8 @@ ico,
     grid-row-gap: var(--gap-rows-m);
     grid-template-rows: var(--rows-m);
     grid-template-columns: var(--cols-m);
-    -webkit-box-pack: var(--align-cols-m);
-        -ms-flex-pack: var(--align-cols-m);
-            justify-content: var(--align-cols-m);
-    -webkit-box-align: var(--align-rows-m);
-        -ms-flex-align: var(--align-rows-m);
-            align-items: var(--align-rows-m);
+    justify-content: var(--align-cols-m);
+    align-items: var(--align-rows-m);
   }
 }
 @media (min-width: 901px) {
@@ -208,12 +204,8 @@ ico,
     grid-row-gap: var(--gap-rows-l);
     grid-template-rows: var(--rows-l);
     grid-template-columns: var(--cols-l);
-    -webkit-box-pack: var(--align-cols-l);
-        -ms-flex-pack: var(--align-cols-l);
-            justify-content: var(--align-cols-l);
-    -webkit-box-align: var(--align-rows-l);
-        -ms-flex-align: var(--align-rows-l);
-            align-items: var(--align-rows-l);
+    justify-content: var(--align-cols-l);
+    align-items: var(--align-rows-l);
   }
 }
 @media (min-width: 1200px) {
@@ -228,11 +220,7 @@ ico,
     grid-row-gap: var(--gap-rows-xl);
     grid-template-rows: var(--rows-xl);
     grid-template-columns: var(--cols-xl);
-    -webkit-box-pack: var(--align-cols-xl);
-        -ms-flex-pack: var(--align-cols-xl);
-            justify-content: var(--align-cols-xl);
-    -webkit-box-align: var(--align-rows-xl);
-        -ms-flex-align: var(--align-rows-xl);
-            align-items: var(--align-rows-xl);
+    justify-content: var(--align-cols-xl);
+    align-items: var(--align-rows-xl);
   }
 }

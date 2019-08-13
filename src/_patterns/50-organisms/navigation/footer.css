@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -134,14 +136,11 @@ ico,
   content: "";
 }
 
+/*** INSERT NEW TOKENS HERE ***/
 .footer-list .link,
 .footer-list a {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-decoration: none;
   cursor: pointer;
 }
@@ -152,17 +151,14 @@ ico,
 }
 .footer-list .link .icon,
 .footer-list a .icon {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
+/*** INSERT NEW ATOMS HERE ***/
+/*** INSERT NEW MOLECULES HERE ***/
+/*** INSERT NEW COMPOUNDS HERE ***/
 .footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -171,7 +167,6 @@ ico,
 }
 @media (min-width: 901px) {
   .footer {
-    grid-template-columns: repeat(2, 1fr) -webkit-min-content repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr) min-content repeat(2, 1fr);
   }
 }
@@ -224,6 +219,8 @@ ico,
   }
 }
 
+/*** INSERT NEW ORGANISMS HERE ***/
+/*** INSERT NEW TEMPLATES HERE ***/
 .footer {
   background-color: #091C44;
   font-size: 12px;
@@ -242,7 +239,6 @@ ico,
   color: #D0DEFD;
 }
 .footer {
-  -webkit-transition: padding 0.25s ease;
   transition: padding 0.25s ease;
 }
 @media (max-width: 600px) {
@@ -341,7 +337,6 @@ ico,
   font-weight: normal;
   font-style: normal;
   color: #D0DEFD;
-  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background: none;
   border: none;

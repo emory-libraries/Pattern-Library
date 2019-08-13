@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -134,16 +136,11 @@ ico,
   content: "";
 }
 
+/*** INSERT NEW TOKENS HERE ***/
 .nav-button {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 [disabled].nav-button, .is-disabled.nav-button {
@@ -151,36 +148,22 @@ ico,
 }
 
 .nav-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
   width: 100%;
   overflow: hidden;
 }
 @media (min-width: 901px) {
   .nav-button {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
     display: inline-flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     width: auto;
   }
 }
 .nav-button .icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 .nav-button:not(.-utility):not(.-flyout):not(.-search):not(.-toggle):not(.-librarian), .-main.nav-button {
   height: 60px;
@@ -206,19 +189,11 @@ ico,
   position: absolute;
   display: block;
   top: 50%;
-  -webkit-transform: translatey(-50%);
-          transform: translatey(-50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  transform: translatey(-50%);
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
 }
 @media (min-width: 901px) {
   .nav-button:not(.-utility):not(.-flyout):not(.-search):not(.-toggle):not(.-librarian), .-main.nav-button {
@@ -244,12 +219,8 @@ ico,
 }
 .-toggle.nav-button {
   height: 40px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: auto;
 }
 @media (min-width: 901px) {
@@ -259,12 +230,8 @@ ico,
 }
 .-search.nav-button {
   height: 40px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: auto;
   margin-left: auto;
 }
@@ -289,10 +256,7 @@ ico,
 @media (min-width: 901px) {
   .-utility.nav-button {
     height: 40px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   .-utility.nav-button::after {
     content: none !important;
@@ -300,56 +264,39 @@ ico,
 }
 .-flyout.nav-button {
   height: 70px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   width: auto;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 @media (min-width: 901px) {
   .-flyout.nav-button {
     height: 40px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-flex: unset;
-        -ms-flex: unset;
-            flex: unset;
+    flex-direction: row;
+    flex: unset;
   }
 }
 .-librarian.nav-button {
   height: 45px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 @media (min-width: 901px) {
   .-librarian.nav-button {
     height: 40px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
 }
 
+/*** INSERT NEW ATOMS HERE ***/
+/*** INSERT NEW MOLECULES HERE ***/
+/*** INSERT NEW COMPOUNDS HERE ***/
+/*** INSERT NEW ORGANISMS HERE ***/
+/*** INSERT NEW TEMPLATES HERE ***/
 .nav-button {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   border: none;
   background: none;
-  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 @media (max-width: 600px) {
@@ -564,8 +511,7 @@ ico,
     height: 8px;
     border: 4px solid #091C44;
     background-color: #E9BF55;
-    -webkit-transform: rotate(45deg) translatey(calc(50% + 4px + 1px));
-            transform: rotate(45deg) translatey(calc(50% + 4px + 1px));
+    transform: rotate(45deg) translatey(calc(50% + 4px + 1px));
   }
 }
 @media (max-width: 600px) {
@@ -1741,8 +1687,7 @@ ico,
     height: 8px;
     border: 4px solid #091C44;
     background-color: #E9BF55;
-    -webkit-transform: rotate(45deg) translatey(calc(50% + 4px + 1px));
-            transform: rotate(45deg) translatey(calc(50% + 4px + 1px));
+    transform: rotate(45deg) translatey(calc(50% + 4px + 1px));
   }
 }
 @media (max-width: 600px) {
@@ -1812,17 +1757,10 @@ ico,
   position: absolute;
   display: block;
   top: 50%;
-  -webkit-transform: translatey(-50%);
-          transform: translatey(-50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  transform: translatey(-50%);
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 24px;
   height: 24px;
   color: #B6BDCC;

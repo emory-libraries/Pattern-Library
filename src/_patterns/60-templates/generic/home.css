@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -134,35 +136,36 @@ ico,
   content: "";
 }
 
+/*** INSERT NEW TOKENS HERE ***/
+/*** INSERT NEW ATOMS HERE ***/
+/*** INSERT NEW MOLECULES HERE ***/
+/*** INSERT NEW COMPOUNDS HERE ***/
+/*** INSERT NEW ORGANISMS HERE ***/
 .home-page {
   margin: 0 auto;
   display: grid;
   grid-template-areas: "header" "main" "footer";
-  grid-template-rows: 150px 1fr 420px;
+  grid-template-rows: 135px 1fr auto;
   grid-template-columns: 100%;
+}
+@media (min-width: 901px) {
+  .home-page {
+    grid-template-rows: 150px 1fr auto;
+  }
+}
+@media (min-width: 1200px) {
+  .home-page {
+    grid-template-rows: 130px 1fr auto;
+  }
 }
 .home-page-header {
   grid-area: header;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.home-page-header::after {
-  content: "Header";
 }
 .home-page-main {
   grid-area: main;
 }
 .home-page-main-cards .button-group {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 .home-page-main-boxes .section-major-body {
   display: grid;
@@ -175,23 +178,6 @@ ico,
 }
 .home-page-footer {
   grid-area: footer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.home-page-footer::after {
-  content: "Footer";
 }
 
-.home-page {
-  grid-gap: 2em;
-}
-.home-page-header, .home-page-footer {
-  border: 1px solid #B6BDCC;
-}
+/*** INSERT NEW TEMPLATES HERE ***/

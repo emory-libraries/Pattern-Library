@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -136,12 +138,8 @@ ico,
 
 .intro-home-title h1 .anchor, .intro-home-title h2 .anchor, .intro-home-title h3 .anchor, .intro-home-title h4 .anchor, .intro-home-title h5 .anchor, .intro-home-title h6 .anchor,
 .intro-home-title .heading .anchor {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .intro-home-title h1 .anchor .icon, .intro-home-title h2 .anchor .icon, .intro-home-title h3 .anchor .icon, .intro-home-title h4 .anchor .icon, .intro-home-title h5 .anchor .icon, .intro-home-title h6 .anchor .icon,
 .intro-home-title .heading .anchor .icon {
@@ -164,11 +162,13 @@ ico,
   display: none;
 }
 
+/*** INSERT NEW TOKENS HERE ***/
+/*** INSERT NEW ATOMS HERE ***/
+/*** INSERT NEW MOLECULES HERE ***/
+/*** INSERT NEW COMPOUNDS HERE ***/
 .intro-home {
   display: grid;
-  grid-template-rows: minmax(180px, -webkit-min-content) -webkit-min-content 6fr repeat(2, -webkit-min-content) 1fr;
   grid-template-rows: minmax(180px, min-content) min-content 6fr repeat(2, min-content) 1fr;
-  grid-template-columns: 1fr 2fr minmax(-webkit-min-content, 800px) 2fr 1fr;
   grid-template-columns: 1fr 2fr minmax(min-content, 800px) 2fr 1fr;
   background-size: cover;
   background-position: center;
@@ -177,8 +177,7 @@ ico,
 .intro-home-search {
   grid-row: 1;
   grid-column: 1/-1;
-  -ms-flex-item-align: stretch;
-      align-self: stretch;
+  align-self: stretch;
   margin: 0 !important;
 }
 .intro-home-search .search-menu {
@@ -187,20 +186,22 @@ ico,
 .intro-home-badge {
   grid-row: 4;
   grid-column: 3;
-  -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
   margin: 0 auto !important;
 }
 .intro-home-title {
   grid-row: 5;
   grid-column: 3;
-  -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
   margin: 0 auto !important;
 }
 
+/*** INSERT NEW ORGANISMS HERE ***/
+/*** INSERT NEW TEMPLATES HERE ***/
 .intro-home {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(-14.42%, #091C44), color-stop(51.12%, transparent)), var(--image);
+  background-image: -webkit-linear-gradient(0deg, #091C44 -14.42%, transparent 51.12%), var(--image);
+  background-image: -moz-linear-gradient(0deg, #091C44 -14.42%, transparent 51.12%), var(--image);
+  background-image: -o-linear-gradient(0deg, #091C44 -14.42%, transparent 51.12%), var(--image);
   background-image: linear-gradient(0deg, #091C44 -14.42%, transparent 51.12%), var(--image);
 }
 .intro-home-title {
@@ -228,7 +229,6 @@ ico,
 }
 .intro-home-title h1 .anchor, .intro-home-title h2 .anchor, .intro-home-title h3 .anchor, .intro-home-title h4 .anchor, .intro-home-title h5 .anchor, .intro-home-title h6 .anchor,
 .intro-home-title .heading .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;
@@ -238,11 +238,9 @@ ico,
 }
 .intro-home-search {
   background-color: transparent;
-  -webkit-transition: background-color 0.25s ease;
   transition: background-color 0.25s ease;
 }
 .intro-home-search {
-  -webkit-transition: padding 0.25s ease;
   transition: padding 0.25s ease;
 }
 @media (max-width: 600px) {
