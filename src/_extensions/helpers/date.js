@@ -174,13 +174,26 @@ const helpers = {
       let value = settings[method];
 
       // For select methods, enable an easier-to-use string syntax for passing arguments.
-      if( ['add', 'subtract'].includes(method) && _.isString(value) ) value = value.split(' ').map(_.trim);
+      if( ['add', 'subtract'].includes(method) && _.isString(value) ) {
+
+        // Convert the string to an array of arrays.
+        value = value.split(', ').map((value) => value.split(' ').map(_.trim));
+
+      }
 
       // Otherwise, for all other values, convert it to array form if it wasn't given as one.
       else if( !_.isArray(value) ) value = [value];
 
+      // For add/subtract methods, apply the additions/subtractions in order.
+      if( ['add', 'subtract'].includes($method) ) {
+
+        // Loop through each pair of values, and execute its operation.
+        _.each(value, (args) => _moment[method](...args));
+
+      }
+
       // For getter/setter methods, allow empty values to indicate that the getter should be used.
-      if( [
+      else if( [
         'millisecond', 'milliseconds',
         'second', 'seconds',
         'minute', 'minutes',
@@ -239,7 +252,7 @@ const helpers = {
 
     });
 
-    // Return the modified method.
+    // Return the modified moment.
     return _moment;
 
   }
