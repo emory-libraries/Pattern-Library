@@ -122,13 +122,14 @@
   "50-organisms-navigation-search-menu": "review",
   "50-organisms-flows-flow-content-boxes": "review",
   "50-organisms-sections-deep-dive": "review",
-  "50-organisms-intros-intro-interior-cover": "review",
   "50-organisms-navigation-nav-bar-main": "review",
   "50-organisms-intros-intro-home": "review",
   "50-organisms-flows-flow-feed-preview": "review",
   "50-organisms-navigation-footer": "review",
   "50-organisms-navigation-header": "review",
   "50-organisms-sections-popular": "review",
+  "50-organisms-hours-hours": "review",
+  "50-organisms-intros-intro-cover": "review",
   "60-templates-services-service-directory": "review",
   "60-templates-research-help-research-help": "review",
   "60-templates-generic-info": "review",
@@ -146,6 +147,6 @@
   "60-templates-generic-index": "review",
   "60-templates-generic-home": "review",
   "60-templates-generic-cover": "review",
-  "60-templates-hours-hours": "construction",
-  "50-organisms-hours-hours": "construction"
+  "60-templates-hours-hours": "review",
+  "60-templates-event-event": "review"
 }
