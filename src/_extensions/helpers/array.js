@@ -208,10 +208,17 @@ module.exports = {
 
   },
 
-  // Group items within an arry of objects by a given key.
+  // Extract items by key, assigning them to the given key.
   keyBy( arrayOfObjects, key ) {
 
     return _.keyBy(arrayOfObjects, key);
+
+  },
+
+  // Group items by key.
+  groupBy( arrayOfObjects, key ) {
+
+    return _.groupBy(arrayOfObjects, key);
 
   },
 
@@ -273,34 +280,45 @@ module.exports = {
     // Return the difference of the array with the limit applied.
     return array.slice(limit);
 
+  },
+
+  // Concatenate two or more arrays.
+  concat( ...arrays ) {
+
+    // Remove the options object from the arrays.
+    arrays = _.initial(arrays);
+
+    // Concatenate the arrays.
+    return arrays[0].concat(..._.tail(arrays));
+
+  },
+
+  // Push one or more items onto the end of an array.
+  push( array, ...values ) {
+
+    // Remove the options object from the values.
+    values = _.initial(values);
+
+    // Push the values onto the array.
+    _.each(values, array.push);
+
+    // Return the array with the values added.
+    return values;
+
+  },
+
+  // Push one or more items onto the beginning of an array.
+  unshift( array, ...values ) {
+
+    // Remove the options object from the values.
+    values = _.initial(values);
+
+    // Unshift the values onto the array.
+    _.each(values, array.unshift);
+
+    // Return the array with the values added.
+    return values;
+
   }
-
-  // Push an item onto the end of an array.
-  // FIXME: Support for this `push` helper in the templating engine's version of handlebars is lacking.
-  /*push( value, array, options ) {
-
-    // Make sure options is set.
-    if( options ) {
-
-      // Push the item onto the pointer array.
-      if( _.isArray(array) ) array.push(value);
-
-    }
-
-  },*/
-
-  // Push an item onto the beginning of an array.
-  // FIXME: Support for this `push` helper in the templating engine's version of handlebars is lacking.
-  /*unshift( value, array, options ) {
-
-    // Make sure options is set.
-    if( options ) {
-
-      // Push the item onto the pointer array.
-      if( _.isArray(array) ) array.unshift(value);
-
-    }
-
-  }*/
 
 };
