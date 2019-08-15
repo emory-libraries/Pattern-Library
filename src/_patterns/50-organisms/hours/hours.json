@@ -1,1 +1,758 @@
-{}
+{
+  "hours": [
+    {
+      "location": "Robert W. Woodruff Building",
+      "semesters": [
+        {
+          "semester": "Summer Intersession",
+          "date": {
+            "start": "06-10-2019",
+            "end": "08-27-2019"
+          },
+          "sunday": {
+            "open": {
+              "hour": 11,
+              "minute": 0,
+              "am-pm": "AM"
+            },
+            "close": {
+              "hour": 10,
+              "minute": 0,
+              "am-pm": "PM"
+            },
+            "status": "open"
+          },
+          "monday": {
+            "open": {
+              "hour": 7,
+              "minute": 30,
+              "am-pm": "AM"
+            },
+            "close": {
+              "hour": 10,
+              "minute": 0,
+              "am-pm": "PM"
+            },
+            "status": "open"
+          },
+          "tuesday": {
+            "open": {
+              "hour": 7,
+              "minute": 30,
+              "am-pm": "AM"
+            },
+            "close": {
+              "hour": 10,
+              "minute": 0,
+              "am-pm": "PM"
+            },
+            "status": "open"
+          },
+          "wednesday": {
+            "open": {
+              "hour": 7,
+              "minute": 30,
+              "am-pm": "AM"
+            },
+            "close": {
+              "hour": 10,
+              "minute": 0,
+              "am-pm": "PM"
+            },
+            "status": "open"
+          },
+          "thursday": {
+            "open": {
+              "hour": 7,
+              "minute": 30,
+              "am-pm": "AM"
+            },
+            "close": {
+              "hour": 10,
+              "minute": 0,
+              "am-pm": "PM"
+            },
+            "status": "open"
+          },
+          "friday": {
+            "open": {
+              "hour": 7,
+              "minute": 30,
+              "am-pm": "AM"
+            },
+            "close": {
+              "hour": 6,
+              "minute": 0,
+              "am-pm": "PM"
+            },
+            "status": "open"
+          },
+          "saturday": {
+            "open": {
+              "hour": 7,
+              "minute": 30,
+              "am-pm": "AM"
+            },
+            "close": {
+              "hour": 6,
+              "minute": 0,
+              "am-pm": "PM"
+            },
+            "status": "open"
+          },
+          "exceptions": [
+            {
+              "status": "open",
+              "date": {
+                "start": "08-10-2019",
+                "end": "08-10-2019"
+              },
+              "open": {
+                "hour": 11,
+                "minute": 0,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": 6,
+                "minute": 0,
+                "am-pm": "PM"
+              }
+            },
+            {
+              "status": "closed",
+              "date": {
+                "start": "08-11-2019",
+                "end": "08-11-2019"
+              },
+              "open": {
+                "hour": 11,
+                "minute": 0,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": 6,
+                "minute": 0,
+                "am-pm": "PM"
+              }
+            },
+            {
+              "status": "open",
+              "date": {
+                "start": "08-12-2019",
+                "end": "08-16-2019"
+              },
+              "open": {
+                "hour": 7,
+                "minute": 30,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": 6,
+                "minute": 0,
+                "am-pm": "PM"
+              }
+            },
+            {
+              "status": "open",
+              "date": {
+                "start": "08-17-2019",
+                "end": "08-17-2019"
+              },
+              "open": {
+                "hour": 11,
+                "minute": 0,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": 6,
+                "minute": 0,
+                "am-pm": "PM"
+              }
+            },
+            {
+              "status": "closed",
+              "date": {
+                "start": "08-18-2019",
+                "end": "08-18-2019"
+              },
+              "open": {
+                "hour": null,
+                "minute": null,
+                "am-pm": null
+              },
+              "close": {
+                "hour": null,
+                "minute": null,
+                "am-pm": null
+              }
+            },
+            {
+              "status": "open",
+              "date": {
+                "start": "08-19-2019",
+                "end": "08-23-2019"
+              },
+              "open": {
+                "hour": 7,
+                "minute": 30,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": 6,
+                "minute": 0,
+                "am-pm": "PM"
+              }
+            },
+            {
+              "status": "open",
+              "date": {
+                "start": "08-24-2019",
+                "end": "08-25-2019"
+              },
+              "open": {
+                "hour": 11,
+                "minute": 0,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": 6,
+                "minute": 0,
+                "am-pm": "PM"
+              }
+            },
+            {
+              "status": "open",
+              "date": {
+                "start": "08-26-2019",
+                "end": "08-27-2019"
+              },
+              "open": {
+                "hour": 7,
+                "minute": 30,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": 6,
+                "minute": 0,
+                "am-pm": "PM"
+              }
+            },
+            {
+              "status": "open",
+              "date": {
+                "start": "08-28-2019",
+                "end": "08-29-2019"
+              },
+              "open": {
+                "hour": 7,
+                "minute": 30,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": 12,
+                "minute": 0,
+                "am-pm": "AM"
+              }
+            },
+            {
+              "status": "open",
+              "date": {
+                "start": "08-30-2019",
+                "end": "08-31-2019"
+              },
+              "open": {
+                "hour": 7,
+                "minute": 30,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": 6,
+                "minute": 0,
+                "am-pm": "PM"
+              }
+            },
+            {
+              "status": "open",
+              "date": {
+                "start": "09-01-2019",
+                "end": "09-01-2019"
+              },
+              "open": {
+                "hour": 11,
+                "minute": 0,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": 6,
+                "minute": 0,
+                "am-pm": "PM"
+              }
+            },
+            {
+              "status": "closed",
+              "date": {
+                "start": "09-02-2019",
+                "end": "09-02-2019"
+              },
+              "open": {
+                "hour": null,
+                "minute": null,
+                "am-pm": null
+              },
+              "close": {
+                "hour": null,
+                "minute": null,
+                "am-pm": null
+              }
+            },
+            {
+              "status": "open",
+              "date": {
+                "start": "09-03-2019",
+                "end": "09-03-2019"
+              },
+              "open": {
+                "hour": 7,
+                "minute": 30,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": null,
+                "minute": null,
+                "am-pm": null
+              }
+            },
+            {
+              "status": "open",
+              "date": {
+                "start": "10-12-2019",
+                "end": "10-13-2019"
+              },
+              "open": {
+                "hour": 11,
+                "minute": 0,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": 6,
+                "minute": 0,
+                "am-pm": "PM"
+              }
+            },
+            {
+              "status": "open",
+              "date": {
+                "start": "10-14-2019",
+                "end": "10-14-2019"
+              },
+              "open": {
+                "hour": 7,
+                "minute": 30,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": 6,
+                "minute": 0,
+                "am-pm": "PM"
+              }
+            },
+            {
+              "status": "open",
+              "date": {
+                "start": "10-15-2019",
+                "end": "10-15-2019"
+              },
+              "open": {
+                "hour": 7,
+                "minute": 30,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": null,
+                "minute": null,
+                "am-pm": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "location": "Music and Media Library",
+      "semesters": [
+        {
+          "semester": "Summer Intersession",
+          "date": {
+            "start": "06-10-2019",
+            "end": "08-27-2019"
+          },
+          "sunday": {
+            "status": "closed",
+            "open": {
+              "hour": 11,
+              "minute": 0,
+              "am-pm": "AM"
+            },
+            "close": {
+              "hour": 10,
+              "minute": 0,
+              "am-pm": "PM"
+            }
+          },
+          "monday": {
+            "status": "open",
+            "open": {
+              "hour": 7,
+              "minute": 30,
+              "am-pm": "AM"
+            },
+            "close": {
+              "hour": 10,
+              "minute": 0,
+              "am-pm": "PM"
+            }
+          },
+          "tuesday": {
+            "status": "open",
+            "open": {
+              "hour": 7,
+              "minute": 30,
+              "am-pm": "AM"
+            },
+            "close": {
+              "hour": 10,
+              "minute": 0,
+              "am-pm": "PM"
+            }
+          },
+          "wednesday": {
+            "status": "open",
+            "open": {
+              "hour": 7,
+              "minute": 30,
+              "am-pm": "AM"
+            },
+            "close": {
+              "hour": 10,
+              "minute": 0,
+              "am-pm": "PM"
+            }
+          },
+          "thursday": {
+            "status": "open",
+            "open": {
+              "hour": 7,
+              "minute": 30,
+              "am-pm": "AM"
+            },
+            "close": {
+              "hour": 10,
+              "minute": 0,
+              "am-pm": "PM"
+            }
+          },
+          "friday": {
+            "status": "open",
+            "open": {
+              "hour": 7,
+              "minute": 30,
+              "am-pm": "AM"
+            },
+            "close": {
+              "hour": 6,
+              "minute": 0,
+              "am-pm": "PM"
+            }
+          },
+          "saturday": {
+            "status": "closed",
+            "open": {
+              "hour": 7,
+              "minute": 30,
+              "am-pm": "AM"
+            },
+            "close": {
+              "hour": 6,
+              "minute": 0,
+              "am-pm": "PM"
+            }
+          },
+          "exceptions": [
+            {
+              "status": "open",
+              "date": {
+                "start": "08-10-2019",
+                "end": "08-10-2019"
+              },
+              "open": {
+                "hour": 11,
+                "minute": 0,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": 6,
+                "minute": 0,
+                "am-pm": "PM"
+              }
+            },
+            {
+              "status": "closed",
+              "date": {
+                "start": "08-11-2019",
+                "end": "08-11-2019"
+              },
+              "open": {
+                "hour": 11,
+                "minute": 0,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": 6,
+                "minute": 0,
+                "am-pm": "PM"
+              }
+            },
+            {
+              "status": "open",
+              "date": {
+                "start": "08-12-2019",
+                "end": "08-16-2019"
+              },
+              "open": {
+                "hour": 7,
+                "minute": 30,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": 6,
+                "minute": 0,
+                "am-pm": "PM"
+              }
+            },
+            {
+              "status": "open",
+              "date": {
+                "start": "08-17-2019",
+                "end": "08-17-2019"
+              },
+              "open": {
+                "hour": 11,
+                "minute": 0,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": 6,
+                "minute": 0,
+                "am-pm": "PM"
+              }
+            },
+            {
+              "status": "closed",
+              "date": {
+                "start": "08-18-2019",
+                "end": "08-18-2019"
+              },
+              "open": {
+                "hour": null,
+                "minute": null,
+                "am-pm": null
+              },
+              "close": {
+                "hour": null,
+                "minute": null,
+                "am-pm": null
+              }
+            },
+            {
+              "status": "open",
+              "date": {
+                "start": "08-19-2019",
+                "end": "08-23-2019"
+              },
+              "open": {
+                "hour": 7,
+                "minute": 30,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": 6,
+                "minute": 0,
+                "am-pm": "PM"
+              }
+            },
+            {
+              "status": "open",
+              "date": {
+                "start": "08-24-2019",
+                "end": "08-25-2019"
+              },
+              "open": {
+                "hour": 11,
+                "minute": 0,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": 6,
+                "minute": 0,
+                "am-pm": "PM"
+              }
+            },
+            {
+              "status": "open",
+              "date": {
+                "start": "08-26-2019",
+                "end": "08-27-2019"
+              },
+              "open": {
+                "hour": 7,
+                "minute": 30,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": 6,
+                "minute": 0,
+                "am-pm": "PM"
+              }
+            },
+            {
+              "status": "open",
+              "date": {
+                "start": "08-28-2019",
+                "end": "08-29-2019"
+              },
+              "open": {
+                "hour": 7,
+                "minute": 30,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": 12,
+                "minute": 0,
+                "am-pm": "AM"
+              }
+            },
+            {
+              "status": "open",
+              "date": {
+                "start": "08-30-2019",
+                "end": "08-31-2019"
+              },
+              "open": {
+                "hour": 7,
+                "minute": 30,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": 6,
+                "minute": 0,
+                "am-pm": "PM"
+              }
+            },
+            {
+              "status": "open",
+              "date": {
+                "start": "09-01-2019",
+                "end": "09-01-2019"
+              },
+              "open": {
+                "hour": 11,
+                "minute": 0,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": 6,
+                "minute": 0,
+                "am-pm": "PM"
+              }
+            },
+            {
+              "status": "closed",
+              "date": {
+                "start": "09-02-2019",
+                "end": "09-02-2019"
+              },
+              "open": {
+                "hour": null,
+                "minute": null,
+                "am-pm": null
+              },
+              "close": {
+                "hour": null,
+                "minute": null,
+                "am-pm": null
+              }
+            },
+            {
+              "status": "open",
+              "date": {
+                "start": "09-03-2019",
+                "end": "09-03-2019"
+              },
+              "open": {
+                "hour": 7,
+                "minute": 30,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": null,
+                "minute": null,
+                "am-pm": null
+              }
+            },
+            {
+              "status": "open",
+              "date": {
+                "start": "10-12-2019",
+                "end": "10-13-2019"
+              },
+              "open": {
+                "hour": 11,
+                "minute": 0,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": 6,
+                "minute": 0,
+                "am-pm": "PM"
+              }
+            },
+            {
+              "status": "open",
+              "date": {
+                "start": "10-14-2019",
+                "end": "10-14-2019"
+              },
+              "open": {
+                "hour": 7,
+                "minute": 30,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": 6,
+                "minute": 0,
+                "am-pm": "PM"
+              }
+            },
+            {
+              "status": "open",
+              "date": {
+                "start": "10-15-2019",
+                "end": "10-15-2019"
+              },
+              "open": {
+                "hour": 7,
+                "minute": 30,
+                "am-pm": "AM"
+              },
+              "close": {
+                "hour": null,
+                "minute": null,
+                "am-pm": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
