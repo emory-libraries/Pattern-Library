@@ -133,3 +133,30 @@ ico,
 .ico-corner-up-right::before {
   content: "";
 }
+
+.hours-page {
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: 135px 1fr auto;
+  grid-template-columns: 100%;
+}
+@media (min-width: 901px) {
+  .hours-page {
+    grid-template-rows: 150px 1fr auto;
+  }
+}
+@media (min-width: 1200px) {
+  .hours-page {
+    grid-template-rows: 130px 1fr auto;
+  }
+}
+.hours-page-header {
+  grid-area: header;
+}
+.hours-page-main {
+  grid-area: main;
+}
+.hours-page-footer {
+  grid-area: footer;
+}
