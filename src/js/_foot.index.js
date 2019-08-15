@@ -15,3 +15,4 @@ global.Hammer = Hammer;
 global.jQuery = global.$ = $;
 global.EUL = EUL;
 global.App = App;
+global.moment = moment;
