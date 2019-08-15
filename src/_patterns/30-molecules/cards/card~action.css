@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -137,8 +135,12 @@ ico,
 }
 
 .card-action-text .anchor {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .card-action-text .anchor .icon {
   margin: 0 !important;
@@ -147,8 +149,6 @@ ico,
   display: none;
 }
 
-/*** INSERT NEW TOKENS HERE ***/
-/*** INSERT NEW ATOMS HERE ***/
 .card-action {
   display: grid;
   grid-template-areas: "image image" "text action";
@@ -156,9 +156,15 @@ ico,
 }
 .card-action-image {
   grid-area: image;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   top: 0;
   right: 0;
   left: 0;
@@ -171,25 +177,28 @@ ico,
 .card-action-text {
   grid-area: text;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .card-action-action {
   grid-area: action;
 }
 
-/*** INSERT NEW MOLECULES HERE ***/
-/*** INSERT NEW COMPOUNDS HERE ***/
-/*** INSERT NEW ORGANISMS HERE ***/
-/*** INSERT NEW TEMPLATES HERE ***/
 .card-action {
   padding: 25px;
   grid-gap: 25px;
   min-height: 265px;
   border: 1px solid #E7EAF1;
   border-top: 4px solid #5387F7;
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.08);
   grid-template-rows: 190px auto;
 }
 .card-action-image {
@@ -214,6 +223,7 @@ ico,
   opacity: 1;
 }
 .card-action-text .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;

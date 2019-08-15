@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -137,8 +135,12 @@ ico,
 }
 
 .branding-header-division .anchor {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .branding-header-division .anchor .icon {
   margin: 0 !important;
@@ -147,18 +149,20 @@ ico,
   display: none;
 }
 
-/*** INSERT NEW TOKENS HERE ***/
-/*** INSERT NEW ATOMS HERE ***/
 .branding-header {
   display: grid;
   grid-template-areas: "badge organization" "badge division" "badge dropdown";
+  grid-template-columns: -webkit-min-content -webkit-max-content;
   grid-template-columns: min-content max-content;
+  grid-template-rows: repeat(3, -webkit-min-content);
   grid-template-rows: repeat(3, min-content);
 }
 @media (min-width: 1200px) {
   .branding-header {
     grid-template-areas: "badge organization organization" "badge division dropdown";
+    grid-template-columns: -webkit-min-content -webkit-max-content -webkit-min-content;
     grid-template-columns: min-content max-content min-content;
+    grid-template-rows: repeat(2, -webkit-min-content);
     grid-template-rows: repeat(2, min-content);
   }
 }
@@ -172,14 +176,16 @@ ico,
   display: block;
   left: 50%;
   top: 50%;
-  transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
 }
 .branding-header-badge svg {
   position: absolute;
   display: block;
   left: 50%;
   top: 50%;
-  transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
   width: 100%;
 }
 @media (min-width: 1200px) {
@@ -187,7 +193,8 @@ ico,
     position: absolute;
     display: block;
     left: 50%;
-    transform: translatex(-50%);
+    -webkit-transform: translatex(-50%);
+            transform: translatex(-50%);
     top: 0;
   }
 }
@@ -199,8 +206,14 @@ ico,
 }
 .branding-header-dropdown {
   grid-area: dropdown;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: -webkit-min-content;
+  width: -moz-min-content;
   width: min-content;
 }
 .branding-header-dropdown-menu {
@@ -224,10 +237,6 @@ ico,
   color: #605858;
 }
 
-/*** INSERT NEW MOLECULES HERE ***/
-/*** INSERT NEW COMPOUNDS HERE ***/
-/*** INSERT NEW ORGANISMS HERE ***/
-/*** INSERT NEW TEMPLATES HERE ***/
 .branding-header {
   padding: 20px 30px;
   grid-column-gap: 5px;
@@ -235,6 +244,7 @@ ico,
 }
 .branding-header-badge {
   display: block;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   width: 75px;
 }
@@ -269,6 +279,7 @@ ico,
 }
 .branding-header-organization {
   font-size: 10px !important;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .branding-header-organization {
@@ -289,6 +300,7 @@ ico,
 }
 .branding-header-division {
   font-size: 18px !important;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .branding-header-division {
@@ -306,6 +318,7 @@ ico,
   opacity: 1;
 }
 .branding-header-division .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;

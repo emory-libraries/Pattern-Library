@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -137,8 +135,12 @@ ico,
 }
 
 .card-multimedia-duration .anchor, .card-multimedia-title .anchor, .card-multimedia-context .anchor {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .card-multimedia-duration .anchor .icon, .card-multimedia-title .anchor .icon, .card-multimedia-context .anchor .icon {
   margin: 0 !important;
@@ -147,10 +149,13 @@ ico,
   display: none;
 }
 
-/*** INSERT NEW TOKENS HERE ***/
 .card-multimedia-title {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-decoration: none;
   cursor: pointer;
 }
@@ -159,22 +164,36 @@ ico,
   display: block;
 }
 .card-multimedia-title .icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-/*** INSERT NEW ATOMS HERE ***/
 .card-multimedia {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 1fr repeat(3, -webkit-min-content);
   grid-template-rows: 1fr repeat(3, min-content);
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .card-multimedia-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
@@ -182,9 +201,15 @@ ico,
 .card-multimedia-icon .icon {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .card-multimedia-icon svg {
   width: 100% !important;
@@ -194,18 +219,20 @@ ico,
 }
 .card-multimedia-title {
   margin: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .card-multimedia-duration {
   margin: 0;
 }
 
-/*** INSERT NEW MOLECULES HERE ***/
-/*** INSERT NEW COMPOUNDS HERE ***/
-/*** INSERT NEW ORGANISMS HERE ***/
-/*** INSERT NEW TEMPLATES HERE ***/
 .card-multimedia {
   grid-gap: 15px;
   padding: 40px 25px 80px;
@@ -214,13 +241,11 @@ ico,
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   background-color: #FFFFFF;
-  background-image: -webkit-linear-gradient(to bottom, #f3f5f8 70px, transparent 70px);
-  background-image: -moz-linear-gradient(to bottom, #f3f5f8 70px, transparent 70px);
-  background-image: -o-linear-gradient(to bottom, #f3f5f8 70px, transparent 70px);
   background-image: linear-gradient(to bottom, #f3f5f8 70px, transparent 70px);
 }
 .card-multimedia-icon {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   text-align: center;
   width: 60px;
   height: 60px;
@@ -251,6 +276,7 @@ ico,
   opacity: 1;
 }
 .card-multimedia-context .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;
@@ -277,6 +303,7 @@ ico,
   opacity: 1;
 }
 .card-multimedia-title .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;
@@ -288,6 +315,7 @@ ico,
   font-weight: normal;
   font-style: normal;
   color: #082B73;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background: none;
   border: none;
@@ -370,6 +398,7 @@ ico,
   opacity: 1;
 }
 .card-multimedia-duration .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;

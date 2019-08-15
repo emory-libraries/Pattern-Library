@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -136,10 +134,13 @@ ico,
   content: "";
 }
 
-/*** INSERT NEW TOKENS HERE ***/
 .search-cancel {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-decoration: none;
   cursor: pointer;
 }
@@ -148,9 +149,15 @@ ico,
   display: block;
 }
 .search-cancel .icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .search-box {
@@ -199,13 +206,17 @@ ico,
   display: grid;
   grid-template-areas: "box button cancel";
   grid-template-columns: 1fr auto;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .-form.search .search-box {
   display: block;
   grid-area: box;
 }
 .-form.search .search-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   grid-area: button;
 }
@@ -247,17 +258,13 @@ ico,
   position: absolute;
   display: block;
   top: 50%;
-  transform: translatey(-50%);
+  -webkit-transform: translatey(-50%);
+          transform: translatey(-50%);
   left: 0;
 }
 .-contained.search .search-cancel {
   grid-area: cancel;
 }
-/*** INSERT NEW ATOMS HERE ***/
-/*** INSERT NEW MOLECULES HERE ***/
-/*** INSERT NEW COMPOUNDS HERE ***/
-/*** INSERT NEW ORGANISMS HERE ***/
-/*** INSERT NEW TEMPLATES HERE ***/
 .search {
   margin-top: 1em;
   margin-bottom: 1em;
@@ -318,6 +325,7 @@ ico,
   opacity: 0.5;
 }
 .search-button {
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .search-button {
@@ -347,30 +355,39 @@ ico,
   color: rgba(255, 255, 255, 0.5);
 }
 .search.-contained .search-button {
+  background: -webkit-gradient(linear, left top, right top, color-stop(1.9047619048%, #E7EAF1), color-stop(1.9047619048%, transparent)) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=5387F7&size[width]=20&size[height]=20) no-repeat 20px center;
   background: linear-gradient(to right, #E7EAF1 1.9047619048%, transparent 1.9047619048%) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=5387F7&size[width]=20&size[height]=20) no-repeat 20px center;
 }
 .search.-contained .search-button:hover, .search.-contained .search-button:focus, .search.-contained .search-button.is-hover, .search.-contained .search-button.is-focus {
+  background: -webkit-gradient(linear, left top, right top, color-stop(1.9047619048%, #E7EAF1), color-stop(1.9047619048%, transparent)) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
   background: linear-gradient(to right, #E7EAF1 1.9047619048%, transparent 1.9047619048%) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
 }
 .search.-contained .search-button:active, .search.-contained .search-button.is-active {
+  background: -webkit-gradient(linear, left top, right top, color-stop(1.9047619048%, #E7EAF1), color-stop(1.9047619048%, transparent)) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
   background: linear-gradient(to right, #E7EAF1 1.9047619048%, transparent 1.9047619048%) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
 }
 .search.-contained.-small .search-button {
+  background: -webkit-gradient(linear, left top, right top, color-stop(2.2222222222%, #E7EAF1), color-stop(2.2222222222%, transparent)) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=5387F7&size[width]=20&size[height]=20) no-repeat 20px center;
   background: linear-gradient(to right, #E7EAF1 2.2222222222%, transparent 2.2222222222%) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=5387F7&size[width]=20&size[height]=20) no-repeat 20px center;
 }
 .search.-contained.-small .search-button:hover, .search.-contained.-small .search-button:focus, .search.-contained.-small .search-button.is-hover, .search.-contained.-small .search-button.is-focus {
+  background: -webkit-gradient(linear, left top, right top, color-stop(2.2222222222%, #E7EAF1), color-stop(2.2222222222%, transparent)) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
   background: linear-gradient(to right, #E7EAF1 2.2222222222%, transparent 2.2222222222%) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
 }
 .search.-contained.-small .search-button:active, .search.-contained.-small .search-button.is-active {
+  background: -webkit-gradient(linear, left top, right top, color-stop(2.2222222222%, #E7EAF1), color-stop(2.2222222222%, transparent)) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
   background: linear-gradient(to right, #E7EAF1 2.2222222222%, transparent 2.2222222222%) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
 }
 .search.-contained.-big .search-button {
+  background: -webkit-gradient(linear, left top, right top, color-stop(1.6666666667%, #E7EAF1), color-stop(1.6666666667%, transparent)) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=5387F7&size[width]=20&size[height]=20) no-repeat 20px center;
   background: linear-gradient(to right, #E7EAF1 1.6666666667%, transparent 1.6666666667%) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=5387F7&size[width]=20&size[height]=20) no-repeat 20px center;
 }
 .search.-contained.-big .search-button:hover, .search.-contained.-big .search-button:focus, .search.-contained.-big .search-button.is-hover, .search.-contained.-big .search-button.is-focus {
+  background: -webkit-gradient(linear, left top, right top, color-stop(1.6666666667%, #E7EAF1), color-stop(1.6666666667%, transparent)) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
   background: linear-gradient(to right, #E7EAF1 1.6666666667%, transparent 1.6666666667%) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
 }
 .search.-contained.-big .search-button:active, .search.-contained.-big .search-button.is-active {
+  background: -webkit-gradient(linear, left top, right top, color-stop(1.6666666667%, #E7EAF1), color-stop(1.6666666667%, transparent)) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
   background: linear-gradient(to right, #E7EAF1 1.6666666667%, transparent 1.6666666667%) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
 }
 .search-button[disabled], .search-button.is-disabled {
@@ -384,6 +401,7 @@ ico,
   font-weight: bold;
   font-style: normal;
   color: #5387F7;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background: none;
   border: none;

@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -137,8 +135,12 @@ ico,
 }
 
 .tile-utility-title .anchor {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .tile-utility-title .anchor .icon {
   margin: 0 !important;
@@ -147,10 +149,13 @@ ico,
   display: none;
 }
 
-/*** INSERT NEW TOKENS HERE ***/
 .tile-utility-title {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-decoration: none;
   cursor: pointer;
 }
@@ -159,15 +164,21 @@ ico,
   display: block;
 }
 .tile-utility-title .icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-/*** INSERT NEW ATOMS HERE ***/
 .tile-utility {
   display: grid;
   grid-template-columns: 1fr;
+  grid-auto-rows: -webkit-min-content;
   grid-auto-rows: min-content;
   overflow: hidden;
 }
@@ -201,7 +212,8 @@ ico,
   display: block;
   left: 50%;
   top: 50%;
-  transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
   min-height: 100%;
 }
 .tile-utility-image img {
@@ -213,45 +225,53 @@ ico,
 }
 .-align-x-left.tile-utility-image:not(.-align-y-top):not(.-align-y-bottom) img {
   left: 0;
-  transform: translatex(0%) translatey(-50%);
+  -webkit-transform: translatex(0%) translatey(-50%);
+          transform: translatex(0%) translatey(-50%);
 }
 .-align-x-right.tile-utility-image:not(.-align-y-top):not(.-align-y-bottom) img {
   left: auto;
   right: 0;
-  transform: translatex(0%) translatey(-50%);
+  -webkit-transform: translatex(0%) translatey(-50%);
+          transform: translatex(0%) translatey(-50%);
 }
 .-align-y-top.tile-utility-image:not(.-align-x-left):not(.-align-x-right) img {
   top: 0;
-  transform: translatex(-50%) translatey(0%);
+  -webkit-transform: translatex(-50%) translatey(0%);
+          transform: translatex(-50%) translatey(0%);
 }
 .-align-y-bottom.tile-utility-image:not(.-align-x-left):not(.-align-x-right) img {
   top: auto;
   bottom: 0;
-  transform: translatex(-50%) translatey(0%);
+  -webkit-transform: translatex(-50%) translatey(0%);
+          transform: translatex(-50%) translatey(0%);
 }
 .-align-x-left.-align-y-top.tile-utility-image img {
   left: 0;
   top: 0;
-  transform: translatex(0%) translatey(0%);
+  -webkit-transform: translatex(0%) translatey(0%);
+          transform: translatex(0%) translatey(0%);
 }
 .-align-x-left.-align-y-bottom.tile-utility-image img {
   left: 0;
   top: auto;
   bottom: 0;
-  transform: translatex(0%) translatey(0%);
+  -webkit-transform: translatex(0%) translatey(0%);
+          transform: translatex(0%) translatey(0%);
 }
 .-align-x-right.-align-y-top.tile-utility-image img {
   left: auto;
   right: 0;
   top: 0;
-  transform: translatex(0%) translatey(0%);
+  -webkit-transform: translatex(0%) translatey(0%);
+          transform: translatex(0%) translatey(0%);
 }
 .-align-x-right.-align-y-bottom.tile-utility-image img {
   left: auto;
   right: 0;
   top: auto;
   bottom: 0;
-  transform: translatex(0%) translatey(0%);
+  -webkit-transform: translatex(0%) translatey(0%);
+          transform: translatex(0%) translatey(0%);
 }
 .tile-utility-title {
   grid-area: title;
@@ -262,10 +282,6 @@ ico,
   margin: 0;
 }
 
-/*** INSERT NEW MOLECULES HERE ***/
-/*** INSERT NEW COMPOUNDS HERE ***/
-/*** INSERT NEW ORGANISMS HERE ***/
-/*** INSERT NEW TEMPLATES HERE ***/
 .tile-utility {
   padding: 25px;
   grid-gap: 10px;
@@ -293,6 +309,7 @@ ico,
   opacity: 1;
 }
 .tile-utility-title .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;
@@ -304,6 +321,7 @@ ico,
   font-weight: normal;
   font-style: normal;
   color: #082B73;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background: none;
   border: none;

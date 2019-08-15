@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -136,16 +134,14 @@ ico,
   content: "";
 }
 
-/*** INSERT NEW TOKENS HERE ***/
-/*** INSERT NEW ATOMS HERE ***/
-/*** INSERT NEW MOLECULES HERE ***/
-/*** INSERT NEW COMPOUNDS HERE ***/
 .header {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   display: grid;
   grid-template-areas: "notifications" "main";
   grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, -webkit-min-content);
   grid-template-rows: repeat(2, min-content);
   z-index: 5;
 }
@@ -166,7 +162,9 @@ ico,
 @media (min-width: 901px) {
   .header-main {
     display: grid;
+    grid-template-columns: [full-start body-start] 1fr [body-end search-start] -webkit-min-content [search-end full-end];
     grid-template-columns: [full-start body-start] 1fr [body-end search-start] min-content [search-end full-end];
+    grid-template-rows: [full-start utility-start] 40px [utility-end main-start] -webkit-min-content [main-end full-end];
     grid-template-rows: [full-start utility-start] 40px [utility-end main-start] min-content [main-end full-end];
   }
 }
@@ -204,6 +202,8 @@ ico,
 }
 @media (min-width: 901px) {
   .header-main-search {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
   }
 }
@@ -231,11 +231,10 @@ ico,
   position: absolute;
   display: block;
   left: 50%;
-  transform: translatex(-50%);
+  -webkit-transform: translatex(-50%);
+          transform: translatex(-50%);
 }
 
-/*** INSERT NEW ORGANISMS HERE ***/
-/*** INSERT NEW TEMPLATES HERE ***/
 @media (max-width: 600px) {
   .header-main {
     padding-left: 10px;
@@ -325,6 +324,7 @@ ico,
   opacity: 1;
   z-index: 6;
   top: 0;
+  -webkit-transition: right 0s linear, z-index 0s linear, opacity 0.25s ease, top 0.25s ease;
   transition: right 0s linear, z-index 0s linear, opacity 0.25s ease, top 0.25s ease;
 }
 .header-main-toggle:not(:checked) ~ .header-main-overlay {
@@ -332,5 +332,6 @@ ico,
   opacity: 0;
   z-index: -1;
   top: -100%;
+  -webkit-transition: opacity 0.25s ease, top 0.25s ease, z-index 0s linear 0.25s, right 0s linear 0.25s;
   transition: opacity 0.25s ease, top 0.25s ease, z-index 0s linear 0.25s, right 0s linear 0.25s;
 }

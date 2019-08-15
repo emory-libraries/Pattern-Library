@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -137,8 +135,12 @@ ico,
 }
 
 .sidebar-list-section-title .anchor {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .sidebar-list-section-title .anchor .icon {
   margin: 0 !important;
@@ -147,22 +149,31 @@ ico,
   display: none;
 }
 
-/*** INSERT NEW TOKENS HERE ***/
-/*** INSERT NEW ATOMS HERE ***/
-/*** INSERT NEW MOLECULES HERE ***/
 .sidebar-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 .sidebar-list-section-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .sidebar-list-section-title .icon {
   display: none;
 }
 .has-icon.sidebar-list-section-title .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .sidebar-list-section-content .list,
@@ -195,7 +206,11 @@ ico,
 }
 .sidebar-list-section-content .button,
 .sidebar-list-section-content button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
   max-width: max-content;
 }
 .sidebar-list-button {
@@ -204,9 +219,6 @@ ico,
   margin: 0 auto;
 }
 
-/*** INSERT NEW COMPOUNDS HERE ***/
-/*** INSERT NEW ORGANISMS HERE ***/
-/*** INSERT NEW TEMPLATES HERE ***/
 .sidebar-list-section {
   padding-top: 35px;
   padding-bottom: 35px;
@@ -245,6 +257,7 @@ ico,
   opacity: 1;
 }
 .sidebar-list-section-title .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;
@@ -268,9 +281,15 @@ ico,
   padding-left: 26px;
 }
 .sidebar-list-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 35px;
   margin-bottom: 35px;
   text-decoration: none !important;

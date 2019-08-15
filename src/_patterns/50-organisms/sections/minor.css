@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -137,8 +135,12 @@ ico,
 }
 
 .section-minor-title .anchor {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .section-minor-title .anchor .icon {
   margin: 0 !important;
@@ -147,31 +149,32 @@ ico,
   display: none;
 }
 
-/*** INSERT NEW TOKENS HERE ***/
 .section-minor-title::after {
   display: block;
   width: 100%;
   height: 0;
 }
 
-/*** INSERT NEW ATOMS HERE ***/
-/*** INSERT NEW MOLECULES HERE ***/
-/*** INSERT NEW COMPOUNDS HERE ***/
 .section-minor-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 0;
 }
 .section-minor-title .icon:not(:first-child) {
   display: none;
 }
-/*** INSERT NEW ORGANISMS HERE ***/
-/*** INSERT NEW TEMPLATES HERE ***/
 .section-minor {
   background-color: #FFFFFF;
 }
 .section-minor {
+  -webkit-transition: padding 0.25s ease;
   transition: padding 0.25s ease;
 }
 @media (max-width: 600px) {
@@ -246,6 +249,7 @@ ico,
   opacity: 1;
 }
 .section-minor-title .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;

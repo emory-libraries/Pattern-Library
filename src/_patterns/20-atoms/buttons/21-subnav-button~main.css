@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -137,8 +135,12 @@ ico,
 }
 
 .subnav-button-category-heading .anchor, .subnav-button-group-heading .anchor {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .subnav-button-category-heading .anchor .icon, .subnav-button-group-heading .anchor .icon {
   margin: 0 !important;
@@ -147,11 +149,16 @@ ico,
   display: none;
 }
 
-/*** INSERT NEW TOKENS HERE ***/
 .subnav-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   cursor: pointer;
 }
 [disabled].subnav-button, .is-disabled.subnav-button {
@@ -159,10 +166,19 @@ ico,
 }
 
 .subnav-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   min-height: 55px;
   height: auto;
   width: 100%;
@@ -172,32 +188,59 @@ ico,
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .subnav-button {
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 @media (min-width: 901px) {
   .subnav-button {
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 .subnav-button .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .-viewall.subnav-button {
+  position: -webkit-sticky;
   position: sticky;
   bottom: 0;
 }
 @media (min-width: 901px) {
   .-viewall.subnav-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     min-height: 75px;
     position: relative;
     bottom: unset;
@@ -207,17 +250,31 @@ ico,
   display: none;
 }
 .-back.subnav-button {
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1;
 }
 .-back.subnav-button::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media (min-width: 901px) {
   .-back.subnav-button {
@@ -225,6 +282,8 @@ ico,
   }
 }
 .-resource.subnav-button .subnav-button-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   top: 0;
   right: 0;
@@ -235,14 +294,25 @@ ico,
   display: none;
 }
 .-resource.subnav-button .subnav-button-option {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  align-self: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
 }
 .subnav-button-alias {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .subnav-button-alias {
@@ -275,15 +345,13 @@ ico,
   opacity: 0.5;
 }
 
-/*** INSERT NEW ATOMS HERE ***/
-/*** INSERT NEW MOLECULES HERE ***/
-/*** INSERT NEW COMPOUNDS HERE ***/
-/*** INSERT NEW ORGANISMS HERE ***/
-/*** INSERT NEW TEMPLATES HERE ***/
 .subnav-button {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border: none;
   background: none;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 @media (max-width: 600px) {
@@ -446,8 +514,10 @@ ico,
 }
 .subnav-button.-resource .subnav-button-options {
   --max: 300px;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
-  box-shadow: inset 2px 2px 3px rgba(9, 28, 68, 0.1);
+  -webkit-box-shadow: inset 2px 2px 3px rgba(9, 28, 68, 0.1);
+          box-shadow: inset 2px 2px 3px rgba(9, 28, 68, 0.1);
   color: inherit;
   background-color: #D0DEFD;
 }
@@ -466,6 +536,7 @@ ico,
   overflow: auto;
 }
 .subnav-button.-resource .subnav-button-option {
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background-color: transparent;
   padding-left: 10px;
@@ -632,6 +703,7 @@ ico,
   opacity: 1;
 }
 .subnav-button-group-heading .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;
@@ -701,6 +773,7 @@ ico,
   opacity: 1;
 }
 .subnav-button-category-heading .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;
@@ -746,6 +819,7 @@ ico,
 }
 .subnav-button-overflow {
   --max: 1500px;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .subnav-button-overflow-toggle:not(:checked):not(.is-checked) + .subnav-button-overflow {

@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -136,11 +134,14 @@ ico,
   content: "";
 }
 
-/*** INSERT NEW TOKENS HERE ***/
 .copyright .link,
 .copyright a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-decoration: none;
   cursor: pointer;
 }
@@ -151,28 +152,51 @@ ico,
 }
 .copyright .link .icon,
 .copyright a .icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 @media (min-width: 901px) {
   .copyright {
-    flex-direction: row;
-    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 @media (min-width: 1200px) {
   .copyright {
-    flex-direction: row;
-    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 .copyright-notice + .copyright-notice::before,
@@ -186,23 +210,34 @@ ico,
   position: absolute;
   display: block;
   top: 50%;
-  transform: translatey(-50%);
+  -webkit-transform: translatey(-50%);
+          transform: translatey(-50%);
   left: 0;
 }
 .copyright-notice {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media (min-width: 901px) {
   .copyright-notice {
-    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 @media (min-width: 1265px) {
   .copyright-notice {
-    flex-basis: unset;
+    -ms-flex-preferred-size: unset;
+        flex-basis: unset;
   }
 }
 @media (min-width: 901px) {
@@ -216,16 +251,19 @@ ico,
   }
 }
 .copyright-notice .copyright-signature {
-  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 @media (min-width: 901px) {
   .copyright-notice .copyright-signature {
-    flex-basis: unset;
+    -ms-flex-preferred-size: unset;
+        flex-basis: unset;
   }
 }
 @media (min-width: 1200px) {
   .copyright-notice .copyright-signature {
-    flex-basis: unset;
+    -ms-flex-preferred-size: unset;
+        flex-basis: unset;
   }
 }
 @media (min-width: 901px) {
@@ -245,11 +283,6 @@ ico,
   grid-area: phone;
 }
 
-/*** INSERT NEW ATOMS HERE ***/
-/*** INSERT NEW MOLECULES HERE ***/
-/*** INSERT NEW COMPOUNDS HERE ***/
-/*** INSERT NEW ORGANISMS HERE ***/
-/*** INSERT NEW TEMPLATES HERE ***/
 .copyright {
   margin-top: 25px;
   margin-bottom: 25px;
@@ -281,6 +314,7 @@ ico,
   font-weight: bold;
   font-style: normal;
   color: #D0DEFD;
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background: none;
   border: none;

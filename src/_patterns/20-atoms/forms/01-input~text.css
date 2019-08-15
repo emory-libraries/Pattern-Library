@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -136,9 +134,9 @@ ico,
   content: "";
 }
 
-/*** INSERT NEW TOKENS HERE ***/
 .input {
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   -webkit-appearance: none;
   display: block;
 }
@@ -161,7 +159,8 @@ ico,
   position: absolute;
   right: 0;
   height: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   z-index: 1;
 }
 .-select.-inline.input {
@@ -191,12 +190,16 @@ ico,
 }
 .input-field:not(.-inline) {
   grid-template-areas: "label" "field";
+  grid-template-columns: -webkit-min-content;
   grid-template-columns: min-content;
 }
 .-inline.input-field {
   grid-template-areas: "field label";
+  grid-template-columns: -webkit-min-content auto;
   grid-template-columns: min-content auto;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .input-field .input {
   margin-bottom: 0;
@@ -210,11 +213,15 @@ ico,
   display: grid;
 }
 .-row.input-container {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   grid-template-rows: 1fr;
 }
 .-column.input-container {
-  justify-content: left;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
 }
 .-inline.input-container {
   display: inline-grid;
@@ -223,16 +230,13 @@ ico,
   display: block;
 }
 
-/*** INSERT NEW ATOMS HERE ***/
-/*** INSERT NEW MOLECULES HERE ***/
-/*** INSERT NEW COMPOUNDS HERE ***/
-/*** INSERT NEW ORGANISMS HERE ***/
-/*** INSERT NEW TEMPLATES HERE ***/
 .input {
   background-color: #FFFFFF;
   border: 1px solid #B6BDCC;
   border-radius: 5px;
-  box-shadow: inset 1px 2px 4px rgba(182, 189, 204, 0.5);
+  -webkit-box-shadow: inset 1px 2px 4px rgba(182, 189, 204, 0.5);
+          box-shadow: inset 1px 2px 4px rgba(182, 189, 204, 0.5);
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   padding: 10px 20px;
   margin-bottom: 2em;
@@ -265,20 +269,6 @@ ico,
   text-align: left;
   color: #605858;
 }
-.input:-moz-placeholder, .input::-moz-placeholder, .input.-text:-moz-placeholder, .input.-text::-moz-placeholder {
-  opacity: 0.5;
-}
-.input:-moz-placeholder, .input::-moz-placeholder, .input.-text:-moz-placeholder, .input.-text::-moz-placeholder {
-  font-family: "Cardo", serif;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1.6111;
-  letter-spacing: normal;
-  text-transform: none;
-  text-align: left;
-  color: #605858;
-}
 .input:-ms-input-placeholder, .input.-text:-ms-input-placeholder {
   opacity: 0.5;
 }
@@ -292,9 +282,34 @@ ico,
   text-transform: none;
   text-align: left;
   color: #605858;
+}
+.input::-ms-input-placeholder, .input.-text::-ms-input-placeholder {
+  opacity: 0.5;
 }
 .input::placeholder, .input.-text::placeholder {
   opacity: 0.5;
+}
+.input::-webkit-input-placeholder, .input.-text::-webkit-input-placeholder {
+  font-family: "Cardo", serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6111;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
+}
+.input::-ms-input-placeholder, .input.-text::-ms-input-placeholder {
+  font-family: "Cardo", serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.6111;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
 }
 .input::placeholder, .input.-text::placeholder {
   font-family: "Cardo", serif;
@@ -322,7 +337,8 @@ ico,
 .input.-inline, .input.-text.-inline {
   border: none;
   border-bottom: 1px solid #5387F7;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background-color: transparent;
   border-radius: 0;
   padding-left: 0px;
@@ -355,12 +371,12 @@ ico,
   font-size: 1.56em;
   line-height: 1.5;
 }
-.input.-search.-big:-moz-placeholder, .input.-search.-big::-moz-placeholder {
+.input.-search.-big:-ms-input-placeholder {
   font-family: "Cardo", serif;
   font-size: 1.56em;
   line-height: 1.5;
 }
-.input.-search.-big:-ms-input-placeholder {
+.input.-search.-big::-ms-input-placeholder {
   font-family: "Cardo", serif;
   font-size: 1.56em;
   line-height: 1.5;
@@ -375,12 +391,12 @@ ico,
   font-size: 0.78em;
   line-height: 1.7857;
 }
-.input.-search.-small:-moz-placeholder, .input.-search.-small::-moz-placeholder {
+.input.-search.-small:-ms-input-placeholder {
   font-family: "Open Sans", sans-serif;
   font-size: 0.78em;
   line-height: 1.7857;
 }
-.input.-search.-small:-ms-input-placeholder {
+.input.-search.-small::-ms-input-placeholder {
   font-family: "Open Sans", sans-serif;
   font-size: 0.78em;
   line-height: 1.7857;
@@ -399,7 +415,8 @@ ico,
 .input.-date.-inline {
   border: none;
   border-bottom: 1px solid #5387F7;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background-color: transparent;
   border-radius: 0;
   padding-left: 0px;
@@ -415,7 +432,8 @@ ico,
 .input.-time.-inline {
   border: none;
   border-bottom: 1px solid #5387F7;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background-color: transparent;
   border-radius: 0;
   padding-left: 0px;
@@ -426,6 +444,7 @@ ico,
   background-position: center right;
 }
 .input.-select {
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background-image: url(../icons/php/icon.php?id=material-keyboard_arrow_down&color=5387F7&size[width]=20&size[height]=20);
 }
@@ -439,11 +458,13 @@ ico,
   margin-bottom: 0;
   font: inherit;
   background-color: transparent;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   color: inherit;
   overflow: auto;
   border-radius: 0;
-  border-image: linear-gradient(to right, #5387F7 calc(100% - (0px + 30px + 10px)), transparent calc(100% - (0px + 30px + 10px))) 1/0 0 1px 0;
+  -o-border-image: linear-gradient(to right, #5387F7 calc(100% - (0px + 30px + 10px)), transparent calc(100% - (0px + 30px + 10px))) 1/0 0 1px 0;
+     border-image: linear-gradient(to right, #5387F7 calc(100% - (0px + 30px + 10px)), transparent calc(100% - (0px + 30px + 10px))) 1/0 0 1px 0;
   padding-left: 0px;
   padding-right: calc(0px + 30px + 10px);
   padding-top: 0px;
@@ -467,6 +488,7 @@ ico,
   color: #082B73;
 }
 .input.-checkbox + .input-label, .input.-radio + .input-label {
+  -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
 .input.-checkbox + .input-label, .input.-radio + .input-label {
@@ -496,9 +518,6 @@ ico,
   border-radius: 100%;
 }
 .input.-radio:checked, .input.-radio.is-checked {
-  background-image: -webkit-radial-gradient(circle at center, #5387F7 40%, transparent 45%);
-  background-image: -moz-radial-gradient(circle at center, #5387F7 40%, transparent 45%);
-  background-image: -o-radial-gradient(circle at center, #5387F7 40%, transparent 45%);
   background-image: radial-gradient(circle at center, #5387F7 40%, transparent 45%);
 }
 .input-label {
@@ -562,6 +581,7 @@ ico,
   --auto: min-content;
   --gap: 1em;
   grid-template-columns: var(--layout);
+  grid-template-rows: -webkit-min-content;
   grid-template-rows: min-content;
   grid-auto-flow: var(--flow);
   grid-auto-columns: var(--auto);

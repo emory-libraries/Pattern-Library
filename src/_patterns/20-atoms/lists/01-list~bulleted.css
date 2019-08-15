@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i,700);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i);
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot");
@@ -137,8 +135,12 @@ ico,
 }
 
 .list-title .anchor {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .list-title .anchor .icon {
   margin: 0 !important;
@@ -147,7 +149,6 @@ ico,
   display: none;
 }
 
-/*** INSERT NEW TOKENS HERE ***/
 .list {
   margin-left: 0;
   margin-right: 0;
@@ -197,13 +198,10 @@ ico,
   display: block;
 }
 .-files.list .link {
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
-/*** INSERT NEW ATOMS HERE ***/
-/*** INSERT NEW MOLECULES HERE ***/
-/*** INSERT NEW COMPOUNDS HERE ***/
-/*** INSERT NEW ORGANISMS HERE ***/
-/*** INSERT NEW TEMPLATES HERE ***/
 .list:not(.-numbered):not(.-links):not(.-topics):not(.-files), .list.-bulleted {
   padding-left: 25px;
 }
@@ -248,6 +246,7 @@ ico,
   opacity: 1;
 }
 .list-title .anchor {
+  -webkit-transition: visibility 0s, opacity 0.25s ease;
   transition: visibility 0s, opacity 0.25s ease;
   margin-left: 20px;
   width: 25px;
