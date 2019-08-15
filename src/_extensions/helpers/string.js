@@ -99,7 +99,10 @@ const helpers = {
   },
 
   // Pad a string to the given length using the given characters.
-  pad( string, length, chars, options ) {
+  pad( string, length, chars ) {
+
+    // Capture options.
+    options = _.last([...arguments]);
 
     // Set a default character if none was given.
     chars = !_.isString(chars) ? ' ' : chars;
