@@ -185,7 +185,7 @@ const helpers = {
       else if( !_.isArray(value) ) value = [value];
 
       // For add/subtract methods, apply the additions/subtractions in order.
-      if( ['add', 'subtract'].includes($method) ) {
+      if( ['add', 'subtract'].includes(method) ) {
 
         // Loop through each pair of values, and execute its operation.
         _.each(value, (args) => _moment[method](...args));

@@ -158,6 +158,13 @@ Components.register('hours', {
     this.previous.start = this.date.start;
     this.previous.end = this.date.end;
 
+  },
+
+  mounted() {
+
+    // Set the initially checked input.
+    $(this.$refs['input'][0]).prop('checked', true);
+
   }
 
 });
