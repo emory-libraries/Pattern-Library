@@ -100,7 +100,162 @@ const helpers = {
     // Determine if the moment is between the two other moments.
     return moment(ref).isBetween(compA, compB, unit, inclusivity);
 
-}
+},
+
+  // Create a moment from the given string in a given format.
+  momentFrom( string, formats, options ) {
+
+    // If any of the following keywords were given, then unset the string to default to the current day.
+    if( ['now', 'today'].includes(string) ) string = undefined;
+
+    // Create a moment from the given date string and formats.
+    return moment(string, formats);
+
+  },
+
+  // Modify a moment using the native moment API.
+  momentAPI( _moment, options ) {
+
+    // If a moment was not given, and only the API was initialized, then swap the passed arguments.
+    if( !_.isPlainObject(options) ) {
+
+      // Assume only the options were passed.
+      options = _moment;
+
+      // Unset the moment.
+      _moment = null;
+
+    }
+
+    // Extract API settings from the given options.
+    const settings = _.get(options, 'hash', {});
+
+    // If any of the following keywords were given, then unset the string to default to the current day.
+    if( ['now', 'today'].includes(_moment) ) _moment = undefined;
+
+    // If a moment was not given, then try to covert the given thing to a moment.
+    if( !moment.isMoment(_moment) ) _moment = moment(_moment || settings.date, settings.fromFormat);
+
+    // Only continue if a valid moment exists.
+    if( !_moment.isValid() ) return;
+
+    // Get a list of operations.
+    const operations = _.filter(_.keys(settings), (key) => {
+
+      // Ignore non-method keys.
+      return !['date', 'fromFormat', 'order'].includes(key);
+
+    });
+
+    // Get the intended order of operations.
+    let order = _.get(settings, 'order', operations.length == 1 ? operations[0] : false);
+
+    // Convert the moment to an array if it was given as a string.
+    if( _.isString(order) ) order = order.split(/[,;]? +|\./).map(_.trim);
+
+    // Remove any settings that are known non-methods.
+    _.unset(settings, 'date');
+    _.unset(settings, 'fromFormat');
+    _.unset(settings, 'order');
+
+    // Require that an order be given (for two or more operations), or always return the moment as is.
+    if( !order ) return _moment;
+
+    // Manipulate the moment based on the given order of operations.
+    _.each(order, (method) => {
+
+      // Only continue modifying the moment if it's still in moment form.
+      if( !moment.isMoment(_moment) ) return;
+
+      // Skip the method if a matching method setting was not given or if the method doesn't exist.
+      if( !_.has(settings, method) || !_moment[method] ) return;
+
+      // Otherwise, get the method's value.
+      let value = settings[method];
+
+      // For select methods, enable an easier-to-use string syntax for passing arguments.
+      if( ['add', 'subtract'].includes(method) && _.isString(value) ) {
+
+        // Convert the string to an array of arrays.
+        value = value.split(', ').map((value) => value.split(' ').map(_.trim));
+
+      }
+
+      // Otherwise, for all other values, convert it to array form if it wasn't given as one.
+      else if( !_.isArray(value) ) value = [value];
+
+      // For add/subtract methods, apply the additions/subtractions in order.
+      if( ['add', 'subtract'].includes(method) ) {
+
+        // Loop through each pair of values, and execute its operation.
+        _.each(value, (args) => _moment[method](...args));
+
+      }
+
+      // For getter/setter methods, allow empty values to indicate that the getter should be used.
+      else if( [
+        'millisecond', 'milliseconds',
+        'second', 'seconds',
+        'minute', 'minutes',
+        'hour', 'hours',
+        'date', 'dates',
+        'day', 'days',
+        'weekday',
+        'isoWeekday',
+        'dayOfYear',
+        'week', 'weeks',
+        'isoWeek', 'isoWeeks',
+        'month', 'months',
+        'quarter', 'quarters',
+        'year', 'years',
+        'weekYear',
+        'isoWeekYear',
+        'weeksInYear',
+        'isoWeeksInYear',
+        'valueOf',
+        'unix',
+        'daysInMonth',
+        'toDate',
+        'toArray',
+        'toJSON',
+        'toISOString',
+        'toObject',
+        'inspect'
+      ].includes(method) && [
+        true,
+        null,
+        undefined
+      ].includes(value[0]) ) _moment = _moment[method]();
+
+      // For getter methods that accept arguments, manipulate the moment but capture the output.
+      else if( [
+        'format',
+        'fromNow',
+        'from',
+        'toNow',
+        'to',
+        'calendar',
+        'difference',
+        'valueOf',
+        'unix',
+        'daysInMonth',
+        'toDate',
+        'toArray',
+        'toJSON',
+        'toISOString',
+        'toObject',
+        'inspect'
+      ].includes(method) ) _moment = value ? _moment[method](...value) : _moment[method]();
+
+      // Otherwise, directly manipulate the moment using the given method.
+      else _moment[method](...value);
+
+    });
+
+    // Return the modified moment.
+    return _moment;
+
+  }
 
 };
 

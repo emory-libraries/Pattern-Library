@@ -143,9 +143,15 @@ ico,
 [disabled].input, .is-disabled.input {
   cursor: not-allowed;
 }
+.-inline.input {
+  display: inline-block;
+}
 .-date.input::-webkit-inner-spin-button, .-time.input::-webkit-inner-spin-button {
   appearance: none;
   -webkit-appearance: none;
+}
+.-date.-inline.input, .-time.-inline.input {
+  display: inline-block;
 }
 .-date.input::-webkit-calendar-picker-indicator {
   color: transparent;
@@ -328,6 +334,18 @@ ico,
 .input[disabled], .input.is-disabled, .input.-text[disabled], .input.-text.is-disabled {
   opacity: 0.5;
 }
+.input.-inline, .input.-text.-inline {
+  border: none;
+  border-bottom: 1px solid #5387F7;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: transparent;
+  border-radius: 0;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
 .input.-date::-webkit-datetime-edit, .input.-time::-webkit-datetime-edit {
   opacity: 0.5;
 }
@@ -394,8 +412,36 @@ ico,
 .input.-date::-webkit-calendar-picker-indicator {
   width: 40px;
 }
+.input.-date.-inline {
+  border: none;
+  border-bottom: 1px solid #5387F7;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: transparent;
+  border-radius: 0;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 30px;
+  background-position: center right;
+}
 .input.-time {
   background-image: url(../icons/php/icon.php?id=material-access_time&color=5387F7&size[width]=20&size[height]=20);
+}
+.input.-time.-inline {
+  border: none;
+  border-bottom: 1px solid #5387F7;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: transparent;
+  border-radius: 0;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 30px;
+  background-position: center right;
 }
 .input.-select {
   -webkit-transition: all 0.25s ease;
