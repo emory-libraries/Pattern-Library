@@ -95,7 +95,31 @@ const helpers = {
 
     // Determine if the string ends with the substring.
     return str.substring(str.length - substr.length) === substr;
-    
+
+  },
+
+  // Pad a string to the given length using the given characters.
+  pad( string, length, chars ) {
+
+    // Capture options.
+    options = _.last([...arguments]);
+
+    // Set a default character if none was given.
+    chars = !_.isString(chars) ? ' ' : chars;
+
+    // Get the default padding position.
+    const position = _.get(options.hash, 'position', 'start');
+
+    // Get the appropriate padding method based on the padding position.
+    const pad = {
+      start: _.padStart,
+      end: _.padEnd,
+      both: _.pad
+    }[position];
+
+    // Pad the string.
+    return pad(string, length, chars);
+
   }
 
 };

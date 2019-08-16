@@ -41,6 +41,11 @@ module.exports = {
 
     return _.has(storage, key);
 
+  },
+  _storageInspect() {
+
+    return storage;
+
   }
 
 };

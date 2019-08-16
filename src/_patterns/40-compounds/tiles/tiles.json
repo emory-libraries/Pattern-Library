@@ -1,5 +1,5 @@
 { 
-  "type": "listing",
+  "tile-type": "listing",
   "tiles": [
     {
       "image": {
