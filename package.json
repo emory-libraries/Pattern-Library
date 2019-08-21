@@ -1,6 +1,6 @@
 {
   "name": "Pattern-Library",
-  "version": "1.0.0-dev.5",
+  "version": "1.0.0-dev.5-push-push-push-push-push-push",
   "description": "The official Pattern Library of Emory Libraries",
   "scripts": {
     "postinstall": "node node_modules/patternlab-node/core/scripts/postinstall.js"
