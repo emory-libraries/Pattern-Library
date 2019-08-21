@@ -135,8 +135,6 @@ ico,
 }
 
 .header {
-  position: -webkit-sticky;
-  position: sticky;
   top: 0;
   display: grid;
   grid-template-areas: "notifications" "main";
@@ -146,10 +144,6 @@ ico,
   z-index: 5;
 }
 #eul-vue .header {
-  top: 0;
-  right: 0;
-  left: 0;
-  position: fixed;
   width: 100%;
 }
 .header-notifications {

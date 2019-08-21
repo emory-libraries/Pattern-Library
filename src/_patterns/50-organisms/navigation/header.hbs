@@ -1,8 +1,16 @@
 {{#with header}}
 
 <header class="header{{#if ../classes}} {{../classes}}{{/if}}">
-
-  <div class="header-notifications"></div>
+  
+  {{#if __global__.notifications}}
+  <div class="header-notifications">
+    {{#each __global__.notifications}}
+      {{#if (eq enabled 'Yes')}}
+        {{>compounds-notifications}}
+      {{/if}}
+    {{/each}}
+  </div>
+  {{/if}}
 
   <div class="header-main">
 
