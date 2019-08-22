@@ -138,18 +138,20 @@ ico,
   margin: 0 auto;
   display: grid;
   grid-template-areas: "header" "main" "footer";
-  grid-template-rows: 135px 1fr auto;
+  grid-template-rows: -webkit-min-content 1fr auto;
+  grid-template-rows: min-content 1fr auto;
   grid-template-columns: 100%;
-}
-@media (min-width: 901px) {
-  .material-page {
-    grid-template-rows: 150px 1fr auto;
-  }
-}
-@media (min-width: 1200px) {
-  .material-page {
-    grid-template-rows: 130px 1fr auto;
-  }
+  /*
+    // Adjust grid layout on larger screens.
+    @include breakpoint-l {
+      grid-template-rows: 150px 1fr auto;
+    };
+
+    // Adjust grid layout on even larger screens.
+    @include breakpoint-xl {
+      grid-template-rows: 130px 1fr auto;
+    };
+  */
 }
 .material-page-header {
   grid-area: header;
