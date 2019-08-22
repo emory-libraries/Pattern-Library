@@ -1,5 +1,27 @@
 {
   "title": "Emory Libraries",
+  "header": {
+    "notifications": {
+      "notification": [
+        {
+          "disabled": false,
+          "label": "Update",
+          "type": "info",
+          "dismissible": true,
+          "uid": "notification-1",
+          "message": "<p>Ipsum deserunt ita nulla velit, ea quibusdam est probant eu occaecat si enim litteris, vidisse fugiat voluptate, duis laboris se exercitation.<\/p>"
+        },
+        {
+          "disabled": true,
+          "label": "Alert",
+          "type": "caution",
+          "dismissible": false,
+          "uid": "notification-2",
+          "message": "<p>Ipsum deserunt ita nulla velit, ea quibusdam est probant eu occaecat si enim litteris, vidisse fugiat voluptate, duis laboris se exercitation.<\/p>"
+        }
+      ]
+    }
+  },
   "intro": {
     "badge": "Featured",
     "hero": "//source.unsplash.com/1450x440",
