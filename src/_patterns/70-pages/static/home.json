@@ -451,36 +451,36 @@
       "sites": [
         {
           "site": "Emory Libraries",
-          "href": "web.library.emory.edu/",
+          "href": "http://web.library.emory.edu/",
           "active": true
         },
         {
           "site": "Business",
-          "href": "business.library.emory.edu"
+          "href": "http://business.library.emory.edu/"
         },
         {
           "site": "Center for Digital Scholarship",
-          "href": "digitalscholarship.emory.edu"
+          "href": "http://digitalscholarship.emory.edu/"
         },
         {
           "site": "Cox Hall Computing Center",
-          "href": "it.emory.edu/studentdigitallife/study_production_spaces/computing-center-at-cox-hall"
+          "href": "http://it.emory.edu/studentdigitallife/study_production_spaces/computing-center-at-cox-hall"
         },
         {
           "site": "Health Sciences",
-          "href": "health.library.emory.edu"
+          "href": "http://health.library.emory.edu"
         },
         {
           "site": "Law",
-          "href": "library.law.emory.edu"
+          "href": "http://library.law.emory.edu/"
         },
         {
           "site": "Library Service Center",
-          "href": "libraryservicecenter.org"
+          "href": "http://libraryservicecenter.org/"
         },
         {
           "site": "Music & Media",
-          "href": "web.library.emory.edu/about/libraries/woodruff-building/music-media-library.html"
+          "href": "https://web.library.emory.edu/about/libraries/woodruff-building/music-media-library.html"
         },
         {
           "site": "Oxford",
@@ -488,19 +488,19 @@
         },
         {
           "site": "Rose",
-          "href": "rose.library.emory.edu"
+          "href": "http://rose.library.emory.edu/"
         },
         {
           "site": "Science Commons",
-          "href": "web.library.emory.edu/about/libraries/other-libraries/science-commons"
+          "href": "https://web.library.emory.edu/about/libraries/other-libraries/science-commons/index.html"
         },
         {
           "site": "Theology",
-          "href": "www.pitts.emory.edu"
+          "href": "http://pitts.emory.edu/"
         },
         {
           "site": "Woodruff",
-          "href": "web.library.emory.edu/using-the-library/visiting-the-library/index.html"
+          "href": "http://web.library.emory.edu/using-the-library/visiting-the-library/index.html"
         }
       ],
       "search": {
@@ -932,36 +932,36 @@
       "sites": [
         {
           "site": "Emory Libraries",
-          "href": "web.library.emory.edu/",
+          "href": "http://web.library.emory.edu/",
           "active": true
         },
         {
           "site": "Business",
-          "href": "business.library.emory.edu"
+          "href": "http://business.library.emory.edu/"
         },
         {
           "site": "Center for Digital Scholarship",
-          "href": "digitalscholarship.emory.edu"
+          "href": "http://digitalscholarship.emory.edu/"
         },
         {
           "site": "Cox Hall Computing Center",
-          "href": "it.emory.edu/studentdigitallife/study_production_spaces/computing-center-at-cox-hall"
+          "href": "http://it.emory.edu/studentdigitallife/study_production_spaces/computing-center-at-cox-hall"
         },
         {
           "site": "Health Sciences",
-          "href": "health.library.emory.edu"
+          "href": "http://health.library.emory.edu"
         },
         {
           "site": "Law",
-          "href": "library.law.emory.edu"
+          "href": "http://library.law.emory.edu/"
         },
         {
           "site": "Library Service Center",
-          "href": "libraryservicecenter.org"
+          "href": "http://libraryservicecenter.org/"
         },
         {
           "site": "Music & Media",
-          "href": "web.library.emory.edu/about/libraries/woodruff-building/music-media-library.html"
+          "href": "https://web.library.emory.edu/about/libraries/woodruff-building/music-media-library.html"
         },
         {
           "site": "Oxford",
@@ -969,19 +969,19 @@
         },
         {
           "site": "Rose",
-          "href": "rose.library.emory.edu"
+          "href": "http://rose.library.emory.edu/"
         },
         {
           "site": "Science Commons",
-          "href": "web.library.emory.edu/about/libraries/other-libraries/science-commons"
+          "href": "https://web.library.emory.edu/about/libraries/other-libraries/science-commons/index.html"
         },
         {
           "site": "Theology",
-          "href": "www.pitts.emory.edu"
+          "href": "http://pitts.emory.edu/"
         },
         {
           "site": "Woodruff",
-          "href": "web.library.emory.edu/using-the-library/visiting-the-library/index.html"
+          "href": "http://web.library.emory.edu/using-the-library/visiting-the-library/index.html"
         }
       ],
       "channels": [
