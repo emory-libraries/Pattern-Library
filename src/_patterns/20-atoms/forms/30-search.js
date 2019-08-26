@@ -40,7 +40,7 @@ Components.register('search', {
 
   methods: {
 
-    validate( $event ) { console.log($event);
+    validate( $event ) {
 
       // Validate search field, and if it's invalid, prevent the search from submitting.
       if( !this.valid ) $event.preventDefault();
@@ -51,6 +51,13 @@ Components.register('search', {
 
       // Reset the search query.
       this.query = '';
+
+    },
+
+    simclick() {
+
+      // Simulate a click of the submit button.
+      this.$refs.search.click();
 
     }
 

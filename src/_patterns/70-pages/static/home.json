@@ -9,7 +9,7 @@
           "type": "info",
           "dismissible": true,
           "markdown": true,
-          "message": "Welcome to a preview of the new Emory Libraries web site. We are currently conducting internal testing of pages and features of the site. [Leave us feedback via our online form](https://docs.google.com/forms/d/1tUTu-lJMwm_Nzn5nrl75V7IzYgJkHKKNbQerV6mX7fk/viewform?ts=5d543f40&amp;edit_requested=true)."
+          "message": "Welcome to the preview of the newly designed Emory Libraries website. Please provide any [feedback](https://forms.gle/3eoDPxYYrxfJ6t3VA) you have about the new site. Please include your name and email if you would like someone to respond to your submission. More information about the launch of the new site will be coming soon. Thank you."
         }
       ]
     },
@@ -480,7 +480,7 @@
         },
         {
           "site": "Music & Media",
-          "href": "http://web.library.emory.edu/about/libraries/woodruff-building/music-media-library"
+          "href": "web.library.emory.edu/about/libraries/woodruff-building/music-media-library.html"
         },
         {
           "site": "Oxford",
@@ -961,7 +961,7 @@
         },
         {
           "site": "Music & Media",
-          "href": "http://web.library.emory.edu/about/libraries/woodruff-building/music-media-library"
+          "href": "web.library.emory.edu/about/libraries/woodruff-building/music-media-library.html"
         },
         {
           "site": "Oxford",
