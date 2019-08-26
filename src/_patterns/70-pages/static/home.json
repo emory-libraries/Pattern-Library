@@ -1,0 +1,1008 @@
+{
+  "title": "Emory Libraries",
+  "header": {
+    "notifications": {
+      "notification": [
+        {
+          "id": "beta-testing-preview-site",
+          "label": "Notice",
+          "type": "info",
+          "dismissible": true,
+          "markdown": true,
+          "message": "Welcome to a preview of the new Emory Libraries web site. We are currently conducting internal testing of pages and features of the site. [Leave us feedback via our online form](https://docs.google.com/forms/d/1tUTu-lJMwm_Nzn5nrl75V7IzYgJkHKKNbQerV6mX7fk/viewform?ts=5d543f40&amp;edit_requested=true)."
+        }
+      ]
+    },
+    "search": {
+      "back": {
+        "label": "Back to Menu",
+        "icon": {
+          "id": "material-chevron_right",
+          "position": "left"
+        }
+      },
+      "tabs": [
+        {
+          "label": "Library Catalog",
+          "value": "library-catalog"
+        },
+        {
+          "label": "Databases",
+          "value": "databases"
+        },
+        {
+          "label": "eJournals",
+          "value": "ejournals"
+        },
+        {
+          "label": "Research & Course Guides",
+          "value": "research-guides"
+        },
+        {
+          "label": "Finding Aids",
+          "value": "finding-aids"
+        },
+        {
+          "label": "This Site",
+          "value": "this-site"
+        }
+      ],
+      "services": [
+        {
+          "label": "Library Catalog",
+          "placeholder": "Search the Emory Library Catalog",
+          "id": "library-catalog",
+          "src": "http://discovere.emory.edu/primo_library/libweb/action/dlSearch.do?institution=EMORY&vid=discovere&query=any,contains,:query&libsearch=woodruff",
+          "default": true
+        },
+        {
+          "label": "Databases",
+          "placeholder": "Search for a Database",
+          "id": "databases",
+          "src": "https://guides.library.emory.edu/az.php?q=:query"
+        },
+        {
+          "label": "eJournals",
+          "placeholder": "Search Journal Titles",
+          "id": "ejournals",
+          "src": "http://emory-primoprod.hosted.exlibrisgroup.com/primo_library/libweb/action/dlSearch.do?institution=01EMORY&vid=discovere&loc=local%2Cscope%3A%28AZ01EMORY%29&fn=goAlmaAz&almaAzSearch=true&vl(freeText0)=:query&libsearch=woodruff"
+        },
+        {
+          "label": "Research & Course Guides",
+          "placeholder": "Search Research & Course Guides",
+          "id": "research-guides",
+          "src": "http://guides.library.emory.edu/srch.php?q=:query&libsearch=woodruff"
+        },
+        {
+          "label": "Finding Aids",
+          "placeholder": "Search Manuscript and Archival Collections",
+          "id": "finding-aids",
+          "src": "https://findingaids.library.emory.edu/search/?Submit=Search&keywords=:query&libsearch=woodruff"
+        },
+        {
+          "label": "This Site",
+          "placeholder": "Search this site on Google",
+          "id": "this-site",
+          "src": "https://www.google.com/search?q=:query%20site:web.library.emory.edu"
+        }
+      ],
+      "button": {
+        "position": "inside",
+        "icon": "material-search",
+        "label": "Search"
+      },
+      "processor": "/php/search.php"
+    },
+    "navigation": {
+      "main": [
+        {
+          "label": "Materials",
+          "subnavigation": [
+            {
+              "label": "Books",
+              "href": "https://guides.libraries.emory.edu/main/Research_Info"
+            },
+            {
+              "label": "Films and Videos",
+              "href": "https://web.library.emory.edu/library-materials/audio-film-scores-video/index.html"
+            },
+            {
+              "label": "Music and Scores",
+              "href": "https://web.library.emory.edu/library-materials/audio-film-scores-video/index.html"
+            },
+            {
+              "label": "Journals and Newspapers",
+              "href": "https://guides.libraries.emory.edu/main/united-states-newspapers"
+            },
+            {
+              "label": "Databases",
+              "href": "https://web.library.emory.edu/library-materials/databases-ebooks-ejournals/index.html"
+            },
+            {
+              "label": "Course Reserves",
+              "href": "http://web.library.emory.edu/using-the-library/course-reserves/index.html"
+            },
+            {
+              "label": "Audiobooks",
+              "href": "https://guides.libraries.emory.edu/main/ebooks"
+            },
+            {
+              "label": "Research and Library Guides",
+              "href": "https://guides.libraries.emory.edu/"
+            },
+            {
+              "label": "Theses and Dissertations",
+              "href": "https://guides.libraries.emory.edu/main/dissertations"
+            },
+            {
+              "label": "Archives and Special Collections",
+              "href": "http://rose.library.emory.edu"
+            },
+            {
+              "label": "Images",
+              "href": "https://guides.libraries.emory.edu/main/Images"
+            }
+          ],
+          "viewall": {
+            "href": "http://web.library.emory.edu/library-materials/index.html"
+          }
+        },
+        {
+          "label": "Tools",
+          "subnavigation": [
+            {
+              "label": "discoverE",
+              "alias": "Books, eBooks, Journals, Videos",
+              "href": "https://guides.libraries.emory.edu/main/discovere_databases",
+              "resource": "http://discovere.emory.edu/primo_library/libweb/action/search.do"
+            },
+            {
+              "label": "Canvas",
+              "alias": "Course Platform",
+              "href": "https://canvas.emory.edu/courses/30368",
+              "resource": "https://canvas.emory.edu"
+            },
+            {
+              "label": "eJournals",
+              "alias": "Academic Journals",
+              "href": "http://web.library.emory.edu/library-materials/databases-ebooks-ejournals/index.html",
+              "resource": "http://discovere.emory.edu/primo_library/libweb/action/dlSearch.do?institution=01EMORY&vid=discovere&query=facet_atoz%2cexact%2cA&indx=1&bulkSize=30&dym=false&loc=local%2cscope%3a(AZ01EMORY)&fn=goAlmaAz&sortField=stitle&almaAzSearch=true&azSearch=true&selectedAzAlmaLetter=A"
+            },
+            {
+              "label": "ILLiad",
+              "alias": "Interlibrary Loans",
+              "href": "http://web.library.emory.edu/using-the-library/interlibrary-loan/index.html",
+              "resource": "https://illiad.library.emory.edu/logon/"
+            },
+            {
+              "label": "Databases@Emory",
+              "alias": "Databases",
+              "href": "http://web.library.emory.edu/library-materials/databases-ebooks-ejournals/index.html",
+              "resource": "https://guides.libraries.emory.edu/az.php"
+            },
+            {
+              "label": "EmoryFindingAids",
+              "alias": "Archival and Manuscripts",
+              "href": "https://guides.libraries.emory.edu/c.php?g=50026&p=324209",
+              "resource": "https://findingaids.library.emory.edu/"
+            },
+            {
+              "label": "ETDs",
+              "alias": "Theses and Dissertations",
+              "href": "http://sco.library.emory.edu/etds/instructions.html",
+              "resource": "https://etd.library.emory.edu/"
+            },
+            {
+              "label": "Overdrive",
+              "alias": "eBooks, Audiobooks",
+              "href": "https://guides.libraries.emory.edu/main/ebooks",
+              "resource": "https://emory.overdrive.com/"
+            },
+            {
+              "label": "OpenEmory",
+              "alias": "Faculty Works",
+              "href": "https://open.library.emory.edu/about/",
+              "resource": "https://open.library.emory.edu/"
+            },
+            {
+              "label": "Ares",
+              "alias": "Course Reserves",
+              "href": "http://web.library.emory.edu/using-the-library/course-reserves/index.html",
+              "resource": "https://reserves.library.emory.edu/"
+            },
+            {
+              "label": "LibGuides",
+              "alias": "Research Help and Guides",
+              "href": "https://guides.libraries.emory.edu/",
+              "resource": "https://guides.libraries.emory.edu/"
+            },
+            {
+              "label": "LinkedIn Learning",
+              "alias": "Online Training Courses",
+              "href": "http://it.emory.edu/linkedinlearning/",
+              "resource": "https://www.linkedin.com/learning"
+            }
+          ],
+          "viewall": {
+            "href": "http://web.library.emory.edu/research-learning/research-tools/index.html"
+          }
+        },
+        {
+          "label": "Services",
+          "subnavigation": [
+            {
+              "group": "Around the Library",
+              "subnavigation": [
+                {
+                  "label": "Reserve a Study or Presentation Room",
+                  "href": "http://sdl-resource-scheduler.emory.edu/reserve/WML_GroupStudyRooms"
+                },
+                {
+                  "label": "Find a Quiet Study Area",
+                  "href": "http://web.library.emory.edu/using-the-library/facilities-computing/places-to-study/quiet.html"
+                },
+                {
+                  "label": "Find a Workstation or Application",
+                  "href": "http://it.emory.edu/studentdigitallife/study_production_spaces/student-labs/software.html"
+                },
+                {
+                  "label": "Print, Copy, & Scan",
+                  "href": "http://web.library.emory.edu/research-learning/research-tools/library-simplified/printer-issue.html"
+                }
+              ]
+            },
+            {
+              "group": "Get Assistance",
+              "subnavigation": [
+                {
+                  "label": "Borrow Equipment & Gadgets",
+                  "href": "http://web.library.emory.edu/library-materials/gadgets/index.html"
+                },
+                {
+                  "label": "Research and Writing Assistance",
+                  "href": "https://guides.libraries.emory.edu/main/Research_Info"
+                },
+                {
+                  "label": "Access Course Reserves",
+                  "href": "http://web.library.emory.edu/using-the-library/course-reserves/index.html"
+                },
+                {
+                  "label": "Request or Recall Materials",
+                  "href": "http://web.library.emory.edu/using-the-library/borrow/woodruff/request-recall.html"
+                }
+              ]
+            },
+            {
+              "group": "Technology Assistance",
+              "subnavigation": [
+                {
+                  "label": "Connect from Off Campus (VPNs and Proxies)",
+                  "href": "https://web.library.emory.edu/using-the-library/off-campus.html"
+                },
+                {
+                  "label": "Connect to the Internet (On-Campus)",
+                  "href": "https://it.emory.edu/studentdigitallife/support/student-technology-support/self_service.html"
+                },
+                {
+                  "label": "Get Hardware or Software Support (Students)",
+                  "href": "http://it.emory.edu/studentdigitallife/support/student-technology-support/index.html"
+                }
+              ]
+            },
+            {
+              "group": "Make a Request",
+              "subnavigation": [
+                {
+                  "label": "Request a Purchase",
+                  "href": "http://web.library.emory.edu/library-materials/collections/purchase-request.html"
+                },
+                {
+                  "label": "Submit an ILL Request (Interlibrary Loan)",
+                  "href": "https://web.library.emory.edu/using-the-library/interlibrary-loan/policies-procedures.html"
+                },
+                {
+                  "label": "Visitor Request for Materials",
+                  "href": "http://web.library.emory.edu/using-the-library/visiting-the-library/visitors.html"
+                },
+                {
+                  "label": "Apply for an Individual Study Room",
+                  "href": "https://web.library.emory.edu/using-the-library/facilities-computing/places-to-study/individual.html"
+                }
+              ]
+            }
+          ],
+          "viewall": {
+            "href": "http://web.library.emory.edu/using-the-library/index.html"
+          }
+        },
+        {
+          "label": "Research",
+          "subnavigation": [
+            {
+              "label": "Subject Librarians",
+              "href": "http://web.library.emory.edu/research-learning/subject-librarians/index.html"
+            },
+            {
+              "label": "Research Data",
+              "href": "http://researchdata.emory.edu/index.html"
+            },
+            {
+              "label": "Award and Research Programs",
+              "href": "http://web.library.emory.edu/research-learning/award-research-programs/index.html"
+            },
+            {
+              "category": "Help With Research",
+              "subnavigation": [
+                {
+                  "label": "Select a Research Topic",
+                  "href": "http://web.library.emory.edu/research-learning/research-tools/library-simplified/start-research.html"
+                },
+                {
+                  "label": "Finding Sources",
+                  "href": "http://web.library.emory.edu/research-learning/research-tools/library-simplified/find-sources.html"
+                },
+                {
+                  "label": "Evaluating Sources",
+                  "href": "http://web.library.emory.edu/research-learning/research-tools/library-simplified/sources-good-research.html"
+                },
+                {
+                  "label": "Citing and Using Sources",
+                  "href": "http://web.library.emory.edu/research-learning/research-tools/library-simplified/citing-sources.html"
+                }
+              ],
+              "viewall": {
+                "href": "http://web.library.emory.edu/research-learning/index.html"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Using the Library",
+          "subnavigation": [
+            {
+              "label": "Borrowing Privileges",
+              "href": "http://web.library.emory.edu/using-the-library/borrow/index.html"
+            },
+            {
+              "label": "Interlibrary Lending",
+              "href": "http://web.library.emory.edu/using-the-library/interlibrary-loan/index.html"
+            },
+            {
+              "label": "Library Maps and Spaces",
+              "href": "http://web.library.emory.edu//using-the-library/visiting-the-library/stack-tower-maps.html"
+            },
+            {
+              "label": "Course Reserves",
+              "href": "http://web.library.emory.edu//using-the-library/course-reserves/index.html"
+            },
+            {
+              "label": "Visitor Access",
+              "href": "http://web.library.emory.edu/using-the-library/visiting-the-library/visitors.html"
+            },
+            {
+              "category": "Help Using the Library",
+              "subnavigation": [
+                {
+                  "label": "Finding Books and Media",
+                  "href": "http://web.library.emory.edu/research-learning/research-tools/library-simplified/question-books.html"
+                },
+                {
+                  "label": "Finding Articles and Journals",
+                  "href": "http://web.library.emory.edu/research-learning/research-tools/library-simplified/question-articles.html"
+                },
+                {
+                  "label": "Returning Library Materials",
+                  "href": "http://web.library.emory.edu/using-the-library/borrow/woodruff/privileges.html#returning-books"
+                },
+                {
+                  "label": "Renew Library Materials",
+                  "href": "http://web.library.emory.edu/using-the-library/borrow/woodruff/privileges.html#renewing-books"
+                }
+              ]
+            }
+          ],
+          "viewall": {
+            "href": "http://web.library.emory.edu/using-the-library/index.html"
+          }
+        }
+      ],
+      "utilities": [
+        {
+          "label": "About",
+          "href": "http://web.library.emory.edu/about/index.html"
+        },
+        {
+          "label": "For Instructors",
+          "href": "http://web.library.emory.edu/faculty-services/index.html"
+        }
+      ],
+      "flyouts": [
+        {
+          "label": "Events & Exhibits",
+          "href": "http://web.library.emory.edu/news-events/index.html",
+          "icon": "material-event"
+        },
+        {
+          "label": "Maps",
+          "href": "http://web.library.emory.edu/using-the-library/visiting-the-library/index.html",
+          "icon": "material-map"
+        },
+        {
+          "label": "Hours",
+          "href": "http://web.library.emory.edu/using-the-library/visiting-the-library/hours/index.html",
+          "icon": "material-access_time"
+        },
+        {
+          "label": "News",
+          "href": "https://web.library.emory.edu/news-events/news/index.html",
+          "icon": "material-newspaper"
+        },
+        {
+          "label": "Contact",
+          "href": "https://web.library.emory.edu/about/contact.html",
+          "icon": "material-question_answer"
+        }
+      ],
+      "button": {
+        "label": "Ask a Librarian",
+        "href": "http://emory.libanswers.com/",
+        "icon": "material-help_outline"
+      },
+      "sites": [
+        {
+          "site": "Emory Libraries",
+          "href": "web.library.emory.edu/",
+          "active": true
+        },
+        {
+          "site": "Business",
+          "href": "business.library.emory.edu"
+        },
+        {
+          "site": "Center for Digital Scholarship",
+          "href": "digitalscholarship.emory.edu"
+        },
+        {
+          "site": "Cox Hall Computing Center",
+          "href": "it.emory.edu/studentdigitallife/study_production_spaces/computing-center-at-cox-hall"
+        },
+        {
+          "site": "Health Sciences",
+          "href": "health.library.emory.edu"
+        },
+        {
+          "site": "Law",
+          "href": "library.law.emory.edu"
+        },
+        {
+          "site": "Library Service Center",
+          "href": "libraryservicecenter.org"
+        },
+        {
+          "site": "Music & Media",
+          "href": "http://web.library.emory.edu/about/libraries/woodruff-building/music-media-library"
+        },
+        {
+          "site": "Oxford",
+          "href": "oxford.library.emory.edu"
+        },
+        {
+          "site": "Rose",
+          "href": "rose.library.emory.edu"
+        },
+        {
+          "site": "Science Commons",
+          "href": "web.library.emory.edu/about/libraries/other-libraries/science-commons"
+        },
+        {
+          "site": "Theology",
+          "href": "www.pitts.emory.edu"
+        },
+        {
+          "site": "Woodruff",
+          "href": "web.library.emory.edu/using-the-library/visiting-the-library/index.html"
+        }
+      ],
+      "search": {
+        "label": "Search",
+        "icon": "material-search"
+      }
+    }
+  },
+  "intro": {
+    "badge": "Featured",
+    "hero": "https://preview.libraries.emory.edu/images/hero-images/story-hero-drop-in-workshops.jpg",
+    "link": {
+      "href": "https://scholarblogs.emory.edu/woodruff/fyi/emory-libraries-offers-diverse-range-of-drop-in-workshops",
+      "title": "Emory Libraries offers diverse range of drop-in workshops"
+    },
+    "search": {
+      "id": "big-search",
+      "back": {
+        "label": "Back to Menu",
+        "icon": {
+          "id": "material-chevron_right",
+          "position": "left"
+        }
+      },
+      "tabs": [
+        {
+          "label": "Library Catalog",
+          "value": "library-catalog"
+        },
+        {
+          "label": "Databases",
+          "value": "databases"
+        },
+        {
+          "label": "eJournals",
+          "value": "ejournals"
+        },
+        {
+          "label": "Research & Course Guides",
+          "value": "research-guides"
+        },
+        {
+          "label": "Finding Aids",
+          "value": "finding-aids"
+        },
+        {
+          "label": "This Site",
+          "value": "this-site"
+        }
+      ],
+      "services": [
+        {
+          "label": "Library Catalog",
+          "placeholder": "Search the Emory Library Catalog",
+          "id": "library-catalog",
+          "src": "http://discovere.emory.edu/primo_library/libweb/action/dlSearch.do?institution=EMORY&vid=discovere&query=any,contains,:query&libsearch=woodruff",
+          "default": true
+        },
+        {
+          "label": "Databases",
+          "placeholder": "Search for a Database",
+          "id": "databases",
+          "src": "https://guides.library.emory.edu/az.php?q=:query"
+        },
+        {
+          "label": "eJournals",
+          "placeholder": "Search Journal Titles",
+          "id": "ejournals",
+          "src": "http://emory-primoprod.hosted.exlibrisgroup.com/primo_library/libweb/action/dlSearch.do?institution=01EMORY&vid=discovere&loc=local%2Cscope%3A%28AZ01EMORY%29&fn=goAlmaAz&almaAzSearch=true&vl(freeText0)=:query&libsearch=woodruff"
+        },
+        {
+          "label": "Research & Course Guides",
+          "placeholder": "Search Research & Course Guides",
+          "id": "research-guides",
+          "src": "http://guides.library.emory.edu/srch.php?q=:query&libsearch=woodruff"
+        },
+        {
+          "label": "Finding Aids",
+          "placeholder": "Search Manuscript and Archival Collections",
+          "id": "finding-aids",
+          "src": "https://findingaids.library.emory.edu/search/?Submit=Search&keywords=:query&libsearch=woodruff"
+        },
+        {
+          "label": "This Site",
+          "placeholder": "Search this site on Google",
+          "id": "this-site",
+          "src": "https://www.google.com/search?q=:query%20site:web.library.emory.edu"
+        }
+      ],
+      "button": {
+        "position": "inside",
+        "icon": "material-search",
+        "label": "Search"
+      },
+      "processor": "/php/search.php"
+    }
+  },
+  "popular": [
+    {
+      "title": "Popular Links",
+      "items": [
+        {
+          "title": "discoverE",
+          "link": {
+            "href": "http://discovere.emory.edu"
+          }
+        },
+        {
+          "title": "Databases@Emory",
+          "link": {
+            "href": "https://guides.libraries.emory.edu/az.php"
+          }
+        },
+        {
+          "title": "Research Guides",
+          "link": {
+            "href": "https://guides.libraries.emory.edu/"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Today's Hours (Woodruff)",
+      "items": [
+        {
+          "title": "Open 24 Hours"
+        },
+        {
+          "title": "View All Hours",
+          "link": {
+            "href": "http://web.library.emory.edu/using-the-library/visiting-the-library/hours/index.html"
+          },
+          "icon": "material-access_time"
+        },
+        {
+          "title": "Get Directions",
+          "link": {
+            "href": "http://web.library.emory.edu/using-the-library/visiting-the-library/directions.html"
+          },
+          "icon": "material-map"
+        }
+      ]
+    }
+  ],
+  "slider": {
+    "arrows": true,
+    "slides": [
+      {
+        "image": {
+          "src": "https://preview.libraries.emory.edu/images/block-images/articles-textbooks.jpg"
+        },
+        "title": "Does the library have my textbook?",
+        "buttons": [
+          {
+            "label": "Learn More",
+            "href": "https://scholarblogs.emory.edu/woodruff/fyi/syllabus-resources"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "https://preview.libraries.emory.edu/images/block-images/articles-linkedin-learning.jpg"
+        },
+        "title": "Lynda.com transitioning to LinkedIn Learning",
+        "buttons": [
+          {
+            "label": "Learn More",
+            "href": "https://scholarblogs.emory.edu/woodruff/fyi/lynda-to-linkedin-learning"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "https://preview.libraries.emory.edu/images/block-images/articles-n-y-times.jpg"
+        },
+        "title": "New York Times Digital",
+        "buttons": [
+          {
+            "label": "Learn More",
+            "href": "https://scholarblogs.emory.edu/woodruff/fyi/the-new-york-times-digital-now-available-at-the-emory-libraries"
+          }
+        ]
+      }
+    ]
+  },
+  "cards": {
+    "heading": "Improve Your Research & Writing",
+    "buttons": [],
+    "cards": []
+  },
+  "boxes": {
+    "heading": "Get Help Using the Library",
+    "feature": {
+        "image": {
+          "src": "https://preview.libraries.emory.edu/images/block-images/feature-students-science-commons.jpg"
+        },
+        "context": null,
+        "heading": "Using the Library",
+        "description": "Learn about your Robert W. Woodruff Library borrowing privileges, how to find and request materials, computer access, information for visitors, and more.",
+        "buttons": [
+          {
+            "label": "Read More",
+            "href": "http://web.library.emory.edu/using-the-library/index.html"
+          }
+        ]
+    },
+    "explorer": {
+      "heading": "Popular Links",
+      "links": [
+        {
+          "href": "http://discovere.emory.edu",
+          "label": "discoverE"
+        },
+        {
+          "href": "https://guides.libraries.emory.edu/az.php",
+          "label": "Databases@Emory"
+        },
+        {
+          "href": "https://guides.libraries.emory.edu/",
+          "label": "Research Guides"
+        },
+        {
+          "href": "http://web.library.emory.edu/using-the-library/borrow/woodruff/privileges.html",
+          "label": "Borrowing Privileges"
+        },
+        {
+          "href": "http://web.library.emory.edu/using-the-library/interlibrary-loan/index.html",
+          "label": "Interlibrary Services"
+        },
+        {
+          "href": "http://web.library.emory.edu/using-the-library/visiting-the-library/index.html",
+          "label": "Library Maps and Spaces"
+        }
+      ]
+    },
+    "wayfinder": {
+      "image": {
+        "src": "http://preview.libraries.emory.edu/images/block-images/feature-gautham-reddy.jpg"
+      },
+      "heading": "Using the Library",
+      "text": "Librarians can help you find sources, conduct research, and understand an assignment.",
+      "buttons": [
+        {
+          "label": "Ask a Librarian",
+          "href": "http://emory.libanswers.com/"
+        }
+      ]
+    }
+  },
+  "feeds": {
+    "heading": "What's Happening at the Library",
+    "feature": {
+      "badge": "Exhibition",
+      "date": "On View in the Rose Library",
+      "title": "Black Cosmopolitan: James Weldon Johnson in an Age of Empire",
+      "image": {
+        "src": "https://preview.libraries.emory.edu/images/block-images/ev-ex-james-weldon-johnson.jpg"
+      },
+      "buttons": [
+        {
+          "label": "Exhibition Details",
+          "href": "http://web.library.emory.edu/news-events/news/archives/2019/black-cosmopolitan-exhibit-rose-library.html",
+          "hollow": true
+        }
+      ]
+    },
+    "sources": [
+      {
+        "heading": "Events",
+        "icon": "material-calendar_month_outline",
+        "button": {
+          "label": "View All Events",
+          "href": "http://web.library.emory.edu/news-events/calendar.html"
+        },
+        "content": [
+          {
+            "title": "Black Cosmopolitan: James Weldon Johnson in an Age of Empire",
+            "date": "Ongoing Through Friday, December 13, 2019",
+            "link": {
+              "href": "http://web.library.emory.edu/news-events/news/archives/2019/black-cosmopolitan-exhibit-rose-library.html"
+            }
+          },
+          {
+            "title": "How Might We? Innovation in the Libraries",
+            "date": "Wednesday, August 28, 2019 - Tuesday, July 14, 2020",
+            "link": {
+              "href": "http://web.library.emory.edu/news-events/calendar.html?trumbaEmbed=eventid%3D133706386%26view%3Devent%26-childview%3D"
+            }
+          },
+          {
+            "title": "Chip Robert: Life as Art (exhibit)",
+            "date": "Thursday, September 19 - Friday, November 15, 2019",
+            "link": {
+              "href": "https://web.library.emory.edu/news-events/news/archives/2019/chip-robert-exhibit-opening.html"
+            }
+          },
+          {
+            "title": "Chip Robert: Life as Art (reception)",
+            "date": "Thursday, September 19, 2019, 6:300 - 8PM EDT",
+            "link": {
+              "href": "http://web.library.emory.edu/news-events/calendar.html?trumbaEmbed=eventid%3D133918011%26view%3Devent%26-childview%3D"
+            }
+          }
+        ]
+      },
+      {
+        "heading": "Workshops",
+        "icon": "material-pencil_ruler",
+        "button": {
+          "label": "View All Workshops",
+          "href": "http://web.library.emory.edu/news-events/upcoming-classes.html"
+        },
+        "content": [
+          {
+            "title": "Using Canvas Quizzes for Daily Attendance - Online Session",
+            "date": "Wednesday, August 28, 2019 3 - 4PM EDT",
+            "link": {
+              "href": "http://web.library.emory.edu/news-events/upcoming-classes.html?trumbaEmbed=eventid%3D134110907%26view%3Devent%26-childview%3D"
+            }
+          },
+          {
+            "title": "Canvas for TAs",
+            "date": "Friday, August 30, 2019, 11:45AM - 12:30PM EDT",
+            "link": {
+              "href": "http://web.library.emory.edu/news-events/upcoming-classes.html?trumbaEmbed=eventid%3D134062846%26view%3Devent%26-childview%3D"
+            }
+          },
+          {
+            "title": "Getting Started with Canvas",
+            "date": "Wednesday, September 4, 2019, 10 - 11AM EDT",
+            "link": {
+              "href": "http://web.library.emory.edu/news-events/upcoming-classes.html?trumbaEmbed=eventid%3D134075124%26view%3Devent%26-childview%3D"
+            }
+          },
+          {
+            "title": "EndNote Introduction",
+            "date": "Thursday, September 5, 2019, 10 - 11AM EDT",
+            "link": {
+              "href": "http://web.library.emory.edu/news-events/upcoming-classes.html?trumbaEmbed=eventid%3D133859542%26view%3Devent%26-childview%3D"
+            }
+          },
+          {
+            "title": "Zotero Introduction",
+            "date": "Thursday, September 5, 2019, 11AM - 12PM EDT",
+            "link": {
+              "href": "http://web.library.emory.edu/news-events/upcoming-classes.html?trumbaEmbed=eventid%3D133857387%26view%3Devent%26-childview%3D"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "navigation": {
+      "lists": [
+        [
+          {
+            "label": "About",
+            "href": "http://web.library.emory.edu/about/index.html"
+          },
+          {
+            "label": "For Instructors",
+            "href": "http://web.library.emory.edu/faculty-services/index.html"
+          },
+          {
+            "label": "Events & Exhibits",
+            "href": "http://web.library.emory.edu/news-events/index.html"
+          }
+        ],
+        [
+          {
+            "label": "Maps",
+            "href": "http://web.library.emory.edu/using-the-library/visiting-the-library/index.html"
+          },
+          {
+            "label": "Hours",
+            "href": "http://web.library.emory.edu/using-the-library/visiting-the-library/hours/index.html"
+          },
+          {
+            "label": "News",
+            "href": "https://web.library.emory.edu/news-events/news/index.html"
+          },
+          {
+            "label": "Contact",
+            "href": "https://web.library.emory.edu/about/contact.html"
+          }
+        ],
+        [
+          {
+            "label": "Materials",
+            "href": "http://web.library.emory.edu/library-materials/index.html"
+          },
+          {
+            "label": "Tools",
+            "href": "http://web.library.emory.edu/research-learning/research-tools/index.html"
+          },
+          {
+            "label": "Services",
+            "href": "http://web.library.emory.edu/using-the-library/index.html"
+          },
+          {
+            "label": "Research",
+            "href": "http://web.library.emory.edu/research-learning/index.html"
+          },
+          {
+            "label": "Using the Library",
+            "href": "http://web.library.emory.edu/using-the-library/index.html"
+          }
+        ],
+        [
+          {
+            "label": "Employment",
+            "href": "https://www.hr.emory.edu/careers/"
+          },
+          {
+            "label": "Support Emory Libraries",
+            "href": "http://web.library.emory.edu/about/giving/index.html"
+          },
+          {
+            "label": "Emergency",
+            "href": "http://www.emory.edu/home/emergency/index.html"
+          },
+          {
+            "label": "Status",
+            "href": "http://status.library.emory.edu/"
+          }
+        ]
+      ],
+      "sites": [
+        {
+          "site": "Emory Libraries",
+          "href": "web.library.emory.edu/",
+          "active": true
+        },
+        {
+          "site": "Business",
+          "href": "business.library.emory.edu"
+        },
+        {
+          "site": "Center for Digital Scholarship",
+          "href": "digitalscholarship.emory.edu"
+        },
+        {
+          "site": "Cox Hall Computing Center",
+          "href": "it.emory.edu/studentdigitallife/study_production_spaces/computing-center-at-cox-hall"
+        },
+        {
+          "site": "Health Sciences",
+          "href": "health.library.emory.edu"
+        },
+        {
+          "site": "Law",
+          "href": "library.law.emory.edu"
+        },
+        {
+          "site": "Library Service Center",
+          "href": "libraryservicecenter.org"
+        },
+        {
+          "site": "Music & Media",
+          "href": "http://web.library.emory.edu/about/libraries/woodruff-building/music-media-library"
+        },
+        {
+          "site": "Oxford",
+          "href": "oxford.library.emory.edu"
+        },
+        {
+          "site": "Rose",
+          "href": "rose.library.emory.edu"
+        },
+        {
+          "site": "Science Commons",
+          "href": "web.library.emory.edu/about/libraries/other-libraries/science-commons"
+        },
+        {
+          "site": "Theology",
+          "href": "www.pitts.emory.edu"
+        },
+        {
+          "site": "Woodruff",
+          "href": "web.library.emory.edu/using-the-library/visiting-the-library/index.html"
+        }
+      ],
+      "channels": [
+        "https://www.facebook.com/EmoryLibraries",
+        "http://twitter.com/EmoryLibraries",
+        "http://www.youtube.com/playlist?list=PL2B761DAA9CBF5AD9",
+        "https://scholarblogs.emory.edu/woodruff/",
+        "https://www.instagram.com/emorylibrary/"
+      ]
+    },
+    "copyright": {
+      "policies": [
+        {
+          "label": "Privacy Policy",
+          "href": "http://web.library.emory.edu/privacy-policy/privacy-policy.html"
+        },
+        {
+          "label": "Copyright Statement",
+          "href": "http://www.emory.edu/home/about-this-site/copyright.html"
+        }
+      ]
+    }
+  }
+}

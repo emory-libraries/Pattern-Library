@@ -174,7 +174,7 @@ Components.register('hours', {
   mounted() {
 
     // Set the initially checked input.
-    $(this.$refs['input'][0]).prop('checked', true);
+    $(this.$refs.input[0]).prop('checked', true);
 
   }
 

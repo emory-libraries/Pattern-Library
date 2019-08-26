@@ -40,7 +40,7 @@ Components.register('search', {
 
   methods: {
 
-    validate( $event ) {
+    validate( $event ) { console.log($event);
 
       // Validate search field, and if it's invalid, prevent the search from submitting.
       if( !this.valid ) $event.preventDefault();

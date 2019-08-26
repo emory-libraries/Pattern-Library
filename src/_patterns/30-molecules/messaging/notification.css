@@ -165,6 +165,12 @@ ico,
   grid-area: message;
   margin: 0;
 }
+.notification-message > *:first-child {
+  margin-top: 0;
+}
+.notification-message > *:last-child {
+  margin-bottom: 0;
+}
 .notification-dismiss {
   grid-area: dismiss;
   display: -webkit-box;

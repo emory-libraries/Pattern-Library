@@ -373,7 +373,7 @@ ico,
   transition: all 0.25s ease;
   padding-left: 15px;
   padding-right: 15px;
-  height: 40px;
+  height: 40px !important;
 }
 .feed-item-action {
   font-family: "Open Sans", sans-serif;
@@ -413,7 +413,7 @@ ico,
   fill: #336BE6;
 }
 .feed-item-action.-pill {
-  border-radius: 20px;
+  border-radius: 40px !important/2;
 }
 .feed-item-action.-uncapitalize {
   text-transform: none !important;
@@ -494,13 +494,11 @@ ico,
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .feed-item-action {
-    height: 100%;
     width: auto;
   }
 }
 @media (min-width: 901px) {
   .feed-item-action {
-    height: 100%;
     width: auto;
   }
 }

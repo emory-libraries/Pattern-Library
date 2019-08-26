@@ -148,5 +148,7 @@
   "60-templates-generic-home": "review",
   "60-templates-generic-cover": "review",
   "60-templates-hours-hours": "review",
-  "60-templates-event-event": "review"
+  "60-templates-event-event": "review",
+  "70-pages-home": "construction",
+  "70-pages-static-home": "construction"
 }

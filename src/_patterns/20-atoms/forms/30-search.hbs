@@ -32,6 +32,7 @@
            @blur.native="input.isFocus = false"
            @mouseover.native="input.isHover = true"
            @mouseleave.native="input.isHover = false"
+           @keypress.native.enter="validate"
            class="input -search{{#if mode}} -{{mode}}{{/if}} search-box"
            :class="{
             'is-disabled': input.isDisabled,

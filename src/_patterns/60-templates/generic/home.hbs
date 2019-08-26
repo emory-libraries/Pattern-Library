@@ -55,9 +55,6 @@
 
 {{/each}}
 
-{{! FIXME: Add mutations for hours here. }}
-{{{storageSet 'popular.1.items' (makeArray (objectify title='Open 24 Hours'))}}}
-
 {{#each popular.1.items}}
 
   {{! Validate links. }}
@@ -371,10 +368,10 @@
     {{! Always append the feed's URL to its view all button link. }}
     {{assign 'button.href' (combine button.href '?feed=' url)}}
 
-    {{! Save the feed with its updated content. }}
-    {{storagePush 'feeds.sources' this}}
-
   {{/if}}
+
+  {{! Save the feed with its updated content. }}
+  {{storagePush 'feeds.sources' this}}
 
 {{/each}}
 
