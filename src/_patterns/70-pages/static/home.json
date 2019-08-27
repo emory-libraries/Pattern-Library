@@ -59,7 +59,7 @@
           "label": "Databases",
           "placeholder": "Search for a Database",
           "id": "databases",
-          "src": "https://guides.library.emory.edu/az.php?q=:query"
+          "src": "https://guides.libraries.emory.edu/az.php?q=:query"
         },
         {
           "label": "eJournals",
@@ -71,7 +71,7 @@
           "label": "Research & Course Guides",
           "placeholder": "Search Research & Course Guides",
           "id": "research-guides",
-          "src": "http://guides.library.emory.edu/srch.php?q=:query&libsearch=woodruff"
+          "src": "http://guides.libraries.emory.edu/srch.php?q=:query&libsearch=woodruff"
         },
         {
           "label": "Finding Aids",
@@ -563,7 +563,7 @@
           "label": "Databases",
           "placeholder": "Search for a Database",
           "id": "databases",
-          "src": "https://guides.library.emory.edu/az.php?q=:query"
+          "src": "https://guides.libraries.emory.edu/az.php?q=:query"
         },
         {
           "label": "eJournals",
@@ -575,7 +575,7 @@
           "label": "Research & Course Guides",
           "placeholder": "Search Research & Course Guides",
           "id": "research-guides",
-          "src": "http://guides.library.emory.edu/srch.php?q=:query&libsearch=woodruff"
+          "src": "http://guides.libraries.emory.edu/srch.php?q=:query&libsearch=woodruff"
         },
         {
           "label": "Finding Aids",
