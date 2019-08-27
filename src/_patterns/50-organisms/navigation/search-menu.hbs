@@ -31,7 +31,7 @@
 {{else if (gt (length (filterWhere tabs 'selected' true '===')) 0)}}
   {{assign 'selected' (get 'uid' (itemAt (filterWhere tabs 'selected' true '===') 0))}}
 {{else if (gt (length (filterWhere services 'default' true '===')) 0)}}
-  {{assign 'selected' (combine 'search-menu-toggle--' (get 'id' (itemAt (filterWhere services 'default' true '===') 0)))}}
+  {{assign 'selected' (combine (default tab-prefix '') 'search-menu-toggle--' (get 'id' (itemAt (filterWhere services 'default' true '===') 0)))}}
 {{else}}
   {{assign 'selected' (get 'uid' (itemAt tabs 0))}}
 {{/if}}

@@ -49,9 +49,6 @@ Components.register('tab-menu', {
           value: data.value
         });
 
-        // Also, find the tab's respective toggle input, and make sure it's checked.
-        if( $(`#${data.uid}`).length > 0 ) $(`#${data.uid}`).prop('checked', true);
-
       }
 
       // If the tab menu was not the initiator of the event, then also update the selected tab menu item.

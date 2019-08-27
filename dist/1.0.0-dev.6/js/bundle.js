@@ -1704,9 +1704,26 @@ Components.register('tab', {
       // Listen for changes to tab states within the tab menu.
       Events.$on("".concat(this.menu, ":activated"), function (data) {
         // If the activated UID matches the current tab's UID, indicate that the tab is activated.
-        if (data.uid === _this12.uid) _this12.isActive = true; // Otherwise, deactivate the tab.
-        else _this12.isActive = false;
+        if (data.uid === _this12.uid) {
+          // Update the tab's state to active.
+          _this12.isActive = true; // Then, make sure the tab input's checked state reflects the tab's active state.
+
+          _this12.input.prop('checked', true);
+        } // Otherwise, deactivate the tab.
+        else {
+            // Update the tab's state to inactive.
+            _this12.isActive = false; // Then, make sure the tab input's checked state reflects the tab's inactive state.
+
+            _this12.input.prop('checked', false);
+          }
       });
+    }
+  },
+  mounted: function mounted() {},
+  computed: {
+    input: function input() {
+      // Locate the tab's input.
+      return $("#".concat(this.uid));
     }
   }
 }); // Register a Branding Footer component.
@@ -2020,9 +2037,7 @@ Components.register('tab-menu', {
         Events.$emit("".concat(_this14.relay, ":relay"), {
           uid: _this14.uid,
           value: data.value
-        }); // Also, find the tab's respective toggle input, and make sure it's checked.
-
-        if ($("#".concat(data.uid)).length > 0) $("#".concat(data.uid)).prop('checked', true);
+        });
       } // If the tab menu was not the initiator of the event, then also update the selected tab menu item.
 
 
