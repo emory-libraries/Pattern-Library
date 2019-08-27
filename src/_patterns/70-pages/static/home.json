@@ -349,12 +349,12 @@
                   "label": "Citing and Using Sources",
                   "href": "http://web.library.emory.edu/research-learning/research-tools/library-simplified/citing-sources.html"
                 }
-              ],
-              "viewall": {
-                "href": "http://web.library.emory.edu/research-learning/index.html"
-              }
+              ]
             }
-          ]
+          ],
+          "viewall": {
+            "href": "http://web.library.emory.edu/research-learning/index.html"
+          }
         },
         {
           "label": "Using the Library",
