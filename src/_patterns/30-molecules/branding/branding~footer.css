@@ -140,7 +140,7 @@ ico,
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, -webkit-min-content);
   grid-template-rows: repeat(2, min-content);
-  max-width: 130px;
+  max-width: 145px;
 }
 @media (min-width: 901px) {
   .branding-footer {
@@ -184,7 +184,7 @@ ico,
   appearance: none;
   border: none;
   background: none;
-  max-width: 135px;
+  max-width: 145px;
   background-repeat: no-repeat;
   background-position: right 50%;
 }
