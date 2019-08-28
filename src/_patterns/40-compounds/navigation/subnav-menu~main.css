@@ -211,10 +211,48 @@ ico,
 .-categorized.subnav-menu-main > *:last-child {
   margin-bottom: 0;
 }
-.subnav-menu-main:not(.-grouped).has-viewall.has-viewall {
+@media (max-width: 600px) {
+  .has-viewall.subnav-menu-main > .subnav-button:nth-last-child(2), .has-viewall.has-resources.subnav-menu-main > .subnav-button.-resource:last-of-type, .has-viewall.has-resources.subnav-menu-main > noscript:last-of-type .subnav-button.-resource {
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    width: calc(100% - (25px * 2));
+    min-height: 35px;
+    padding-bottom: 65px;
+  }
+  .has-viewall.subnav-menu-main > .subnav-button:nth-last-child(2) .subnav-button-options, .has-viewall.has-resources.subnav-menu-main > .subnav-button.-resource:last-of-type .subnav-button-options, .has-viewall.has-resources.subnav-menu-main > noscript:last-of-type .subnav-button.-resource .subnav-button-options {
+    height: 55px;
+  }
+  .has-viewall.-grouped.subnav-menu-main > .subnav-button-group:last-of-type {
+    padding-bottom: 55px;
+  }
+  .has-viewall.-categorized.subnav-menu-main > .subnav-button-category:last-of-type {
+    min-height: unset;
+    padding-bottom: 55px;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .has-viewall.subnav-menu-main > .subnav-button:nth-last-child(2), .has-viewall.has-resources.subnav-menu-main > .subnav-button.-resource:last-of-type, .has-viewall.has-resources.subnav-menu-main > noscript:last-of-type .subnav-button.-resource {
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    width: calc(100% - (25px * 2));
+    min-height: 35px;
+    padding-bottom: 65px;
+  }
+  .has-viewall.subnav-menu-main > .subnav-button:nth-last-child(2) .subnav-button-options, .has-viewall.has-resources.subnav-menu-main > .subnav-button.-resource:last-of-type .subnav-button-options, .has-viewall.has-resources.subnav-menu-main > noscript:last-of-type .subnav-button.-resource .subnav-button-options {
+    height: 55px;
+  }
+  .has-viewall.-grouped.subnav-menu-main > .subnav-button-group:last-of-type {
+    padding-bottom: 55px;
+  }
+  .has-viewall.-categorized.subnav-menu-main > .subnav-button-category:last-of-type {
+    min-height: unset;
+    padding-bottom: 55px;
+  }
+}
+.subnav-menu-main:not(.-grouped).has-viewall {
   padding-bottom: 0;
 }
-.subnav-menu-main:not(.-grouped).has-viewall.has-viewall > *:nth-last-child(2) {
+.subnav-menu-main:not(.-grouped).has-viewall > *:nth-last-child(2) {
   margin-bottom: 0;
 }
 .subnav-menu-main-heading {
