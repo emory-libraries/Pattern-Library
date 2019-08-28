@@ -21,7 +21,8 @@
            tabindex="0"
            {{#if disabled}} disabled{{/if}}
            {{#if mouseover}}@mouseover.stop="{{mouseover}}"{{/if}}
-           {{#if mouseleave}}@mouseleave.stop="{{mouseleave}}"{{/if}}>
+           {{#if mouseleave}}@mouseleave.stop="{{mouseleave}}"{{/if}}
+           {{#if click}}@click="{{click}}"{{/if}}>
       {{#if (or (and (or flyout toggle) icon) search) }}{{> tokens-icon id=icon}}{{/if}}
       <span class="nav-button-label">{{label}}</span>
     </label>
