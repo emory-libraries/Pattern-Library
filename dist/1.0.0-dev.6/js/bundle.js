@@ -1935,7 +1935,6 @@ Components.register('nav-menu', {
   props: {},
   data: function data() {
     return {
-      toggles: [],
       delay: 100
     };
   },
@@ -1990,12 +1989,17 @@ Components.register('nav-menu', {
         // Close the subnavigation dropdown menu for that button if not toggled by another element.
         if (toggle.data('toggled-by').is(element)) toggle.prop('checked', false);
       }, this.delay);
+    },
+    reset: function reset($event) {
+      // Deactivate all toggles to reset the menu's state.
+      this.toggles.prop('checked', false);
     }
   },
-  filters: {},
-  mounted: function mounted() {
-    // Find the toggles.
-    this.toggles = $(this.$el).children('.input.-toggle');
+  computed: {
+    toggles: function toggles() {
+      // Locate toggles.
+      return $(this.$el).children('.input.-toggle');
+    }
   }
 }); // Register a Tab component.
 
