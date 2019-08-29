@@ -205,8 +205,8 @@
               "resource": "https://open.library.emory.edu/"
             },
             {
-              "label": "Ares",
-              "alias": "Course Reserves",
+              "label": "Course Reserves",
+              "alias": "Course Readings",
               "href": "http://web.library.emory.edu/using-the-library/course-reserves/index.html",
               "resource": "https://reserves.library.emory.edu/"
             },
