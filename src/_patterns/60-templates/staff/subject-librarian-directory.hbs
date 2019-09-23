@@ -1,3 +1,5 @@
+{{!-- Disable extraneous templating engine code...
+
 {{! Reformat the librarian data for proper compatibility. }}
 {{#each librarians}}
 
@@ -195,6 +197,8 @@
 
 {{! Determine the default selection in the dropdown filter menu. }}
 {{#if __params__}}{{assign 'selected' (default __params__.subject '')}}{{/if}}
+
+--}}
 
 <div class="subject-librarian-directory-page">
 

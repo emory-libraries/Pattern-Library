@@ -1,3 +1,5 @@
+{{!-- Disable extraneous templating engine code...
+
 {{! Reformat the staff data for proper compatibility. }}
 {{#each staff}}
 
@@ -165,6 +167,8 @@
 
 {{! Determine the default query in the search filter menu. }}
 {{#if __params__}}{{assign 'query' (default __params__.q __params__.query '')}}{{/if}}
+
+--}}
 
 <div class="staff-directory-page">
 

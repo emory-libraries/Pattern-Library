@@ -1,3 +1,5 @@
+{{!-- Disable extraneous templating engine code...
+
 {{! Assign card titles and links. }}
 {{#each cards}}
 
@@ -29,6 +31,8 @@
 
 {{! Update cards. }}
 {{assign 'cards' (storageGet 'cards')}}
+
+--}}
 
 <div class="research-help-directory-page">
   <header class="research-help-directory-page-header"></header>

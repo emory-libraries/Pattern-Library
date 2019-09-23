@@ -1,3 +1,5 @@
+{{!-- Disable extraneous templating engine code...
+
 {{! Validate feature image. }}
 {{#if (eq feature.image.src '/')}}
   {{assign 'feature.image.src' null}}
@@ -176,6 +178,8 @@
 {{else}}
   {{assign 'main-classes' 'without-intro'}}
 {{/if}}
+
+--}}
 
 <div class="landing-page">
 

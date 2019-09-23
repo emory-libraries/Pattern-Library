@@ -1,3 +1,5 @@
+{{!-- Disable extraneous templating engine code...
+
 {{! Use search metadata if detecteed. }}
 {{#if __meta__.search}}{{assign 'intro.search' __meta__.search}}{{/if}}
 
@@ -378,6 +380,7 @@
 {{! Update feeds. }}
 {{assign 'feeds.sources' (storageGet 'feeds.sources')}}
 
+--}}
 
 <div class="home-page">
 

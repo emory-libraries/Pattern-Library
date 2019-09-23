@@ -1,3 +1,5 @@
+{{!-- Disable extraneous templating engine code...
+
 {{! Reformat the accordion data for proper compatibility. }}
 {{#each accordions}}
 
@@ -110,6 +112,8 @@
 
 {{! Determine the default query in the search filter menu. }}
 {{#if __params__}}{{assign 'query' (default __params__.q __params__.query '')}}{{/if}}
+
+--}}
 
 <div class="service-directory-page">
 
