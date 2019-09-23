@@ -395,7 +395,7 @@
     {{#with slider}}{{> compounds-slider arrows=true}}{{/with}}
 
     {{#with related}}
-    {{#extend 'organisms-major' theme='light' classes='home-page-main-cards'}}
+    {{#extend 'organisms-major' theme='light' classes='home-page-main-cards' heading=(default heading 'Get Help Using the Library')}}
       {{#content 'section-major-body'}}
         {{> compounds-cards card-type='library-aid'}}
         {{#if buttons}}
