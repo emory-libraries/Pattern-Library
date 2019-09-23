@@ -1,3 +1,5 @@
+{{!-- Disable extraneous templating engine code...
+
 {{! Validate hero images. }}
 {{#if (or (eq hero '/') (not hero))}}
   {{assign 'hero' false}}
@@ -172,6 +174,8 @@
 {{! Update feeds. }}
 {{assign 'feeds.sources' (storageGet 'feeds.sources')}}
 
+--}}
+
 <div class="cover-page{{#if hero}} has-hero{{/if}}">
 
   {{> organisms-header classes='cover-page-header'}}
@@ -189,6 +193,15 @@
         {{#with listing}}{{> molecules-card-listing theme='light'}}{{/with}}
       {{/content}}
     {{/extend}}
+
+    {{! Load the major section if applicable. }}
+    {{#if (gt (length related.cards) 0)}}
+    {{#extend 'organisms-major' theme='light' heading=(default related.heading 'Get Help Using the Library')}}
+      {{#content 'section-major-body'}}
+        {{> compounds-cards cards=related.cards card-type='library-aid' filterable=false classes=''}}
+      {{/content}}
+    {{/extend}}
+    {{/if}}
 
     {{! Load the major section only if feeds exist. }}
     {{#if (gt (length feeds.sources) 0)}}
