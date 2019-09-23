@@ -199,6 +199,11 @@
     {{#extend 'organisms-major' theme='light' heading=(default related.heading 'Get Help Using the Library')}}
       {{#content 'section-major-body'}}
         {{> compounds-cards cards=related.cards card-type='library-aid' filterable=false classes=''}}
+        {{#if related.buttons}}
+          <div class="button-group">
+            {{#each related.buttons}}{{> atoms-button-link}}{{/each}}
+          </div>
+        {{/if}}
       {{/content}}
     {{/extend}}
     {{/if}}
