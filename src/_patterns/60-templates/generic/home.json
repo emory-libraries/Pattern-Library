@@ -365,5 +365,28 @@
         }
       }
     ]
+  },
+  "related": {
+    "heading": "Get Help Using the Library",
+    "cards": [
+      {
+        "title": "Access Library Resources",
+        "link": {
+          "href": ""
+        }
+      },
+      {
+        "title": "Find a Book",
+        "link": {
+          "href": ""
+        }
+      },
+      {
+        "title": "Find an Article in Full Text",
+        "link": {
+          "href": ""
+        }
+      }
+    ]
   }
 }
