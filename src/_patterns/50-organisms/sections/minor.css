@@ -1,154 +1,3 @@
-@charset "UTF-8";
-@font-face {
-  font-family: "icomoon";
-  src: url("../fonts/icomoon/icomoon.eot");
-  src: url("../fonts/icomoon/icomoon.eot#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf") format("truetype"), url("../fonts/icomoon/icomoon.woff") format("woff"), url("../fonts/icomoon/icomoon.svg#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-ico,
-[class^=ico-],
-[class*=ico-] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.ico-arrow-down-circle::before {
-  content: "";
-}
-
-.ico-arrow-left-circle::before {
-  content: "";
-}
-
-.ico-arrow-right-circle::before {
-  content: "";
-}
-
-.ico-arrow-up-circle::before {
-  content: "";
-}
-
-.ico-arrow-down-left::before {
-  content: "";
-}
-
-.ico-arrow-down-right::before {
-  content: "";
-}
-
-.ico-arrow-up-right::before {
-  content: "";
-}
-
-.ico-arrow-up-left::before {
-  content: "";
-}
-
-.ico-arrow-down::before {
-  content: "";
-}
-
-.ico-arrow-left::before {
-  content: "";
-}
-
-.ico-arrow-right::before {
-  content: "";
-}
-
-.ico-arrow-up::before {
-  content: "";
-}
-
-.ico-chevron-down::before {
-  content: "";
-}
-
-.ico-chevron-left::before {
-  content: "";
-}
-
-.ico-chevron-right::before {
-  content: "";
-}
-
-.ico-chevron-up::before {
-  content: "";
-}
-
-.ico-chevrons-down::before {
-  content: "";
-}
-
-.ico-chevrons-left::before {
-  content: "";
-}
-
-.ico-chevrons-right::before {
-  content: "";
-}
-
-.ico-chevrons-up::before {
-  content: "";
-}
-
-.ico-corner-down-left::before {
-  content: "";
-}
-
-.ico-corner-down-right::before {
-  content: "";
-}
-
-.ico-corner-left-down::before {
-  content: "";
-}
-
-.ico-corner-left-up::before {
-  content: "";
-}
-
-.ico-corner-right-down::before {
-  content: "";
-}
-
-.ico-corner-right-up::before {
-  content: "";
-}
-
-.ico-corner-up-left::before {
-  content: "";
-}
-
-.ico-corner-up-right::before {
-  content: "";
-}
-
-.section-minor-title .anchor {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.section-minor-title .anchor .icon {
-  margin: 0 !important;
-}
-.section-minor-title:not(.is-anchored) .section-minor-title .anchor {
-  display: none;
-}
-
 .section-minor-title::after {
   display: block;
   width: 100%;
@@ -179,83 +28,35 @@ ico,
 }
 @media (max-width: 600px) {
   .section-minor {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 30px 20px;
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .section-minor {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 30px 20px;
   }
 }
 @media (min-width: 901px) {
   .section-minor {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 40px 40px;
   }
 }
 @media (min-width: 1200px) {
   .section-minor {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 40px 40px;
   }
 }
 @media (min-width: 1290px) {
   .section-minor {
-    padding-left: calc((100vw - 1250px) / 2);
-    padding-right: calc((100vw - 1250px) / 2);
-  }
-}
-@media (max-width: 600px) {
-  .section-minor {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-}
-@media (min-width: 601px) and (max-width: 900px) {
-  .section-minor {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-}
-@media (min-width: 901px) {
-  .section-minor {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-}
-@media (min-width: 1200px) {
-  .section-minor {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 0 calc((100vw - 1250px) / 2);
   }
 }
 .section-minor-title {
-  text-align: left;
-}
-.section-minor-title {
-  font-family: "Cardo", serif !important;
-  font-size: 28px !important;
-  font-weight: normal !important;
-  font-style: normal !important;
-  line-height: 1.5 !important;
+  font: normal normal 28px/1.5 "Cardo", serif !important;
   letter-spacing: normal !important;
   text-transform: none !important;
   color: #082B73 !important;
-}
-.section-minor-title.is-anchored:hover .anchor, .section-minor-title.is-anchored.is-hover .anchor, .section-minor-title.is-anchored:focus .anchor, .section-minor-title.is-anchored.is-focus .anchor {
-  visibility: visible;
-  opacity: 1;
-}
-.section-minor-title .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
-  transition: visibility 0s, opacity 0.25s ease;
-  margin-left: 20px;
-  width: 25px;
-  height: 25px;
-  opacity: 0;
-  visibility: hidden;
+  text-align: left;
 }
 .section-minor-title .icon {
   color: #082B73;
@@ -271,11 +72,7 @@ ico,
   color: transparent;
 }
 .section-minor-body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1.9375;
+  font: normal normal 16px/1.9375 "Open Sans", sans-serif;
   letter-spacing: normal;
   text-transform: none;
   text-align: left;

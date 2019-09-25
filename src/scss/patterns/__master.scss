@@ -1,4 +1,3 @@
-@import '../../_patterns/00-meta/10-about/pattern-statuses';
 @import '../../_patterns/10-tokens/10-globals/grid';
 @import '../../_patterns/10-tokens/10-globals/heading';
 @import '../../_patterns/10-tokens/10-globals/icon';
@@ -46,13 +45,13 @@
 @import '../../_patterns/20-atoms/lists/11-list~related-links';
 @import '../../_patterns/20-atoms/lists/12-list~related-topics';
 @import '../../_patterns/20-atoms/lists/13-list~related-files';
+@import '../../_patterns/20-atoms/media/_map';
 @import '../../_patterns/20-atoms/media/image';
-@import '../../_patterns/20-atoms/media/map';
 @import '../../_patterns/20-atoms/media/map~image';
 @import '../../_patterns/20-atoms/media/video~youtube';
-@import '../../_patterns/20-atoms/messaging/callout';
+@import '../../_patterns/20-atoms/messaging/_callout';
+@import '../../_patterns/20-atoms/messaging/_note';
 @import '../../_patterns/20-atoms/messaging/copyright';
-@import '../../_patterns/20-atoms/messaging/note';
 @import '../../_patterns/20-atoms/tables/01-table';
 @import '../../_patterns/20-atoms/tabs/01-tab';
 @import '../../_patterns/30-molecules/blocks/block';
@@ -76,8 +75,8 @@
 @import '../../_patterns/30-molecules/flyouts/flyout-feed-item';
 @import '../../_patterns/30-molecules/flyouts/flyout-info-item';
 @import '../../_patterns/30-molecules/forms/form~libwizard';
+@import '../../_patterns/30-molecules/lists/_utility-list-item';
 @import '../../_patterns/30-molecules/lists/sidebar-list-item';
-@import '../../_patterns/30-molecules/lists/utility-list-item';
 @import '../../_patterns/30-molecules/media/figure';
 @import '../../_patterns/30-molecules/messaging/alert';
 @import '../../_patterns/30-molecules/messaging/notification';
@@ -90,9 +89,9 @@
 @import '../../_patterns/40-compounds/cards/cards';
 @import '../../_patterns/40-compounds/feeds/feed';
 @import '../../_patterns/40-compounds/groupings/files';
+@import '../../_patterns/40-compounds/lists/_utility-list';
 @import '../../_patterns/40-compounds/lists/popular-links-menu';
 @import '../../_patterns/40-compounds/lists/sidebar-list';
-@import '../../_patterns/40-compounds/lists/utility-list';
 @import '../../_patterns/40-compounds/messaging/alert';
 @import '../../_patterns/40-compounds/messaging/notification';
 @import '../../_patterns/40-compounds/modules/accordion';
@@ -107,7 +106,7 @@
 @import '../../_patterns/40-compounds/tiles/tiles';
 @import '../../_patterns/50-organisms/flows/flow-content-boxes';
 @import '../../_patterns/50-organisms/flows/flow-feed-preview';
-@import '../../_patterns/50-organisms/hours/hours';
+@import '../../_patterns/50-organisms/hours/_hours';
 @import '../../_patterns/50-organisms/intros/intro~alt-heading';
 @import '../../_patterns/50-organisms/intros/intro~alt-text';
 @import '../../_patterns/50-organisms/intros/intro~bio';
@@ -128,12 +127,12 @@
 @import '../../_patterns/60-templates/event/event';
 @import '../../_patterns/60-templates/exhibitions/exhibition';
 @import '../../_patterns/60-templates/exhibitions/gallery';
+@import '../../_patterns/60-templates/generic/_landing';
 @import '../../_patterns/60-templates/generic/cover';
 @import '../../_patterns/60-templates/generic/form';
 @import '../../_patterns/60-templates/generic/home';
 @import '../../_patterns/60-templates/generic/index';
 @import '../../_patterns/60-templates/generic/info';
-@import '../../_patterns/60-templates/generic/landing';
 @import '../../_patterns/60-templates/hours/hours';
 @import '../../_patterns/60-templates/materials/material';
 @import '../../_patterns/60-templates/news/periodicals';

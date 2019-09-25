@@ -1,154 +1,3 @@
-@charset "UTF-8";
-@font-face {
-  font-family: "icomoon";
-  src: url("../fonts/icomoon/icomoon.eot");
-  src: url("../fonts/icomoon/icomoon.eot#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf") format("truetype"), url("../fonts/icomoon/icomoon.woff") format("woff"), url("../fonts/icomoon/icomoon.svg#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-ico,
-[class^=ico-],
-[class*=ico-] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.ico-arrow-down-circle::before {
-  content: "";
-}
-
-.ico-arrow-left-circle::before {
-  content: "";
-}
-
-.ico-arrow-right-circle::before {
-  content: "";
-}
-
-.ico-arrow-up-circle::before {
-  content: "";
-}
-
-.ico-arrow-down-left::before {
-  content: "";
-}
-
-.ico-arrow-down-right::before {
-  content: "";
-}
-
-.ico-arrow-up-right::before {
-  content: "";
-}
-
-.ico-arrow-up-left::before {
-  content: "";
-}
-
-.ico-arrow-down::before {
-  content: "";
-}
-
-.ico-arrow-left::before {
-  content: "";
-}
-
-.ico-arrow-right::before {
-  content: "";
-}
-
-.ico-arrow-up::before {
-  content: "";
-}
-
-.ico-chevron-down::before {
-  content: "";
-}
-
-.ico-chevron-left::before {
-  content: "";
-}
-
-.ico-chevron-right::before {
-  content: "";
-}
-
-.ico-chevron-up::before {
-  content: "";
-}
-
-.ico-chevrons-down::before {
-  content: "";
-}
-
-.ico-chevrons-left::before {
-  content: "";
-}
-
-.ico-chevrons-right::before {
-  content: "";
-}
-
-.ico-chevrons-up::before {
-  content: "";
-}
-
-.ico-corner-down-left::before {
-  content: "";
-}
-
-.ico-corner-down-right::before {
-  content: "";
-}
-
-.ico-corner-left-down::before {
-  content: "";
-}
-
-.ico-corner-left-up::before {
-  content: "";
-}
-
-.ico-corner-right-down::before {
-  content: "";
-}
-
-.ico-corner-right-up::before {
-  content: "";
-}
-
-.ico-corner-up-left::before {
-  content: "";
-}
-
-.ico-corner-up-right::before {
-  content: "";
-}
-
-.card-listing-title .anchor, .card-listing-date .anchor {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.card-listing-title .anchor .icon, .card-listing-date .anchor .icon {
-  margin: 0 !important;
-}
-.card-listing-title:not(.is-anchored) .card-listing-title .anchor, .card-listing-date:not(.is-anchored) .card-listing-title .anchor, .card-listing-title:not(.is-anchored) .card-listing-date .anchor, .card-listing-date:not(.is-anchored) .card-listing-date .anchor {
-  display: none;
-}
-
 .card-listing {
   display: grid;
 }
@@ -300,14 +149,14 @@ ico,
           justify-content: flex-end;
 }
 .-align-y-top.card-listing-image {
-  -webkit-box-align: top;
-      -ms-flex-align: top;
-          align-items: top;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 .-align-y-bottom.card-listing-image {
-  -webkit-box-align: bottom;
-      -ms-flex-align: bottom;
-          align-items: bottom;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 .-align-y-center.card-listing-image {
   -webkit-box-align: center;
@@ -353,57 +202,19 @@ ico,
   top: -15px;
 }
 .card-listing-date {
-  font-family: "Open Sans", sans-serif;
-  font-size: 12px;
-  font-weight: bold;
-  font-style: normal;
-  line-height: 1.6667;
+  font: normal bold 12px/1.6667 "Open Sans", sans-serif;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #082B73;
 }
-.card-listing-date.is-anchored:hover .anchor, .card-listing-date.is-anchored.is-hover .anchor, .card-listing-date.is-anchored:focus .anchor, .card-listing-date.is-anchored.is-focus .anchor {
-  visibility: visible;
-  opacity: 1;
-}
-.card-listing-date .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
-  transition: visibility 0s, opacity 0.25s ease;
-  margin-left: 20px;
-  width: 25px;
-  height: 25px;
-  opacity: 0;
-  visibility: hidden;
-}
 .card-listing-title {
-  font-family: "Cardo", serif;
-  font-size: 28px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1.5;
+  font: normal normal 28px/1.5 "Cardo", serif;
   letter-spacing: normal;
   text-transform: none;
   color: #091C44;
 }
-.card-listing-title.is-anchored:hover .anchor, .card-listing-title.is-anchored.is-hover .anchor, .card-listing-title.is-anchored:focus .anchor, .card-listing-title.is-anchored.is-focus .anchor {
-  visibility: visible;
-  opacity: 1;
-}
-.card-listing-title .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
-  transition: visibility 0s, opacity 0.25s ease;
-  margin-left: 20px;
-  width: 25px;
-  height: 25px;
-  opacity: 0;
-  visibility: hidden;
-}
 .card-listing-description {
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1.6429;
+  font: normal normal 14px/1.6429 "Open Sans", sans-serif;
   letter-spacing: normal;
   text-transform: none;
   text-align: left;

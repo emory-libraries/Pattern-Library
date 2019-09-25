@@ -1,154 +1,3 @@
-@charset "UTF-8";
-@font-face {
-  font-family: "icomoon";
-  src: url("../fonts/icomoon/icomoon.eot");
-  src: url("../fonts/icomoon/icomoon.eot#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf") format("truetype"), url("../fonts/icomoon/icomoon.woff") format("woff"), url("../fonts/icomoon/icomoon.svg#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-ico,
-[class^=ico-],
-[class*=ico-] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.ico-arrow-down-circle::before {
-  content: "";
-}
-
-.ico-arrow-left-circle::before {
-  content: "";
-}
-
-.ico-arrow-right-circle::before {
-  content: "";
-}
-
-.ico-arrow-up-circle::before {
-  content: "";
-}
-
-.ico-arrow-down-left::before {
-  content: "";
-}
-
-.ico-arrow-down-right::before {
-  content: "";
-}
-
-.ico-arrow-up-right::before {
-  content: "";
-}
-
-.ico-arrow-up-left::before {
-  content: "";
-}
-
-.ico-arrow-down::before {
-  content: "";
-}
-
-.ico-arrow-left::before {
-  content: "";
-}
-
-.ico-arrow-right::before {
-  content: "";
-}
-
-.ico-arrow-up::before {
-  content: "";
-}
-
-.ico-chevron-down::before {
-  content: "";
-}
-
-.ico-chevron-left::before {
-  content: "";
-}
-
-.ico-chevron-right::before {
-  content: "";
-}
-
-.ico-chevron-up::before {
-  content: "";
-}
-
-.ico-chevrons-down::before {
-  content: "";
-}
-
-.ico-chevrons-left::before {
-  content: "";
-}
-
-.ico-chevrons-right::before {
-  content: "";
-}
-
-.ico-chevrons-up::before {
-  content: "";
-}
-
-.ico-corner-down-left::before {
-  content: "";
-}
-
-.ico-corner-down-right::before {
-  content: "";
-}
-
-.ico-corner-left-down::before {
-  content: "";
-}
-
-.ico-corner-left-up::before {
-  content: "";
-}
-
-.ico-corner-right-down::before {
-  content: "";
-}
-
-.ico-corner-right-up::before {
-  content: "";
-}
-
-.ico-corner-up-left::before {
-  content: "";
-}
-
-.ico-corner-up-right::before {
-  content: "";
-}
-
-.intro-subtitle.-bio .anchor, .intro-title .anchor, .intro-context .anchor {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.intro-subtitle.-bio .anchor .icon, .intro-title .anchor .icon, .intro-context .anchor .icon {
-  margin: 0 !important;
-}
-.intro-subtitle.-bio:not(.is-anchored) .intro-subtitle.-bio .anchor, .intro-title:not(.is-anchored) .intro-subtitle.-bio .anchor, .intro-subtitle.-bio:not(.is-anchored) .intro-title .anchor, .intro-title:not(.is-anchored) .intro-title .anchor, .intro-context:not(.is-anchored) .intro-subtitle.-bio .anchor, .intro-context:not(.is-anchored) .intro-title .anchor, .intro-subtitle.-bio:not(.is-anchored) .intro-context .anchor, .intro-title:not(.is-anchored) .intro-context .anchor, .intro-context:not(.is-anchored) .intro-context .anchor {
-  display: none;
-}
-
 .intro-link {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -250,76 +99,23 @@ ico,
   margin-right: 35px;
 }
 .intro-context {
-  font-family: "Open Sans", sans-serif !important;
-  font-size: 12px !important;
-  font-weight: bold !important;
-  font-style: normal !important;
-  line-height: 1.6667 !important;
+  font: normal bold 12px/1.6667 "Open Sans", sans-serif !important;
   letter-spacing: 0.05em !important;
   text-transform: uppercase !important;
   color: #082B73 !important;
 }
-.intro-context.is-anchored:hover .anchor, .intro-context.is-anchored.is-hover .anchor, .intro-context.is-anchored:focus .anchor, .intro-context.is-anchored.is-focus .anchor {
-  visibility: visible;
-  opacity: 1;
-}
-.intro-context .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
-  transition: visibility 0s, opacity 0.25s ease;
-  margin-left: 20px;
-  width: 25px;
-  height: 25px;
-  opacity: 0;
-  visibility: hidden;
-}
 .intro-title {
-  font-family: "Cardo", serif !important;
-  font-size: 48px !important;
-  font-weight: bold !important;
-  font-style: normal !important;
-  line-height: normal !important;
+  font: normal bold 48px/normal "Cardo", serif !important;
   letter-spacing: normal !important;
   text-transform: none !important;
   color: #091C44 !important;
 }
-.intro-title.is-anchored:hover .anchor, .intro-title.is-anchored.is-hover .anchor, .intro-title.is-anchored:focus .anchor, .intro-title.is-anchored.is-focus .anchor {
-  visibility: visible;
-  opacity: 1;
-}
-.intro-title .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
-  transition: visibility 0s, opacity 0.25s ease;
-  margin-left: 20px;
-  width: 25px;
-  height: 25px;
-  opacity: 0;
-  visibility: hidden;
-}
 .intro-title.-heading {
+  font: normal bold 72px/normal "Cardo", serif !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  color: #091C44 !important;
   text-align: center;
-}
-.intro-title.-heading {
-  font-family: "Cardo", serif !important;
-  font-size: 72px !important;
-  font-weight: bold !important;
-  font-style: normal !important;
-  line-height: normal !important;
-  letter-spacing: normal !important;
-  text-transform: none !important;
-  color: #091C44 !important;
-}
-.intro-title.-heading.is-anchored:hover .anchor, .intro-title.-heading.is-anchored.is-hover .anchor, .intro-title.-heading.is-anchored:focus .anchor, .intro-title.-heading.is-anchored.is-focus .anchor {
-  visibility: visible;
-  opacity: 1;
-}
-.intro-title.-heading .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
-  transition: visibility 0s, opacity 0.25s ease;
-  margin-left: 20px;
-  width: 25px;
-  height: 25px;
-  opacity: 0;
-  visibility: hidden;
 }
 .intro-title.-heading::before {
   border-top: 6px solid #E9BF55;
@@ -334,30 +130,11 @@ ico,
   color: transparent;
 }
 .intro-title.-heading-alt {
-  text-align: left;
-}
-.intro-title.-heading-alt {
-  font-family: "Cardo", serif !important;
-  font-size: 48px !important;
-  font-weight: bold !important;
-  font-style: normal !important;
-  line-height: normal !important;
+  font: normal bold 48px/normal "Cardo", serif !important;
   letter-spacing: normal !important;
   text-transform: none !important;
   color: #091C44 !important;
-}
-.intro-title.-heading-alt.is-anchored:hover .anchor, .intro-title.-heading-alt.is-anchored.is-hover .anchor, .intro-title.-heading-alt.is-anchored:focus .anchor, .intro-title.-heading-alt.is-anchored.is-focus .anchor {
-  visibility: visible;
-  opacity: 1;
-}
-.intro-title.-heading-alt .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
-  transition: visibility 0s, opacity 0.25s ease;
-  margin-left: 20px;
-  width: 25px;
-  height: 25px;
-  opacity: 0;
-  visibility: hidden;
+  text-align: left;
 }
 .intro-title.-heading-alt::before {
   border-top: 6px solid #E9BF55;
@@ -372,61 +149,23 @@ ico,
   color: transparent;
 }
 .intro-title.-bio {
-  font-family: "Cardo", serif !important;
-  font-size: 48px !important;
-  font-weight: bold !important;
-  font-style: normal !important;
-  line-height: normal !important;
+  font: normal bold 48px/normal "Cardo", serif !important;
   letter-spacing: normal !important;
   text-transform: none !important;
   color: #091C44 !important;
 }
-.intro-title.-bio.is-anchored:hover .anchor, .intro-title.-bio.is-anchored.is-hover .anchor, .intro-title.-bio.is-anchored:focus .anchor, .intro-title.-bio.is-anchored.is-focus .anchor {
-  visibility: visible;
-  opacity: 1;
-}
-.intro-title.-bio .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
-  transition: visibility 0s, opacity 0.25s ease;
-  margin-left: 20px;
-  width: 25px;
-  height: 25px;
-  opacity: 0;
-  visibility: hidden;
-}
 .intro-subtitle {
-  font-family: "Cardo", serif !important;
-  font-size: 28px !important;
-  font-weight: normal !important;
-  font-style: normal !important;
-  line-height: 1.5 !important;
+  font: normal normal 28px/1.5 "Cardo", serif !important;
   letter-spacing: normal !important;
   text-transform: none !important;
   text-align: left !important;
   color: #004990 !important;
 }
 .intro-subtitle.-bio {
-  font-family: "Open Sans", sans-serif !important;
-  font-size: 22px !important;
-  font-weight: normal !important;
-  font-style: normal !important;
-  line-height: 1.6364 !important;
+  font: normal normal 22px/1.6364 "Open Sans", sans-serif !important;
   letter-spacing: normal !important;
   text-transform: none !important;
   color: #091C44 !important;
-}
-.intro-subtitle.-bio.is-anchored:hover .anchor, .intro-subtitle.-bio.is-anchored.is-hover .anchor, .intro-subtitle.-bio.is-anchored:focus .anchor, .intro-subtitle.-bio.is-anchored.is-focus .anchor {
-  visibility: visible;
-  opacity: 1;
-}
-.intro-subtitle.-bio .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
-  transition: visibility 0s, opacity 0.25s ease;
-  margin-left: 20px;
-  width: 25px;
-  height: 25px;
-  opacity: 0;
-  visibility: hidden;
 }
 .intro-link {
   font-weight: bold;
@@ -458,33 +197,21 @@ ico,
   fill: #004990;
 }
 .intro-link::after {
-  font-size: 12px !important;
-  line-height: 1 !important;
-}
-.intro-link::after {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: italic;
-  line-height: 1.9375;
+  font: italic normal 16px/1.9375 "Open Sans", sans-serif;
   letter-spacing: normal;
   text-transform: none;
   text-align: left;
   color: #605858;
+  font-size: 12px !important;
+  line-height: 1 !important;
 }
 .intro-link.-popular {
-  font-size: 20px !important;
-  color: #FFFFFF;
-}
-.intro-link.-popular {
-  font-family: "Cardo", serif;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 2.05;
+  font: normal normal 18px/2.05 "Cardo", serif;
   letter-spacing: normal;
   text-transform: none;
   text-align: left;
+  color: #FFFFFF;
+  font-size: 20px !important;
   color: #FFFFFF;
 }
 .intro-link.-popular:hover, .intro-link.-popular.is-hover, .intro-link.-popular:focus, .intro-link.-popular.is-focus {
