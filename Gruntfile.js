@@ -368,6 +368,7 @@ module.exports = function(grunt) {
             path.resolve(paths.source.js, '_head.index.js'),
             path.resolve(paths.source.js, 'index.js'),
             path.resolve(paths.source.patterns, '**/*.js'),
+            '!' + path.resolve(paths.source.patterns, '**/_*.js'),
             path.resolve(paths.source.js, '_foot.index.js')
           ],
           dest: path.resolve(paths.public.js, 'bundle.js')
