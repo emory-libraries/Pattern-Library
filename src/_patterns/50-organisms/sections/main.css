@@ -429,6 +429,9 @@
 .-research-help-directory-page.without-intro.section-main .section-main-subtitle {
   display: none;
 }
+.-gallery-page.section-main {
+  padding-bottom: 0 !important;
+}
 @media (max-width: 600px) {
   .-gallery-page.section-main {
     grid-template-columns: [main-start] 100% [main-end];
