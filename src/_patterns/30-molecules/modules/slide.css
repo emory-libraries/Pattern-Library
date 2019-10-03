@@ -289,7 +289,7 @@
 .slide-action .button:hover, .slide-action .button:focus, .slide-action .button.is-hover, .slide-action .button.is-focus {
   border-color: #E9BF55;
   background-color: #E9BF55;
-  font: normal bold 12px/1.6667 "Open Sans", sans-serif;
+  font: normal bold 11px/1.6364 "Open Sans", sans-serif;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-align: left;

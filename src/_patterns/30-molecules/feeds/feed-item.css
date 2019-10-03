@@ -225,7 +225,7 @@
 .feed-item-action:hover, .feed-item-action:focus, .feed-item-action.is-hover, .feed-item-action.is-focus {
   border-color: #004990;
   background-color: #004990;
-  font: normal bold 12px/1.6667 "Open Sans", sans-serif;
+  font: normal bold 11px/1.6364 "Open Sans", sans-serif;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-align: left;

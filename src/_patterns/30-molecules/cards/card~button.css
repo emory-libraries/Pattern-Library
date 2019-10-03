@@ -94,7 +94,7 @@
 .card-button:hover, .card-button:focus, .card-button.is-hover, .card-button.is-focus {
   border-color: #082B73;
   background-color: #082B73;
-  font: normal bold 12px/1.6667 "Open Sans", sans-serif;
+  font: normal bold 11px/1.6364 "Open Sans", sans-serif;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-align: left;

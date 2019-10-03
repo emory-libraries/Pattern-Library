@@ -115,7 +115,7 @@
 .social-media-link:hover, .social-media-link:focus, .social-media-link.is-hover, .social-media-link.is-focus {
   border-color: #091C44;
   background-color: #091C44;
-  font: normal bold 12px/1.6667 "Open Sans", sans-serif;
+  font: normal bold 11px/1.6364 "Open Sans", sans-serif;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-align: left;

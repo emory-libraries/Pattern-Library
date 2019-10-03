@@ -69,7 +69,7 @@
 .button:hover, .button:focus, .button.is-hover, .button.is-focus {
   border-color: #004990;
   background-color: #004990;
-  font: normal bold 12px/1.6667 "Open Sans", sans-serif;
+  font: normal bold 11px/1.6364 "Open Sans", sans-serif;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-align: left;
@@ -159,7 +159,7 @@
 .button.-success:hover, .button.-success:focus, .button.-success.is-hover, .button.-success.is-focus {
   border-color: #1c590d;
   background-color: #1c590d;
-  font: normal bold 12px/1.6667 "Open Sans", sans-serif;
+  font: normal bold 11px/1.6364 "Open Sans", sans-serif;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-align: left;
@@ -249,7 +249,7 @@
 .button.-caution:hover, .button.-caution:focus, .button.-caution.is-hover, .button.-caution.is-focus {
   border-color: #805809;
   background-color: #805809;
-  font: normal bold 12px/1.6667 "Open Sans", sans-serif;
+  font: normal bold 11px/1.6364 "Open Sans", sans-serif;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-align: left;
@@ -339,7 +339,7 @@
 .button.-error:hover, .button.-error:focus, .button.-error.is-hover, .button.-error.is-focus {
   border-color: #8a1a11;
   background-color: #8a1a11;
-  font: normal bold 12px/1.6667 "Open Sans", sans-serif;
+  font: normal bold 11px/1.6364 "Open Sans", sans-serif;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-align: left;

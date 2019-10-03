@@ -150,5 +150,8 @@
   "60-templates-hours-hours": "review",
   "60-templates-event-event": "review",
   "70-pages-home": "construction",
-  "70-pages-static-home": "construction"
+  "70-pages-static-home": "construction",
+  "50-organisms-hours-hours": "reconsideration",
+  "50-organisms-hours-hours-regular": "construction",
+  "50-organisms-hours-hours-upcoming": "reconsideration"
 }

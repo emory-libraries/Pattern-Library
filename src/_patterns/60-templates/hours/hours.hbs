@@ -5,8 +5,11 @@
   {{#extend 'organisms-main' type='hours-page' classes='hours-page-main'}}
     {{#content 'section-main-body'}}
 
-      {{! Temporarily disable this while `organisms-hours` is not in use.}}
-      {{!> organisms-hours}}
+      {{! Add a section for Upcoming Hours. }}
+      {{> organisms-hours-upcoming}}
+
+      {{! Add a section for Regular Hours. }}
+      {{> organisms-hours-regular}}
 
     {{/content}}
   {{/extend}}
