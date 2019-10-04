@@ -59,27 +59,27 @@
 }
 @media (max-width: 600px) {
   .intro-home-search {
-    padding: 0.5em 20px;
+    padding: 0.5em 20px 0.5em 20px;
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .intro-home-search {
-    padding: 0.5em 20px;
+    padding: 0.5em 20px 0.5em 20px;
   }
 }
 @media (min-width: 901px) {
   .intro-home-search {
-    padding: 0.5em 40px;
+    padding: 0.5em 40px 0.5em 40px;
   }
 }
 @media (min-width: 1200px) {
   .intro-home-search {
-    padding: 0.5em 40px;
+    padding: 0.5em 40px 0.5em 40px;
   }
 }
 @media (min-width: 1290px) {
   .intro-home-search {
-    padding: 0 calc((100vw - 1250px) / 2);
+    padding: 40px calc((100vw - 1250px) / 2) 40px calc((100vw - 1250px) / 2);
   }
 }
 .intro-home-search:focus-within, .intro-home-search:focus, .intro-home-search:hover, .intro-home-search:active, .intro-home-search.is-hover, .intro-home-search.is-focus {

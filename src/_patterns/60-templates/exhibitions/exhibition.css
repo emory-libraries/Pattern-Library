@@ -105,6 +105,7 @@
 }
 .exhibition-page-footer {
   grid-area: footer;
+  margin-top: 0;
 }
 
 .exhibition-page-main-context {

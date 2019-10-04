@@ -123,27 +123,27 @@
 }
 @media (max-width: 600px) {
   .block {
-    padding: 30px 20px;
+    padding: 30px 20px 30px 20px;
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .block {
-    padding: 30px 20px;
+    padding: 30px 20px 30px 20px;
   }
 }
 @media (min-width: 901px) {
   .block {
-    padding: 40px 40px;
+    padding: 40px 40px 40px 40px;
   }
 }
 @media (min-width: 1200px) {
   .block {
-    padding: 40px 40px;
+    padding: 40px 40px 40px 40px;
   }
 }
 @media (min-width: 1290px) {
   .block {
-    padding: 0 calc((100vw - 1250px) / 2);
+    padding: 40px calc((100vw - 1250px) / 2) 40px calc((100vw - 1250px) / 2);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
@@ -303,6 +303,11 @@
     top: calc(-40px - 25px);
   }
 }
+@media (min-width: 601px) and (max-width: 900px) and (min-width: 1290px) {
+  .block.-overhang-top .block-image {
+    top: calc(-40px - 25px);
+  }
+}
 @media (min-width: 901px) {
   .block.-overhang-top .block-image {
     bottom: 0;
@@ -324,6 +329,11 @@
   }
 }
 @media (min-width: 901px) and (min-width: 1200px) {
+  .block.-overhang-top .block-image {
+    top: calc(-40px - 25px);
+  }
+}
+@media (min-width: 901px) and (min-width: 1290px) {
   .block.-overhang-top .block-image {
     top: calc(-40px - 25px);
   }
@@ -353,6 +363,11 @@
     bottom: calc(-40px - 25px);
   }
 }
+@media (min-width: 601px) and (max-width: 900px) and (min-width: 1290px) {
+  .block.-overhang-bottom .block-image {
+    bottom: calc(-40px - 25px);
+  }
+}
 @media (min-width: 901px) {
   .block.-overhang-bottom .block-image {
     top: 0;
@@ -378,6 +393,11 @@
     bottom: calc(-40px - 25px);
   }
 }
+@media (min-width: 901px) and (min-width: 1290px) {
+  .block.-overhang-bottom .block-image {
+    bottom: calc(-40px - 25px);
+  }
+}
 @media (min-width: 601px) and (max-width: 900px) and (max-width: 600px) {
   .block.-overhang-both .block-image {
     top: calc(-30px - 25px);
@@ -397,6 +417,12 @@
   }
 }
 @media (min-width: 601px) and (max-width: 900px) and (min-width: 1200px) {
+  .block.-overhang-both .block-image {
+    top: calc(-40px - 25px);
+    bottom: calc(-40px - 25px);
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) and (min-width: 1290px) {
   .block.-overhang-both .block-image {
     top: calc(-40px - 25px);
     bottom: calc(-40px - 25px);
@@ -426,6 +452,12 @@
     bottom: calc(-40px - 25px);
   }
 }
+@media (min-width: 901px) and (min-width: 1290px) {
+  .block.-overhang-both .block-image {
+    top: calc(-40px - 25px);
+    bottom: calc(-40px - 25px);
+  }
+}
 @media (min-width: 601px) and (max-width: 900px) and (max-width: 600px) {
   .block.-stretch-top .block-image {
     top: -30px;
@@ -442,6 +474,11 @@
   }
 }
 @media (min-width: 601px) and (max-width: 900px) and (min-width: 1200px) {
+  .block.-stretch-top .block-image {
+    top: -40px;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) and (min-width: 1290px) {
   .block.-stretch-top .block-image {
     top: -40px;
   }
@@ -466,6 +503,11 @@
     top: -40px;
   }
 }
+@media (min-width: 901px) and (min-width: 1290px) {
+  .block.-stretch-top .block-image {
+    top: -40px;
+  }
+}
 @media (min-width: 601px) and (max-width: 900px) and (max-width: 600px) {
   .block.-stretch-bottom .block-image {
     bottom: -30px;
@@ -482,6 +524,11 @@
   }
 }
 @media (min-width: 601px) and (max-width: 900px) and (min-width: 1200px) {
+  .block.-stretch-bottom .block-image {
+    bottom: -40px;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) and (min-width: 1290px) {
   .block.-stretch-bottom .block-image {
     bottom: -40px;
   }
@@ -506,6 +553,11 @@
     bottom: -40px;
   }
 }
+@media (min-width: 901px) and (min-width: 1290px) {
+  .block.-stretch-bottom .block-image {
+    bottom: -40px;
+  }
+}
 @media (min-width: 601px) and (max-width: 900px) and (max-width: 600px) {
   .block.-stretch-both .block-image {
     top: -30px;
@@ -530,6 +582,12 @@
     bottom: -40px;
   }
 }
+@media (min-width: 601px) and (max-width: 900px) and (min-width: 1290px) {
+  .block.-stretch-both .block-image {
+    top: -40px;
+    bottom: -40px;
+  }
+}
 @media (min-width: 901px) and (max-width: 600px) {
   .block.-stretch-both .block-image {
     top: -30px;
@@ -549,6 +607,12 @@
   }
 }
 @media (min-width: 901px) and (min-width: 1200px) {
+  .block.-stretch-both .block-image {
+    top: -40px;
+    bottom: -40px;
+  }
+}
+@media (min-width: 901px) and (min-width: 1290px) {
   .block.-stretch-both .block-image {
     top: -40px;
     bottom: -40px;
