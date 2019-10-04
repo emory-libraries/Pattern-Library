@@ -128,7 +128,8 @@
   "50-organisms-navigation-footer": "review",
   "50-organisms-navigation-header": "review",
   "50-organisms-sections-popular": "review",
-  "50-organisms-hours-_hours": "reconsideration",
+  "50-organisms-hours-hours-regular": "review",
+  "50-organisms-hours-hours-upcoming": "review",
   "50-organisms-intros-intro-cover": "review",
   "60-templates-services-service-directory": "review",
   "60-templates-research-help-research-help": "review",
@@ -149,9 +150,5 @@
   "60-templates-generic-cover": "review",
   "60-templates-hours-hours": "review",
   "60-templates-event-event": "review",
-  "70-pages-home": "construction",
-  "70-pages-static-home": "construction",
-  "50-organisms-hours-hours": "reconsideration",
-  "50-organisms-hours-hours-regular": "construction",
-  "50-organisms-hours-hours-upcoming": "reconsideration"
+  "70-pages-static-home": "review"
 }
