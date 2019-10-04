@@ -91,5 +91,93 @@
       "href": "",
       "hollow": true
     }
+  },
+  "contacts": {
+    "heading": "Who to Contact",
+    "cards": [
+      {
+        "image": {
+          "src": "//source.unsplash.com/mEZ3PoFGs_k/500x500"
+        },
+        "link": {
+          "href": "//example.com/staff/jane-doe"
+        },
+        "name": "Jane Doe, PhD",
+        "title": "Services, Robert W. Woodruff Library",
+        "email": "jane.doe@emory.edu",
+        "gender": "female"
+      },
+      {
+        "image": {
+          "src": "//source.unsplash.com/iFgRcqHznqg/500x700"
+        },
+        "link": {
+          "href": "//example.com/staff/john-doe"
+        },
+        "name": "John Doe",
+        "title": "South Asian Studies and Religion Librarian",
+        "email": "john.doe@emory.edu",
+        "gender": "male"
+      }
+    ]
+  },
+  "resources": {
+    "heading": "Related Research Help",
+    "cards": [
+      {
+        "title": "Access Library Resources",
+        "link": {
+          "href": ""
+        }
+      },
+      {
+        "title": "Find a Book",
+        "link": {
+          "href": ""
+        }
+      },
+      {
+        "title": "Find an Article in Full Text",
+        "link": {
+          "href": ""
+        }
+      },
+      {
+        "title": "Find a Textbook",
+        "link": {
+          "href": ""
+        }
+      },
+      {
+        "title": "Find a Video",
+        "link": {
+          "href": ""
+        }
+      },
+      {
+        "title": "Find Course Reserve Material",
+        "link": {
+          "href": ""
+        }
+      },
+      {
+        "title": "Understanding Citations",
+        "link": {
+          "href": ""
+        }
+      },
+      {
+        "title": "Find Journals by Subject",
+        "link": {
+          "href": ""
+        }
+      },
+      {
+        "title": "Access an Item in Storage",
+        "link": {
+          "href": ""
+        }
+      }
+    ]
   }
 }
