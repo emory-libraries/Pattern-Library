@@ -110,14 +110,14 @@ function imagegradientrect( $image, $width, $height, $direction, $colors ) {
 	}
 
   // Get the image width and height.
-  $width = $_GET['width'] ?? 500;
-  $height = $_GET['height'] ?? 500;
+  $width = isset($_GET['width']) ? $_GET['width'] : 500;
+  $height = isset($_GET['height']) ? $_GET['height'] : 500;
 
   // Generate the image.
   $image = imagecreatetruecolor($width, $height);
 
   // Get the image direction,colors, and stops.
-  $direction = $_GET['direction'] ?? 'right';
+  $direction = isset($_GET['direction']) ? $_GET['direction'] : 'right';
   $colors = preg_split('/[,;]/', $_GET['colors']);
 
   // Validate the direction, or use a default.
