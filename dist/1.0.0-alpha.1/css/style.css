@@ -562,6 +562,21 @@ body {
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
+.-align-left.feed-item-action-group, .-align-left.card-button-group, .-align-left.social-media-link-group, .-align-left.button.-error-group, .-align-left.button.-caution-group, .-align-left.button.-success-group, .-align-left.button-group {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.-align-center.feed-item-action-group, .-align-center.card-button-group, .-align-center.social-media-link-group, .-align-center.button.-error-group, .-align-center.button.-caution-group, .-align-center.button.-success-group, .-align-center.button-group {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.-align-right.feed-item-action-group, .-align-right.card-button-group, .-align-right.social-media-link-group, .-align-right.button.-error-group, .-align-right.button.-caution-group, .-align-right.button.-success-group, .-align-right.button-group {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
 [disabled].feed-item-action, [disabled].card-button, [disabled].social-media-link, [disabled].button, [disabled].subnav-button, [disabled].nav-button, .is-disabled.feed-item-action, .is-disabled.card-button, .is-disabled.social-media-link, .is-disabled.button, .is-disabled.subnav-button, .is-disabled.nav-button {
   cursor: not-allowed;
 }
@@ -3674,7 +3689,9 @@ body {
 }
 .sidebar-list-section-content .link,
 .sidebar-list-section-content a {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .sidebar-list-section-content .button,
 .sidebar-list-section-content button {
@@ -6104,50 +6121,50 @@ body {
   grid-column: main/sidebar;
   grid-row: section;
 }
-.section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page), .-info-page.section-main, .-material-page.section-main, .-tool-page.section-main, .-form-page.section-main, .-periodicals-page.section-main, .-research-help-page.section-main, .-bio-page.section-main, .-gallery-page.section-main, .-research-help-directory-page.section-main, .-service-directory-page.section-main, .-subject-librarian-directory-page.section-main, .-staff-directory-page.section-main, .-exhibition-page.section-main, .-index-page.section-main, .-hours-page.section-main, .-cover-page.section-main, .-event-page.section-main {
+.section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page):not(.-calendar-page), .-info-page.section-main, .-material-page.section-main, .-tool-page.section-main, .-form-page.section-main, .-periodicals-page.section-main, .-research-help-page.section-main, .-bio-page.section-main, .-gallery-page.section-main, .-research-help-directory-page.section-main, .-service-directory-page.section-main, .-subject-librarian-directory-page.section-main, .-staff-directory-page.section-main, .-exhibition-page.section-main, .-index-page.section-main, .-hours-page.section-main, .-cover-page.section-main, .-event-page.section-main, .-calendar-page.section-main {
   padding-top: 0 !important;
 }
-.section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page) .section-main-title, .-info-page.section-main .section-main-title, .-material-page.section-main .section-main-title, .-tool-page.section-main .section-main-title, .-bio-page.section-main .section-main-title, .-research-help-page.section-main .section-main-title, .-service-directory-page.section-main .section-main-title, .-form-page.section-main .section-main-title, .-subject-librarian-directory-page.section-main .section-main-title, .-staff-directory-page.section-main .section-main-title, .-research-help-directory-page.section-main .section-main-title, .-periodical-page.section-main .section-main-title {
+.section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page):not(.-calendar-page) .section-main-title, .-info-page.section-main .section-main-title, .-material-page.section-main .section-main-title, .-tool-page.section-main .section-main-title, .-bio-page.section-main .section-main-title, .-research-help-page.section-main .section-main-title, .-service-directory-page.section-main .section-main-title, .-form-page.section-main .section-main-title, .-subject-librarian-directory-page.section-main .section-main-title, .-staff-directory-page.section-main .section-main-title, .-research-help-directory-page.section-main .section-main-title, .-periodical-page.section-main .section-main-title {
   margin-bottom: 0;
 }
 @media (max-width: 600px) {
-  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page), .-info-page.-info-page.section-main {
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-calendar-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page):not(.-calendar-page), .-info-page.-info-page.section-main {
     grid-template-columns: [main-start] 100% [main-end];
     grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) repeat(10, [section-start] -webkit-min-content [section-end]) [sidebar-start] -webkit-min-content [sidebar-end];
     grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) repeat(10, [section-start] min-content [section-end]) [sidebar-start] min-content [sidebar-end];
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
-  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page), .-info-page.-info-page.section-main {
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-calendar-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page):not(.-calendar-page), .-info-page.-info-page.section-main {
     grid-template-columns: [main-start] 100% [main-end];
     grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) repeat(10, [section-start] -webkit-min-content [section-end]) [sidebar-start] -webkit-min-content [sidebar-end];
     grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) repeat(10, [section-start] min-content [section-end]) [sidebar-start] min-content [sidebar-end];
   }
 }
 @media (min-width: 901px) {
-  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page), .-info-page.-info-page.section-main {
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-calendar-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page):not(.-calendar-page), .-info-page.-info-page.section-main {
     grid-template-columns: [main-start] 100% [main-end];
     grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) repeat(10, [section-start] -webkit-min-content [section-end]) [sidebar-start] -webkit-min-content [sidebar-end];
     grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) repeat(10, [section-start] min-content [section-end]) [sidebar-start] min-content [sidebar-end];
   }
 }
 @media (min-width: 901px) {
-  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page), .-info-page.-info-page.section-main {
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-calendar-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page):not(.-calendar-page), .-info-page.-info-page.section-main {
     grid-template-columns: [main-start] 1fr [main-end sidebar-start] 340px [sidebar-end];
     grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end main-start title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) [main-end] repeat(10, [section-start] -webkit-min-content [section-end]);
     grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end main-start title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) [main-end] repeat(10, [section-start] min-content [section-end]);
   }
 }
 @media (min-width: 901px) {
-  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page) .section-main-breadcrumb, .-info-page.-info-page.section-main .section-main-breadcrumb {
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-calendar-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page):not(.-calendar-page) .section-main-breadcrumb, .-info-page.-info-page.section-main .section-main-breadcrumb {
     grid-column: main/sidebar;
   }
-  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page) .section-main-title,
-.section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page) .section-main-subtitle, .-info-page.-info-page.section-main .section-main-title,
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-calendar-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page):not(.-calendar-page) .section-main-title,
+.section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-calendar-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page):not(.-calendar-page) .section-main-subtitle, .-info-page.-info-page.section-main .section-main-title,
 .-info-page.-info-page.section-main .section-main-subtitle {
     grid-column: main/sidebar;
   }
-  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page) .section-main-sidebar, .-info-page.-info-page.section-main .section-main-sidebar {
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-calendar-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page):not(.-calendar-page) .section-main-sidebar, .-info-page.-info-page.section-main .section-main-sidebar {
     grid-row: body/main;
   }
 }
@@ -6454,25 +6471,25 @@ body {
 .-research-help-directory-page.without-intro.section-main .section-main-subtitle {
   display: none;
 }
-.-gallery-page.section-main {
+.-gallery-page.section-main, .-calendar-page.section-main {
   padding-bottom: 0 !important;
 }
 @media (max-width: 600px) {
-  .-gallery-page.section-main {
+  .-gallery-page.section-main, .-calendar-page.section-main {
     grid-template-columns: [main-start] 100% [main-end];
     grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
     grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end] repeat(100, [auto-start] min-content [auto-end]);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
-  .-gallery-page.section-main {
+  .-gallery-page.section-main, .-calendar-page.section-main {
     grid-template-columns: [main-start] 100% [main-end];
     grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
     grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end] repeat(100, [auto-start] min-content [auto-end]);
   }
 }
 @media (min-width: 901px) {
-  .-gallery-page.section-main {
+  .-gallery-page.section-main, .-calendar-page.section-main {
     grid-template-columns: [main-start] 100% [main-end];
     grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
     grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end] repeat(100, [auto-start] min-content [auto-end]);
@@ -6483,7 +6500,12 @@ body {
 .-gallery-page.section-main .section-main-spacer,
 .-gallery-page.section-main .section-main-content,
 .-gallery-page.section-main .section-main-section,
-.-gallery-page.section-main .section-main-sidebar {
+.-gallery-page.section-main .section-main-sidebar, .-calendar-page.section-main .section-main-subtitle,
+.-calendar-page.section-main .section-main-body,
+.-calendar-page.section-main .section-main-spacer,
+.-calendar-page.section-main .section-main-content,
+.-calendar-page.section-main .section-main-section,
+.-calendar-page.section-main .section-main-sidebar {
   display: none;
 }
 @media (max-width: 600px) {
@@ -7859,17 +7881,6 @@ body {
   grid-template-rows: -webkit-min-content 1fr auto;
   grid-template-rows: min-content 1fr auto;
   grid-template-columns: 100%;
-  /*
-    // Adjust grid layout on larger screens.
-    @include breakpoint-l {
-      grid-template-rows: 150px 1fr auto;
-    };
-
-    // Adjust grid layout on even larger screens.
-    @include breakpoint-xl {
-      grid-template-rows: 130px 1fr auto;
-    };
-  */
 }
 .exhibition-page {
   margin: 0 auto;
@@ -8188,6 +8199,30 @@ body {
   grid-area: main;
 }
 .hours-page-footer {
+  grid-area: footer;
+}
+
+.calendar-page {
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: -webkit-min-content 1fr auto;
+  grid-template-rows: min-content 1fr auto;
+  grid-template-columns: 100%;
+}
+.calendar-page-header {
+  grid-area: header;
+}
+.calendar-page-main {
+  grid-area: main;
+}
+.calendar-page-main .button-group {
+  margin-top: 4em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.calendar-page-footer {
   grid-area: footer;
 }
 
