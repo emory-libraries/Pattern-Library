@@ -22,6 +22,21 @@
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
+.-align-left.card-button-group {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.-align-center.card-button-group {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.-align-right.card-button-group {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
 [disabled].card-button, .is-disabled.card-button {
   cursor: not-allowed;
 }

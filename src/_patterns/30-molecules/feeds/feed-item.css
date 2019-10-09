@@ -22,6 +22,21 @@
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
+.-align-left.feed-item-action-group {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.-align-center.feed-item-action-group {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.-align-right.feed-item-action-group {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
 [disabled].feed-item-action, .is-disabled.feed-item-action {
   cursor: not-allowed;
 }

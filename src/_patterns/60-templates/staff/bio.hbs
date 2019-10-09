@@ -1,46 +1,5 @@
-{{! Initialize some sidebar list section data. }}
-{{assign 'sections' (arrayify null)}}
-{{! Build the first sidebar list section if applicable. }}
-{{#if (or (or (and (and config config.contact) (or phone fax)) (and (and config config.cv) cv)) (and (not config) (or phone fax cv)))}}
-
-  {{! Build the sidebar list section's content. }}
-  {{assign 'sections.0' (objectify icon=false title='Contact Information' content=(arrayify null))}}
-  {{#if phone}}{{assign 'sections.0.content.0' (combine 'P: ' (formatPhone phone '000-000-0000'))}}{{/if}}
-  {{#if fax}}{{assign 'sections.0.content.1' (combine 'F: ' (formatPhone fax '000-000-0000'))}}{{/if}}
-  {{#if libcal}}{{assign 'sections.0.button' (objectify href=libcal label='Schedule an Appointment')}}{{/if}}
-
-{{/if}}
-
-{{! Build the second sidebar list section if applicable. }}
-{{#if (or (and (and config config.contact) address) (and (not config) address))}}
-
-  {{! Build the sidebar list section's content. }}
-  {{assign 'sections.1' (objectify icon=false title='Mailing Address' content=(arrayify null))}}
-  {{#if address.name}}{{assign 'sections.1.content.0' address.name}}{{/if}}
-  {{#if address.street}}{{assign 'sections.1.content.1' address.street}}{{/if}}
-  {{#if (and address.city address.state address.zip)}}{{assign 'sections.1.content.2' (combine address.city ', ' address.state address.zip)}}{{/if}}
-
-{{/if}}
-
-{{! Build the third sidebar list section if applicable. }}
-{{#if (or (and (and config config.subjects) subjects) (and (not config) subjects))}}
-
-  {{! Build the sidebar list section's content. }}
-  {{assign 'sections.2' (objectify icon=false title='Areas of Expertise' links=(arrayify null))}}
-  {{#each subjects}}
-    {{storagePush 'sections.2.links' (objectify href=(combine (baseUrl) '/services/subject-librarians?subject=' (plusify this)) label=this)}}
-  {{/each}}
-  {{assign 'sections.2.links' (storageGet 'sections.2.links')}}
-
-{{/if}}
-
-{{! Build the last sidebar list section if applicable. }}
-{{#if (or (or (and (and config config.contact) libcal) (and (and config config.guides) guides)) (and (not config) (or libcal guides)))}}
-
-  {{assign 'sections.3' (objectify icon=false title='Research Help' links=(arrayify null))}}
-  {{#if (and guides guides.href)}}{{assign 'sections.3.links.0' (objectify href=guides.href label='View Research Guides')}}{{/if}}
-
-{{/if}}
+{{! Get the sidebar sections and their content. }}
+{{assign 'sections' (getSidebar this)}}
 
 <div class="bio-page">
 
@@ -50,7 +9,7 @@
     {{#content 'section-main-body'}}
 
       {{! Insert education if given. }}
-      {{#if (or (and (and config config.education) education) (and (not config) education))}}
+      {{#if education}}
 
         {{> tokens-heading level=2 heading='Education' classes='' alternate=false icon=false}}
 
@@ -63,7 +22,7 @@
       {{/if}}
 
       {{! Insert biography if given. }}
-      {{#if (or (and (and config config.bio) bio) (and (not config) bio))}}
+      {{#if bio}}
 
          {{> tokens-heading level=2 heading='Professional Profile' classes='' alternate=false icon=false}}
 
@@ -77,17 +36,6 @@
       {{> compounds-sidebar-list divider=(objectify start=true end=true)}}
 
     {{/content}}
-
-    {{! Insert link to CV if given. }}
-    {{#if (and cv cv.href)}}
-      {{#content 'section-main-other'}}
-
-        <div class="section-main-spacer"></div>
-
-        <div class="section-main-content">{{> atoms-button-link href=cv.href label='Download Full CV' icon=false}}</div>
-
-      {{/content}}
-    {{/if}}
 
   {{/extend}}
 

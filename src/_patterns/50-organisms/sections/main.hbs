@@ -5,7 +5,7 @@
   </div>
 
   {{! Identify pages with special case intro variants. }}
-  {{assign 'variants' (makeArray 'exhibition-page' 'bio-page' 'event-page' 'gallery-page' 'landing-page' 'cover-page' 'hours-page' 'index-page')}}
+  {{assign 'variants' (makeArray 'exhibition-page' 'bio-page' 'event-page' 'gallery-page' 'calendar-page' 'landing-page' 'cover-page' 'hours-page' 'index-page')}}
 
   {{! Handle special cases. }}
   {{#inArray variants type}}
@@ -28,11 +28,11 @@
       {{> organisms-intro-cover date=true}}
     {{/if}}
 
-    {{! Gallery page intro }}
-    {{#if (eq type 'gallery-page')}}
+    {{! Gallery and Calendar page intro }}
+    {{#if (or (eq type 'gallery-page') (eq type 'calendar-page'))}}
       {{> organisms-intro-heading no-subtitle=true}}
     {{/if}}
-    
+
 
     {{! Hours and Index page intro }}
     {{#if (or (eq type 'hours-page') (eq type 'index-page'))}}

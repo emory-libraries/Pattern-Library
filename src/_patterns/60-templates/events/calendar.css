@@ -1,0 +1,23 @@
+.calendar-page {
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: -webkit-min-content 1fr auto;
+  grid-template-rows: min-content 1fr auto;
+  grid-template-columns: 100%;
+}
+.calendar-page-header {
+  grid-area: header;
+}
+.calendar-page-main {
+  grid-area: main;
+}
+.calendar-page-main .button-group {
+  margin-top: 4em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.calendar-page-footer {
+  grid-area: footer;
+}

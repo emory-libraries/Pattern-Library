@@ -51,7 +51,9 @@
 }
 .sidebar-list-section-content .link,
 .sidebar-list-section-content a {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .sidebar-list-section-content .button,
 .sidebar-list-section-content button {

@@ -22,6 +22,21 @@
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
+.-align-left.button.-error-group, .-align-left.button.-caution-group, .-align-left.button.-success-group, .-align-left.button-group {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.-align-center.button.-error-group, .-align-center.button.-caution-group, .-align-center.button.-success-group, .-align-center.button-group {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.-align-right.button.-error-group, .-align-right.button.-caution-group, .-align-right.button.-success-group, .-align-right.button-group {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
 [disabled].button, .is-disabled.button {
   cursor: not-allowed;
 }
