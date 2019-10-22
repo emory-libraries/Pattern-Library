@@ -4,8 +4,12 @@
     {{#each items}}
     <li class="popular-links-menu-list-item">
       {{#if link}}
-        {{#unless ../hours}}{{assign 'classes' '-popular'}}{{/unless}}
-        {{> atoms-link label=title}}
+        {{#unless ../hours}}
+          {{assign 'classes' '-popular'}}
+        {{else}}
+          {{assign 'classes' ''}}
+        {{/unless}}
+        {{> atoms-link label=title href=link.href}}
       {{else}}
         {{title}}
       {{/if}}

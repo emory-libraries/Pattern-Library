@@ -1,0 +1,8 @@
+// Disable styles for this component.
+@include disable {
+
+.landing-page {
+  @include templates-landing;
+}
+
+};

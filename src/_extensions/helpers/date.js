@@ -255,7 +255,10 @@ const helpers = {
     // Return the modified moment.
     return _moment;
 
-  }
+  },
+
+  // Get the moment month list.
+  momentMonths: () => moment.months(true)
 
 };
 

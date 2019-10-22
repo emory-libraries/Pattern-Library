@@ -52,6 +52,13 @@ Components.register('search', {
       // Reset the search query.
       this.query = '';
 
+    },
+
+    simclick() {
+
+      // Simulate a click of the submit button.
+      this.$refs.search.click();
+
     }
 
   },

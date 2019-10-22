@@ -12,12 +12,8 @@
     "zip": 30054
   },
   "thumbnail": "//source.unsplash.com/4Xk43LiDtZc/450x500",
-  "guides": {
-    "href": "//example.com/ellen#research-guides"
-  },
-  "cv": {
-    "href": "//example.com/ellen#cv"
-  },
+  "guides": "//example.com/ellen#research-guides",
+  "cv": "//example.com/ellen#cv",
   "libcal": "//example.com/ellen#libcal",
   "subjects": [
     "Religion",

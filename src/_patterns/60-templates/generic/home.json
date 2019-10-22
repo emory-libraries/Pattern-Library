@@ -8,7 +8,7 @@
           "label": "Update",
           "type": "info",
           "dismissible": true,
-          "uid": "notification-1",
+          "id": "notification-1",
           "message": "<p>Ipsum deserunt ita nulla velit, ea quibusdam est probant eu occaecat si enim litteris, vidisse fugiat voluptate, duis laboris se exercitation.<\/p>"
         },
         {
@@ -16,7 +16,7 @@
           "label": "Alert",
           "type": "caution",
           "dismissible": false,
-          "uid": "notification-2",
+          "id": "notification-2",
           "message": "<p>Ipsum deserunt ita nulla velit, ea quibusdam est probant eu occaecat si enim litteris, vidisse fugiat voluptate, duis laboris se exercitation.<\/p>"
         }
       ]
@@ -362,6 +362,29 @@
               "href": "{signUpUrl}"
             }
           }
+        }
+      }
+    ]
+  },
+  "related": {
+    "heading": "Get Help Using the Library",
+    "cards": [
+      {
+        "title": "Access Library Resources",
+        "link": {
+          "href": ""
+        }
+      },
+      {
+        "title": "Find a Book",
+        "link": {
+          "href": ""
+        }
+      },
+      {
+        "title": "Find an Article in Full Text",
+        "link": {
+          "href": ""
         }
       }
     ]

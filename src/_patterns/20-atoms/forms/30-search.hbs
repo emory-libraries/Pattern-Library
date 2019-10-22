@@ -32,6 +32,7 @@
            @blur.native="input.isFocus = false"
            @mouseover.native="input.isHover = true"
            @mouseleave.native="input.isHover = false"
+           @keypress.enter="simclick"
            class="input -search{{#if mode}} -{{mode}}{{/if}} search-box"
            :class="{
             'is-disabled': input.isDisabled,
@@ -60,7 +61,8 @@
           'is-focus': button.isFocus,
         }"
        :disabled="button.isDisabled"
-       tabindex="0">
+       tabindex="0"
+       ref="search">
       {{#unless (and layout (eq layout 'contained'))}}
         {{#if button.icon }}{{> tokens-icon id=button.icon classes="-left" }}{{/if}}
         {{button.label}}

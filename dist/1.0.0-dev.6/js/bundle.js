@@ -1579,6 +1579,10 @@ Components.register('search', {
     reset: function reset() {
       // Reset the search query.
       this.query = '';
+    },
+    simclick: function simclick() {
+      // Simulate a click of the submit button.
+      this.$refs.search.click();
     }
   },
   created: function created() {
@@ -1700,9 +1704,26 @@ Components.register('tab', {
       // Listen for changes to tab states within the tab menu.
       Events.$on("".concat(this.menu, ":activated"), function (data) {
         // If the activated UID matches the current tab's UID, indicate that the tab is activated.
-        if (data.uid === _this12.uid) _this12.isActive = true; // Otherwise, deactivate the tab.
-        else _this12.isActive = false;
+        if (data.uid === _this12.uid) {
+          // Update the tab's state to active.
+          _this12.isActive = true; // Then, make sure the tab input's checked state reflects the tab's active state.
+
+          _this12.input.prop('checked', true);
+        } // Otherwise, deactivate the tab.
+        else {
+            // Update the tab's state to inactive.
+            _this12.isActive = false; // Then, make sure the tab input's checked state reflects the tab's inactive state.
+
+            _this12.input.prop('checked', false);
+          }
       });
+    }
+  },
+  mounted: function mounted() {},
+  computed: {
+    input: function input() {
+      // Locate the tab's input.
+      return $("#".concat(this.uid));
     }
   }
 }); // Register a Branding Footer component.
@@ -1898,11 +1919,9 @@ Components.register('slider', {
       if (event.direction === Hammer.DIRECTION_RIGHT) _this13.previous(); // Go to the next slide when a left swipe occurs.
 
       if (event.direction === Hammer.DIRECTION_LEFT) _this13.next();
-    }); // Setup scroll events on the slider.
+    }); // Make sure the active input is checked by default.
 
-    $(this.$el).on('scroll', function (event) {
-      return console.log(event);
-    });
+    $(this.indicators[this.active]).prop('checked', true);
   },
   computed: {
     indicators: function indicators() {
@@ -1916,7 +1935,6 @@ Components.register('nav-menu', {
   props: {},
   data: function data() {
     return {
-      toggles: [],
       delay: 100
     };
   },
@@ -1971,12 +1989,17 @@ Components.register('nav-menu', {
         // Close the subnavigation dropdown menu for that button if not toggled by another element.
         if (toggle.data('toggled-by').is(element)) toggle.prop('checked', false);
       }, this.delay);
+    },
+    reset: function reset($event) {
+      // Deactivate all toggles to reset the menu's state.
+      this.toggles.prop('checked', false);
     }
   },
-  filters: {},
-  mounted: function mounted() {
-    // Find the toggles.
-    this.toggles = $(this.$el).children('.input.-toggle');
+  computed: {
+    toggles: function toggles() {
+      // Locate toggles.
+      return $(this.$el).children('.input.-toggle');
+    }
   }
 }); // Register a Tab component.
 
@@ -2018,9 +2041,7 @@ Components.register('tab-menu', {
         Events.$emit("".concat(_this14.relay, ":relay"), {
           uid: _this14.uid,
           value: data.value
-        }); // Also, find the tab's respective toggle input, and make sure it's checked.
-
-        if ($("#".concat(data.uid)).length > 0) $("#".concat(data.uid)).prop('checked', true);
+        });
       } // If the tab menu was not the initiator of the event, then also update the selected tab menu item.
 
 
@@ -2169,7 +2190,7 @@ Components.register('hours', {
   },
   mounted: function mounted() {
     // Set the initially checked input.
-    $(this.$refs['input'][0]).prop('checked', true);
+    $(this.$refs.input[0]).prop('checked', true);
   }
 }); // Initialize the Vue.
 

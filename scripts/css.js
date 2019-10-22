@@ -50,10 +50,10 @@ module.exports = function() {
     // Ignore any temporary files.
     .filter((src) => {
 
-    // Ignore temporary files.
-    return path.basename(src).indexOf('.temp') === -1;
+      // Ignore temporary files.
+      return path.basename(src).indexOf('.temp') === -1;
 
-  })
+    })
 
     // Get additional data about the files.
     .map((src) => {

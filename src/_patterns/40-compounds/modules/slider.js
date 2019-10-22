@@ -69,8 +69,8 @@ Components.register('slider', {
 
     });
 
-    // Setup scroll events on the slider.
-    $(this.$el).on('scroll', (event) => console.log(event));
+    // Make sure the active input is checked by default.
+    $(this.indicators[this.active]).prop('checked', true);
 
   },
 
