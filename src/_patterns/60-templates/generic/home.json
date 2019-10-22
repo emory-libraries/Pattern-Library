@@ -387,6 +387,12 @@
           "href": ""
         }
       }
+    ],
+    "buttons": [
+      {
+        "label": "View All Research Help",
+        "href": ""
+      }
     ]
   }
 }

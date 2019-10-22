@@ -150,7 +150,7 @@
     ]
   },
   "related": {
-    "heading": "Get Help Using the Library",
+    "heading": "Improve Your Research & Writing",
     "cards": [
       {
         "title": "Access Library Resources",
@@ -169,6 +169,12 @@
         "link": {
           "href": ""
         }
+      }
+    ],
+    "buttons": [
+      {
+        "label": "View All Research Help",
+        "href": ""
       }
     ]
   }
