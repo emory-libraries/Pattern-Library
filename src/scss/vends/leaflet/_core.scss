@@ -15,7 +15,7 @@
 
 .leaflet-container {
   overflow: hidden;
-  tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
   font: $font;
   background: $color--background;
   outline: 0;
@@ -48,7 +48,7 @@
   }
 
   a {
-    tap-highlight-color: $color--link--tap;
+    -webkit-tap-highlight-color: $color--link--tap;
     color: $color--link;
 
     &.leaflet-active {
@@ -63,7 +63,7 @@
 .leaflet-marker-icon,
 .leaflet-marker-shadow {
   user-select: none;
-  user-drag: none;
+  -webkit-user-drag: none;
 }
 
 .leaflet-safari {
@@ -146,7 +146,7 @@
 }
 
 .lvml {
-  behavior: url(#default#VML);
+  -ms-behavior: url(#default#VML);
   display: inline-block;
   position: absolute;
 }

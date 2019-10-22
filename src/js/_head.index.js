@@ -4,7 +4,7 @@
 // Instead, you will need to manually load these dependencies in the browser using `<script>` tags.
 const _ = require('lodash');
 const Vue = require('vue');
-const L = require('leaflet');
+//const L = require('leaflet');
 const Hammer = require('hammerjs');
 const $ = require('jQuery');
 const {compareTwoStrings} = require('string-similarity');

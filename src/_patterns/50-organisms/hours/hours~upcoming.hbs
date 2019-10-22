@@ -1,0 +1,204 @@
+{{! Set date and time format(s). }}
+{{assign 'format' (objectify
+  date=(makeArray 'MM-DD-YYYY')
+  time=(makeArray 'HH:mm A' 'H:mm A' 'HH:m A' 'H:m A')
+  day='dddd, MMMM D, YYYY')}}
+
+{{! Set the number of days the date range should include. }}
+{{assign 'days' 7}}
+
+{{! Get today's date. }}
+{{assign 'today' (momentAPI (default __datetime__ 'today') format='YYYY-MM-DD')}}
+
+{{! Get the date range's start and end dates. }}
+{{assign 'start' (momentAPI today format='YYYY-MM-DD')}}
+{{assign 'end' (momentAPI today add=(combine (minus days 1) ' days') format='YYYY-MM-DD' order='add.format')}}
+
+{{! Parse the hours data into a usable form. }}
+{{assign 'upcoming' (getHours hours)}}
+
+{{! Get the initial hours for the given start and end dates within the date range. }}
+{{assign 'range' (getHoursInRange upcoming start end)}}
+
+{{#unless (eq noscript true)}}
+
+  <eul-hours-upcoming inline-template v-cloak
+                                      :today="'{{today}}'"
+                                      :hours="{{JSONstringify upcoming}}"
+                                      :format="{{JSONstringify format}}"
+                                      :defaults="{
+                                        days: {{days}},
+                                        max: {{days}},
+                                        date: {
+                                          start: '{{start}}',
+                                          end: '{{end}}'
+                                        },
+                                        active: '{{start}}'
+                                      }">
+
+    <div class="hours">
+
+      <input v-for="(day, i) in range.hours"
+             type="radio"
+             class="input -toggle hours-toggle"
+             name="hours--upcoming"
+             :id="'hours--upcoming--day-' + i"
+             :value="day.date"
+             v-model="active"
+             :checked="active === date"
+             ref="input">
+
+      {{> tokens-heading level=2 alt=false classes='hours-title' icon=false heading='Upcoming Hours'}}
+
+      <p class="hours-caption">
+        Displaying hours for
+        <input type="date"
+               class="input -date -inline"
+               v-model="date.start"
+               @change="validate"> to
+        <input type="date"
+               class="input -date -inline"
+               v-model="date.end"
+               @change="validate">.
+      </p>
+
+      <div class="hours-content">
+
+        <div class="hours-slider" :style="{'--days': days}">
+
+          <div class="hours-slider-group" v-for="(day, i) in range.hours">
+
+            <div class="hours-slider-day">
+              <label class="hours-slider-day-previous"
+                     :disabled="i === 0"
+                     :for="'hours--upcoming--day-' + (i - 1)">
+              </label>
+              <label class="hours-slider-day-current hours-subtitle"
+                     :for="'hours--upcoming--day-' + i">
+                     <% day.formatted || day.date | format('{{format.day}}') %>
+              </label>
+              <label class="hours-slider-day-next"
+                     :disabled="i === (days - 1)"
+                     :for="'hours--upcoming--day-' + (i + 1)">
+              </label>
+            </div>
+
+            <table class="table hours-table -slider">
+              <thead class="table-header">
+                <tr class="table-row">
+                  <th class="table-cell -heading" scope="col">Location</th>
+                  <th class="table-cell -heading" scope="col">Opens</th>
+                  <th class="table-cell -heading" scope="col">Closes</th>
+                </tr>
+              </thead>
+              <tbody class="table-body">
+                <template v-if="available(day.date)">
+                  <tr class="table-row" v-for="(location, x) in day.locations">
+                    <th class="table-cell -heading" scope="row"><% location.name %></th>
+                    <td class="table-cell"><% location.open %></td>
+                    <td class="table-cell"><% location.close %></td>
+                  </tr>
+                </template>
+                <template v-else>
+                  <tr class="table-row">
+                    <td class="table-cell" colspan="3">Hours for this date are not available at this time.</td>
+                  </tr>
+                </template>
+              </tbody>
+            </table>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </eul-hours-upcoming>
+
+{{/unless}}
+
+{{!--
+{{#unless (eq noscript true)}}<noscript>{{/unless}}
+
+  <div class="hours">
+
+    {{#each range.hours as |day|}}
+      <input type="radio"
+             class="input -toggle hours-toggle"
+             name="hours--upcoming--noscript"
+             id="hours--upcoming--noscript--day-{{@index}}"
+             {{#if @first}}checked{{/if}}>
+    {{/each}}
+
+    {{> tokens-heading level=5 alt=true classes='hours-title' icon=false heading='Upcoming Hours'}}
+
+    <div class="hours-subtitle">
+      Displaying hours for
+      <strong>{{momentAPI start format=format.day}}</strong> to
+      <strong>{{momentAPI end format=format.day}}</strong>.
+    </div>
+
+    <div class="hours-content">
+
+      <div class="hours-slider">
+
+        {{#each range.hours as |day|}}
+        <div class="hours-slider-group">
+
+          <div class="hours-slider-day">
+            <label class="hours-slider-day-previous"
+                   {{#if @first}} disabled{{else}} for="hours--upcoming--noscript--day-{{minus @index 1}}"{{/if}}></label>
+            <label class="hours-slider-day-current hours-subtitle"
+                   for="hours--upcoming--noscript--day-{{@index}}">
+              {{#if day.formatted}}{{day.formatted}}{{else}}{{momentAPI day.date format=@root/format.day}}{{/if}}
+            </label>
+            <label class="hours-slider-day-next"
+                   {{#if @last}} disabled{{else}} for="hours--upcoming--noscript--day-{{plus @index 1}}"{{/if}}></label>
+          </div>
+
+          <table class="table hours-table -slider">
+            <thead class="table-header">
+              <tr class="table-row">
+                <th class="table-cell -heading" scope="col">Location</th>
+                <th class="table-cell -heading" scope="col">Opens</th>
+                <th class="table-cell -heading" scope="col">Closes</th>
+              </tr>
+            </thead>
+            <tbody class="table-body">
+
+              {{! Display hours data if available. }}
+              {{#if (hoursAreAvailable @root/range day.date)}}
+
+                {{#each day.locations as |location|}}
+                  <tr class="table-row">
+                    <th class="table-cell -heading" scope="row">{{location.name}}</th>
+                    <td class="table-cell">{{location.open}}</td>
+                    <td class="table-cell">{{location.close}}</td>
+                  </tr>
+                {{/each}}
+
+              {{! Otherwise, display a message indicating that no data is available. }}
+              {{else}}
+
+                <tr class="table-row">
+                  <td class="table-cell" colspan="3">Hours for this date are not available at this time.</td>
+                </tr>
+
+              {{/if}}
+
+            </tbody>
+          </table>
+
+        </div>
+        {{/each}}
+
+      </div>
+
+    </div>
+
+  </div>
+
+{{#unless (eq noscript true)}}</noscript>{{/unless}}
+--}}

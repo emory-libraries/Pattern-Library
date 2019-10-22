@@ -1,0 +1,8 @@
+// Disable styles for this component.
+@include disable {
+
+.callout {
+  @include atoms-callout;
+}
+
+};

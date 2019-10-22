@@ -1,0 +1,31 @@
+<div class="landing-page">
+
+  {{> organisms-header classes='landing-page-header'}}
+
+  <div class="landing-page-main">
+
+    {{! Load a hero if applicable. }}
+    {{#if hero}}{{> organisms-intro-hero classes='landing-page-intro' background-image=hero}}{{/if}}
+
+    {{! Load the main section. }}
+    {{#extend 'organisms-main' type='landing-page' theme='dark' classes=main-classes}}
+      {{#content 'section-main-body'}}
+        {{> organisms-flow-content-boxes}}
+        {{#with wayfinder}}{{> molecules-wayfinder}}{{/with}}
+      {{/content}}
+    {{/extend}}
+
+    {{! Load the major section if applicable. }}
+    {{#if (gt (length section.cards) 0)}}
+    {{#extend 'organisms-major' theme='light' heading=(default section.heading 'Get Help Using the Library')}}
+      {{#content 'section-major-body'}}
+        {{> compounds-cards cards=section.cards card-type='library-aid' filterable=false classes=''}}
+      {{/content}}
+    {{/extend}}
+    {{/if}}
+
+  </div>
+
+  {{> organisms-footer classes='landing-page-footer'}}
+
+</div>

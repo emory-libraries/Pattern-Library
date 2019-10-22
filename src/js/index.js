@@ -22,8 +22,9 @@ const EUL = {
 
 };
 
+// Temporarily disabled Leaflet while `atoms-map` is not in use.
 // Extend Leaflet.
-require('leaflet-providers');
+// require('leaflet-providers');
 
 // Extend lodash.
 _.capitalizeChar = ( str, i ) => {

@@ -5,7 +5,6 @@ Components.register('nav-menu', {
 
   data() {
     return {
-      toggles: [],
       delay: 100
     };
   },
@@ -97,16 +96,25 @@ Components.register('nav-menu', {
 
       }, this.delay);
 
+    },
+
+    reset($event) {
+
+      // Deactivate all toggles to reset the menu's state.
+      this.toggles.prop('checked', false);
+
     }
 
   },
 
-  filters: {},
+  computed: {
 
-  mounted() {
+    toggles() {
 
-    // Find the toggles.
-    this.toggles = $(this.$el).children('.input.-toggle');
+      // Locate toggles.
+      return $(this.$el).children('.input.-toggle');
+
+    }
 
   }
 

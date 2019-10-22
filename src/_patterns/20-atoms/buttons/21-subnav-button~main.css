@@ -1,154 +1,3 @@
-@charset "UTF-8";
-@font-face {
-  font-family: "icomoon";
-  src: url("../fonts/icomoon/icomoon.eot");
-  src: url("../fonts/icomoon/icomoon.eot#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf") format("truetype"), url("../fonts/icomoon/icomoon.woff") format("woff"), url("../fonts/icomoon/icomoon.svg#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-ico,
-[class^=ico-],
-[class*=ico-] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.ico-arrow-down-circle::before {
-  content: "";
-}
-
-.ico-arrow-left-circle::before {
-  content: "";
-}
-
-.ico-arrow-right-circle::before {
-  content: "";
-}
-
-.ico-arrow-up-circle::before {
-  content: "";
-}
-
-.ico-arrow-down-left::before {
-  content: "";
-}
-
-.ico-arrow-down-right::before {
-  content: "";
-}
-
-.ico-arrow-up-right::before {
-  content: "";
-}
-
-.ico-arrow-up-left::before {
-  content: "";
-}
-
-.ico-arrow-down::before {
-  content: "";
-}
-
-.ico-arrow-left::before {
-  content: "";
-}
-
-.ico-arrow-right::before {
-  content: "";
-}
-
-.ico-arrow-up::before {
-  content: "";
-}
-
-.ico-chevron-down::before {
-  content: "";
-}
-
-.ico-chevron-left::before {
-  content: "";
-}
-
-.ico-chevron-right::before {
-  content: "";
-}
-
-.ico-chevron-up::before {
-  content: "";
-}
-
-.ico-chevrons-down::before {
-  content: "";
-}
-
-.ico-chevrons-left::before {
-  content: "";
-}
-
-.ico-chevrons-right::before {
-  content: "";
-}
-
-.ico-chevrons-up::before {
-  content: "";
-}
-
-.ico-corner-down-left::before {
-  content: "";
-}
-
-.ico-corner-down-right::before {
-  content: "";
-}
-
-.ico-corner-left-down::before {
-  content: "";
-}
-
-.ico-corner-left-up::before {
-  content: "";
-}
-
-.ico-corner-right-down::before {
-  content: "";
-}
-
-.ico-corner-right-up::before {
-  content: "";
-}
-
-.ico-corner-up-left::before {
-  content: "";
-}
-
-.ico-corner-up-right::before {
-  content: "";
-}
-
-.subnav-button-category-heading .anchor, .subnav-button-group-heading .anchor {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.subnav-button-category-heading .anchor .icon, .subnav-button-group-heading .anchor .icon {
-  margin: 0 !important;
-}
-.subnav-button-category-heading:not(.is-anchored) .subnav-button-category-heading .anchor, .subnav-button-group-heading:not(.is-anchored) .subnav-button-category-heading .anchor, .subnav-button-category-heading:not(.is-anchored) .subnav-button-group-heading .anchor, .subnav-button-group-heading:not(.is-anchored) .subnav-button-group-heading .anchor {
-  display: none;
-}
-
 .subnav-button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -427,18 +276,12 @@ ico,
   background-color: #082B73;
 }
 .subnav-button.-viewall {
-  background-color: #091C44;
-}
-.subnav-button.-viewall {
-  font-family: "Open Sans", sans-serif;
-  font-size: 11px;
-  font-weight: bold;
-  font-style: normal;
-  line-height: 1.6364;
+  font: normal bold 11px/1.6364 "Open Sans", sans-serif;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-align: left;
   color: #FFFFFF;
+  background-color: #091C44;
 }
 .subnav-button.-viewall:hover, .subnav-button.-viewall:focus, .subnav-button.-viewall.is-hover, .subnav-button.-viewall.is-focus {
   color: #5387F7;
@@ -495,12 +338,11 @@ ico,
   }
 }
 .subnav-button.-resource {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: normal;
+  font: normal bold 16px/normal "Open Sans", sans-serif;
+  letter-spacing: normal;
+  text-transform: none;
   text-align: left;
+  color: #FFFFFF;
   color: #FFFFFF;
   background-color: #091C44;
 }
@@ -538,21 +380,15 @@ ico,
 .subnav-button.-resource .subnav-button-option {
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
-  background-color: transparent;
-  padding-left: 10px;
-  padding-right: 10px;
-  text-decoration: none;
-}
-.subnav-button.-resource .subnav-button-option {
-  font-family: "Open Sans", sans-serif;
-  font-size: 11px;
-  font-weight: bold;
-  font-style: normal;
-  line-height: 1.6364;
+  font: normal bold 11px/1.6364 "Open Sans", sans-serif;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-align: left;
   color: #091C44;
+  background-color: transparent;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
 }
 @media (max-width: 600px) {
   .subnav-button.-resource .subnav-button-option {
@@ -594,24 +430,16 @@ ico,
   width: 12px;
   height: 12px;
 }
-.subnav-button.-resource[disabled] .subnav-button-options-toggle:not(:checked) + .subnav-button-options,
-.subnav-button.-resource[disabled] .subnav-button-options-toggle :not(.is-checked) + .subnav-button-options, .subnav-button.-resource[disabled] .subnav-button-options-toggle:checked + .subnav-button-options, .subnav-button.-resource[disabled] .subnav-button-options-toggle.is-checked + .subnav-button-options, .subnav-button.-resource.is-disabled .subnav-button-options-toggle:not(:checked) + .subnav-button-options,
-.subnav-button.-resource.is-disabled .subnav-button-options-toggle :not(.is-checked) + .subnav-button-options, .subnav-button.-resource.is-disabled .subnav-button-options-toggle:checked + .subnav-button-options, .subnav-button.-resource.is-disabled .subnav-button-options-toggle.is-checked + .subnav-button-options {
+.subnav-button.-resource[disabled] .subnav-button-options-toggle:not(:checked) + .subnav-button-options, .subnav-button.-resource[disabled] .subnav-button-options-toggle:not(.is-checked) + .subnav-button-options, .subnav-button.-resource[disabled] .subnav-button-options-toggle:checked + .subnav-button-options, .subnav-button.-resource[disabled] .subnav-button-options-toggle.is-checked + .subnav-button-options, .subnav-button.-resource.is-disabled .subnav-button-options-toggle:not(:checked) + .subnav-button-options, .subnav-button.-resource.is-disabled .subnav-button-options-toggle:not(.is-checked) + .subnav-button-options, .subnav-button.-resource.is-disabled .subnav-button-options-toggle:checked + .subnav-button-options, .subnav-button.-resource.is-disabled .subnav-button-options-toggle.is-checked + .subnav-button-options {
   display: none;
 }
 .subnav-button.-back {
-  background-color: #091C44;
-}
-.subnav-button.-back {
-  font-family: "Open Sans", sans-serif;
-  font-size: 11px;
-  font-weight: bold;
-  font-style: normal;
-  line-height: 1.6364;
+  font: normal bold 11px/1.6364 "Open Sans", sans-serif;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-align: left;
   color: #FFFFFF;
+  background-color: #091C44;
 }
 .subnav-button.-back:hover, .subnav-button.-back:focus, .subnav-button.-back.is-hover, .subnav-button.-back.is-focus {
   color: #5387F7;
@@ -682,34 +510,15 @@ ico,
   background-color: #091C44;
 }
 .subnav-button-group-heading {
+  font: normal bold 12px/1.6667 "Open Sans", sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #E9BF55;
   background-color: #091C44;
   padding-top: 1em;
   padding-bottom: 1em;
   margin-top: 2em;
   margin-bottom: 0.5em;
-}
-.subnav-button-group-heading {
-  font-family: "Open Sans", sans-serif;
-  font-size: 12px;
-  font-weight: bold;
-  font-style: normal;
-  line-height: 1.6667;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #E9BF55;
-}
-.subnav-button-group-heading.is-anchored:hover .anchor, .subnav-button-group-heading.is-anchored.is-hover .anchor, .subnav-button-group-heading.is-anchored:focus .anchor, .subnav-button-group-heading.is-anchored.is-focus .anchor {
-  visibility: visible;
-  opacity: 1;
-}
-.subnav-button-group-heading .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
-  transition: visibility 0s, opacity 0.25s ease;
-  margin-left: 20px;
-  width: 25px;
-  height: 25px;
-  opacity: 0;
-  visibility: hidden;
 }
 @media (max-width: 600px) {
   .subnav-button-group-heading {
@@ -752,34 +561,15 @@ ico,
   margin-bottom: 2em;
 }
 .subnav-button-category-heading {
+  font: normal bold 12px/1.6667 "Open Sans", sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #E9BF55;
   background-color: #091C44;
   padding-top: 1em;
   padding-bottom: 1em;
   margin-top: 2em;
   margin-bottom: 0.5em;
-}
-.subnav-button-category-heading {
-  font-family: "Open Sans", sans-serif;
-  font-size: 12px;
-  font-weight: bold;
-  font-style: normal;
-  line-height: 1.6667;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #E9BF55;
-}
-.subnav-button-category-heading.is-anchored:hover .anchor, .subnav-button-category-heading.is-anchored.is-hover .anchor, .subnav-button-category-heading.is-anchored:focus .anchor, .subnav-button-category-heading.is-anchored.is-focus .anchor {
-  visibility: visible;
-  opacity: 1;
-}
-.subnav-button-category-heading .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
-  transition: visibility 0s, opacity 0.25s ease;
-  margin-left: 20px;
-  width: 25px;
-  height: 25px;
-  opacity: 0;
-  visibility: hidden;
 }
 @media (max-width: 600px) {
   .subnav-button-category-heading {

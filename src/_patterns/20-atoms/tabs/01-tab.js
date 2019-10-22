@@ -56,12 +56,45 @@ Components.register('tab', {
       Events.$on(`${this.menu}:activated`, (data) => {
 
         // If the activated UID matches the current tab's UID, indicate that the tab is activated.
-        if( data.uid === this.uid ) this.isActive = true;
+        if( data.uid === this.uid ) {
+
+          // Update the tab's state to active.
+          this.isActive = true;
+
+          // Then, make sure the tab input's checked state reflects the tab's active state.
+          this.input.prop('checked', true);
+
+        }
 
         // Otherwise, deactivate the tab.
-        else this.isActive = false;
+        else {
+
+          // Update the tab's state to inactive.
+          this.isActive = false;
+
+          // Then, make sure the tab input's checked state reflects the tab's inactive state.
+          this.input.prop('checked', false);
+
+        }
 
       });
+
+    }
+
+  },
+
+  mounted() {
+
+
+
+  },
+
+  computed: {
+
+    input() {
+
+      // Locate the tab's input.
+      return $(`#${this.uid}`);
 
     }
 

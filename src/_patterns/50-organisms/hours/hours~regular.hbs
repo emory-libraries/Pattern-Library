@@ -1,0 +1,153 @@
+{{! Set date and time format(s). }}
+{{assign 'format' (objectify
+  date=(makeArray 'MM-DD-YYYY')
+  time=(makeArray 'HH:mm A' 'H:mm A' 'HH:m A' 'H:m A')
+  day='dddd, MMMM D, YYYY')}}
+
+{{! Parse the hours data into a usable form. }}
+{{assign 'regular' (getHours hours)}}
+
+{{#unless (eq noscript true)}}
+
+  <eul-hours-regular inline-template v-cloak
+                                     :hours="{{JSONstringify regular}}"
+                                     :format="{{JSONstringify format}}"
+                                     :defaults="{
+                                       selected: {
+                                         semester: {{JSONstringify (itemAt regular.semesters 0)}},
+                                         location: {{JSONstringify (itemAt regular.locations 0)}}
+                                       }
+                                     }">
+
+    <div class="hours">
+
+      {{> tokens-heading level=2 alt=false classes='hours-title' icon=false heading='Regular Hours'}}
+
+      <p class="hours-caption">
+        Displaying regular hours for
+        <select class="input -select -inline" v-model="selected.semester">
+          <option v-for="(semester) in hours.semesters" :value="semester">
+            <% semester.name %>
+          </option>
+        </select>.
+        <template v-if="location && location.link && location.link.href">
+          For a more detailed summary of semester hours, please view or download the
+          <a class="link" :href="location.link.href" target="{{default target '_blank'}}">
+            {{> tokens-icon id='material-file_document'}}
+            <% location.link.href.label || 'Full Schedule of Hours' %>
+          </a>.
+        </template>
+      </p>
+
+      <div class="hours-content">
+
+        {{> tokens-heading level=3 alt=false classes='hours-subtitle' heading='Select a Location:'}}
+
+        <div class="button-group">
+          {{#each regular.locations as |location|}}
+          <button class="button -pill -uncapitalize"
+                  @click="selected.location = {{JSONstringify location}};"
+                  @keypress.enter="selected.location = {{JSONstringify location}}"
+                  :class="{'-hollow': !isSelectedLocation({{JSONstringify location}})}">
+            {{location.name}}
+          </button>
+          {{/each}}
+
+        </div>
+
+      </div>
+
+      <div class="hours-content">
+
+        <div class="hours-preview">
+
+          <div class="hours-preview-title">
+            <h4 class="table-heading"><% location ? location.building.name || location.location.name : selected.location.name %></h4>
+            <template v-if="location && location.building.link && location.building.link.href">
+              <a class="link hours-preview-link" :href="location.building.link.href" target="{{default target '_blank'}}">
+                {{> tokens-icon id='material-file_document'}}
+                <% location.building.link.label || location.location.name + ' Master Schedule' %>
+              </a>
+            </template>
+          </div>
+
+          <div class="hours-preview-toggles">
+            <button class="hours-preview-toggles-previous"
+                    :disabled="scroll.index === 0"
+                    @click="scrollTo(scroll.index - 1)">
+            </button>
+            <button class="hours-preview-toggles-next"
+                    :disabled="scroll.index === scroll.steps - 1"
+                    @click="scrollTo(scroll.index + 1)">
+            </button>
+          </div>
+
+          <div class="hours-preview-services">
+
+            <table class="table hours-table -services">
+              <thead class="table-header">
+                <tr class="table-row">
+                  <th class="table-cell -heading" scope="col">Service</th>
+                </tr>
+              </thead>
+              <tbody class="table-body">
+                <template v-if="schedule.length > 0">
+                  <tr class="table-row" v-for="(service) in schedule">
+                    <th class="table-cell -heading" scope="row"><% service.name %></th>
+                  </tr>
+                </template>
+                <template v-else>
+                  <tr class="table-row">
+                    <td class="table-cell">Hours for this location are not available at this time.</td>
+                  </tr>
+                </template>
+              </tbody>
+            </table>
+
+          </div>
+
+          <div class="hours-preview-hours" @scroll="scrollMonitor">
+
+            <table class="table hours-table -hours">
+              <thead class="table-header">
+                <tr class="table-row">
+                  <th class="table-cell -heading" scope="col" v-for="(weekday) in hours.weekdays"><% weekday %></th>
+                </tr>
+              </thead>
+              <tbody class="table-body">
+                <template v-if="schedule.length > 0">
+                  <tr class="table-row" v-for="(service) in schedule">
+                    <td class="table-cell" v-for="(time, day) in service.hours"><% time.formatted %></td>
+                  </tr>
+                </template>
+                <template v-else>
+                  <tr class="table-row">
+                    <td class="table-cell" v-for="(weekday) in hours.weekdays"></td>
+                  </tr>
+                </template>
+              </tbody>
+            </table>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </eul-hours-regular>
+
+{{/unless}}
+
+{{#unless (eq noscript true)}}<noscript>{{/unless}}
+
+  <div class="hours">
+
+    {{> tokens-heading level=2 alt=false classes='hours-title' icon=false heading='Regular Hours'}}
+
+    <p class="hours-caption">Please enable JavaScript in order to view this section's content.</p>
+
+  </div>
+
+{{#unless (eq noscript true)}}</noscript>{{/unless}}
