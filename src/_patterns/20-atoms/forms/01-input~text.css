@@ -1,139 +1,3 @@
-@charset "UTF-8";
-@font-face {
-  font-family: "icomoon";
-  src: url("../fonts/icomoon/icomoon.eot");
-  src: url("../fonts/icomoon/icomoon.eot#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf") format("truetype"), url("../fonts/icomoon/icomoon.woff") format("woff"), url("../fonts/icomoon/icomoon.svg#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-ico,
-[class^=ico-],
-[class*=ico-] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.ico-arrow-down-circle::before {
-  content: "";
-}
-
-.ico-arrow-left-circle::before {
-  content: "";
-}
-
-.ico-arrow-right-circle::before {
-  content: "";
-}
-
-.ico-arrow-up-circle::before {
-  content: "";
-}
-
-.ico-arrow-down-left::before {
-  content: "";
-}
-
-.ico-arrow-down-right::before {
-  content: "";
-}
-
-.ico-arrow-up-right::before {
-  content: "";
-}
-
-.ico-arrow-up-left::before {
-  content: "";
-}
-
-.ico-arrow-down::before {
-  content: "";
-}
-
-.ico-arrow-left::before {
-  content: "";
-}
-
-.ico-arrow-right::before {
-  content: "";
-}
-
-.ico-arrow-up::before {
-  content: "";
-}
-
-.ico-chevron-down::before {
-  content: "";
-}
-
-.ico-chevron-left::before {
-  content: "";
-}
-
-.ico-chevron-right::before {
-  content: "";
-}
-
-.ico-chevron-up::before {
-  content: "";
-}
-
-.ico-chevrons-down::before {
-  content: "";
-}
-
-.ico-chevrons-left::before {
-  content: "";
-}
-
-.ico-chevrons-right::before {
-  content: "";
-}
-
-.ico-chevrons-up::before {
-  content: "";
-}
-
-.ico-corner-down-left::before {
-  content: "";
-}
-
-.ico-corner-down-right::before {
-  content: "";
-}
-
-.ico-corner-left-down::before {
-  content: "";
-}
-
-.ico-corner-left-up::before {
-  content: "";
-}
-
-.ico-corner-right-down::before {
-  content: "";
-}
-
-.ico-corner-right-up::before {
-  content: "";
-}
-
-.ico-corner-up-left::before {
-  content: "";
-}
-
-.ico-corner-up-right::before {
-  content: "";
-}
-
 .input {
   -moz-appearance: none;
        appearance: none;
@@ -242,85 +106,44 @@ ico,
   margin-bottom: 2em;
 }
 .input, .input.-text {
+  font: normal normal 16px/1.9375 "Open Sans", sans-serif;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
   border-color: #B6BDCC;
 }
-.input, .input.-text {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1.9375;
+.input::-webkit-input-placeholder, .input.-text::-webkit-input-placeholder {
+  font: normal normal 18px/1.6111 "Cardo", serif;
   letter-spacing: normal;
   text-transform: none;
   text-align: left;
   color: #605858;
-}
-.input::-webkit-input-placeholder, .input.-text::-webkit-input-placeholder {
-  opacity: 0.5;
-}
-.input::-webkit-input-placeholder, .input.-text::-webkit-input-placeholder {
-  font-family: "Cardo", serif;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1.6111;
-  letter-spacing: normal;
-  text-transform: none;
-  text-align: left;
-  color: #605858;
-}
-.input:-ms-input-placeholder, .input.-text:-ms-input-placeholder {
   opacity: 0.5;
 }
 .input:-ms-input-placeholder, .input.-text:-ms-input-placeholder {
-  font-family: "Cardo", serif;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1.6111;
+  font: normal normal 18px/1.6111 "Cardo", serif;
   letter-spacing: normal;
   text-transform: none;
   text-align: left;
   color: #605858;
+  opacity: 0.5;
 }
 .input::-ms-input-placeholder, .input.-text::-ms-input-placeholder {
+  font: normal normal 18px/1.6111 "Cardo", serif;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
   opacity: 0.5;
 }
 .input::placeholder, .input.-text::placeholder {
+  font: normal normal 18px/1.6111 "Cardo", serif;
+  letter-spacing: normal;
+  text-transform: none;
+  text-align: left;
+  color: #605858;
   opacity: 0.5;
-}
-.input::-webkit-input-placeholder, .input.-text::-webkit-input-placeholder {
-  font-family: "Cardo", serif;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1.6111;
-  letter-spacing: normal;
-  text-transform: none;
-  text-align: left;
-  color: #605858;
-}
-.input::-ms-input-placeholder, .input.-text::-ms-input-placeholder {
-  font-family: "Cardo", serif;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1.6111;
-  letter-spacing: normal;
-  text-transform: none;
-  text-align: left;
-  color: #605858;
-}
-.input::placeholder, .input.-text::placeholder {
-  font-family: "Cardo", serif;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1.6111;
-  letter-spacing: normal;
-  text-transform: none;
-  text-align: left;
-  color: #605858;
 }
 .input:focus, .input.is-focused, .input.-text:focus, .input.-text.is-focused {
   border-color: #5387F7;
@@ -347,18 +170,12 @@ ico,
   padding-bottom: 0px;
 }
 .input.-date::-webkit-datetime-edit, .input.-time::-webkit-datetime-edit {
-  opacity: 0.5;
-}
-.input.-date::-webkit-datetime-edit, .input.-time::-webkit-datetime-edit {
-  font-family: "Cardo", serif;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1.6111;
+  font: normal normal 18px/1.6111 "Cardo", serif;
   letter-spacing: normal;
   text-transform: none;
   text-align: left;
   color: #605858;
+  opacity: 0.5;
 }
 .input.-date, .input.-time, .input.-select {
   padding-right: 60px;
@@ -492,11 +309,7 @@ ico,
   transition: all 0.25s ease;
 }
 .input.-checkbox + .input-label, .input.-radio + .input-label {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1.9375;
+  font: normal normal 16px/1.9375 "Open Sans", sans-serif;
   letter-spacing: normal;
   text-transform: none;
   text-align: left;
@@ -521,11 +334,7 @@ ico,
   background-image: radial-gradient(circle at center, #5387F7 40%, transparent 45%);
 }
 .input-label {
-  font-family: "Open Sans", sans-serif;
-  font-size: 10px;
-  font-weight: bold;
-  font-style: normal;
-  line-height: 1.2;
+  font: normal bold 10px/1.2 "Open Sans", sans-serif;
   letter-spacing: 0.11em;
   text-transform: uppercase;
   text-align: left;

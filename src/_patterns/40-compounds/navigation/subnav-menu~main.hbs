@@ -68,7 +68,7 @@
   {{else}}
 
     {{#each (filterHasNot navigation 'category')}}
-      {{#if resource}}
+      {{#if (hasOwn this 'resource')}}
         {{assign 'options' (makeArray (objectify label='About' href=href) (objectify label='Access' href=resource target='_blank' icon=(objectify id='material-open_in_new' position='right')))}}
         {{> atoms-subnav-button-resource classes='' noscript=(default ../noscript false)}}
       {{else}}

@@ -1,154 +1,3 @@
-@charset "UTF-8";
-@font-face {
-  font-family: "icomoon";
-  src: url("../fonts/icomoon/icomoon.eot");
-  src: url("../fonts/icomoon/icomoon.eot#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf") format("truetype"), url("../fonts/icomoon/icomoon.woff") format("woff"), url("../fonts/icomoon/icomoon.svg#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-ico,
-[class^=ico-],
-[class*=ico-] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.ico-arrow-down-circle::before {
-  content: "";
-}
-
-.ico-arrow-left-circle::before {
-  content: "";
-}
-
-.ico-arrow-right-circle::before {
-  content: "";
-}
-
-.ico-arrow-up-circle::before {
-  content: "";
-}
-
-.ico-arrow-down-left::before {
-  content: "";
-}
-
-.ico-arrow-down-right::before {
-  content: "";
-}
-
-.ico-arrow-up-right::before {
-  content: "";
-}
-
-.ico-arrow-up-left::before {
-  content: "";
-}
-
-.ico-arrow-down::before {
-  content: "";
-}
-
-.ico-arrow-left::before {
-  content: "";
-}
-
-.ico-arrow-right::before {
-  content: "";
-}
-
-.ico-arrow-up::before {
-  content: "";
-}
-
-.ico-chevron-down::before {
-  content: "";
-}
-
-.ico-chevron-left::before {
-  content: "";
-}
-
-.ico-chevron-right::before {
-  content: "";
-}
-
-.ico-chevron-up::before {
-  content: "";
-}
-
-.ico-chevrons-down::before {
-  content: "";
-}
-
-.ico-chevrons-left::before {
-  content: "";
-}
-
-.ico-chevrons-right::before {
-  content: "";
-}
-
-.ico-chevrons-up::before {
-  content: "";
-}
-
-.ico-corner-down-left::before {
-  content: "";
-}
-
-.ico-corner-down-right::before {
-  content: "";
-}
-
-.ico-corner-left-down::before {
-  content: "";
-}
-
-.ico-corner-left-up::before {
-  content: "";
-}
-
-.ico-corner-right-down::before {
-  content: "";
-}
-
-.ico-corner-right-up::before {
-  content: "";
-}
-
-.ico-corner-up-left::before {
-  content: "";
-}
-
-.ico-corner-up-right::before {
-  content: "";
-}
-
-.panel-toggle .panel-title .anchor {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.panel-toggle .panel-title .anchor .icon {
-  margin: 0 !important;
-}
-.panel-toggle .panel-title:not(.is-anchored) .panel-title .anchor {
-  display: none;
-}
-
 .panel {
   display: grid;
   grid-template-areas: "toggle" "content";
@@ -246,29 +95,10 @@ ico,
 }
 .panel-toggle .panel-title {
   padding: 25px;
-}
-.panel-toggle .panel-title {
-  font-family: "Cardo", serif;
-  font-size: 28px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1.5;
+  font: normal normal 28px/1.5 "Cardo", serif;
   letter-spacing: normal;
   text-transform: none;
   color: #091C44;
-}
-.panel-toggle .panel-title.is-anchored:hover .anchor, .panel-toggle .panel-title.is-anchored.is-hover .anchor, .panel-toggle .panel-title.is-anchored:focus .anchor, .panel-toggle .panel-title.is-anchored.is-focus .anchor {
-  visibility: visible;
-  opacity: 1;
-}
-.panel-toggle .panel-title .anchor {
-  -webkit-transition: visibility 0s, opacity 0.25s ease;
-  transition: visibility 0s, opacity 0.25s ease;
-  margin-left: 20px;
-  width: 25px;
-  height: 25px;
-  opacity: 0;
-  visibility: hidden;
 }
 .panel-toggle .panel-indicator {
   padding: 25px;
@@ -294,11 +124,7 @@ ico,
   transition: all 0.25s ease;
 }
 .panel-content {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1.9375;
+  font: normal normal 16px/1.9375 "Open Sans", sans-serif;
   letter-spacing: normal;
   text-transform: none;
   text-align: left;

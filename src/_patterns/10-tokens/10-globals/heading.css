@@ -1,140 +1,7 @@
-@charset "UTF-8";
-@font-face {
-  font-family: "icomoon";
-  src: url("../fonts/icomoon/icomoon.eot");
-  src: url("../fonts/icomoon/icomoon.eot#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf") format("truetype"), url("../fonts/icomoon/icomoon.woff") format("woff"), url("../fonts/icomoon/icomoon.svg#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-ico,
-[class^=ico-],
-[class*=ico-] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.ico-arrow-down-circle::before {
-  content: "";
-}
-
-.ico-arrow-left-circle::before {
-  content: "";
-}
-
-.ico-arrow-right-circle::before {
-  content: "";
-}
-
-.ico-arrow-up-circle::before {
-  content: "";
-}
-
-.ico-arrow-down-left::before {
-  content: "";
-}
-
-.ico-arrow-down-right::before {
-  content: "";
-}
-
-.ico-arrow-up-right::before {
-  content: "";
-}
-
-.ico-arrow-up-left::before {
-  content: "";
-}
-
-.ico-arrow-down::before {
-  content: "";
-}
-
-.ico-arrow-left::before {
-  content: "";
-}
-
-.ico-arrow-right::before {
-  content: "";
-}
-
-.ico-arrow-up::before {
-  content: "";
-}
-
-.ico-chevron-down::before {
-  content: "";
-}
-
-.ico-chevron-left::before {
-  content: "";
-}
-
-.ico-chevron-right::before {
-  content: "";
-}
-
-.ico-chevron-up::before {
-  content: "";
-}
-
-.ico-chevrons-down::before {
-  content: "";
-}
-
-.ico-chevrons-left::before {
-  content: "";
-}
-
-.ico-chevrons-right::before {
-  content: "";
-}
-
-.ico-chevrons-up::before {
-  content: "";
-}
-
-.ico-corner-down-left::before {
-  content: "";
-}
-
-.ico-corner-down-right::before {
-  content: "";
-}
-
-.ico-corner-left-down::before {
-  content: "";
-}
-
-.ico-corner-left-up::before {
-  content: "";
-}
-
-.ico-corner-right-down::before {
-  content: "";
-}
-
-.ico-corner-right-up::before {
-  content: "";
-}
-
-.ico-corner-up-left::before {
-  content: "";
-}
-
-.ico-corner-up-right::before {
-  content: "";
-}
-
 .heading.-h6 .anchor, .heading.-h5-alt .anchor, .heading.-h5 .anchor, .heading.-h4 .anchor, .heading.-h3 .anchor, .heading.-h2 .anchor, .heading.-h1-hero .anchor, .heading.-h1-alt .anchor, .heading.-h1 .anchor {
+  display: none;
+}
+.is-anchored.heading.-h6 .anchor, .is-anchored.heading.-h5-alt .anchor, .is-anchored.heading.-h5 .anchor, .is-anchored.heading.-h4 .anchor, .is-anchored.heading.-h3 .anchor, .is-anchored.heading.-h2 .anchor, .is-anchored.heading.-h1-hero .anchor, .is-anchored.heading.-h1-alt .anchor, .is-anchored.heading.-h1 .anchor {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -142,19 +9,12 @@ ico,
       -ms-flex-align: center;
           align-items: center;
 }
-.heading.-h6 .anchor .icon, .heading.-h5-alt .anchor .icon, .heading.-h5 .anchor .icon, .heading.-h4 .anchor .icon, .heading.-h3 .anchor .icon, .heading.-h2 .anchor .icon, .heading.-h1-hero .anchor .icon, .heading.-h1-alt .anchor .icon, .heading.-h1 .anchor .icon {
+.is-anchored.heading.-h6 .anchor .icon, .is-anchored.heading.-h5-alt .anchor .icon, .is-anchored.heading.-h5 .anchor .icon, .is-anchored.heading.-h4 .anchor .icon, .is-anchored.heading.-h3 .anchor .icon, .is-anchored.heading.-h2 .anchor .icon, .is-anchored.heading.-h1-hero .anchor .icon, .is-anchored.heading.-h1-alt .anchor .icon, .is-anchored.heading.-h1 .anchor .icon {
   margin: 0 !important;
-}
-.heading.-h6:not(.is-anchored) .heading.-h6 .anchor, .heading.-h5-alt:not(.is-anchored) .heading.-h6 .anchor, .heading.-h6:not(.is-anchored) .heading.-h5-alt .anchor, .heading.-h5-alt:not(.is-anchored) .heading.-h5-alt .anchor, .heading.-h5:not(.is-anchored) .heading.-h6 .anchor, .heading.-h5:not(.is-anchored) .heading.-h5-alt .anchor, .heading.-h6:not(.is-anchored) .heading.-h5 .anchor, .heading.-h5-alt:not(.is-anchored) .heading.-h5 .anchor, .heading.-h5:not(.is-anchored) .heading.-h5 .anchor, .heading.-h4:not(.is-anchored) .heading.-h6 .anchor, .heading.-h4:not(.is-anchored) .heading.-h5-alt .anchor, .heading.-h4:not(.is-anchored) .heading.-h5 .anchor, .heading.-h6:not(.is-anchored) .heading.-h4 .anchor, .heading.-h5-alt:not(.is-anchored) .heading.-h4 .anchor, .heading.-h5:not(.is-anchored) .heading.-h4 .anchor, .heading.-h4:not(.is-anchored) .heading.-h4 .anchor, .heading.-h3:not(.is-anchored) .heading.-h6 .anchor, .heading.-h3:not(.is-anchored) .heading.-h5-alt .anchor, .heading.-h3:not(.is-anchored) .heading.-h5 .anchor, .heading.-h3:not(.is-anchored) .heading.-h4 .anchor, .heading.-h6:not(.is-anchored) .heading.-h3 .anchor, .heading.-h5-alt:not(.is-anchored) .heading.-h3 .anchor, .heading.-h5:not(.is-anchored) .heading.-h3 .anchor, .heading.-h4:not(.is-anchored) .heading.-h3 .anchor, .heading.-h3:not(.is-anchored) .heading.-h3 .anchor, .heading.-h2:not(.is-anchored) .heading.-h6 .anchor, .heading.-h2:not(.is-anchored) .heading.-h5-alt .anchor, .heading.-h2:not(.is-anchored) .heading.-h5 .anchor, .heading.-h2:not(.is-anchored) .heading.-h4 .anchor, .heading.-h2:not(.is-anchored) .heading.-h3 .anchor, .heading.-h6:not(.is-anchored) .heading.-h2 .anchor, .heading.-h5-alt:not(.is-anchored) .heading.-h2 .anchor, .heading.-h5:not(.is-anchored) .heading.-h2 .anchor, .heading.-h4:not(.is-anchored) .heading.-h2 .anchor, .heading.-h3:not(.is-anchored) .heading.-h2 .anchor, .heading.-h2:not(.is-anchored) .heading.-h2 .anchor, .heading.-h1-hero:not(.is-anchored) .heading.-h6 .anchor, .heading.-h1-hero:not(.is-anchored) .heading.-h5-alt .anchor, .heading.-h1-hero:not(.is-anchored) .heading.-h5 .anchor, .heading.-h1-hero:not(.is-anchored) .heading.-h4 .anchor, .heading.-h1-hero:not(.is-anchored) .heading.-h3 .anchor, .heading.-h1-hero:not(.is-anchored) .heading.-h2 .anchor, .heading.-h6:not(.is-anchored) .heading.-h1-hero .anchor, .heading.-h5-alt:not(.is-anchored) .heading.-h1-hero .anchor, .heading.-h5:not(.is-anchored) .heading.-h1-hero .anchor, .heading.-h4:not(.is-anchored) .heading.-h1-hero .anchor, .heading.-h3:not(.is-anchored) .heading.-h1-hero .anchor, .heading.-h2:not(.is-anchored) .heading.-h1-hero .anchor, .heading.-h1-hero:not(.is-anchored) .heading.-h1-hero .anchor, .heading.-h1-alt:not(.is-anchored) .heading.-h6 .anchor, .heading.-h1-alt:not(.is-anchored) .heading.-h5-alt .anchor, .heading.-h1-alt:not(.is-anchored) .heading.-h5 .anchor, .heading.-h1-alt:not(.is-anchored) .heading.-h4 .anchor, .heading.-h1-alt:not(.is-anchored) .heading.-h3 .anchor, .heading.-h1-alt:not(.is-anchored) .heading.-h2 .anchor, .heading.-h1-alt:not(.is-anchored) .heading.-h1-hero .anchor, .heading.-h6:not(.is-anchored) .heading.-h1-alt .anchor, .heading.-h5-alt:not(.is-anchored) .heading.-h1-alt .anchor, .heading.-h5:not(.is-anchored) .heading.-h1-alt .anchor, .heading.-h4:not(.is-anchored) .heading.-h1-alt .anchor, .heading.-h3:not(.is-anchored) .heading.-h1-alt .anchor, .heading.-h2:not(.is-anchored) .heading.-h1-alt .anchor, .heading.-h1-hero:not(.is-anchored) .heading.-h1-alt .anchor, .heading.-h1-alt:not(.is-anchored) .heading.-h1-alt .anchor, .heading.-h1:not(.is-anchored) .heading.-h6 .anchor, .heading.-h1:not(.is-anchored) .heading.-h5-alt .anchor, .heading.-h1:not(.is-anchored) .heading.-h5 .anchor, .heading.-h1:not(.is-anchored) .heading.-h4 .anchor, .heading.-h1:not(.is-anchored) .heading.-h3 .anchor, .heading.-h1:not(.is-anchored) .heading.-h2 .anchor, .heading.-h1:not(.is-anchored) .heading.-h1-hero .anchor, .heading.-h1:not(.is-anchored) .heading.-h1-alt .anchor, .heading.-h6:not(.is-anchored) .heading.-h1 .anchor, .heading.-h5-alt:not(.is-anchored) .heading.-h1 .anchor, .heading.-h5:not(.is-anchored) .heading.-h1 .anchor, .heading.-h4:not(.is-anchored) .heading.-h1 .anchor, .heading.-h3:not(.is-anchored) .heading.-h1 .anchor, .heading.-h2:not(.is-anchored) .heading.-h1 .anchor, .heading.-h1-hero:not(.is-anchored) .heading.-h1 .anchor, .heading.-h1-alt:not(.is-anchored) .heading.-h1 .anchor, .heading.-h1:not(.is-anchored) .heading.-h1 .anchor {
-  display: none;
 }
 
 .heading.-h1 {
-  font-family: "Cardo", serif;
-  font-size: 72px;
-  font-weight: bold;
-  font-style: normal;
-  line-height: normal;
+  font: normal bold 72px/normal "Cardo", serif;
   letter-spacing: normal;
   text-transform: none;
   color: #091C44;
@@ -173,11 +33,7 @@ ico,
   visibility: hidden;
 }
 .heading.-h1-alt {
-  font-family: "Cardo", serif;
-  font-size: 48px;
-  font-weight: bold;
-  font-style: normal;
-  line-height: normal;
+  font: normal bold 48px/normal "Cardo", serif;
   letter-spacing: normal;
   text-transform: none;
   color: #091C44;
@@ -196,11 +52,7 @@ ico,
   visibility: hidden;
 }
 .heading.-h1-hero {
-  font-family: "Cardo", serif;
-  font-size: 50px;
-  font-weight: bold;
-  font-style: normal;
-  line-height: 1.36;
+  font: normal bold 50px/1.36 "Cardo", serif;
   letter-spacing: normal;
   text-transform: none;
   color: #FFFFFF;
@@ -219,11 +71,7 @@ ico,
   visibility: hidden;
 }
 .heading.-h2 {
-  font-family: "Cardo", serif;
-  font-size: 48px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1.0833;
+  font: normal normal 48px/1.0833 "Cardo", serif;
   letter-spacing: normal;
   text-transform: none;
   color: #091C44;
@@ -242,11 +90,7 @@ ico,
   visibility: hidden;
 }
 .heading.-h3 {
-  font-family: "Open Sans", sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-  font-style: normal;
-  line-height: 1.7083;
+  font: normal bold 24px/1.7083 "Open Sans", sans-serif;
   letter-spacing: normal;
   text-transform: none;
   color: #605858;
@@ -265,11 +109,7 @@ ico,
   visibility: hidden;
 }
 .heading.-h4 {
-  font-family: "Cardo", serif;
-  font-size: 28px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1.5;
+  font: normal normal 28px/1.5 "Cardo", serif;
   letter-spacing: normal;
   text-transform: none;
   color: #605858;
@@ -288,11 +128,7 @@ ico,
   visibility: hidden;
 }
 .heading.-h5 {
-  font-family: "Cardo", serif;
-  font-size: 26px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: normal;
+  font: normal normal 26px/normal "Cardo", serif;
   letter-spacing: normal;
   text-transform: none;
   color: #605858;
@@ -311,11 +147,7 @@ ico,
   visibility: hidden;
 }
 .heading.-h5-alt {
-  font-family: "Open Sans", sans-serif;
-  font-size: 22px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1.6364;
+  font: normal normal 22px/1.6364 "Open Sans", sans-serif;
   letter-spacing: normal;
   text-transform: none;
   color: #605858;
@@ -334,11 +166,7 @@ ico,
   visibility: hidden;
 }
 .heading.-h6 {
-  font-family: "Open Sans", sans-serif;
-  font-size: 12px;
-  font-weight: bold;
-  font-style: normal;
-  line-height: 1.6667;
+  font: normal bold 12px/1.6667 "Open Sans", sans-serif;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #605858;

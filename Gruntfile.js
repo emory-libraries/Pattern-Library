@@ -184,7 +184,8 @@ module.exports = function(grunt) {
         files: [
           path.resolve(paths.source.patterns, '**'),
           path.resolve(paths.source.data, '**'),
-          path.resolve(paths.source.meta, '**')
+          path.resolve(paths.source.meta, '**'),
+          '!' + path.resolve(paths.source.patterns, '**/*.css'),
         ],
         tasks: ['build:dev:patternlab', 'bsReload']
       },
@@ -368,6 +369,7 @@ module.exports = function(grunt) {
             path.resolve(paths.source.js, '_head.index.js'),
             path.resolve(paths.source.js, 'index.js'),
             path.resolve(paths.source.patterns, '**/*.js'),
+            '!' + path.resolve(paths.source.patterns, '**/_*.js'),
             path.resolve(paths.source.js, '_foot.index.js')
           ],
           dest: path.resolve(paths.public.js, 'bundle.js')

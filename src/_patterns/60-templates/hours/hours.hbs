@@ -1,6 +1,3 @@
-{{! Use hours metadata if detecteed. }}
-{{#if __shared__.hours}}{{assign 'hours' __shared__.hours}}{{/if}}
-
 <div class="hours-page">
 
   {{> organisms-header classes='hours-page-header'}}
@@ -8,7 +5,11 @@
   {{#extend 'organisms-main' type='hours-page' classes='hours-page-main'}}
     {{#content 'section-main-body'}}
 
-      {{> organisms-hours}}
+      {{! Add a section for Upcoming Hours. }}
+      {{> organisms-hours-upcoming}}
+
+      {{! Add a section for Regular Hours. }}
+      {{> organisms-hours-regular}}
 
     {{/content}}
   {{/extend}}

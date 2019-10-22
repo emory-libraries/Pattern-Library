@@ -1,4 +1,4 @@
-<eul-notification inline-template :uid="'{{uid}}'" :defaults="{
+<eul-notification inline-template :uid="'{{id}}'" :defaults="{
                                                       isDismissible: {{default dismissible true}}
                                                     }">
 
@@ -7,7 +7,9 @@
          data-label="{{default label 'Alert'}}"
          v-show="showing"
          v-cloak>
-      {{{message}}}
+      <div class="notification-message">
+        {{#if this.markdown}}{{{markdown message}}}{{else}}{{{message}}}{{/if}}
+      </div>
       {{#if dismissible}}
       <button class="notification-dismiss"
               @click="dismiss"

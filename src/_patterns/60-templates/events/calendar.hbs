@@ -1,0 +1,34 @@
+{{! Group and sort events. }}
+{{assign 'events' (getEvents events)}}
+
+<div class="calendar-page">
+
+  {{> organisms-header classes='calendar-page-header'}}
+
+  <div class="calendar-page-main">
+    {{> organisms-main type='calendar-page'}}
+
+    {{! TODO: Limit results to current year and 'x' number of months. (?) Check with Rosalyn. Current assumption is that all timelines of calendar events are managed through Trumba, so limits are not needed. }}
+    {{#each events as |groupedByYear year|}}
+      {{#each groupedByYear as |groupedByMonth month|}}
+        {{#extend 'organisms-major' theme='light' heading=(combine (itemAt (momentMonths) month) ' ' year)}}
+          {{#content 'section-major-body'}}
+
+            {{> compounds-tiles columns=(objectify m=2 l=2 xl=3) tile-type='listing' tiles=groupedByMonth}}
+
+          {{/content}}
+        {{/extend}}
+      {{/each}}
+    {{/each}}
+
+    {{#if archive}}
+    <div class="button-group">
+      {{> atoms-button-link href=archive label='View Events Archive'}}
+    </div>
+    {{/if}}
+
+  </div>
+
+  {{> organisms-footer classes='calendar-page-footer'}}
+
+</div>

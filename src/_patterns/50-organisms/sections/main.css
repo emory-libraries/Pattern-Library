@@ -1,139 +1,3 @@
-@charset "UTF-8";
-@font-face {
-  font-family: "icomoon";
-  src: url("../fonts/icomoon/icomoon.eot");
-  src: url("../fonts/icomoon/icomoon.eot#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf") format("truetype"), url("../fonts/icomoon/icomoon.woff") format("woff"), url("../fonts/icomoon/icomoon.svg#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-ico,
-[class^=ico-],
-[class*=ico-] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.ico-arrow-down-circle::before {
-  content: "";
-}
-
-.ico-arrow-left-circle::before {
-  content: "";
-}
-
-.ico-arrow-right-circle::before {
-  content: "";
-}
-
-.ico-arrow-up-circle::before {
-  content: "";
-}
-
-.ico-arrow-down-left::before {
-  content: "";
-}
-
-.ico-arrow-down-right::before {
-  content: "";
-}
-
-.ico-arrow-up-right::before {
-  content: "";
-}
-
-.ico-arrow-up-left::before {
-  content: "";
-}
-
-.ico-arrow-down::before {
-  content: "";
-}
-
-.ico-arrow-left::before {
-  content: "";
-}
-
-.ico-arrow-right::before {
-  content: "";
-}
-
-.ico-arrow-up::before {
-  content: "";
-}
-
-.ico-chevron-down::before {
-  content: "";
-}
-
-.ico-chevron-left::before {
-  content: "";
-}
-
-.ico-chevron-right::before {
-  content: "";
-}
-
-.ico-chevron-up::before {
-  content: "";
-}
-
-.ico-chevrons-down::before {
-  content: "";
-}
-
-.ico-chevrons-left::before {
-  content: "";
-}
-
-.ico-chevrons-right::before {
-  content: "";
-}
-
-.ico-chevrons-up::before {
-  content: "";
-}
-
-.ico-corner-down-left::before {
-  content: "";
-}
-
-.ico-corner-down-right::before {
-  content: "";
-}
-
-.ico-corner-left-down::before {
-  content: "";
-}
-
-.ico-corner-left-up::before {
-  content: "";
-}
-
-.ico-corner-right-down::before {
-  content: "";
-}
-
-.ico-corner-right-up::before {
-  content: "";
-}
-
-.ico-corner-up-left::before {
-  content: "";
-}
-
-.ico-corner-up-right::before {
-  content: "";
-}
-
 .section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a, .section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a, .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -215,50 +79,50 @@ ico,
   grid-column: main/sidebar;
   grid-row: section;
 }
-.section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page), .-info-page.section-main, .-material-page.section-main, .-tool-page.section-main, .-form-page.section-main, .-periodicals-page.section-main, .-research-help-page.section-main, .-bio-page.section-main, .-gallery-page.section-main, .-research-help-directory-page.section-main, .-service-directory-page.section-main, .-subject-librarian-directory-page.section-main, .-staff-directory-page.section-main, .-exhibition-page.section-main, .-index-page.section-main, .-hours-page.section-main, .-cover-page.section-main, .-event-page.section-main {
+.section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page):not(.-calendar-page), .-info-page.section-main, .-material-page.section-main, .-tool-page.section-main, .-form-page.section-main, .-periodicals-page.section-main, .-research-help-page.section-main, .-bio-page.section-main, .-gallery-page.section-main, .-research-help-directory-page.section-main, .-service-directory-page.section-main, .-subject-librarian-directory-page.section-main, .-staff-directory-page.section-main, .-exhibition-page.section-main, .-index-page.section-main, .-hours-page.section-main, .-cover-page.section-main, .-event-page.section-main, .-calendar-page.section-main {
   padding-top: 0 !important;
 }
-.section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page) .section-main-title, .-info-page.section-main .section-main-title, .-material-page.section-main .section-main-title, .-tool-page.section-main .section-main-title, .-bio-page.section-main .section-main-title, .-research-help-page.section-main .section-main-title, .-service-directory-page.section-main .section-main-title, .-form-page.section-main .section-main-title, .-subject-librarian-directory-page.section-main .section-main-title, .-staff-directory-page.section-main .section-main-title, .-research-help-directory-page.section-main .section-main-title, .-periodical-page.section-main .section-main-title {
+.section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page):not(.-calendar-page) .section-main-title, .-info-page.section-main .section-main-title, .-material-page.section-main .section-main-title, .-tool-page.section-main .section-main-title, .-bio-page.section-main .section-main-title, .-research-help-page.section-main .section-main-title, .-service-directory-page.section-main .section-main-title, .-form-page.section-main .section-main-title, .-subject-librarian-directory-page.section-main .section-main-title, .-staff-directory-page.section-main .section-main-title, .-research-help-directory-page.section-main .section-main-title, .-periodical-page.section-main .section-main-title {
   margin-bottom: 0;
 }
 @media (max-width: 600px) {
-  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page), .-info-page.-info-page.section-main {
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-calendar-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page):not(.-calendar-page), .-info-page.-info-page.section-main {
     grid-template-columns: [main-start] 100% [main-end];
     grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) repeat(10, [section-start] -webkit-min-content [section-end]) [sidebar-start] -webkit-min-content [sidebar-end];
     grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) repeat(10, [section-start] min-content [section-end]) [sidebar-start] min-content [sidebar-end];
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
-  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page), .-info-page.-info-page.section-main {
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-calendar-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page):not(.-calendar-page), .-info-page.-info-page.section-main {
     grid-template-columns: [main-start] 100% [main-end];
     grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) repeat(10, [section-start] -webkit-min-content [section-end]) [sidebar-start] -webkit-min-content [sidebar-end];
     grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) repeat(10, [section-start] min-content [section-end]) [sidebar-start] min-content [sidebar-end];
   }
 }
 @media (min-width: 901px) {
-  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page), .-info-page.-info-page.section-main {
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-calendar-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page):not(.-calendar-page), .-info-page.-info-page.section-main {
     grid-template-columns: [main-start] 100% [main-end];
     grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) repeat(10, [section-start] -webkit-min-content [section-end]) [sidebar-start] -webkit-min-content [sidebar-end];
     grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) repeat(10, [section-start] min-content [section-end]) [sidebar-start] min-content [sidebar-end];
   }
 }
 @media (min-width: 901px) {
-  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page), .-info-page.-info-page.section-main {
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-calendar-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page):not(.-calendar-page), .-info-page.-info-page.section-main {
     grid-template-columns: [main-start] 1fr [main-end sidebar-start] 340px [sidebar-end];
     grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end main-start title-start] -webkit-min-content [title-end subtitle-start] -webkit-min-content [subtitle-end body-start] -webkit-min-content [body-end] repeat(100, [auto-start] -webkit-min-content [auto-end]) [main-end] repeat(10, [section-start] -webkit-min-content [section-end]);
     grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end main-start title-start] min-content [title-end subtitle-start] min-content [subtitle-end body-start] min-content [body-end] repeat(100, [auto-start] min-content [auto-end]) [main-end] repeat(10, [section-start] min-content [section-end]);
   }
 }
 @media (min-width: 901px) {
-  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page) .section-main-breadcrumb, .-info-page.-info-page.section-main .section-main-breadcrumb {
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-calendar-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page):not(.-calendar-page) .section-main-breadcrumb, .-info-page.-info-page.section-main .section-main-breadcrumb {
     grid-column: main/sidebar;
   }
-  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page) .section-main-title,
-.section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page) .section-main-subtitle, .-info-page.-info-page.section-main .section-main-title,
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-calendar-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page):not(.-calendar-page) .section-main-title,
+.section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-calendar-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page):not(.-calendar-page) .section-main-subtitle, .-info-page.-info-page.section-main .section-main-title,
 .-info-page.-info-page.section-main .section-main-subtitle {
     grid-column: main/sidebar;
   }
-  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page) .section-main-sidebar, .-info-page.-info-page.section-main .section-main-sidebar {
+  .section-main:not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-event-page):not(.-hours-page):not(.-calendar-page):not(.-info-page):not(.-material-page):not(.-tool-page):not(.-bio-page):not(.-research-help-page):not(.-service-directory-page):not(.-form-page):not(.-subject-librarian-directory-page):not(.-staff-directory-page):not(.-landing-page):not(.-gallery-page):not(.-exhibition-page):not(.-research-help-directory-page):not(.-index-page):not(.-periodicals-page):not(.-cover-page):not(.-event-page):not(.-hours-page):not(.-calendar-page) .section-main-sidebar, .-info-page.-info-page.section-main .section-main-sidebar {
     grid-row: body/main;
   }
 }
@@ -565,22 +429,25 @@ ico,
 .-research-help-directory-page.without-intro.section-main .section-main-subtitle {
   display: none;
 }
+.-gallery-page.section-main, .-calendar-page.section-main {
+  padding-bottom: 0 !important;
+}
 @media (max-width: 600px) {
-  .-gallery-page.section-main {
+  .-gallery-page.section-main, .-calendar-page.section-main {
     grid-template-columns: [main-start] 100% [main-end];
     grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
     grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end] repeat(100, [auto-start] min-content [auto-end]);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
-  .-gallery-page.section-main {
+  .-gallery-page.section-main, .-calendar-page.section-main {
     grid-template-columns: [main-start] 100% [main-end];
     grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
     grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end] repeat(100, [auto-start] min-content [auto-end]);
   }
 }
 @media (min-width: 901px) {
-  .-gallery-page.section-main {
+  .-gallery-page.section-main, .-calendar-page.section-main {
     grid-template-columns: [main-start] 100% [main-end];
     grid-template-rows: [breadcrumb-start] -webkit-min-content [breadcrumb-end title-start] -webkit-min-content [title-end] repeat(100, [auto-start] -webkit-min-content [auto-end]);
     grid-template-rows: [breadcrumb-start] min-content [breadcrumb-end title-start] min-content [title-end] repeat(100, [auto-start] min-content [auto-end]);
@@ -591,7 +458,12 @@ ico,
 .-gallery-page.section-main .section-main-spacer,
 .-gallery-page.section-main .section-main-content,
 .-gallery-page.section-main .section-main-section,
-.-gallery-page.section-main .section-main-sidebar {
+.-gallery-page.section-main .section-main-sidebar, .-calendar-page.section-main .section-main-subtitle,
+.-calendar-page.section-main .section-main-body,
+.-calendar-page.section-main .section-main-spacer,
+.-calendar-page.section-main .section-main-content,
+.-calendar-page.section-main .section-main-section,
+.-calendar-page.section-main .section-main-sidebar {
   display: none;
 }
 @media (max-width: 600px) {
@@ -817,56 +689,27 @@ ico,
 }
 @media (max-width: 600px) {
   .section-main {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 30px 20px 30px 20px;
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .section-main {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 30px 20px 30px 20px;
   }
 }
 @media (min-width: 901px) {
   .section-main {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 40px 40px 40px 40px;
   }
 }
 @media (min-width: 1200px) {
   .section-main {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 40px 40px 40px 40px;
   }
 }
 @media (min-width: 1290px) {
   .section-main {
-    padding-left: calc((100vw - 1250px) / 2);
-    padding-right: calc((100vw - 1250px) / 2);
-  }
-}
-@media (max-width: 600px) {
-  .section-main {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-}
-@media (min-width: 601px) and (max-width: 900px) {
-  .section-main {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-}
-@media (min-width: 901px) {
-  .section-main {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-}
-@media (min-width: 1200px) {
-  .section-main {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 40px calc((100vw - 1250px) / 2) 40px calc((100vw - 1250px) / 2);
   }
 }
 .section-main-breadcrumb {
@@ -902,33 +745,21 @@ ico,
   fill: #004990;
 }
 .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a::after {
-  font-size: 12px !important;
-  line-height: 1 !important;
-}
-.section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a::after {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: italic;
-  line-height: 1.9375;
+  font: italic normal 16px/1.9375 "Open Sans", sans-serif;
   letter-spacing: normal;
   text-transform: none;
   text-align: left;
   color: #605858;
+  font-size: 12px !important;
+  line-height: 1 !important;
 }
 .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular {
-  font-size: 20px !important;
-  color: #FFFFFF;
-}
-.section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular {
-  font-family: "Cardo", serif;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 2.05;
+  font: normal normal 18px/2.05 "Cardo", serif;
   letter-spacing: normal;
   text-transform: none;
   text-align: left;
+  color: #FFFFFF;
+  font-size: 20px !important;
   color: #FFFFFF;
 }
 .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular:hover, .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular.is-hover, .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular:focus, .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular.is-focus {
@@ -980,33 +811,21 @@ ico,
   fill: #004990;
 }
 .section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a::after {
-  font-size: 12px !important;
-  line-height: 1 !important;
-}
-.section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a::after {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: italic;
-  line-height: 1.9375;
+  font: italic normal 16px/1.9375 "Open Sans", sans-serif;
   letter-spacing: normal;
   text-transform: none;
   text-align: left;
   color: #605858;
+  font-size: 12px !important;
+  line-height: 1 !important;
 }
 .section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular {
-  font-size: 20px !important;
-  color: #FFFFFF;
-}
-.section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular {
-  font-family: "Cardo", serif;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 2.05;
+  font: normal normal 18px/2.05 "Cardo", serif;
   letter-spacing: normal;
   text-transform: none;
   text-align: left;
+  color: #FFFFFF;
+  font-size: 20px !important;
   color: #FFFFFF;
 }
 .section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular:hover, .section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular.is-hover, .section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular:focus, .section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular.is-focus {
@@ -1058,33 +877,21 @@ ico,
   fill: #E9BF55;
 }
 .section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a::after {
-  font-size: 12px !important;
-  line-height: 1 !important;
-}
-.section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a::after {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: italic;
-  line-height: 1.9375;
+  font: italic normal 16px/1.9375 "Open Sans", sans-serif;
   letter-spacing: normal;
   text-transform: none;
   text-align: left;
   color: #605858;
+  font-size: 12px !important;
+  line-height: 1 !important;
 }
 .section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular {
-  font-size: 20px !important;
-  color: #FFFFFF;
-}
-.section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular {
-  font-family: "Cardo", serif;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 2.05;
+  font: normal normal 18px/2.05 "Cardo", serif;
   letter-spacing: normal;
   text-transform: none;
   text-align: left;
+  color: #FFFFFF;
+  font-size: 20px !important;
   color: #FFFFFF;
 }
 .section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular:hover, .section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular.is-hover, .section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular:focus, .section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a.-popular.is-focus {

@@ -1,1 +1,3 @@
-// Styles are inherited from `atoms-map`.
+.map {
+  @include atoms-map;
+}

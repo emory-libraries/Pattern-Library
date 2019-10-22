@@ -1,5 +1,7 @@
 {{#unless (eq main false)}}
   {{> tokens-heading level="1" classes="section-main-title intro-title -heading" heading=title icon=false}}
+  {{#unless (eq no-subtitle true)}}{{> tokens-text type="lead" classes="section-main-subtitle intro-subtitle" text=subtitle}}{{/unless}}
 {{else}}
   {{> tokens-heading level="1" classes="intro-title -heading" heading=title icon=false}}
+  {{#unless (eq no-subtitle true)}}{{> tokens-text type="lead" classes="intro-subtitle" text=subtitle}}{{/unless}}
 {{/unless}}

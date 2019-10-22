@@ -1,21 +1,3 @@
-{{! Reformat blocks for improved compatability. }}
-{{#each blocks}}
-
-  {{! Find invalid image paths, and remove them. }}
-  {{#if (eq src '/')}}
-    {{assign 'src' null}}
-  {{/if}}
-
-  {{! Save the updated block. }}
-  {{storagePush 'blocks' this}}
-{{/each}}
-
-{{! Update the blocks data. }}
-{{assign 'blocks' (storageGet 'blocks')}}
-
-{{! Assign recent issues type and heading}}
-{{assign 'recent-issues.type' 'utility'}}
-
 <div class="periodicals-page">
 
   {{> organisms-header classes='periodicals-page-header'}}

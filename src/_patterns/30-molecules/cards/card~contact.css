@@ -1,139 +1,3 @@
-@charset "UTF-8";
-@font-face {
-  font-family: "icomoon";
-  src: url("../fonts/icomoon/icomoon.eot");
-  src: url("../fonts/icomoon/icomoon.eot#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf") format("truetype"), url("../fonts/icomoon/icomoon.woff") format("woff"), url("../fonts/icomoon/icomoon.svg#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-ico,
-[class^=ico-],
-[class*=ico-] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.ico-arrow-down-circle::before {
-  content: "";
-}
-
-.ico-arrow-left-circle::before {
-  content: "";
-}
-
-.ico-arrow-right-circle::before {
-  content: "";
-}
-
-.ico-arrow-up-circle::before {
-  content: "";
-}
-
-.ico-arrow-down-left::before {
-  content: "";
-}
-
-.ico-arrow-down-right::before {
-  content: "";
-}
-
-.ico-arrow-up-right::before {
-  content: "";
-}
-
-.ico-arrow-up-left::before {
-  content: "";
-}
-
-.ico-arrow-down::before {
-  content: "";
-}
-
-.ico-arrow-left::before {
-  content: "";
-}
-
-.ico-arrow-right::before {
-  content: "";
-}
-
-.ico-arrow-up::before {
-  content: "";
-}
-
-.ico-chevron-down::before {
-  content: "";
-}
-
-.ico-chevron-left::before {
-  content: "";
-}
-
-.ico-chevron-right::before {
-  content: "";
-}
-
-.ico-chevron-up::before {
-  content: "";
-}
-
-.ico-chevrons-down::before {
-  content: "";
-}
-
-.ico-chevrons-left::before {
-  content: "";
-}
-
-.ico-chevrons-right::before {
-  content: "";
-}
-
-.ico-chevrons-up::before {
-  content: "";
-}
-
-.ico-corner-down-left::before {
-  content: "";
-}
-
-.ico-corner-down-right::before {
-  content: "";
-}
-
-.ico-corner-left-down::before {
-  content: "";
-}
-
-.ico-corner-left-up::before {
-  content: "";
-}
-
-.ico-corner-right-down::before {
-  content: "";
-}
-
-.ico-corner-right-up::before {
-  content: "";
-}
-
-.ico-corner-up-left::before {
-  content: "";
-}
-
-.ico-corner-up-right::before {
-  content: "";
-}
-
 .card-contact-email, .card-contact-name {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -221,19 +85,13 @@ ico,
   border-top: 2px solid #336BE6;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  background-color: #FFFFFF;
-  background-image: linear-gradient(to bottom, #f3f5f8 70px, transparent 70px);
-}
-.card-contact {
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1.6429;
+  font: normal normal 14px/1.6429 "Open Sans", sans-serif;
   letter-spacing: normal;
   text-transform: none;
   text-align: left;
   color: #082B73;
+  background-color: #FFFFFF;
+  background-image: linear-gradient(to bottom, #f3f5f8 70px, transparent 70px);
 }
 .card-contact-image {
   text-align: center;
@@ -275,33 +133,21 @@ ico,
   fill: #5387F7;
 }
 .card-contact-name::after {
-  font-size: 12px !important;
-  line-height: 1 !important;
-}
-.card-contact-name::after {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: italic;
-  line-height: 1.9375;
+  font: italic normal 16px/1.9375 "Open Sans", sans-serif;
   letter-spacing: normal;
   text-transform: none;
   text-align: left;
   color: #605858;
+  font-size: 12px !important;
+  line-height: 1 !important;
 }
 .card-contact-name.-popular {
-  font-size: 20px !important;
-  color: #FFFFFF;
-}
-.card-contact-name.-popular {
-  font-family: "Cardo", serif;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 2.05;
+  font: normal normal 18px/2.05 "Cardo", serif;
   letter-spacing: normal;
   text-transform: none;
   text-align: left;
+  color: #FFFFFF;
+  font-size: 20px !important;
   color: #FFFFFF;
 }
 .card-contact-name.-popular:hover, .card-contact-name.-popular.is-hover, .card-contact-name.-popular:focus, .card-contact-name.-popular.is-focus {
@@ -351,33 +197,21 @@ ico,
   fill: #004990;
 }
 .card-contact-email::after {
-  font-size: 12px !important;
-  line-height: 1 !important;
-}
-.card-contact-email::after {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: italic;
-  line-height: 1.9375;
+  font: italic normal 16px/1.9375 "Open Sans", sans-serif;
   letter-spacing: normal;
   text-transform: none;
   text-align: left;
   color: #605858;
+  font-size: 12px !important;
+  line-height: 1 !important;
 }
 .card-contact-email.-popular {
-  font-size: 20px !important;
-  color: #FFFFFF;
-}
-.card-contact-email.-popular {
-  font-family: "Cardo", serif;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 2.05;
+  font: normal normal 18px/2.05 "Cardo", serif;
   letter-spacing: normal;
   text-transform: none;
   text-align: left;
+  color: #FFFFFF;
+  font-size: 20px !important;
   color: #FFFFFF;
 }
 .card-contact-email.-popular:hover, .card-contact-email.-popular.is-hover, .card-contact-email.-popular:focus, .card-contact-email.-popular.is-focus {
