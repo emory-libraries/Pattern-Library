@@ -62,6 +62,10 @@ module.exports = function( id = null ) {
           dest: path.resolve(config.paths.source.icons)
         },
         {
+          src: 'icons/sprite/',
+          dest: path.resolve(config.paths.source.icons)
+        },
+        {
           src: 'fonts/',
           dest: path.resolve(config.paths.source.root)
         }
