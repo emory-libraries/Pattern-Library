@@ -725,9 +725,12 @@
   border: none;
 }
 .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon {
+  margin-right: 1ex;
+}
+.section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon,
+.section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon svg {
   fill: #5387F7;
@@ -791,9 +794,12 @@
   border: none;
 }
 .section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon {
+  margin-right: 1ex;
+}
+.section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon,
+.section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon svg {
   fill: #5387F7;
@@ -857,9 +863,12 @@
   border: none;
 }
 .section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon {
+  margin-right: 1ex;
+}
+.section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon,
+.section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon svg {
   fill: #5387F7;

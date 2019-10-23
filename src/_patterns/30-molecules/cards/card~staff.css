@@ -204,9 +204,14 @@
 }
 .card-staff-contact-info-item a .icon,
 .card-staff-contact-info-item .link .icon {
+  margin-right: 1ex;
+}
+.card-staff-contact-info-item a .icon,
+.card-staff-contact-info-item a .icon svg,
+.card-staff-contact-info-item .link .icon,
+.card-staff-contact-info-item .link .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .card-staff-contact-info-item a .icon svg,
 .card-staff-contact-info-item .link .icon svg {
@@ -295,9 +300,14 @@
 }
 .card-staff-contact-links-item a .icon,
 .card-staff-contact-links-item .link .icon {
+  margin-right: 1ex;
+}
+.card-staff-contact-links-item a .icon,
+.card-staff-contact-links-item a .icon svg,
+.card-staff-contact-links-item .link .icon,
+.card-staff-contact-links-item .link .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .card-staff-contact-links-item a .icon svg,
 .card-staff-contact-links-item .link .icon svg {
@@ -382,9 +392,12 @@
   border: none;
 }
 .card-staff-name .icon {
+  margin-right: 1ex;
+}
+.card-staff-name .icon,
+.card-staff-name .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .card-staff-name .icon svg {
   fill: #091C44;

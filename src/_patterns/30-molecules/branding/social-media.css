@@ -101,6 +101,11 @@
   padding-right: 25px;
   height: 75px;
 }
+.social-media-link .icon,
+.social-media-link .icon svg {
+  width: 24px;
+  height: 24px;
+}
 .social-media-link .icon.-left {
   margin-right: 1em;
 }

@@ -132,9 +132,12 @@
   border: none;
 }
 .card-multimedia-title .icon {
+  margin-right: 1ex;
+}
+.card-multimedia-title .icon,
+.card-multimedia-title .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .card-multimedia-title .icon svg {
   fill: #082B73;

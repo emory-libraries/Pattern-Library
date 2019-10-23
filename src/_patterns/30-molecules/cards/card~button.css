@@ -80,6 +80,11 @@
   padding-right: 20px;
   height: 125px;
 }
+.card-button .icon,
+.card-button .icon svg {
+  width: 24px;
+  height: 24px;
+}
 .card-button .icon.-left {
   margin-right: 1em;
 }

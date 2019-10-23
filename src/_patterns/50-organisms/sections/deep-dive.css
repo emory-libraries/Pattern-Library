@@ -171,9 +171,14 @@
 }
 .section-deep-dive-body a .icon,
 .section-deep-dive-body .link .icon {
+  margin-right: 1ex;
+}
+.section-deep-dive-body a .icon,
+.section-deep-dive-body a .icon svg,
+.section-deep-dive-body .link .icon,
+.section-deep-dive-body .link .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .section-deep-dive-body a .icon svg,
 .section-deep-dive-body .link .icon svg {

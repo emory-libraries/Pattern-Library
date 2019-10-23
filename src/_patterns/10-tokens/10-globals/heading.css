@@ -8,6 +8,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  vertical-align: -5px;
 }
 .is-anchored.heading.-h6 .anchor .icon, .is-anchored.heading.-h5-alt .anchor .icon, .is-anchored.heading.-h5 .anchor .icon, .is-anchored.heading.-h4 .anchor .icon, .is-anchored.heading.-h3 .anchor .icon, .is-anchored.heading.-h2 .anchor .icon, .is-anchored.heading.-h1-hero .anchor .icon, .is-anchored.heading.-h1-alt .anchor .icon, .is-anchored.heading.-h1 .anchor .icon {
   margin: 0 !important;
@@ -32,6 +33,11 @@
   opacity: 0;
   visibility: hidden;
 }
+.heading.-h1 .anchor .icon,
+.heading.-h1 .anchor .icon svg {
+  width: 25px;
+  height: 25px;
+}
 .heading.-h1-alt {
   font: normal bold 48px/normal "Cardo", serif;
   letter-spacing: normal;
@@ -50,6 +56,11 @@
   height: 25px;
   opacity: 0;
   visibility: hidden;
+}
+.heading.-h1-alt .anchor .icon,
+.heading.-h1-alt .anchor .icon svg {
+  width: 25px;
+  height: 25px;
 }
 .heading.-h1-hero {
   font: normal bold 50px/1.36 "Cardo", serif;
@@ -70,6 +81,11 @@
   opacity: 0;
   visibility: hidden;
 }
+.heading.-h1-hero .anchor .icon,
+.heading.-h1-hero .anchor .icon svg {
+  width: 25px;
+  height: 25px;
+}
 .heading.-h2 {
   font: normal normal 48px/1.0833 "Cardo", serif;
   letter-spacing: normal;
@@ -88,6 +104,11 @@
   height: 25px;
   opacity: 0;
   visibility: hidden;
+}
+.heading.-h2 .anchor .icon,
+.heading.-h2 .anchor .icon svg {
+  width: 25px;
+  height: 25px;
 }
 .heading.-h3 {
   font: normal bold 24px/1.7083 "Open Sans", sans-serif;
@@ -108,6 +129,11 @@
   opacity: 0;
   visibility: hidden;
 }
+.heading.-h3 .anchor .icon,
+.heading.-h3 .anchor .icon svg {
+  width: 25px;
+  height: 25px;
+}
 .heading.-h4 {
   font: normal normal 28px/1.5 "Cardo", serif;
   letter-spacing: normal;
@@ -126,6 +152,11 @@
   height: 25px;
   opacity: 0;
   visibility: hidden;
+}
+.heading.-h4 .anchor .icon,
+.heading.-h4 .anchor .icon svg {
+  width: 25px;
+  height: 25px;
 }
 .heading.-h5 {
   font: normal normal 26px/normal "Cardo", serif;
@@ -146,6 +177,11 @@
   opacity: 0;
   visibility: hidden;
 }
+.heading.-h5 .anchor .icon,
+.heading.-h5 .anchor .icon svg {
+  width: 25px;
+  height: 25px;
+}
 .heading.-h5-alt {
   font: normal normal 22px/1.6364 "Open Sans", sans-serif;
   letter-spacing: normal;
@@ -165,6 +201,11 @@
   opacity: 0;
   visibility: hidden;
 }
+.heading.-h5-alt .anchor .icon,
+.heading.-h5-alt .anchor .icon svg {
+  width: 25px;
+  height: 25px;
+}
 .heading.-h6 {
   font: normal bold 12px/1.6667 "Open Sans", sans-serif;
   letter-spacing: 0.05em;
@@ -183,4 +224,9 @@
   height: 25px;
   opacity: 0;
   visibility: hidden;
+}
+.heading.-h6 .anchor .icon,
+.heading.-h6 .anchor .icon svg {
+  width: 25px;
+  height: 25px;
 }

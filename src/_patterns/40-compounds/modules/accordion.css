@@ -84,9 +84,12 @@
   border: none;
 }
 .accordion-toggles-toggle .icon {
+  margin-right: 1ex;
+}
+.accordion-toggles-toggle .icon,
+.accordion-toggles-toggle .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .accordion-toggles-toggle .icon svg {
   fill: #336BE6;

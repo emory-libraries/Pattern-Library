@@ -34,9 +34,12 @@
   border: none;
 }
 .link .icon {
+  margin-right: 1ex;
+}
+.link .icon,
+.link .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .link .icon svg {
   fill: #5387F7;

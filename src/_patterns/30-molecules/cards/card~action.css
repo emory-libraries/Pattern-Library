@@ -42,7 +42,7 @@
 
 .card-action {
   padding: 25px;
-  grid-gap: 25px;
+  grid-gap: 15px;
   min-height: 265px;
   border: 1px solid #E7EAF1;
   border-top: 4px solid #5387F7;

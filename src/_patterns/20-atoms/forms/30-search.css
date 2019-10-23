@@ -265,9 +265,12 @@
   border: none;
 }
 .search-cancel .icon {
+  margin-right: 1ex;
+}
+.search-cancel .icon,
+.search-cancel .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .search-cancel .icon svg {
   fill: #5387F7;
