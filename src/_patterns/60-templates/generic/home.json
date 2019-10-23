@@ -321,7 +321,7 @@
       {
         "heading": "Events & Exhibits",
         "icon": "material-calendar_month_outline",
-        "url": "https://www.trumba.com/calendars/robert-woodruff-library.json",
+        "feed": "https://www.trumba.com/calendars/robert-woodruff-library.json",
         "button": {
           "label": "View All Events & Exhibits",
           "href": ""
@@ -330,7 +330,7 @@
           "id": "{eventID}",
           "date": "{dateTimeFormatted}",
           "link": {
-            "href": "/event?feed={:url:}&id={eventID}"
+            "href": "{permaLinkUrl}"
           },
           "button?": {
             "criteria": "{openSignUp} === true && {pastDeadline} === false",
@@ -344,7 +344,7 @@
       {
         "heading": "Upcoming Workshops",
         "icon": "material-pencil_ruler",
-        "url": "https://www.trumba.com/calendars/robert-woodruff-library-classes-at-woodruff-library.json",
+        "feed": "https://www.trumba.com/calendars/robert-woodruff-library-classes-at-woodruff-library.json",
         "button": {
           "label": "View All Workshops",
           "href": ""
@@ -353,7 +353,7 @@
           "id": "{eventID}",
           "date": "{dateTimeFormatted}",
           "link": {
-            "href": "/class?feed={:url:}&id={eventID}"
+            "href": "{permaLinkUrl}"
           },
           "button?": {
             "criteria": "{openSignUp} === true && {pastDeadline} === false",

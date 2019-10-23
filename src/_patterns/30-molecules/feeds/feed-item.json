@@ -4,6 +4,20 @@
   "link": {
     "href": ""
   },
+  "model": {
+    "id": "{eventID}",
+    "date": "{dateTimeFormatted}",
+    "link": {
+      "href": "{permaLinkUrl}"
+    },
+    "button?": {
+      "criteria": "{openSignUp} === true && {pastDeadline} === false",
+      "value": {
+        "label": "Sign Up",
+        "href": "{signUpUrl}"
+      }
+    }
+  },
   "button": {
     "label": "Sign Up",
     "href": ""

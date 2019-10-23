@@ -70,7 +70,7 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: path.resolve(paths.source.php),
-            src: '**/example-*.php',
+            src: '**/*.php',
             dest: path.resolve(paths.public.php)
           }
         ]
