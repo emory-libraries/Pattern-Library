@@ -4,10 +4,10 @@
   {{else if (eq (dashcase (lowercase type)) 'text')}}
     {{> tokens-text}}
   {{else if (eq (dashcase (lowercase type)) 'image')}}
-    {{> atoms-image src=(default image.image-file.path src)}}
+    {{> atoms-image}}
   {{else if (eq (dashcase (lowercase type)) 'heading')}}
-    {{> tokens-heading heading=(default heading-label heading) toc=../toc level=(default heading-level level)}}
+    {{> tokens-heading toc=../toc}}
   {{else if (eq (dashcase (lowercase type)) 'video')}}
-    {{> atoms-video-youtube id=(default video-url id)}}
+    {{> atoms-video-youtube}}
   {{/if}}
 {{/each}}
