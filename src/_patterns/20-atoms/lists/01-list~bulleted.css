@@ -39,6 +39,7 @@
 }
 .-topics.list .list-item {
   display: inline-block;
+  margin-right: 0.5ex;
 }
 .-files.list {
   display: grid;
@@ -76,7 +77,7 @@
   line-height: inherit;
 }
 .list.-topics .list-item:not(:last-child)::after {
-  content: "," " ";
+  content: ", ";
 }
 .list.-files {
   grid-gap: 10px;
