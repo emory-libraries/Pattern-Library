@@ -1,5 +1,16 @@
+{{#unless vue}}
 <div class="{{#unless (eq main false)}}section-main-title {{/unless}}intro-cover">
-  {{> tokens-heading level=1 alternate=false classes='intro-cover-title' heading=title icon=false hero=false}}
+  {{> tokens-heading level=1 alternate=false classes='intro-cover-title' heading=title icon=false hero=false vue=false}}
   {{#if subtitle}}<p class="intro-cover-subtitle{{#if date}} -date{{/if}}">{{subtitle}}</p>{{/if}}
-  <div class="intro-cover-image">{{> atoms-image src=hero}}</div>
+  {{#if hero}}<div class="intro-cover-image">{{> atoms-image src=hero}}</div>{{/if}}
 </div>
+{{else}}
+<div class="{{#unless (eq main false)}}section-main-title {{/unless}}intro-cover">
+  {{> tokens-heading level=1 alternate=false classes='intro-cover-title' heading=title icon=false hero=false vue=false}}
+  {{#if subtitle}}
+  <p class="intro-cover-subtitle{{#if date}} -date{{/if}}"
+     v-html="{{vueBase subtitle}}"></p>
+  {{/if}}
+  <div class="intro-cover-image" v-if="{{vueBase hero}}">{{> atoms-image src=hero}}</div>
+</div>
+{{/unless}}

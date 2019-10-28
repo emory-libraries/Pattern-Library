@@ -1,5 +1,5 @@
 <div class="sidebar-list">
-
+  {{#unless foreach}}
   {{#each sections}}
   <div class="sidebar-list-section{{#if ../divider}}{{#if (and ../divider.start @first)}} -divider-start{{/if}}{{#if (and ../divider.end @last)}} -divider-end{{/if}}{{/if}}">
     {{#if title}}
@@ -29,12 +29,54 @@
     </div>
   </div>
   {{/each}}
-
   {{#if buttons}}
     {{#each buttons}}{{> atoms-button-link classes="sidebar-list-button" icon=false}}{{/each}}
   {{/if}}
   {{#if button}}
     {{#with button}}{{> atoms-button-link classes="sidebar-list-button" icon=false}}{{/with}}
   {{/if}}
-
+  {{else}}
+  <div class="sidebar-list-section"
+       :class="{
+         '-divider-start': {{eq divider true}} && {{index}} === 0,
+         '-divider-end': {{eq divider true}} && {{index}} === {{collection}}.length - 1
+       }"
+       v-for="{{foreach}}"
+       {{#if key}}:key="{{key}}"{{/if}}>
+     <span class="sidebar-list-section-title"
+           v-if="{{value}}.title"
+           :class="{'has-icon': {{value}}.icon}">
+       {{> tokens-icon vue=true id=(combine value '.icon')}}
+       <% {{value}}.title %>
+     </span>
+     <div class="sidebar-list-section-content">
+      <template v-if="Array.isArray({{value}}.content)">
+        <ul class="list">
+          <li class="list-item" v-for="item in {{value}}.content" v-html="item"></li>
+        </ul>
+      </template>
+      <template v-else>
+        <div v-html="{{value}}.content"></div>
+      </template>
+      <template v-if="{{value}}.link">
+        {{> atoms-link vue=true href=(combine value '.link.href') icon=false label=(combine value '.link.label')}}
+      </template>
+      <template v-else-if="{{value}}.links" v-for="link in {{value}}.links">
+        {{> atoms-link vue=true href='link.href' icon=false label='link.label'}}
+      </template>
+      <template v-if="{{value}}.button">
+        {{> atoms-button-link vue=true href=(combine value '.button.href') icon=false label=(combine value '.button.label')}}
+      </template>
+      <template v-else-if="{{value}}.buttons" v-for="button in {{value}}.buttons">
+        {{> atoms-button-link vue=true href='button.href' icon=false label='button.label'}}
+      </template>
+     </div>
+  </div>
+  <template v-if="{{outer}}.buttons" v-for="button in {{outer}}.buttons">
+    {{> atoms-button-link classes='sidebar-list-button' icon=false href='button.href' vue=true label='button.label'}}
+  </template>
+  <template v-if="{{outer}}.button">
+    {{> atoms-button-link classes='sidebar-list-button' icon=false href=(combine outer '.button.href') vue=true label=(combine outer '.button.label')}}
+  </template>
+  {{/unless}}
 </div>

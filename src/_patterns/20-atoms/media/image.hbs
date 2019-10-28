@@ -4,4 +4,4 @@
   {{/if}}
 {{/if}}
 
-<img src="{{src}}" alt="{{#unless decorative}}{{alt}}{{/unless}}" class="image{{#if width}} -w-{{width}}{{/if}}{{#if (and align (or (eq align 'left') (eq align 'right') (eq align 'center')))}} -{{align}}{{/if}}{{#if classes}} {{classes}}{{/if}}">
+<img {{#if vue}}:src="{{vueBase src}}"{{else}}src="{{src}}"{{/if}} alt="{{#unless decorative}}{{alt}}{{/unless}}" class="image{{#if width}} -w-{{width}}{{/if}}{{#if (and align (or (eq align 'left') (eq align 'right') (eq align 'center')))}} -{{align}}{{/if}}{{#if classes}} {{classes}}{{/if}}">

@@ -3,8 +3,14 @@
     {{assign 'href' (combine (baseUrl) href)}}
   {{/if}}
 {{/if}}
-
+{{#unless vue}}
 <a href="{{href}}" class="link{{#if classes}} {{classes}}{{/if}}" target="{{default target '_self'}}">
   {{#if icon}}{{> tokens-icon id=icon}}{{/if}}
   {{#unless (eq this.raw true)}}{{label}}{{else}}{{{label}}}{{/unless}}
 </a>
+{{else}}
+<a :href="{{vueBase href}}" class="link{{#if classes}} {{classes}}{{/if}}" target="{{default target '_self'}}">
+  {{> tokens-icon id=icon vue=true}}
+  <% {{label}} %>
+</a>
+{{/unless}}

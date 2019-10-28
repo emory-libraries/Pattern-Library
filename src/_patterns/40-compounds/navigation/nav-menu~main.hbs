@@ -1,3 +1,4 @@
+{{#unless (eq noscript true)}}
 <eul-nav-menu inline-template v-cloak>
   <nav class="nav-menu-main">
 
@@ -73,8 +74,9 @@
 
   </nav>
 </eul-nav-menu>
+{{/unless}}
 
-<noscript>
+{{#unless (eq noscript true)}}<noscript>{{/unless}}
 
   <nav class="nav-menu-main">
 
@@ -149,4 +151,4 @@
     </nav>
 
   </nav>
-</noscript>
+{{#unless (eq noscript true)}}</noscript>{{/unless}}

@@ -3,7 +3,7 @@
     {{assign 'href' (combine (baseUrl) href)}}
   {{/if}}
 {{/if}}
-
+{{#unless vue}}
 <a href="{{href}}"
    role="button"
    class="button{{#if hollow}} -hollow{{/if}}{{#if pill}} -pill{{/if}}{{#if uncapitalize}} -uncapitalize{{/if}}{{#if (or hover focus)}} is-hover{{/if}}{{#if active}} is-active{{/if}}{{#if disabled}} is-disabled{{/if}}{{#if classes}} {{classes}}{{/if}}"{{#if disabled}} disabled{{/if}}
@@ -12,3 +12,12 @@
   {{label}}
   {{#if (and icon icon.id (eq icon.position 'right'))}}{{> tokens-icon id=icon.id classes='-right' }}{{/if}}
 </a>
+{{else}}
+<a :href="{{vueBase href}}"
+   role="button"
+   class="button{{#if hollow}} -hollow{{/if}}{{#if pill}} -pill{{/if}}{{#if uncapitalize}} -uncapitalize{{/if}}{{#if (or hover focus)}} is-hover{{/if}}{{#if active}} is-active{{/if}}{{#if disabled}} is-disabled{{/if}}{{#if classes}} {{classes}}{{/if}}"{{#if disabled}} disabled{{/if}}
+   target="{{default target '_self'}}">
+  {{> tokens-icon id=icon vue=true }}
+  <% {{label}} %>
+</a>
+{{/unless}}

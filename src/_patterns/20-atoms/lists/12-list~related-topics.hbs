@@ -1,5 +1,14 @@
 <ul class="list -topics{{#if classes}} {{classes}}{{/if}}">
+  {{#unless foreach}}
   {{#each topics}}
-  <li class="list-item">{{#if href}}{{#if data}}{{> atoms-link label=data classes=''}}{{else}}{{> atoms-link classes=''}}{{/if}}{{else if data}}{{data}}{{else}}{{.}}{{/if}}</li>
+  <li class="list-item">
+    {{#if href}}{{#if data}}{{> atoms-link label=data classes=''}}{{else}}{{> atoms-link classes=''}}{{/if}}{{else if data}}{{data}}{{else}}{{.}}{{/if}}
+  </li>
   {{/each}}
+  {{else}}
+  <li class="list-item"
+      v-for="{{foreach}}"
+      {{#if key}} :key="{{key}}"{{/if}}
+      v-html="{{value}}"></li>
+  {{/unless}}
 </ul>
