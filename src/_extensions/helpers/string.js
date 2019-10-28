@@ -8,7 +8,7 @@ const uniqid = require('uniqid');
 const helpers = {
 
   // Combine two or more strings.
-  combine( ...strs ) { return _.initial(strs).join('') },
+  combine( ...strs ) { return _.initial(strs).join(''); },
 
   // Trim a substring from the start of another string.
   trimSubstringStart( str, substr, mods ) {
@@ -120,7 +120,10 @@ const helpers = {
     // Pad the string.
     return pad(string, length, chars);
 
-  }
+  },
+
+  // Get the base name of the Vue string.
+  vueBase: ( str ) => helpers.trimSubstringEnd(helpers.trimSubstringStart(str, '<%'), '%>').trim()
 
 };
 

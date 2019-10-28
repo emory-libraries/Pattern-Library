@@ -1,31 +1,3 @@
-// Build utility methods.
-const EUL = {
-
-  // Load scripts using URLs.
-  loadScripts( scripts ) {
-
-    // Initialize script elements.
-    const elements = [];
-
-    // Load scripts by insterting them as elements into our HTML.
-    scripts.forEach((script) => {
-
-      // Create script element.
-      elements.push($('<script>', _.isString(script) ? {src: script} : script));
-
-    });
-
-    // Load all scripts.
-    $(document.body).append(...elements);
-
-  }
-
-};
-
-// Temporarily disabled Leaflet while `atoms-map` is not in use.
-// Extend Leaflet.
-// require('leaflet-providers');
-
 // Extend lodash.
 _.capitalizeChar = ( str, i ) => {
 
@@ -57,6 +29,336 @@ _.cloneDeepOwn = ( thing ) => {
   return clone;
 
 };
+_.isCollection = ( value ) => {
+
+  // Only consider arrays as possible collections.
+  if( !_.isArray(value) ) return false;
+
+  // In order for an array to be a collection, require that all of its items are objects.
+  return _.every(value, _.isPlainObject);
+
+};
+
+// Build utility methods.
+const EUL = {
+
+  // Load scripts from a given set of URLs.
+  loadScripts( scripts ) {
+
+    // Initialize script elements.
+    const elements = [];
+
+    // Load scripts by insterting them as elements into our HTML.
+    scripts.forEach((script) => {
+
+      // Create script element.
+      elements.push($('<script>', _.isString(script) ? {src: script} : script));
+
+    });
+
+    // Load all scripts.
+    $(document.body).append(...elements);
+
+  },
+
+  // Escape strings for use as a regex.
+  escapeRegExp: ( string ) => string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'),
+
+  // Map all items in a JSON or RSS feed to match a given content model.
+  mapFeed( feed, model, recursive = true ) {
+
+    // Initialize a helper for mapping source data to a model.
+    const map = ( feed, model, recursive = true ) => {
+
+      // Initialize a set of utilities to help map data.
+      const utils = {
+
+        // Determine if a key in the model is conditional.
+        isConditional: ( key ) => _.endsWith(key, '?'),
+
+        // Bind a key-value pair in the model.
+        bindModel( key, value, data, recursive = true ) {
+
+          // Initialize a simplified version of the model.
+          let model = {};
+
+          // Update the simplified model to reflect the current key-value model.
+          model[key] = value;
+
+          // Determine if the key is conditional.
+          if( utils.isConditional(key) ) {
+
+            // Get the key name without the conditional flag.
+            const base = _.trimEnd(key, '?');
+
+            // Get the condition that needs to be met in order for the value to be included.
+            const condition = bind(value.criteria, data);
+
+            // Get the criteria that must be met in order to display the conditional data.
+            const criteria = new Function(`return ${condition};`);
+
+            // Remove the conditional key from the model.
+            delete model[key];
+
+            // Rewrite the model to reflect the intended output.
+            model[base] = value.value;
+
+            // Evaluate the criteria, and only include the value if the criteria was met.
+            if( criteria() ) data[base] = bind(value.value, data, {
+              condition: true,
+              recursive,
+              model,
+              key: base
+            });
+
+          }
+
+          // Otherwise, bind the data as is.
+          else data[key] = bind(value, data, {
+            recursive,
+            model,
+            key
+         });
+
+        }
+
+      };
+
+      // Map each item within the feed.
+      feed = feed.map((data) => {
+
+        // Loop through the data model, and map things as needed.
+        _.each(model, (value, key) => {
+
+          // Bind the data with the model.
+          utils.bindModel(key, value, data, recursive);
+
+        });
+
+        // Return the updated data.
+        return data;
+
+      });
+
+      // Return the updated feed.
+      return feed;
+
+    };
+
+    // Initialize a helper for binding source data within a value.
+    const bind = ( value, item, options = {} ) => {
+
+      // Set defaults for options.
+      options = _.extend({
+        recursive: true,
+        condition: false,
+        model: null,
+        key: null
+      }, options);
+
+      // Initialize a set of utilities to help find and replace values.
+      const utils = {
+
+        // Initialize a set of output filters to help manipulate output formats.
+        _filters: {
+
+          // Convert a comma-separated list to an array.
+          list: (value) => value.split(',').map(_.trim)
+
+        },
+
+        // Determine if a value has a placeholder that should be bound.
+        hasPlaceholder: (value) => /{[\S-_.|='\[\] ]+?}/i.test(value),
+
+        // Determine if a placeholder has filters that should be applied.
+        hasFilters: (placeholder) => /(\| [\S-_]+)+$/i.test(placeholder),
+
+        // Get all placeholders in a value.
+        getPlaceholders: (value) => value.match(/{[\S-_.|='\[\] ]+?}/ig),
+
+        // Get all filters in a placeholder.
+        getFilters(placeholder) {
+
+          // Locate the filter data within the placeholder.
+          placeholder = placeholder.substring(placeholder.indexOf('|') + 1, value.length - 1);
+
+          // Get the filters in an array.
+          return placeholder.split('|').map(_.trim);
+
+        },
+
+        // Interpret the keys for a given placeholder.
+        getKeys( placeholder ) {
+
+          // Get the placeholder's base name.
+          let base = placeholder.replace(/^\{|\}$/g, '');
+
+          // Determine if the placeholder has a filter, and if so, remove it.
+          if( utils.hasFilters(base) ) base = base.substring(0, base.indexOf('|') - 1).trim();
+
+          // Get the individual keys in the placeholder.
+          let keys = base.replace().split('.').map(_.trim);
+
+          // Define a regex for filter keys.
+          const regex = /^([\S]+?)\[([\S]+?)='?([\S ]+?)'?\]$/i;
+
+          // Interpret the keys.
+          keys = keys.map((key, n) => ({
+            filter: regex.test(key),
+            match: key.match(regex),
+            index: _.isInteger(key),
+            first: n === 0,
+            last: n === keys.length - 1,
+            n,
+            key
+          }));
+
+          // Save the placeholder as metadata.
+          keys.placeholder = placeholder;
+
+          // Return the keys.
+          return keys;
+
+        },
+
+        // Replace the placeholder in the value with data using the respective keys.
+        setPlaceholder( value, data, keys, conditional = false ) {
+
+          // Initialize a pointer.
+          let pointer = data;
+
+          // Loop through the keys, and move the pointer accordingly.
+          _.each(keys, (key) => {
+
+            // If the pointer can't be moved, then skip the key.
+            if( !_.isArray(pointer) && !_.isPlainObject(pointer) ) return;
+
+            // Otherwise, move the pointer accordingly for filter keys.
+            else if( key.filter ) {
+
+              // Get the key that's being targeted.
+              const target = _.get(data, key.match[1], []);
+
+              // Move the pointer where the key-value pair matches the pointer.
+              pointer = _.find(target, (item) => _.get(item, key.match[2]) == key.match[3]);
+
+            }
+
+            // Otherwise, simply move the pointer.
+            else pointer = _.get(pointer, key.key);
+
+          });
+
+          // For placeholders within conditional statements, escape the pointer's value.
+          if( conditional ) switch(pointer) {
+            case null: pointer = 'null'; break;
+            case undefined: pointer = 'undefined'; break;
+            case true: pointer = 'true'; break;
+            case false: pointer = 'false'; break;
+          }
+
+          // Bind the pointer's value back into the string value.
+          value = value.replace(keys.placeholder, pointer);
+
+          // Return the updated value.
+          return value;
+
+        },
+
+        // Apply output filters to a newly bound string value.
+        applyFilters( value, filters ) {
+
+          // Make sure the filters are in array form.
+          if( !_.isArray(filters) ) filters = [filters];
+
+          // Apply filters in order to the value.
+          _.each(filters, (filter) => value = utils._filters[filter](value));
+
+          // Return the value with filters applied.
+          return value;
+
+        },
+
+        // Replace all placeholders within a given value using the given data.
+        replacePlaceholders(value, data) {
+
+          // Determine if the value has a placeholder, and only attempt to replace things if so.
+          if( utils.hasPlaceholder(value) ) {
+
+            // Get the placeholders within the value.
+            const placeholders = utils.getPlaceholders(value);
+
+            // Loop through each placeholder, and replace it with its target value.
+            _.each(placeholders, (placeholder) => {
+
+              // Get the placeholder's keys.
+              const keys = utils.getKeys(placeholder);
+
+              // Replace the placeholder with its respective data given the keys.
+              value = utils.setPlaceholder(value, item, keys, options.conditional);
+
+              // Determine if the placeholder has filters, and if so, get and apply them.
+              if( utils.hasFilters(placeholder) ) {
+
+                // Get the filters.
+                const filters = utils.getFilters(placeholder);
+
+                // Apply the filters to the value.
+                value = utils.applyFilters(value, filters);
+
+              }
+
+            });
+
+          }
+
+          // Return the updated value.
+          return value;
+
+        }
+
+      };
+
+      // Handle simple arrays differently.
+      if( _.isArray(value) || _.isPlainObject(value) ) {
+
+        // Determine which map function to use.
+        const mapFn = _.isArray(value) ? _.map : _.mapValues;
+
+        // Always bind things within the array or object if recursion is enabled.
+        if( options.recursive ) value = mapFn(value, (v) => bind(v, item, {recursive: true}));
+
+      }
+
+      // Otherwise, handle scalar values.
+      else value = utils.replacePlaceholders(value, item);
+
+      // Return the updated value.
+      return value;
+
+    };
+
+    // Return the feed's content after mapping its data to the model.
+    return map(feed, model, recursive);
+
+  }
+
+};
+
+// Temporarily disabled Leaflet while `atoms-map` is not in use.
+// Extend Leaflet.
+// require('leaflet-providers');
+
+// Always attempt to parse the query string.
+window.location.params = _.reduce(_.trimStart(window.location.search, '?').split('&'), (result, param) => {
+
+  // Get the parameter's key and value.
+  const [key, value] = param.split('=').map(_.trim);
+
+  // Save the query parameter.
+  return _.set(result, key, value);
+
+}, {});
 
 // Initialize an event bus for handling events.
 const Events = new Vue();
@@ -238,7 +540,7 @@ const Components = {
       // Initialize data using any defaults given.
       if( this.defaults ) _.forIn(this.defaults, (value, key) => {
 
-        this.$set(this, key, value);
+        if( _.has(this, key) ) this.$set(this, key, value);
 
       });
 
