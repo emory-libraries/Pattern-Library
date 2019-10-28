@@ -480,6 +480,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  vertical-align: -5px;
 }
 .is-anchored.heading.-h6 .anchor .icon, .is-anchored.heading.-h5-alt .anchor .icon, .is-anchored.heading.-h5 .anchor .icon, .is-anchored.heading.-h4 .anchor .icon, .is-anchored.heading.-h3 .anchor .icon, .is-anchored.heading.-h2 .anchor .icon, .is-anchored.heading.-h1-hero .anchor .icon, .is-anchored.heading.-h1-alt .anchor .icon, .is-anchored.heading.-h1 .anchor .icon {
   margin: 0 !important;
@@ -537,6 +538,18 @@ body {
   display: none;
 }
 
+.spinner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2em auto;
+}
 /*** INSERT NEW TOKENS HERE ***/
 .slide-action .button, .feed-item-action, .card-button, .social-media-link, .button.-error, .button.-caution, .button.-success, .button, .subnav-button, .nav-button {
   display: -webkit-inline-box;
@@ -1290,6 +1303,7 @@ body {
 }
 .-topics.list .list-item {
   display: inline-block;
+  margin-right: 0.5ex;
 }
 .-files.list {
   display: grid;
@@ -8265,9 +8279,12 @@ a {
   border: none;
 }
 a .icon {
+  margin-right: 1ex;
+}
+a .icon,
+a .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 a .icon svg {
   fill: #5387F7;
@@ -8426,6 +8443,11 @@ button, input[type=button], input[type=submit], input[type=reset] {
   opacity: 0;
   visibility: hidden;
 }
+.heading.-h1 .anchor .icon,
+.heading.-h1 .anchor .icon svg {
+  width: 25px;
+  height: 25px;
+}
 .heading.-h1-alt {
   font: normal bold 48px/normal "Cardo", serif;
   letter-spacing: normal;
@@ -8444,6 +8466,11 @@ button, input[type=button], input[type=submit], input[type=reset] {
   height: 25px;
   opacity: 0;
   visibility: hidden;
+}
+.heading.-h1-alt .anchor .icon,
+.heading.-h1-alt .anchor .icon svg {
+  width: 25px;
+  height: 25px;
 }
 .heading.-h1-hero {
   font: normal bold 50px/1.36 "Cardo", serif;
@@ -8464,6 +8491,11 @@ button, input[type=button], input[type=submit], input[type=reset] {
   opacity: 0;
   visibility: hidden;
 }
+.heading.-h1-hero .anchor .icon,
+.heading.-h1-hero .anchor .icon svg {
+  width: 25px;
+  height: 25px;
+}
 .heading.-h2 {
   font: normal normal 48px/1.0833 "Cardo", serif;
   letter-spacing: normal;
@@ -8482,6 +8514,11 @@ button, input[type=button], input[type=submit], input[type=reset] {
   height: 25px;
   opacity: 0;
   visibility: hidden;
+}
+.heading.-h2 .anchor .icon,
+.heading.-h2 .anchor .icon svg {
+  width: 25px;
+  height: 25px;
 }
 .heading.-h3 {
   font: normal bold 24px/1.7083 "Open Sans", sans-serif;
@@ -8502,6 +8539,11 @@ button, input[type=button], input[type=submit], input[type=reset] {
   opacity: 0;
   visibility: hidden;
 }
+.heading.-h3 .anchor .icon,
+.heading.-h3 .anchor .icon svg {
+  width: 25px;
+  height: 25px;
+}
 .heading.-h4 {
   font: normal normal 28px/1.5 "Cardo", serif;
   letter-spacing: normal;
@@ -8520,6 +8562,11 @@ button, input[type=button], input[type=submit], input[type=reset] {
   height: 25px;
   opacity: 0;
   visibility: hidden;
+}
+.heading.-h4 .anchor .icon,
+.heading.-h4 .anchor .icon svg {
+  width: 25px;
+  height: 25px;
 }
 .heading.-h5 {
   font: normal normal 26px/normal "Cardo", serif;
@@ -8540,6 +8587,11 @@ button, input[type=button], input[type=submit], input[type=reset] {
   opacity: 0;
   visibility: hidden;
 }
+.heading.-h5 .anchor .icon,
+.heading.-h5 .anchor .icon svg {
+  width: 25px;
+  height: 25px;
+}
 .heading.-h5-alt {
   font: normal normal 22px/1.6364 "Open Sans", sans-serif;
   letter-spacing: normal;
@@ -8559,6 +8611,11 @@ button, input[type=button], input[type=submit], input[type=reset] {
   opacity: 0;
   visibility: hidden;
 }
+.heading.-h5-alt .anchor .icon,
+.heading.-h5-alt .anchor .icon svg {
+  width: 25px;
+  height: 25px;
+}
 .heading.-h6 {
   font: normal bold 12px/1.6667 "Open Sans", sans-serif;
   letter-spacing: 0.05em;
@@ -8577,6 +8634,11 @@ button, input[type=button], input[type=submit], input[type=reset] {
   height: 25px;
   opacity: 0;
   visibility: hidden;
+}
+.heading.-h6 .anchor .icon,
+.heading.-h6 .anchor .icon svg {
+  width: 25px;
+  height: 25px;
 }
 
 .icon {
@@ -8598,6 +8660,34 @@ button, input[type=button], input[type=submit], input[type=reset] {
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(365deg);
+            transform: rotate(365deg);
+  }
+}
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(365deg);
+            transform: rotate(365deg);
+  }
+}
+.spinner::before {
+  content: url(../icons/php/icon.php?id=material-loading&color=605858&size[width]=50&size[height]=50);
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 1s linear 0s infinite;
+          animation: spin 1s linear 0s infinite;
+}
+
 .text {
   font: normal normal 16px/1.9375 "Open Sans", sans-serif;
   letter-spacing: normal;
@@ -8733,6 +8823,11 @@ button, input[type=button], input[type=submit], input[type=reset] {
   padding-right: 25px;
   height: 50px;
 }
+.button .icon,
+.button .icon svg {
+  width: 24px;
+  height: 24px;
+}
 .button .icon.-left {
   margin-right: 1em;
 }
@@ -8822,6 +8917,11 @@ button, input[type=button], input[type=submit], input[type=reset] {
   padding-left: 25px;
   padding-right: 25px;
   height: 50px;
+}
+.button.-success .icon,
+.button.-success .icon svg {
+  width: 24px;
+  height: 24px;
 }
 .button.-success .icon.-left {
   margin-right: 1em;
@@ -8913,6 +9013,11 @@ button, input[type=button], input[type=submit], input[type=reset] {
   padding-right: 25px;
   height: 50px;
 }
+.button.-caution .icon,
+.button.-caution .icon svg {
+  width: 24px;
+  height: 24px;
+}
 .button.-caution .icon.-left {
   margin-right: 1em;
 }
@@ -9002,6 +9107,11 @@ button, input[type=button], input[type=submit], input[type=reset] {
   padding-left: 25px;
   padding-right: 25px;
   height: 50px;
+}
+.button.-error .icon,
+.button.-error .icon svg {
+  width: 24px;
+  height: 24px;
 }
 .button.-error .icon.-left {
   margin-right: 1em;
@@ -10663,11 +10773,9 @@ button, input[type=button], input[type=submit], input[type=reset] {
   background-color: #082B73;
 }
 .subnav-button.-utility {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: normal;
+  font: normal bold 14px/1.9375 "Open Sans", sans-serif;
+  letter-spacing: normal;
+  text-transform: none;
   text-align: left;
   color: #605858;
   background-color: #FFFFFF;
@@ -10743,11 +10851,10 @@ button, input[type=button], input[type=submit], input[type=reset] {
   }
 }
 .subnav-button.-resource {
-  font: normal bold 16px/normal "Open Sans", sans-serif;
+  font: normal bold 14px/1.9375 "Open Sans", sans-serif;
   letter-spacing: normal;
   text-transform: none;
   text-align: left;
-  color: #FFFFFF;
   color: #FFFFFF;
   background-color: #091C44;
 }
@@ -10888,11 +10995,9 @@ button, input[type=button], input[type=submit], input[type=reset] {
   }
 }
 .subnav-button-alias {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: normal;
+  font: normal normal 13px/1.9375 "Open Sans", sans-serif;
+  letter-spacing: normal;
+  text-transform: none;
   text-align: left;
   margin-top: 1ex;
   margin-bottom: 1ex;
@@ -11505,9 +11610,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .search-cancel .icon {
+  margin-right: 1ex;
+}
+.search-cancel .icon,
+.search-cancel .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .search-cancel .icon svg {
   fill: #5387F7;
@@ -11573,9 +11681,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .link .icon {
+  margin-right: 1ex;
+}
+.link .icon,
+.link .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .link .icon svg {
   fill: #5387F7;
@@ -11687,7 +11798,7 @@ button, input[type=button], input[type=submit], input[type=reset] {
   line-height: inherit;
 }
 .list.-topics .list-item:not(:last-child)::after {
-  content: "," " ";
+  content: ", ";
 }
 .list.-files {
   grid-gap: 10px;
@@ -11883,9 +11994,14 @@ button, input[type=button], input[type=submit], input[type=reset] {
 }
 .copyright .link .icon,
 .copyright a .icon {
+  margin-right: 1ex;
+}
+.copyright .link .icon,
+.copyright .link .icon svg,
+.copyright a .icon,
+.copyright a .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .copyright .link .icon svg,
 .copyright a .icon svg {
@@ -13022,9 +13138,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .explorer-link .icon {
+  margin-right: 1ex;
+}
+.explorer-link .icon,
+.explorer-link .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .explorer-link .icon svg {
   fill: #E7EAF1;
@@ -13396,6 +13515,11 @@ button, input[type=button], input[type=submit], input[type=reset] {
   padding-right: 25px;
   height: 75px;
 }
+.social-media-link .icon,
+.social-media-link .icon svg {
+  width: 24px;
+  height: 24px;
+}
 .social-media-link .icon.-left {
   margin-right: 1em;
 }
@@ -13491,9 +13615,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .breadcrumbs-crumb a .icon {
+  margin-right: 1ex;
+}
+.breadcrumbs-crumb a .icon,
+.breadcrumbs-crumb a .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .breadcrumbs-crumb a .icon svg {
   fill: #5387F7;
@@ -13540,7 +13667,7 @@ button, input[type=button], input[type=submit], input[type=reset] {
 
 .card-action {
   padding: 25px;
-  grid-gap: 25px;
+  grid-gap: 15px;
   min-height: 265px;
   border: 1px solid #E7EAF1;
   border-top: 4px solid #5387F7;
@@ -13584,6 +13711,11 @@ button, input[type=button], input[type=submit], input[type=reset] {
   padding-left: 20px;
   padding-right: 20px;
   height: 125px;
+}
+.card-button .icon,
+.card-button .icon svg {
+  width: 24px;
+  height: 24px;
 }
 .card-button .icon.-left {
   margin-right: 1em;
@@ -13707,9 +13839,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .card-contact-name .icon {
+  margin-right: 1ex;
+}
+.card-contact-name .icon,
+.card-contact-name .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .card-contact-name .icon svg {
   fill: #091C44;
@@ -13771,9 +13906,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .card-contact-email .icon {
+  margin-right: 1ex;
+}
+.card-contact-email .icon,
+.card-contact-email .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .card-contact-email .icon svg {
   fill: #336BE6;
@@ -13863,9 +14001,14 @@ button, input[type=button], input[type=submit], input[type=reset] {
 }
 .card-librarian-subjects-list-item a .icon,
 .card-librarian-subjects-list-item .link .icon {
+  margin-right: 1ex;
+}
+.card-librarian-subjects-list-item a .icon,
+.card-librarian-subjects-list-item a .icon svg,
+.card-librarian-subjects-list-item .link .icon,
+.card-librarian-subjects-list-item .link .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .card-librarian-subjects-list-item a .icon svg,
 .card-librarian-subjects-list-item .link .icon svg {
@@ -13952,9 +14095,14 @@ button, input[type=button], input[type=submit], input[type=reset] {
 }
 .card-librarian-contact-info-item a .icon,
 .card-librarian-contact-info-item .link .icon {
+  margin-right: 1ex;
+}
+.card-librarian-contact-info-item a .icon,
+.card-librarian-contact-info-item a .icon svg,
+.card-librarian-contact-info-item .link .icon,
+.card-librarian-contact-info-item .link .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .card-librarian-contact-info-item a .icon svg,
 .card-librarian-contact-info-item .link .icon svg {
@@ -14043,9 +14191,14 @@ button, input[type=button], input[type=submit], input[type=reset] {
 }
 .card-librarian-contact-links-item a .icon,
 .card-librarian-contact-links-item .link .icon {
+  margin-right: 1ex;
+}
+.card-librarian-contact-links-item a .icon,
+.card-librarian-contact-links-item a .icon svg,
+.card-librarian-contact-links-item .link .icon,
+.card-librarian-contact-links-item .link .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .card-librarian-contact-links-item a .icon svg,
 .card-librarian-contact-links-item .link .icon svg {
@@ -14130,9 +14283,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .card-librarian-name .icon {
+  margin-right: 1ex;
+}
+.card-librarian-name .icon,
+.card-librarian-name .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .card-librarian-name .icon svg {
   fill: #091C44;
@@ -14244,9 +14400,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .card-library-aid-title .icon {
+  margin-right: 1ex;
+}
+.card-library-aid-title .icon,
+.card-library-aid-title .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .card-library-aid-title .icon svg {
   fill: #082B73;
@@ -14315,9 +14474,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .card-library-guide-title .icon {
+  margin-right: 1ex;
+}
+.card-library-guide-title .icon,
+.card-library-guide-title .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .card-library-guide-title .icon svg {
   fill: #082B73;
@@ -14614,9 +14776,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .card-multimedia-title .icon {
+  margin-right: 1ex;
+}
+.card-multimedia-title .icon,
+.card-multimedia-title .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .card-multimedia-title .icon svg {
   fill: #082B73;
@@ -14713,9 +14878,14 @@ button, input[type=button], input[type=submit], input[type=reset] {
 }
 .card-staff-contact-info-item a .icon,
 .card-staff-contact-info-item .link .icon {
+  margin-right: 1ex;
+}
+.card-staff-contact-info-item a .icon,
+.card-staff-contact-info-item a .icon svg,
+.card-staff-contact-info-item .link .icon,
+.card-staff-contact-info-item .link .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .card-staff-contact-info-item a .icon svg,
 .card-staff-contact-info-item .link .icon svg {
@@ -14804,9 +14974,14 @@ button, input[type=button], input[type=submit], input[type=reset] {
 }
 .card-staff-contact-links-item a .icon,
 .card-staff-contact-links-item .link .icon {
+  margin-right: 1ex;
+}
+.card-staff-contact-links-item a .icon,
+.card-staff-contact-links-item a .icon svg,
+.card-staff-contact-links-item .link .icon,
+.card-staff-contact-links-item .link .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .card-staff-contact-links-item a .icon svg,
 .card-staff-contact-links-item .link .icon svg {
@@ -14891,9 +15066,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .card-staff-name .icon {
+  margin-right: 1ex;
+}
+.card-staff-name .icon,
+.card-staff-name .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .card-staff-name .icon svg {
   fill: #091C44;
@@ -14982,9 +15160,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .feed-item-title .icon {
+  margin-right: 1ex;
+}
+.feed-item-title .icon,
+.feed-item-title .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .feed-item-title .icon svg {
   fill: #605858;
@@ -15046,6 +15227,11 @@ button, input[type=button], input[type=submit], input[type=reset] {
   padding-left: 15px;
   padding-right: 15px;
   height: 40px !important;
+}
+.feed-item-action .icon,
+.feed-item-action .icon svg {
+  width: 24px;
+  height: 24px;
 }
 .feed-item-action .icon.-left {
   margin-right: 1em;
@@ -15279,9 +15465,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .flyout-feed-item-link .icon {
+  margin-right: 1ex;
+}
+.flyout-feed-item-link .icon,
+.flyout-feed-item-link .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .flyout-feed-item-link .icon svg {
   fill: #5387F7;
@@ -16118,6 +16307,11 @@ button, input[type=button], input[type=submit], input[type=reset] {
   padding-right: 25px;
   height: 50px;
 }
+.slide-action .button .icon,
+.slide-action .button .icon svg {
+  width: 24px;
+  height: 24px;
+}
 .slide-action .button .icon.-left {
   margin-right: 1em;
 }
@@ -16257,9 +16451,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .tile-listing:not(.has-description) .tile-listing-title .icon {
+  margin-right: 1ex;
+}
+.tile-listing:not(.has-description) .tile-listing-title .icon,
+.tile-listing:not(.has-description) .tile-listing-title .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .tile-listing:not(.has-description) .tile-listing-title .icon svg {
   fill: #082B73;
@@ -16320,9 +16517,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .tile-listing.has-description .tile-listing-title .icon {
+  margin-right: 1ex;
+}
+.tile-listing.has-description .tile-listing-title .icon,
+.tile-listing.has-description .tile-listing-title .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .tile-listing.has-description .tile-listing-title .icon svg {
   fill: #082B73;
@@ -16389,9 +16589,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .tile-listing-action .icon {
+  margin-right: 1ex;
+}
+.tile-listing-action .icon,
+.tile-listing-action .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .tile-listing-action .icon svg {
   fill: #5387F7;
@@ -16464,9 +16667,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .tile-utility-title .icon {
+  margin-right: 1ex;
+}
+.tile-utility-title .icon,
+.tile-utility-title .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .tile-utility-title .icon svg {
   fill: #082B73;
@@ -16642,9 +16848,14 @@ button, input[type=button], input[type=submit], input[type=reset] {
 }
 .popular-links-menu.-hours .popular-links-menu-list-item .link .icon,
 .popular-links-menu.-hours .popular-links-menu-list-item a .icon {
+  margin-right: 1ex;
+}
+.popular-links-menu.-hours .popular-links-menu-list-item .link .icon,
+.popular-links-menu.-hours .popular-links-menu-list-item .link .icon svg,
+.popular-links-menu.-hours .popular-links-menu-list-item a .icon,
+.popular-links-menu.-hours .popular-links-menu-list-item a .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .popular-links-menu.-hours .popular-links-menu-list-item .link .icon svg,
 .popular-links-menu.-hours .popular-links-menu-list-item a .icon svg {
@@ -16805,9 +17016,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .accordion-toggles-toggle .icon {
+  margin-right: 1ex;
+}
+.accordion-toggles-toggle .icon,
+.accordion-toggles-toggle .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .accordion-toggles-toggle .icon svg {
   fill: #336BE6;
@@ -17667,9 +17881,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .intro-link .icon {
+  margin-right: 1ex;
+}
+.intro-link .icon,
+.intro-link .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .intro-link .icon svg {
   fill: #5387F7;
@@ -17803,9 +18020,14 @@ button, input[type=button], input[type=submit], input[type=reset] {
 }
 .footer-list .link .icon,
 .footer-list a .icon {
+  margin-right: 1ex;
+}
+.footer-list .link .icon,
+.footer-list .link .icon svg,
+.footer-list a .icon,
+.footer-list a .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .footer-list .link .icon svg,
 .footer-list a .icon svg {
@@ -18072,9 +18294,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .search-menu-search .search-cancel .icon {
+  margin-right: 1ex;
+}
+.search-menu-search .search-cancel .icon,
+.search-menu-search .search-cancel .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .search-menu-search .search-cancel .icon svg {
   fill: #5387F7;
@@ -19780,9 +20005,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .search-menu.-light .search-menu-search .search-cancel .icon {
+  margin-right: 1ex;
+}
+.search-menu.-light .search-menu-search .search-cancel .icon,
+.search-menu.-light .search-menu-search .search-cancel .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .search-menu.-light .search-menu-search .search-cancel .icon svg {
   fill: #5387F7;
@@ -19848,9 +20076,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .search-menu.-dark .search-menu-search .search-cancel .icon {
+  margin-right: 1ex;
+}
+.search-menu.-dark .search-menu-search .search-cancel .icon,
+.search-menu.-dark .search-menu-search .search-cancel .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .search-menu.-dark .search-menu-search .search-cancel .icon svg {
   fill: #FFFFFF;
@@ -19988,9 +20219,14 @@ button, input[type=button], input[type=submit], input[type=reset] {
 }
 .section-deep-dive-body a .icon,
 .section-deep-dive-body .link .icon {
+  margin-right: 1ex;
+}
+.section-deep-dive-body a .icon,
+.section-deep-dive-body a .icon svg,
+.section-deep-dive-body .link .icon,
+.section-deep-dive-body .link .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .section-deep-dive-body a .icon svg,
 .section-deep-dive-body .link .icon svg {
@@ -20129,9 +20365,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon {
+  margin-right: 1ex;
+}
+.section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon,
+.section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon svg {
   fill: #5387F7;
@@ -20195,9 +20434,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon {
+  margin-right: 1ex;
+}
+.section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon,
+.section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .section-main.-light .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon svg {
   fill: #5387F7;
@@ -20261,9 +20503,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon {
+  margin-right: 1ex;
+}
+.section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon,
+.section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .section-main.-dark .section-main-breadcrumb .breadcrumbs .breadcrumbs-crumb a .icon svg {
   fill: #5387F7;
@@ -20582,9 +20827,12 @@ button, input[type=button], input[type=submit], input[type=reset] {
   border: none;
 }
 .exhibition-page-main-sidenote-link .icon {
+  margin-right: 1ex;
+}
+.exhibition-page-main-sidenote-link .icon,
+.exhibition-page-main-sidenote-link .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .exhibition-page-main-sidenote-link .icon svg {
   fill: #5387F7;
