@@ -1,4 +1,4 @@
-<eul-feed inline-template :src="'{{feed}}'" :model="{{JSONstringify model}}" :limit="{{default limit 5}}" :type="'{{default type 'json'}}'">
+<eul-feed inline-template :feed="'{{feed}}'" :model="{{JSONstringify model}}" :limit="{{default limit 5}}">
 
   <div class="feed" data-feed="{{feed}}">
     {{> tokens-heading level=3 classes='feed-heading' icon=(default icon 'material-rss_feed')}}

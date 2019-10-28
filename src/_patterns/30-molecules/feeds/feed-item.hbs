@@ -1,4 +1,4 @@
-<eul-feed-item inline-template :defaults="{{#unless use}}{{JSONstringify this}}{{else}}{{use}}{{/unless}}"{{#if foreach}} v-for="{{foreach}}"{{/if}}>
+<eul-feed-item inline-template :defaults="{{#unless use}}{{JSONstringify this}}{{else}}{{use}}{{/unless}}"{{#if foreach}} v-for="{{foreach}}" :key="item.id"{{/if}}>
 
   <div class="feed-item"
        :class="{'has-action': button.href}"

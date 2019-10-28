@@ -2,7 +2,6 @@
   "heading": "Upcoming Workshops",
   "icon": "material-pencil_ruler",
   "feed": "https://www.trumba.com/calendars/robert-woodruff-library-classes-at-woodruff-library.json",
-  "type": "json",
   "model": {
     "id": "{eventID}",
     "date": "{dateTimeFormatted}",
