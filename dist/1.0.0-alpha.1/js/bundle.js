@@ -79,7 +79,27 @@ _.isCollection = function (value) {
   if (!_.isArray(value)) return false; // In order for an array to be a collection, require that all of its items are objects.
 
   return _.every(value, _.isPlainObject);
-}; // Build utility methods.
+}; // Always attempt to parse the query string.
+
+
+window.location.params = _.reduce(_.trimStart(window.location.search, '?').split('&'), function (result, param) {
+  // Get the parameter's key and value.
+  var _param$split$map = param.split('=').map(_.trim),
+      _param$split$map2 = _slicedToArray(_param$split$map, 2),
+      key = _param$split$map2[0],
+      value = _param$split$map2[1]; // Save the query parameter.
+
+
+  return _.set(result, key, value);
+}, {}); // Attempt to get the website root address (base URL) for the site.
+// NOTE: This is a workaround for development and production URL differences across environments.
+// NOTE: If using a virtual host on your local machine during development that includes a path in the URL, you'll need to "whitelist" your configuration here.
+// NOTE: If setting up a new deployment destination that includes a path in the URL, you'll need to "whitelist" your configuration here.
+
+var ROOT = _.get({
+  'template.library.emory.edu': 'https://template.library.emory.edu/styleguide/patternlibrary/current',
+  'localhost': 'http://localhost/Pattern-Library/public'
+}, window.location.host, ''); // Build utility methods.
 
 
 var EUL = {
@@ -336,18 +356,7 @@ var EUL = {
 }; // Temporarily disabled Leaflet while `atoms-map` is not in use.
 // Extend Leaflet.
 // require('leaflet-providers');
-// Always attempt to parse the query string.
-
-window.location.params = _.reduce(_.trimStart(window.location.search, '?').split('&'), function (result, param) {
-  // Get the parameter's key and value.
-  var _param$split$map = param.split('=').map(_.trim),
-      _param$split$map2 = _slicedToArray(_param$split$map, 2),
-      key = _param$split$map2[0],
-      value = _param$split$map2[1]; // Save the query parameter.
-
-
-  return _.set(result, key, value);
-}, {}); // Initialize an event bus for handling events.
+// Initialize an event bus for handling events.
 
 var Events = new Vue(); // Initialize a data store using session storage.
 
@@ -2158,7 +2167,7 @@ Components.register('feed', {
     var _this13 = this;
 
     // Fetch the feed's source.
-    var fetch = $.getJSON(this.proxy + this.feed); // Save the feed's source data.
+    var fetch = $.getJSON(ROOT + this.proxy + this.feed); // Save the feed's source data.
 
     fetch // If the feed was able to be fetched, then save its data.
     .then(function (response) {
@@ -2748,7 +2757,7 @@ Components.register('event', {
     var _this16 = this;
 
     // Fetch the feed's source.
-    var fetch = $.getJSON(this.proxy + this.feed); // Save the feed's source data.
+    var fetch = $.getJSON(ROOT + this.proxy + this.feed); // Save the feed's source data.
 
     fetch // If the feed was able to be fetched, then save its data.
     .then(function (response) {
