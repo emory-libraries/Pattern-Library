@@ -52,7 +52,8 @@ window.location.params = _.reduce(_.trimStart(window.location.search, '?').split
 
 // Attempt to get the website root address (base URL) for the site.
 // NOTE: This is a workaround for development and production URL differences across environments.
-// NOTE: If using a virtual host on your local machine during development, you'll need to "whitelist" your configuration here.
+// NOTE: If using a virtual host on your local machine during development that includes a path in the URL, you'll need to "whitelist" your configuration here.
+// NOTE: If setting up a new deployment destination that includes a path in the URL, you'll need to "whitelist" your configuration here.
 const ROOT = _.get({
   'template.library.emory.edu': 'https://template.library.emory.edu/styleguide/patternlibrary/current',
   'localhost': 'http://localhost/Pattern-Library/public'
