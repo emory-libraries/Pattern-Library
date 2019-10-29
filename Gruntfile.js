@@ -652,7 +652,8 @@ module.exports = function(grunt) {
   grunt.registerTask('deploy', [
     'dist',
     'ssh_deploy:release',
-    'ssh_deploy:patternlab'
+    'ssh_deploy:patternlab',
+    'webdav'
   ]);
 
   /* export */
@@ -672,5 +673,8 @@ module.exports = function(grunt) {
 
   /* status */
   grunt.registerTask('status', 'Update the status of a pattern', require('./scripts/status.js'));
+
+  /* webdav */
+  grunt.registerTask('webdav', 'Upload files to the web server via webdav', require('./scripts/webdav.js'));
 
 };
