@@ -39,6 +39,25 @@ _.isCollection = ( value ) => {
 
 };
 
+// Always attempt to parse the query string.
+window.location.params = _.reduce(_.trimStart(window.location.search, '?').split('&'), (result, param) => {
+
+  // Get the parameter's key and value.
+  const [key, value] = param.split('=').map(_.trim);
+
+  // Save the query parameter.
+  return _.set(result, key, value);
+
+}, {});
+
+// Attempt to get the website root address (base URL) for the site.
+// NOTE: This is a workaround for development and production URL differences across environments.
+// NOTE: If using a virtual host on your local machine during development, you'll need to "whitelist" your configuration here.
+const ROOT = _.get({
+  'template.library.emory.edu': 'https://template.library.emory.edu/styleguide/patternlibrary/current',
+  'localhost': 'http://localhost/Pattern-Library/public'
+}, window.location.host, '');
+
 // Build utility methods.
 const EUL = {
 
@@ -348,17 +367,6 @@ const EUL = {
 // Temporarily disabled Leaflet while `atoms-map` is not in use.
 // Extend Leaflet.
 // require('leaflet-providers');
-
-// Always attempt to parse the query string.
-window.location.params = _.reduce(_.trimStart(window.location.search, '?').split('&'), (result, param) => {
-
-  // Get the parameter's key and value.
-  const [key, value] = param.split('=').map(_.trim);
-
-  // Save the query parameter.
-  return _.set(result, key, value);
-
-}, {});
 
 // Initialize an event bus for handling events.
 const Events = new Vue();

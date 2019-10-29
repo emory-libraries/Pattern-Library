@@ -27,7 +27,7 @@ Components.register('event', {
   created() {
 
     // Fetch the feed's source.
-    const fetch = $.getJSON(this.proxy + this.feed);
+    const fetch = $.getJSON(ROOT + this.proxy + this.feed);
 
     // Save the feed's source data.
     fetch
