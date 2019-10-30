@@ -1556,8 +1556,10 @@ function () {
   }]);
 
   return Fuzzy;
-}(); // Register a Button component.
+}(); // Extend Vue with global variables.
 
+
+Vue.prototype.global = window; // Register a Button component.
 
 Components.register('button', {
   props: {},
