@@ -530,6 +530,9 @@ module.exports = function(grunt) {
       },
       dist: {
         NODE_ENV: 'production'
+      },
+      webdav: {
+        NODE_ENV: 'webdav'
       }
     }
   });
@@ -653,6 +656,7 @@ module.exports = function(grunt) {
     'dist',
     'ssh_deploy:release',
     'ssh_deploy:patternlab',
+    'env:webdav',
     'webdav'
   ]);
 

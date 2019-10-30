@@ -1,13 +1,13 @@
 {{#unless vue}}
 <span class="icon{{#if classes}} {{classes}}{{/if}}" aria-hidden="true" data-icon="{{id}}">
   <svg>
-    <use xlink:href="/icons/sprite/sprite.svg#{{id}}"/>
+    <use xlink:href="{{baseUrl}}/icons/sprite/sprite.svg#{{id}}"/>
   </svg>
 </span>
 {{else}}
 <span class="icon" aria-hidden="true" :data-icon="{{id}}" v-if="{{id}}">
   <svg>
-    <use :xlink:href="'/icons/sprite/sprite.svg#' + {{id}}"/>
+    <use :xlink:href="global.ROOT + '/icons/sprite/sprite.svg#' + {{id}}"/>
   </svg>
 </span>
 {{/unless}}

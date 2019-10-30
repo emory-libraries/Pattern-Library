@@ -11,7 +11,8 @@ const ENV = process.env.NODE_ENV;
 // Set base URL for each environment.
 const BASE_URL = {
   development:  path.join('/', path.basename(process.cwd()), config.paths.public.root),
-  production:   config.paths.live.pathname
+  production:   config.paths.live.pathname,
+  webdav:       '/'
 };
 
 // Set domain.

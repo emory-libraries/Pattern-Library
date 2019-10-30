@@ -1857,3 +1857,6 @@ class Fuzzy {
   }
 
 }
+
+// Extend Vue with global variables.
+Vue.prototype.global = window;
