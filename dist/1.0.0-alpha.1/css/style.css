@@ -15931,11 +15931,14 @@ button, input[type=button], input[type=submit], input[type=reset] {
   line-height: 1.9375rem !important;
 }
 .notification-dismiss {
-  width: 25px;
-  height: 25px;
   color: #082B73;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
+}
+.notification-dismiss,
+.notification-dismiss svg {
+  width: 25px;
+  height: 25px;
 }
 .notification-dismiss svg {
   fill: #082B73;

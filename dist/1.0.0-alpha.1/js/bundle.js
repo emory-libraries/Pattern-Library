@@ -149,7 +149,9 @@ var EUL = {
             var base = _.trimEnd(key, '?'); // Get the condition that needs to be met in order for the value to be included.
 
 
-            var condition = bind(value.criteria, data); // Get the criteria that must be met in order to display the conditional data.
+            var condition = bind(value.criteria, data, {
+              condition: true
+            }); // Get the criteria that must be met in order to display the conditional data.
 
             var criteria = new Function("return ".concat(condition, ";")); // Remove the conditional key from the model.
 
@@ -158,7 +160,6 @@ var EUL = {
             model[base] = value.value; // Evaluate the criteria, and only include the value if the criteria was met.
 
             if (criteria()) data[base] = bind(value.value, data, {
-              condition: true,
               recursive: recursive,
               model: model,
               key: base
@@ -273,23 +274,29 @@ var EUL = {
           }); // For placeholders within conditional statements, escape the pointer's value.
 
 
-          if (conditional) switch (pointer) {
-            case null:
-              pointer = 'null';
-              break;
+          if (conditional) {
+            // Convert objects and arrays to strings.
+            if (_.isPlainObject(pointer) || _.isArray(pointer)) pointer = JSON.stringify(pointer); // Otherwise, for strings, wrap them in quotes.
+            else if (_.isString(pointer)) pointer = pointer.indexOf("'") > -1 ? "\"".concat(pointer, "\"") : "'".concat(pointer, "'"); // Otherwise, for all other values, convert them to their string equivalents.
+              else switch (pointer) {
+                  case null:
+                    pointer = 'null';
+                    break;
 
-            case undefined:
-              pointer = 'undefined';
-              break;
+                  case undefined:
+                    pointer = 'undefined';
+                    break;
 
-            case true:
-              pointer = 'true';
-              break;
+                  case true:
+                    pointer = 'true';
+                    break;
 
-            case false:
-              pointer = 'false';
-              break;
+                  case false:
+                    pointer = 'false';
+                    break;
+                }
           } // Bind the pointer's value back into the string value.
+
 
           value = value.replace(keys.placeholder, pointer); // Return the updated value.
 
@@ -318,7 +325,7 @@ var EUL = {
               // Get the placeholder's keys.
               var keys = utils.getKeys(placeholder); // Replace the placeholder with its respective data given the keys.
 
-              value = utils.setPlaceholder(value, item, keys, options.conditional); // Determine if the placeholder has filters, and if so, get and apply them.
+              value = utils.setPlaceholder(value, item, keys, options.condition); // Determine if the placeholder has filters, and if so, get and apply them.
 
               if (utils.hasFilters(placeholder)) {
                 // Get the filters.
@@ -466,7 +473,28 @@ var Components = {
       }
     },
     methods: {},
-    filters: {},
+    filters: {
+      // Truncate a string to the given length, optionally adding a suffix where the omission occurs.
+      truncate: function truncate(string, length) {
+        var omission = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '…';
+        return _.truncate(string, {
+          length: length,
+          omission: omission
+        });
+      },
+      // Capitalize the first charater in a string.
+      capitalize: function capitalize(string) {
+        return _.capitalize(string);
+      },
+      // Make a string uppercase.
+      uppercase: function uppercase(string) {
+        return _.upperCase(string);
+      },
+      // Make a string lowercase.
+      lowercase: function lowercase(string) {
+        return _.lowerCase(string);
+      }
+    },
     created: function created() {
       var _this = this;
 
@@ -2732,6 +2760,150 @@ Components.register('hours-upcoming', {
     }
   }
 });
+Components.register('calendar', {
+  props: {
+    feed: {
+      type: String,
+      "default": _.get(window.location.params, 'feed')
+    },
+    model: {
+      type: Object,
+      required: true
+    },
+    archive: {
+      type: Boolean,
+      "default": false
+    }
+  },
+  data: function data() {
+    return {
+      source: [],
+      error: false,
+      proxy: '/php/proxy.php?url='
+    };
+  },
+  created: function created() {
+    var _this16 = this;
+
+    // Fetch the feed's source.
+    var fetch = $.getJSON(ROOT + this.proxy + this.feed); // Save the feed's source data.
+
+    fetch // If the feed was able to be fetched, then save its data.
+    .then(function (response) {
+      // Try to parse the feed as JSON.
+      try {
+        // Assume that most feed will be JSON.
+        response.body = JSON.parse(response.body);
+      } // Otherwise, parse the feed as RSS.
+      catch (error) {
+        // Assume that feed must be RSS if it's not JSON.
+        response.body = RSS.parseString(response.body).items;
+      } // Then, save the feed data.
+
+
+      _this16.source = response.body;
+    }) // Otherwise, indicate that there was an error with the attempt to fetch the feed.
+    ["catch"](function (error) {
+      // Indicate that an error occurred.
+      _this16.error = true;
+    });
+  },
+  computed: {
+    // Using the feed's data and model, return the feed content in the desired form.
+    content: function content() {
+      return EUL.mapFeed(this.source, this.model);
+    },
+    // Build the calendar of events grouped by years then months and sorted by dates.
+    calendar: function calendar() {
+      // Get the today's date.
+      var today = moment(); // Get information about the current date.
+
+      var current = {
+        moment: today,
+        timestamp: today.unix(),
+        datetime: today.toISOString(),
+        year: today.year(),
+        m: today.month(),
+        month: moment.months(true)[today.month()]
+      }; // Get the event feed that the calendar should use.
+
+      var events = this.content; // Interpret all dates for the events.
+
+      events = _.map(events, function (event) {
+        // Get the event's start and end dates.
+        var start = event.date.start;
+        var end = event.date.end; // Convert the event's start and end dates to objects containing more information about the dates.
+
+        event.date.start = {
+          datetime: start,
+          moment: moment(start),
+          timestamp: moment(start).unix()
+        };
+        event.date.end = {
+          datetime: end,
+          moment: moment(end),
+          timestamp: moment(end).unix()
+        }; // Return the event with its updated date information.
+
+        return event;
+      }); // Determine each event's month and year.
+
+      events = _.map(events, function (event) {
+        // Get the event's start and end dates.
+        var start = event.date.start;
+        var end = event.date.end; // Initialize the event's month and year.
+
+        event.month = null;
+        event.m = -1;
+        event.year = -1; // Determine the month and year that the event falls in.
+
+        event.m = _.compact(_.uniq([start.moment.isValid() ? start.moment.month() : null, end.moment.isValid() ? end.moment.month() : null]))[0];
+        event.year = _.compact(_.uniq([start.moment.isValid() ? start.moment.year() : null, end.moment.isValid() ? end.moment.year() : null]))[0]; // Get the corresponding name of the month and year that the event falls in.
+
+        event.month = moment.months(true)[event.m]; // Continue mapping events.
+
+        return event;
+      }); // Initialize a collection of events grouped by year and month.
+
+      var groups = []; // Then, group the events by year and month.
+
+      _.each(events, function (event) {
+        // Attempt to get the group that this event belongs to.
+        var group = _.find(groups, {
+          m: event.m,
+          year: event.year
+        }); // If the group exists, then add the event onto that group.
+
+
+        if (group) group.events.push(event); // Otherwise if it doesn't exist, then create it now, and add the event to it.
+        else groups.push({
+            month: event.month,
+            m: event.m,
+            year: event.year,
+            name: "".concat(event.month, " ").concat(event.year),
+            events: [event]
+          });
+      }); // Sort the events within the groups by date, then sort the groups by year and month.
+
+
+      groups = _.sortBy(_.map(groups, function (group) {
+        // Sort the events by date.
+        group.events = _.orderBy(group.events, ['date.end.timestamp', 'date.start.timestamp'], ['asc', 'asc']); // Continue mapping the groups.
+
+        return group;
+      }), ['year', 'm']); // If the calendar is in archive mode, then reverse the sort order to show most recent events first, and only display past events.
+
+      if (this.archive) groups = _.filter(_.reverse(groups), function (group) {
+        return group.year < current.year || group.year === current.year && group.m < current.m;
+      }); // Otherwise, for standard calendars, only display current and future events.
+      else groups = _.filter(groups, function (group) {
+          return group.year > current.year || group.year === current.year && group.m >= current.m;
+        }); // Return the groups after having been sorted and grouped.
+
+      return groups;
+    }
+  }
+});
 Components.register('event', {
   props: {
     feed: {
@@ -2756,7 +2928,7 @@ Components.register('event', {
     };
   },
   created: function created() {
-    var _this16 = this;
+    var _this17 = this;
 
     // Fetch the feed's source.
     var fetch = $.getJSON(ROOT + this.proxy + this.feed); // Save the feed's source data.
@@ -2774,19 +2946,19 @@ Components.register('event', {
       } // Then, save the feed data.
 
 
-      _this16.source = response.body; // Update the page's title.
+      _this17.source = response.body; // Update the page's title.
 
-      document.title = _.get(_this16.event, 'title', 'Event Not Found'); // Indicate that loading is done.
+      document.title = _.get(_this17.event, 'title', 'Event Not Found'); // Indicate that loading is done.
 
-      _this16.loading = false;
+      _this17.loading = false;
     }) // Otherwise, indicate that there was an error with the attempt to fetch the feed.
     ["catch"](function (error) {
       // Indicate that an error occurred.
-      _this16.error = true; // Update the page's title.
+      _this17.error = true; // Update the page's title.
 
       document.title = 'Event Not Found'; // Indicate that loading is done.
 
-      _this16.loading = false;
+      _this17.loading = false;
     });
   },
   computed: {
@@ -22798,7 +22970,7 @@ return jQuery;
 /**
  * @license
  * Lodash <https://lodash.com/>
- * Copyright JS Foundation and other contributors <https://js.foundation/>
+ * Copyright OpenJS Foundation and other contributors <https://openjsf.org/>
  * Released under MIT license <https://lodash.com/license>
  * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
  * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -22809,7 +22981,7 @@ return jQuery;
   var undefined;
 
   /** Used as the semantic version number. */
-  var VERSION = '4.17.11';
+  var VERSION = '4.17.15';
 
   /** Used as the size to enable large array optimizations. */
   var LARGE_ARRAY_SIZE = 200;
@@ -25468,16 +25640,10 @@ return jQuery;
         value.forEach(function(subValue) {
           result.add(baseClone(subValue, bitmask, customizer, subValue, value, stack));
         });
-
-        return result;
-      }
-
-      if (isMap(value)) {
+      } else if (isMap(value)) {
         value.forEach(function(subValue, key) {
           result.set(key, baseClone(subValue, bitmask, customizer, key, value, stack));
         });
-
-        return result;
       }
 
       var keysFunc = isFull
@@ -26401,8 +26567,8 @@ return jQuery;
         return;
       }
       baseFor(source, function(srcValue, key) {
+        stack || (stack = new Stack);
         if (isObject(srcValue)) {
-          stack || (stack = new Stack);
           baseMergeDeep(object, source, key, srcIndex, baseMerge, customizer, stack);
         }
         else {
@@ -28219,7 +28385,7 @@ return jQuery;
       return function(number, precision) {
         number = toNumber(number);
         precision = precision == null ? 0 : nativeMin(toInteger(precision), 292);
-        if (precision) {
+        if (precision && nativeIsFinite(number)) {
           // Shift with exponential notation to avoid floating-point issues.
           // See [MDN](https://mdn.io/round#Examples) for more details.
           var pair = (toString(number) + 'e').split('e'),
@@ -29402,7 +29568,7 @@ return jQuery;
     }
 
     /**
-     * Gets the value at `key`, unless `key` is "__proto__".
+     * Gets the value at `key`, unless `key` is "__proto__" or "constructor".
      *
      * @private
      * @param {Object} object The object to query.
@@ -29410,6 +29576,10 @@ return jQuery;
      * @returns {*} Returns the property value.
      */
     function safeGet(object, key) {
+      if (key === 'constructor' && typeof object[key] === 'function') {
+        return;
+      }
+
       if (key == '__proto__') {
         return;
       }
@@ -33210,6 +33380,7 @@ return jQuery;
           }
           if (maxing) {
             // Handle invocations in a tight loop.
+            clearTimeout(timerId);
             timerId = setTimeout(timerExpired, wait);
             return invokeFunc(lastCallTime);
           }
@@ -37596,9 +37767,12 @@ return jQuery;
       , 'g');
 
       // Use a sourceURL for easier debugging.
+      // The sourceURL gets injected into the source that's eval-ed, so be careful
+      // with lookup (in case of e.g. prototype pollution), and strip newlines if any.
+      // A newline wouldn't be a valid sourceURL anyway, and it'd enable code injection.
       var sourceURL = '//# sourceURL=' +
-        ('sourceURL' in options
-          ? options.sourceURL
+        (hasOwnProperty.call(options, 'sourceURL')
+          ? (options.sourceURL + '').replace(/[\r\n]/g, ' ')
           : ('lodash.templateSources[' + (++templateCounter) + ']')
         ) + '\n';
 
@@ -37631,7 +37805,9 @@ return jQuery;
 
       // If `variable` is not specified wrap a with-statement around the generated
       // code to add the data object to the top of the scope chain.
-      var variable = options.variable;
+      // Like with sourceURL, we take care to not check the option's prototype,
+      // as this configuration is a code injection vector.
+      var variable = hasOwnProperty.call(options, 'variable') && options.variable;
       if (!variable) {
         source = 'with (obj) {\n' + source + '\n}\n';
       }
@@ -39836,10 +40012,11 @@ return jQuery;
     baseForOwn(LazyWrapper.prototype, function(func, methodName) {
       var lodashFunc = lodash[methodName];
       if (lodashFunc) {
-        var key = (lodashFunc.name + ''),
-            names = realNames[key] || (realNames[key] = []);
-
-        names.push({ 'name': methodName, 'func': lodashFunc });
+        var key = lodashFunc.name + '';
+        if (!hasOwnProperty.call(realNames, key)) {
+          realNames[key] = [];
+        }
+        realNames[key].push({ 'name': methodName, 'func': lodashFunc });
       }
     });
 
