@@ -231,6 +231,14 @@ module.exports = function(grunt) {
           path.resolve(paths.source.extensions, '**/*')
         ],
         tasks: ['build:dev:patternlab', 'bsReload']
+      },
+      docs: {
+        files: [
+          path.resolve(paths.root, 'docs/**/*'),
+          path.resolve(paths.root, '.verbrc'),
+          path.resolve(paths.root, 'package.json'),
+        ],
+        tasks: ['verb']
       }
     },
     php: {
@@ -534,6 +542,17 @@ module.exports = function(grunt) {
       webdav: {
         NODE_ENV: 'webdav'
       }
+    },
+    verb: {
+      options: {
+        config: _.merge({}, pkg.pkg)
+      },
+      readme: {
+        files: [{
+          src: path.resolve(paths.root, '.verbrc'),
+          dest: 'README.md'
+        }]
+      }
     }
   });
 
@@ -570,6 +589,7 @@ module.exports = function(grunt) {
 
   /* build:dev */
   grunt.registerTask('build:dev', [
+    'verb',
     'clean:public',
     'build:dev:scss',
     'build:dev:js',
@@ -593,6 +613,7 @@ module.exports = function(grunt) {
 
   /* build:dist */
   grunt.registerTask('build:dist', [
+    'verb',
     'clean:public',
     'build:dist:scss',
     'build:dist:js',
@@ -658,6 +679,12 @@ module.exports = function(grunt) {
     'ssh_deploy:patternlab',
     'env:webdav',
     'webdav'
+  ]);
+
+  /* docs */
+  grunt.registerTask('docs', [
+    'verb',
+    'watch:docs'
   ]);
 
   /* export */
