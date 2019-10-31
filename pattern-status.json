@@ -152,5 +152,6 @@
   "60-templates-hours-hours": "review",
   "60-templates-events-event": "review",
   "60-templates-events-calendar": "review",
-  "70-pages-static-home": "review"
+  "70-pages-static-home": "review",
+  "60-templates-events-archive": "review"
 }

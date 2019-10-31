@@ -1,3 +1,4 @@
+{{#unless vue}}
 <div class="tiles{{#if classes}} {{classes}}{{/if}}"
      {{#if columns}}style="
         {{#if (isObject columns)}}
@@ -19,3 +20,40 @@
       {{/if}}
     {{/each}}
   </div>
+{{else}}
+{{#if (not (isString link))}}{{assign 'link' null}}{{/if}}
+{{#if (eq title @root/title)}}{{assign 'title' null}}{{/if}}
+<div class="tiles{{#if classes}} {{classes}}{{/if}}"
+     {{#if columns}}style="
+        {{#if (isObject columns)}}
+          {{#each columns as |size screen|}}
+          --cols-{{screen}}: {{size}};
+          {{/each}}
+        {{else}}
+          --cols-s: {{columns}};
+          --cols-m: {{columns}};
+          --cols-l: {{columns}};
+        {{/if}}
+     "{{/if}}>
+    {{#if (eq tile-type 'listing')}}
+      {{> molecules-tile-listing
+          vue=true
+          foreach=(combine (default tile 'tile') ' in ' tiles)
+          link=(default link (combine '<% ' (default tile 'tile') '.link %>'))
+          badge=(default badge (combine '<% ' (default tile 'tile') '.badge %>'))
+          description=(default description (combine '<% ' (default tile 'tile') '.description %>'))
+          image=(default image (combine '<% ' (default tile 'tile') '.image %>'))
+          date=(default date (combine '<% ' (default tile 'tile') '.date %>'))
+          title=(default title (combine '<% ' (default tile 'tile') '.title %>'))}}
+    {{/if}}
+    {{#if (eq tile-type 'utility')}}
+      {{> molecules-tile-utility
+          vue=true
+          foreach=(combine (default tile 'tile') ' in ' tiles)
+          link=(default link (combine '<% ' (default tile 'tile') '.link %>'))
+          description=(default description (combine '<% ' (default tile 'tile') '.description %>'))
+          image=(default image (combine '<% ' (default tile 'tile') '.image %>'))
+          title=(default title (combine '<% ' (default tile 'tile') '.title %>'))}}
+    {{/if}}
+  </div>
+{{/unless}}

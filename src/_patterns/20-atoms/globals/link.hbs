@@ -9,8 +9,8 @@
   {{#unless (eq this.raw true)}}{{label}}{{else}}{{{label}}}{{/unless}}
 </a>
 {{else}}
-<a :href="{{vueBase href}}" class="link{{#if classes}} {{classes}}{{/if}}" target="{{default target '_self'}}">
+<a :href="{{vueBase href}}" class="link{{#if classes}} {{classes}}{{/if}}" target="{{default target '_self'}}"{{#if html}} v-html="{{vueBase label}}"{{/if}}>
   {{> tokens-icon id=icon vue=true}}
-  <% {{label}} %>
+  {{#unless html}}<% {{vueBase label}} %>{{/unless}}
 </a>
 {{/unless}}

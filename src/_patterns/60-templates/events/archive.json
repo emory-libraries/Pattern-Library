@@ -1,5 +1,5 @@
 {
-  "title": "Calendar of Events",
+  "title": "Archive of Events",
   "feed": "https://www.trumba.com/calendars/robert-woodruff-library.json",
   "model": {
     "id": "{eventID}",
@@ -20,7 +20,7 @@
     }
   },
   "button": {
-    "href": "/patterns/60-templates-events-archive/60-templates-events-archive.html",
-    "label": "View Events Archive"
+    "href": "/patterns/60-templates-events-calendar/60-templates-events-calendar.html",
+    "label": "View Events Calendar"
   }
 }

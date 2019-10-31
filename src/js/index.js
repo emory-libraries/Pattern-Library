@@ -112,7 +112,7 @@ const EUL = {
             const base = _.trimEnd(key, '?');
 
             // Get the condition that needs to be met in order for the value to be included.
-            const condition = bind(value.criteria, data);
+            const condition = bind(value.criteria, data, {condition: true});
 
             // Get the criteria that must be met in order to display the conditional data.
             const criteria = new Function(`return ${condition};`);
@@ -125,7 +125,6 @@ const EUL = {
 
             // Evaluate the criteria, and only include the value if the criteria was met.
             if( criteria() ) data[base] = bind(value.value, data, {
-              condition: true,
               recursive,
               model,
               key: base
@@ -270,11 +269,22 @@ const EUL = {
           });
 
           // For placeholders within conditional statements, escape the pointer's value.
-          if( conditional ) switch(pointer) {
-            case null: pointer = 'null'; break;
-            case undefined: pointer = 'undefined'; break;
-            case true: pointer = 'true'; break;
-            case false: pointer = 'false'; break;
+          if( conditional ) {
+
+            // Convert objects and arrays to strings.
+            if( _.isPlainObject(pointer) || _.isArray(pointer) ) pointer = JSON.stringify(pointer);
+
+            // Otherwise, for strings, wrap them in quotes.
+            else if( _.isString(pointer) ) pointer = pointer.indexOf("'") > -1 ? `"${pointer}"` : `'${pointer}'`;
+
+            // Otherwise, for all other values, convert them to their string equivalents.
+            else switch(pointer) {
+              case null: pointer = 'null'; break;
+              case undefined: pointer = 'undefined'; break;
+              case true: pointer = 'true'; break;
+              case false: pointer = 'false'; break;
+            }
+
           }
 
           // Bind the pointer's value back into the string value.
@@ -315,7 +325,7 @@ const EUL = {
               const keys = utils.getKeys(placeholder);
 
               // Replace the placeholder with its respective data given the keys.
-              value = utils.setPlaceholder(value, item, keys, options.conditional);
+              value = utils.setPlaceholder(value, item, keys, options.condition);
 
               // Determine if the placeholder has filters, and if so, get and apply them.
               if( utils.hasFilters(placeholder) ) {
@@ -542,7 +552,40 @@ const Components = {
 
     methods: {},
 
-    filters: {},
+    filters: {
+
+      // Truncate a string to the given length, optionally adding a suffix where the omission occurs.
+      truncate( string, length, omission = '…' ) {
+
+        return _.truncate(string, {
+          length,
+          omission
+        });
+
+      },
+
+      // Capitalize the first charater in a string.
+      capitalize( string ) {
+
+        return _.capitalize(string);
+
+      },
+
+      // Make a string uppercase.
+      uppercase( string ) {
+
+        return _.upperCase(string);
+
+      },
+
+      // Make a string lowercase.
+      lowercase( string ) {
+
+        return _.lowerCase(string);
+
+      }
+
+    },
 
     created() {
 

@@ -1,5 +1,24 @@
+{{#unless vue}}
 <div class="tile-utility{{#if description}} has-description{{/if}}{{#if (and image image.src)}} has-image{{/if}}">
   {{#if (and image image.src)}}<div class="tile-utility-image{{#if image.align.x}} -align-x-{{image.align.x}}{{/if}}{{#if image.align.y}} -align-x-{{image.align.y}}{{/if}}{{#if image.fit}} -{{image.fit}}{{/if}}">{{#with image}}{{> atoms-image decorative=true}}{{/with}}</div>{{/if}}
   {{#with link}}{{> atoms-link label=../title classes='tile-utility-title'}}{{/with}}
   {{#if description}}<p class="tile-utility-description">{{ellipsis (sanitize description) 300}}</p>{{/if}}
 </div>
+{{else}}
+<div class="tile-utility"
+     :class="{
+       {{#if description}}'has-description': {{vueBase description}},{{/if}}
+       {{#if image}}'has-image': {{vueBase image}} && {{vueBase image}}.src,{{/if}}
+     }"
+     {{#if foreach}}v-for="{{foreach}}"{{#if key}} :key="{{key}}"{{/if}}{{/if}}>
+  {{#if image}}
+  <template v-if="{{vueBase image}} && {{vueBase image}}.href">
+    <div class="tile-utility-image">
+      {{> atoms-image decorative=true vue=true src=(combine (vueBase image) '.src')}}
+    </div>
+  </template>
+  {{/if}}
+  {{> atoms-link label=(vueBase title) href=(combine (vueBase link) '.href') classes='tile-utility-title' icon=false vue=true html=true }}
+  {{#if description}}<p class="tile-utility-description" v-if="{{vueBase description}}" v-html="$options.filters.truncate({{vueBase description}}, 300)"></p>{{/if}}
+</div>
+{{/unless}}
