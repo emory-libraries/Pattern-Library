@@ -1,3 +1,6 @@
+{{! Add IDs to accordions and panels if not already set. }}
+{{assign 'accordions' (assignIDs accordions)}}
+
 {{! Create an index containing the IDs of all accordion panels in order to enable filtering. }}
 {{assign 'index' (pluck (condense (pluck accordions 'panels')) 'id')}}
 
