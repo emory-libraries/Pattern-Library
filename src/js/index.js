@@ -1054,7 +1054,7 @@ class Fuzzy {
       calc( token, value ) {
 
         // Initialize the result.
-        let location, distance, similarity, threshold, score;
+        let location, distance, score, similarity = null, threshold = null, index = {};
 
         // Handle arrays of values.
         if( _.isArray(value) ) {
@@ -1081,7 +1081,7 @@ class Fuzzy {
           }
 
           // Determine the index of the token.
-          const index = {
+          index = {
             word: !(new RegExp(`[a-z0-9_'-]+${token}|${token}[a-z0-9_'-]+`, 'i')).test(value) && value.indexOf(token) > -1,
             match: value.indexOf(token),
             start: 0,
@@ -1114,8 +1114,11 @@ class Fuzzy {
 
         // Return result.
         return {
+          index,
+          threshold,
           location,
           distance,
+          similarity,
           score
         };
 

@@ -4,16 +4,16 @@ Components.register('filter-search', {
     index: {
       type: Array
     },
-    config: {
-      type: Object,
-      default() {
-        return {};
-      }
-    },
     keys: {
       type: Array,
       default() {
         return [];
+      }
+    },
+    settings: {
+      type: Object,
+      default() {
+        return {};
       }
     }
   },
@@ -32,6 +32,14 @@ Components.register('filter-search', {
         isHover: false,
         isFocus: false,
         isDisabled: false
+      },
+      config: {
+        threshold: 0.6,
+        similarity: 0.3,
+        location: 0,
+        distance: 300,
+        insensitive: true,
+        sort: false
       }
     };
   },
@@ -65,6 +73,16 @@ Components.register('filter-search', {
   },
 
   mounted() {
+
+    // Merge settings with default configurations.
+    this.config = _.merge({
+      threshold: 0.6,
+      similarity: 0.3,
+      location: 0,
+      distance: 300,
+      insensitive: true,
+      sort: false
+    }, this.settings);
 
     // Initialize the search utility.
     this.fuzzy = new Fuzzy(this.index, this.config);

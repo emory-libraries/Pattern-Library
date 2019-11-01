@@ -1,6 +1,9 @@
 {
   "title": "Library Services",
   "subtitle": "The library offers a wide range of library and technology services to assist you with your research, writing, and use of the library.",
+  "config": {
+    "sort": true
+  },
   "buttons": [
     {
       "label": "Ask a Librarian",
