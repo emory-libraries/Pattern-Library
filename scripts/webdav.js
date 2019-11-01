@@ -65,10 +65,11 @@ module.exports = function() {
           validate: (value) => !_.isNil(value) && value !== '' ? true : chalk.red('Username is required.')
         },
         {
-          type: 'input',
+          type: 'password',
           name: 'password',
           message: 'Provide your WebDAV password.',
-          validate: (value) => !_.isNil(value) && value !== '' ? true : chalk.red('Password is required.')
+          validate: (value) => !_.isNil(value) && value !== '' ? true : chalk.red('Password is required.'),
+          mask: '*'
         },
         {
           type: 'input',
