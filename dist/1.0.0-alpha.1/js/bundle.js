@@ -861,7 +861,12 @@ function () {
         var _this4 = this;
 
         // Initialize the result.
-        var location, distance, similarity, threshold, score; // Handle arrays of values.
+        var location,
+            distance,
+            score,
+            similarity = null,
+            threshold = null,
+            index = {}; // Handle arrays of values.
 
         if (_.isArray(value)) {
           // Calculate a score for each array item.
@@ -881,14 +886,14 @@ function () {
             } // Determine the index of the token.
 
 
-            var _index = {
+            index = {
               word: !new RegExp("[a-z0-9_'-]+".concat(token, "|").concat(token, "[a-z0-9_'-]+"), 'i').test(value) && value.indexOf(token) > -1,
               match: value.indexOf(token),
               start: 0,
               end: value.length - 1
             }; // Get token location, distance, and similarity.
 
-            location = _index.match;
+            location = index.match;
             distance = location - self.config.location;
             similarity = compareTwoStrings(token, value); // Calculate threshold.
 
@@ -901,15 +906,18 @@ function () {
 
             score = 0; // Calculate score.
 
-            if (criteria.similarity && criteria.threshold) score = similarity + _index.word;
+            if (criteria.similarity && criteria.threshold) score = similarity + index.word;
             if (criteria.similarity && !criteria.threshold) score = similarity;
-            if (!criteria.similarity && criteria.threshold) score = 1 - threshold + _index.word;
+            if (!criteria.similarity && criteria.threshold) score = 1 - threshold + index.word;
           } // Return result.
 
 
         return {
+          index: index,
+          threshold: threshold,
           location: location,
           distance: distance,
+          similarity: similarity,
           score: score
         };
       },
@@ -1774,16 +1782,16 @@ Components.register('filter-search', {
     index: {
       type: Array
     },
-    config: {
-      type: Object,
-      "default": function _default() {
-        return {};
-      }
-    },
     keys: {
       type: Array,
       "default": function _default() {
         return [];
+      }
+    },
+    settings: {
+      type: Object,
+      "default": function _default() {
+        return {};
       }
     }
   },
@@ -1801,6 +1809,14 @@ Components.register('filter-search', {
         isHover: false,
         isFocus: false,
         isDisabled: false
+      },
+      config: {
+        threshold: 0.6,
+        similarity: 0.3,
+        location: 0,
+        distance: 300,
+        insensitive: true,
+        sort: false
       }
     };
   },
@@ -1822,7 +1838,16 @@ Components.register('filter-search', {
     }
   },
   mounted: function mounted() {
-    // Initialize the search utility.
+    // Merge settings with default configurations.
+    this.config = _.merge({
+      threshold: 0.6,
+      similarity: 0.3,
+      location: 0,
+      distance: 300,
+      insensitive: true,
+      sort: false
+    }, this.settings); // Initialize the search utility.
+
     this.fuzzy = new Fuzzy(this.index, this.config); // Initialize a search if an initial query was given.
 
     if (this.valid) this.search();
