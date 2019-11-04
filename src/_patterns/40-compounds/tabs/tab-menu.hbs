@@ -7,13 +7,7 @@
   {{! Generate a unique ID for the tab if not already given. }}
   {{#if (not this.uid)}}{{assign 'uid' (combine 'tab--' (dashcase (lowercase label)))}}{{/if}}
 
-  {{! Save the updated tab menu items. }}
-  {{storagePush 'tabs' this}}
-
 {{/each}}
-
-{{! Update the tab menu items. }}
-{{assign 'tabs' (storageGet 'tabs')}}
 
 {{! Determine the active tab. }}
 {{#if (gt (length (filterWhere tabs 'selected' true '===')) 0)}}
@@ -47,7 +41,7 @@
             {{assign 'active' false}}
           {{/if}}
 
-          {{> atoms-tab menu=../uid search=(default ../search false)}}
+          {{> atoms-tab menu=../uid search=(default ../search false) noscript=../noscript}}
 
         {{/each}}
       </div>
@@ -70,6 +64,7 @@
   </eul-tab-menu>
 {{/unless}}
 
+{{#unless (eq noscript false)}}
 {{#unless (eq noscript true)}}<noscript>{{/unless}}
   <div class="tab-menu -noscript{{#if theme}} -{{theme}}{{/if}}">
     {{#each tabs}}
@@ -82,3 +77,4 @@
     {{/each}}
   </div>
 {{#unless (eq noscript true)}}</noscript>{{/unless}}
+{{/unless}}

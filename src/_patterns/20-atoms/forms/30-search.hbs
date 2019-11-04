@@ -1,7 +1,7 @@
 {{! Generate a unique ID for the search menu if not given. }}
 {{#if (not this.uid)}}{{assign 'uid' (uid 'search--')}}{{/if}}
 
-{{#unless form}}
+{{#unless (or (eq form true) (eq noscript true))}}
 <eul-search inline-template
             :uid="{{JSONstringify this.uid}}"
             :services="{{JSONstringify services}}"
@@ -99,7 +99,8 @@
 </eul-search>
 {{/unless}}
 
-{{#unless form}}<noscript>{{/unless}}
+{{#unless (or (eq form false) (eq noscript false))}}
+{{#unless (or (eq form true) (eq noscript true))}}<noscript>{{/unless}}
 
   <div class="search -form{{#if (and layout (eq layout 'contained'))}} -contained{{/if}}">
   {{#each services as |service|}}
@@ -140,4 +141,5 @@
   {{/each}}
   </div>
 
-{{#unless form}}</noscript>{{/unless}}
+{{#unless (or (eq form true) (eq noscript true))}}</noscript>{{/unless}}
+{{/unless}}

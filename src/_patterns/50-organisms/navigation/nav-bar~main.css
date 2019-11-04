@@ -4,6 +4,8 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, -webkit-min-content);
   grid-template-rows: repeat(2, min-content);
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 @media (min-width: 901px) {
   .nav-bar-main {

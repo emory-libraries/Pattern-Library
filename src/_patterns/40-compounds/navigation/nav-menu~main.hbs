@@ -76,20 +76,20 @@
 </eul-nav-menu>
 {{/unless}}
 
+{{#unless (eq noscript false)}}
 {{#unless (eq noscript true)}}<noscript>{{/unless}}
-
   <nav class="nav-menu-main">
 
     {{! Toggles }}
-    {{#each navigation.main}}{{> atoms-input-toggle id=(combine 'nav-menu-main--' (dashcase (lowercase label)))}}{{/each}}
-    {{#each navigation.utilities}}{{> atoms-input-toggle id=(combine 'nav-menu-main--' (dashcase (lowercase label)))}}{{/each}}
+    {{#each navigation.main}}{{> atoms-input-toggle id=(combine 'nav-menu-main--noscript--' (dashcase (lowercase label)))}}{{/each}}
+    {{#each navigation.utilities}}{{> atoms-input-toggle id=(combine 'nav-menu-main--noscript--' (dashcase (lowercase label)))}}{{/each}}
 
     {{! Desktop }}
     <nav class="nav-menu-main-nav -desktop">
 
       {{#each navigation.main}}
         <div class="nav-menu-main-nav-group">
-          {{> atoms-nav-button-main}}
+          {{> atoms-nav-button-main classes='' for=(combine 'nav-menu-main--noscript--' (dashcase (lowercase label))) noscript=true}}
           {{> compounds-subnav-menu-main heading=label navigation=subnavigation noscript=true}}
         </div>
       {{/each}}
@@ -100,7 +100,7 @@
     <nav class="nav-menu-main-nav -tablet">
 
       {{#each navigation.main}}
-        {{> atoms-nav-button-main classes=''}}
+        {{> atoms-nav-button-main classes='' for=(combine 'nav-menu-main--noscript--' (dashcase (lowercase label))) noscript=true}}
         {{> compounds-subnav-menu-main heading=label navigation=subnavigation noscript=true}}
       {{/each}}
 
@@ -109,31 +109,31 @@
     {{! Mobile }}
     <nav class="nav-menu-main-nav -mobile">
 
-      {{> atoms-input-toggle id='nav-menu-main--mobile-menu-toggle' classes='for-menu'}}
-      {{> atoms-input-toggle id='nav-menu-main--mobile-search-toggle' classes='for-search'}}
+      {{> atoms-input-toggle id='nav-menu-main--noscript--mobile-menu-toggle' classes='for-menu'}}
+      {{> atoms-input-toggle id='nav-menu-main--noscript--mobile-search-toggle' classes='for-search'}}
 
       <div class="nav-menu-main-nav-toggles">
-        {{> atoms-nav-button-toggle search=false icon='material-menu' for-suffix='mobile-menu-toggle' label='Menu' classes='for-menu -open'}}
-        {{> atoms-nav-button-toggle search=false icon='material-close' for-suffix='mobile-menu-toggle' label='Close' classes='for-menu -close'}}
-        {{> atoms-nav-button-toggle search=false icon='material-search' for-suffix='mobile-search-toggle' label='Search' classes='for-search -open'}}
-        {{> atoms-nav-button-toggle search=false icon='material-close' for-suffix='mobile-chevron_right' label='Back to Menu' classes='for-search -close'}}
+        {{> atoms-nav-button-toggle search=false icon='material-menu' for='nav-menu-main--noscript--mobile-menu-toggle' label='Menu' classes='for-menu -open'}}
+        {{> atoms-nav-button-toggle search=false icon='material-close' for='nav-menu-main--noscript--mobile-menu-toggle' label='Close' classes='for-menu -close'}}
+        {{> atoms-nav-button-toggle search=false icon='material-search' for='nav-menu-main--noscript--mobile-search-toggle' label='Search' classes='for-search -open'}}
+        {{> atoms-nav-button-toggle search=false icon='material-chevron_right' for='nav-menu-main--noscript--mobile-search-toggle' label='Back to Menu' classes='for-search -close'}}
       </div>
 
       <div class="nav-menu-main-nav-menu is-menu">
 
-        {{#with navigation}}{{> compounds-nav-menu-utility mobile-only=true classes=''}}{{/with}}
+        {{#with navigation}}{{> compounds-nav-menu-utility mobile-only=true classes='' noscript=true}}{{/with}}
 
         <div class="nav-menu-main-nav-menu-area">
           {{#each navigation.main}}
-            {{> atoms-nav-button-main classes='' mouseover=false mouseleave=false}}
-            {{> compounds-subnav-menu-main heading=label navigation=subnavigation mouseover=false mouseleave=false noscript=true}}
+            {{> atoms-nav-button-main classes='' for=(combine 'nav-menu-main--noscript--' (dashcase (lowercase label))) noscript=true}}
+            {{> compounds-subnav-menu-main heading=label navigation=subnavigation back=(objectify for=(combine 'nav-menu-main--noscript--' (dashcase (lowercase label)))) noscript=true}}
           {{/each}}
           {{#each navigation.utilities}}
             {{#unless subnavigation}}
-              {{> atoms-nav-button-main classes='' link=true}}
+              {{> atoms-nav-button-main classes='' link=true noscript=true}}
             {{else}}
-              {{> atoms-nav-button-main classes='' mouseover=false mouseleave=false}}
-              {{> compounds-subnav-menu-main heading=label navigation=subnavigation mouseover=false mouseleave=false noscript=true}}
+              {{> atoms-nav-button-main classes='' noscript=true}}
+              {{> compounds-subnav-menu-main heading=label navigation=subnavigation noscript=true}}
             {{/unless}}
           {{/each}}
         </div>
@@ -144,7 +144,7 @@
 
       <div class="nav-menu-main-nav-menu is-search">
 
-        {{#with search}}{{> organisms-search-menu classes='' home=false noscript=true}}{{/with}}
+        {{#with search}}{{> organisms-search-menu classes='' uid='nav-menu-main--search--noscript--mobile--' tab-prefix='nav-menu-main--search--noscript--mobile--' home=false noscript=true}}{{/with}}
 
       </div>
 
@@ -152,3 +152,4 @@
 
   </nav>
 {{#unless (eq noscript true)}}</noscript>{{/unless}}
+{{/unless}}

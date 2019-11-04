@@ -1,20 +1,42 @@
 {{#with header}}
-{{assign 'noscript' (default noscript ../noscript false)}}
-<header class="header{{#if ../classes}} {{../classes}}{{/if}}">
+<header class="header{{#if ../classes}} {{../classes}}{{/if}}" v-cloak>
 
   <div class="notifications">
-    {{> compounds-notification notification=notifications.notification}}
+    {{> compounds-notification notification=notifications.notification noscript=false}}
   </div>
 
   <div class="header-main">
 
-    {{#with navigation noscript=noscript}}{{> compounds-nav-menu-utility desktop-only=true classes='header-main-utility'}}{{/with}}
-    {{> organisms-nav-bar-main classes='header-main-main'}}
-    {{> atoms-input-toggle classes='header-main-toggle' id='nav-menu-main--search'}}
-    {{#with navigation.search noscript=noscript}}{{> atoms-nav-button-search classes='header-main-search' for-suffix='search'}}{{/with}}
-    {{#with search noscript=noscript}}{{> organisms-search-menu classes='header-main-overlay' uid='nav-menu-main--search' tab-prefix='nav-menu-main--search--'}}{{/with}}
+    {{#with navigation}}{{> compounds-nav-menu-utility desktop-only=true classes='header-main-utility' noscript=false}}{{/with}}
+    {{> organisms-nav-bar-main classes='header-main-main' noscript=false}}
+    {{> atoms-input-toggle classes='header-main-toggle' id='nav-menu-main--search' noscript=false}}
+    {{#with navigation.search}}{{> atoms-nav-button-search classes='header-main-search' for-suffix='search' noscript=false}}{{/with}}
+    {{#with search}}{{> organisms-search-menu classes='header-main-overlay' uid='nav-menu-main--search' tab-prefix='nav-menu-main--search--' noscript=false}}{{/with}}
 
   </div>
 
 </header>
+
+<noscript>
+
+  <header class="header{{#if ../classes}} {{../classes}}{{/if}}">
+
+    <div class="notifications">
+      {{> compounds-notification notification=notifications.notification}}
+    </div>
+
+    <div class="header-main">
+
+      {{#with navigation}}{{> compounds-nav-menu-utility desktop-only=true classes='header-main-utility' noscript=true}}{{/with}}
+      {{> organisms-nav-bar-main classes='header-main-main' noscript=true}}
+      {{> atoms-input-toggle classes='header-main-toggle' id='nav-menu-main--search--noscript' noscript=true}}
+      {{#with navigation.search}}{{> atoms-nav-button-search classes='header-main-search' for='nav-menu-main--search--noscript' noscript=true}}{{/with}}
+      {{#with search}}{{> organisms-search-menu classes='header-main-overlay' uid='nav-menu-main--search--noscript' tab-prefix='nav-menu-main--search--noscript--' noscript=true}}{{/with}}
+
+    </div>
+
+  </header>
+
+</noscript>
+
 {{/with}}
