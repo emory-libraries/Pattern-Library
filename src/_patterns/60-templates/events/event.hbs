@@ -2,7 +2,7 @@
 
   {{> organisms-header classes='event-page-header'}}
 
-  <eul-event inline-template :feed="'{{feed}}'" :id="'{{id}}'" :model="{{JSONstringify model}}" v-cloak>
+  <eul-event inline-template :feed="'{{feed}}'" :id="global.location.params.id || '{{id}}'" :model="{{JSONstringify model}}" v-cloak>
 
     <div class="event-page-main">
 

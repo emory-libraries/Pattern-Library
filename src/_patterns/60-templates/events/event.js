@@ -20,7 +20,8 @@ Components.register('event', {
       source: [],
       error: false,
       proxy: '/php/proxy.php?url=',
-      loading: true
+      loading: true,
+      type: 'json'
     };
   },
 
@@ -35,30 +36,92 @@ Components.register('event', {
       // If the feed was able to be fetched, then save its data.
       .then((response) => {
 
-        // Try to parse the feed as JSON.
-        try {
+        // Attempt to get the feed data.
+        new Promise((resolve, reject) => {
 
-          // Assume that most feed will be JSON.
-          response.body = JSON.parse(response.body);
+          // Initialize the result.
+          const result = {
+            source: [],
+            type: 'json'
+          };
 
-        }
+          // Try to parse the feed as JSON.
+          try {
 
-        // Otherwise, parse the feed as RSS.
-        catch(error) {
+            // Assume that most feed will be JSON.
+            result.source = JSON.parse(response.body);
 
-          // Assume that feed must be RSS if it's not JSON.
-          response.body = RSS.parseString(response.body).items;
+            // Make sure that the type is JSON.
+            result.type = 'json';
 
-        }
+            // Resolve and return the result.
+            resolve(result);
 
-        // Then, save the feed data.
-        this.source = response.body;
+          }
 
-        // Update the page's title.
-        document.title = _.get(this.event, 'title', 'Event Not Found');
+          // Otherwise, parse the feed as RSS.
+          catch(error) {
 
-        // Indicate that loading is done.
-        this.loading = false;
+            // Initialize a new RSS parser.
+            const parser = new RSS({
+              customFields: {
+                item: [
+                  'description',
+                  'post-id',
+                  'slash:comments',
+                  'wfw:commentrss',
+                  {keepArray: true}
+                ]
+              }
+            });
+
+            // Assume that the feed must be RSS if it's not JSON.
+            parser.parseString(response.body).then((parsed) => {
+
+              // Save the parsed feed data.
+              result.source = parsed.items;
+
+              // Set the type to RSS.
+              result.type = 'rss';
+
+              // Resolve and return the result.
+              resolve(result);
+
+            }).catch((error) => {
+
+              // Otherwise, throw an error.
+              reject(error);
+
+            });
+
+          }
+
+        }).then((data) => {
+
+          // Save the parsed feed data.
+          this.source = data.source;
+
+          // Set the type to feed data.
+          this.type = data.feed;
+
+          // Update the page's title.
+          document.title = _.get(this.event, 'title', 'Event Not Found');
+
+          // Indicate that loading is done.
+          this.loading = false;
+
+        }).catch((error) => {
+
+          // Indicate that an error occurred.
+          this.error = true;
+
+          // Update the page's title.
+          document.title = 'Event Not Found';
+
+          // Indicate that loading is done.
+          this.loading = false;
+
+        });
 
       })
 

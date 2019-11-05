@@ -182,7 +182,13 @@ const EUL = {
         _filters: {
 
           // Convert a comma-separated list to an array.
-          list: (value) => value.split(',').map(_.trim)
+          list: (value) => value.split(',').map(_.trim),
+
+          // Convert the date to a moment and format it as a date string.
+          date: (value) => moment(value).format('MMMM D, YYYY'),
+
+          // Convert the date to a moment and format it as a day string.
+          day: (value) => moment(value).format('dddd, MMMM D, YYYY'),
 
         },
 
@@ -289,6 +295,14 @@ const EUL = {
 
           // Bind the pointer's value back into the string value.
           value = value.replace(keys.placeholder, pointer);
+
+          // For literal pointer values, force the assigned values to also be literal.
+          if( [undefined, null, NaN, true, false].includes(pointer) ) {
+
+            // Override the value with the pointer's literal.
+            if( `${pointer}` === value ) value = pointer;
+
+          }
 
           // Return the updated value.
           return value;

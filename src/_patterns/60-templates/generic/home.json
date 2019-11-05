@@ -328,7 +328,7 @@
         },
         "model": {
           "id": "{post-id}",
-          "date": "{pubdate}",
+          "date": "{isoDate | date}",
           "link": {
             "href": "{link}"
           }
@@ -346,7 +346,7 @@
           "id": "{eventID}",
           "date": "{dateTimeFormatted}",
           "link": {
-            "href": "{permaLinkUrl}"
+            "href": "/patterns/60-templates-events-event/60-templates-events-event.html?feed=https://www.trumba.com/calendars/robert-woodruff-library-classes-at-woodruff-library.json&id={eventID}"
           },
           "button?": {
             "criteria": "{openSignUp} === true && {pastDeadline} === false",
