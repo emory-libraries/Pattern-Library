@@ -319,25 +319,18 @@
     },
     "sources": [
       {
-        "heading": "Events & Exhibits",
-        "icon": "material-calendar_month_outline",
-        "feed": "https://www.trumba.com/calendars/robert-woodruff-library.json",
+        "heading": "News",
+        "icon": "material-chat",
+        "feed": "https://scholarblogs.emory.edu/woodruff/topics/news/feed",
         "button": {
-          "label": "View All Events & Exhibits",
+          "label": "View All News",
           "href": ""
         },
         "model": {
-          "id": "{eventID}",
-          "date": "{dateTimeFormatted}",
+          "id": "{post-id}",
+          "date": "{pubdate}",
           "link": {
-            "href": "{permaLinkUrl}"
-          },
-          "button?": {
-            "criteria": "{openSignUp} === true && {pastDeadline} === false",
-            "value": {
-              "label": "Sign Up",
-              "href": "{signUpUrl}"
-            }
+            "href": "{link}"
           }
         }
       },
