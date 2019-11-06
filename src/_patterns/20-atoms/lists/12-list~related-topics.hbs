@@ -6,9 +6,6 @@
   </li>
   {{/each}}
   {{else}}
-  <li class="list-item"
-      v-for="{{foreach}}"
-      {{#if key}} :key="{{key}}"{{/if}}
-      v-html="{{value}}"></li>
+  <li class="list-item" v-for="{{foreach}}"{{#if key}} :key="{{key}}"{{/if}}>{{topic}}</li>
   {{/unless}}
 </ul>

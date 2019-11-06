@@ -43,7 +43,7 @@
           badge=(default badge (combine '<% ' (default tile 'tile') '.badge %>'))
           description=(default description (combine '<% ' (default tile 'tile') '.description %>'))
           image=(default image (combine '<% ' (default tile 'tile') '.image %>'))
-          date=(default date (combine '<% ' (default tile 'tile') '.date %>'))
+          date=(default this.date (combine '<% ' (default tile 'tile') '.date | decode %>'))
           title=(default title (combine '<% ' (default tile 'tile') '.title %>'))}}
     {{/if}}
     {{#if (eq tile-type 'utility')}}

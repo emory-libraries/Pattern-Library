@@ -30,7 +30,7 @@
       {{> atoms-image decorative=true vue=false src='/assets/php/gradient.php?colors=062265,99885B,E9BF55,FFFFFF&direction=bottom&width=500&height=275'}}
     </template>
   </div>
-  <span class="tile-listing-date" v-html="{{vueBase date}}"></span>
+  <span class="tile-listing-date">{{this.date}}</span>
   <template v-if="{{vueBase link}} && {{vueBase link}}.href">
     {{> atoms-link label=(vueBase title) href=(combine (vueBase link) '.href') classes='tile-listing-title' vue=true html=true icon=false}}
   </template>

@@ -3,8 +3,8 @@
   <div class="feed-item"
        :class="{'has-action': button.href}"
        :data-id="id">
-    <span class="feed-item-date" v-html="date"></span>
-    <a class="link feed-item-title" :href="link.href" :target="link.target || '_self'" v-html="title" v-html="title"></a>
+    <span class="feed-item-date"><% date | decode %></span>
+    <a class="link feed-item-title" :href="link.href" :target="link.target || '_self'"><% title | decode %></a>
     <a class="button -hollow feed-item-action" v-if="button.href" :href="button.href" :target="button.target || '_self'"><% button.label %></a>
   </div>
 
