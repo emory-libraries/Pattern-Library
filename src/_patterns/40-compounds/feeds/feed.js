@@ -127,7 +127,10 @@ Components.register('feed', {
     // Using the feed's data and model, return the feed content in the desired form.
     content() {
 
-      return EUL.mapFeed(this.source, this.model);
+      return EUL.mapFeed(this.source, this.model, {
+        '__FEED__': this.feed,
+        '__LIMIT__': this.limit
+      });
 
     },
 

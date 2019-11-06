@@ -105,7 +105,7 @@ Components.register('event', {
           this.type = data.feed;
 
           // Update the page's title.
-          document.title = _.get(this.event, 'title', 'Event Not Found');
+          document.title = he.decode(_.get(this.event, 'title', 'Event Not Found'));
 
           // Indicate that loading is done.
           this.loading = false;
@@ -146,7 +146,10 @@ Components.register('event', {
     // Using the feed's data and model, return the feed content in the desired form.
     content() {
 
-      return EUL.mapFeed(this.source, this.model);
+      return EUL.mapFeed(this.source, this.model, {
+        '__FEED__': this.feed,
+        '__ID__': this.id
+      });
 
     },
 
