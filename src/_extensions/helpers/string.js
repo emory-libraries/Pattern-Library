@@ -120,10 +120,7 @@ const helpers = {
     // Pad the string.
     return pad(string, length, chars);
 
-  },
-
-  // Get the base name of the Vue string.
-  vueBase: ( str ) => helpers.trimSubstringEnd(helpers.trimSubstringStart(str, '<%'), '%>').trim()
+  }
 
 };
 
