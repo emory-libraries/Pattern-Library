@@ -85,10 +85,10 @@ const EUL = {
   escapeRegExp: ( string ) => string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'),
 
   // Map all items in a JSON or RSS feed to match a given content model.
-  mapFeed( feed, model, recursive = true ) {
+  mapFeed( feed, model, constants = {}, recursive = true ) {
 
     // Initialize a helper for mapping source data to a model.
-    const map = ( feed, model, recursive = true ) => {
+    const map = ( feed, model, constants = {}, recursive = true ) => {
 
       // Initialize a set of utilities to help map data.
       const utils = {
@@ -97,8 +97,8 @@ const EUL = {
         isConditional: ( key ) => _.endsWith(key, '?'),
 
         // Bind a key-value pair in the model.
-        bindModel( key, value, data, recursive = true ) {
-
+        bindModel( key, value, data, constants = {}, recursive = true ) {
+console.log(key, value);
           // Initialize a simplified version of the model.
           let model = {};
 
@@ -112,7 +112,7 @@ const EUL = {
             const base = _.trimEnd(key, '?');
 
             // Get the condition that needs to be met in order for the value to be included.
-            const condition = bind(value.criteria, data, {condition: true});
+            const condition = bind(value.criteria, data, {condition: true, constants});
 
             // Get the criteria that must be met in order to display the conditional data.
             const criteria = new Function(`return ${condition};`);
@@ -127,7 +127,8 @@ const EUL = {
             if( criteria() ) data[base] = bind(value.value, data, {
               recursive,
               model,
-              key: base
+              key: base,
+              constants
             });
 
           }
@@ -136,7 +137,8 @@ const EUL = {
           else data[key] = bind(value, data, {
             recursive,
             model,
-            key
+            key,
+            constants
          });
 
         }
@@ -150,7 +152,7 @@ const EUL = {
         _.each(model, (value, key) => {
 
           // Bind the data with the model.
-          utils.bindModel(key, value, data, recursive);
+          utils.bindModel(key, value, data, constants, recursive);
 
         });
 
@@ -172,7 +174,8 @@ const EUL = {
         recursive: true,
         condition: false,
         model: null,
-        key: null
+        key: null,
+        constants: {}
       }, options);
 
       // Initialize a set of utilities to help find and replace values.
@@ -191,7 +194,7 @@ const EUL = {
           day: (value) => moment(value).format('dddd, MMMM D, YYYY'),
 
           // Convert a string to a mailto email link if not in the form of one already.
-          mailto: (value) => /^<a.+?\>.+?<\/a>$/i.test(value) ? value : `<a href="${value}">${value}</a>`
+          mailto: (value) => _.isString(value) ? /^<a.+?\>.+?<\/a>$/i.test(value) ? value : `<a href="${value}">${value}</a>` : value
 
         },
 
@@ -200,6 +203,12 @@ const EUL = {
 
         // Determine if a placeholder has filters that should be applied.
         hasFilters: (placeholder) => /(\| [\S-_]+)+$/i.test(placeholder),
+
+        // Determine if a placeholder is for a constant.
+        isConstant: (placeholder) => Object.keys(options.constants).includes(_.trimEnd(_.trimStart(placeholder, '{'), '}')),
+
+        // Get the constant for a given placeholder.
+        getConstant: (placeholder) => _.get(options.constants, _.trimEnd(_.trimStart(placeholder, '{'), '}')),
 
         // Get all placeholders in a value.
         getPlaceholders: (value) => value.match(/{[\S-_.|='\[\] ]+?}/ig),
@@ -222,13 +231,13 @@ const EUL = {
         getKeys( placeholder ) {
 
           // Get the placeholder's base name.
-          let base = placeholder.replace(/^\{|\}$/g, '');
+          let base = _.trimEnd(_.trimStart(placeholder, '{'), '}');
 
           // Determine if the placeholder has a filter, and if so, remove it.
           if( utils.hasFilters(base) ) base = base.substring(0, base.indexOf('|') - 1).trim();
 
           // Get the individual keys in the placeholder.
-          let keys = base.replace().split('.').map(_.trim);
+          let keys = base.split('.').map(_.trim);
 
           // Define a regex for filter keys.
           const regex = /^([\S]+?)\[([\S]+?)='?([\S ]+?)'?\]$/i;
@@ -341,20 +350,28 @@ const EUL = {
             // Loop through each placeholder, and replace it with its target value.
             _.each(placeholders, (placeholder) => {
 
-              // Get the placeholder's keys.
-              const keys = utils.getKeys(placeholder);
+              // Determine if the placeholder is a constant, and if so, replace it with its constant value.
+              if( utils.isConstant(placeholder) ) value = value.replace(placeholder, utils.getConstant(placeholder));
 
-              // Replace the placeholder with its respective data given the keys.
-              value = utils.setPlaceholder(value, item, keys, options.condition);
+              // Otherwise, handle non-constant placeholders.
+              else {
 
-              // Determine if the placeholder has filters, and if so, get and apply them.
-              if( utils.hasFilters(placeholder) ) {
+                // Get the placeholder's keys.
+                const keys = utils.getKeys(placeholder);
 
-                // Get the filters.
-                const filters = utils.getFilters(placeholder);
+                // Replace the placeholder with its respective data given the keys.
+                value = utils.setPlaceholder(value, item, keys, options.condition);
 
-                // Apply the filters to the value.
-                value = utils.applyFilters(value, filters);
+                // Determine if the placeholder has filters, and if so, get and apply them.
+                if( utils.hasFilters(placeholder) ) {
+
+                  // Get the filters.
+                  const filters = utils.getFilters(placeholder);
+
+                  // Apply the filters to the value.
+                  value = utils.applyFilters(value, filters);
+
+                }
 
               }
 
@@ -376,7 +393,7 @@ const EUL = {
         const mapFn = _.isArray(value) ? _.map : _.mapValues;
 
         // Always bind things within the array or object if recursion is enabled.
-        if( options.recursive ) value = mapFn(value, (v) => bind(v, item, {recursive: true}));
+        if( options.recursive ) value = mapFn(value, (v) => bind(v, item, {recursive: true, constants}));
 
       }
 
@@ -389,7 +406,7 @@ const EUL = {
     };
 
     // Return the feed's content after mapping its data to the model.
-    return map(feed, model, recursive);
+    return map(feed, model, constants, recursive);
 
   }
 
