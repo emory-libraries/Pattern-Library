@@ -190,6 +190,9 @@ const EUL = {
           // Convert the date to a moment and format it as a day string.
           day: (value) => moment(value).format('dddd, MMMM D, YYYY'),
 
+          // Convert a string to a mailto email link if not in the form of one already.
+          mailto: (value) => /^<a.+?\>.+?<\/a>$/i.test(value) ? value : `<a href="${value}">${value}</a>`
+
         },
 
         // Determine if a value has a placeholder that should be bound.
@@ -203,6 +206,9 @@ const EUL = {
 
         // Get all filters in a placeholder.
         getFilters(placeholder) {
+
+          // Trim any curly brackets from the placeholder.
+          placeholder = _.trimEnd(_.trimStart(placeholder, '{'), '}');
 
           // Locate the filter data within the placeholder.
           placeholder = placeholder.substring(placeholder.indexOf('|') + 1, value.length - 1);
@@ -596,6 +602,22 @@ const Components = {
       lowercase( string ) {
 
         return _.lowerCase(string);
+
+      },
+
+      // Encode a string with HTML entities.
+      encode( string ) {
+
+        // Encode the given string.
+        return he.encode(string);
+
+      },
+
+      // Decode a string with HTML entities.
+      decode( string ) {
+
+        // Decode the given string.
+        return he.decode(string);
 
       }
 
