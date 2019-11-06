@@ -98,7 +98,7 @@ const EUL = {
 
         // Bind a key-value pair in the model.
         bindModel( key, value, data, constants = {}, recursive = true ) {
-console.log(key, value);
+
           // Initialize a simplified version of the model.
           let model = {};
 
