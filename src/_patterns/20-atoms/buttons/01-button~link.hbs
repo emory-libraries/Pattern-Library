@@ -18,6 +18,6 @@
    class="button{{#if hollow}} -hollow{{/if}}{{#if pill}} -pill{{/if}}{{#if uncapitalize}} -uncapitalize{{/if}}{{#if (or hover focus)}} is-hover{{/if}}{{#if active}} is-active{{/if}}{{#if disabled}} is-disabled{{/if}}{{#if classes}} {{classes}}{{/if}}"{{#if disabled}} disabled{{/if}}
    target="{{default target '_self'}}">
   {{> tokens-icon id=icon vue=true }}
-  <% {{label}} %>
+  {{#unless (eq interpolate false)}}<% {{label}} %>{{else}}{{label}}{{/unless}}
 </a>
 {{/unless}}
