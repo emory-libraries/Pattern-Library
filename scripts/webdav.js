@@ -27,7 +27,13 @@ module.exports = function() {
   });
 
   // Initialize webdav credentials.
-  let username, password, host, dest;
+  let username;
+  let password;
+  let host = 'https://files.web.emory.edu/site/LibraryWeb/';
+  let dest = [
+    '/staging.libraries.emory.edu',
+    '/libraries.emory.edu'
+  ];
 
   // Initialize a promise that should only resolve one credentials are detected.
   const credentials = new Promise((resolve, reject) => {
@@ -41,13 +47,16 @@ module.exports = function() {
       // Extract the webdav credentials from the secret file.
       username = secret.webdav.username;
       password = secret.webdav.password;
-      dest = secret.webdav.path;
-      host = secret.webdav.host || 'https://files.web.emory.edu/site/LibraryWeb/';
+      dest = secret.webdav.path || dest;
+      host = secret.webdav.host || host;
 
-      // If a username and/or password was missing, then throw an error.
+      // Convert the dest to an array.
+      dest = _.isArray(dest) ? dest : dest.split(',').map(_.trim);
+
+      // If a username, password, and/or dest path was missing, then throw an error.
       if( _.isNil(username) || username === '' ) throw new Error('Username is required');
       if( _.isNil(password) || password === '' ) throw new Error('Password is required');
-      if( _.isNil(dest) || dest === '' ) throw new Error('Path is required');
+      if( _.isEmpty(dest) ) throw new Error('Path is required');
 
       // Resolve the promise.
       resolve();
@@ -76,12 +85,12 @@ module.exports = function() {
           name: 'host',
           message: 'Provide the WebDAV host.',
           validate: (value) => !_.isNil(value) && value !== '' ? true : chalk.red('Host is required.'),
-          default: 'https://files.web.emory.edu/site/LibraryWeb/'
+          default: host
         },
         {
           type: 'input',
           name: 'path',
-          message: 'Provide the WebDAV path.',
+          message: 'Provide the WebDAV path(s). Use a comma-separated list for multiple paths.',
           validate: (value) => !_.isNil(value) && value !== '' ? true : chalk.red('Path is required.')
         },
         {
@@ -98,7 +107,7 @@ module.exports = function() {
         username = answers.username;
         password = answers.password;
         host = answers.host;
-        dest = answers.path;
+        dest = answers.path.split(',').map(_.trim);
 
         // Resolve the promise.
         resolve();
@@ -110,96 +119,123 @@ module.exports = function() {
   });
 
   // Wait for credentials to be given.
-  credentials.then(() => {
+  credentials
 
-    // Initialize the webdav client.
-    const client = webdav(host, {username, password});
+    .then(() => {
 
-    // Initialize a progress bar.
-    const status = new progress.SingleBar({}, progress.Presets.shades_classic);
+      // Initialize the webdav client.
+      const client = webdav(host, {username, password});
 
-    // Initialize the progress bar's initial value.
-    status.start(files.length, 0);
+      // Initialize a progress bar.
+      const status = new progress.SingleBar({}, progress.Presets.shades_classic);
 
-    // Capture a set of promises for the file uploads.
-    const uploads = [];
+      // Initialize the progress bar's initial value.
+      status.start(files.length, 0);
 
-    // Capture any errors that occur during upload.
-    const errors = [];
+      // Capture a set of promises for the file uploads.
+      const uploads = [];
 
-    // Capture the names of files that are uploaded without issues.
-    const success = [];
+      // Capture any errors that occur during upload.
+      const errors = [];
 
-    // Upload all files to the webdav host.
-    _.each(files, (file, i) => {
+      // Capture the names of files that are uploaded without issues.
+      const success = [];
 
-      // Get the relative path of the file.
-      const src = file.replace(root, '');
+      // Upload all files to the webdav host.
+      _.each(files, (file, i) => {
 
-      // Get the file's extension.
-      const ext = path.extname(file);
+        // Get the relative path of the file.
+        const src = file.replace(root, '');
 
-      // Get the file's contents as a buffer.
-      const contents = fs.readFileSync(file);
+        // Get the file's extension.
+        const ext = path.extname(file);
 
-      // Start uploading the file.
-      const upload = client.putFileContents(path.join(dest, src), contents, {
-        maxContentLength: 1024 ** 3
-      }).then(() => {
+        // Get the file's contents as a buffer.
+        const contents = fs.readFileSync(file);
 
-        // Save the file that was uploaded successfully.
-        success.push(src);
+        // Capture promises for each upload to each dest.
+        const promises = [];
 
-      }).catch((error) => {
+        // Upload the file to each dest path given.
+        dest.forEach((dest) => {
 
-        // If an error occurred, then capture the file that threw an error, then continue.
-        errors.push(src);
+          // Start uploading the file.
+          const upload = client.putFileContents(path.join(dest, src), contents, {
+            maxContentLength: 1024 ** 3
+          });
 
-      }).finally(() => {
+          // Save the upload's promise.
+          promises.push(upload);
 
-        // Update the progress bar to indicate that the file was handled.
-        status.increment();
+        });
+
+        // Wait for all uploads for each dest to finish.
+        uploads.push(Promise.all(promises)
+
+          .then(() => {
+
+            // Save the file that was uploaded successfully.
+            success.push(src);
+
+          })
+
+          .catch((error) => {
+
+            // If an error occurred, then capture the file that threw an error, then continue.
+            errors.push(src);
+
+          })
+
+          .finally(() => {
+
+            // Update the progress bar to indicate that the file was handled.
+            status.increment();
+
+          })
+
+        );
 
       });
 
-      // Save the upload.
-      uploads.push(upload);
+      // Wait for all uploads to finish.
+      Promise.all(uploads)
 
-    });
+        .then(() => {
 
-    // Wait for all uploads to finish.
-    Promise.all(uploads).then(() => {
+          // Stop the progress bar once all uploads have completed.
+          status.stop();
 
-      // Stop the progress bar once all uploads have completed.
-      status.stop();
+          // Indicate that the deploy completed successfully without any issues.
+          grunt.log.ok('WebDAV deploy was completed successfully.');
 
-      // Indicate that the deploy completed successfully without any issues.
-      grunt.log.ok('WebDAV deploy was completed successfully.');
+          // Exit the grunt task.
+          done();
 
-      // Exit the grunt task.
-      done();
+        })
 
-    }).catch((error) => {
+        .catch((error) => {
 
-      // Stop the progress bar once an error occurs.
-      status.stop();
+          // Stop the progress bar once an error occurs.
+          status.stop();
+
+          // Indicate that nothing was deployed.
+          grunt.log.error('WebDAV deploy was not completed due to a connection error.', error);
+
+          // Exit the grunt task.
+          done();
+
+        });
+
+    })
+
+    .catch((error) => {
 
       // Indicate that nothing was deployed.
-      grunt.log.error('WebDAV deploy was not completed due to a connection error.', error);
+      grunt.log.error('WebDAV deploy was not completed due to invalid credentials.');
 
       // Exit the grunt task.
       done();
 
     });
-
-  }).catch((error) => {
-
-    // Indicate that nothing was deployed.
-    grunt.log.error('WebDAV deploy was not completed due to invalid credentials.');
-
-    // Exit the grunt task.
-    done();
-
-  });
 
 };
