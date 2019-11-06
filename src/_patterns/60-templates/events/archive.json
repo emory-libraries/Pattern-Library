@@ -10,7 +10,7 @@
     },
     "description": "{description}",
     "link": {
-      "href": "{permaLinkUrl}"
+      "href": "/patterns/60-templates-events-event/60-templates-events-event.html?feed=https://www.trumba.com/calendars/robert-woodruff-library.json&id={eventID}"
     },
     "image?": {
       "criteria": "{eventImage} && {eventImage.url}",
@@ -20,7 +20,8 @@
     }
   },
   "button": {
-    "href": "/patterns/60-templates-events-calendar/60-templates-events-calendar.html",
+    "vue": true,
+    "href": "'/patterns/60-templates-events-calendar/60-templates-events-calendar.html?feed=' + feed",
     "label": "View Events Calendar"
   }
 }

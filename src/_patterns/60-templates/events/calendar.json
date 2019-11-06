@@ -10,7 +10,7 @@
     },
     "description": "{description}",
     "link": {
-      "href": "{permaLinkUrl}"
+      "href": "/patterns/60-templates-events-event/60-templates-events-event.html?feed={__FEED__}&id={eventID}"
     },
     "image?": {
       "criteria": "{eventImage} && {eventImage.url}",
@@ -20,7 +20,8 @@
     }
   },
   "button": {
-    "href": "/patterns/60-templates-events-archive/60-templates-events-archive.html",
+    "vue": true,
+    "href": "'/patterns/60-templates-events-archive/60-templates-events-archive.html?feed=' + feed",
     "label": "View Events Archive"
   }
 }

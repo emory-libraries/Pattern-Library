@@ -2,7 +2,8 @@
 
   {{> organisms-header classes='event-page-header'}}
 
-  <eul-event inline-template :feed="'{{feed}}'" :id="global.location.params.id || '{{id}}'" :model="{{JSONstringify model}}" v-cloak>
+  <!-- NOTE: Passing `global.location.params` below is only to enable internal linking within the Pattern Library. This is not the recommended approach for production. -->
+  <eul-event inline-template :feed="global.location.params.feed || '{{feed}}'" :id="global.location.params.id || '{{id}}'" :model="{{JSONstringify model}}" v-cloak>
 
     <div class="event-page-main">
 
@@ -13,7 +14,7 @@
 
       {{! Then, display the events details for valid events. }}
       <template v-else-if="event">
-        {{#extend 'organisms-main' type='event-page' classes='' title='<% event.title %>' hero='<% event.hero %>' subtitle='<% event.date %>' vue=true}}
+        {{#extend 'organisms-main' type='event-page' classes='' title='<% event.title | decode %>' hero='<% event.hero %>' subtitle='<% event.date | decode %>' vue=true}}
           {{#content 'section-main-body'}}
             <p class="text" v-if="event.description" v-html="event.description"></p>
             <p class="text" v-else>
@@ -28,7 +29,7 @@
             <div class="section-main-other">
               {{> atoms-rule classes=''}}
               {{> tokens-heading level=6 heading='Related University Event Topics' classes='list-title'}}
-              {{> atoms-list-related-topics foreach='(topic, i) in event.topics' key='i' value='topic'}}
+              {{> atoms-list-related-topics foreach='(topic, i) in event.topics' key='i' topic='<% topic | decode %>'}}
             </div>
           {{/content}}
         {{/extend}}

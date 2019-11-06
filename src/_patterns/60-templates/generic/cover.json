@@ -107,13 +107,13 @@
         "icon": "material-calendar_month_outline",
         "button": {
           "label": "View All Events",
-          "href": ""
+          "href": "/patterns/60-templates-events-calendar/60-templates-events-calendar.html?feed=https://www.trumba.com/calendars/robert-woodruff-library.json"
         },
         "model": {
           "id": "{eventID}",
           "date": "{dateTimeFormatted}",
           "link": {
-            "href": "{permaLinkUrl}"
+            "href": "/patterns/60-templates-events-event/60-templates-events-event.html?feed={__FEED__}&id={eventID}"
           },
           "button?": {
             "criteria": "{openSignUp} === true && {pastDeadline} === false",
@@ -130,13 +130,13 @@
         "icon": "material-pencil_ruler",
         "button": {
           "label": "View All Workshops",
-          "href": ""
+          "href": "/patterns/60-templates-events-calendar/60-templates-events-calendar.html?feed=https://www.trumba.com/calendars/robert-woodruff-library-classes-at-woodruff-library.json"
         },
         "model": {
           "id": "{eventID}",
           "date": "{dateTimeFormatted}",
           "link": {
-            "href": "{permaLinkUrl}"
+            "href": "/patterns/60-templates-events-event/60-templates-events-event.html?feed={__FEED__}&id={eventID}"
           },
           "button?": {
             "criteria": "{openSignUp} === true && {pastDeadline} === false",

@@ -35,7 +35,10 @@
       {
         "title": "Contact",
         "icon": "material-mail",
-        "content": "{customFields[label='Contact Name'].value} <a href=\"mailto:{customFields[label='Contact Email'].value}\">{customFields[label='Contact Email'].value}</a>"
+        "content": [
+          "{customFields[label='Contact Name'].value}",
+          "{customFields[label='Contact Email'].value | mailto}"
+        ]
       }
     ],
     "topics": "{customFields[label='University Event Topic'].value | list}",

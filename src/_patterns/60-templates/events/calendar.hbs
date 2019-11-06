@@ -5,11 +5,12 @@
 
   {{> organisms-header classes='calendar-page-header'}}
 
-  <eul-calendar inline-template :feed="'{{feed}}'" :model="{{JSONstringify model}}" :archive="{{default archive false}}" v-cloak>
+  <!-- NOTE: Passing `global.location.params` below is only to enable internal linking within the Pattern Library. This is not the recommended approach for production. -->
+  <eul-calendar inline-template :feed="global.location.params.feed || '{{feed}}'" :model="{{JSONstringify model}}" :archive="{{default archive false}}" v-cloak>
 
     <div class="calendar-page-main">
 
-      {{> organisms-main type='calendar-page' classes=''}}
+      {{> organisms-main type='calendar-page' classes='' vue=false}}
 
       {{#extend 'organisms-major' theme='light' foreach='group in calendar' heading='<% group.name %>' vue=true}}
         {{#content 'section-major-body'}}
@@ -20,7 +21,7 @@
               vue=true
               tiles='group.events'
               tile='tile'
-              date='<% tile.date.formatted %>'
+              date='<% tile.date.formatted | decode %>'
               title='<% tile.title %>'
               description=false
               image='<% tile.image %>'
@@ -32,7 +33,7 @@
 
       {{#if button}}
       <div class="button-group">
-        {{> atoms-button-link href=button.href label=button.label}}
+        {{#with button}}{{> atoms-button-link icon=false interpolate=false}}{{/with}}
       </div>
       {{/if}}
 
