@@ -54,15 +54,15 @@ module.exports = function( id = null ) {
           dest: path.resolve(config.paths.source.scss, 'vends/')
         },
         {
-          src: 'icons/svg/',
+          src: 'assets/icons/svg/',
           dest: path.resolve(config.paths.source.icons)
         },
         {
-          src: 'icons/php/',
+          src: 'assets/icons/php/',
           dest: path.resolve(config.paths.source.icons)
         },
         {
-          src: 'icons/sprite/',
+          src: 'assets/icons/sprite/',
           dest: path.resolve(config.paths.source.icons)
         },
         {

@@ -250,19 +250,19 @@
 @media (max-width: 600px) {
   .search-menu-toggle:nth-of-type(1):checked ~ .search-menu-tabs .tab-menu .tab:nth-of-type(1)::before,
 .search-menu-toggle:nth-of-type(1):checked ~ .search-menu-tabs noscript .tab-menu .tab:nth-of-type(1)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .search-menu-toggle:nth-of-type(1):checked ~ .search-menu-tabs .tab-menu .tab:nth-of-type(1)::before,
 .search-menu-toggle:nth-of-type(1):checked ~ .search-menu-tabs noscript .tab-menu .tab:nth-of-type(1)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 901px) {
   .search-menu-toggle:nth-of-type(1):checked ~ .search-menu-tabs .tab-menu .tab:nth-of-type(1)::after,
 .search-menu-toggle:nth-of-type(1):checked ~ .search-menu-tabs noscript .tab-menu .tab:nth-of-type(1)::after {
-    content: url(../icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #FFFFFF), color-stop(55%, #FFFFFF), color-stop(55%, transparent));
     background-image: linear-gradient(to bottom, transparent 45%, #FFFFFF 45%, #FFFFFF 55%, transparent 55%);
   }
@@ -315,19 +315,19 @@
 @media (max-width: 600px) {
   .search-menu-toggle:nth-of-type(1):checked ~ .search-menu-tabs .tab-menu.-light .tab:nth-of-type(1)::before,
 .search-menu-toggle:nth-of-type(1):checked ~ .search-menu-tabs noscript .tab-menu.-light .tab:nth-of-type(1)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .search-menu-toggle:nth-of-type(1):checked ~ .search-menu-tabs .tab-menu.-light .tab:nth-of-type(1)::before,
 .search-menu-toggle:nth-of-type(1):checked ~ .search-menu-tabs noscript .tab-menu.-light .tab:nth-of-type(1)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 901px) {
   .search-menu-toggle:nth-of-type(1):checked ~ .search-menu-tabs .tab-menu.-light .tab:nth-of-type(1)::after,
 .search-menu-toggle:nth-of-type(1):checked ~ .search-menu-tabs noscript .tab-menu.-light .tab:nth-of-type(1)::after {
-    content: url(../icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #FFFFFF), color-stop(55%, #FFFFFF), color-stop(55%, transparent));
     background-image: linear-gradient(to bottom, transparent 45%, #FFFFFF 45%, #FFFFFF 55%, transparent 55%);
   }
@@ -380,19 +380,19 @@
 @media (max-width: 600px) {
   .search-menu-toggle:nth-of-type(1):checked ~ .search-menu-tabs .tab-menu.-dark .tab:nth-of-type(1)::before,
 .search-menu-toggle:nth-of-type(1):checked ~ .search-menu-tabs noscript .tab-menu.-dark .tab:nth-of-type(1)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .search-menu-toggle:nth-of-type(1):checked ~ .search-menu-tabs .tab-menu.-dark .tab:nth-of-type(1)::before,
 .search-menu-toggle:nth-of-type(1):checked ~ .search-menu-tabs noscript .tab-menu.-dark .tab:nth-of-type(1)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 901px) {
   .search-menu-toggle:nth-of-type(1):checked ~ .search-menu-tabs .tab-menu.-dark .tab:nth-of-type(1)::after,
 .search-menu-toggle:nth-of-type(1):checked ~ .search-menu-tabs noscript .tab-menu.-dark .tab:nth-of-type(1)::after {
-    content: url(../icons/php/icon.php?id=material-arrow_drop_down&color=E9BF55&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_drop_down&color=E9BF55&size[width]=30&size[height]=30);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #091C44), color-stop(55%, #091C44), color-stop(55%, transparent));
     background-image: linear-gradient(to bottom, transparent 45%, #091C44 45%, #091C44 55%, transparent 55%);
   }
@@ -519,19 +519,19 @@
 @media (max-width: 600px) {
   .search-menu-toggle:nth-of-type(2):checked ~ .search-menu-tabs .tab-menu .tab:nth-of-type(2)::before,
 .search-menu-toggle:nth-of-type(2):checked ~ .search-menu-tabs noscript .tab-menu .tab:nth-of-type(2)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .search-menu-toggle:nth-of-type(2):checked ~ .search-menu-tabs .tab-menu .tab:nth-of-type(2)::before,
 .search-menu-toggle:nth-of-type(2):checked ~ .search-menu-tabs noscript .tab-menu .tab:nth-of-type(2)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 901px) {
   .search-menu-toggle:nth-of-type(2):checked ~ .search-menu-tabs .tab-menu .tab:nth-of-type(2)::after,
 .search-menu-toggle:nth-of-type(2):checked ~ .search-menu-tabs noscript .tab-menu .tab:nth-of-type(2)::after {
-    content: url(../icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #FFFFFF), color-stop(55%, #FFFFFF), color-stop(55%, transparent));
     background-image: linear-gradient(to bottom, transparent 45%, #FFFFFF 45%, #FFFFFF 55%, transparent 55%);
   }
@@ -584,19 +584,19 @@
 @media (max-width: 600px) {
   .search-menu-toggle:nth-of-type(2):checked ~ .search-menu-tabs .tab-menu.-light .tab:nth-of-type(2)::before,
 .search-menu-toggle:nth-of-type(2):checked ~ .search-menu-tabs noscript .tab-menu.-light .tab:nth-of-type(2)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .search-menu-toggle:nth-of-type(2):checked ~ .search-menu-tabs .tab-menu.-light .tab:nth-of-type(2)::before,
 .search-menu-toggle:nth-of-type(2):checked ~ .search-menu-tabs noscript .tab-menu.-light .tab:nth-of-type(2)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 901px) {
   .search-menu-toggle:nth-of-type(2):checked ~ .search-menu-tabs .tab-menu.-light .tab:nth-of-type(2)::after,
 .search-menu-toggle:nth-of-type(2):checked ~ .search-menu-tabs noscript .tab-menu.-light .tab:nth-of-type(2)::after {
-    content: url(../icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #FFFFFF), color-stop(55%, #FFFFFF), color-stop(55%, transparent));
     background-image: linear-gradient(to bottom, transparent 45%, #FFFFFF 45%, #FFFFFF 55%, transparent 55%);
   }
@@ -649,19 +649,19 @@
 @media (max-width: 600px) {
   .search-menu-toggle:nth-of-type(2):checked ~ .search-menu-tabs .tab-menu.-dark .tab:nth-of-type(2)::before,
 .search-menu-toggle:nth-of-type(2):checked ~ .search-menu-tabs noscript .tab-menu.-dark .tab:nth-of-type(2)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .search-menu-toggle:nth-of-type(2):checked ~ .search-menu-tabs .tab-menu.-dark .tab:nth-of-type(2)::before,
 .search-menu-toggle:nth-of-type(2):checked ~ .search-menu-tabs noscript .tab-menu.-dark .tab:nth-of-type(2)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 901px) {
   .search-menu-toggle:nth-of-type(2):checked ~ .search-menu-tabs .tab-menu.-dark .tab:nth-of-type(2)::after,
 .search-menu-toggle:nth-of-type(2):checked ~ .search-menu-tabs noscript .tab-menu.-dark .tab:nth-of-type(2)::after {
-    content: url(../icons/php/icon.php?id=material-arrow_drop_down&color=E9BF55&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_drop_down&color=E9BF55&size[width]=30&size[height]=30);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #091C44), color-stop(55%, #091C44), color-stop(55%, transparent));
     background-image: linear-gradient(to bottom, transparent 45%, #091C44 45%, #091C44 55%, transparent 55%);
   }
@@ -788,19 +788,19 @@
 @media (max-width: 600px) {
   .search-menu-toggle:nth-of-type(3):checked ~ .search-menu-tabs .tab-menu .tab:nth-of-type(3)::before,
 .search-menu-toggle:nth-of-type(3):checked ~ .search-menu-tabs noscript .tab-menu .tab:nth-of-type(3)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .search-menu-toggle:nth-of-type(3):checked ~ .search-menu-tabs .tab-menu .tab:nth-of-type(3)::before,
 .search-menu-toggle:nth-of-type(3):checked ~ .search-menu-tabs noscript .tab-menu .tab:nth-of-type(3)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 901px) {
   .search-menu-toggle:nth-of-type(3):checked ~ .search-menu-tabs .tab-menu .tab:nth-of-type(3)::after,
 .search-menu-toggle:nth-of-type(3):checked ~ .search-menu-tabs noscript .tab-menu .tab:nth-of-type(3)::after {
-    content: url(../icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #FFFFFF), color-stop(55%, #FFFFFF), color-stop(55%, transparent));
     background-image: linear-gradient(to bottom, transparent 45%, #FFFFFF 45%, #FFFFFF 55%, transparent 55%);
   }
@@ -853,19 +853,19 @@
 @media (max-width: 600px) {
   .search-menu-toggle:nth-of-type(3):checked ~ .search-menu-tabs .tab-menu.-light .tab:nth-of-type(3)::before,
 .search-menu-toggle:nth-of-type(3):checked ~ .search-menu-tabs noscript .tab-menu.-light .tab:nth-of-type(3)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .search-menu-toggle:nth-of-type(3):checked ~ .search-menu-tabs .tab-menu.-light .tab:nth-of-type(3)::before,
 .search-menu-toggle:nth-of-type(3):checked ~ .search-menu-tabs noscript .tab-menu.-light .tab:nth-of-type(3)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 901px) {
   .search-menu-toggle:nth-of-type(3):checked ~ .search-menu-tabs .tab-menu.-light .tab:nth-of-type(3)::after,
 .search-menu-toggle:nth-of-type(3):checked ~ .search-menu-tabs noscript .tab-menu.-light .tab:nth-of-type(3)::after {
-    content: url(../icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #FFFFFF), color-stop(55%, #FFFFFF), color-stop(55%, transparent));
     background-image: linear-gradient(to bottom, transparent 45%, #FFFFFF 45%, #FFFFFF 55%, transparent 55%);
   }
@@ -918,19 +918,19 @@
 @media (max-width: 600px) {
   .search-menu-toggle:nth-of-type(3):checked ~ .search-menu-tabs .tab-menu.-dark .tab:nth-of-type(3)::before,
 .search-menu-toggle:nth-of-type(3):checked ~ .search-menu-tabs noscript .tab-menu.-dark .tab:nth-of-type(3)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .search-menu-toggle:nth-of-type(3):checked ~ .search-menu-tabs .tab-menu.-dark .tab:nth-of-type(3)::before,
 .search-menu-toggle:nth-of-type(3):checked ~ .search-menu-tabs noscript .tab-menu.-dark .tab:nth-of-type(3)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 901px) {
   .search-menu-toggle:nth-of-type(3):checked ~ .search-menu-tabs .tab-menu.-dark .tab:nth-of-type(3)::after,
 .search-menu-toggle:nth-of-type(3):checked ~ .search-menu-tabs noscript .tab-menu.-dark .tab:nth-of-type(3)::after {
-    content: url(../icons/php/icon.php?id=material-arrow_drop_down&color=E9BF55&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_drop_down&color=E9BF55&size[width]=30&size[height]=30);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #091C44), color-stop(55%, #091C44), color-stop(55%, transparent));
     background-image: linear-gradient(to bottom, transparent 45%, #091C44 45%, #091C44 55%, transparent 55%);
   }
@@ -1057,19 +1057,19 @@
 @media (max-width: 600px) {
   .search-menu-toggle:nth-of-type(4):checked ~ .search-menu-tabs .tab-menu .tab:nth-of-type(4)::before,
 .search-menu-toggle:nth-of-type(4):checked ~ .search-menu-tabs noscript .tab-menu .tab:nth-of-type(4)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .search-menu-toggle:nth-of-type(4):checked ~ .search-menu-tabs .tab-menu .tab:nth-of-type(4)::before,
 .search-menu-toggle:nth-of-type(4):checked ~ .search-menu-tabs noscript .tab-menu .tab:nth-of-type(4)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 901px) {
   .search-menu-toggle:nth-of-type(4):checked ~ .search-menu-tabs .tab-menu .tab:nth-of-type(4)::after,
 .search-menu-toggle:nth-of-type(4):checked ~ .search-menu-tabs noscript .tab-menu .tab:nth-of-type(4)::after {
-    content: url(../icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #FFFFFF), color-stop(55%, #FFFFFF), color-stop(55%, transparent));
     background-image: linear-gradient(to bottom, transparent 45%, #FFFFFF 45%, #FFFFFF 55%, transparent 55%);
   }
@@ -1122,19 +1122,19 @@
 @media (max-width: 600px) {
   .search-menu-toggle:nth-of-type(4):checked ~ .search-menu-tabs .tab-menu.-light .tab:nth-of-type(4)::before,
 .search-menu-toggle:nth-of-type(4):checked ~ .search-menu-tabs noscript .tab-menu.-light .tab:nth-of-type(4)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .search-menu-toggle:nth-of-type(4):checked ~ .search-menu-tabs .tab-menu.-light .tab:nth-of-type(4)::before,
 .search-menu-toggle:nth-of-type(4):checked ~ .search-menu-tabs noscript .tab-menu.-light .tab:nth-of-type(4)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 901px) {
   .search-menu-toggle:nth-of-type(4):checked ~ .search-menu-tabs .tab-menu.-light .tab:nth-of-type(4)::after,
 .search-menu-toggle:nth-of-type(4):checked ~ .search-menu-tabs noscript .tab-menu.-light .tab:nth-of-type(4)::after {
-    content: url(../icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #FFFFFF), color-stop(55%, #FFFFFF), color-stop(55%, transparent));
     background-image: linear-gradient(to bottom, transparent 45%, #FFFFFF 45%, #FFFFFF 55%, transparent 55%);
   }
@@ -1187,19 +1187,19 @@
 @media (max-width: 600px) {
   .search-menu-toggle:nth-of-type(4):checked ~ .search-menu-tabs .tab-menu.-dark .tab:nth-of-type(4)::before,
 .search-menu-toggle:nth-of-type(4):checked ~ .search-menu-tabs noscript .tab-menu.-dark .tab:nth-of-type(4)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .search-menu-toggle:nth-of-type(4):checked ~ .search-menu-tabs .tab-menu.-dark .tab:nth-of-type(4)::before,
 .search-menu-toggle:nth-of-type(4):checked ~ .search-menu-tabs noscript .tab-menu.-dark .tab:nth-of-type(4)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 901px) {
   .search-menu-toggle:nth-of-type(4):checked ~ .search-menu-tabs .tab-menu.-dark .tab:nth-of-type(4)::after,
 .search-menu-toggle:nth-of-type(4):checked ~ .search-menu-tabs noscript .tab-menu.-dark .tab:nth-of-type(4)::after {
-    content: url(../icons/php/icon.php?id=material-arrow_drop_down&color=E9BF55&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_drop_down&color=E9BF55&size[width]=30&size[height]=30);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #091C44), color-stop(55%, #091C44), color-stop(55%, transparent));
     background-image: linear-gradient(to bottom, transparent 45%, #091C44 45%, #091C44 55%, transparent 55%);
   }
@@ -1326,19 +1326,19 @@
 @media (max-width: 600px) {
   .search-menu-toggle:nth-of-type(5):checked ~ .search-menu-tabs .tab-menu .tab:nth-of-type(5)::before,
 .search-menu-toggle:nth-of-type(5):checked ~ .search-menu-tabs noscript .tab-menu .tab:nth-of-type(5)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .search-menu-toggle:nth-of-type(5):checked ~ .search-menu-tabs .tab-menu .tab:nth-of-type(5)::before,
 .search-menu-toggle:nth-of-type(5):checked ~ .search-menu-tabs noscript .tab-menu .tab:nth-of-type(5)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 901px) {
   .search-menu-toggle:nth-of-type(5):checked ~ .search-menu-tabs .tab-menu .tab:nth-of-type(5)::after,
 .search-menu-toggle:nth-of-type(5):checked ~ .search-menu-tabs noscript .tab-menu .tab:nth-of-type(5)::after {
-    content: url(../icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #FFFFFF), color-stop(55%, #FFFFFF), color-stop(55%, transparent));
     background-image: linear-gradient(to bottom, transparent 45%, #FFFFFF 45%, #FFFFFF 55%, transparent 55%);
   }
@@ -1391,19 +1391,19 @@
 @media (max-width: 600px) {
   .search-menu-toggle:nth-of-type(5):checked ~ .search-menu-tabs .tab-menu.-light .tab:nth-of-type(5)::before,
 .search-menu-toggle:nth-of-type(5):checked ~ .search-menu-tabs noscript .tab-menu.-light .tab:nth-of-type(5)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .search-menu-toggle:nth-of-type(5):checked ~ .search-menu-tabs .tab-menu.-light .tab:nth-of-type(5)::before,
 .search-menu-toggle:nth-of-type(5):checked ~ .search-menu-tabs noscript .tab-menu.-light .tab:nth-of-type(5)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 901px) {
   .search-menu-toggle:nth-of-type(5):checked ~ .search-menu-tabs .tab-menu.-light .tab:nth-of-type(5)::after,
 .search-menu-toggle:nth-of-type(5):checked ~ .search-menu-tabs noscript .tab-menu.-light .tab:nth-of-type(5)::after {
-    content: url(../icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #FFFFFF), color-stop(55%, #FFFFFF), color-stop(55%, transparent));
     background-image: linear-gradient(to bottom, transparent 45%, #FFFFFF 45%, #FFFFFF 55%, transparent 55%);
   }
@@ -1456,19 +1456,19 @@
 @media (max-width: 600px) {
   .search-menu-toggle:nth-of-type(5):checked ~ .search-menu-tabs .tab-menu.-dark .tab:nth-of-type(5)::before,
 .search-menu-toggle:nth-of-type(5):checked ~ .search-menu-tabs noscript .tab-menu.-dark .tab:nth-of-type(5)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .search-menu-toggle:nth-of-type(5):checked ~ .search-menu-tabs .tab-menu.-dark .tab:nth-of-type(5)::before,
 .search-menu-toggle:nth-of-type(5):checked ~ .search-menu-tabs noscript .tab-menu.-dark .tab:nth-of-type(5)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 901px) {
   .search-menu-toggle:nth-of-type(5):checked ~ .search-menu-tabs .tab-menu.-dark .tab:nth-of-type(5)::after,
 .search-menu-toggle:nth-of-type(5):checked ~ .search-menu-tabs noscript .tab-menu.-dark .tab:nth-of-type(5)::after {
-    content: url(../icons/php/icon.php?id=material-arrow_drop_down&color=E9BF55&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_drop_down&color=E9BF55&size[width]=30&size[height]=30);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #091C44), color-stop(55%, #091C44), color-stop(55%, transparent));
     background-image: linear-gradient(to bottom, transparent 45%, #091C44 45%, #091C44 55%, transparent 55%);
   }
@@ -1595,19 +1595,19 @@
 @media (max-width: 600px) {
   .search-menu-toggle:nth-of-type(6):checked ~ .search-menu-tabs .tab-menu .tab:nth-of-type(6)::before,
 .search-menu-toggle:nth-of-type(6):checked ~ .search-menu-tabs noscript .tab-menu .tab:nth-of-type(6)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .search-menu-toggle:nth-of-type(6):checked ~ .search-menu-tabs .tab-menu .tab:nth-of-type(6)::before,
 .search-menu-toggle:nth-of-type(6):checked ~ .search-menu-tabs noscript .tab-menu .tab:nth-of-type(6)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 901px) {
   .search-menu-toggle:nth-of-type(6):checked ~ .search-menu-tabs .tab-menu .tab:nth-of-type(6)::after,
 .search-menu-toggle:nth-of-type(6):checked ~ .search-menu-tabs noscript .tab-menu .tab:nth-of-type(6)::after {
-    content: url(../icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #FFFFFF), color-stop(55%, #FFFFFF), color-stop(55%, transparent));
     background-image: linear-gradient(to bottom, transparent 45%, #FFFFFF 45%, #FFFFFF 55%, transparent 55%);
   }
@@ -1660,19 +1660,19 @@
 @media (max-width: 600px) {
   .search-menu-toggle:nth-of-type(6):checked ~ .search-menu-tabs .tab-menu.-light .tab:nth-of-type(6)::before,
 .search-menu-toggle:nth-of-type(6):checked ~ .search-menu-tabs noscript .tab-menu.-light .tab:nth-of-type(6)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .search-menu-toggle:nth-of-type(6):checked ~ .search-menu-tabs .tab-menu.-light .tab:nth-of-type(6)::before,
 .search-menu-toggle:nth-of-type(6):checked ~ .search-menu-tabs noscript .tab-menu.-light .tab:nth-of-type(6)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 901px) {
   .search-menu-toggle:nth-of-type(6):checked ~ .search-menu-tabs .tab-menu.-light .tab:nth-of-type(6)::after,
 .search-menu-toggle:nth-of-type(6):checked ~ .search-menu-tabs noscript .tab-menu.-light .tab:nth-of-type(6)::after {
-    content: url(../icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #FFFFFF), color-stop(55%, #FFFFFF), color-stop(55%, transparent));
     background-image: linear-gradient(to bottom, transparent 45%, #FFFFFF 45%, #FFFFFF 55%, transparent 55%);
   }
@@ -1725,19 +1725,19 @@
 @media (max-width: 600px) {
   .search-menu-toggle:nth-of-type(6):checked ~ .search-menu-tabs .tab-menu.-dark .tab:nth-of-type(6)::before,
 .search-menu-toggle:nth-of-type(6):checked ~ .search-menu-tabs noscript .tab-menu.-dark .tab:nth-of-type(6)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .search-menu-toggle:nth-of-type(6):checked ~ .search-menu-tabs .tab-menu.-dark .tab:nth-of-type(6)::before,
 .search-menu-toggle:nth-of-type(6):checked ~ .search-menu-tabs noscript .tab-menu.-dark .tab:nth-of-type(6)::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 901px) {
   .search-menu-toggle:nth-of-type(6):checked ~ .search-menu-tabs .tab-menu.-dark .tab:nth-of-type(6)::after,
 .search-menu-toggle:nth-of-type(6):checked ~ .search-menu-tabs noscript .tab-menu.-dark .tab:nth-of-type(6)::after {
-    content: url(../icons/php/icon.php?id=material-arrow_drop_down&color=E9BF55&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_drop_down&color=E9BF55&size[width]=30&size[height]=30);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #091C44), color-stop(55%, #091C44), color-stop(55%, transparent));
     background-image: linear-gradient(to bottom, transparent 45%, #091C44 45%, #091C44 55%, transparent 55%);
   }

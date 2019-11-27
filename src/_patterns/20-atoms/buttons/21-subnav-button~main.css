@@ -447,7 +447,7 @@
   background-color: #091C44;
 }
 .subnav-button.-back::before {
-  content: url(../icons/php/icon.php?id=material-chevron_left&color=336BE6&size[width]=12&size[height]=12);
+  content: url(../assets/icons/php/icon.php?id=material-chevron_left&color=336BE6&size[width]=12&size[height]=12);
   margin-right: 1ex;
   line-height: 1;
 }

@@ -31,7 +31,7 @@
   }
 }
 .spinner::before {
-  content: url(../icons/php/icon.php?id=material-loading&color=605858&size[width]=50&size[height]=50);
+  content: url(../assets/icons/php/icon.php?id=material-loading&color=605858&size[width]=50&size[height]=50);
   width: 50px;
   height: 50px;
   -webkit-animation: spin 1s linear 0s infinite;

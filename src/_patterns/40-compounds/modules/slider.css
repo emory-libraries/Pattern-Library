@@ -172,10 +172,10 @@
   height: 50px;
 }
 .slider-toggle.-previous::after {
-  content: url(../icons/php/icon.php?id=material-chevron_left&color=5387F7&size[width]=50&size[height]=50);
+  content: url(../assets/icons/php/icon.php?id=material-chevron_left&color=5387F7&size[width]=50&size[height]=50);
 }
 .slider-toggle.-next::after {
-  content: url(../icons/php/icon.php?id=material-chevron_right&color=5387F7&size[width]=50&size[height]=50);
+  content: url(../assets/icons/php/icon.php?id=material-chevron_right&color=5387F7&size[width]=50&size[height]=50);
 }
 @media (max-width: 600px) {
   .slider-toggle.-previous {
