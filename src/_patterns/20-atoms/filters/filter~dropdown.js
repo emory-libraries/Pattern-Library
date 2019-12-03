@@ -52,7 +52,7 @@ Components.register('filter-dropdown', {
     cancel() {
 
       // Clear the search results.
-      if( this. fuzzy.filtering.filtered ) this.fuzzy.unfilter();
+      if( this.fuzzy.filtering.filtered ) this.fuzzy.unfilter();
 
       // Clear the selection.
       this.selected = this.defaults.selected || '';
