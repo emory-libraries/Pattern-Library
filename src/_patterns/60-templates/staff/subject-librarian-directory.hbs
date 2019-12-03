@@ -1,5 +1,11 @@
 {{! Create an index contianing the IDs of all librarians in order to enable filtering. }}
-{{assign 'index' (pluck librarians 'id')}}
+{{#each librarians}}
+
+  {{storagePush 'index' (dashcase (lowercase name))}}
+
+{{/each}}
+
+{{assign 'index' (storageGet 'index')}}
 
 {{! Create a list of options for the dropdown filter. }}
 {{assign 'options' (sort (unique (condense (pluck librarians 'subjects'))))}}
