@@ -9,7 +9,7 @@
                      :field="'{{key}}'"
                      :config="{{default (JSONstringify config) '{}'}}"
                      :defaults="{
-                        selected: global.location.params.subject.replace(/\+/g, ' ') || '{{subject}}',
+                        selected: global.location.params.subject.split('+').join(' ') || '{{subject}}',
                         isDisabled: {{default disabled false}},
                         isFocus: {{default focus false}}
                      }">
