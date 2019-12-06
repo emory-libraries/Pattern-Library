@@ -71,6 +71,16 @@ Components.register('filter-dropdown', {
       // Clear the selection.
       this.selected = '';
 
+      // Clear query string in browser history
+      if (window.history.pushState) {
+
+          // Rewrite URL without parameter
+          var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+
+          // Push new URL to history
+          window.history.pushState({path:newurl},'',newurl);
+      }
+
     }
 
   },
