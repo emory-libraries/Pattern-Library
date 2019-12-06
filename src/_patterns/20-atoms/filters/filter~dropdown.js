@@ -4,6 +4,10 @@ Components.register('filter-dropdown', {
     index: {
       type: Array
     },
+    subject: {
+      type: String,
+      default: _.get(window.location.params, 'subject')
+    },
     field: {
       type: String,
     },
@@ -40,6 +44,16 @@ Components.register('filter-dropdown', {
           // Get the item's corresponding field data.
           const field = item[this.field];
 
+          // Add query string in browser history
+          if (window.history.pushState) {
+
+              // Rewrite URL with new parameter
+              var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?subject=' + this.selected.split(' ').join('+');
+
+              // Push new URL to history
+              window.history.pushState({path:newurl},'',newurl);
+          }
+
           // Determine if the field matches.
           return _.isArray(field) ? field.includes(this.selected) : field == this.selected;
 
@@ -55,7 +69,7 @@ Components.register('filter-dropdown', {
       if( this.fuzzy.filtering.filtered ) this.fuzzy.unfilter();
 
       // Clear the selection.
-      this.selected = this.defaults.selected || '';
+      this.selected = '';
 
     }
 
