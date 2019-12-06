@@ -1775,6 +1775,10 @@ Components.register('filter-dropdown', {
     index: {
       type: Array
     },
+    subject: {
+      type: String,
+      "default": _.get(window.location.params, 'subject')
+    },
     field: {
       type: String
     },
@@ -1804,7 +1808,18 @@ Components.register('filter-dropdown', {
         // Filter the results.
         this.fuzzy.filter(function (item) {
           // Get the item's corresponding field data.
-          var field = item[_this10.field]; // Determine if the field matches.
+          var field = item[_this10.field]; // Add query string in browser history
+
+          if (window.history.pushState) {
+            // Rewrite URL with new parameter
+            var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?subject=' + _this10.selected.split(' ').join('+'); // Push new URL to history
+
+
+            window.history.pushState({
+              path: newurl
+            }, '', newurl);
+          } // Determine if the field matches.
+
 
           return _.isArray(field) ? field.includes(_this10.selected) : field == _this10.selected;
         });
@@ -1814,7 +1829,7 @@ Components.register('filter-dropdown', {
       // Clear the search results.
       if (this.fuzzy.filtering.filtered) this.fuzzy.unfilter(); // Clear the selection.
 
-      this.selected = this.defaults.selected || '';
+      this.selected = '';
     }
   },
   mounted: function mounted() {
