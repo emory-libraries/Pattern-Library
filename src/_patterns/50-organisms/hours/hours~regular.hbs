@@ -27,7 +27,7 @@
         Displaying regular hours for
         <select class="input -select -inline" v-model="selected.semester">
           <option v-for="(semester) in hours.semesters" :value="semester">
-            <% semester.name %>
+            <% semester.name %> <% semester.year %>
           </option>
         </select>.
         <template v-if="location && location.link && location.link.href">
