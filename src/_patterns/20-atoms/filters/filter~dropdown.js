@@ -45,13 +45,13 @@ Components.register('filter-dropdown', {
           const field = item[this.field];
 
           // Add query string in browser history
-          if (window.history.pushState) {
+          if (window.history.pushState && this.selected) {
 
               // Rewrite URL with new parameter
               var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?subject=' + this.selected.split(' ').join('+');
 
               // Push new URL to history
-              window.history.pushState({path:newurl},'',newurl);
+              window.history.replaceState({ path: window.location.pathname, query: { subject: this.selected.split(' ').join('+') } },'',newurl);
           }
 
           // Determine if the field matches.
@@ -59,6 +59,9 @@ Components.register('filter-dropdown', {
 
         });
 
+      } else {
+        // If it's not valid, clear everything.
+        this.cancel();
       }
 
     },
@@ -78,7 +81,8 @@ Components.register('filter-dropdown', {
           var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname;
 
           // Push new URL to history
-          window.history.pushState({path:newurl},'',newurl);
+          window.history.replaceState({ path: window.location.pathname, query: {} },'',newurl);
+
       }
 
     }
@@ -89,6 +93,15 @@ Components.register('filter-dropdown', {
 
     // Initialize the search utility.
     this.fuzzy = new Fuzzy(this.index, this.config);
+
+    // If global.location.params is not undefined, plusify it and assign it to subjects
+    if (global.location.params.subject) {
+
+      let subject = global.location.params.subject.split('+').join(' ');
+
+      // Set selected to subject
+      this.selected = subject;
+    }
 
     // Initialize a filter if an initial selection was made.
     if( this.valid ) this.filter();
