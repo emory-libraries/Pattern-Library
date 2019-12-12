@@ -6,7 +6,7 @@ Components.register('filter-dropdown', {
     },
     subject: {
       type: String,
-      default: _.get(window.location.params, 'subject')
+      default: ''
     },
     field: {
       type: String,

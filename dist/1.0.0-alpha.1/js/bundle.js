@@ -20,7 +20,7 @@ function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArra
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
 
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
@@ -1777,7 +1777,7 @@ Components.register('filter-dropdown', {
     },
     subject: {
       type: String,
-      "default": _.get(window.location.params, 'subject')
+      "default": ''
     },
     field: {
       type: String
@@ -1810,19 +1810,25 @@ Components.register('filter-dropdown', {
           // Get the item's corresponding field data.
           var field = item[_this10.field]; // Add query string in browser history
 
-          if (window.history.pushState) {
+          if (window.history.pushState && _this10.selected) {
             // Rewrite URL with new parameter
             var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?subject=' + _this10.selected.split(' ').join('+'); // Push new URL to history
 
 
-            window.history.pushState({
-              path: newurl
+            window.history.replaceState({
+              path: window.location.pathname,
+              query: {
+                subject: _this10.selected.split(' ').join('+')
+              }
             }, '', newurl);
           } // Determine if the field matches.
 
 
           return _.isArray(field) ? field.includes(_this10.selected) : field == _this10.selected;
         });
+      } else {
+        // If it's not valid, clear everything.
+        this.cancel();
       }
     },
     cancel: function cancel() {
@@ -1835,15 +1841,23 @@ Components.register('filter-dropdown', {
         // Rewrite URL without parameter
         var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname; // Push new URL to history
 
-        window.history.pushState({
-          path: newurl
+        window.history.replaceState({
+          path: window.location.pathname,
+          query: {}
         }, '', newurl);
       }
     }
   },
   mounted: function mounted() {
     // Initialize the search utility.
-    this.fuzzy = new Fuzzy(this.index, this.config); // Initialize a filter if an initial selection was made.
+    this.fuzzy = new Fuzzy(this.index, this.config); // If global.location.params is not undefined, plusify it and assign it to subjects
+
+    if (global.location.params.subject) {
+      var subject = global.location.params.subject.split('+').join(' '); // Set selected to subject
+
+      this.selected = subject;
+    } // Initialize a filter if an initial selection was made.
+
 
     if (this.valid) this.filter();
   },
