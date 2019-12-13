@@ -42,6 +42,6 @@
       }
     ],
     "topics": "{customFields[label='University Event Topic'].value | list}",
-    "hero": "{eventImage.url}"
+    "hero": "{detailImage.url}"
   }
 }
