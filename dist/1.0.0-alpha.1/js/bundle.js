@@ -47,7 +47,9 @@ var RSS = require('rss-parser');
 var he = require('he'); // Change the Vue delimiters globally.
 
 
-Vue.options.delimiters = ['<%', '%>']; // Extend lodash.
+Vue.options.delimiters = ['<%', '%>']; // Enable Vue devtools
+
+Vue.config.devtools = true; // Extend lodash.
 
 _.capitalizeChar = function (str, i) {
   // Ignore non-strings.

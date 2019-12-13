@@ -1,3 +1,7 @@
+// Enable Vue devtools
+Vue.config.devtools = true;
+
+
 // Extend lodash.
 _.capitalizeChar = ( str, i ) => {
 
