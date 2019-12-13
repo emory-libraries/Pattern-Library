@@ -9,8 +9,8 @@
           "semester": "Fall",
           "year": 2019,
           "start": "08-01-2019",
-          "end": "12-01-2019",
-          "visible": true,
+          "end": "12-20-2019",
+          "visible": false,
           "building": {
             "hours": {
               "sunday": {
@@ -4018,7 +4018,7 @@
           "semester": "Fall",
           "year": 2019,
           "start": "08-01-2019",
-          "end": "12-01-2019",
+          "end": "12-20-2019",
           "visible": true,
           "building": {
             "hours": {
