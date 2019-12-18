@@ -26,7 +26,7 @@
     "badge": "Featured",
     "hero": "//source.unsplash.com/1450x440",
     "link": {
-      "href": "",
+      "href": "#",
       "title": "Emory's African American collections celebrated in new exhibit"
     },
     "search": {
@@ -319,41 +319,34 @@
     },
     "sources": [
       {
-        "heading": "Events & Exhibits",
-        "icon": "material-calendar_month_outline",
-        "url": "https://www.trumba.com/calendars/robert-woodruff-library.json",
+        "heading": "News",
+        "icon": "material-chat",
+        "feed": "https://scholarblogs.emory.edu/woodruff/topics/news/feed",
         "button": {
-          "label": "View All Events & Exhibits",
-          "href": ""
+          "label": "View All News",
+          "href": "https://scholarblogs.emory.edu/woodruff/topics/news/"
         },
         "model": {
-          "id": "{eventID}",
-          "date": "{dateTimeFormatted}",
+          "id": "{post-id}",
+          "date": "{isoDate | date}",
           "link": {
-            "href": "/event?feed={:url:}&id={eventID}"
-          },
-          "button?": {
-            "criteria": "{openSignUp} === true && {pastDeadline} === false",
-            "value": {
-              "label": "Sign Up",
-              "href": "{signUpUrl}"
-            }
+            "href": "{link}"
           }
         }
       },
       {
         "heading": "Upcoming Workshops",
         "icon": "material-pencil_ruler",
-        "url": "https://www.trumba.com/calendars/robert-woodruff-library-classes-at-woodruff-library.json",
+        "feed": "https://www.trumba.com/calendars/robert-woodruff-library-classes-at-woodruff-library.json",
         "button": {
           "label": "View All Workshops",
-          "href": ""
+          "href": "/patterns/60-templates-events-calendar/60-templates-events-calendar.html?feed=https://www.trumba.com/calendars/robert-woodruff-library-classes-at-woodruff-library.json"
         },
         "model": {
           "id": "{eventID}",
           "date": "{dateTimeFormatted}",
           "link": {
-            "href": "/class?feed={:url:}&id={eventID}"
+            "href": "/patterns/60-templates-events-event/60-templates-events-event.html?feed={__FEED__}&id={eventID}"
           },
           "button?": {
             "criteria": "{openSignUp} === true && {pastDeadline} === false",
@@ -386,6 +379,12 @@
         "link": {
           "href": ""
         }
+      }
+    ],
+    "buttons": [
+      {
+        "label": "View All Research Help",
+        "href": ""
       }
     ]
   }

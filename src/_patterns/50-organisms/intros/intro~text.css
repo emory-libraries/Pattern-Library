@@ -177,9 +177,12 @@
   border: none;
 }
 .intro-link .icon {
+  margin-right: 1ex;
+}
+.intro-link .icon,
+.intro-link .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .intro-link .icon svg {
   fill: #5387F7;

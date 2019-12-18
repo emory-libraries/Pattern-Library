@@ -9,6 +9,8 @@ const Hammer = require('hammerjs');
 const $ = require('jQuery');
 const {compareTwoStrings} = require('string-similarity');
 const moment = require('moment');
+const RSS = require('rss-parser');
+const he = require('he');
 
 // Change the Vue delimiters globally.
 Vue.options.delimiters = ['<%', '%>'];

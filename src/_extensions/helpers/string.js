@@ -8,7 +8,7 @@ const uniqid = require('uniqid');
 const helpers = {
 
   // Combine two or more strings.
-  combine( ...strs ) { return _.initial(strs).join('') },
+  combine( ...strs ) { return _.initial(strs).join(''); },
 
   // Trim a substring from the start of another string.
   trimSubstringStart( str, substr, mods ) {

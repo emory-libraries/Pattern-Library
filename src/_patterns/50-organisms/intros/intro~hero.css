@@ -8,6 +8,16 @@
   background-position: center center;
   height: 437px;
 }
+.intro-hero::before {
+  content: "";
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
 .intro-hero-badge {
   grid-row: 2/span 1;
   grid-column: 2/span 1;
@@ -28,9 +38,9 @@
   margin: 0;
 }
 
-.intro-hero {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(-14.42%, #282828), color-stop(50%, transparent)), var(--image);
-  background-image: linear-gradient(0deg, #282828 -14.42%, transparent 50%), var(--image);
+.intro-hero::before {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(-14.42%, #282828), color-stop(50%, transparent));
+  background-image: linear-gradient(0deg, #282828 -14.42%, transparent 50%);
 }
 .intro-hero-title {
   margin: 0;

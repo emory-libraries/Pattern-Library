@@ -1,0 +1,31 @@
+{
+  "link": {
+    "patternlab": "https://patternlab.io/",
+    "patternlab-docs": "https://patternlab.io/docs",
+    "patternlab-resources": "https://patternlab.io/resources.html",
+    "patternlab-grunt": "https://github.com/pattern-lab/edition-node-grunt",
+    "patternlab-node": "https://github.com/pattern-lab/patternlab-node",
+    "node": "https://nodejs.org",
+    "npm": "https://www.npmjs.com/",
+    "grunt": "https://gruntjs.com/",
+    "plop": "https://plopjs.com/",
+    "plop-docs": "https://plopjs.com/documentation",
+    "plop-repo": "https://github.com/amwmedia/plop",
+    "plop-api": "https://plopjs.com/documentation/#plopfile-api",
+    "plop-plopfile": "https://github.com/amwmedia/plop/tree/master/example",
+    "browserify": "http://browserify.org/",
+    "google-places": "https://developers.google.com/places/web-service/intro",
+    "google-place-id": "https://developers.google.com/places/place-id",
+    "handlebars": "https://handlebarsjs.com/",
+    "handlebars-api": "https://handlebarsjs.com/reference.html",
+    "handlebars-vs-mustache": "https://github.com/wycats/handlebars.js#differences-between-handlebarsjs-and-mustache",
+    "patternlibrary": "https://template.library.emory.edu/styleguide/patternlibrary/current",
+    "patternlibrary-release": "https://template.library.emory.edu/styleguide/patternlibrary/latest"
+  },
+  "repo": {
+    "emory-libraries": "https://github.com/emory-libraries",
+    "template-sass": "https://github.com/emory-libraries/template-sass",
+    "style-guide-guide": "https://github.com/emory-libraries/style-guide-guide",
+    "web-redesign": "https://github.com/emory-libraries/web-redesign"
+  }
+}

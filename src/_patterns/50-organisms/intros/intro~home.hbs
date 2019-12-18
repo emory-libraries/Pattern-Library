@@ -4,12 +4,12 @@
   {{/if}}
 {{/if}}
 
-<header class="intro-home" style="--image: url({{background-image}});">
+<header class="intro-home" style="background-image: url({{background-image}});">
   <div class="intro-home-search">
     {{#with search}}{{> organisms-search-menu home=true tab-prefix='intro-home--'}}{{/with}}
   </div>
   {{#if badge}}
-    {{> atoms-badge label=badge white=true square=true classes="intro-home-badge"}}
+    {{> atoms-button-link href=link.href label=badge classes="intro-home-badge"}}
   {{/if}}
   <a class="intro-home-title" href="{{link.href}}" target="_self">
     {{> tokens-heading level=1 alternate=true heading=link.title icon=false}}

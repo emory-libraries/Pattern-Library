@@ -1,31 +1,17 @@
+<eul-feed inline-template :feed="'{{feed}}'" :model="{{JSONstringify model}}" :limit="{{default limit 5}}">
 
-{{! Load feed data from a URL if given feed source. }}
-{{#unless content}}
-
-  {{! Get the data model based on the feed URL as needed. }}
-  {{#unless model}}{{assign 'model' (get (dashcase (get 'host' (urlParse url))) ../models)}}{{/unless}}
-
-  {{! Fetch the feed's content }}
-  {{assign 'content' (fetchFeed url)}}
-
-  {{! Map the feed's content to the desired data model. }}
-  {{#if (eq content.__meta__.type 'json')}}
-    {{assign 'content' (mapFeed model content)}}
-  {{else}}
-    {{assign 'content' (mapFeed model content.channel.item)}}
-  {{/if}}
-
-  {{! Always append the feed's URL to its view all button link. }}
-  {{assign 'button.href' (combine button.href '?feed=' url)}}
-
-{{/unless}}
-
-<div class="feed"{{#if url}}data-feed="{{url}}"{{/if}}>
-  {{> tokens-heading level=3 classes='feed-heading' icon=(default icon 'material-rss_feed')}}
-  <div class="feed-content">
-    {{#each (limit content 5)}}{{> molecules-feed-item}}{{/each}}
+  <div class="feed" data-feed="{{feed}}">
+    {{> tokens-heading level=3 classes='feed-heading' icon=(default icon 'material-rss_feed')}}
+    <div class="feed-content">
+      {{> molecules-feed-item foreach='item in limited' use='item'}}
+    </div>
+    {{#if button}}
+      {{#with button}}{{> atoms-button-link classes='feed-button' label=(default label (combine 'View All ' ../heading)) icon=false}}{{/with}}
+    {{/if}}
   </div>
-  {{#if button}}
-    {{#with button}}{{> atoms-button-link classes='feed-button' label=(default label (combine 'View All ' ../heading)) icon=false}}{{/with}}
-  {{/if}}
-</div>
+
+</eul-feed>
+
+<noscript>
+  The feed could not be loaded because JavaScript is disabled. To view this content, please enable JavaScript in your browser, then try again.
+</noscript>

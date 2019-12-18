@@ -2,12 +2,14 @@
   {{assign 'index' (passthrough index passthroughs)}}
 {{/if}}
 
+<!-- NOTE: Passing `global.location.params.subject` below is only to enable internal linking within the Pattern Library. This is not the recommended approach for production. -->
+
 <eul-filter-dropdown inline-template
                      :index="{{JSONstringify index}}"
                      :field="'{{key}}'"
                      :config="{{default (JSONstringify config) '{}'}}"
                      :defaults="{
-                        selected: '{{default selected ''}}',
+                        selected: '{{subject}}',
                         isDisabled: {{default disabled false}},
                         isFocus: {{default focus false}}
                      }">

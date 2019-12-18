@@ -1,0 +1,21 @@
+# {%= name %}
+
+> {%= description %}
+
+## Table of Contents
+{%= toc() %}
+
+## Prerequisites
+{%= docs('PREREQUISITES') %}
+
+## Installation
+{%= docs('INSTALLATION') %}
+
+## Contributing
+{%= docs('CONTRIBUTING') %}
+
+## Grunt
+{%= docs('GRUNT') %}
+
+## Usage
+{%= docs('USAGE') %}

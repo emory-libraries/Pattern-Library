@@ -21,7 +21,7 @@
     },
     {
       "type": "heading",
-      "level": "3",
+      "level": 3,
       "heading": "A Subsection"
     },
     {
@@ -30,7 +30,7 @@
     },
     {
       "type": "heading",
-      "level": "3",
+      "level": 3,
       "heading": "Another Subsection"
     },
     {

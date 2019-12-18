@@ -1,6 +1,6 @@
 {{! Create data for the back button. }}
-{{assign 'back.for' (combine 'nav-menu-main--' (lowercase (dashcase heading)))}}
-{{assign 'back.label' 'Back to Main Menu'}}
+{{#unless back.for}}{{assign 'back.for' (combine 'nav-menu-main--' (lowercase (dashcase heading)))}}{{/unless}}
+{{#unless back.label}}{{assign 'back.label' 'Back to Main Menu'}}{{/unless}}
 
 {{! Determine subnavigation menu layout. }}
 {{#if (gt (length (filterHas navigation 'category')) 0)}}

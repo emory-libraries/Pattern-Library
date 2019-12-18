@@ -87,9 +87,12 @@
   border: none;
 }
 .explorer-link .icon {
+  margin-right: 1ex;
+}
+.explorer-link .icon,
+.explorer-link .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .explorer-link .icon svg {
   fill: #E7EAF1;

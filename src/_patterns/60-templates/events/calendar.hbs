@@ -5,29 +5,55 @@
 
   {{> organisms-header classes='calendar-page-header'}}
 
-  <div class="calendar-page-main">
-    {{> organisms-main type='calendar-page'}}
+  <!-- NOTE: Passing `global.location.params` below is only to enable internal linking within the Pattern Library. This is not the recommended approach for production. -->
+  <eul-calendar inline-template :feed="global.location.params.feed || '{{feed}}'" :model="{{JSONstringify model}}" :archive="{{default archive false}}" v-cloak>
 
-    {{! TODO: Limit results to current year and 'x' number of months. (?) Check with Rosalyn. Current assumption is that all timelines of calendar events are managed through Trumba, so limits are not needed. }}
-    {{#each events as |groupedByYear year|}}
-      {{#each groupedByYear as |groupedByMonth month|}}
-        {{#extend 'organisms-major' theme='light' heading=(combine (itemAt (momentMonths) month) ' ' year)}}
-          {{#content 'section-major-body'}}
+    <div class="calendar-page-main">
 
-            {{> compounds-tiles columns=(objectify m=2 l=2 xl=3) tile-type='listing' tiles=groupedByMonth}}
+      {{> organisms-main type='calendar-page' classes='' vue=false}}
 
-          {{/content}}
-        {{/extend}}
-      {{/each}}
-    {{/each}}
+      {{#extend 'organisms-major' theme='light' foreach='group in calendar' heading='<% group.name %>' vue=true}}
+        {{#content 'section-major-body'}}
 
-    {{#if archive}}
-    <div class="button-group">
-      {{> atoms-button-link href=archive label='View Events Archive'}}
+          {{> compounds-tiles
+              columns=(objectify m=2 l=2 xl=3)
+              tile-type='listing'
+              vue=true
+              tiles='group.events'
+              tile='tile'
+              date='<% tile.date.formatted | decode %>'
+              title='<% tile.title %>'
+              description=false
+              image='<% tile.image %>'
+              link='<% tile.link %>'
+              badge=false}}
+
+        {{/content}}
+      {{/extend}}
+
+      {{#if button}}
+      <div class="button-group">
+        {{#with button}}{{> atoms-button-link icon=false interpolate=false}}{{/with}}
+      </div>
+      {{/if}}
+
     </div>
-    {{/if}}
 
-  </div>
+  </eul-calendar>
+
+  <noscript>
+
+    <div class="calendar-page-main">
+
+      {{> 'organisms-main' type='calendar-page' classes=''}}
+
+      <p class="text">
+        We were unable to load the calender you were looking for because JavaScript is disabled in your browser. JavaScript is required in order for this page to work. Please, enable JavaScript, then try again.
+      </p>
+
+    </div>
+
+  </noscript>
 
   {{> organisms-footer classes='calendar-page-footer'}}
 

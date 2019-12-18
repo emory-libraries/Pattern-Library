@@ -143,9 +143,12 @@
   border: none;
 }
 .exhibition-page-main-sidenote-link .icon {
+  margin-right: 1ex;
+}
+.exhibition-page-main-sidenote-link .icon,
+.exhibition-page-main-sidenote-link .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .exhibition-page-main-sidenote-link .icon svg {
   fill: #5387F7;

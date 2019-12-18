@@ -55,6 +55,11 @@
   padding-right: 25px;
   height: 50px;
 }
+.button .icon,
+.button .icon svg {
+  width: 24px;
+  height: 24px;
+}
 .button .icon.-left {
   margin-right: 1em;
 }
@@ -144,6 +149,11 @@
   padding-left: 25px;
   padding-right: 25px;
   height: 50px;
+}
+.button.-success .icon,
+.button.-success .icon svg {
+  width: 24px;
+  height: 24px;
 }
 .button.-success .icon.-left {
   margin-right: 1em;
@@ -235,6 +245,11 @@
   padding-right: 25px;
   height: 50px;
 }
+.button.-caution .icon,
+.button.-caution .icon svg {
+  width: 24px;
+  height: 24px;
+}
 .button.-caution .icon.-left {
   margin-right: 1em;
 }
@@ -324,6 +339,11 @@
   padding-left: 25px;
   padding-right: 25px;
   height: 50px;
+}
+.button.-error .icon,
+.button.-error .icon svg {
+  width: 24px;
+  height: 24px;
 }
 .button.-error .icon.-left {
   margin-right: 1em;

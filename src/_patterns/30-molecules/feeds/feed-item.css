@@ -146,9 +146,12 @@
   border: none;
 }
 .feed-item-title .icon {
+  margin-right: 1ex;
+}
+.feed-item-title .icon,
+.feed-item-title .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .feed-item-title .icon svg {
   fill: #605858;
@@ -210,6 +213,11 @@
   padding-left: 15px;
   padding-right: 15px;
   height: 40px !important;
+}
+.feed-item-action .icon,
+.feed-item-action .icon svg {
+  width: 24px;
+  height: 24px;
 }
 .feed-item-action .icon.-left {
   margin-right: 1em;

@@ -1,10 +1,10 @@
-<div class="card-librarian"{{#if filterable}} data-search-id="{{id}}"{{/if}}>
+<div class="card-librarian"{{#if filterable}} data-search-id="{{dashcase (lowercase name)}}"{{/if}}>
   <div class="card-librarian-about">
-    <a href="{{baseUrl}}{{link.href}}" class="card-librarian-image">{{> atoms-image src=(combine (baseUrl) (default image.src (combine '/images/avatars/placeholder.' (default gender 'male') '.jpg'))) alt=name}}</a>
+    <a href="{{baseUrl}}{{link.href}}" class="card-librarian-image">{{> atoms-image src=(combine (baseUrl) (default image.src (combine '/assets/avatars/placeholder.' (default gender 'male') '.jpg'))) alt=name}}</a>
     {{#with link}}
     <a class="link card-staff-name"
        href="{{baseUrl}}{{href}}"
-       {{#if filterable}} data-search-key="name"{{/if}}>
+       {{#if ../filterable}} data-search-key="name"{{/if}}>
       {{../name}}
     </a>
     {{/with}}

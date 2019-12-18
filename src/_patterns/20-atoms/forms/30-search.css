@@ -213,40 +213,40 @@
   color: rgba(255, 255, 255, 0.5);
 }
 .search.-contained .search-button {
-  background: -webkit-gradient(linear, left top, right top, color-stop(1.9047619048%, #E7EAF1), color-stop(1.9047619048%, transparent)) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=5387F7&size[width]=20&size[height]=20) no-repeat 20px center;
-  background: linear-gradient(to right, #E7EAF1 1.9047619048%, transparent 1.9047619048%) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=5387F7&size[width]=20&size[height]=20) no-repeat 20px center;
+  background: -webkit-gradient(linear, left top, right top, color-stop(1.9047619048%, #E7EAF1), color-stop(1.9047619048%, transparent)) no-repeat center/100% 60%, url(../assets/icons/php/icon.php?id=material-search&color=5387F7&size[width]=20&size[height]=20) no-repeat 20px center;
+  background: linear-gradient(to right, #E7EAF1 1.9047619048%, transparent 1.9047619048%) no-repeat center/100% 60%, url(../assets/icons/php/icon.php?id=material-search&color=5387F7&size[width]=20&size[height]=20) no-repeat 20px center;
 }
 .search.-contained .search-button:hover, .search.-contained .search-button:focus, .search.-contained .search-button.is-hover, .search.-contained .search-button.is-focus {
-  background: -webkit-gradient(linear, left top, right top, color-stop(1.9047619048%, #E7EAF1), color-stop(1.9047619048%, transparent)) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
-  background: linear-gradient(to right, #E7EAF1 1.9047619048%, transparent 1.9047619048%) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
+  background: -webkit-gradient(linear, left top, right top, color-stop(1.9047619048%, #E7EAF1), color-stop(1.9047619048%, transparent)) no-repeat center/100% 60%, url(../assets/icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
+  background: linear-gradient(to right, #E7EAF1 1.9047619048%, transparent 1.9047619048%) no-repeat center/100% 60%, url(../assets/icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
 }
 .search.-contained .search-button:active, .search.-contained .search-button.is-active {
-  background: -webkit-gradient(linear, left top, right top, color-stop(1.9047619048%, #E7EAF1), color-stop(1.9047619048%, transparent)) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
-  background: linear-gradient(to right, #E7EAF1 1.9047619048%, transparent 1.9047619048%) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
+  background: -webkit-gradient(linear, left top, right top, color-stop(1.9047619048%, #E7EAF1), color-stop(1.9047619048%, transparent)) no-repeat center/100% 60%, url(../assets/icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
+  background: linear-gradient(to right, #E7EAF1 1.9047619048%, transparent 1.9047619048%) no-repeat center/100% 60%, url(../assets/icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
 }
 .search.-contained.-small .search-button {
-  background: -webkit-gradient(linear, left top, right top, color-stop(2.2222222222%, #E7EAF1), color-stop(2.2222222222%, transparent)) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=5387F7&size[width]=20&size[height]=20) no-repeat 20px center;
-  background: linear-gradient(to right, #E7EAF1 2.2222222222%, transparent 2.2222222222%) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=5387F7&size[width]=20&size[height]=20) no-repeat 20px center;
+  background: -webkit-gradient(linear, left top, right top, color-stop(2.2222222222%, #E7EAF1), color-stop(2.2222222222%, transparent)) no-repeat center/100% 60%, url(../assets/icons/php/icon.php?id=material-search&color=5387F7&size[width]=20&size[height]=20) no-repeat 20px center;
+  background: linear-gradient(to right, #E7EAF1 2.2222222222%, transparent 2.2222222222%) no-repeat center/100% 60%, url(../assets/icons/php/icon.php?id=material-search&color=5387F7&size[width]=20&size[height]=20) no-repeat 20px center;
 }
 .search.-contained.-small .search-button:hover, .search.-contained.-small .search-button:focus, .search.-contained.-small .search-button.is-hover, .search.-contained.-small .search-button.is-focus {
-  background: -webkit-gradient(linear, left top, right top, color-stop(2.2222222222%, #E7EAF1), color-stop(2.2222222222%, transparent)) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
-  background: linear-gradient(to right, #E7EAF1 2.2222222222%, transparent 2.2222222222%) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
+  background: -webkit-gradient(linear, left top, right top, color-stop(2.2222222222%, #E7EAF1), color-stop(2.2222222222%, transparent)) no-repeat center/100% 60%, url(../assets/icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
+  background: linear-gradient(to right, #E7EAF1 2.2222222222%, transparent 2.2222222222%) no-repeat center/100% 60%, url(../assets/icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
 }
 .search.-contained.-small .search-button:active, .search.-contained.-small .search-button.is-active {
-  background: -webkit-gradient(linear, left top, right top, color-stop(2.2222222222%, #E7EAF1), color-stop(2.2222222222%, transparent)) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
-  background: linear-gradient(to right, #E7EAF1 2.2222222222%, transparent 2.2222222222%) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
+  background: -webkit-gradient(linear, left top, right top, color-stop(2.2222222222%, #E7EAF1), color-stop(2.2222222222%, transparent)) no-repeat center/100% 60%, url(../assets/icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
+  background: linear-gradient(to right, #E7EAF1 2.2222222222%, transparent 2.2222222222%) no-repeat center/100% 60%, url(../assets/icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
 }
 .search.-contained.-big .search-button {
-  background: -webkit-gradient(linear, left top, right top, color-stop(1.6666666667%, #E7EAF1), color-stop(1.6666666667%, transparent)) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=5387F7&size[width]=20&size[height]=20) no-repeat 20px center;
-  background: linear-gradient(to right, #E7EAF1 1.6666666667%, transparent 1.6666666667%) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=5387F7&size[width]=20&size[height]=20) no-repeat 20px center;
+  background: -webkit-gradient(linear, left top, right top, color-stop(1.6666666667%, #E7EAF1), color-stop(1.6666666667%, transparent)) no-repeat center/100% 60%, url(../assets/icons/php/icon.php?id=material-search&color=5387F7&size[width]=20&size[height]=20) no-repeat 20px center;
+  background: linear-gradient(to right, #E7EAF1 1.6666666667%, transparent 1.6666666667%) no-repeat center/100% 60%, url(../assets/icons/php/icon.php?id=material-search&color=5387F7&size[width]=20&size[height]=20) no-repeat 20px center;
 }
 .search.-contained.-big .search-button:hover, .search.-contained.-big .search-button:focus, .search.-contained.-big .search-button.is-hover, .search.-contained.-big .search-button.is-focus {
-  background: -webkit-gradient(linear, left top, right top, color-stop(1.6666666667%, #E7EAF1), color-stop(1.6666666667%, transparent)) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
-  background: linear-gradient(to right, #E7EAF1 1.6666666667%, transparent 1.6666666667%) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
+  background: -webkit-gradient(linear, left top, right top, color-stop(1.6666666667%, #E7EAF1), color-stop(1.6666666667%, transparent)) no-repeat center/100% 60%, url(../assets/icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
+  background: linear-gradient(to right, #E7EAF1 1.6666666667%, transparent 1.6666666667%) no-repeat center/100% 60%, url(../assets/icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
 }
 .search.-contained.-big .search-button:active, .search.-contained.-big .search-button.is-active {
-  background: -webkit-gradient(linear, left top, right top, color-stop(1.6666666667%, #E7EAF1), color-stop(1.6666666667%, transparent)) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
-  background: linear-gradient(to right, #E7EAF1 1.6666666667%, transparent 1.6666666667%) no-repeat center/100% 60%, url(../icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
+  background: -webkit-gradient(linear, left top, right top, color-stop(1.6666666667%, #E7EAF1), color-stop(1.6666666667%, transparent)) no-repeat center/100% 60%, url(../assets/icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
+  background: linear-gradient(to right, #E7EAF1 1.6666666667%, transparent 1.6666666667%) no-repeat center/100% 60%, url(../assets/icons/php/icon.php?id=material-search&color=004990&size[width]=20&size[height]=20) no-repeat 20px center;
 }
 .search-button[disabled], .search-button.is-disabled {
   opacity: 0.5;
@@ -265,9 +265,12 @@
   border: none;
 }
 .search-cancel .icon {
+  margin-right: 1ex;
+}
+.search-cancel .icon,
+.search-cancel .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .search-cancel .icon svg {
   fill: #5387F7;

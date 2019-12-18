@@ -159,9 +159,12 @@
   border: none;
 }
 .tile-utility-title .icon {
+  margin-right: 1ex;
+}
+.tile-utility-title .icon,
+.tile-utility-title .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .tile-utility-title .icon svg {
   fill: #082B73;

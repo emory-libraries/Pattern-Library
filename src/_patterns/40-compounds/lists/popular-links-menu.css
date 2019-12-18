@@ -138,9 +138,14 @@
 }
 .popular-links-menu.-hours .popular-links-menu-list-item .link .icon,
 .popular-links-menu.-hours .popular-links-menu-list-item a .icon {
+  margin-right: 1ex;
+}
+.popular-links-menu.-hours .popular-links-menu-list-item .link .icon,
+.popular-links-menu.-hours .popular-links-menu-list-item .link .icon svg,
+.popular-links-menu.-hours .popular-links-menu-list-item a .icon,
+.popular-links-menu.-hours .popular-links-menu-list-item a .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .popular-links-menu.-hours .popular-links-menu-list-item .link .icon svg,
 .popular-links-menu.-hours .popular-links-menu-list-item a .icon svg {

@@ -486,7 +486,7 @@
   line-height: 1;
 }
 .nav-button:not(.-utility):not(.-flyout):not(.-search):not(.-toggle):not(.-librarian)::after, .nav-button.-main::after {
-  content: url("../icons/php/icon.php?id=material-chevron_right&color=B6BDCC&size[width]=24&size[height]=24");
+  content: url("../assets/icons/php/icon.php?id=material-chevron_right&color=B6BDCC&size[width]=24&size[height]=24");
 }
 .nav-button:not(.-utility):not(.-flyout):not(.-search):not(.-toggle):not(.-librarian)::before, .nav-button.-main::before {
   height: 1px;
@@ -1693,7 +1693,7 @@
   line-height: 1;
 }
 .nav-button.-utility::after {
-  content: url("../icons/php/icon.php?id=material-chevron_right&color=B6BDCC&size[width]=24&size[height]=24");
+  content: url("../assets/icons/php/icon.php?id=material-chevron_right&color=B6BDCC&size[width]=24&size[height]=24");
 }
 @media (min-width: 901px) {
   .nav-button.-utility {

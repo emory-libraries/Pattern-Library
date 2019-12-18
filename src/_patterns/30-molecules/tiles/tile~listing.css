@@ -226,9 +226,12 @@
   border: none;
 }
 .tile-listing:not(.has-description) .tile-listing-title .icon {
+  margin-right: 1ex;
+}
+.tile-listing:not(.has-description) .tile-listing-title .icon,
+.tile-listing:not(.has-description) .tile-listing-title .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .tile-listing:not(.has-description) .tile-listing-title .icon svg {
   fill: #082B73;
@@ -289,9 +292,12 @@
   border: none;
 }
 .tile-listing.has-description .tile-listing-title .icon {
+  margin-right: 1ex;
+}
+.tile-listing.has-description .tile-listing-title .icon,
+.tile-listing.has-description .tile-listing-title .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .tile-listing.has-description .tile-listing-title .icon svg {
   fill: #082B73;
@@ -358,9 +364,12 @@
   border: none;
 }
 .tile-listing-action .icon {
+  margin-right: 1ex;
+}
+.tile-listing-action .icon,
+.tile-listing-action .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .tile-listing-action .icon svg {
   fill: #5387F7;

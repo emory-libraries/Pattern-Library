@@ -1,10 +1,42 @@
+{{#unless vue}}
 <div class="tile-listing{{#if badge}} has-badge{{/if}}{{#if description}} has-description{{/if}}{{#if link.label}} has-action{{/if}}">
   {{#if badge}}{{> atoms-badge label=badge}}{{/if}}
   <div class="tile-listing-image{{#if image.align.x}} -align-x-{{image.align.x}}{{/if}}{{#if image.align.y}} -align-y-{{image.align.y}}{{/if}}{{#if image.fit}} -{{image.fit}}{{/if}}">
-    {{#with image}}{{> atoms-image decorative=true src=(default src '/images/php/gradient.php?colors=062265,99885B,E9BF55,FFFFFF&direction=bottom&width=500&height=275')}}{{/with}}
+    {{#with image}}{{> atoms-image decorative=true src=(default src '/assets/php/gradient.php?colors=062265,99885B,E9BF55,FFFFFF&direction=bottom&width=500&height=275')}}{{/with}}
   </div>
   <span class="tile-listing-date">{{default this.date.formatted this.date}}</span>
   {{#with link}}{{> atoms-link label=../title classes='tile-listing-title'}}{{/with}}
   {{#if description}}<p class="tile-listing-description">{{ellipsis (sanitize description) 150}}</p>{{/if}}
   {{#if link.label}}{{#with link}}{{> atoms-link classes='tile-listing-action'}}{{/with}}{{/if}}
 </div>
+{{else}}
+<div class="tile-listing"
+     :class="{
+       {{#if badge}}'has-badge': {{vueBase badge}},{{/if}}
+       {{#if description}}'has-description': {{vueBase description}},{{/if}}
+       'has-action': {{vueBase link}} && {{vueBase link}}.label
+     }"
+     {{#if foreach}}v-for="{{foreach}}"{{#if key}} :key="{{key}}"{{/if}}{{/if}}>
+  {{#if badge}}
+  <template v-if="{{vueBase badge}}">
+    {{> atoms-badge label=badge}}
+  </template>
+  {{/if}}
+  <div class="tile-listing-image">
+    <template v-if="{{vueBase image}} && {{vueBase image}}.src">
+      {{> atoms-image decorative=true vue=true src=(combine (vueBase image) '.src')}}
+    </template>
+    <template v-else>
+      {{> atoms-image decorative=true vue=false src='/assets/php/gradient.php?colors=062265,99885B,E9BF55,FFFFFF&direction=bottom&width=500&height=275'}}
+    </template>
+  </div>
+  <span class="tile-listing-date">{{this.date}}</span>
+  <template v-if="{{vueBase link}} && {{vueBase link}}.href">
+    {{> atoms-link label=(vueBase title) href=(combine (vueBase link) '.href') classes='tile-listing-title' vue=true html=true icon=false}}
+  </template>
+  {{#if description}}<p class="tile-listing-description" v-if="{{vueBase description}}" v-html="$options.filters.truncate({{vueBase description}}, 150)"></p>{{/if}}
+  <template v-if="{{vueBase link}} && {{vueBase link}}.label">
+    {{> atoms-link classes='tile-listing-action' label=(combine (vueBase link) '.label') href=(combine (vueBase link) '.href') icon=false}}
+  </template>
+</div>
+{{/unless}}

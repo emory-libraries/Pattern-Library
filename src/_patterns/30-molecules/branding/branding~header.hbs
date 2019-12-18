@@ -6,14 +6,14 @@
 
 {{/if}}
 
-
+{{#unless (eq noscript true)}}
 <eul-branding-header inline-template v-cloak>
 
   <div class="branding-header">
     <a class="branding-header-badge" href="{{baseUrl}}/">
-      {{! This first logo is used to create a stroke. }}
+      {{! NOTE: This first logo is used to create a stroke. }}
       {{> tokens-logo id='Emory-Badge' hyperlink=false}}
-      {{! This second logo is used to for display. }}
+      {{! NOTE: This second logo is used to display. }}
       {{> tokens-logo id='Emory-Badge' hyperlink=false}}
     </a>
     <a href="http://emory.edu" class="branding-header-organization">Emory University</a>
@@ -33,18 +33,19 @@
   </div>
 
 </eul-branding-header>
+{{/unless}}
 
-<noscript>
-
+{{#unless (eq noscript false)}}
+{{#unless (eq noscript true)}}<noscript>{{/unless}}
   <div class="branding-header">
     <a class="branding-header-badge" href="{{baseUrl}}/">
-      {{! This first logo is used to create a stroke. }}
+      {{! NOTE: This first logo is used to create a stroke. }}
       {{> tokens-logo id='Emory-Badge' hyperlink=false}}
-      {{! This second logo is used to for display. }}
+      {{! NOTE: This second logo is used to display. }}
       {{> tokens-logo id='Emory-Badge' hyperlink=false}}
     </a>
     <a href="http://emory.edu" class="branding-header-organization">Emory University</a>
     <a href="{{baseUrl}}/" class="branding-header-division">{{get 'site' (itemAt (filterWhere sites 'active' true) 0)}}</a>
   </div>
-
-</noscript>
+{{#unless (eq noscript true)}}</noscript>{{/unless}}
+{{/unless}}

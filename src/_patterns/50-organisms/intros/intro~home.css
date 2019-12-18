@@ -8,6 +8,16 @@
   background-position: center;
   height: 845px;
 }
+.intro-home::before {
+  content: "";
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  z-index: 0;
+}
 .intro-home-search {
   grid-row: 1;
   grid-column: 1/-1;
@@ -33,9 +43,9 @@
   margin: 0 auto !important;
 }
 
-.intro-home {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(-14.42%, #091C44), color-stop(51.12%, transparent)), var(--image);
-  background-image: linear-gradient(0deg, #091C44 -14.42%, transparent 51.12%), var(--image);
+.intro-home::before {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(-14.42%, #091C44), color-stop(51.12%, transparent));
+  background-image: linear-gradient(0deg, #091C44 -14.42%, transparent 51.12%);
 }
 .intro-home-title {
   text-align: center;
