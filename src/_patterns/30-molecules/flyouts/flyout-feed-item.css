@@ -265,9 +265,12 @@
   border: none;
 }
 .flyout-feed-item-link .icon {
+  margin-right: 1ex;
+}
+.flyout-feed-item-link .icon,
+.flyout-feed-item-link .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .flyout-feed-item-link .icon svg {
   fill: #5387F7;

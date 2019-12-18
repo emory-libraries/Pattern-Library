@@ -1,6 +1,16 @@
+{{#unless vue}}
 <div class="section-major{{#if theme}} -{{theme}}{{/if}}{{#if classes}} {{classes}}{{/if}}">
-  {{> tokens-heading level=2 classes="section-major-title" icon=false}}
+  {{> tokens-heading level=2 classes="section-major-title" icon=false toc=false alternate=false hero=false vue=false}}
   <div class="section-major-body">
     {{#block "section-major-body"}}{{/block}}
   </div>
 </div>
+{{else}}
+<div class="section-major{{#if theme}} -{{theme}}{{/if}}{{#if classes}} {{classes}}{{/if}}"
+     {{#if foreach}}v-for="{{foreach}}"{{#if key}} :key="{{key}}"{{/if}}{{/if}}>
+  {{> tokens-heading level=2 classes="section-major-title" icon=false toc=false alternate=false hero=false vue=true}}
+  <div class="section-major-body">
+    {{#block "section-major-body"}}{{/block}}
+  </div>
+</div>
+{{/unless}}

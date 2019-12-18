@@ -1,30 +1,6 @@
-// Build utility methods.
-const EUL = {
+// Enable Vue devtools
+//Vue.config.devtools = true;
 
-  // Load scripts using URLs.
-  loadScripts( scripts ) {
-
-    // Initialize script elements.
-    const elements = [];
-
-    // Load scripts by insterting them as elements into our HTML.
-    scripts.forEach((script) => {
-
-      // Create script element.
-      elements.push($('<script>', _.isString(script) ? {src: script} : script));
-
-    });
-
-    // Load all scripts.
-    $(document.body).append(...elements);
-
-  }
-
-};
-
-// Temporarily disabled Leaflet while `atoms-map` is not in use.
-// Extend Leaflet.
-// require('leaflet-providers');
 
 // Extend lodash.
 _.capitalizeChar = ( str, i ) => {
@@ -57,6 +33,392 @@ _.cloneDeepOwn = ( thing ) => {
   return clone;
 
 };
+_.isCollection = ( value ) => {
+
+  // Only consider arrays as possible collections.
+  if( !_.isArray(value) ) return false;
+
+  // In order for an array to be a collection, require that all of its items are objects.
+  return _.every(value, _.isPlainObject);
+
+};
+
+// Always attempt to parse the query string.
+window.location.params = _.reduce(_.trimStart(window.location.search, '?').split('&'), (result, param) => {
+
+  // Get the parameter's key and value.
+  const [key, value] = param.split('=').map(_.trim);
+
+  // Save the query parameter.
+  return _.set(result, key, value);
+
+}, {});
+
+// Attempt to get the website root address (base URL) for the site.
+// NOTE: This is a workaround for development and production URL differences across environments.
+// NOTE: If using a virtual host on your local machine during development that includes a path in the URL, you'll need to "whitelist" your configuration here.
+// NOTE: If setting up a new deployment destination that includes a path in the URL, you'll need to "whitelist" your configuration here.
+const ROOT = _.get({
+  'template.library.emory.edu': 'https://template.library.emory.edu/styleguide/patternlibrary/current',
+  'localhost': 'http://localhost/Pattern-Library/public'
+}, window.location.host, '');
+
+// Build utility methods.
+const EUL = {
+
+  // Load scripts from a given set of URLs.
+  loadScripts( scripts ) {
+
+    // Initialize script elements.
+    const elements = [];
+
+    // Load scripts by insterting them as elements into our HTML.
+    scripts.forEach((script) => {
+
+      // Create script element.
+      elements.push($('<script>', _.isString(script) ? {src: script} : script));
+
+    });
+
+    // Load all scripts.
+    $(document.body).append(...elements);
+
+  },
+
+  // Escape strings for use as a regex.
+  escapeRegExp: ( string ) => string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'),
+
+  // Map all items in a JSON or RSS feed to match a given content model.
+  mapFeed( feed, model, constants = {}, recursive = true ) {
+
+    // Initialize a helper for mapping source data to a model.
+    const map = ( feed, model, constants = {}, recursive = true ) => {
+
+      // Initialize a set of utilities to help map data.
+      const utils = {
+
+        // Determine if a key in the model is conditional.
+        isConditional: ( key ) => _.endsWith(key, '?'),
+
+        // Bind a key-value pair in the model.
+        bindModel( key, value, data, constants = {}, recursive = true ) {
+
+          // Initialize a simplified version of the model.
+          let model = {};
+
+          // Update the simplified model to reflect the current key-value model.
+          model[key] = value;
+
+          // Determine if the key is conditional.
+          if( utils.isConditional(key) ) {
+
+            // Get the key name without the conditional flag.
+            const base = _.trimEnd(key, '?');
+
+            // Get the condition that needs to be met in order for the value to be included.
+            const condition = bind(value.criteria, data, {condition: true, constants});
+
+            // Get the criteria that must be met in order to display the conditional data.
+            const criteria = new Function(`return ${condition};`);
+
+            // Remove the conditional key from the model.
+            delete model[key];
+
+            // Rewrite the model to reflect the intended output.
+            model[base] = value.value;
+
+            // Evaluate the criteria, and only include the value if the criteria was met.
+            if( criteria() ) data[base] = bind(value.value, data, {
+              recursive,
+              model,
+              key: base,
+              constants
+            });
+
+          }
+
+          // Otherwise, bind the data as is.
+          else data[key] = bind(value, data, {
+            recursive,
+            model,
+            key,
+            constants
+         });
+
+        }
+
+      };
+
+      // Map each item within the feed.
+      feed = feed.map((data) => {
+
+        // Loop through the data model, and map things as needed.
+        _.each(model, (value, key) => {
+
+          // Bind the data with the model.
+          utils.bindModel(key, value, data, constants, recursive);
+
+        });
+
+        // Return the updated data.
+        return data;
+
+      });
+
+      // Return the updated feed.
+      return feed;
+
+    };
+
+    // Initialize a helper for binding source data within a value.
+    const bind = ( value, item, options = {} ) => {
+
+      // Set defaults for options.
+      options = _.extend({
+        recursive: true,
+        condition: false,
+        model: null,
+        key: null,
+        constants: {}
+      }, options);
+
+      // Initialize a set of utilities to help find and replace values.
+      const utils = {
+
+        // Initialize a set of output filters to help manipulate output formats.
+        _filters: {
+
+          // Convert a comma-separated list to an array.
+          list: (value) => value.split(',').map(_.trim),
+
+          // Convert the date to a moment and format it as a date string.
+          date: (value) => moment(value).format('MMMM D, YYYY'),
+
+          // Convert the date to a moment and format it as a day string.
+          day: (value) => moment(value).format('dddd, MMMM D, YYYY'),
+
+          // Convert a string to a mailto email link if not in the form of one already.
+          mailto: (value) => _.isString(value) ? /^<a.+?\>.+?<\/a>$/i.test(value) ? value : `<a href="${value}">${value}</a>` : value
+
+        },
+
+        // Determine if a value has a placeholder that should be bound.
+        hasPlaceholder: (value) => /{[\S-_.|='\[\] ]+?}/i.test(value),
+
+        // Determine if a placeholder has filters that should be applied.
+        hasFilters: (placeholder) => /(\| [\S-_]+)+$/i.test(placeholder),
+
+        // Determine if a placeholder is for a constant.
+        isConstant: (placeholder) => Object.keys(options.constants).includes(_.trimEnd(_.trimStart(placeholder, '{'), '}')),
+
+        // Get the constant for a given placeholder.
+        getConstant: (placeholder) => _.get(options.constants, _.trimEnd(_.trimStart(placeholder, '{'), '}')),
+
+        // Get all placeholders in a value.
+        getPlaceholders: (value) => value.match(/{[\S-_.|='\[\] ]+?}/ig),
+
+        // Get all filters in a placeholder.
+        getFilters(placeholder) {
+
+          // Trim any curly brackets from the placeholder.
+          placeholder = _.trimEnd(_.trimStart(placeholder, '{'), '}');
+
+          // Locate the filter data within the placeholder.
+          placeholder = placeholder.substring(placeholder.indexOf('|') + 1, value.length - 1);
+
+          // Get the filters in an array.
+          return placeholder.split('|').map(_.trim);
+
+        },
+
+        // Interpret the keys for a given placeholder.
+        getKeys( placeholder ) {
+
+          // Get the placeholder's base name.
+          let base = _.trimEnd(_.trimStart(placeholder, '{'), '}');
+
+          // Determine if the placeholder has a filter, and if so, remove it.
+          if( utils.hasFilters(base) ) base = base.substring(0, base.indexOf('|') - 1).trim();
+
+          // Get the individual keys in the placeholder.
+          let keys = base.split('.').map(_.trim);
+
+          // Define a regex for filter keys.
+          const regex = /^([\S]+?)\[([\S]+?)='?([\S ]+?)'?\]$/i;
+
+          // Interpret the keys.
+          keys = keys.map((key, n) => ({
+            filter: regex.test(key),
+            match: key.match(regex),
+            index: _.isInteger(key),
+            first: n === 0,
+            last: n === keys.length - 1,
+            n,
+            key
+          }));
+
+          // Save the placeholder as metadata.
+          keys.placeholder = placeholder;
+
+          // Return the keys.
+          return keys;
+
+        },
+
+        // Replace the placeholder in the value with data using the respective keys.
+        setPlaceholder( value, data, keys, conditional = false ) {
+
+          // Initialize a pointer.
+          let pointer = data;
+
+          // Loop through the keys, and move the pointer accordingly.
+          _.each(keys, (key) => {
+
+            // If the pointer can't be moved, then skip the key.
+            if( !_.isArray(pointer) && !_.isPlainObject(pointer) ) return;
+
+            // Otherwise, move the pointer accordingly for filter keys.
+            else if( key.filter ) {
+
+              // Get the key that's being targeted.
+              const target = _.get(data, key.match[1], []);
+
+              // Move the pointer where the key-value pair matches the pointer.
+              pointer = _.find(target, (item) => _.get(item, key.match[2]) == key.match[3]);
+
+            }
+
+            // Otherwise, simply move the pointer.
+            else pointer = _.get(pointer, key.key);
+
+          });
+
+          // For placeholders within conditional statements, escape the pointer's value.
+          if( conditional ) {
+
+            // Convert objects and arrays to strings.
+            if( _.isPlainObject(pointer) || _.isArray(pointer) ) pointer = JSON.stringify(pointer);
+
+            // Otherwise, for strings, wrap them in quotes.
+            else if( _.isString(pointer) ) pointer = pointer.indexOf("'") > -1 ? `"${pointer}"` : `'${pointer}'`;
+
+            // Otherwise, for all other values, convert them to their string equivalents.
+            else switch(pointer) {
+              case null: pointer = 'null'; break;
+              case undefined: pointer = 'undefined'; break;
+              case true: pointer = 'true'; break;
+              case false: pointer = 'false'; break;
+            }
+
+          }
+
+          // Bind the pointer's value back into the string value.
+          value = value.replace(keys.placeholder, pointer);
+
+          // For literal pointer values, force the assigned values to also be literal.
+          if( [undefined, null, NaN, true, false].includes(pointer) ) {
+
+            // Override the value with the pointer's literal.
+            if( `${pointer}` === value ) value = pointer;
+
+          }
+
+          // Return the updated value.
+          return value;
+
+        },
+
+        // Apply output filters to a newly bound string value.
+        applyFilters( value, filters ) {
+
+          // Make sure the filters are in array form.
+          if( !_.isArray(filters) ) filters = [filters];
+
+          // Apply filters in order to the value.
+          _.each(filters, (filter) => value = utils._filters[filter](value));
+
+          // Return the value with filters applied.
+          return value;
+
+        },
+
+        // Replace all placeholders within a given value using the given data.
+        replacePlaceholders(value, data) {
+
+          // Determine if the value has a placeholder, and only attempt to replace things if so.
+          if( utils.hasPlaceholder(value) ) {
+
+            // Get the placeholders within the value.
+            const placeholders = utils.getPlaceholders(value);
+
+            // Loop through each placeholder, and replace it with its target value.
+            _.each(placeholders, (placeholder) => {
+
+              // Determine if the placeholder is a constant, and if so, replace it with its constant value.
+              if( utils.isConstant(placeholder) ) value = value.replace(placeholder, utils.getConstant(placeholder));
+
+              // Otherwise, handle non-constant placeholders.
+              else {
+
+                // Get the placeholder's keys.
+                const keys = utils.getKeys(placeholder);
+
+                // Replace the placeholder with its respective data given the keys.
+                value = utils.setPlaceholder(value, item, keys, options.condition);
+
+                // Determine if the placeholder has filters, and if so, get and apply them.
+                if( utils.hasFilters(placeholder) ) {
+
+                  // Get the filters.
+                  const filters = utils.getFilters(placeholder);
+
+                  // Apply the filters to the value.
+                  value = utils.applyFilters(value, filters);
+
+                }
+
+              }
+
+            });
+
+          }
+
+          // Return the updated value.
+          return value;
+
+        }
+
+      };
+
+      // Handle simple arrays differently.
+      if( _.isArray(value) || _.isPlainObject(value) ) {
+
+        // Determine which map function to use.
+        const mapFn = _.isArray(value) ? _.map : _.mapValues;
+
+        // Always bind things within the array or object if recursion is enabled.
+        if( options.recursive ) value = mapFn(value, (v) => bind(v, item, {recursive: true, constants}));
+
+      }
+
+      // Otherwise, handle scalar values.
+      else value = utils.replacePlaceholders(value, item);
+
+      // Return the updated value.
+      return value;
+
+    };
+
+    // Return the feed's content after mapping its data to the model.
+    return map(feed, model, constants, recursive);
+
+  }
+
+};
+
+// Temporarily disabled Leaflet while `atoms-map` is not in use.
+// Extend Leaflet.
+// require('leaflet-providers');
 
 // Initialize an event bus for handling events.
 const Events = new Vue();
@@ -231,14 +593,63 @@ const Components = {
 
     methods: {},
 
-    filters: {},
+    filters: {
+
+      // Truncate a string to the given length, optionally adding a suffix where the omission occurs.
+      truncate( string, length, omission = '…' ) {
+
+        return _.truncate(string, {
+          length,
+          omission
+        });
+
+      },
+
+      // Capitalize the first charater in a string.
+      capitalize( string ) {
+
+        return _.capitalize(string);
+
+      },
+
+      // Make a string uppercase.
+      uppercase( string ) {
+
+        return _.upperCase(string);
+
+      },
+
+      // Make a string lowercase.
+      lowercase( string ) {
+
+        return _.lowerCase(string);
+
+      },
+
+      // Encode a string with HTML entities.
+      encode( string ) {
+
+        // Encode the given string.
+        return he.encode(string);
+
+      },
+
+      // Decode a string with HTML entities.
+      decode( string ) {
+
+        // Decode the given string.
+        return he.decode(string);
+
+      }
+
+    },
 
     created() {
 
       // Initialize data using any defaults given.
       if( this.defaults ) _.forIn(this.defaults, (value, key) => {
 
-        this.$set(this, key, value);
+        if( _.has(this, key) ) this.$set(this, key, value);
 
       });
 
@@ -700,7 +1111,7 @@ class Fuzzy {
       calc( token, value ) {
 
         // Initialize the result.
-        let location, distance, similarity, threshold, score;
+        let location, distance, score, similarity = null, threshold = null, index = {};
 
         // Handle arrays of values.
         if( _.isArray(value) ) {
@@ -727,7 +1138,7 @@ class Fuzzy {
           }
 
           // Determine the index of the token.
-          const index = {
+          index = {
             word: !(new RegExp(`[a-z0-9_'-]+${token}|${token}[a-z0-9_'-]+`, 'i')).test(value) && value.indexOf(token) > -1,
             match: value.indexOf(token),
             start: 0,
@@ -760,8 +1171,11 @@ class Fuzzy {
 
         // Return result.
         return {
+          index,
+          threshold,
           location,
           distance,
+          similarity,
           score
         };
 
@@ -1546,3 +1960,6 @@ class Fuzzy {
   }
 
 }
+
+// Extend Vue with global variables.
+Vue.prototype.global = window;

@@ -113,9 +113,12 @@
   border: none;
 }
 .card-contact-name .icon {
+  margin-right: 1ex;
+}
+.card-contact-name .icon,
+.card-contact-name .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .card-contact-name .icon svg {
   fill: #091C44;
@@ -177,9 +180,12 @@
   border: none;
 }
 .card-contact-email .icon {
+  margin-right: 1ex;
+}
+.card-contact-email .icon,
+.card-contact-email .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .card-contact-email .icon svg {
   fill: #336BE6;

@@ -1,0 +1,27 @@
+{
+  "title": "Archive of Events",
+  "feed": "https://www.trumba.com/calendars/robert-woodruff-library.json",
+  "model": {
+    "id": "{eventID}",
+    "date": {
+      "start": "{startDateTime}",
+      "end": "{endDateTime}",
+      "formatted": "{dateTimeFormatted}"
+    },
+    "description": "{description}",
+    "link": {
+      "href": "/patterns/60-templates-events-event/60-templates-events-event.html?feed=https://www.trumba.com/calendars/robert-woodruff-library.json&id={eventID}"
+    },
+    "image?": {
+      "criteria": "{eventImage} && {eventImage.url}",
+      "value": {
+        "src": "{eventImage.url}"
+      }
+    }
+  },
+  "button": {
+    "vue": true,
+    "href": "'/patterns/60-templates-events-calendar/60-templates-events-calendar.html?feed=' + feed",
+    "label": "View Events Calendar"
+  }
+}

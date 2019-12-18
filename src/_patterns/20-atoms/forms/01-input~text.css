@@ -224,7 +224,7 @@
   line-height: 1.7857;
 }
 .input.-date {
-  background-image: url(../icons/php/icon.php?id=material-calendar_today&color=5387F7&size[width]=20&size[height]=20);
+  background-image: url(../assets/icons/php/icon.php?id=material-calendar_today&color=5387F7&size[width]=20&size[height]=20);
 }
 .input.-date::-webkit-calendar-picker-indicator {
   width: 40px;
@@ -244,7 +244,7 @@
   background-position: center right;
 }
 .input.-time {
-  background-image: url(../icons/php/icon.php?id=material-access_time&color=5387F7&size[width]=20&size[height]=20);
+  background-image: url(../assets/icons/php/icon.php?id=material-access_time&color=5387F7&size[width]=20&size[height]=20);
 }
 .input.-time.-inline {
   border: none;
@@ -263,7 +263,7 @@
 .input.-select {
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
-  background-image: url(../icons/php/icon.php?id=material-keyboard_arrow_down&color=5387F7&size[width]=20&size[height]=20);
+  background-image: url(../assets/icons/php/icon.php?id=material-keyboard_arrow_down&color=5387F7&size[width]=20&size[height]=20);
 }
 .input.-select:not(:focus), .input.-select.is-closed, .input.-select.is-blurred {
   background-color: #FFFFFF;
@@ -286,7 +286,7 @@
   padding-right: calc(0px + 30px + 10px);
   padding-top: 0px;
   padding-bottom: 0px;
-  background-image: url(../icons/php/icon.php?id=material-keyboard_arrow_down&color=5387F7);
+  background-image: url(../assets/icons/php/icon.php?id=material-keyboard_arrow_down&color=5387F7);
   background-size: auto 30px;
   background-position: calc(100% - 0px) center;
 }
@@ -322,7 +322,7 @@
   border-radius: 0;
 }
 .input.-checkbox:checked, .input.-checkbox.is-checked {
-  background-image: url(../icons/php/icon.php?id=material-check&color=5387F7&size[width]=20&size[height]=20);
+  background-image: url(../assets/icons/php/icon.php?id=material-check&color=5387F7&size[width]=20&size[height]=20);
 }
 .input.-radio {
   width: 15px;

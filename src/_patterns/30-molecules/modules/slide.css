@@ -275,6 +275,11 @@
   padding-right: 25px;
   height: 50px;
 }
+.slide-action .button .icon,
+.slide-action .button .icon svg {
+  width: 24px;
+  height: 24px;
+}
 .slide-action .button .icon.-left {
   margin-right: 1em;
 }

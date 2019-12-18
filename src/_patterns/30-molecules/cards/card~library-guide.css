@@ -64,9 +64,12 @@
   border: none;
 }
 .card-library-guide-title .icon {
+  margin-right: 1ex;
+}
+.card-library-guide-title .icon,
+.card-library-guide-title .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .card-library-guide-title .icon svg {
   fill: #082B73;

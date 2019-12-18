@@ -13,7 +13,7 @@
     {{#extend 'organisms-major' theme='dark' heading='Current Exhibitions'}}
       {{#content 'section-major-body'}}
 
-        {{> compounds-cards columns=(objectify m=1 l=1 xl=2) card-type='listing' cards=exhibits.current}}
+        {{> compounds-cards columns=(objectify m=1 l=1 xl=2) card-type='listing' cards=exhibits.current vertical=true}}
 
       {{/content}}
     {{/extend}}

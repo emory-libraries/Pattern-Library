@@ -1,3 +1,4 @@
+{{#unless (eq noscript true)}}
 <eul-notification inline-template :uid="'{{id}}'" :defaults="{
                                                       isDismissible: {{default dismissible true}}
                                                     }">
@@ -22,3 +23,15 @@
   </transition>
 
 </eul-notification>
+{{/unless}}
+
+{{#unless (eq noscript false)}}
+{{#unless (eq noscript true)}}<noscript>{{/unless}}
+  {{! TODO: Add checkbox toggle with respective show/hide styles to enable dismissible notifications when noscript is active.}}
+  <div class="notification -{{default type 'caution'}}" data-label="{{default label 'Alert'}}">
+    <div class="notification-message">
+      {{#if this.markdown}}{{markdown message}}{{else}}{{{message}}}{{/if}}
+    </div>
+  </div>
+{{#unless (eq noscript true)}}</noscript>{{/unless}}
+{{/unless}}

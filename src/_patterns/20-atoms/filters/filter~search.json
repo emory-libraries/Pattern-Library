@@ -3,7 +3,7 @@
   "layout": "contained",
   "mode": "big",
   "config": {
-    "scoring": true
+    "sort": true
   },
   "keys": [
     "service",

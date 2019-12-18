@@ -236,9 +236,14 @@
 }
 .card-librarian-subjects-list-item a .icon,
 .card-librarian-subjects-list-item .link .icon {
+  margin-right: 1ex;
+}
+.card-librarian-subjects-list-item a .icon,
+.card-librarian-subjects-list-item a .icon svg,
+.card-librarian-subjects-list-item .link .icon,
+.card-librarian-subjects-list-item .link .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .card-librarian-subjects-list-item a .icon svg,
 .card-librarian-subjects-list-item .link .icon svg {
@@ -325,9 +330,14 @@
 }
 .card-librarian-contact-info-item a .icon,
 .card-librarian-contact-info-item .link .icon {
+  margin-right: 1ex;
+}
+.card-librarian-contact-info-item a .icon,
+.card-librarian-contact-info-item a .icon svg,
+.card-librarian-contact-info-item .link .icon,
+.card-librarian-contact-info-item .link .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .card-librarian-contact-info-item a .icon svg,
 .card-librarian-contact-info-item .link .icon svg {
@@ -416,9 +426,14 @@
 }
 .card-librarian-contact-links-item a .icon,
 .card-librarian-contact-links-item .link .icon {
+  margin-right: 1ex;
+}
+.card-librarian-contact-links-item a .icon,
+.card-librarian-contact-links-item a .icon svg,
+.card-librarian-contact-links-item .link .icon,
+.card-librarian-contact-links-item .link .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .card-librarian-contact-links-item a .icon svg,
 .card-librarian-contact-links-item .link .icon svg {
@@ -503,9 +518,12 @@
   border: none;
 }
 .card-librarian-name .icon {
+  margin-right: 1ex;
+}
+.card-librarian-name .icon,
+.card-librarian-name .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .card-librarian-name .icon svg {
   fill: #091C44;

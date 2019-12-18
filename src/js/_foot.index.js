@@ -16,3 +16,5 @@ global.jQuery = global.$ = $;
 global.EUL = EUL;
 global.App = App;
 global.moment = moment;
+global.RSS = RSS;
+global.he = he;

@@ -1,6 +1,9 @@
 {
   "title": "Library Services",
   "subtitle": "The library offers a wide range of library and technology services to assist you with your research, writing, and use of the library.",
+  "config": {
+    "sort": true
+  },
   "buttons": [
     {
       "label": "Ask a Librarian",
@@ -22,55 +25,67 @@
         {
           "title": "Reserve a Study or Presentation Room",
           "content": "Ingeniis non ipsum vidisse o quem do in sunt voluptate, voluptate dolore ita possumus arbitrantur, nam aute probant. Eu eram arbitrantur, appellat quis quibusdam. Ubi nulla culpa nulla offendit ut malis nam mentitum, e offendit nam vidisse qui ipsum et admodum.",
-          "button": {
-            "href": "",
-            "label": "View Library Aids"
-          },
+          "buttons": [
+            {
+              "href": "",
+              "label": "View Library Aids"
+            }
+          ],
           "state": "closed"
         },
         {
           "title": "Borrow Equipment or Gadgets",
           "content": "Ingeniis non ipsum vidisse o quem do in sunt voluptate, voluptate dolore ita possumus arbitrantur, nam aute probant. Eu eram arbitrantur, appellat quis quibusdam. Ubi nulla culpa nulla offendit ut malis nam mentitum, e offendit nam vidisse qui ipsum et admodum.",
-          "button": {
-            "href": "",
-            "label": "View Library Aids"
-          },
+          "buttons": [
+            {
+              "href": "",
+              "label": "View Library Aids"
+            }
+          ],
           "state": "closed"
         },
         {
           "title": "Print, Copy, and Scan",
           "content": "Ingeniis non ipsum vidisse o quem do in sunt voluptate, voluptate dolore ita possumus arbitrantur, nam aute probant. Eu eram arbitrantur, appellat quis quibusdam. Ubi nulla culpa nulla offendit ut malis nam mentitum, e offendit nam vidisse qui ipsum et admodum.",
-          "button": {
-            "href": "",
-            "label": "View Library Aids"
-          },
+          "buttons": [
+            {
+              "href": "",
+              "label": "View Library Aids"
+            }
+          ],
           "state": "closed"
         },
         {
           "title": "Access Course Reserves",
           "content": "Ingeniis non ipsum vidisse o quem do in sunt voluptate, voluptate dolore ita possumus arbitrantur, nam aute probant. Eu eram arbitrantur, appellat quis quibusdam. Ubi nulla culpa nulla offendit ut malis nam mentitum, e offendit nam vidisse qui ipsum et admodum.",
-          "button": {
-            "href": "",
-            "label": "View Library Aids"
-          },
+          "buttons": [
+            {
+              "href": "",
+              "label": "View Library Aids"
+            }
+          ],
           "state": "closed"
         },
         {
           "title": "Research and Writing Assistance",
           "content": "Ingeniis non ipsum vidisse o quem do in sunt voluptate, voluptate dolore ita possumus arbitrantur, nam aute probant. Eu eram arbitrantur, appellat quis quibusdam. Ubi nulla culpa nulla offendit ut malis nam mentitum, e offendit nam vidisse qui ipsum et admodum.",
-          "button": {
-            "href": "",
-            "label": "View Library Aids"
-          },
+          "buttons": [
+            {
+              "href": "",
+              "label": "View Library Aids"
+            }
+          ],
           "state": "open"
         },
         {
           "title": "Request or Recall Materials",
           "content": "Ingeniis non ipsum vidisse o quem do in sunt voluptate, voluptate dolore ita possumus arbitrantur, nam aute probant. Eu eram arbitrantur, appellat quis quibusdam. Ubi nulla culpa nulla offendit ut malis nam mentitum, e offendit nam vidisse qui ipsum et admodum.",
-          "button": {
-            "href": "",
-            "label": "View Library Aids"
-          },
+          "buttons": [
+            {
+              "href": "",
+              "label": "View Library Aids"
+            }
+          ],
           "state": "closed"
         }
       ]
@@ -81,64 +96,78 @@
         {
           "title": "Find a Quiet Study Area",
           "content": "Ingeniis non ipsum vidisse o quem do in sunt voluptate, voluptate dolore ita possumus arbitrantur, nam aute probant. Eu eram arbitrantur, appellat quis quibusdam. Ubi nulla culpa nulla offendit ut malis nam mentitum, e offendit nam vidisse qui ipsum et admodum.",
-          "button": {
-            "href": "",
-            "label": "View Library Aids"
-          },
+          "buttons": [
+            {
+              "href": "",
+              "label": "View Library Aids"
+            }
+          ],
           "state": "closed"
         },
         {
           "title": "Find a Workstation or Application",
           "content": "Ingeniis non ipsum vidisse o quem do in sunt voluptate, voluptate dolore ita possumus arbitrantur, nam aute probant. Eu eram arbitrantur, appellat quis quibusdam. Ubi nulla culpa nulla offendit ut malis nam mentitum, e offendit nam vidisse qui ipsum et admodum.",
-          "button": {
-            "href": "",
-            "label": "View Library Aids"
-          },
+          "buttons": [
+            {
+              "href": "",
+              "label": "View Library Aids"
+            }
+          ],
           "state": "closed"
         },
         {
           "title": "Locate a Graduate Study Lab",
           "content": "Ingeniis non ipsum vidisse o quem do in sunt voluptate, voluptate dolore ita possumus arbitrantur, nam aute probant. Eu eram arbitrantur, appellat quis quibusdam. Ubi nulla culpa nulla offendit ut malis nam mentitum, e offendit nam vidisse qui ipsum et admodum.",
-          "button": {
-            "href": "",
-            "label": "View Library Aids"
-          },
+          "buttons": [
+            {
+              "href": "",
+              "label": "View Library Aids"
+            }
+          ],
           "state": "closed"
         },
         {
           "title": "Virtual Reality, 3D Printing and Scanning, New Technologies",
           "content": "Ingeniis non ipsum vidisse o quem do in sunt voluptate, voluptate dolore ita possumus arbitrantur, nam aute probant. Eu eram arbitrantur, appellat quis quibusdam. Ubi nulla culpa nulla offendit ut malis nam mentitum, e offendit nam vidisse qui ipsum et admodum.",
-          "button": {
-            "href": "",
-            "label": "View Library Aids"
-          },
+          "buttons": [
+            {
+              "href": "",
+              "label": "View Library Aids"
+            }
+          ],
           "state": "closed"
         },
         {
           "title": "Post-Productino, Web Development, and 3D Modeling",
           "content": "Ingeniis non ipsum vidisse o quem do in sunt voluptate, voluptate dolore ita possumus arbitrantur, nam aute probant. Eu eram arbitrantur, appellat quis quibusdam. Ubi nulla culpa nulla offendit ut malis nam mentitum, e offendit nam vidisse qui ipsum et admodum.",
-          "button": {
-            "href": "",
-            "label": "View Library Aids"
-          },
+          "buttons": [
+            {
+              "href": "",
+              "label": "View Library Aids"
+            }
+          ],
           "state": "closed"
         },
         {
           "title": "Use the Audio/Video/Image Production Studio",
           "content": "Ingeniis non ipsum vidisse o quem do in sunt voluptate, voluptate dolore ita possumus arbitrantur, nam aute probant. Eu eram arbitrantur, appellat quis quibusdam. Ubi nulla culpa nulla offendit ut malis nam mentitum, e offendit nam vidisse qui ipsum et admodum.",
-          "button": {
-            "href": "",
-            "label": "View Library Aids"
-          },
+          "buttons": [
+            {
+              "href": "",
+              "label": "View Library Aids"
+            }
+          ],
           "state": "closed"
         },
         {
           "title": "Play Video Games",
           "content": "Ingeniis non ipsum vidisse o quem do in sunt voluptate, voluptate dolore ita possumus arbitrantur, nam aute probant. Eu eram arbitrantur, appellat quis quibusdam. Ubi nulla culpa nulla offendit ut malis nam mentitum, e offendit nam vidisse qui ipsum et admodum.",
-          "button": {
-            "href": "",
-            "label": "View Library Aids"
-          },
+          "buttons": [
+            {
+              "href": "",
+              "label": "View Library Aids"
+            }
+          ],
           "state": "closed"
         }
       ]
@@ -149,28 +178,34 @@
         {
           "title": "Request a Purchase",
           "content": "Ingeniis non ipsum vidisse o quem do in sunt voluptate, voluptate dolore ita possumus arbitrantur, nam aute probant. Eu eram arbitrantur, appellat quis quibusdam. Ubi nulla culpa nulla offendit ut malis nam mentitum, e offendit nam vidisse qui ipsum et admodum.",
-          "button": {
-            "href": "",
-            "label": "View Library Aids"
-          },
+          "buttons": [
+            {
+              "href": "",
+              "label": "View Library Aids"
+            }
+          ],
           "state": "closed"
         },
         {
           "title": "Apply for an Individual Study Room or Carrel (Faculty and Graduate Only)",
           "content": "Ingeniis non ipsum vidisse o quem do in sunt voluptate, voluptate dolore ita possumus arbitrantur, nam aute probant. Eu eram arbitrantur, appellat quis quibusdam. Ubi nulla culpa nulla offendit ut malis nam mentitum, e offendit nam vidisse qui ipsum et admodum.",
-          "button": {
-            "href": "",
-            "label": "View Library Aids"
-          },
+          "buttons": [
+            {
+              "href": "",
+              "label": "View Library Aids"
+            }
+          ],
           "state": "closed"
         },
         {
           "title": "Submit an ILL Request (InterLibrary Lending)",
           "content": "Ingeniis non ipsum vidisse o quem do in sunt voluptate, voluptate dolore ita possumus arbitrantur, nam aute probant. Eu eram arbitrantur, appellat quis quibusdam. Ubi nulla culpa nulla offendit ut malis nam mentitum, e offendit nam vidisse qui ipsum et admodum.",
-          "button": {
-            "href": "",
-            "label": "View Library Aids"
-          },
+          "buttons": [
+            {
+              "href": "",
+              "label": "View Library Aids"
+            }
+          ],
           "state": "closed"
         }
       ]
@@ -181,37 +216,45 @@
         {
           "title": "Connect to the Internet (On Campus)",
           "content": "Ingeniis non ipsum vidisse o quem do in sunt voluptate, voluptate dolore ita possumus arbitrantur, nam aute probant. Eu eram arbitrantur, appellat quis quibusdam. Ubi nulla culpa nulla offendit ut malis nam mentitum, e offendit nam vidisse qui ipsum et admodum.",
-          "button": {
-            "href": "",
-            "label": "View Library Aids"
-          },
+          "buttons": [
+            {
+              "href": "",
+              "label": "View Library Aids"
+            }
+          ],
           "state": "closed"
         },
         {
           "title": "Connect from Off Campus (VPNs and Proxies)",
           "content": "Ingeniis non ipsum vidisse o quem do in sunt voluptate, voluptate dolore ita possumus arbitrantur, nam aute probant. Eu eram arbitrantur, appellat quis quibusdam. Ubi nulla culpa nulla offendit ut malis nam mentitum, e offendit nam vidisse qui ipsum et admodum.",
-          "button": {
-            "href": "",
-            "label": "View Library Aids"
-          },
+          "buttons": [
+            {
+              "href": "",
+              "label": "View Library Aids"
+            }
+          ],
           "state": "closed"
         },
         {
           "title": "Get Hardware or Software Support",
           "content": "Ingeniis non ipsum vidisse o quem do in sunt voluptate, voluptate dolore ita possumus arbitrantur, nam aute probant. Eu eram arbitrantur, appellat quis quibusdam. Ubi nulla culpa nulla offendit ut malis nam mentitum, e offendit nam vidisse qui ipsum et admodum.",
-          "button": {
-            "href": "",
-            "label": "View Library Aids"
-          },
+          "buttons": [
+            {
+              "href": "",
+              "label": "View Library Aids"
+            }
+          ],
           "state": "closed"
         },
         {
           "title": "Repair Device or Computer",
           "content": "Ingeniis non ipsum vidisse o quem do in sunt voluptate, voluptate dolore ita possumus arbitrantur, nam aute probant. Eu eram arbitrantur, appellat quis quibusdam. Ubi nulla culpa nulla offendit ut malis nam mentitum, e offendit nam vidisse qui ipsum et admodum.",
-          "button": {
-            "href": "",
-            "label": "View Library Aids"
-          },
+          "buttons": [
+            {
+              "href": "",
+              "label": "View Library Aids"
+            }
+          ],
           "state": "closed"
         }
       ]

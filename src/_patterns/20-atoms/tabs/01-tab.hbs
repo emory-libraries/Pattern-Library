@@ -38,6 +38,7 @@
   </eul-tab>
 {{/unless}}
 
+{{#unless (eq noscript false)}}
 {{#unless (eq noscript true)}}<noscript>{{/unless}}
 
   {{#if (not (eq search true))}}
@@ -47,3 +48,4 @@
   <label class="tab" for="{{this.uid}}" data-group="{{group}}">{{label}}</label>
 
 {{#unless (eq noscript true)}}</noscript>{{/unless}}
+{{/unless}}

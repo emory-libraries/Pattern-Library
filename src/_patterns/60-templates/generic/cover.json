@@ -102,18 +102,18 @@
     "heading": "Upcoming",
     "sources": [
       {
-        "url": "https://www.trumba.com/calendars/robert-woodruff-library.json",
+        "feed": "https://www.trumba.com/calendars/robert-woodruff-library.json",
         "heading": "Events",
         "icon": "material-calendar_month_outline",
         "button": {
           "label": "View All Events",
-          "href": ""
+          "href": "/patterns/60-templates-events-calendar/60-templates-events-calendar.html?feed=https://www.trumba.com/calendars/robert-woodruff-library.json"
         },
         "model": {
           "id": "{eventID}",
           "date": "{dateTimeFormatted}",
           "link": {
-            "href": "/event?feed={:url:}&id={eventID}"
+            "href": "/patterns/60-templates-events-event/60-templates-events-event.html?feed={__FEED__}&id={eventID}"
           },
           "button?": {
             "criteria": "{openSignUp} === true && {pastDeadline} === false",
@@ -125,18 +125,18 @@
         }
       },
       {
-        "url": "https://www.trumba.com/calendars/robert-woodruff-library-classes-at-woodruff-library.json",
+        "feed": "https://www.trumba.com/calendars/robert-woodruff-library-classes-at-woodruff-library.json",
         "heading": "Workshops",
         "icon": "material-pencil_ruler",
         "button": {
           "label": "View All Workshops",
-          "href": ""
+          "href": "/patterns/60-templates-events-calendar/60-templates-events-calendar.html?feed=https://www.trumba.com/calendars/robert-woodruff-library-classes-at-woodruff-library.json"
         },
         "model": {
           "id": "{eventID}",
           "date": "{dateTimeFormatted}",
           "link": {
-            "href": "/class?feed={:url:}&id={eventID}"
+            "href": "/patterns/60-templates-events-event/60-templates-events-event.html?feed={__FEED__}&id={eventID}"
           },
           "button?": {
             "criteria": "{openSignUp} === true && {pastDeadline} === false",
@@ -150,7 +150,7 @@
     ]
   },
   "related": {
-    "heading": "Get Help Using the Library",
+    "heading": "Improve Your Research & Writing",
     "cards": [
       {
         "title": "Access Library Resources",
@@ -169,6 +169,12 @@
         "link": {
           "href": ""
         }
+      }
+    ],
+    "buttons": [
+      {
+        "label": "View All Research Help",
+        "href": ""
       }
     ]
   }

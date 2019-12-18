@@ -1,6 +1,47 @@
 {
-  "__params__": {
-    "feed": "https://www.trumba.com/calendars/robert-woodruff-library.json",
-    "id": 133548190
+  "title": "Event",
+  "feed": "https://www.trumba.com/calendars/LibrarySigns.json",
+  "id": "__FIRST__",
+  "model": {
+    "id": "{eventID}",
+    "date": "{dateTimeFormatted}",
+    "description": "{description}",
+    "link": {
+      "href": "{permaLinkUrl}"
+    },
+    "button?": {
+      "criteria": "{openSignUp} === true && {pastDeadline} === false",
+      "value": {
+        "label": "Sign Up",
+        "href": "{signUpUrl}"
+      }
+    },
+    "sections": [
+      {
+        "title": "Location",
+        "icon": "material-map",
+        "content": "{location}"
+      },
+      {
+        "title": "Cost",
+        "icon": "material-attach_money",
+        "content": "{customFields[label='Cost'].value}"
+      },
+      {
+        "title": "Department",
+        "icon": "material-office",
+        "content": "{customFields[label='Department / Organization'].value | list}"
+      },
+      {
+        "title": "Contact",
+        "icon": "material-mail",
+        "content": [
+          "{customFields[label='Contact Name'].value}",
+          "{customFields[label='Contact Email'].value | mailto}"
+        ]
+      }
+    ],
+    "topics": "{customFields[label='University Event Topic'].value | list}",
+    "hero": "{detailImage.url}"
   }
 }

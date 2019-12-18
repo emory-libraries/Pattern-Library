@@ -27,7 +27,7 @@
     {{else if (eq (default ../card-type card-type) 'library-guide')}}
       {{> molecules-card-library-guide classes="" filterable=(default ../filterable false)}}
     {{else if (eq (default ../card-type card-type) 'listing')}}
-      {{> molecules-card-listing}}
+      {{> molecules-card-listing vertical=(default ../vertical false)}}
     {{else if (eq (default ../card-type card-type) 'multimedia')}}
       {{> molecules-card-multimedia classes="" icon-type=../icon-type}}
     {{/if}}

@@ -1,5 +1,11 @@
 {{! Create an index contianing the IDs of all staff in order to enable filtering. }}
-{{assign 'index' (pluck staff 'id')}}
+{{#each staff}}
+
+  {{storagePush 'index' (dashcase (lowercase name))}}
+
+{{/each}}
+
+{{assign 'index' (storageGet 'index')}}
 
 {{! Determine the default query in the search filter menu. }}
 {{#if __params__}}{{assign 'query' (default __params__.q __params__.query '')}}{{/if}}
@@ -19,7 +25,7 @@
           {{> atoms-filter-search layout='contained'
                                   mode='big'
                                   keys=(makeArray 'name' 'title' 'library' 'phone' 'email')
-                                  config=(objectify sort=true)
+                                  config=(objectify tokenize=true matchAllTokens=true sort=true)
                                   placeholder=(default input-placeholder placeholder 'Search for a Staff Member')}}
 
           {{! Render the bio cards. }}

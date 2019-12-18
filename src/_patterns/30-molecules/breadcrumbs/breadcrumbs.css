@@ -57,9 +57,12 @@
   border: none;
 }
 .breadcrumbs-crumb a .icon {
+  margin-right: 1ex;
+}
+.breadcrumbs-crumb a .icon,
+.breadcrumbs-crumb a .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .breadcrumbs-crumb a .icon svg {
   fill: #5387F7;

@@ -178,9 +178,14 @@
 }
 .footer-list .link .icon,
 .footer-list a .icon {
+  margin-right: 1ex;
+}
+.footer-list .link .icon,
+.footer-list .link .icon svg,
+.footer-list a .icon,
+.footer-list a .icon svg {
   width: 24px;
   height: 24px;
-  margin-right: 1ex;
 }
 .footer-list .link .icon svg,
 .footer-list a .icon svg {

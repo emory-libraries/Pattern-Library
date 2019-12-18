@@ -317,17 +317,17 @@
 }
 @media (max-width: 600px) {
   .tab:active::before, .tab.is-active::before, .tab-menu:not(.-dropdown).-light .tab:active::before, .tab-menu:not(.-dropdown).-light .tab.is-active::before, noscript .tab-menu:not(.-dropdown).-light .tab:active::before, noscript .tab-menu:not(.-dropdown).-light .tab.is-active::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .tab:active::before, .tab.is-active::before, .tab-menu:not(.-dropdown).-light .tab:active::before, .tab-menu:not(.-dropdown).-light .tab.is-active::before, noscript .tab-menu:not(.-dropdown).-light .tab:active::before, noscript .tab-menu:not(.-dropdown).-light .tab.is-active::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 901px) {
   .tab:active::after, .tab.is-active::after, .tab-menu:not(.-dropdown).-light .tab:active::after, .tab-menu:not(.-dropdown).-light .tab.is-active::after, noscript .tab-menu:not(.-dropdown).-light .tab:active::after, noscript .tab-menu:not(.-dropdown).-light .tab.is-active::after {
-    content: url(../icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 .tab-menu:not(.-dropdown).-dark .tab:active, .tab-menu:not(.-dropdown).-dark .tab.is-active, noscript .tab-menu:not(.-dropdown).-dark .tab:active, noscript .tab-menu:not(.-dropdown).-dark .tab.is-active {
@@ -335,17 +335,17 @@
 }
 @media (max-width: 600px) {
   .tab-menu:not(.-dropdown).-dark .tab:active::before, .tab-menu:not(.-dropdown).-dark .tab.is-active::before, noscript .tab-menu:not(.-dropdown).-dark .tab:active::before, noscript .tab-menu:not(.-dropdown).-dark .tab.is-active::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .tab-menu:not(.-dropdown).-dark .tab:active::before, .tab-menu:not(.-dropdown).-dark .tab.is-active::before, noscript .tab-menu:not(.-dropdown).-dark .tab:active::before, noscript .tab-menu:not(.-dropdown).-dark .tab.is-active::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 901px) {
   .tab-menu:not(.-dropdown).-dark .tab:active::after, .tab-menu:not(.-dropdown).-dark .tab.is-active::after, noscript .tab-menu:not(.-dropdown).-dark .tab:active::after, noscript .tab-menu:not(.-dropdown).-dark .tab.is-active::after {
-    content: url(../icons/php/icon.php?id=material-arrow_drop_down&color=E9BF55&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_drop_down&color=E9BF55&size[width]=30&size[height]=30);
   }
 }
 .tab-menu {
@@ -360,17 +360,17 @@
 }
 @media (max-width: 600px) {
   .tab-switch:checked + .tab::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .tab-switch:checked + .tab::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 901px) {
   .tab-switch:checked + .tab::after {
-    content: url(../icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #FFFFFF), color-stop(55%, #FFFFFF), color-stop(55%, transparent));
     background-image: linear-gradient(to bottom, transparent 45%, #FFFFFF 45%, #FFFFFF 55%, transparent 55%);
   }
@@ -380,17 +380,17 @@
 }
 @media (max-width: 600px) {
   .tab-menu:not(.-dropdown).-light .tab-switch:checked + .tab::before, noscript .tab-menu:not(.-dropdown).-light .tab-switch:checked + .tab::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .tab-menu:not(.-dropdown).-light .tab-switch:checked + .tab::before, noscript .tab-menu:not(.-dropdown).-light .tab-switch:checked + .tab::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=336BE6&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 901px) {
   .tab-menu:not(.-dropdown).-light .tab-switch:checked + .tab::after, noscript .tab-menu:not(.-dropdown).-light .tab-switch:checked + .tab::after {
-    content: url(../icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_drop_down&color=336BE6&size[width]=30&size[height]=30);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #FFFFFF), color-stop(55%, #FFFFFF), color-stop(55%, transparent));
     background-image: linear-gradient(to bottom, transparent 45%, #FFFFFF 45%, #FFFFFF 55%, transparent 55%);
   }
@@ -401,17 +401,17 @@
 }
 @media (max-width: 600px) {
   .tab-menu:not(.-dropdown).-dark .tab-switch:checked + .tab::before, noscript .tab-menu:not(.-dropdown).-dark .tab-switch:checked + .tab::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
   .tab-menu:not(.-dropdown).-dark .tab-switch:checked + .tab::before, noscript .tab-menu:not(.-dropdown).-dark .tab-switch:checked + .tab::before {
-    content: url(../icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_right&color=E9BF55&size[width]=30&size[height]=30);
   }
 }
 @media (min-width: 901px) {
   .tab-menu:not(.-dropdown).-dark .tab-switch:checked + .tab::after, noscript .tab-menu:not(.-dropdown).-dark .tab-switch:checked + .tab::after {
-    content: url(../icons/php/icon.php?id=material-arrow_drop_down&color=E9BF55&size[width]=30&size[height]=30);
+    content: url(../assets/icons/php/icon.php?id=material-arrow_drop_down&color=E9BF55&size[width]=30&size[height]=30);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), color-stop(45%, #091C44), color-stop(55%, #091C44), color-stop(55%, transparent));
     background-image: linear-gradient(to bottom, transparent 45%, #091C44 45%, #091C44 55%, transparent 55%);
   }

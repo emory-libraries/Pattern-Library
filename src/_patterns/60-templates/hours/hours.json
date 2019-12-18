@@ -9,7 +9,4016 @@
           "semester": "Fall",
           "year": 2019,
           "start": "08-01-2019",
-          "end": "12-01-2019",
+          "end": "12-20-2019",
+          "visible": false,
+          "building": {
+            "hours": {
+              "sunday": {
+                "status": "open",
+                "open-24-hours": false,
+                "open": {
+                  "format": "structured",
+                  "hour": 11,
+                  "minute": 0,
+                  "meridiem": "AM",
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": 12,
+                  "minute": 0,
+                  "meridiem": "AM",
+                  "text": null
+                }
+              },
+              "monday": {
+                "status": "open",
+                "open-24-hours": true,
+                "open": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                }
+              },
+              "tuesday": {
+                "status": "open",
+                "open-24-hours": true,
+                "open": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                }
+              },
+              "wednesday": {
+                "status": "open",
+                "open-24-hours": true,
+                "open": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                }
+              },
+              "thursday": {
+                "status": "open",
+                "open-24-hours": true,
+                "open": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                }
+              },
+              "friday": {
+                "status": "open",
+                "open-24-hours": false,
+                "open": {
+                  "format": "freeform",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                },
+                "close": {
+                  "format": "freeform",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": "Closes 12am"
+                }
+              },
+              "saturday": {
+                "status": "open",
+                "open-24-hours": false,
+                "open": {
+                  "format": "structured",
+                  "hour": 7,
+                  "minute": 30,
+                  "meridiem": "AM",
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": 12,
+                  "minute": 0,
+                  "meridiem": "AM",
+                  "text": null
+                }
+              }
+            },
+            "exceptions": [
+              {
+                "status": "closed",
+                "open-24-hours": false,
+                "start": "09-02-2019",
+                "end": "09-02-2019",
+                "open": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                }
+              },
+              {
+                "status": "closed",
+                "open-24-hours": false,
+                "start": "11-28-2019",
+                "end": "11-29-2019",
+                "open": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                }
+              }
+            ],
+            "link": {
+              "href": "//example.com/hours.pdf",
+              "label": "Woodruff Library Master Schedule"
+            }
+          },
+          "services": [
+            {
+              "name": "Center for Faculty Development and Excellence",
+              "hours": {
+                "sunday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "09-02-2019",
+                  "end": "09-02-2019",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "11-28-2019",
+                  "end": "11-29-2019",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Circulation",
+              "hours": {
+                "sunday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 11,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "09-02-2019",
+                  "end": "09-02-2019",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "11-28-2019",
+                  "end": "11-29-2019",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Course Reserves",
+              "hours": {
+                "sunday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "09-02-2019",
+                  "end": "09-02-2019",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "11-28-2019",
+                  "end": "11-29-2019",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Center for Digital Scholarship",
+              "hours": {
+                "sunday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "09-02-2019",
+                  "end": "09-02-2019",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "11-28-2019",
+                  "end": "11-29-2019",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Interlibrary Services",
+              "hours": {
+                "sunday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "09-02-2019",
+                  "end": "09-02-2019",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "11-28-2019",
+                  "end": "11-29-2019",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Library Service Desk",
+              "hours": {
+                "sunday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 11,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "09-02-2019",
+                  "end": "09-02-2019",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "11-28-2019",
+                  "end": "11-29-2019",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Matheson Reading Room",
+              "hours": {
+                "sunday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 11,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "09-02-2019",
+                  "end": "09-02-2019",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "11-28-2019",
+                  "end": "11-29-2019",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Music and Media",
+              "hours": {
+                "sunday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "09-02-2019",
+                  "end": "09-02-2019",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "11-28-2019",
+                  "end": "11-29-2019",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Peet's Coffee & Tea",
+              "hours": {
+                "sunday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 11,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "09-02-2019",
+                  "end": "09-02-2019",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "11-28-2019",
+                  "end": "11-29-2019",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Stacks Tower",
+              "hours": {
+                "sunday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 11,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "09-02-2019",
+                  "end": "09-02-2019",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "11-28-2019",
+                  "end": "11-29-2019",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Visitors",
+              "hours": {
+                "sunday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "09-02-2019",
+                  "end": "09-02-2019",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "11-28-2019",
+                  "end": "11-29-2019",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              ]
+            }
+          ],
+          "link": {
+            "href": "//example.com/schedule.pdf",
+            "label": "Full Schedule of Hours"
+          }
+        },
+        {
+          "semester": "Spring",
+          "year": 2020,
+          "start": "01-14-2020",
+          "end": "05-06-2020",
+          "visible": true,
+          "building": {
+            "hours": {
+              "sunday": {
+                "status": "open",
+                "open-24-hours": false,
+                "open": {
+                  "format": "structured",
+                  "hour": 11,
+                  "minute": 0,
+                  "meridiem": "AM",
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": 12,
+                  "minute": 0,
+                  "meridiem": "AM",
+                  "text": null
+                }
+              },
+              "monday": {
+                "status": "open",
+                "open-24-hours": true,
+                "open": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                }
+              },
+              "tuesday": {
+                "status": "open",
+                "open-24-hours": true,
+                "open": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                }
+              },
+              "wednesday": {
+                "status": "open",
+                "open-24-hours": true,
+                "open": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                }
+              },
+              "thursday": {
+                "status": "open",
+                "open-24-hours": true,
+                "open": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                }
+              },
+              "friday": {
+                "status": "open",
+                "open-24-hours": false,
+                "open": {
+                  "format": "freeform",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                },
+                "close": {
+                  "format": "freeform",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": "Closes 12am"
+                }
+              },
+              "saturday": {
+                "status": "open",
+                "open-24-hours": false,
+                "open": {
+                  "format": "structured",
+                  "hour": 7,
+                  "minute": 30,
+                  "meridiem": "AM",
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": 12,
+                  "minute": 0,
+                  "meridiem": "AM",
+                  "text": null
+                }
+              }
+            },
+            "exceptions": [
+              {
+                "status": "open",
+                "open-24-hours": false,
+                "start": "01-14-2020",
+                "end": "01-16-2020",
+                "open": {
+                  "format": "structured",
+                  "hour": 7,
+                  "minute": 30,
+                  "meridiem": "AM",
+                  "text": null
+                },
+                "close": {
+                  "format": "freeform",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": "Midnight"
+                }
+              },
+              {
+                "status": "open",
+                "open-24-hours": false,
+                "start": "1-17-2020",
+                "end": "1-17-2020",
+                "open": {
+                  "format": "structured",
+                  "hour": 7,
+                  "minute": 30,
+                  "meridiem": "AM",
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": 6,
+                  "minute": null,
+                  "meridiem": "PM",
+                  "text": null
+                }
+              },
+              {
+                "status": "open",
+                "open-24-hours": false,
+                "start": "1-18-2020",
+                "end": "1-19-2020",
+                "open": {
+                  "format": "structured",
+                  "hour": 11,
+                  "minute": null,
+                  "meridiem": "AM",
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": 6,
+                  "minute": null,
+                  "meridiem": "PM",
+                  "text": null
+                }
+              },
+              {
+                "status": "open",
+                "open-24-hours": false,
+                "start": "1-20-2020",
+                "end": "1-20-2020",
+                "open": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": "AM",
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": "AM",
+                  "text": null
+                }
+              }
+            ],
+            "link": {
+              "href": "//example.com/hours.pdf",
+              "label": "Woodruff Library Master Schedule"
+            }
+          },
+          "services": [
+            {
+              "name": "Center for Faculty Development and Excellence",
+              "hours": {
+                "sunday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "01-20-2020",
+                  "end": "01-20-2020",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Circulation",
+              "hours": {
+                "sunday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 11,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "01-20-2020",
+                  "end": "01-20-2020",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Course Reserves",
+              "hours": {
+                "sunday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "01-20-2020",
+                  "end": "01-20-2020",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Center for Digital Scholarship",
+              "hours": {
+                "sunday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "01-20-2020",
+                  "end": "01-20-2020",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Interlibrary Services",
+              "hours": {
+                "sunday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "01-20-2020",
+                  "end": "01-20-2020",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Library Service Desk",
+              "hours": {
+                "sunday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 11,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "01-20-2020",
+                  "end": "01-20-2020",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Matheson Reading Room",
+              "hours": {
+                "sunday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 11,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "01-20-2020",
+                  "end": "01-20-2020",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Music and Media",
+              "hours": {
+                "sunday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "01-20-2020",
+                  "end": "01-20-2020",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Peet's Coffee & Tea",
+              "hours": {
+                "sunday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 11,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "01-20-2020",
+                  "end": "01-20-2020",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Stacks Tower",
+              "hours": {
+                "sunday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 11,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "01-20-2020",
+                  "end": "01-20-2020",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Visitors",
+              "hours": {
+                "sunday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "01-20-2020",
+                  "end": "01-20-2020",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  }
+                }
+              ]
+            }
+          ],
+          "link": {
+            "href": "//example.com/schedule.pdf",
+            "label": "Full Schedule of Hours"
+          }
+        }
+      ]
+    },
+    {
+      "location": "Business Library",
+      "semesters": [
+        {
+          "semester": "Fall",
+          "year": 2019,
+          "start": "08-01-2019",
+          "end": "12-20-2019",
           "visible": true,
           "building": {
             "hours": {
@@ -2096,12 +6105,1920 @@
             "href": "//example.com/schedule.pdf",
             "label": "Full Schedule of Hours"
           }
+        },
+        {
+          "semester": "Spring",
+          "year": 2020,
+          "start": "01-14-2020",
+          "end": "05-06-2020",
+          "visible": true,
+          "building": {
+            "hours": {
+              "sunday": {
+                "status": "open",
+                "open-24-hours": false,
+                "open": {
+                  "format": "structured",
+                  "hour": 11,
+                  "minute": 0,
+                  "meridiem": "AM",
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": 12,
+                  "minute": 0,
+                  "meridiem": "AM",
+                  "text": null
+                }
+              },
+              "monday": {
+                "status": "open",
+                "open-24-hours": true,
+                "open": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                }
+              },
+              "tuesday": {
+                "status": "open",
+                "open-24-hours": true,
+                "open": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                }
+              },
+              "wednesday": {
+                "status": "open",
+                "open-24-hours": true,
+                "open": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                }
+              },
+              "thursday": {
+                "status": "open",
+                "open-24-hours": true,
+                "open": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                }
+              },
+              "friday": {
+                "status": "open",
+                "open-24-hours": false,
+                "open": {
+                  "format": "freeform",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": null
+                },
+                "close": {
+                  "format": "freeform",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": "Closes 12am"
+                }
+              },
+              "saturday": {
+                "status": "open",
+                "open-24-hours": false,
+                "open": {
+                  "format": "structured",
+                  "hour": 7,
+                  "minute": 30,
+                  "meridiem": "AM",
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": 12,
+                  "minute": 0,
+                  "meridiem": "AM",
+                  "text": null
+                }
+              }
+            },
+            "exceptions": [
+              {
+                "status": "open",
+                "open-24-hours": false,
+                "start": "01-14-2020",
+                "end": "01-16-2020",
+                "open": {
+                  "format": "structured",
+                  "hour": 7,
+                  "minute": 30,
+                  "meridiem": "AM",
+                  "text": null
+                },
+                "close": {
+                  "format": "freeform",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": null,
+                  "text": "Midnight"
+                }
+              },
+              {
+                "status": "open",
+                "open-24-hours": false,
+                "start": "1-17-2020",
+                "end": "1-17-2020",
+                "open": {
+                  "format": "structured",
+                  "hour": 7,
+                  "minute": 30,
+                  "meridiem": "AM",
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": 6,
+                  "minute": null,
+                  "meridiem": "PM",
+                  "text": null
+                }
+              },
+              {
+                "status": "open",
+                "open-24-hours": false,
+                "start": "1-18-2020",
+                "end": "1-19-2020",
+                "open": {
+                  "format": "structured",
+                  "hour": 11,
+                  "minute": null,
+                  "meridiem": "AM",
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": 6,
+                  "minute": null,
+                  "meridiem": "PM",
+                  "text": null
+                }
+              },
+              {
+                "status": "open",
+                "open-24-hours": false,
+                "start": "1-20-2020",
+                "end": "1-20-2020",
+                "open": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": "AM",
+                  "text": null
+                },
+                "close": {
+                  "format": "structured",
+                  "hour": null,
+                  "minute": null,
+                  "meridiem": "AM",
+                  "text": null
+                }
+              }
+            ],
+            "link": {
+              "href": "//example.com/hours.pdf",
+              "label": "Woodruff Library Master Schedule"
+            }
+          },
+          "services": [
+            {
+              "name": "Center for Faculty Development and Excellence",
+              "hours": {
+                "sunday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "01-20-2020",
+                  "end": "01-20-2020",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Circulation",
+              "hours": {
+                "sunday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 11,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "01-20-2020",
+                  "end": "01-20-2020",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Course Reserves",
+              "hours": {
+                "sunday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "01-20-2020",
+                  "end": "01-20-2020",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Center for Digital Scholarship",
+              "hours": {
+                "sunday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "01-20-2020",
+                  "end": "01-20-2020",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Interlibrary Services",
+              "hours": {
+                "sunday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "01-20-2020",
+                  "end": "01-20-2020",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Library Service Desk",
+              "hours": {
+                "sunday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 11,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "01-20-2020",
+                  "end": "01-20-2020",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Matheson Reading Room",
+              "hours": {
+                "sunday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 11,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "01-20-2020",
+                  "end": "01-20-2020",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Music and Media",
+              "hours": {
+                "sunday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "01-20-2020",
+                  "end": "01-20-2020",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Peet's Coffee & Tea",
+              "hours": {
+                "sunday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 11,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "01-20-2020",
+                  "end": "01-20-2020",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Stacks Tower",
+              "hours": {
+                "sunday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 11,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 8,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 10,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "01-20-2020",
+                  "end": "01-20-2020",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Visitors",
+              "hours": {
+                "sunday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                },
+                "monday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "tuesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "wednesday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "thursday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "friday": {
+                  "status": "open",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": 9,
+                    "minute": 0,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": 5,
+                    "minute": 0,
+                    "meridiem": "PM",
+                    "text": null
+                  }
+                },
+                "saturday": {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": null,
+                    "text": null
+                  }
+                }
+              },
+              "exceptions": [
+                {
+                  "status": "closed",
+                  "open-24-hours": false,
+                  "start": "01-20-2020",
+                  "end": "01-20-2020",
+                  "open": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  },
+                  "close": {
+                    "format": "structured",
+                    "hour": null,
+                    "minute": null,
+                    "meridiem": "AM",
+                    "text": null
+                  }
+                }
+              ]
+            }
+          ],
+          "link": {
+            "href": "//example.com/schedule.pdf",
+            "label": "Full Schedule of Hours"
+          }
         }
       ]
-    },
-    {
-      "location": "Business Library",
-      "semesters": []
     },
     {
       "location": "Oxford College Library",

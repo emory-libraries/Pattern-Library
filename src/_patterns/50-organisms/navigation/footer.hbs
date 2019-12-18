@@ -1,7 +1,8 @@
 {{#with footer}}
+{{assign 'noscript' (default noscript ../noscript false)}}
 <footer class="footer{{#if ../classes}} {{../classes}}{{/if}}">
 
-  {{#with navigation}}{{> molecules-branding-footer classes='footer-branding' logo=../logo}}{{/with}}
+  {{#with navigation noscript=noscript}}{{> molecules-branding-footer classes='footer-branding' logo=../logo}}{{/with}}
 
   {{#each (limit navigation.lists 4) as |list|}}
     <ul class="footer-list">
@@ -13,9 +14,9 @@
 
   {{> atoms-rule style='light' classes='footer-divider'}}
 
-  {{#with navigation}}{{> molecules-social-media classes='footer-socials'}}{{/with}}
+  {{#with navigation noscript=noscript}}{{> molecules-social-media classes='footer-socials'}}{{/with}}
 
-  {{#with copyright}}{{> atoms-copyright classes='footer-copyright'}}{{/with}}
+  {{#with copyright noscript=noscript}}{{> atoms-copyright classes='footer-copyright'}}{{/with}}
 
 </footer>
 {{/with}}

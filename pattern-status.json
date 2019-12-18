@@ -10,6 +10,7 @@
   "10-tokens-10-globals-text": "review",
   "10-tokens-10-globals-grid": "review",
   "10-tokens-10-globals-reveal": "review",
+  "10-tokens-10-globals-spinner": "review",
   "20-atoms-badges-01-badge": "review",
   "20-atoms-buttons-01-button-link": "review",
   "20-atoms-buttons-02-button-action": "review",
@@ -151,5 +152,6 @@
   "60-templates-hours-hours": "review",
   "60-templates-events-event": "review",
   "60-templates-events-calendar": "review",
-  "70-pages-static-home": "review"
+  "70-pages-static-home": "review",
+  "60-templates-events-archive": "review"
 }
