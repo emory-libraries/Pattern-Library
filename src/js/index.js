@@ -1,5 +1,5 @@
 // Enable Vue devtools
-Vue.config.devtools = true;
+//Vue.config.devtools = true;
 
 
 // Extend lodash.
