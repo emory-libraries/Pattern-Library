@@ -18,7 +18,7 @@
       <span class="nav-button-label">{{label}}</span>
     </a>
   {{else}}
-    <label for="{{#if (or utility flyout)}}{{default for (combine 'nav-menu-utility--' (dashcase (lowercase (default for-suffix label))))}}{{else}}{{default for (combine 'nav-menu-main--' (dashcase (lowercase (default for-suffix label))))}}{{/if}}"
+    <label {{!-- for="{{#if (or utility flyout)}}{{default for (combine 'nav-menu-utility--' (dashcase (lowercase (default for-suffix label))))}}{{else}}{{default for (combine 'nav-menu-main--' (dashcase (lowercase (default for-suffix label))))}}{{/if}}" --}}
            class="nav-button{{#if utility}} -utility{{/if}}{{#if flyout}} -flyout{{/if}}{{#if search}} -search{{/if}}{{#if toggle}} -toggle{{/if}}{{#if (or hover focus)}} is-hover{{/if}}{{#if active}} is-active{{/if}}{{#if disabled}} is-disabled{{/if}}{{#if classes}} {{classes}}{{/if}}"
            tabindex="0"
            {{#if disabled}} disabled{{/if}}
