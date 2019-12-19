@@ -24,6 +24,7 @@
   <div class="search{{#if mode}} -{{mode}}{{/if}}{{#if (and layout (eq layout 'contained'))}} -contained{{/if}}">
 
     <input type="search"
+           {{#if aria-label}}aria-label="{{aria-label}}"{{/if}}
            v-model="query"
            autocomplete="{{#if autocomplete}}on{{else}}off{{/if}}"
            :placeholder="placeholder"
@@ -120,6 +121,7 @@
 
       <input type="search"
              name="query"
+             {{#if aria-label}}aria-label="{{aria-label}}"{{/if}}
              placeholder="{{service.placeholder}}"
              class="input -search{{#if ../mode}} -{{../mode}}{{/if}} search-box{{#if ../disabled}} is-disabled{{/if}}{{#if ../hover}} is-hover{{/if}}{{#if ../focus}} is-focus{{/if}}"
              {{#if ../disabled}}disabled{{/if}}>
