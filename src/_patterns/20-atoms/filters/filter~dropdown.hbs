@@ -17,6 +17,7 @@
   <div class="input-container -row{{#if inline}} -inline{{/if}}" style="--layout: 1fr;">
 
     <select v-model="selected"
+            aria-label="{{default aria-label "Filter by selection"}}"
             @change="filter"
             @focus.native="isFocus = true"
             @blur.native="isFocus = false"
