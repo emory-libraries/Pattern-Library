@@ -31,7 +31,7 @@
 {{/if}}
 
 {{#unless (eq noscript true)}}
-<div class="search-menu -{{default theme 'dark'}}{{#if home}} -home{{/if}}{{#if classes}} {{classes}}{{/if}}" data-uid="{{this.uid}}">
+<div class="search-menu -{{default theme 'dark'}}{{#if home}} -home{{/if}}{{#if classes}} {{classes}}{{/if}}" data-uid="{{this.uid}}" role="group" aria-label="Search options">
 
   {{! Always add toggles for tabs and search boxes. }}
   {{! NOTE: This is required to enable noscript functionality. }}
@@ -44,10 +44,9 @@
       {{assign 'active' false}}
     {{/if}}
 
-    <input type="radio" class="search-menu-toggle" id="{{this.uid}}" name="{{group}}"{{#if active}} checked{{/if}}>
+    <input type="radio" class="search-menu-toggle" aria-label="{{label}}" id="{{this.uid}}" name="{{group}}"{{#if active}} checked{{/if}}>
 
   {{/each}}
-
   <span class="search-menu-context">{{default context 'Searching:'}}</span>
 
   <div class="search-menu-tabs">
@@ -56,9 +55,9 @@
 
   <div class="search-menu-search">
     {{#unless home}}
-      {{> atoms-search mode='small' layout=false cancel=(objectify label=(default cancel 'Cancel')) uid=searchUID noscript=false}}
+      {{> atoms-search mode='small' aria-label=(default aria-label search.aria-label) layout=false cancel=(objectify label=(default cancel 'Cancel')) uid=searchUID noscript=false}}
     {{else}}
-      {{> atoms-search mode='big' layout='contained' cancel=(objectify label=(default cancel 'Cancel')) uid=searchUID noscript=false}}
+      {{> atoms-search mode='big' aria-label=(default aria-label search.aria-label) layout='contained' cancel=(objectify label=(default cancel 'Cancel')) uid=searchUID noscript=false}}
     {{/unless}}
   </div>
 
@@ -84,7 +83,7 @@
         {{assign 'active' false}}
       {{/if}}
 
-      <input type="radio" class="search-menu-toggle" id="{{this.uid}}" name="{{group}}"{{#if active}} checked{{/if}}>
+      <input type="radio" class="search-menu-toggle" aria-label="{{label}}" id="{{this.uid}}" name="{{group}}"{{#if active}} checked{{/if}}>
 
     {{/each}}
 
@@ -93,12 +92,12 @@
     <div class="search-menu-tabs">
       {{> compounds-tab-menu theme=(default theme 'dark') relay=searchUID search=true noscript=true}}
     </div>
-
     <div class="search-menu-search">
+      {{{_inspect search}}}
       {{#unless home}}
-        {{> atoms-search mode='small' layout=false cancel=(objectify label=(default cancel 'Cancel')) uid=searchUID noscript=true}}
+        {{> atoms-search mode='small' aria-label=(default aria-label search.aria-label) layout=false cancel=(objectify label=(default cancel 'Cancel')) uid=searchUID noscript=true}}
       {{else}}
-        {{> atoms-search mode='big' layout='contained' cancel=(objectify label=(default cancel 'Cancel')) uid=searchUID noscript=true}}
+        {{> atoms-search mode='big' aria-label=(default aria-label search.aria-label) layout='contained' cancel=(objectify label=(default cancel 'Cancel')) uid=searchUID noscript=true}}
       {{/unless}}
     </div>
 

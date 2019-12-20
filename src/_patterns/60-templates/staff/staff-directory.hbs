@@ -22,7 +22,8 @@
         {{#content 'grid-items'}}
 
           {{! Render a search filter. }}
-          {{> atoms-filter-search layout='contained'
+          {{> atoms-filter-search aria-label="Enter a name, title, library, phone number, or email to filter the list of staff"
+                                  layout='contained'
                                   mode='big'
                                   keys=(makeArray 'name' 'title' 'library' 'phone' 'email')
                                   config=(objectify tokenize=true matchAllTokens=true sort=true)

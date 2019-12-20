@@ -20,6 +20,7 @@
     <a href="{{baseUrl}}/" class="branding-header-division">{{get 'site' (itemAt (filterWhere sites 'active' true) 0)}}</a>
     <div class="branding-header-dropdown">
       <select class="branding-header-dropdown-menu"
+              aria-label="Select a location"
               v-model="selection"
               @change="redirect">
         <option value="">Select a Location</option>

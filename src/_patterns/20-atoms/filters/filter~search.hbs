@@ -24,6 +24,7 @@
   <div class="search{{#if mode}} -{{mode}}{{/if}}{{#if (and layout (eq layout 'contained'))}} -contained{{/if}}">
 
     <input type="search"
+           aria-label="{{default aria-label placeholder}}"
            v-model="query"
            autocomplete="{{#if autocomplete}}on{{else}}off{{/if}}"
            placeholder="{{placeholder}}"

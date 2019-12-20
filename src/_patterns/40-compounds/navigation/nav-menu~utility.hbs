@@ -1,5 +1,5 @@
 {{#if (or desktop-only (not mobile-only))}}
-<nav class="nav-menu-utility -desktop{{#if classes}} {{classes}}{{/if}}">
+<nav aria-label="Utility navigation" class="nav-menu-utility -desktop{{#if classes}} {{classes}}{{/if}}">
   <div class="nav-menu-utility-left">
     {{#each utilities}}{{> atoms-nav-button-utility}}{{/each}}
   </div>
@@ -10,7 +10,7 @@
 </nav>
 {{/if}}
 {{#if (or mobile-only (not desktop-only))}}
-<nav class="nav-menu-utility -mobile">
+<nav aria-label="Utility navigation" class="nav-menu-utility -mobile">
   <div class="nav-menu-utility-right">
     {{#each flyouts}}{{> atoms-nav-button-flyout}}{{/each}}
   </div>

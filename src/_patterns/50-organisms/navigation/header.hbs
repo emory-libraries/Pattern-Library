@@ -1,5 +1,5 @@
 {{#with header}}
-<header class="header{{#if ../classes}} {{../classes}}{{/if}}" v-cloak>
+<header role="banner" aria-label="Main navigation and search" class="header{{#if ../classes}} {{../classes}}{{/if}}" v-cloak>
 
   <div class="header-notifications">
     {{> compounds-notification notification=notifications.notification noscript=false}}
@@ -19,7 +19,7 @@
 
 <noscript>
 
-  <header class="header{{#if ../classes}} {{../classes}}{{/if}}">
+  <header role="banner" aria-label="Main navigation and search"  class="header{{#if ../classes}} {{../classes}}{{/if}}">
 
     <div class="header-notifications">
       {{> compounds-notification notification=notifications.notification noscript=true}}

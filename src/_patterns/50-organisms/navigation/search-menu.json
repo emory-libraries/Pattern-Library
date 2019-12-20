@@ -6,6 +6,9 @@
       "position": "left"
     }
   },
+  "search" : {
+    "aria-label": "Main search text input"
+  },
   "tabs": [
     {
       "label": "Library Catalog",
