@@ -1,13 +1,13 @@
 {{#unless (eq noscript true)}}
 <eul-nav-menu inline-template v-cloak>
-  <nav class="nav-menu-main">
+  <nav aria-label="Main navigation" role="navigation" class="nav-menu-main">
 
     {{! Toggles }}
-    {{#each navigation.main}}{{> atoms-input-toggle id=(combine 'nav-menu-main--' (dashcase (lowercase label)))}}{{/each}}
-    {{#each navigation.utilities}}{{> atoms-input-toggle id=(combine 'nav-menu-main--' (dashcase (lowercase label)))}}{{/each}}
+    {{#each navigation.main}}{{> atoms-input-toggle aria-label=label id=(combine 'nav-menu-main--' (dashcase (lowercase label)))}}{{/each}}
+    {{#each navigation.utilities}}{{> atoms-input-toggle aria-label=label id=(combine 'nav-menu-main--' (dashcase (lowercase label)))}}{{/each}}
 
     {{! Desktop }}
-    <nav class="nav-menu-main-nav -desktop">
+    <nav aria-label="Main navigation for desktop" class="nav-menu-main-nav -desktop">
 
       {{#each navigation.main}}
         <div class="nav-menu-main-nav-group" @mouseover='open' @mouseleave='close'>
@@ -19,7 +19,7 @@
     </nav>
 
     {{! Tablet }}
-    <nav class="nav-menu-main-nav -tablet">
+    <nav aria-label="Main navigation for tablet" class="nav-menu-main-nav -tablet">
 
       {{#each navigation.main}}
         {{> atoms-nav-button-main classes='' mouseover='open' mouseleave='close'}}
@@ -29,7 +29,7 @@
     </nav>
 
     {{! Mobile }}
-    <nav class="nav-menu-main-nav -mobile">
+    <nav aria-label="Main navigation for mobile" class="nav-menu-main-nav -mobile">
 
       {{> atoms-input-toggle id='nav-menu-main--mobile-menu-toggle' classes='for-menu'}}
       {{> atoms-input-toggle id='nav-menu-main--mobile-search-toggle' classes='for-search'}}
@@ -78,14 +78,14 @@
 
 {{#unless (eq noscript false)}}
 {{#unless (eq noscript true)}}<noscript>{{/unless}}
-  <nav class="nav-menu-main">
+  <nav aria-label="Main navigation" class="nav-menu-main">
 
     {{! Toggles }}
-    {{#each navigation.main}}{{> atoms-input-toggle id=(combine 'nav-menu-main--noscript--' (dashcase (lowercase label)))}}{{/each}}
-    {{#each navigation.utilities}}{{> atoms-input-toggle id=(combine 'nav-menu-main--noscript--' (dashcase (lowercase label)))}}{{/each}}
+    {{#each navigation.main}}{{> atoms-input-toggle aria-label=label id=(combine 'nav-menu-main--noscript--' (dashcase (lowercase label)))}}{{/each}}
+    {{#each navigation.utilities}}{{> atoms-input-toggle aria-label=label id=(combine 'nav-menu-main--noscript--' (dashcase (lowercase label)))}}{{/each}}
 
     {{! Desktop }}
-    <nav class="nav-menu-main-nav -desktop">
+    <nav aria-label="Main navigation for desktop" class="nav-menu-main-nav -desktop">
 
       {{#each navigation.main}}
         <div class="nav-menu-main-nav-group">
@@ -97,7 +97,7 @@
     </nav>
 
     {{! Tablet }}
-    <nav class="nav-menu-main-nav -tablet">
+    <nav aria-label="Main navigation for tablet" class="nav-menu-main-nav -tablet">
 
       {{#each navigation.main}}
         {{> atoms-nav-button-main classes='' for=(combine 'nav-menu-main--noscript--' (dashcase (lowercase label))) noscript=true}}
@@ -107,7 +107,7 @@
     </nav>
 
     {{! Mobile }}
-    <nav class="nav-menu-main-nav -mobile">
+    <nav aria-label="Main navigation for mobile" class="nav-menu-main-nav -mobile">
 
       {{> atoms-input-toggle id='nav-menu-main--noscript--mobile-menu-toggle' classes='for-menu'}}
       {{> atoms-input-toggle id='nav-menu-main--noscript--mobile-search-toggle' classes='for-search'}}

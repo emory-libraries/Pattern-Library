@@ -1,6 +1,6 @@
 {{#with footer}}
 {{assign 'noscript' (default noscript ../noscript false)}}
-<footer class="footer{{#if ../classes}} {{../classes}}{{/if}}">
+<footer aria-label="Main footer" class="footer{{#if ../classes}} {{../classes}}{{/if}}">
 
   {{#with navigation noscript=noscript}}{{> molecules-branding-footer classes='footer-branding' logo=../logo}}{{/with}}
 

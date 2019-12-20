@@ -31,7 +31,7 @@
   {{assign 'search.button' (objectify label='Search')}}
 {{/if}}
 
-<nav class="subnav-menu-main{{#if layout}} -{{layout}}{{/if}}{{#if (and (eq layout 'grouped') search)}} has-search{{else if resources}} has-resources{{/if}}{{#if viewall}} has-viewall{{/if}}"
+<nav aria-label="Submenu navigation" class="subnav-menu-main{{#if layout}} -{{layout}}{{/if}}{{#if (and (eq layout 'grouped') search)}} has-search{{else if resources}} has-resources{{/if}}{{#if viewall}} has-viewall{{/if}}"
      {{#if mouseover}}@mouseover.stop="{{mouseover}}"{{/if}}
      {{#if mouseleave}}@mouseleave.stop="{{mouseleave}}"{{/if}}>
 
