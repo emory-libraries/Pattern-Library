@@ -1,6 +1,6 @@
 ---
 
-state: review
+state: complete
 created: 05/29/2019
 updated: 06/03/2019
 js: false
