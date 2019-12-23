@@ -72,7 +72,8 @@
 .branding-footer-logo .logo svg {
   fill: #FFFFFF;
 }
-.branding-footer-logo .logo svg .badge-bg {
+.branding-footer-logo .logo svg .badge-bg,
+.branding-footer-logo .logo svg #badge-bg {
   opacity: 1 !important;
   fill: #091C44;
 }
