@@ -372,6 +372,11 @@ const EUL = {
                   // Get the filters.
                   const filters = utils.getFilters(placeholder);
 
+                  //If value is `undefined`, set it to empty string to prevent error with `utils.applyFilters()`.
+                  if(value === undefined){
+                    value = '';
+                  }
+
                   // Apply the filters to the value.
                   value = utils.applyFilters(value, filters);
 
