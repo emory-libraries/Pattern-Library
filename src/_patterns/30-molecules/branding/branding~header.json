@@ -2,16 +2,16 @@
   "sites": [
     {
       "site": "Emory Libraries",
-      "href": "web.library.emory.edu",
+      "href": "https://web.library.emory.edu",
       "active": true
     },
     {
       "site": "Business",
-      "href": "business.library.emory.edu"
+      "href": "https://business.library.emory.edu"
     },
     {
       "site": "Health Sciences",
-      "href": "health.library.emory.edu"
+      "href": "https://health.library.emory.edu"
     },
     {
       "site": "Music & Media",
@@ -19,35 +19,35 @@
     },
     {
       "site": "Center for Digital Scholarship",
-      "href": "digitalscholarship.emory.edu"
+      "href": "https://digitalscholarship.emory.edu"
     },
     {
       "site": "Computing Center",
-      "href": "it.emory.edu/studentdigitallife/study_production_spaces/computing-center-at-cox-hall"
+      "href": "https://it.emory.edu/studentdigitallife/study_production_spaces/computing-center-at-cox-hall"
     },
     {
       "site": "Law",
-      "href": "library.law.emory.edu"
+      "href": "https://library.law.emory.edu"
     },
     {
       "site": "Library Service Center",
-      "href": "libraryservicecenter.org"
+      "href": "https://libraryservicecenter.org"
     },
     {
       "site": "Oxford College",
-      "href": "oxford.library.emory.edu"
+      "href": "https://oxford.library.emory.edu"
     },
     {
       "site": "Rose",
-      "href": "rose.library.emory.edu"
+      "href": "https://rose.library.emory.edu"
     },
     {
       "site": "Science Commons",
-      "href": "web.library.emory.edu/about/libraries/other-libraries/science-commons"
+      "href": "https://web.library.emory.edu/about/libraries/other-libraries/science-commons"
     },
     {
       "site": "Theology",
-      "href": "www.pitts.emory.edu"
+      "href": "https://www.pitts.emory.edu"
     }
   ]
 }
