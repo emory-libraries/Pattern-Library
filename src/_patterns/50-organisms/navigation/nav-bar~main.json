@@ -304,6 +304,43 @@
         ]
       }
     ],
+    "utilities": [
+      {
+        "label": "Initiatives",
+        "href": "#"
+      },
+      {
+        "label": "For Instructors",
+        "href": "#"
+      }
+    ],
+    "flyouts": [
+      {
+        "href": "#",
+        "label": "Events",
+        "icon": "material-event"
+      },
+      {
+        "href": "#",
+        "label": "Maps",
+        "icon": "material-map"
+      },
+      {
+        "href": "#",
+        "label": "Hours",
+        "icon": "material-access_time"
+      },
+      {
+        "href": "#",
+        "label": "News",
+        "icon": "material-newspaper"
+      },
+      {
+        "href": "#",
+        "label": "Contact",
+        "icon": "material-question_answer"
+      }
+    ],
     "button": {
       "label": "Ask a Librarian",
       "href": "#",
