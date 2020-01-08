@@ -1,4 +1,5 @@
 {
   "label": "Contact",
-  "icon": "material-message"
+  "icon": "material-message",
+  "href": "#"
 }
