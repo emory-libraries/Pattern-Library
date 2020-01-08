@@ -15,23 +15,23 @@
     },
     {
       "site": "Music & Media",
-      "href": "http://web.library.emory.edu/about/libraries/woodruff-building/music-media-library"
+      "href": "https://web.library.emory.edu/about/libraries/woodruff-building/music-media-library"
     },
     {
       "site": "Center for Digital Scholarship",
-      "href": "https://digitalscholarship.emory.edu"
+      "href": "http://digitalscholarship.emory.edu"
     },
     {
       "site": "Computing Center",
-      "href": "https://it.emory.edu/studentdigitallife/study_production_spaces/computing-center-at-cox-hall"
+      "href": "http://it.emory.edu/studentdigitallife/study_production_spaces/computing-center-at-cox-hall"
     },
     {
       "site": "Law",
-      "href": "https://library.law.emory.edu"
+      "href": "http://library.law.emory.edu"
     },
     {
       "site": "Library Service Center",
-      "href": "https://libraryservicecenter.org"
+      "href": "http://libraryservicecenter.org"
     },
     {
       "site": "Oxford College",
@@ -47,7 +47,7 @@
     },
     {
       "site": "Theology",
-      "href": "https://www.pitts.emory.edu"
+      "href": "http://www.pitts.emory.edu"
     }
   ]
 }
