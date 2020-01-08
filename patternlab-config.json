@@ -81,6 +81,11 @@
   },
   "ishMinimum": 240,
   "ishMaximum": 2600,
+  "ishViewportRange": {
+    "s": [240, 500],
+    "m": [500, 800],
+    "l": [800, 2600]
+  },
   "patternStateCascade": [
     "specification",
     "construction",
