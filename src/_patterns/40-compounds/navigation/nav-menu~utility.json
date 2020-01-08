@@ -1,42 +1,42 @@
 {
   "utilities": [
     {
-      "href": "",
+      "href": "#",
       "label": "Initiatives"
     },
     {
-      "href": "",
+      "href": "#",
       "label": "For Instructors"
     }
   ],
   "button": {
-    "href": "",
+    "href": "#",
     "label": "Ask a Librarian",
     "icon": "material-help_outline"
   },
   "flyouts": [
     {
-      "href": "",
+      "href": "#",
       "label": "Events",
       "icon": "material-event"
     },
     {
-      "href": "",
+      "href": "#",
       "label": "Maps",
       "icon": "material-map"
     },
     {
-      "href": "",
+      "href": "#",
       "label": "Hours",
       "icon": "material-access_time"
     },
     {
-      "href": "",
+      "href": "#",
       "label": "News",
       "icon": "material-newspaper"
     },
     {
-      "href": "",
+      "href": "#",
       "label": "Contact",
       "icon": "material-question_answer"
     }
