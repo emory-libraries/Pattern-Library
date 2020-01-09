@@ -192,7 +192,7 @@ Components.register('calendar', {
         // If it's 0, change it to a string so that _.compact() keeps it or else it will drop.
         event.m = _.compact(_.uniq([
           start.moment.isValid() ? start.moment.month().toString() : null,
-          end.moment.isValid() ? end.moment.month().toString() : null,
+          end.moment.isValid() ? end.moment.month().toString() : null
         ]))[0];
         event.year = _.compact(_.uniq([
           start.moment.isValid() ? start.moment.year() : null,
