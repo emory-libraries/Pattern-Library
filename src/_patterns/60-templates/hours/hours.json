@@ -6,11 +6,11 @@
       "location": "Woodruff Library",
       "semesters": [
         {
-          "semester": "Fall",
-          "year": 2019,
-          "start": "08-01-2019",
-          "end": "12-20-2019",
-          "visible": false,
+          "semester": "Spring",
+          "year": 2020,
+          "start": "01-01-2020",
+          "end": "05-20-2020",
+          "visible": true,
           "building": {
             "hours": {
               "sunday": {
@@ -144,8 +144,8 @@
               {
                 "status": "closed",
                 "open-24-hours": false,
-                "start": "09-02-2019",
-                "end": "09-02-2019",
+                "start": "02-02-2020",
+                "end": "02-02-2020",
                 "open": {
                   "format": "structured",
                   "hour": null,
@@ -164,8 +164,8 @@
               {
                 "status": "closed",
                 "open-24-hours": false,
-                "start": "11-28-2019",
-                "end": "11-29-2019",
+                "start": "04-28-2020",
+                "end": "04-29-2020",
                 "open": {
                   "format": "structured",
                   "hour": null,
@@ -183,7 +183,7 @@
               }
             ],
             "link": {
-              "href": "//example.com/hours.pdf",
+              "href": "//example.com/woodruff-spring-master-hours.pdf",
               "label": "Woodruff Library Master Schedule"
             }
           },
@@ -322,8 +322,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "09-02-2019",
-                  "end": "09-02-2019",
+                  "start": "02-02-2020",
+                  "end": "02-02-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -342,8 +342,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "11-28-2019",
-                  "end": "11-29-2019",
+                  "start": "04-28-2020",
+                  "end": "04-29-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -495,8 +495,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "09-02-2019",
-                  "end": "09-02-2019",
+                  "start": "02-02-2020",
+                  "end": "02-02-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -515,8 +515,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "11-28-2019",
-                  "end": "11-29-2019",
+                  "start": "04-28-2020",
+                  "end": "04-29-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -668,8 +668,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "09-02-2019",
-                  "end": "09-02-2019",
+                  "start": "02-02-2020",
+                  "end": "02-02-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -688,8 +688,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "11-28-2019",
-                  "end": "11-29-2019",
+                  "start": "04-28-2020",
+                  "end": "04-29-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -841,8 +841,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "09-02-2019",
-                  "end": "09-02-2019",
+                  "start": "02-02-2020",
+                  "end": "02-02-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -861,8 +861,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "11-28-2019",
-                  "end": "11-29-2019",
+                  "start": "04-28-2020",
+                  "end": "04-29-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -1014,8 +1014,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "09-02-2019",
-                  "end": "09-02-2019",
+                  "start": "02-02-2020",
+                  "end": "02-02-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -1034,8 +1034,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "11-28-2019",
-                  "end": "11-29-2019",
+                  "start": "04-28-2020",
+                  "end": "04-29-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -1187,8 +1187,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "09-02-2019",
-                  "end": "09-02-2019",
+                  "start": "02-02-2020",
+                  "end": "02-02-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -1207,8 +1207,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "11-28-2019",
-                  "end": "11-29-2019",
+                  "start": "04-28-2020",
+                  "end": "04-29-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -1360,8 +1360,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "09-02-2019",
-                  "end": "09-02-2019",
+                  "start": "02-02-2020",
+                  "end": "02-02-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -1380,8 +1380,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "11-28-2019",
-                  "end": "11-29-2019",
+                  "start": "04-28-2020",
+                  "end": "04-29-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -1533,8 +1533,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "09-02-2019",
-                  "end": "09-02-2019",
+                  "start": "02-02-2020",
+                  "end": "02-02-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -1553,8 +1553,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "11-28-2019",
-                  "end": "11-29-2019",
+                  "start": "04-28-2020",
+                  "end": "04-29-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -1706,8 +1706,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "09-02-2019",
-                  "end": "09-02-2019",
+                  "start": "02-02-2020",
+                  "end": "02-02-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -1726,8 +1726,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "11-28-2019",
-                  "end": "11-29-2019",
+                  "start": "04-28-2020",
+                  "end": "04-29-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -1879,8 +1879,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "09-02-2019",
-                  "end": "09-02-2019",
+                  "start": "02-02-2020",
+                  "end": "02-02-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -1899,8 +1899,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "11-28-2019",
-                  "end": "11-29-2019",
+                  "start": "04-28-2020",
+                  "end": "04-29-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -2052,8 +2052,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "09-02-2019",
-                  "end": "09-02-2019",
+                  "start": "02-02-2020",
+                  "end": "02-02-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -2072,8 +2072,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "11-28-2019",
-                  "end": "11-29-2019",
+                  "start": "04-28-2020",
+                  "end": "04-29-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -2093,15 +2093,15 @@
             }
           ],
           "link": {
-            "href": "//example.com/schedule.pdf",
+            "href": "//example.com/woodruff-spring-full-schedule.pdf",
             "label": "Full Schedule of Hours"
           }
         },
         {
-          "semester": "Spring",
+          "semester": "Fall",
           "year": 2020,
-          "start": "01-14-2020",
-          "end": "05-06-2020",
+          "start": "08-1-2020",
+          "end": "012-21-2020",
           "visible": true,
           "building": {
             "hours": {
@@ -2315,7 +2315,7 @@
               }
             ],
             "link": {
-              "href": "//example.com/hours.pdf",
+              "href": "//example.com/woodruff-fall-master-hours.pdf",
               "label": "Woodruff Library Master Schedule"
             }
           },
@@ -4005,7 +4005,7 @@
             }
           ],
           "link": {
-            "href": "//example.com/schedule.pdf",
+            "href": "",
             "label": "Full Schedule of Hours"
           }
         }
@@ -4015,10 +4015,10 @@
       "location": "Business Library",
       "semesters": [
         {
-          "semester": "Fall",
-          "year": 2019,
-          "start": "08-01-2019",
-          "end": "12-20-2019",
+          "semester": "Spring",
+          "year": 2020,
+          "start": "01-01-2020",
+          "end": "05-20-2020",
           "visible": true,
           "building": {
             "hours": {
@@ -4153,8 +4153,8 @@
               {
                 "status": "closed",
                 "open-24-hours": false,
-                "start": "09-02-2019",
-                "end": "09-02-2019",
+                "start": "02-02-2020",
+                "end": "02-02-2020",
                 "open": {
                   "format": "structured",
                   "hour": null,
@@ -4173,8 +4173,8 @@
               {
                 "status": "closed",
                 "open-24-hours": false,
-                "start": "11-28-2019",
-                "end": "11-29-2019",
+                "start": "04-28-2020",
+                "end": "04-29-2020",
                 "open": {
                   "format": "structured",
                   "hour": null,
@@ -4192,8 +4192,8 @@
               }
             ],
             "link": {
-              "href": "//example.com/hours.pdf",
-              "label": "Woodruff Library Master Schedule"
+              "href": "//example.com/business-spring-master-hours.pdf",
+              "label": "Business Library Master Schedule"
             }
           },
           "services": [
@@ -4331,8 +4331,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "09-02-2019",
-                  "end": "09-02-2019",
+                  "start": "02-02-2020",
+                  "end": "02-02-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -4351,8 +4351,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "11-28-2019",
-                  "end": "11-29-2019",
+                  "start": "04-28-2020",
+                  "end": "04-29-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -4504,8 +4504,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "09-02-2019",
-                  "end": "09-02-2019",
+                  "start": "02-02-2020",
+                  "end": "02-02-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -4524,8 +4524,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "11-28-2019",
-                  "end": "11-29-2019",
+                  "start": "04-28-2020",
+                  "end": "04-29-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -4677,8 +4677,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "09-02-2019",
-                  "end": "09-02-2019",
+                  "start": "02-02-2020",
+                  "end": "02-02-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -4697,8 +4697,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "11-28-2019",
-                  "end": "11-29-2019",
+                  "start": "04-28-2020",
+                  "end": "04-29-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -4850,8 +4850,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "09-02-2019",
-                  "end": "09-02-2019",
+                  "start": "02-02-2020",
+                  "end": "02-02-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -4870,8 +4870,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "11-28-2019",
-                  "end": "11-29-2019",
+                  "start": "04-28-2020",
+                  "end": "04-29-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -5023,8 +5023,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "09-02-2019",
-                  "end": "09-02-2019",
+                  "start": "02-02-2020",
+                  "end": "02-02-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -5043,8 +5043,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "11-28-2019",
-                  "end": "11-29-2019",
+                  "start": "04-28-2020",
+                  "end": "04-29-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -5196,8 +5196,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "09-02-2019",
-                  "end": "09-02-2019",
+                  "start": "02-02-2020",
+                  "end": "02-02-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -5216,8 +5216,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "11-28-2019",
-                  "end": "11-29-2019",
+                  "start": "04-28-2020",
+                  "end": "04-29-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -5369,8 +5369,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "09-02-2019",
-                  "end": "09-02-2019",
+                  "start": "02-02-2020",
+                  "end": "02-02-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -5389,8 +5389,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "11-28-2019",
-                  "end": "11-29-2019",
+                  "start": "04-28-2020",
+                  "end": "04-29-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -5542,8 +5542,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "09-02-2019",
-                  "end": "09-02-2019",
+                  "start": "02-02-2020",
+                  "end": "02-02-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -5562,8 +5562,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "11-28-2019",
-                  "end": "11-29-2019",
+                  "start": "04-28-2020",
+                  "end": "04-29-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -5715,8 +5715,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "09-02-2019",
-                  "end": "09-02-2019",
+                  "start": "02-02-2020",
+                  "end": "02-02-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -5735,8 +5735,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "11-28-2019",
-                  "end": "11-29-2019",
+                  "start": "04-28-2020",
+                  "end": "04-29-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -5888,8 +5888,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "09-02-2019",
-                  "end": "09-02-2019",
+                  "start": "02-02-2020",
+                  "end": "02-02-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -5908,8 +5908,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "11-28-2019",
-                  "end": "11-29-2019",
+                  "start": "04-28-2020",
+                  "end": "04-29-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -6061,8 +6061,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "09-02-2019",
-                  "end": "09-02-2019",
+                  "start": "02-02-2020",
+                  "end": "02-02-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -6081,8 +6081,8 @@
                 {
                   "status": "closed",
                   "open-24-hours": false,
-                  "start": "11-28-2019",
-                  "end": "11-29-2019",
+                  "start": "04-28-2020",
+                  "end": "04-29-2020",
                   "open": {
                     "format": "structured",
                     "hour": null,
@@ -6102,7 +6102,7 @@
             }
           ],
           "link": {
-            "href": "//example.com/schedule.pdf",
+            "href": "",
             "label": "Full Schedule of Hours"
           }
         },
