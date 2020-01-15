@@ -6,55 +6,55 @@
         "subnavigation": [
           {
             "label": "Books",
-            "href": ""
+            "href": "#"
           },
           {
             "label": "Films and Videos",
-            "href": ""
+            "href": "#"
           },
           {
             "label": "Music and Scores",
-            "href": ""
+            "href": "#"
           },
           {
             "label": "Journals",
-            "href": ""
+            "href": "#"
           },
           {
             "label": "Databases",
-            "href": ""
+            "href": "#"
           },
           {
             "label": "Course Reserves",
-            "href": ""
+            "href": "#"
           },
           {
             "label": "eBooks and Audiobooks",
-            "href": ""
+            "href": "#"
           },
           {
             "label": "Research and Library Guides",
-            "href": ""
+            "href": "#"
           },
           {
             "label": "Theses and Dissertations",
-            "href": ""
+            "href": "#"
           },
           {
             "label": "Archival and Manuscripts",
-            "href": ""
+            "href": "#"
           },
           {
             "label": "Faculty Works",
-            "href": ""
+            "href": "#"
           },
           {
             "label": "Images and Maps",
-            "href": ""
+            "href": "#"
           },
           {
             "label": "Equipment and Gadgets",
-            "href": ""
+            "href": "#"
           }
         ]
       },
@@ -64,66 +64,66 @@
           {
             "label": "DiscoverE",
             "alias": "Books, eBooks, Journals, Videos",
-            "href": "",
+            "href": "#",
             "resource": ""
           },
           {
             "label": "eJournals",
             "alias": "Academic Journals",
-            "href": "",
+            "href": "#",
             "resource": ""
           },
           {
             "label": "ILLiad",
             "alias": "Inter-Library Loans",
-            "href": "",
+            "href": "#",
             "resource": ""
           },
           {
             "label": "Databases @ Emory",
             "alias": "Databases",
-            "href": "",
+            "href": "#",
             "resource": ""
           },
           {
             "label": "Emory Finding Aids",
             "alias": "Archival and Manuscripts",
-            "href": "",
+            "href": "#",
             "resource": ""
           },
           {
             "label": "Emory Center for Digital Scholarship",
-            "href": "",
+            "href": "#",
             "resource": ""
           },
           {
             "label": "ETD",
             "alias": "Theses and Dissertations",
-            "href": "",
+            "href": "#",
             "resource": ""
           },
           {
             "label": "OpenEmory",
             "alias": "Faculty Works",
-            "href": "",
+            "href": "#",
             "resource": ""
           },
           {
             "label": "Overdrive",
             "alias": "eBooks, Audiobooks",
-            "href": "",
+            "href": "#",
             "resource": ""
           },
           {
             "label": "Ares",
             "alias": "Course Reserves",
-            "href": "",
+            "href": "#",
             "resource": ""
           },
           {
             "label": "LibGuides",
             "alias": "Research Help and Guides",
-            "href": "",
+            "href": "#",
             "resource": ""
           }
         ]
@@ -136,19 +136,19 @@
             "subnavigation": [
               {
                 "label": "Reserve a Study or Presentation Room",
-                "href": ""
+                "href": "#"
               },
               {
                 "label": "Find a Quiet Study Area",
-                "href": ""
+                "href": "#"
               },
               {
                 "label": "Find a Workstation or Application",
-                "href": ""
+                "href": "#"
               },
               {
                 "label": "Print, Copy, and Scan",
-                "href": ""
+                "href": "#"
               }
             ]
           },
@@ -157,19 +157,19 @@
             "subnavigation": [
               {
                 "label": "Borrow Equipment and Gadgets",
-                "href": ""
+                "href": "#"
               },
               {
                 "label": "Research and Writing Assistance",
-                "href": ""
+                "href": "#"
               },
               {
                 "label": "Access Course Reserves",
-                "href": ""
+                "href": "#"
               },
               {
                 "label": "Request or Recall Materials",
-                "href": ""
+                "href": "#"
               }
             ]
           },
@@ -178,19 +178,19 @@
             "subnavigation": [
               {
                 "label": "Connect Off-Campus (VPNs and Proxies)",
-                "href": ""
+                "href": "#"
               },
               {
                 "label": "Connect to the Internet (On-Campus)",
-                "href": ""
+                "href": "#"
               },
               {
                 "label": "Get Hardware or Software Support",
-                "href": ""
+                "href": "#"
               },
               {
                 "label": "Repair Your Device or Computer",
-                "href": ""
+                "href": "#"
               }
             ]
           },
@@ -199,25 +199,25 @@
             "subnavigation": [
               {
                 "label": "Submit an ILL Request (ILLiad)",
-                "href": ""
+                "href": "#"
               },
               {
                 "label": "Request a Purchase",
-                "href": ""
+                "href": "#"
               },
               {
                 "label": "Submit Ask eJournals",
-                "href": ""
+                "href": "#"
               },
               {
                 "label": "Apply for an Individual Study Room",
-                "href": ""
+                "href": "#"
               }
             ]
           }
         ],
         "viewall": {
-          "href": ""
+          "href": "#"
         }
       },
       {
@@ -225,34 +225,34 @@
         "subnavigation": [
           {
             "label": "Subject Librarians Directory",
-            "href": ""
+            "href": "#"
           },
           {
             "label": "Research Data",
-            "href": ""
+            "href": "#"
           },
           {
             "label": "Award and Research Programs",
-            "href": ""
+            "href": "#"
           },
           {
             "category": "Help With Research",
             "subnavigation": [
               {
                 "label": "Selecting Research Topics",
-                "href": ""
+                "href": "#"
               },
               {
                 "label": "Finding Source Materials",
-                "href": ""
+                "href": "#"
               },
               {
                 "label": "Evaluating Sources",
-                "href": ""
+                "href": "#"
               },
               {
                 "label": "Citing and Using Sources",
-                "href": ""
+                "href": "#"
               }
             ]
           }
@@ -263,42 +263,42 @@
         "subnavigation": [
           {
             "label": "Borrowing Privileges",
-            "href": ""
+            "href": "#"
           },
           {
             "label": "InterLibrary Lending (ILL)",
-            "href": ""
+            "href": "#"
           },
           {
             "label": "Library Maps and Spaces",
-            "href": ""
+            "href": "#"
           },
           {
             "label": "Course Reserves",
-            "href": ""
+            "href": "#"
           },
           {
             "label": "Guest Access",
-            "href": ""
+            "href": "#"
           },
           {
             "category": "Help Using the Library",
             "subnavigation": [
               {
                 "label": "Search for Specific Items",
-                "href": ""
+                "href": "#"
               },
               {
                 "label": "Questions About Articles",
-                "href": ""
+                "href": "#"
               },
               {
                 "label": "Questions About Books",
-                "href": ""
+                "href": "#"
               },
               {
                 "label": "Printing, Logging In, and Access",
-                "href": ""
+                "href": "#"
               }
             ]
           }
@@ -308,43 +308,43 @@
     "utilities": [
       {
         "label": "Initiatives",
-        "href": ""
+        "href": "#"
       },
       {
         "label": "For Instructors",
-        "href": ""
+        "href": "#"
       }
     ],
     "flyouts": [
       {
         "label": "Events",
-        "href": "",
+        "href": "#",
         "icon": "material-event"
       },
       {
         "label": "Maps",
-        "href": "",
+        "href": "#",
         "icon": "material-map"
       },
       {
         "label": "Hours",
-        "href": "",
+        "href": "#",
         "icon": "material-access_time"
       },
       {
         "label": "News",
-        "href": "",
+        "href": "#",
         "icon": "material-newspaper"
       },
       {
         "label": "Contact",
-        "href": "",
+        "href": "#",
         "icon": "material-question_answer"
       }
     ],
     "button": {
       "label": "Ask a Librarian",
-      "href": "",
+      "href": "#",
       "icon": "material-help_outline"
     }
   },
