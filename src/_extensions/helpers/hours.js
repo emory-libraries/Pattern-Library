@@ -247,7 +247,8 @@ const hours = {
       return _.uniq(_.concat(semesters, _.map(hour.semesters, (semester) => ({
         name: semester.semester,
         id: _.kebabCase(semester.semester.toLowerCase()),
-        year: semester.year
+        year: semester.year,
+        link: semester.link
       }))));
 
     }, []);

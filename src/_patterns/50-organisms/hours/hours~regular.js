@@ -92,7 +92,7 @@ Components.register('hours-regular', {
 
   },
 
-  mounted() { console.log(this.semester, this.location);
+  mounted() {
 
     // Capture the scrollable area.
     this.scroll.area = $(this.$el).find('.hours-preview-hours');
@@ -106,6 +106,24 @@ Components.register('hours-regular', {
 
       // Find data for the given semester.
       return _.find(this.hours.grouped.semesters, this.selected.semester);
+
+    },
+
+    // Create array of unique semesters by name and year
+    uniqueSemesters() {
+      let uniqueSemesterName = '';
+      let semesterNamesArray = [];
+      let semestersArray = [];
+
+      this.hours.semesters.forEach(function(semester) {
+        uniqueSemesterName = semester.name + ' '+ semester.year;
+
+        if (semesterNamesArray.indexOf(uniqueSemesterName) === -1) {
+          semesterNamesArray.push(uniqueSemesterName);
+          semestersArray.push(semester);
+        }
+      });
+      return semestersArray;
 
     },
 

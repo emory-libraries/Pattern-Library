@@ -26,15 +26,15 @@
       <p class="hours-caption">
         Displaying regular hours for
         <select class="input -select -inline" v-model="selected.semester">
-          <option v-for="(semester) in hours.semesters" :value="semester">
+          <option v-for="(semester) in uniqueSemesters" :value="semester">
             <% semester.name %> <% semester.year %>
           </option>
         </select>.
-        <template v-if="location && location.link && location.link.href">
+        <template v-if="semester && semester.link && semester.link.href">
           For a more detailed summary of semester hours, please view or download the
-          <a class="link" :href="location.link.href" target="{{default target '_blank'}}">
+          <a class="link" :href="semester.link.href" target="{{default target '_blank'}}">
             {{> tokens-icon id='material-file_document'}}
-            <% location.link.href.label || 'Full Schedule of Hours' %>
+            <% semester.link.label || 'Full Schedule of Hours' %>
           </a>.
         </template>
       </p>
