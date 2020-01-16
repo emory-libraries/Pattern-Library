@@ -4005,7 +4005,7 @@
             }
           ],
           "link": {
-            "href": "",
+            "href": "//example.com/woodruff-fall-full-schedule.pdf",
             "label": "Full Schedule of Hours"
           }
         }
@@ -6102,15 +6102,15 @@
             }
           ],
           "link": {
-            "href": "",
+            "href": "//example.com/business-spring-full-schedule.pdf",
             "label": "Full Schedule of Hours"
           }
         },
         {
-          "semester": "Spring",
+          "semester": "Fall",
           "year": 2020,
-          "start": "01-14-2020",
-          "end": "05-06-2020",
+          "start": "08-1-2020",
+          "end": "12-22-2020",
           "visible": true,
           "building": {
             "hours": {
@@ -8014,7 +8014,7 @@
             }
           ],
           "link": {
-            "href": "//example.com/schedule.pdf",
+            "href": "//example.com/business-fall-full-schedule.pdf",
             "label": "Full Schedule of Hours"
           }
         }
