@@ -2104,7 +2104,7 @@
           "building": {
             "hours": {
               "sunday": {
-                "status": "open",
+                "status": "closed",
                 "open-24-hours": false,
                 "open": {
                   "format": "structured",
@@ -2122,8 +2122,8 @@
                 }
               },
               "monday": {
-                "status": "open",
-                "open-24-hours": true,
+                "status": "closed",
+                "open-24-hours": false,
                 "open": {
                   "format": "structured",
                   "hour": null,
@@ -2140,8 +2140,8 @@
                 }
               },
               "tuesday": {
-                "status": "open",
-                "open-24-hours": true,
+                "status": "closed",
+                "open-24-hours": false,
                 "open": {
                   "format": "structured",
                   "hour": null,
@@ -2158,8 +2158,8 @@
                 }
               },
               "wednesday": {
-                "status": "open",
-                "open-24-hours": true,
+                "status": "closed",
+                "open-24-hours": false,
                 "open": {
                   "format": "structured",
                   "hour": null,
@@ -2176,8 +2176,8 @@
                 }
               },
               "thursday": {
-                "status": "open",
-                "open-24-hours": true,
+                "status": "closed",
+                "open-24-hours": false,
                 "open": {
                   "format": "structured",
                   "hour": null,
@@ -2194,7 +2194,7 @@
                 }
               },
               "friday": {
-                "status": "open",
+                "status": "closed",
                 "open-24-hours": false,
                 "open": {
                   "format": "freeform",
@@ -2212,7 +2212,7 @@
                 }
               },
               "saturday": {
-                "status": "open",
+                "status": "closed",
                 "open-24-hours": false,
                 "open": {
                   "format": "structured",

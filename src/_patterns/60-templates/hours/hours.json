@@ -2106,7 +2106,7 @@
           "building": {
             "hours": {
               "sunday": {
-                "status": "open",
+                "status": "closed",
                 "open-24-hours": false,
                 "open": {
                   "format": "structured",
@@ -2124,8 +2124,8 @@
                 }
               },
               "monday": {
-                "status": "open",
-                "open-24-hours": true,
+                "status": "closed",
+                "open-24-hours": false,
                 "open": {
                   "format": "structured",
                   "hour": null,
@@ -2142,8 +2142,8 @@
                 }
               },
               "tuesday": {
-                "status": "open",
-                "open-24-hours": true,
+                "status": "closed",
+                "open-24-hours": false,
                 "open": {
                   "format": "structured",
                   "hour": null,
@@ -2160,8 +2160,8 @@
                 }
               },
               "wednesday": {
-                "status": "open",
-                "open-24-hours": true,
+                "status": "closed",
+                "open-24-hours": false,
                 "open": {
                   "format": "structured",
                   "hour": null,
@@ -2178,8 +2178,8 @@
                 }
               },
               "thursday": {
-                "status": "open",
-                "open-24-hours": true,
+                "status": "closed",
+                "open-24-hours": false,
                 "open": {
                   "format": "structured",
                   "hour": null,
@@ -2196,7 +2196,7 @@
                 }
               },
               "friday": {
-                "status": "open",
+                "status": "closed",
                 "open-24-hours": false,
                 "open": {
                   "format": "freeform",
@@ -2214,7 +2214,7 @@
                 }
               },
               "saturday": {
-                "status": "open",
+                "status": "closed",
                 "open-24-hours": false,
                 "open": {
                   "format": "structured",
@@ -6107,10 +6107,10 @@
           }
         },
         {
-          "semester": "Fall",
+          "semester": "Spring",
           "year": 2020,
-          "start": "08-1-2020",
-          "end": "12-22-2020",
+          "start": "01-14-2020",
+          "end": "05-06-2020",
           "visible": true,
           "building": {
             "hours": {
@@ -8014,7 +8014,7 @@
             }
           ],
           "link": {
-            "href": "//example.com/business-fall-full-schedule.pdf",
+            "href": "//example.com/schedule.pdf",
             "label": "Full Schedule of Hours"
           }
         }
