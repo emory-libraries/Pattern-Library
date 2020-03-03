@@ -3,7 +3,7 @@
   {{#if (or caption credit)}}
     <figcaption class="figure-caption">
       {{#if credit}}
-        {{assign 'credit' (combine 'Photo by ' credit '.')}}
+        {{assign 'credit' (combine ' Photo by ' credit '.')}}
       {{/if}}
       {{> tokens-text type='caption' text=(combine caption credit)}}
     </figcaption>
