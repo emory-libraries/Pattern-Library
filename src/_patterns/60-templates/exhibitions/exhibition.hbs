@@ -31,7 +31,7 @@
       {{#content 'section-main-sidebar'}}
 
         {{! Display the image if available. }}
-        {{#if image}}{{> molecules-figure}}{{/if}}
+        {{#if image}}{{> molecules-figure caption=image.caption credit=image.credit}}{{/if}}
 
         {{! Display the date. }}
         <span class="exhibition-page-main-date">{{date.display}}</span>
