@@ -353,8 +353,6 @@
 }
 .subnav-button.-resource .subnav-button-options {
   --max: 300px;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
   -webkit-box-shadow: inset 2px 2px 3px rgba(9, 28, 68, 0.1);
           box-shadow: inset 2px 2px 3px rgba(9, 28, 68, 0.1);
   color: inherit;
