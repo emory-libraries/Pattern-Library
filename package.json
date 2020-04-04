@@ -84,7 +84,7 @@
     "intercept-stdout": "^0.1.2",
     "load-grunt-tasks": "^4.0.0",
     "lodash": "^4.17.15",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.3",
     "path": "^0.12.7",
     "patternengine-node-handlebars": "^1.0.3",
     "patternlab-node": "^2.12.0",
