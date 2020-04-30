@@ -39,6 +39,28 @@
       "gender": "male",
       "cv": {"href": "//example.com/jeremy-kupsco#cv"},
       "link": {"href": "//example.com/jeremy-kupsco"}
+    },
+    {
+      "name": "Jenny Vitti",
+      "title": "ILL Borrowing Coordinator",
+      "library": "Woodruff",
+      "subjects": [],
+      "phone": 4047270910,
+      "email": "jvitti@example.edu",
+      "gender": "female",
+      "cv": {"href": "//example.com/jenny-vitti#cv"},
+      "link": {"href": "//example.com/jenny-vitti"}
+    },
+    {
+      "name": "Richard Manly Adams, Jr.",
+      "title": "Director of Pitts Theology Library",
+      "library": "Theology",
+      "subjects": [],
+      "phone": 4047274165,
+      "email": "rmadams@example.edu",
+      "gender": "male",
+      "cv": {"href": "//example.com/bo-adams#cv"},
+      "link": {"href": "//example.com/bo-adams"}
     }
   ]
 }
