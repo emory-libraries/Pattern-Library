@@ -22,10 +22,10 @@
         {{#content 'grid-items'}}
 
           {{! Render a search filter. }}
-          {{> atoms-filter-search aria-label="Enter a name, title, or email to filter the list of staff"
+          {{> atoms-filter-search aria-label="Enter a name, title, email, or library to filter the list of staff"
                                   layout='contained'
                                   mode='big'
-                                  keys=(makeArray 'name' 'title' 'email')
+                                  keys=(makeArray 'name' 'title' 'email' 'library')
                                   config=(objectify tokenize=true matchAllTokens=true sort=true)
                                   placeholder=(default input-placeholder placeholder 'Search for a Staff Member')}}
 
