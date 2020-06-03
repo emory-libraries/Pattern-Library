@@ -34,10 +34,10 @@ Components.register('filter-search', {
         isDisabled: false
       },
       config: {
-        threshold: 0.6,
-        similarity: 0.3,
-        location: 0,
-        distance: 300,
+        threshold: 0.2, //was 0.6
+        similarity: 0.5, //was 0.3
+        location: 0, //was 0
+        distance: 300, //was 300
         insensitive: true,
         sort: false
       }
@@ -76,10 +76,10 @@ Components.register('filter-search', {
 
     // Merge settings with default configurations.
     this.config = _.merge({
-      threshold: 0.6,
-      similarity: 0.3,
-      location: 0,
-      distance: 300,
+      threshold: 0.2, //was 0.6
+      similarity: 0.5, //was 0.3
+      location: 0, //was 0
+      distance: 300, //was 300
       insensitive: true,
       sort: false
     }, this.settings);
