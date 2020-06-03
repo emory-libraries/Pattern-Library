@@ -61,6 +61,39 @@
       "gender": "male",
       "cv": {"href": "//example.com/bo-adams#cv"},
       "link": {"href": "//example.com/bo-adams"}
+    },
+    {
+      "name": "Rosalyn Metz",
+      "title": "Associate Dean, Library Technology and Digital Strategies",
+      "library": "Woodruff",
+      "subjects": [],
+      "phone": 4047274680,
+      "email": "rosalyn.metz@example.edu",
+      "gender": "female",
+      "cv": {"href": "//example.com/rosalyn-metz#cv"},
+      "link": {"href": "//example.com/rosalyn-metz"}
+    },
+    {
+      "name": "Robert Kruse",
+      "title": "EaglePrint Administrator, Student Digital Life",
+      "library": "Woodruff",
+      "subjects": [],
+      "phone": "",
+      "email": "rkruse@example.edu",
+      "gender": "male",
+      "cv": {"href": "//example.com/robert-kruse#cv"},
+      "link": {"href": "//example.com/robert-kruse"}
+    },
+    {
+      "name": "Jennifer Gunter King",
+      "title": "Director, Rose Library",
+      "library": "Rose",
+      "subjects": [],
+      "phone": 4047274918,
+      "email": "jennifer.gunter.king@example.edu",
+      "gender": "female",
+      "cv": {"href": "//example.com/jennifer-gunter-king#cv"},
+      "link": {"href": "//example.com/jennifer-gunter-king"}
     }
   ]
 }

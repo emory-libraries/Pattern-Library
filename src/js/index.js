@@ -759,9 +759,9 @@ class Fuzzy {
 
     // Configure the search utility.
     this.config = _.merge({
-      threshold: 0.6,
-      similarity: 0.125,
-      location: 0,
+      threshold: 0.2, //was 0.6
+      similarity: 0.5, //was 0.125
+      location: 0, //was 0
       distance: 300,
       insensitive: true,
       chars: 1,
