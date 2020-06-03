@@ -21,7 +21,7 @@
   "dependencies": {
     "clipboard": "^2.0.4",
     "hammerjs": "^2.0.8",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "leaflet": "^1.6.0",
     "leaflet-providers": "github:leaflet-extras/leaflet-providers",
     "moment": "^2.24.0",
