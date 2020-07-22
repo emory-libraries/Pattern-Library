@@ -27,6 +27,10 @@
         "value": "ejournals"
       },
       {
+        "label": "Digital Collections",
+        "value": "digital-collections"
+      },
+      {
         "label": "Research & Course Guides",
         "value": "research-guides"
       },
@@ -58,6 +62,12 @@
         "placeholder": "Search Journal Titles",
         "id": "ejournals",
         "src": "http://emory-primoprod.hosted.exlibrisgroup.com/primo_library/libweb/action/dlSearch.do?institution=01EMORY&vid=discovere&loc=local%2Cscope%3A%28AZ01EMORY%29&fn=goAlmaAz&almaAzSearch=true&vl(freeText0)=:query&libsearch=woodruff"
+      },
+      {
+        "label": "Digital Collections",
+        "placeholder": "Search Emory Digital Collections",
+        "id": "digital-collections",
+        "src": "http://digital.library.emory.edu/?utf8=%E2%9C%93&search_field=common_fields&q=:query"
       },
       {
         "label": "Research & Course Guides",
