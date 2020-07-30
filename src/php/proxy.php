@@ -9,7 +9,7 @@ function isValidURL($url){
 }
 
 // Handle invalid requests.
-if( !isValidURL ($url)) {
+if( !$url || !isValidURL ($url)) {
   http_response_code(400);
 
 } else {
