@@ -3,11 +3,16 @@
 // Get the URL that should be fetched.
 $url = isset($_GET['url']) ? $_GET['url'] : false;
 
-// Handle invalid requests.
-if( !$url ) http_response_code(400);
+//create a function to evaluate the url
+function isValidURL($url){
+  return preg_match('|^http(s)?://[a-z0-9-]+(.[a-z0-9-]+)*(:[0-9]+)?(/.*)?$|i', $url);
+}
 
-// Otherwise, attempt to fetch the feed's data.
-else {
+// Handle invalid requests.
+if( !isValidURL ($url)) {
+  echo("$url is not a valid URL");
+
+} else {
 
   // Initialize proxy request.
   $proxy = curl_init($url);
