@@ -10,7 +10,7 @@ function isValidURL($url){
 
 // Handle invalid requests.
 if( !isValidURL ($url)) {
-  echo("$url is not a valid URL");
+  http_response_code(400);
 
 } else {
 
