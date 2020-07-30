@@ -1,10 +1,16 @@
 <?php
 
+$allowed_urls = array(
+ 'https://www.trumba.com/calendars/robert-woodruff-library.json',
+ 'https://www.trumba.com/calendars/LibrarySigns.json',
+ 'https://scholarblogs.emory.edu/woodruff/topics/news/feed'
+);
+
 // Get the URL that should be fetched.
 $url = isset($_GET['url']) ? $_GET['url'] : false;
 
 // Handle invalid requests.
-if( !$url ) http_response_code(400);
+if( !$url || !in_array($url, $allowed_urls)) http_response_code(400);
 
 // Otherwise, attempt to fetch the feed's data.
 else {
