@@ -5,7 +5,7 @@ $url = isset($_GET['url']) ? $_GET['url'] : false;
 
 //create a function to evaluate the url
 function isValidURL($url){
-  return preg_match('|^https?://((www\.trumba\.com)|(scholarblogs\.emory\.edu)|(rssmix\.com))/.*$|i', $url);
+  return preg_match('#^https?://((www\.trumba\.com)|(scholarblogs\.emory\.edu)|(rssmix\.com))/.*$#i', $url);
 }
 
 // Handle invalid requests.
