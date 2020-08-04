@@ -3,11 +3,16 @@
 // Get the URL that should be fetched.
 $url = isset($_GET['url']) ? $_GET['url'] : false;
 
-// Handle invalid requests.
-if( !$url ) http_response_code(400);
+//create a function to evaluate the url
+function isValidURL($url){
+  return preg_match('#^https?://((www\.trumba\.com)|(scholarblogs\.emory\.edu)|(rssmix\.com))/.*$#i', $url);
+}
 
-// Otherwise, attempt to fetch the feed's data.
-else {
+// Handle invalid requests.
+if( !$url || !isValidURL ($url)) {
+  http_response_code(400);
+
+} else {
 
   // Initialize proxy request.
   $proxy = curl_init($url);
