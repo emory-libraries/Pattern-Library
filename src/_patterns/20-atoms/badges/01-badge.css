@@ -45,6 +45,7 @@
   text-transform: uppercase;
   text-align: left;
   color: #004990;
+  opacity: 0.8;
 }
 .badge.-white:not(.-square)::after {
   bottom: -3px;
