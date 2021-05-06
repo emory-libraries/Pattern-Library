@@ -40,7 +40,7 @@
     "@babel/preset-env": "^7.7.6",
     "@lodder/grunt-postcss": "^1.0.10",
     "autoprefixer": "^7.1.2",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "babelify": "^10.0.0",
     "bs-html-injector": "^3.0.3",
     "chalk": "^2.4.2",
