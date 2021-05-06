@@ -73,7 +73,7 @@
     "grunt-sass-import": "^0.2.2",
     "grunt-ssh-deploy": "^0.4.1",
     "grunt-verb": "^0.2.4",
-    "handlebars": "^4.7.6",
+    "handlebars": "^4.7.7",
     "handlebars-helper-md": "^0.2.0",
     "handlebars-helpers": "^0.10.0",
     "handlebars-layouts": "^3.1.4",
