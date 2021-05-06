@@ -83,7 +83,7 @@
     "inquirer": "^6.5.2",
     "intercept-stdout": "^0.1.2",
     "load-grunt-tasks": "^4.0.0",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "minimist": "^1.2.5",
     "path": "^0.12.7",
     "patternengine-node-handlebars": "^1.0.3",
