@@ -24,7 +24,7 @@
     "jquery": "^3.5.1",
     "leaflet": "^1.6.0",
     "leaflet-providers": "github:leaflet-extras/leaflet-providers",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "rss-parser": "^3.7.3",
     "string-similarity": "^3.0.0",
     "tippy.js": "^3.4.1",
